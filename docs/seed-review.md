@@ -115,3 +115,17 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Defeasible warrant can be defeated.** Keep attacks/defeaters explicit in the support/argument graph rather than treating all certificates as monotonic proofs.
 
 **Warrant-of-warrant remains open.** The revised judgment improves inspectability; it does not terminate the regress of assumptions, reliability claims, or standards.
+
+## Epistemic-action / graded-support refinement cautions
+
+**Action names are schemas, not proven primitives.** derive, accept, retract, reweight, and strategy-selection labels remain convenient names. The current proposal treats an action as a typed partial state transducer with a representation-relative effect footprint; a minimal primitive basis has not been established.
+
+**Do not confuse semantic update with world change.** Belief-revision and belief-update literatures distinguish learning new information about a static world from representing that the world itself changed. An annotation should retain the intended semantics rather than infer one from surface wording.
+
+**Preserve support provenance before assigning numbers.** Alternative support routes and joint support should remain structurally distinguishable. Independent scalar confidences on derived nodes can double-count common sources or hidden dependencies.
+
+**Semiring-style provenance is a family, not a universal epistemic calculus.** Positive provenance provides a useful algebra for alternative/joint support, but ATMS minimality, idempotence/absorption, defeat, negation, and probabilistic dependence may require different or enriched algebras.
+
+**Graded support is regime-indexed.** Probability, belief/plausibility, ranking, reliability, and cost are not interchangeable numeric meanings. A value should be accompanied by the regime and assumptions that make the update/composition rule valid.
+
+**Multiple warrants need not aggregate.** Distinct warrant regimes or heterogeneous guarantees should remain parallel unless an explicit meta-rule licenses comparison or aggregation. The aggregation rule itself can become a warrant target.
