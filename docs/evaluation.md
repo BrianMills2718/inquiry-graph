@@ -34,7 +34,13 @@ Measure whether a user can find an unresolved dependency, recover a correction, 
 
 Privacy constraints should be evaluated alongside utility. A false belief attribution in a personal worldview tool may matter more than a missing peripheral concept. Keep user review and deletion/export controls on the roadmap before broader deployment.
 
-## Stage C: strategy-episode annotation
+## Stage C: warrant annotation and discrimination
+
+Before treating warrant as an executable or learnable layer, test whether annotators can reliably distinguish **support**, **warrant**, **license**, and **executed update** in grounded examples. Require explicit identification of the epistemic action being licensed, applicability assumptions, warrant regime, certificate/support object, and typed guarantee. Include deductive, defeasible, statistical, measurement/testimony, transition, and strategy-selection cases.
+
+Evaluate common confusions separately: support mistaken for sufficient warrant; formal validity mistaken for content acceptance; license mistaken for actual update; assumptions hidden inside an unqualified guarantee; heterogeneous guarantees collapsed into one confidence score; and defeaters ignored. Agreement on the action target and guarantee type is more important than agreement on philosophical terminology.
+
+## Stage D: strategy-episode annotation
 
 Before learning policies, evaluate whether humans can reliably identify reusable reasoning strategies from grounded move sequences. Annotate strategy schema, episode boundaries, target (`about` relation), nested episodes and confidence/review status. Compare agreement on atomic moves with agreement on higher-level strategies; strategy segmentation is expected to be harder and may admit multiple defensible granularities.
 
@@ -42,7 +48,7 @@ Candidate strategies in the founding dialogue include canonical factorization, c
 
 Important error classes include hallucinating a private strategy from surface similarity, collapsing an isolated move into a full multi-step strategy, missing nested/meta episodes, and treating the same strategy name as intrinsically meta-level instead of relative to its target.
 
-## Stage D: learning policies over reasoning moves and strategies
+## Stage E: learning policies over reasoning moves and strategies
 
 Only after reliable representation, compare policies over inquiry operations and strategy selection. Define task families with independently checkable outcomes, budgets and permissible actions. A policy can choose to seek a counterexample, inspect an assumption, clarify a term, test a prediction, decompose a question, activate a factorization strategy, or switch strategies. Graph annotations are observations of expressed behavior, not privileged access to computation.
 

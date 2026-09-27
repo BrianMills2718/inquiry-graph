@@ -663,3 +663,55 @@ At each stage the dialogue can be represented as:
 \]
 
 This is the first complete strategy trace instantiated against the evolving meta-model. It is documented in [candidate-generation-interface.md](candidate-generation-interface.md).
+
+## 25. Warrant was refactored rather than restarted
+
+The later meta-model made the earlier warrant proposal easier to state precisely.
+
+The original certificate
+
+\[
+\operatorname{Cert}(\tau)=(A_W,G_W,\pi)
+\]
+
+survived, but the old target \(\tau\) had been doing too much work. After separating draft generation, formal elaboration, evaluator feedback, support state, epistemic updates and strategy selection, the warrant question could be normalized around a typed **epistemic action**.
+
+The resulting factorization is:
+
+\[
+\boxed{
+\text{support}
+\neq
+\text{warrant}
+\neq
+\text{license}
+\neq
+\text{update}.
+}
+\]
+
+Support records reasons/dependencies. Warrant says those reasons are adequate, under an explicit regime and assumptions, for a specified epistemic action with a specified guarantee. License is the derived context-relative status that the action is permitted. Update is the action actually executed against persistent state.
+
+The proposed judgment is:
+
+\[
+\boxed{
+\mathfrak W;A\vdash_{\pi} a:G.
+}
+\]
+
+This reads: under warrant regime \(\mathfrak W\) and assumptions \(A\), certificate/support \(\pi\) warrants epistemic action \(a\) with guarantee or entitlement \(G\).
+
+## 26. Research tightened the warrant factorization
+
+Justification Logic supplied the precedent for explicit reasons of the form \(t:F\). Structured argumentation supplied the missing defeasibility point: an argument can exist while later attack/defeat changes its acceptability. Hoare logic and assume-guarantee contracts closely match the conditional assumption/guarantee shape. Formal learning theory supplies method-level guarantees under explicit problem-class and sampling assumptions.
+
+This research produced two further factorization corrections.
+
+First, “candidate warrant,” “transition warrant,” and “strategy warrant” do not need to be primitive warrant kinds. They become instances of one polymorphic action-targeted judgment, such as accept(h), raiseSupport(h,δ), or selectStrategy(π).
+
+Second, the earlier temptation to add an independent warrant scope field appears overfactored. Scope is normally carried by the applicability assumptions \(A\) and by the quantification/type of guarantee \(G\).
+
+Defeaters are also kept outside the minimal warrant tuple and represented in the support/argument graph, so nonmonotonic warrant can lose a previously derived license when new defeating information arrives.
+
+The current formulation is documented in [warrant-license-interface.md](warrant-license-interface.md).

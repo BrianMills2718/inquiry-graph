@@ -97,3 +97,21 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **The worked canonical-factorization trace is reconstructed.** It summarizes a long public dialogue into draft/evaluation/repair stages. The trace is useful for testing the interface but remains a curator interpretation, not a verbatim hidden reasoning log.
 
 **Question closure is partial.** The interface gives a concrete answer to how candidate generation can be structured without a universal operator list, but the draft-generation algebra and warrant problem remain open.
+
+## Warrant/license refinement cautions
+
+**Support is not warrant.** A proof object, argument, ATMS support environment, report, or statistical result can support content without automatically licensing every epistemic action involving that content.
+
+**Warrant is not license.** In the current project vocabulary, warrant is the structured conditional adequacy judgment; license is the regime- and context-relative status derived from that judgment. Do not collapse them into one node merely because ordinary-language usage overlaps.
+
+**License is not update.** A licensed action may never be executed. An executed update may later be judged unwarranted. Preserve the distinction between normative status and actual state transition.
+
+**Candidate/transition/strategy warrant are not separate primitives.** They are currently modeled as instances of one polymorphic action-targeted judgment. If later data show irreducible structural differences, reopen this factorization rather than hard-code three top-level warrant kinds now.
+
+**Scope is currently folded into assumptions and guarantee semantics.** Avoid adding a separate scope coordinate unless a concrete case cannot be represented by applicability assumptions plus typed/quantified guarantee.
+
+**Guarantees are heterogeneous.** Deductive truth preservation, defeasible acceptability, PAC-style error/confidence bounds, convergence, measurement reliability, transition postconditions, and strategy-performance claims should not be converted into one scalar confidence without an explicit semantics.
+
+**Defeasible warrant can be defeated.** Keep attacks/defeaters explicit in the support/argument graph rather than treating all certificates as monotonic proofs.
+
+**Warrant-of-warrant remains open.** The revised judgment improves inspectability; it does not terminate the regress of assumptions, reliability claims, or standards.

@@ -30,7 +30,7 @@ The repository CI is configured to install the package with development and opti
 
 ## Explicitly not verified
 
-No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 747 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
+No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
 
 ## Recovery
 

@@ -3209,6 +3209,231 @@
       "review_status": "proposed",
       "kind": "question",
       "text": "Can the canonical-factorization strategy trace be represented without introducing another vague primitive?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-warrant-license",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex210",
+          "start": 0,
+          "end": 163,
+          "quote": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How does the earlier warrant work relate to the revised meta-model, and is warrant the same thing as license?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-license-preliminary",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex211",
+          "start": 0,
+          "end": 44,
+          "quote": "warrant = the structured basis for a license"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Warrant is the structured basis for a derived license rather than a synonym for license."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-target-preliminary",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex212",
+          "start": 0,
+          "end": 60,
+          "quote": "candidate warrant != transition warrant != strategy warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Candidate, transition and strategy warrants appear as distinct descriptive targets before further factorization."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-refactor-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex213",
+          "start": 0,
+          "end": 88,
+          "quote": "the meta-model changed enough that warrant should now be **refactored**, not reinvented."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Refactor the existing warrant proposal against the more precise candidate-generation, strategy and epistemic-state model rather than reinventing it."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-certificate-survives",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex215",
+          "start": 0,
+          "end": 108,
+          "quote": "The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The earlier assumptions/guarantee/certificate warrant shape survives the later meta-model refinements."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:support-warrant-license-update-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex216",
+          "start": 0,
+          "end": 40,
+          "quote": "support != warrant != license != update."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Support, warrant, license and executed epistemic update are distinct stages."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:license-derived-status",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex217",
+          "start": 0,
+          "end": 37,
+          "quote": "License is not a synonym for warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "License is the context- and regime-relative status that a specified epistemic action is permitted with a stated guarantee; it is not identical to warrant."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:epistemic-action",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A typed epistemic action is the normalized target of warrant, e.g. derive, retain, raise support, accept, retract, use a report, or select a strategy."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-regime",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A warrant regime specifies the rules, semantics and acceptance standard under which support can warrant an epistemic action."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-judgment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Core judgment: under warrant regime W and assumptions A, certificate pi warrants epistemic action a with guarantee G."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:scope-not-primitive",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex219",
+          "start": 0,
+          "end": 113,
+          "quote": "scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Warrant scope is normally encoded in applicability assumptions and the quantified/type semantics of the guarantee rather than as a separate primitive coordinate."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:warrant-target-collapse",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Candidate, transition and strategy warrant need not be primitive warrant types; they are instances of one action-targeted warrant schema."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:defeasible-warrant-structure",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Defeasible warrant requires explicit attack/defeat relations and can lose license when new defeating information arrives."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-epistemic-action-types",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is the minimal type system for epistemic actions that can be targets of warrant?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-warrant-composition",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How should multiple independent, conflicting or defeasible warrants combine?"
     }
   ],
   "relations": [
@@ -8803,6 +9028,414 @@
           "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
         }
       ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:234",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex211",
+          "start": 0,
+          "end": 44,
+          "quote": "warrant = the structured basis for a license"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:warrant-license-preliminary"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-warrant-license"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:235",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex210",
+          "start": 0,
+          "end": 163,
+          "quote": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-warrant-license"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:warrant-refactor-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:236",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex215",
+          "start": 0,
+          "end": 108,
+          "quote": "The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:warrant-certificate-survives"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:warrant-refactor-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:237",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex216",
+          "start": 0,
+          "end": 40,
+          "quote": "support != warrant != license != update."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "dialogue-2026-09-27:n:support-warrant-license-update-distinction"
+        },
+        {
+          "role": "right",
+          "ref": "dialogue-2026-09-27:n:warrant-license-preliminary"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:238",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex217",
+          "start": 0,
+          "end": 37,
+          "quote": "License is not a synonym for warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:license-derived-status"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:support-warrant-license-update-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:239",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:epistemic-action"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:240",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:warrant-regime"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:241",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-warrant"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:242",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex219",
+          "start": 0,
+          "end": 113,
+          "quote": "scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:scope-not-primitive"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:243",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:warrant-target-collapse"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:244",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:warrant-target-collapse"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:warrant-target-preliminary"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:245",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:defeasible-warrant-structure"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:246",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-epistemic-action-types"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:epistemic-action"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:247",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-warrant-composition"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:defeasible-warrant-structure"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:248",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:249",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:persistent-support-state"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:250",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:warrant-judgment"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:strategy-control-layer"
+        }
+      ]
     }
   ],
   "moves": [
@@ -13452,6 +14085,223 @@
         "dialogue-2026-09-27:m:176"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:178",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex210",
+          "start": 0,
+          "end": 163,
+          "quote": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-layer",
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-warrant-license"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex210",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:177"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:179",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex211",
+          "start": 0,
+          "end": 44,
+          "quote": "warrant = the structured basis for a license"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-warrant-license"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:warrant-license-preliminary",
+        "dialogue-2026-09-27:n:warrant-target-preliminary"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex211",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:178"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:180",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex213",
+          "start": 0,
+          "end": 88,
+          "quote": "the meta-model changed enough that warrant should now be **refactored**, not reinvented."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-warrant-license"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:warrant-refactor-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex213",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:179"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:181",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex215",
+          "start": 0,
+          "end": 108,
+          "quote": "The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-certificate"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:warrant-certificate-survives"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex215",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:180"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:182",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex216",
+          "start": 0,
+          "end": 40,
+          "quote": "support != warrant != license != update."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-license-preliminary"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:support-warrant-license-update-distinction",
+        "dialogue-2026-09-27:n:license-derived-status"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex216",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:181"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:183",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-certificate-survives",
+        "dialogue-2026-09-27:n:support-warrant-license-update-distinction"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:epistemic-action",
+        "dialogue-2026-09-27:n:warrant-regime",
+        "dialogue-2026-09-27:n:warrant-judgment"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex218",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:182"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:184",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex219",
+          "start": 0,
+          "end": 113,
+          "quote": "scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "decompose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-judgment"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:scope-not-primitive",
+        "dialogue-2026-09-27:n:warrant-target-collapse"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex219",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:183"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:185",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:warrant-judgment"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:defeasible-warrant-structure",
+        "dialogue-2026-09-27:n:q-epistemic-action-types",
+        "dialogue-2026-09-27:n:q-warrant-composition"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex221",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:184"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -14338,6 +15188,108 @@
       "target_id": "dialogue-2026-09-27:n:universal-interface-not-operators",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-27:ex206"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:053",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex210",
+          "start": 0,
+          "end": 163,
+          "quote": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-warrant-license",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex210"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:054",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex211",
+          "start": 0,
+          "end": 44,
+          "quote": "warrant = the structured basis for a license"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:warrant-license-preliminary",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex211"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:055",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex213",
+          "start": 0,
+          "end": 88,
+          "quote": "the meta-model changed enough that warrant should now be **refactored**, not reinvented."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:warrant-refactor-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex213"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:056",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex216",
+          "start": 0,
+          "end": 40,
+          "quote": "support != warrant != license != update."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:support-warrant-license-update-distinction",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex216"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:057",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:warrant-judgment",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex218"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:058",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:warrant-target-collapse",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex220"
     }
   ],
   "question_events": [
@@ -15362,6 +16314,66 @@
       "replacement_id": null
     },
     {
+      "id": "dialogue-2026-09-27:qe:q-warrant-license",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex210",
+          "start": 0,
+          "end": 163,
+          "quote": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-warrant-license",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex210",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-epistemic-action-types",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex220",
+          "start": 0,
+          "end": 103,
+          "quote": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-epistemic-action-types",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex220",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-warrant-composition",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex221",
+          "start": 0,
+          "end": 116,
+          "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-warrant-composition",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex221",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
       "id": "dialogue-2026-09-27:qe:update:1",
       "anchors": [
         {
@@ -15797,6 +16809,52 @@
       ],
       "resolution_basis": null,
       "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:21",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-warrant-license",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex218",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:warrant-judgment",
+        "dialogue-2026-09-27:n:license-derived-status",
+        "dialogue-2026-09-27:n:support-warrant-license-update-distinction"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:22",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex218",
+          "start": 0,
+          "end": 14,
+          "quote": "W; A ⊢_π a : G"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-warrant",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex218",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:warrant-judgment"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
     }
   ],
   "schema_version": "1.0.0",
@@ -15806,7 +16864,7 @@
       "id": "dialogue-2026-09-27",
       "title": "From inference taxonomy to a persistent inquiry graph",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace.",
+      "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace. Continuation excerpts ex210–ex221 capture the warrant/license clarification and the post-research refactoring of warrant around support, epistemic action, license, guarantee and defeasible defeat.",
       "participants": [
         {
           "id": "participant:brian",
@@ -17475,6 +18533,102 @@
           "text": "I approve proceed",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex210",
+          "actor_id": "participant:brian",
+          "ordinal": 208,
+          "text": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex211",
+          "actor_id": "participant:assistant",
+          "ordinal": 209,
+          "text": "warrant = the structured basis for a license",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex212",
+          "actor_id": "participant:assistant",
+          "ordinal": 210,
+          "text": "candidate warrant != transition warrant != strategy warrant.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex213",
+          "actor_id": "participant:assistant",
+          "ordinal": 211,
+          "text": "the meta-model changed enough that warrant should now be **refactored**, not reinvented.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex214",
+          "actor_id": "participant:brian",
+          "ordinal": 212,
+          "text": "Okay, proceed. And do any research that's necessary or helpful.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex215",
+          "actor_id": "participant:assistant",
+          "ordinal": 213,
+          "text": "The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex216",
+          "actor_id": "participant:assistant",
+          "ordinal": 214,
+          "text": "support != warrant != license != update.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex217",
+          "actor_id": "participant:assistant",
+          "ordinal": 215,
+          "text": "License is not a synonym for warrant.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex218",
+          "actor_id": "participant:assistant",
+          "ordinal": 216,
+          "text": "W; A ⊢_π a : G",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex219",
+          "actor_id": "participant:assistant",
+          "ordinal": 217,
+          "text": "scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex220",
+          "actor_id": "participant:assistant",
+          "ordinal": 218,
+          "text": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex221",
+          "actor_id": "participant:assistant",
+          "ordinal": 219,
+          "text": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -17486,7 +18640,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:08976c67cd88ccaae22c86b0b89c2e1d53523707d7ffeb909d7c11dd6ed9f161",
+        "source_sha256:9a169420cc77ff313dca14e00df654c75af5906d65004d79489df4c7670a2070",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }

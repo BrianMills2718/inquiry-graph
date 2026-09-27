@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-Expanded the founding dialogue through the epistemic-transition, assumption-context, metareasoning/reflection, and candidate-generation-interface refinements. The curated source now contains 207 excerpts and the proposed graph 214 content nodes, 233 relations, 177 moves, 52 stance events, and 71 question events. Candidate generation is now modeled as a draft-transition system `(D,d0,O,→)` explored by a separate strategy, followed by formal elaboration, evaluator feedback, and a distinct warrant layer. A worked canonical-factorization trace reconstructs the dialogue's repeated propose/test/diagnose/repair cycle. Draft-generation algebra, warrant semantics, graded-support integration and robust strategy-episode identification remain open.
+Expanded the founding dialogue through the epistemic-transition, assumption-context, metareasoning/reflection, candidate-generation, and warrant/license refinements. The curated source now contains 219 excerpts and the proposed graph 229 content nodes, 250 relations, 185 moves, 58 stance events, and 76 question events. Warrant is now factored from support, derived license, and executed update; warrant targets are normalized to typed epistemic actions under an explicit warrant regime, assumptions, certificate and typed guarantee. Scope is folded into assumptions/guarantee semantics, while defeasible warrant uses explicit attack/defeat structure. Draft-generation algebra, epistemic-action typing, warrant composition, graded-support integration and robust strategy-episode identification remain open.
 
 ## 1.0.0 — 2026-09-27
 

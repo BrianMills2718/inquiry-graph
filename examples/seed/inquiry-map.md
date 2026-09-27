@@ -181,6 +181,14 @@ flowchart TD
   n174["move: clarify: Canonical-factorization analysis is one strategy that searches a factorization-specific draft space using local operators and evaluators."]
   n175["move: generalize: The reusable cross-domain abstraction is the candidate-generation interface, not one universal operator set."]
   n176["move: propose: Worked trace of the founding dialogue from I/D/A partition through composition-space, representation-relative factorization, support-context refinement, candidate-type repair and strategy recognition.; What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?; Can the canonical-factorization strategy trace be represented without introducing another vague primitive?"]
+  n177["move: ask: How does the earlier warrant work relate to the revised meta-model, and is warrant the same thing as license?"]
+  n178["move: clarify: Warrant is the structured basis for a derived license rather than a synonym for license.; Candidate, transition and strategy warrants appear as distinct descriptive targets before further factorization."]
+  n179["move: scope: Refactor the existing warrant proposal against the more precise candidate-generation, strategy and epistemic-state model rather than reinventing it."]
+  n180["move: clarify: The earlier assumptions/guarantee/certificate warrant shape survives the later meta-model refinements."]
+  n181["move: distinguish: Support, warrant, license and executed epistemic update are distinct stages.; License is the context- and regime-relative status that a specified epistemic action is permitted with a stated guarantee; it is not identical to warrant."]
+  n182["move: propose: A typed epistemic action is the normalized target of warrant, e.g. derive, retain, raise support, accept, retract, use a report, or select a strategy.; A warrant regime specifies the rules, semantics and acceptance standard under which support can warrant an epistemic action.; Core judgment: under warrant regime W and assumptions A, certificate pi warrants epistemic action a with guarantee G."]
+  n183["move: decompose: Warrant scope is normally encoded in applicability assumptions and the quantified/type semantics of the guarantee rather than as a separate primitive coordinate.; Candidate, transition and strategy warrant need not be primitive warrant types; they are instances of one action-targeted warrant schema."]
+  n184["move: connect: Defeasible warrant requires explicit attack/defeat relations and can lose license when new defeating information arrives.; What is the minimal type system for epistemic actions that can be targets of warrant?; How should multiple independent, conflicting or defeasible warrants combine?"]
   n0 -->|then| n1
   n1 -->|then| n2
   n2 -->|then| n3
@@ -362,4 +370,12 @@ flowchart TD
   n173 -->|then| n174
   n174 -->|then| n175
   n175 -->|then| n176
+  n176 -->|then| n177
+  n177 -->|then| n178
+  n178 -->|then| n179
+  n179 -->|then| n180
+  n180 -->|then| n181
+  n181 -->|then| n182
+  n182 -->|then| n183
+  n183 -->|then| n184
 ```
