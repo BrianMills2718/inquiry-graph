@@ -332,3 +332,170 @@ $$
 $$
 
 The original deduction/induction/abduction question remains visible as provenance, but is now reframed rather than falsely resolved.
+
+## 15. The conversation itself became a candidate-generation test case
+
+After the first documentation update, the inquiry returned to the question of what kind of process the dialogue itself exemplified. The working description became **theoretical model construction under conceptual constraints**.
+
+The important observation was that this conversation is not primarily updating from fresh physical measurements. It repeatedly:
+
+- generates candidate formalisms;
+- tests them against counterexamples and desiderata;
+- searches existing literature for established machinery;
+- changes the question space when the old formulation is too coarse;
+- revises the representation language itself.
+
+That made the dialogue a natural adversarial corpus for the still-open candidate-generation layer.
+
+A provisional list such as “differentiate, abstract, compose, reframe, complete, extend, analogy” was immediately treated with suspicion. In particular, Brian objected that **reframe** was doing too much work and that the problem looked more like:
+
+1. how to construct expressions/concepts inside an existing concept space; and
+2. how genuinely new conceptual vocabulary enters the space.
+
+This reopened the literature question rather than promoting another informal taxonomy.
+
+## 16. Concept generation stress-tested the meta-model
+
+The next literature-oriented pass connected the inquiry to description logics, Formal Concept Analysis, anti-unification, and inductive logic programming/predicate invention.
+
+The strongest distinction was:
+
+$$
+\text{concept construction}
+\neq
+\text{concept invention}.
+$$
+
+A further refinement split three cases:
+
+$$
+\boxed{
+\text{expression construction}
+\neq
+\text{definitional extension}
+\neq
+\text{substantive predicate invention}.
+}
+$$
+
+This stress test exposed that the old \(\mathcal U\) coordinate was overloaded. It had been used for vocabulary, expressible propositions, model space, and live hypotheses.
+
+An intermediate repair proposed:
+
+$$
+K=(\Sigma,T,W,\rho,E,Q),
+$$
+
+with \(\Sigma\) for signature, \(T\) for explicit theory/assumptions, \(W\) for compatible models, \(\rho\) for graded support, \(E\) for evidence, and \(Q\) for task/query.
+
+Institution theory was identified as established machinery for the separation:
+
+$$
+\mathfrak I=
+(\mathbf{Sig},\operatorname{Sen},\operatorname{Mod},\models).
+$$
+
+It also supplied a more disciplined replacement for a generic representation map: signature morphisms with induced sentence/model translations and a satisfaction condition.
+
+At this stage, “reframe” was explicitly demoted from foundational primitive to dialogue-level macro. Depending on the case, a reframe might mean \(Q\to Q'\), \(\Sigma\to\Sigma'\), theory revision, or a combination.
+
+## 17. The \(T\) versus \(W\) formulation was corrected by the white-box/black-box intuition
+
+Brian then objected that the intermediate \(T\) language sounded too much like a theory the observer actually commits to.
+
+The intended semantics were closer to:
+
+> assume these propositions for the purpose of this branch of reasoning and inspect what follows.
+
+That forced another distinction:
+
+\[
+\boxed{
+\text{persistent epistemic state}
+\neq
+\text{temporary active assumption context}.
+}
+\]
+
+The black-box observer should be able to maintain multiple alternative assumptions/hypotheses simultaneously. A white-box reasoning move selects or stipulates one set temporarily without promoting it to certainty.
+
+This made **Assumption-based Truth Maintenance Systems (ATMS)** an unusually close existing analogue and motivated a targeted research pass before changing the documentation again.
+
+## 18. ATMS and institution theory supplied orthogonal pieces of the revised meta-model
+
+The ATMS comparison strengthened the model rather than opening another unrelated branch.
+
+ATMS supplies a structure in which:
+
+- multiple alternative assumptions coexist;
+- an **environment** is a set of assumptions;
+- explicit justifications propagate consequences;
+- a datum's **label** records minimal consistent assumption environments that support it;
+- one can inspect consequences under a selected environment without treating that environment as the uniquely believed theory.
+
+This maps cleanly onto the white-box/black-box distinction.
+
+The current persistent state is therefore proposed as:
+
+$$
+\boxed{
+K_\Sigma=(N,A,J,\lambda,\rho)
+}
+$$
+
+where \(N\) are represented nodes, \(A\) assumable nodes, \(J\) justification/dependency structure, \(\lambda\) minimal supporting environments, and \(\rho\) optional graded support.
+
+A temporary reasoning branch selects:
+
+$$
+\Gamma\subseteq A
+$$
+
+and obtains:
+
+$$
+C(\Gamma)=\operatorname{Cl}_{J}(\Gamma).
+$$
+
+The reasoning episode is now:
+
+$$
+\boxed{
+R=(K_\Sigma,\Gamma,Q).
+}
+$$
+
+The query \(Q\) is kept outside persistent epistemic state because changing the current problem need not change what the observer represents or supports.
+
+The previous top-level evidence coordinate \(E\) was also demoted. Observation reports, testimony, instrument readings, and research findings can be represented as typed nodes with provenance and dependencies rather than being treated as epistemically privileged merely because they are called “evidence.”
+
+Institution theory and ATMS are therefore **orthogonal**:
+
+- institution theory: what language/models/semantic translations are;
+- ATMS: under which assumption combinations a proposition is supported.
+
+Theory graphs remain relevant for later modular-theory engineering, but are not added as another foundational layer yet.
+
+The current architecture is:
+
+$$
+\boxed{
+\begin{array}{c}
+\mathfrak I=(\mathbf{Sig},\operatorname{Sen},\operatorname{Mod},\models)\\
+\downarrow\\
+K_\Sigma=(N,A,J,\lambda,\rho)\\
+\downarrow\\
+R=(K_\Sigma,\Gamma,Q)\\
+\downarrow\\
+C(\Gamma)=\operatorname{Cl}_J(\Gamma)
+\end{array}
+}
+$$
+
+with typed candidate generation still open:
+
+$$
+g_i(R)\rightarrow\mathcal C_i.
+$$
+
+This is the current endpoint. It preserves the earlier set-difference result as a semantic-state special case, while replacing the flat live-hypothesis set as the primary representation of persistent epistemic organization.

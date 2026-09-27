@@ -2,7 +2,7 @@
   "id": "dialogue-2026-09-27",
   "title": "From inference taxonomy to a persistent inquiry graph",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript.",
+  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript.",
   "participants": [
     {
       "id": "participant:brian",
@@ -1013,6 +1013,366 @@
       "actor_id": "participant:brian",
       "ordinal": 125,
       "text": "conversation's gone long enough that I don't want to lose any of the detail.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex128",
+      "actor_id": "participant:brian",
+      "ordinal": 126,
+      "text": "how do we apply this kind of framework we've been developing to what we've been doing here?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex129",
+      "actor_id": "participant:assistant",
+      "ordinal": 127,
+      "text": "theoretical model construction under conceptual constraints",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex130",
+      "actor_id": "participant:assistant",
+      "ordinal": 128,
+      "text": "This conversation itself is an example of candidate generation.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex131",
+      "actor_id": "participant:brian",
+      "ordinal": 129,
+      "text": "Okay, so what next?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex132",
+      "actor_id": "participant:assistant",
+      "ordinal": 130,
+      "text": "formalize candidate generation itself, using this conversation as the test case.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex133",
+      "actor_id": "participant:brian",
+      "ordinal": 131,
+      "text": "My concern is that we want to make sure these things are clearly defined and formalized, like reframe seems to be doing a lot of work.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex134",
+      "actor_id": "participant:brian",
+      "ordinal": 132,
+      "text": "how do you take an existing space of concepts and like combine and compose them in some way.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex135",
+      "actor_id": "participant:brian",
+      "ordinal": 133,
+      "text": "how do new concepts get added to the space?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex136",
+      "actor_id": "participant:assistant",
+      "ordinal": 134,
+      "text": "concept construction != concept invention.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex137",
+      "actor_id": "participant:assistant",
+      "ordinal": 135,
+      "text": "reframe is almost certainly a macro-term.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex138",
+      "actor_id": "participant:assistant",
+      "ordinal": 136,
+      "text": "the eventual formalism will not be “seven primitive cognitive operations.” It will look more like an algebra over languages, concepts, theories, and queries",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex139",
+      "actor_id": "participant:brian",
+      "ordinal": 137,
+      "text": "presumably when we're trying to formalize this, we want to do it in a way that is compatible with the rest of like the meta model that we've been building or exposes a gap in that meta model that we need to change",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex140",
+      "actor_id": "participant:assistant",
+      "ordinal": 138,
+      "text": "Use concept-generation theory as a stress test of the meta-model.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex141",
+      "actor_id": "participant:assistant",
+      "ordinal": 139,
+      "text": "our current U is doing too much.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex142",
+      "actor_id": "participant:assistant",
+      "ordinal": 140,
+      "text": "A cleaner meta-model may need:",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex143",
+      "actor_id": "participant:brian",
+      "ordinal": 141,
+      "text": "Okay, do that.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex144",
+      "actor_id": "participant:assistant",
+      "ordinal": 142,
+      "text": "The main correction is that our earlier K=(L,M,H,mu) still conflates syntax, asserted theory, semantic possibilities, and generated candidates.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex145",
+      "actor_id": "participant:assistant",
+      "ordinal": 143,
+      "text": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex146",
+      "actor_id": "participant:assistant",
+      "ordinal": 144,
+      "text": "K=(Σ,T,W,ρ,E,Q)",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex147",
+      "actor_id": "participant:assistant",
+      "ordinal": 145,
+      "text": "expression construction != definitional extension != substantive concept/predicate invention.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex148",
+      "actor_id": "participant:assistant",
+      "ordinal": 146,
+      "text": "So I would remove **reframe** from the foundational calculus.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex149",
+      "actor_id": "participant:assistant",
+      "ordinal": 147,
+      "text": "candidate itself is not one type. We need a typed candidate space.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex150",
+      "actor_id": "participant:brian",
+      "ordinal": 148,
+      "text": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex151",
+      "actor_id": "participant:brian",
+      "ordinal": 149,
+      "text": "you never really commit to a theory. I mean, I guess you could, but generally it's like I am assuming this for the purpose of this deduction or whatever it is",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex152",
+      "actor_id": "participant:assistant",
+      "ordinal": 150,
+      "text": "T is probably better interpreted as a **currently active assumption context**",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex153",
+      "actor_id": "participant:assistant",
+      "ordinal": 151,
+      "text": "separate epistemic state from active reasoning context.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex154",
+      "actor_id": "participant:assistant",
+      "ordinal": 152,
+      "text": "the black box maintains uncertain candidates; the white-box move is “temporarily stipulate one context and inspect its consequences.”",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex155",
+      "actor_id": "participant:brian",
+      "ordinal": 153,
+      "text": "Okay, anything else we should research or discuss before updating our documentation and dialog graph?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex156",
+      "actor_id": "participant:assistant",
+      "ordinal": 154,
+      "text": "The main thing to research is **assumption-based reasoning / ATMS**.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex157",
+      "actor_id": "participant:assistant",
+      "ordinal": 155,
+      "text": "That combination looks much closer to what we've actually been reaching for than either one alone.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex158",
+      "actor_id": "participant:assistant",
+      "ordinal": 156,
+      "text": "persistent epistemic state = hypotheses + dependency/support structure + graded support",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex159",
+      "actor_id": "participant:brian",
+      "ordinal": 157,
+      "text": "Okay, do that.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex160",
+      "actor_id": "participant:assistant",
+      "ordinal": 158,
+      "text": "ATMS is much closer to your white-box/black-box intuition than our flat H-set model was.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex161",
+      "actor_id": "participant:assistant",
+      "ordinal": 159,
+      "text": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex162",
+      "actor_id": "participant:assistant",
+      "ordinal": 160,
+      "text": "K=(Σ,N,A,J,λ,ρ)",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex163",
+      "actor_id": "participant:assistant",
+      "ordinal": 161,
+      "text": "The white box is a temporary assumption environment",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex164",
+      "actor_id": "participant:assistant",
+      "ordinal": 162,
+      "text": "C(Γ)=Cl_J(Γ)",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex165",
+      "actor_id": "participant:assistant",
+      "ordinal": 163,
+      "text": "ATMS and institutions are orthogonal, not alternatives",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex166",
+      "actor_id": "participant:assistant",
+      "ordinal": 164,
+      "text": "I no longer think E necessarily belongs as an undifferentiated top-level coordinate of K.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex167",
+      "actor_id": "participant:assistant",
+      "ordinal": 165,
+      "text": "I would still keep Q but **outside the epistemic state proper**.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex168",
+      "actor_id": "participant:assistant",
+      "ordinal": 166,
+      "text": "R=(K_Σ,Γ,Q)",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex169",
+      "actor_id": "participant:assistant",
+      "ordinal": 167,
+      "text": "Theory graphs ... relevant, but I would **not add it to the foundation yet**.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex170",
+      "actor_id": "participant:assistant",
+      "ordinal": 168,
+      "text": "K_Σ=(N,A,J,λ,ρ)",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex171",
+      "actor_id": "participant:assistant",
+      "ordinal": 169,
+      "text": "What is the minimal type system for generated epistemic candidates?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex172",
+      "actor_id": "participant:brian",
+      "ordinal": 170,
+      "text": "Ok do that",
       "original_id": null,
       "timestamp": null
     }

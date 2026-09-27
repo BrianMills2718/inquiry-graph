@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 125, "nodes": 125, "relations": 134, "moves": 105, "stance_events": 31, "question_events": 44, "questions": 36, "review": {"proposed": 439, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 170, "nodes": 169, "relations": 178, "moves": 143, "stance_events": 41, "question_events": 58, "questions": 43, "review": {"proposed": 589, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript.
 
 ## Open agenda
 
@@ -27,7 +27,11 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Can candidate generation be given a small compositional or uniquely factorizable basis?
-`dialogue-2026-09-27:n:q-candidate-generation-factorization` · open · proposed
+`dialogue-2026-09-27:n:q-candidate-generation-factorization` · reopened · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What is the minimal type system for generated epistemic candidates?
+`dialogue-2026-09-27:n:q-candidate-type-system` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What factorization of epistemic state change can be canonical relative to an explicit representation contract?
@@ -64,6 +68,14 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What is the space of possible explanatory hypotheses?
 `dialogue-2026-09-27:n:q-explanations` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What should be formalized next after separating state update from candidate generation?
+`dialogue-2026-09-27:n:q-generation-next` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What should be formalized next after separating state update from candidate generation?
+`dialogue-2026-09-27:n:q-generation-next` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What general heuristics or formal scaffolding improve thinking across problems?
@@ -126,6 +138,14 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-measurement-sufficient` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?
+`dialogue-2026-09-27:n:q-meta-model-compatibility` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?
+`dialogue-2026-09-27:n:q-meta-model-compatibility` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### What minimal entities and relations does this inference sketch require?
 `dialogue-2026-09-27:n:q-minimal-ontology` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
@@ -158,8 +178,40 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-physical` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### What established machinery should be checked before freezing the revised meta-model in documentation?
+`dialogue-2026-09-27:n:q-pre-update-research` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What established machinery should be checked before freezing the revised meta-model in documentation?
+`dialogue-2026-09-27:n:q-pre-update-research` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### Is reframe a primitive operation, or is it masking several different transformations?
+`dialogue-2026-09-27:n:q-reframe-primitive` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Is reframe a primitive operation, or is it masking several different transformations?
+`dialogue-2026-09-27:n:q-reframe-primitive` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?
+`dialogue-2026-09-27:n:q-self-application` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?
+`dialogue-2026-09-27:n:q-self-application` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### Do deduction, induction and abduction exhaust learning beyond observation?
 `dialogue-2026-09-27:n:q-taxonomy` · reopened · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?
+`dialogue-2026-09-27:n:q-theory-commitment` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?
+`dialogue-2026-09-27:n:q-theory-commitment` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What warrants the standards by which an inference is warranted?
@@ -809,3 +861,231 @@ Inputs: dialogue-2026-09-27:n:warrant-layer
 Outputs: dialogue-2026-09-27:n:warrant-layer
 
 > warrant = conditions under which a move has a specified justification or guarantee
+
+**ask** · `dialogue-2026-09-27:m:106` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:current-endpoint
+Outputs: dialogue-2026-09-27:n:q-self-application
+
+> how do we apply this kind of framework we&#x27;ve been developing to what we&#x27;ve been doing here?
+
+**clarify** · `dialogue-2026-09-27:m:107` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-self-application
+Outputs: dialogue-2026-09-27:n:theoretical-model-construction
+
+> theoretical model construction under conceptual constraints
+
+**connect** · `dialogue-2026-09-27:m:108` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:theoretical-model-construction
+Outputs: dialogue-2026-09-27:n:candidate-generation-testcase
+
+> This conversation itself is an example of candidate generation.
+
+**ask** · `dialogue-2026-09-27:m:109` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-testcase
+Outputs: dialogue-2026-09-27:n:q-generation-next
+
+> Okay, so what next?
+
+**propose** · `dialogue-2026-09-27:m:110` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-generation-next
+Outputs: dialogue-2026-09-27:n:generation-formalization-goal
+
+> formalize candidate generation itself, using this conversation as the test case.
+
+**challenge** · `dialogue-2026-09-27:m:111` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:generation-formalization-goal
+Outputs: dialogue-2026-09-27:n:q-reframe-primitive
+
+> My concern is that we want to make sure these things are clearly defined and formalized, like reframe seems to be doing a lot of work.
+
+**distinguish** · `dialogue-2026-09-27:m:112` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-reframe-primitive
+Outputs: dialogue-2026-09-27:n:concept-construction
+
+> how do you take an existing space of concepts and like combine and compose them in some way.
+
+**distinguish** · `dialogue-2026-09-27:m:113` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-reframe-primitive
+Outputs: dialogue-2026-09-27:n:concept-invention
+
+> how do new concepts get added to the space?
+
+**clarify** · `dialogue-2026-09-27:m:114` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:concept-construction, dialogue-2026-09-27:n:concept-invention
+Outputs: dialogue-2026-09-27:n:construction-invention-distinction
+
+> concept construction != concept invention.
+
+**decompose** · `dialogue-2026-09-27:m:115` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-reframe-primitive
+Outputs: dialogue-2026-09-27:n:reframe-macro
+
+> reframe is almost certainly a macro-term.
+
+**propose** · `dialogue-2026-09-27:m:116` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:generation-formalization-goal
+Outputs: dialogue-2026-09-27:n:algebra-over-representations
+
+> the eventual formalism will not be “seven primitive cognitive operations.” It will look more like an algebra over languages, concepts, theories, and queries
+
+**ask** · `dialogue-2026-09-27:m:117` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:generation-formalization-goal
+Outputs: dialogue-2026-09-27:n:q-meta-model-compatibility
+
+> presumably when we&#x27;re trying to formalize this, we want to do it in a way that is compatible with the rest of like the meta model that we&#x27;ve been building or exposes a gap in that meta model that we need to change
+
+**scope** · `dialogue-2026-09-27:m:118` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-meta-model-compatibility
+Outputs: dialogue-2026-09-27:n:meta-model-stress-test
+
+> Use concept-generation theory as a stress test of the meta-model.
+
+**challenge** · `dialogue-2026-09-27:m:119` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:state-universe
+Outputs: dialogue-2026-09-27:n:u-overloaded
+
+> our current U is doing too much.
+
+**propose** · `dialogue-2026-09-27:m:120` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:u-overloaded
+Outputs: dialogue-2026-09-27:n:intermediate-lmhm
+
+> A cleaner meta-model may need:
+
+**clarify** · `dialogue-2026-09-27:m:121` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:intermediate-lmhm
+Outputs: dialogue-2026-09-27:n:institution-theory-ref, dialogue-2026-09-27:n:institution-substrate
+
+> Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction
+
+**propose** · `dialogue-2026-09-27:m:122` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:institution-substrate
+Outputs: dialogue-2026-09-27:n:intermediate-stwreq
+
+> K=(Σ,T,W,ρ,E,Q)
+
+**decompose** · `dialogue-2026-09-27:m:123` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:concept-construction, dialogue-2026-09-27:n:concept-invention
+Outputs: dialogue-2026-09-27:n:expression-construction, dialogue-2026-09-27:n:definitional-extension, dialogue-2026-09-27:n:substantive-predicate-invention, dialogue-2026-09-27:n:three-concept-distinction
+
+> expression construction != definitional extension != substantive concept/predicate invention.
+
+**retract** · `dialogue-2026-09-27:m:124` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:reframe-macro
+Outputs: dialogue-2026-09-27:n:reframe-macro
+
+> So I would remove **reframe** from the foundational calculus.
+
+**clarify** · `dialogue-2026-09-27:m:125` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:generation-formalization-goal
+Outputs: dialogue-2026-09-27:n:typed-candidate-space
+
+> candidate itself is not one type. We need a typed candidate space.
+
+**challenge** · `dialogue-2026-09-27:m:126` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:intermediate-stwreq
+Outputs: dialogue-2026-09-27:n:q-theory-commitment
+
+> Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing.
+
+**clarify** · `dialogue-2026-09-27:m:127` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-theory-commitment
+Outputs: dialogue-2026-09-27:n:temporary-assumption-context
+
+> T is probably better interpreted as a **currently active assumption context**
+
+**distinguish** · `dialogue-2026-09-27:m:128` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:temporary-assumption-context
+Outputs: dialogue-2026-09-27:n:persistent-active-distinction
+
+> separate epistemic state from active reasoning context.
+
+**clarify** · `dialogue-2026-09-27:m:129` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:persistent-active-distinction
+Outputs: dialogue-2026-09-27:n:black-white-context
+
+> the black box maintains uncertain candidates; the white-box move is “temporarily stipulate one context and inspect its consequences.”
+
+**ask** · `dialogue-2026-09-27:m:130` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-meta-model-compatibility
+Outputs: dialogue-2026-09-27:n:q-pre-update-research
+
+> Okay, anything else we should research or discuss before updating our documentation and dialog graph?
+
+**connect** · `dialogue-2026-09-27:m:131` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-pre-update-research
+Outputs: dialogue-2026-09-27:n:atms-ref
+
+> The main thing to research is **assumption-based reasoning / ATMS**.
+
+**hypothesize** · `dialogue-2026-09-27:m:132` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:atms-ref
+Outputs: dialogue-2026-09-27:n:atms-support-graph
+
+> ATMS is much closer to your white-box/black-box intuition than our flat H-set model was.
+
+**clarify** · `dialogue-2026-09-27:m:133` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:atms-support-graph
+Outputs: dialogue-2026-09-27:n:atms-environment, dialogue-2026-09-27:n:atms-label
+
+> An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it.
+
+**propose** · `dialogue-2026-09-27:m:134` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:atms-support-graph
+Outputs: dialogue-2026-09-27:n:persistent-support-state
+
+> K=(Σ,N,A,J,λ,ρ)
+
+**clarify** · `dialogue-2026-09-27:m:135` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:persistent-support-state
+Outputs: dialogue-2026-09-27:n:temporary-environment
+
+> The white box is a temporary assumption environment
+
+**deduce** · `dialogue-2026-09-27:m:136` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:temporary-environment
+Outputs: dialogue-2026-09-27:n:environment-closure
+
+> C(Γ)=Cl_J(Γ)
+
+**connect** · `dialogue-2026-09-27:m:137` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:institution-substrate, dialogue-2026-09-27:n:atms-support-graph
+Outputs: dialogue-2026-09-27:n:institution-atms-orthogonal
+
+> ATMS and institutions are orthogonal, not alternatives
+
+**challenge** · `dialogue-2026-09-27:m:138` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:intermediate-stwreq
+Outputs: dialogue-2026-09-27:n:evidence-as-node
+
+> I no longer think E necessarily belongs as an undifferentiated top-level coordinate of K.
+
+**distinguish** · `dialogue-2026-09-27:m:139` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:persistent-support-state
+Outputs: dialogue-2026-09-27:n:query-outside-state
+
+> I would still keep Q but **outside the epistemic state proper**.
+
+**connect** · `dialogue-2026-09-27:m:140` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:persistent-support-state, dialogue-2026-09-27:n:temporary-environment, dialogue-2026-09-27:n:query-outside-state
+Outputs: dialogue-2026-09-27:n:reasoning-episode
+
+> R=(K_Σ,Γ,Q)
+
+**scope** · `dialogue-2026-09-27:m:141` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:theory-graphs-parked
+
+> Theory graphs ... relevant, but I would **not add it to the foundation yet**.
+
+**summarize** · `dialogue-2026-09-27:m:142` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:institution-substrate, dialogue-2026-09-27:n:persistent-support-state, dialogue-2026-09-27:n:reasoning-episode
+Outputs: dialogue-2026-09-27:n:current-meta-model
+
+> K_Σ=(N,A,J,λ,ρ)
+
+**ask** · `dialogue-2026-09-27:m:143` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-candidate-space
+Outputs: dialogue-2026-09-27:n:q-candidate-type-system, dialogue-2026-09-27:n:typed-generation-open
+
+> What is the minimal type system for generated epistemic candidates?

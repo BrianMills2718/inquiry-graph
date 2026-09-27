@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-Expanded the founding dialogue through the post-V1 return to the original epistemic problem. Added a detailed research log and an epistemic-transition-calculus draft; extended the curated source to 125 excerpts and the proposed inquiry graph to 125 content nodes, 134 relations, 105 moves, 31 stance events, and 44 question events. The current research endpoint separates candidate generation, warrant/evaluation, and epistemic state update, with the state-update side factored relative to a representation contract as semantic-space change plus additions, deletions, and graded-support change. Candidate-generation factorization and warrant postulates remain explicitly open.
+Expanded the founding dialogue through the post-V1 epistemic-transition work and the later assumption-context/institution-theory refinement. Added a detailed research log, the earlier epistemic-transition-calculus stage, and a current assumption-context meta-model; extended the curated source to 170 excerpts and the proposed inquiry graph to 169 content nodes, 178 relations, 143 moves, 41 stance events, and 58 question events. The current endpoint separates logical signature/model semantics from an ATMS-inspired persistent support graph and from temporary white-box assumption environments. Query/task is outside persistent epistemic state; evidence is represented as typed provenance-bearing content. Candidate-generation factorization and warrant postulates remain explicitly open.
 
 ## 1.0.0 — 2026-09-27
 

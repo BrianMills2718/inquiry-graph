@@ -49,3 +49,21 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Warrant postulates remain research work.** AGM-style postulates/representation theorems and formal-learning-style performance guarantees are precedents. The dialogue's proposed warrant certificate \((A,G,\pi)\) is a bookkeeping/analysis proposal, not an established general theorem of epistemic rationality.
 
 **Candidate generation remains open.** The strongest later separation is \`candidate generation != warrant/evaluation != state update\`. The state-update side was simplified; no MECE or uniquely factorizable basis for candidate generation has been established.
+
+## Assumption-context refinement cautions
+
+**The flat live-hypothesis set is now an intermediate view.** The earlier \(K=(\mathcal U,H,\mu)\) state and add/delete factorization remain useful for describing hard semantic possibility-set changes, but they no longer represent the whole persistent epistemic organization. The later model adds explicit assumptions, dependencies and minimal supporting environments.
+
+**Temporary assumptions are not durable beliefs.** A white-box reasoning branch may stipulate \(\Gamma\subseteq A\) only to inspect its consequences. Do not infer that selecting \(\Gamma\) means the participant endorses every member of \(\Gamma\) as true.
+
+**ATMS is an architectural precedent, not a warrant oracle.** Minimal support environments make dependency provenance explicit; they do not establish that the assumptions themselves are justified. The warrant-of-warrant regress remains visible rather than solved.
+
+**Institution theory and ATMS solve different problems.** Institution theory constrains logical signatures, sentences, models and translations; ATMS-like machinery tracks support under alternative assumption environments. The current proposal composes these ideas conceptually but does not implement either standard in full.
+
+**Evidence has been demoted from a privileged bucket.** Observation reports, testimony and research findings can be represented as typed nodes with provenance and dependencies. Grounding a report does not automatically warrant its content.
+
+**Query is not belief state.** \(Q\) belongs to the reasoning episode, not persistent epistemic state. A dialogue reframe can change the active question without changing the observer's represented assumptions or support structure.
+
+**Reframe remains a dialogue macro.** It is useful in the inquiry graph but should not be read as one primitive epistemic transformation. At the formal layer it may correspond to query change, signature change, support-graph change, environment change, or a composition.
+
+**Typed candidate generation remains open.** The latest model clarifies that generated candidates can be sentences, assumptions, justifications, models, signature extensions, mappings or queries. No exhaustive operator basis has yet been established.

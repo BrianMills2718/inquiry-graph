@@ -1,6 +1,6 @@
 # Epistemic transition calculus — current research draft
 
-> **Status:** research draft capturing the current endpoint of the 2026-09-27 dialogue. It is a proposed formalization, not an established theory, and not a claim that the factorization below is representation-independent or a complete psychology of cognition.
+> **Status:** research draft preserving the state-delta stage of the 2026-09-27 dialogue. It is a proposed formalization, not an established theory. A later refinement now treats this as an intermediate layer and replaces the overloaded hypothesis-universe state with an institution-style logical substrate plus an ATMS-inspired support graph and temporary assumption environments. See [assumption-context-meta-model.md](assumption-context-meta-model.md).
 
 ## 1. Problem
 
@@ -442,24 +442,21 @@ Several literatures were investigated because they appeared to supply a missing 
 
 These are neighboring tools, not the spine of the current formalization.
 
-## 13. Current endpoint
+## 13. Endpoint of this stage
 
-The current research claim is deliberately narrow:
+The state-delta stage established the following conditional result:
 
-> **Relative to an explicit semantic representation/alignment contract, an epistemic state can be modeled as \(K=(\mathcal U,H,\mu)\), and its state change can be factored into representation change \(\Phi\), additions \(A\), deletions \(D\), and graded-support change \(\mu\to\mu'\). Candidate generation and warrant are separate layers.**
+> **Relative to an explicit semantic representation/alignment contract, a flat semantic possibility state can be modeled as \(K=(\mathcal U,H,\mu)\), and its hard-set change can be factored into representation change \(\Phi\), additions \(A\), deletions \(D\), and graded-support change \(\mu\to\mu'\). Candidate generation and warrant are separate layers.**
 
-The fixed-universe hard-update component is complete by set difference. The broader “canonical” claim remains conditional on semantic identity and alignment.
+The fixed-universe hard-update component remains complete by set difference. What changed later is the claim that this flat possibility set is the best representation of the observer's **persistent epistemic organization**. The next research pass found a richer decomposition:
 
-The next research target is not another taxonomy of state updates. It is:
+- institution-style signatures, sentences, models, and satisfaction for the logical substrate;
+- an ATMS-inspired dependency/support graph for simultaneously entertained alternatives;
+- a temporary assumption environment for white-box reasoning branches;
+- query/task outside persistent epistemic state;
+- typed candidate generation still open.
 
-$$
-\boxed{
-\text{Find a useful, ideally uniquely factorizable basis for candidate generation }
-g:(K,E)\to\mathcal C.
-}
-$$
-
-Then specify warrant postulates/certificates that make every non-entailing commitment explicit about its assumptions and claimed guarantee.
+The current version is documented in [assumption-context-meta-model.md](assumption-context-meta-model.md).
 
 ## 14. Open problems / falsifiers
 

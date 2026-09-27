@@ -109,6 +109,44 @@ flowchart TD
   n102["move: propose: A warrant certificate records explicit assumptions, a claimed guarantee and support connecting the assumptions to that guarantee."]
   n103["move: clarify: Nontrivial ampliative guarantees require restrictions on the admissible possible-world or problem class."]
   n104["move: clarify: Warrant evaluates whether a candidate-to-commitment move has a specified justification or guarantee under explicit assumptions."]
+  n105["move: ask: How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?"]
+  n106["move: clarify: The dialogue is performing theoretical model construction under conceptual and literature constraints."]
+  n107["move: connect: The dialogue itself can serve as an adversarial test case for candidate-generation operators."]
+  n108["move: ask: What should be formalized next after separating state update from candidate generation?"]
+  n109["move: propose: Formalize candidate generation using the dialogue as a test case while importing established operators where possible."]
+  n110["move: challenge: Is reframe a primitive operation, or is it masking several different transformations?"]
+  n111["move: distinguish: Construction of a new expression or concept from constructors and vocabulary already available in the current language."]
+  n112["move: distinguish: Introduction of genuinely new conceptual or predicate vocabulary not already definable in the current language."]
+  n113["move: clarify: Concept construction inside an existing language and substantive concept invention are different problems."]
+  n114["move: decompose: Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations."]
+  n115["move: propose: Candidate generation may be better modeled as an algebra over languages, expressions, theories and queries than as a short folk list of cognitive verbs."]
+  n116["move: ask: Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?"]
+  n117["move: scope: Use established concept-generation formalisms as a stress test of the epistemic meta-model."]
+  n118["move: challenge: The previous U/hypothesis-universe coordinate conflates language, expressibility, model space and live hypotheses."]
+  n119["move: propose: An intermediate repair separates language, model space, live hypotheses and graded support as K=(L,M,H,mu)."]
+  n120["move: clarify: Institution theory as an abstract separation of signatures, sentences, models and satisfaction, with signature morphisms for translation.; Use an institution-style logical substrate (Sig, Sen, Mod, satisfaction) rather than one overloaded universe variable."]
+  n121["move: propose: An intermediate state proposal K=(Sigma,T,W,rho,E,Q) separates signature, explicit theory, semantic possibilities, support, evidence and query."]
+  n122["move: decompose: Build an expression using constructors already licensed by the current language.; Extend a signature with a fresh name explicitly defined from old-language expressions, ideally conservatively.; Introduce new predicate/concept vocabulary whose semantics are not merely a definitional abbreviation of the old language.; Expression construction, definitional extension and substantive concept invention are distinct operations."]
+  n123["move: retract: Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations."]
+  n124["move: clarify: Generated epistemic candidates require types such as sentence, assumption, justification, model, signature extension, mapping or query."]
+  n125["move: challenge: Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?"]
+  n126["move: clarify: A set of premises can be stipulated only for a reasoning branch without becoming a durable belief theory."]
+  n127["move: distinguish: Persistent epistemic state and the active assumption context of a reasoning episode should be represented separately."]
+  n128["move: clarify: The black-box state maintains alternatives; a white-box move temporarily stipulates one context and inspects its consequences."]
+  n129["move: ask: What established machinery should be checked before freezing the revised meta-model in documentation?"]
+  n130["move: connect: de Kleer's Assumption-based Truth Maintenance System as a precedent for multiple simultaneous assumption environments and dependency labels."]
+  n131["move: hypothesize: Persistent epistemic organization can be represented as assumptions, explicit justifications and minimal support environments rather than one committed theory."]
+  n132["move: clarify: An ATMS-style environment is a consistent set of assumptions under which consequences can be evaluated.; A label records minimal consistent assumption environments sufficient to support a datum."]
+  n133["move: propose: Current persistent state: K_Sigma=(N,A,J,lambda,rho), with represented nodes, assumptions, justifications, minimal support environments and optional graded support."]
+  n134["move: clarify: A white-box reasoning branch selects a temporary assumption environment Gamma subseteq A."]
+  n135["move: deduce: Conditional deductive context is the closure C(Gamma)=Cl_J(Gamma) of a temporary assumption environment under justifications."]
+  n136["move: connect: Institution theory handles language/model semantics while ATMS-like machinery handles support across assumption environments; they are complementary, not competing."]
+  n137["move: challenge: Evidence need not be a privileged top-level coordinate; reports and observations can be typed provenance-bearing nodes with their own dependencies."]
+  n138["move: distinguish: The current query/task belongs to a reasoning episode rather than persistent epistemic state."]
+  n139["move: connect: A reasoning episode can be represented as R=(K_Sigma,Gamma,Q)."]
+  n140["move: scope: Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet."]
+  n141["move: summarize: Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query."]
+  n142["move: ask: What is the minimal type system for generated epistemic candidates?; Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."]
   n0 -->|then| n1
   n1 -->|then| n2
   n2 -->|then| n3
@@ -215,4 +253,42 @@ flowchart TD
   n101 -->|then| n102
   n102 -->|then| n103
   n103 -->|then| n104
+  n104 -->|then| n105
+  n105 -->|then| n106
+  n106 -->|then| n107
+  n107 -->|then| n108
+  n108 -->|then| n109
+  n109 -->|then| n110
+  n110 -->|then| n111
+  n111 -->|then| n112
+  n112 -->|then| n113
+  n113 -->|then| n114
+  n114 -->|then| n115
+  n115 -->|then| n116
+  n116 -->|then| n117
+  n117 -->|then| n118
+  n118 -->|then| n119
+  n119 -->|then| n120
+  n120 -->|then| n121
+  n121 -->|then| n122
+  n122 -->|then| n123
+  n123 -->|then| n124
+  n124 -->|then| n125
+  n125 -->|then| n126
+  n126 -->|then| n127
+  n127 -->|then| n128
+  n128 -->|then| n129
+  n129 -->|then| n130
+  n130 -->|then| n131
+  n131 -->|then| n132
+  n132 -->|then| n133
+  n133 -->|then| n134
+  n134 -->|then| n135
+  n135 -->|then| n136
+  n136 -->|then| n137
+  n137 -->|then| n138
+  n138 -->|then| n139
+  n139 -->|then| n140
+  n140 -->|then| n141
+  n141 -->|then| n142
 ```

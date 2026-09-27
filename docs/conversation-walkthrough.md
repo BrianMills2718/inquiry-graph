@@ -187,3 +187,64 @@ The current endpoint is not “induction and abduction solved.” It is the sepa
 Traditional induction, abduction, analogy, model invention, and causal discovery are now treated primarily as candidate-generation or reasoning-trajectory motifs until a stronger factorization is found. The warrant layer records explicit assumptions and the guarantee they are claimed to buy. The state-update layer records the resulting semantic change.
 
 The two most important open obligations are now `q-candidate-generation-factorization` and `q-warrant-postulates`. See [the current research draft](epistemic-transition-calculus.md) and [post-V1 research log](research-log-post-v1.md).
+
+## 13. The conversation itself became a test case for candidate generation
+
+~~~mermaid
+flowchart LR
+ A[What kind of reasoning are we doing here?] --> B[Theoretical model construction]
+ B --> C[Use the dialogue as a candidate-generation corpus]
+ C --> D[Provisional operators: compose / abstract / reframe...]
+ D --> E[User objects: reframe is doing too much]
+ E --> F[Separate construction inside a concept space from invention of new concepts]
+~~~
+
+This phase turned the inquiry back onto itself. The dialogue was no longer only discussing candidate generation abstractly; it became an example to classify. The informal operator list was intentionally not frozen into the ontology.
+
+## 14. Concept formation exposed an overloaded meta-model
+
+~~~mermaid
+flowchart LR
+ A[Concept construction vs concept invention] --> B[Check existing formal machinery]
+ B --> C[Description logics / FCA / anti-unification / predicate invention]
+ C --> D[U is overloaded]
+ D --> E[Separate signature, sentences, models, assumptions]
+ E --> F[Institution theory]
+ F --> G[Reframe demoted to dialogue macro]
+~~~
+
+The important outcome was not another seven-item taxonomy. It was a sharper type distinction: constructing an expression in an existing language, adding a conservative definition, and inventing genuinely new vocabulary are different operations. Institution theory supplied a formal language/model boundary rather than another home-grown notation.
+
+## 15. The white-box/black-box distinction corrected the “current theory” idea
+
+~~~mermaid
+flowchart LR
+ A[Intermediate T/W model] --> B[User: I am not committing to one theory]
+ B --> C[Assume this only for the derivation]
+ C --> D[Persistent alternatives]
+ C --> E[Temporary active assumptions]
+ D --> F[Black-box state]
+ E --> G[White-box branch]
+~~~
+
+This was another user correction. A set of premises used for a deduction should not automatically be modeled as the observer's durable belief theory. The distinction between **persistent epistemic organization** and **temporarily stipulated assumptions** became explicit.
+
+## 16. ATMS and institutions became complementary foundations
+
+~~~mermaid
+flowchart LR
+ A[Research assumption-based reasoning] --> B[ATMS: assumptions + justifications + environments]
+ B --> C[Minimal support labels]
+ C --> D[Persistent K_sigma = N,A,J,lambda,rho]
+ D --> E[Select Gamma for one reasoning branch]
+ E --> F[Closure C(Gamma)]
+ G[Institution theory] --> H[Signature / sentences / models / satisfaction]
+ H --> I[Signature morphisms for language change]
+ F --> J[Reasoning episode R = K_sigma,Gamma,Q]
+ I --> J
+ J --> K[Typed candidate generation remains open]
+~~~
+
+The two frameworks solve different pieces. Institution theory constrains representational/logical translation. ATMS-like machinery preserves multiple hypothetical contexts and explicit dependency provenance. Query \(Q\) is now outside persistent epistemic state; evidence is represented as typed, provenance-bearing content rather than an automatically privileged bucket.
+
+The current endpoint is documented in [assumption-context-meta-model.md](assumption-context-meta-model.md). The open frontier is still the typed algebra of candidate generation, not another attempt to declare induction/abduction primitives.
