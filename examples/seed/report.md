@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 170, "nodes": 169, "relations": 178, "moves": 143, "stance_events": 41, "question_events": 58, "questions": 43, "review": {"proposed": 589, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 197, "nodes": 202, "relations": 211, "moves": 169, "stance_events": 48, "question_events": 68, "questions": 49, "review": {"proposed": 698, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application.
 
 ## Open agenda
 
@@ -35,7 +35,7 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What factorization of epistemic state change can be canonical relative to an explicit representation contract?
-`dialogue-2026-09-27:n:q-canonical-transition` · answered · proposed
+`dialogue-2026-09-27:n:q-canonical-transition` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What claims beyond observation can have support without being explanations?
@@ -44,6 +44,10 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What role does generation of candidate constraints play in black-box inference?
 `dialogue-2026-09-27:n:q-constraint-generation` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?
+`dialogue-2026-09-27:n:q-conversation-strategy-identification` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Which beyond-observation inferences can an embedded observer make?
@@ -68,6 +72,14 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What is the space of possible explanatory hypotheses?
 `dialogue-2026-09-27:n:q-explanations` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?
+`dialogue-2026-09-27:n:q-factorization-term` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?
+`dialogue-2026-09-27:n:q-factorization-term` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What should be formalized next after separating state update from candidate generation?
@@ -146,12 +158,24 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-meta-model-compatibility` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?
+`dialogue-2026-09-27:n:q-metareasoning-research` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### What minimal entities and relations does this inference sketch require?
 `dialogue-2026-09-27:n:q-minimal-ontology` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### How does an embedded observer learn from a non-designed world?
 `dialogue-2026-09-27:n:q-natural-learning` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What should be attacked next after the assumption-context refinement?
+`dialogue-2026-09-27:n:q-next-after-context` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What should be attacked next after the assumption-context refinement?
+`dialogue-2026-09-27:n:q-next-after-context` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What does higher order mean, and how does it differ from coarse-graining?
@@ -186,6 +210,14 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-pre-update-research` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### How should repeated self-application of the developing reasoning model be represented?
+`dialogue-2026-09-27:n:q-reflective-application` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How should repeated self-application of the developing reasoning model be represented?
+`dialogue-2026-09-27:n:q-reflective-application` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### Is reframe a primitive operation, or is it masking several different transformations?
 `dialogue-2026-09-27:n:q-reframe-primitive` · answered · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
@@ -195,11 +227,15 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?
-`dialogue-2026-09-27:n:q-self-application` · answered · proposed
+`dialogue-2026-09-27:n:q-self-application` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
-### How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?
-`dialogue-2026-09-27:n:q-self-application` · open · proposed
+### Where does canonical factorization live when treated as a reusable cognitive strategy?
+`dialogue-2026-09-27:n:q-strategy-placement` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Where does canonical factorization live when treated as a reusable cognitive strategy?
+`dialogue-2026-09-27:n:q-strategy-placement` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Do deduction, induction and abduction exhaust learning beyond observation?
@@ -784,12 +820,6 @@ Outputs: dialogue-2026-09-27:n:mece-property
 
 > MECE is a property we want the formalism to have, not really the name of the thing we&#x27;re building.
 
-**propose** · `dialogue-2026-09-27:m:093` · actor `participant:assistant` · proposed
-Inputs: dialogue-2026-09-27:n:mece-property
-Outputs: dialogue-2026-09-27:n:canonical-factorization
-
-> Construct a canonical factorization of epistemic transitions.
-
 **reframe** · `dialogue-2026-09-27:m:094` · actor `participant:brian` · proposed
 Inputs: dialogue-2026-09-27:n:q-warrant
 Outputs: dialogue-2026-09-27:n:certainty-free-goal
@@ -861,12 +891,6 @@ Inputs: dialogue-2026-09-27:n:warrant-layer
 Outputs: dialogue-2026-09-27:n:warrant-layer
 
 > warrant = conditions under which a move has a specified justification or guarantee
-
-**ask** · `dialogue-2026-09-27:m:106` · actor `participant:brian` · proposed
-Inputs: dialogue-2026-09-27:n:current-endpoint
-Outputs: dialogue-2026-09-27:n:q-self-application
-
-> how do we apply this kind of framework we&#x27;ve been developing to what we&#x27;ve been doing here?
 
 **clarify** · `dialogue-2026-09-27:m:107` · actor `participant:assistant` · proposed
 Inputs: dialogue-2026-09-27:n:q-self-application
@@ -1089,3 +1113,171 @@ Inputs: dialogue-2026-09-27:n:typed-candidate-space
 Outputs: dialogue-2026-09-27:n:q-candidate-type-system, dialogue-2026-09-27:n:typed-generation-open
 
 > What is the minimal type system for generated epistemic candidates?
+
+**ask** · `dialogue-2026-09-27:m:144` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:q-next-after-context
+
+> What next?
+
+**scope** · `dialogue-2026-09-27:m:145` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-next-after-context
+Outputs: dialogue-2026-09-27:n:typed-generation-program
+
+> typed candidate generation
+
+**test** · `dialogue-2026-09-27:m:146` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-generation-program
+Outputs: dialogue-2026-09-27:n:candidate-typing-test
+
+> Can every candidate-generation move in our test corpus be assigned a unique output type and a compositional operator description?
+
+**challenge** · `dialogue-2026-09-27:m:147` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-candidate-space
+Outputs: dialogue-2026-09-27:n:candidate-types-nonorthogonal
+
+> the seven candidate types I proposed were not actually orthogonal.
+
+**distinguish** · `dialogue-2026-09-27:m:148` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-types-nonorthogonal
+Outputs: dialogue-2026-09-27:n:assumption-role-not-type
+
+> assumption is usually a **role** played by some sentence/theory, not a separate ontological type.
+
+**hypothesize** · `dialogue-2026-09-27:m:149` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-types-nonorthogonal
+Outputs: dialogue-2026-09-27:n:candidate-footprint
+
+> the **footprint hypothesis survives** surprisingly well.
+
+**challenge** · `dialogue-2026-09-27:m:150` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:institution-substrate
+Outputs: dialogue-2026-09-27:n:formal-syntax-module-gap
+
+> we need an explicit formal-syntax/module layer, not just institution semantics.
+
+**connect** · `dialogue-2026-09-27:m:151` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:formal-syntax-module-gap
+Outputs: dialogue-2026-09-27:n:mmt-ref, dialogue-2026-09-27:n:mmt-representation-substrate
+
+> MMT can probably supply most of our formal-representation layer essentially as-is.
+
+**distinguish** · `dialogue-2026-09-27:m:152` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:mmt-representation-substrate
+Outputs: dialogue-2026-09-27:n:formal-elaboration
+
+> MMT/LF can establish well-formedness, typing and deductive proof validity.
+
+**distinguish** · `dialogue-2026-09-27:m:153` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:formal-elaboration
+Outputs: dialogue-2026-09-27:n:wellformed-not-warranted
+
+> They do not tell us whether inventing Z, choosing one causal model, extrapolating a regularity, or trusting some research source was epistemically warranted.
+
+**ask** · `dialogue-2026-09-27:m:154` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:mece-goal
+Outputs: dialogue-2026-09-27:n:q-factorization-term
+
+> I&#x27;m wondering what the term for this is
+
+**summarize** · `dialogue-2026-09-27:m:155` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:episode-factorization-loop
+Outputs: dialogue-2026-09-27:n:factorization-thinking-preference
+
+> this process of doing this and then, like, realizing you&#x27;re over- or underfactored is just, like, I think very core to the way I like to think about things
+
+**generalize** · `dialogue-2026-09-27:m:156` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:mece-goal
+Outputs: dialogue-2026-09-27:n:mece-special-case
+
+> MECE is only one special case of the broader thing you actually care about.
+
+**propose** · `dialogue-2026-09-27:m:093` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:mece-property
+Outputs: dialogue-2026-09-27:n:canonical-factorization
+
+> canonical factorization
+
+**propose** · `dialogue-2026-09-27:m:157` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-factorization-term
+Outputs: dialogue-2026-09-27:n:canonical-factorization-strategy
+
+> canonical factorization
+
+**clarify** · `dialogue-2026-09-27:m:158` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy
+Outputs: dialogue-2026-09-27:n:factorization-diagnostics
+
+> underfactored, overfactored, misfactored.
+
+**ask** · `dialogue-2026-09-27:m:159` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy
+Outputs: dialogue-2026-09-27:n:q-strategy-placement
+
+> what would this concept of canonical factorization as a kind of cognitive strategy, where would that live in our system?
+
+**reframe** · `dialogue-2026-09-27:m:160` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy
+Outputs: dialogue-2026-09-27:n:strategy-control-layer
+
+> canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves.
+
+**clarify** · `dialogue-2026-09-27:m:161` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:strategy-control-layer
+Outputs: dialogue-2026-09-27:n:metastrategy-relative
+
+> meta-strategy / inquiry control
+
+**ask** · `dialogue-2026-09-27:m:162` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:q-reflective-application
+
+> I often find myself that I&#x27;m doing recursion on my own stuff
+
+**ask** · `dialogue-2026-09-27:m:166` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:reflective-self-application
+Outputs: dialogue-2026-09-27:n:q-conversation-strategy-identification
+
+> being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this
+
+**propose** · `dialogue-2026-09-27:m:167` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-conversation-strategy-identification
+Outputs: dialogue-2026-09-27:n:conversation-strategy-analysis
+
+> being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this
+
+**propose** · `dialogue-2026-09-27:m:163` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-reflective-application
+Outputs: dialogue-2026-09-27:n:reflective-self-application
+
+> reflective / self-applicative modeling
+
+**ask** · `dialogue-2026-09-27:m:106` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:current-endpoint
+Outputs: dialogue-2026-09-27:n:q-self-application
+
+> use the model to analyze the process by which the model itself is being built
+
+**clarify** · `dialogue-2026-09-27:m:164` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:reflective-self-application
+Outputs: dialogue-2026-09-27:n:reflection-about-relation
+
+> use the model to analyze the process by which the model itself is being built
+
+**generalize** · `dialogue-2026-09-27:m:165` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:reflection-about-relation
+Outputs: dialogue-2026-09-27:n:closure-under-self-description
+
+> closure under self-description
+
+**generalize** · `dialogue-2026-09-27:m:168` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:conversation-strategy-analysis
+Outputs: dialogue-2026-09-27:n:reasoning-trajectory-dataset
+
+> conversations become datasets of instantiated reasoning trajectories.
+
+**ask** · `dialogue-2026-09-27:m:169` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:strategy-control-layer, dialogue-2026-09-27:n:reflection-about-relation
+Outputs: dialogue-2026-09-27:n:q-metareasoning-research
+
+> Ok I assume we should do any remaining work/research around that

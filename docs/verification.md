@@ -2,7 +2,7 @@
 
 ## Build environment checks
 
-Latest local result: **59 tests passed**; graph validation returned zero errors and warnings.
+Latest local result: **60 tests passed**; graph validation returned zero errors and warnings. The added coverage includes the generic reflective `about` relation used by the strategy/self-application annotations.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
@@ -30,7 +30,7 @@ The repository CI is configured to install the package with development and opti
 
 ## Explicitly not verified
 
-No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 267 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
+No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 698 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
 
 ## Recovery
 

@@ -499,3 +499,99 @@ g_i(R)\rightarrow\mathcal C_i.
 $$
 
 This is the current endpoint. It preserves the earlier set-difference result as a semantic-state special case, while replacing the flat live-hypothesis set as the primary representation of persistent epistemic organization.
+
+## 19. The seven candidate types were themselves overfactored
+
+The next pass tried to make candidate generation concrete by assigning each generated item a type. That immediately exposed another bad factorization.
+
+The earlier candidate list mixed artifact kinds with epistemic roles. In particular, **assumption** is usually a role played by a sentence or theory in a reasoning context, not the same ontological kind as expression, model, or mapping.
+
+The better representation was a **candidate footprint**: a generated package can involve several formal artifact kinds simultaneously.
+
+This preserved the earlier composition-space lesson. A latent-variable proposal may introduce a declaration, expressions constraining it, and changes to a theory at the same time. Forcing the move into one exclusive category would lose information.
+
+## 20. MMT collapsed the formal artifact taxonomy
+
+A literature check against LF/MMT substantially simplified the representation layer.
+
+An MMT-like theory graph can represent:
+
+- theories;
+- declarations/symbols;
+- objects, including formulas, terms and proofs;
+- morphisms, including theory translations and models.
+
+LF then becomes one possible logical foundation represented inside that modular framework rather than a separate epistemic layer.
+
+This means several previously separate candidate types collapse at the formal-representation level. The new boundary is instead:
+
+\[
+\boxed{
+\text{draft candidate}
+\rightarrow
+\text{formal elaboration/checking}
+\rightarrow
+\text{formal artifact or failure}.
+}
+\]
+
+The key correction is:
+
+\[
+\boxed{
+\text{well formed}
+\neq
+\text{warranted}.
+}
+\]
+
+Formal type/proof checking cannot tell us whether a candidate should have been invented, trusted, extrapolated, or selected.
+
+## 21. MECE was generalized into primitive-factorization analysis
+
+Brian explicitly identified a recurring thinking pattern: propose primitives, then notice that the decomposition is overfactored or underfactored and repair it.
+
+MECE was therefore demoted from the general method to one special case appropriate to partitions.
+
+The broader strategy became **canonical/primitive factorization**: search for a decomposition that is complete, nonredundant, compositional, sufficiently independent, and—where the representation permits—canonical.
+
+The dialogue developed three diagnostics:
+
+- **underfactored**: one factor bundles distinctions that matter;
+- **overfactored**: several factors are redundant or distinctions at the wrong level;
+- **misfactored**: the decomposition mixes unlike dimensions, such as formal type and epistemic role.
+
+Canonicality remains relative to a declared representation/equivalence contract.
+
+## 22. Strategy, metareasoning and reflection became explicit
+
+When Brian asked where canonical factorization lives as a cognitive strategy, the inquiry moved above the operator layer.
+
+The resulting distinction is:
+
+\[
+\boxed{
+\text{operator}
+\neq
+\text{strategy controlling operators}.
+}
+\]
+
+A strategy is represented descriptively as a policy over reasoning history and available operators. Rational metareasoning provides a stronger literature-backed specialization in which strategy selection is optimized under costs/resources, but optimization is not required in the base definition.
+
+The later self-application observation introduced **reflection**. Rather than hard-code permanent levels \(L_0,L_1,L_2,\ldots\), meta-level status is treated as relational: one reasoning episode is meta with respect to another artifact or episode when it is explicitly **about** that target.
+
+The key architectural property is **closure under self-description**:
+
+\[
+\text{strategies, reasoning episodes and the meta-model itself can be represented as targets}.
+\]
+
+This makes it possible to use the same framework both abstractly and empirically:
+
+- define strategies formally;
+- instantiate them on conversation trajectories;
+- mark reflective episodes;
+- later evaluate which strategies and meta-strategies correlate with useful outcomes.
+
+The current extension is documented in [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md).

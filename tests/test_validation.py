@@ -78,6 +78,14 @@ def test_relation_can_be_challenged(graph):
     assert validate(graph)['valid']
 
 
+def test_about_relation_accepts_reflective_targets(graph):
+    subject=next(n for n in graph.nodes if n.id.endswith(':episode-self-application'))
+    target=next(n for n in graph.nodes if n.id.endswith(':current-meta-model'))
+    graph.relations.append(Relation(id='reflective-about',kind='about',
+        bindings=[Binding(role='subject',ref=subject.id),Binding(role='object',ref=target.id)],anchors=subject.anchors))
+    assert validate(graph)['valid']
+
+
 def test_schema_rejects_extra_fields_and_unknown_kind(graph):
     data=graph.nodes[0].model_dump()
     data['truth_probability']=.97

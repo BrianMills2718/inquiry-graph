@@ -26,6 +26,12 @@ Use `open` for a question explicitly raised or reasonably reconstructed as unres
 
 The V1 agenda can show multiple rows for one question, because an assistant may consider it answered while the user remains unconvinced. That duplication is intentional. Cross-conversation status reconciliation remains manual; chronology is not guessed from similar labels.
 
+## Strategy and reflection annotation
+
+Treat a reusable reasoning strategy as a `method` node and a reconstructed occurrence of that strategy as a grounded `example` node. Use `exemplifies` from the occurrence to the strategy and `about` when an episode explicitly reasons about another reasoning artifact, strategy, episode or meta-model. Do not infer a private control policy merely because several moves look similar; strategy attribution remains proposed unless the source makes it explicit and a reviewer confirms it.
+
+Use `about` only for intentional semantic targeting, not generic topical similarity. `related_to` remains the fallback when the source does not justify a stronger reflective/aboutness claim. Fixed meta-level numbers are not stored; nested meta-level depth can be derived from chains of `about` relations if useful.
+
 ## Corrections and review procedure
 
 Review the exact source and neighboring source messages, not just the graph label. Check participant identity, hedge words, scope, relation role, and whether a move is merely temporal or genuinely explanatory. Mark an extraction rejected when it misrepresents the record; keep the source and earlier annotation for audit. Change review metadata in a named Git commit so the reviewer and diff are recorded. V1 has no separate collaborative review application.

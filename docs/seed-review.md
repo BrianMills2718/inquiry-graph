@@ -67,3 +67,21 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Reframe remains a dialogue macro.** It is useful in the inquiry graph but should not be read as one primitive epistemic transformation. At the formal layer it may correspond to query change, signature change, support-graph change, environment change, or a composition.
 
 **Typed candidate generation remains open.** The latest model clarifies that generated candidates can be sentences, assumptions, justifications, models, signature extensions, mappings or queries. No exhaustive operator basis has yet been established.
+
+## Strategy/reflection refinement cautions
+
+**Candidate artifact type is not epistemic role.** The later candidate-generation pass corrected the earlier list that mixed artifact kinds with roles such as “assumption.” Treat assumption, evidence and hypothesis primarily as contextual roles/statuses of represented artifacts unless a chosen formalism says otherwise.
+
+**MMT/LF-like formal validity is not warrant.** A draft may elaborate into a well-formed term, proof, declaration, theory or morphism without the generation/selection of that artifact being epistemically justified. Formal checking and warrant must remain separate annotations.
+
+**Canonical factorization is a strategy, not a primitive move.** Its occurrence in the dialogue is an analyst reconstruction of a multi-step control pattern: propose factors, test gaps/overlap/dependence, revise, and repeat. Do not reclassify every decompose move as use of the full strategy.
+
+**MECE is only a special case.** Some decomposition targets are partitions; others are products, feature combinations, bases or normal forms. Do not force mutual exclusivity where the represented object is intrinsically compositional.
+
+**Over/under/misfactoring are diagnostics relative to a representation contract.** They are not observer-independent properties of reality. “Misfactored” is especially useful when a taxonomy mixes semantic types with epistemic roles or different abstraction levels.
+
+**Meta-level is relational here.** The new about relation records what a reasoning artifact or reconstructed episode explicitly targets. The graph does not assign immutable L0/L1/L2 levels. A strategy can be object-level in one context and meta-level in another.
+
+**Reflection does not imply hidden introspection.** A public conversation can explicitly discuss its own reasoning process. That licenses an about relation to the represented dialogue/model, not a claim of privileged access to hidden neural or model-internal states.
+
+**Strategy episodes remain provisional.** The current executable schema has no dedicated strategy-episode record. Strategy methods and grounded example episodes are a conservative bridge. If empirical strategy analysis becomes central, reify episodes only after designing span membership, nesting, attribution and review semantics.

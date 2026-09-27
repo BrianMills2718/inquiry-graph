@@ -2,7 +2,7 @@
   "id": "dialogue-2026-09-27",
   "title": "From inference taxonomy to a persistent inquiry graph",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript.",
+  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application.",
   "participants": [
     {
       "id": "participant:brian",
@@ -1373,6 +1373,222 @@
       "actor_id": "participant:brian",
       "ordinal": 170,
       "text": "Ok do that",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex173",
+      "actor_id": "participant:brian",
+      "ordinal": 171,
+      "text": "What next?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex174",
+      "actor_id": "participant:assistant",
+      "ordinal": 172,
+      "text": "typed candidate generation",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex175",
+      "actor_id": "participant:assistant",
+      "ordinal": 173,
+      "text": "Can every candidate-generation move in our test corpus be assigned a unique output type and a compositional operator description?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex176",
+      "actor_id": "participant:brian",
+      "ordinal": 174,
+      "text": "Okay, do that.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex177",
+      "actor_id": "participant:assistant",
+      "ordinal": 175,
+      "text": "the seven candidate types I proposed were not actually orthogonal.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex178",
+      "actor_id": "participant:assistant",
+      "ordinal": 176,
+      "text": "assumption is usually a **role** played by some sentence/theory, not a separate ontological type.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex179",
+      "actor_id": "participant:assistant",
+      "ordinal": 177,
+      "text": "the **footprint hypothesis survives** surprisingly well.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex180",
+      "actor_id": "participant:assistant",
+      "ordinal": 178,
+      "text": "we need an explicit formal-syntax/module layer, not just institution semantics.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex181",
+      "actor_id": "participant:brian",
+      "ordinal": 179,
+      "text": "Okay, do that.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex182",
+      "actor_id": "participant:assistant",
+      "ordinal": 180,
+      "text": "MMT can probably supply most of our formal-representation layer essentially as-is.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex183",
+      "actor_id": "participant:assistant",
+      "ordinal": 181,
+      "text": "MMT/LF can establish well-formedness, typing and deductive proof validity.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex184",
+      "actor_id": "participant:assistant",
+      "ordinal": 182,
+      "text": "They do not tell us whether inventing Z, choosing one causal model, extrapolating a regularity, or trusting some research source was epistemically warranted.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex185",
+      "actor_id": "participant:brian",
+      "ordinal": 183,
+      "text": "I'm wondering what the term for this is",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex186",
+      "actor_id": "participant:brian",
+      "ordinal": 184,
+      "text": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex187",
+      "actor_id": "participant:assistant",
+      "ordinal": 185,
+      "text": "MECE is only one special case of the broader thing you actually care about.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex188",
+      "actor_id": "participant:assistant",
+      "ordinal": 186,
+      "text": "canonical factorization",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex189",
+      "actor_id": "participant:assistant",
+      "ordinal": 187,
+      "text": "underfactored, overfactored, misfactored.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex190",
+      "actor_id": "participant:brian",
+      "ordinal": 188,
+      "text": "what would this concept of canonical factorization as a kind of cognitive strategy, where would that live in our system?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex191",
+      "actor_id": "participant:assistant",
+      "ordinal": 189,
+      "text": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex192",
+      "actor_id": "participant:assistant",
+      "ordinal": 190,
+      "text": "meta-strategy / inquiry control",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex193",
+      "actor_id": "participant:brian",
+      "ordinal": 191,
+      "text": "I often find myself that I'm doing recursion on my own stuff",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex194",
+      "actor_id": "participant:brian",
+      "ordinal": 192,
+      "text": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex195",
+      "actor_id": "participant:assistant",
+      "ordinal": 193,
+      "text": "reflective / self-applicative modeling",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex196",
+      "actor_id": "participant:assistant",
+      "ordinal": 194,
+      "text": "use the model to analyze the process by which the model itself is being built",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex197",
+      "actor_id": "participant:assistant",
+      "ordinal": 195,
+      "text": "closure under self-description",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex198",
+      "actor_id": "participant:assistant",
+      "ordinal": 196,
+      "text": "conversations become datasets of instantiated reasoning trajectories.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex199",
+      "actor_id": "participant:brian",
+      "ordinal": 197,
+      "text": "Ok I assume we should do any remaining work/research around that",
       "original_id": null,
       "timestamp": null
     }

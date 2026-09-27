@@ -147,6 +147,32 @@ flowchart TD
   n140["move: scope: Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet."]
   n141["move: summarize: Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query."]
   n142["move: ask: What is the minimal type system for generated epistemic candidates?; Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."]
+  n143["move: ask: What should be attacked next after the assumption-context refinement?"]
+  n144["move: scope: Make typed candidate generation concrete using the conversation as a test corpus."]
+  n145["move: test: Test whether each observed candidate-generation move has a clear artifact footprint and compositional operator description."]
+  n146["move: challenge: The earlier seven candidate types were not orthogonal; some mixed artifact kinds with epistemic roles."]
+  n147["move: distinguish: Assumption is normally a role played by a sentence or theory rather than a base formal artifact type."]
+  n148["move: hypothesize: A generated candidate can have a compositional footprint spanning several formal artifact kinds rather than exactly one exclusive type."]
+  n149["move: challenge: Institution semantics alone does not provide the concrete syntax/module layer needed to construct and transform formal artifacts."]
+  n150["move: connect: MMT as a foundation-independent theory/declaration/object/morphism representation and module system.; Use an MMT-like theory graph as the concrete formal representation substrate, with LF as a possible foundation inside it."]
+  n151["move: distinguish: Elaboration/checking maps a draft candidate to a well-formed formal artifact or failure."]
+  n152["move: distinguish: Formal well-formedness, typing or deductive validity does not establish epistemic warrant for generating or accepting a candidate."]
+  n153["move: ask: What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?"]
+  n154["move: summarize: Repeated detection of over- and underfactoring is a core recurring reasoning pattern in this inquiry."]
+  n155["move: generalize: MECE is a special case of the broader search for a complete nonredundant compositional factorization."]
+  n156["move: propose: Canonical/primitive factorization: propose factors, test completeness/redundancy/independence/compositionality/canonicality, diagnose failures, and revise."]
+  n157["move: clarify: Underfactored, overfactored and misfactored are diagnostics for revising a proposed primitive decomposition."]
+  n158["move: ask: Where does canonical factorization live when treated as a reusable cognitive strategy?"]
+  n159["move: reframe: A strategy/control layer selects and sequences lower-level reasoning operators; strategy is distinct from primitive operator and candidate artifact."]
+  n160["move: clarify: Meta-strategy is not a separate infinite type hierarchy; a strategy is meta-level relative to reasoning processes or strategies it monitors or controls."]
+  n161["move: ask: How should repeated self-application of the developing reasoning model be represented?"]
+  n162["move: propose: Reflective/self-applicative modeling uses the reasoning model to analyze the reasoning process that is constructing the model."]
+  n163["move: clarify: Meta-level status is relational: a reasoning episode is meta with respect to the reasoning artifact, strategy or episode it is about."]
+  n164["move: generalize: Reasoning episodes, strategies and the meta-model should be representable targets, giving closure under self-description."]
+  n165["move: ask: How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?"]
+  n166["move: propose: Instantiate the abstract reasoning model on real conversations and identify strategy episodes and reflective relations with provenance."]
+  n167["move: generalize: Conversations can serve as source-grounded datasets of instantiated reasoning trajectories and proposed strategy episodes."]
+  n168["move: ask: Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"]
   n0 -->|then| n1
   n1 -->|then| n2
   n2 -->|then| n3
@@ -239,8 +265,8 @@ flowchart TD
   n88 -->|then| n89
   n89 -->|then| n90
   n90 -->|then| n91
-  n91 -->|then| n92
-  n92 -->|then| n93
+  n91 -->|then| n93
+  n92 -->|then| n157
   n93 -->|then| n94
   n94 -->|then| n95
   n95 -->|then| n96
@@ -253,8 +279,8 @@ flowchart TD
   n101 -->|then| n102
   n102 -->|then| n103
   n103 -->|then| n104
-  n104 -->|then| n105
-  n105 -->|then| n106
+  n104 -->|then| n106
+  n105 -->|then| n164
   n106 -->|then| n107
   n107 -->|then| n108
   n108 -->|then| n109
@@ -291,4 +317,33 @@ flowchart TD
   n139 -->|then| n140
   n140 -->|then| n141
   n141 -->|then| n142
+  n142 -->|then| n143
+  n143 -->|then| n144
+  n144 -->|then| n145
+  n145 -->|then| n146
+  n146 -->|then| n147
+  n147 -->|then| n148
+  n148 -->|then| n149
+  n149 -->|then| n150
+  n150 -->|then| n151
+  n151 -->|then| n152
+  n152 -->|then| n153
+  n153 -->|then| n154
+  n154 -->|then| n155
+  n155 -->|then| n92
+  n155 -->|then| n156
+  n156 -->|then| n157
+  n157 -->|then| n158
+  n158 -->|then| n159
+  n159 -->|then| n160
+  n160 -->|then| n161
+  n161 -->|then| n165
+  n161 -->|then| n166
+  n162 -->|then| n105
+  n162 -->|then| n163
+  n163 -->|then| n164
+  n164 -->|then| n167
+  n165 -->|then| n162
+  n166 -->|then| n162
+  n167 -->|then| n168
 ```
