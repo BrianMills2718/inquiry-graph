@@ -167,7 +167,11 @@ def test_source_ids_not_user_instruction(graph):
 
 
 def test_confirmed_resolution_closes_only_its_scope(graph):
-    e=next(e for e in graph.question_events if e.question_id.endswith(':q-warrant'))
+    ordinals={m.id:m.ordinal for c in graph.conversations for m in c.messages}
+    events=[e for e in graph.question_events if e.question_id.endswith(':q-warrant')]
+    # Resolve the latest occurrence in scope; an earlier confirmed closure followed
+    # by a later reopening should correctly remain open.
+    e=max(events,key=lambda event:ordinals[event.at_message_id])
     e.status='resolved';e.resolution_basis='Recorded resolution for synthetic test';e.review_status='confirmed'
     assert not any(r['id']==e.question_id and r['actor_id']==e.actor_id for r in open_questions(graph))
     assert open_questions(graph)
