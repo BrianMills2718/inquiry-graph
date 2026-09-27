@@ -1,5 +1,7 @@
 # Formal Inquiry Substrate
 
+**Companion graph:** [second inquiry trajectory](../../examples/formal-inquiry-2026-09-27/report.md) · [canonical JSON](../../examples/formal-inquiry-2026-09-27/graph.json) · [map](../../examples/formal-inquiry-2026-09-27/inquiry-map.md)
+
 This is the fresh-agent handoff from the 2026-09-27 conversation about a possible **general formal substrate of inquiry**. It belongs in Inquiry Graph because the target is broader than any one analytic method: the same substrate should describe conceptual dialogue, statistical analysis, causal inference, experimentation, control, strategic interaction, and model/query revision.
 
 This is **not a claim of novelty**. The working assumption is that most or all of the pieces are already well trodden; the task is to locate the smallest established synthesis and identify any genuinely missing structure.
