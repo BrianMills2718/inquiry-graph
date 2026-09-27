@@ -1,0 +1,1474 @@
+{
+  "schema_version": "1.0.0",
+  "id": "formal-inquiry-2026-09-27",
+  "conversations": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27",
+      "title": "From analytic methodology to a factorization-relative substrate of inquiry",
+      "source_kind": "curated_excerpts",
+      "coverage_note": "Selected verbatim snippets from the visible 2026-09-27 user/assistant conversation, curated as a second inquiry trajectory distinct from the founding seed. This is not a full export, not hidden reasoning, and not a gold annotation. Ordinals are curated excerpt order.",
+      "participants": [
+        {
+          "id": "participant:brian",
+          "label": "Brian",
+          "role": "user"
+        },
+        {
+          "id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant"
+        }
+      ],
+      "messages": [
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex001",
+          "actor_id": "participant:brian",
+          "ordinal": 1,
+          "text": "this scope or spectrum or space of different types of claims or assertions or hypotheses",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex002",
+          "actor_id": "participant:assistant",
+          "ordinal": 2,
+          "text": "Think of it as separate dials, not one ladder.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex003",
+          "actor_id": "participant:brian",
+          "ordinal": 3,
+          "text": "a formalization, of like, an embedded agent",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex004",
+          "actor_id": "participant:assistant",
+          "ordinal": 4,
+          "text": "An embedded agent has to choose its ontology, its stance, and its intervention interface all at once",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex005",
+          "actor_id": "participant:brian",
+          "ordinal": 5,
+          "text": "Warranted analytical methodologies given some set of assumptions",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex006",
+          "actor_id": "participant:assistant",
+          "ordinal": 6,
+          "text": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex007",
+          "actor_id": "participant:brian",
+          "ordinal": 7,
+          "text": "that seems to be a relatively trivial extension unless I'm missing something",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex008",
+          "actor_id": "participant:brian",
+          "ordinal": 8,
+          "text": "the intentional agent you're observing like is reacting to your observations",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex009",
+          "actor_id": "participant:assistant",
+          "ordinal": 9,
+          "text": "a typed system of transitions whose validity depends on what you take the system to be",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex010",
+          "actor_id": "participant:brian",
+          "ordinal": 10,
+          "text": "what even is an analytic methodology",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex011",
+          "actor_id": "participant:assistant",
+          "ordinal": 11,
+          "text": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex012",
+          "actor_id": "participant:brian",
+          "ordinal": 12,
+          "text": "fundamental formal difference between observe and intervene",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex013",
+          "actor_id": "participant:assistant",
+          "ordinal": 13,
+          "text": "The distinction is not interaction versus no interaction",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex014",
+          "actor_id": "participant:brian",
+          "ordinal": 14,
+          "text": "measurement or intervention is like an agentic intentionality",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex015",
+          "actor_id": "participant:assistant",
+          "ordinal": 15,
+          "text": "labels for the agent's intended role for that interaction",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex016",
+          "actor_id": "participant:brian",
+          "ordinal": 16,
+          "text": "warranted analytic moves given your assumptions about like what you're interacting with",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex017",
+          "actor_id": "participant:assistant",
+          "ordinal": 17,
+          "text": "The agent's warranted moves depend on both.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex018",
+          "actor_id": "participant:brian",
+          "ordinal": 18,
+          "text": "All of these should like be equally well described under one formalism",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex019",
+          "actor_id": "participant:assistant",
+          "ordinal": 19,
+          "text": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex020",
+          "actor_id": "participant:brian",
+          "ordinal": 20,
+          "text": "arbitrary kind of boundary that an agent might draw between what is internal and what is external",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex021",
+          "actor_id": "participant:brian",
+          "ordinal": 21,
+          "text": "more of a black box thing but none of this stuff is really fundamental",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex022",
+          "actor_id": "participant:assistant",
+          "ordinal": 22,
+          "text": "canonical substrate plus noncanonical factorizations plus relations between factorizations",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex023",
+          "actor_id": "participant:brian",
+          "ordinal": 23,
+          "text": "advise on how it relates to what we've been doing",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "formal-inquiry-dialogue-2026-09-27:ex024",
+          "actor_id": "participant:assistant",
+          "ordinal": 24,
+          "text": "what we've been doing is not a separate line of thought",
+          "original_id": null,
+          "timestamp": null
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex001",
+          "start": 0,
+          "end": 88,
+          "quote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is the space of claim, hypothesis, model, stance and intervention types relevant to inquiry?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex002",
+          "start": 0,
+          "end": 46,
+          "quote": "Think of it as separate dials, not one ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Inference modes, query types, stances and intervention levels should be treated as separate dimensions rather than one ladder."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex003",
+          "start": 0,
+          "end": 43,
+          "quote": "a formalization, of like, an embedded agent"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Generalize the framework to an embedded agent that must choose representations and interactions."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex005",
+          "start": 0,
+          "end": 64,
+          "quote": "Warranted analytical methodologies given some set of assumptions"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Given assumptions, which analytic methodologies or moves are warranted?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex006",
+          "start": 0,
+          "end": 111,
+          "quote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Assumptions constrain which inferential procedures are licensed, not only which conclusions follow."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex007",
+          "start": 0,
+          "end": 76,
+          "quote": "that seems to be a relatively trivial extension unless I'm missing something"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Simply considering multiple assumption sets is too trivial to be the sought generalization."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex008",
+          "start": 0,
+          "end": 76,
+          "quote": "the intentional agent you're observing like is reacting to your observations"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "example",
+      "text": "A target may react to being observed, making evidence generation dependent on the analyst's behavior."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex009",
+          "start": 0,
+          "end": 86,
+          "quote": "a typed system of transitions whose validity depends on what you take the system to be"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Analytic moves should be typed, with validity depending on the assumed kind of system."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex010",
+          "start": 0,
+          "end": 36,
+          "quote": "what even is an analytic methodology"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is an analytic methodology?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+          "start": 0,
+          "end": 173,
+          "quote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "An analytic methodology is a rule-governed transformation from available information to claims plus assumptions that warrant it."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex012",
+          "start": 0,
+          "end": 59,
+          "quote": "fundamental formal difference between observe and intervene"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Observation and intervention are not fundamentally distinct because both are interactions."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex015",
+          "start": 0,
+          "end": 57,
+          "quote": "labels for the agent's intended role for that interaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Measurement and intervention are intentional or functional roles of an interaction rather than distinct ontological event kinds."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex017",
+          "start": 0,
+          "end": 43,
+          "quote": "The agent's warranted moves depend on both."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Warranted moves depend on the model/stance used for both analyst and target."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex018",
+          "start": 0,
+          "end": 70,
+          "quote": "All of these should like be equally well described under one formalism"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Can conceptual reasoning, statistics, causal modeling, intervention and strategic gameplay share one formal substrate?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex019",
+          "start": 0,
+          "end": 102,
+          "quote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Use a process plus chosen factorization/cut and generalized operations as the common substrate."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex020",
+          "start": 0,
+          "end": 97,
+          "quote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The internal/external boundary is itself a modeling cut rather than a fundamental distinction."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex021",
+          "start": 0,
+          "end": 70,
+          "quote": "more of a black box thing but none of this stuff is really fundamental"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Non-fundamental agent boundaries may still matter pragmatically for observability and tractability."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex022",
+          "start": 0,
+          "end": 90,
+          "quote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Seek a canonical substrate with noncanonical factorizations and explicit relations between factorizations."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex024",
+          "start": 0,
+          "end": 55,
+          "quote": "what we've been doing is not a separate line of thought"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "This line of thought is a generalization of existing Inquiry Graph machinery rather than a separate research program."
+    }
+  ],
+  "relations": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex002",
+          "start": 0,
+          "end": 46,
+          "quote": "Think of it as separate dials, not one ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:multi-axis"
+        },
+        {
+          "role": "question",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex003",
+          "start": 0,
+          "end": 43,
+          "quote": "a formalization, of like, an embedded agent"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex006",
+          "start": 0,
+          "end": 111,
+          "quote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license"
+        },
+        {
+          "role": "question",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex007",
+          "start": 0,
+          "end": 76,
+          "quote": "that seems to be a relatively trivial extension unless I'm missing something"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex009",
+          "start": 0,
+          "end": 86,
+          "quote": "a typed system of transitions whose validity depends on what you take the system to be"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity"
+        },
+        {
+          "role": "result",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+          "start": 0,
+          "end": 173,
+          "quote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:methodology"
+        },
+        {
+          "role": "question",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:q-methodology"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex012",
+          "start": 0,
+          "end": 59,
+          "quote": "fundamental formal difference between observe and intervene"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex015",
+          "start": 0,
+          "end": 57,
+          "quote": "labels for the agent's intended role for that interaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis"
+        },
+        {
+          "role": "conclusion",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:role-distinction"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex017",
+          "start": 0,
+          "end": 43,
+          "quote": "The agent's warranted moves depend on both."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex019",
+          "start": 0,
+          "end": 102,
+          "quote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:process-factorization"
+        },
+        {
+          "role": "question",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex020",
+          "start": 0,
+          "end": 97,
+          "quote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut"
+        },
+        {
+          "role": "conclusion",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:process-factorization"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex021",
+          "start": 0,
+          "end": 70,
+          "quote": "more of a black box thing but none of this stuff is really fundamental"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex022",
+          "start": 0,
+          "end": 90,
+          "quote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:process-factorization"
+        },
+        {
+          "role": "conclusion",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate"
+        }
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex024",
+          "start": 0,
+          "end": 55,
+          "quote": "what we've been doing is not a separate line of thought"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity"
+        },
+        {
+          "role": "target",
+          "ref": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate"
+        }
+      ]
+    }
+  ],
+  "moves": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex001",
+          "start": 0,
+          "end": 88,
+          "quote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-claim-space"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "after_move_ids": [],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex002",
+          "start": 0,
+          "end": 46,
+          "quote": "Think of it as separate dials, not one ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "decompose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-claim-space"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:multi-axis"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex003",
+          "start": 0,
+          "end": 43,
+          "quote": "a formalization, of like, an embedded agent"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-claim-space"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:embedded-agent"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:decompose-axes"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex005",
+          "start": 0,
+          "end": 64,
+          "quote": "Warranted analytical methodologies given some set of assumptions"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:embedded-agent"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex006",
+          "start": 0,
+          "end": 111,
+          "quote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex007",
+          "start": 0,
+          "end": 76,
+          "quote": "that seems to be a relatively trivial extension unless I'm missing something"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:state-method-license"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex008",
+          "start": 0,
+          "end": 76,
+          "quote": "the intentional agent you're observing like is reacting to your observations"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex009",
+          "start": 0,
+          "end": 86,
+          "quote": "a typed system of transitions whose validity depends on what you take the system to be"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:typed-transitions"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex010",
+          "start": 0,
+          "end": 36,
+          "quote": "what even is an analytic methodology"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:typed-transitions"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-methodology"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:reframe-typed"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+          "start": 0,
+          "end": 173,
+          "quote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-methodology"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:methodology"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:ask-methodology"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex012",
+          "start": 0,
+          "end": 59,
+          "quote": "fundamental formal difference between observe and intervene"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:methodology"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:interaction-basis"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:define-methodology"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex015",
+          "start": 0,
+          "end": 57,
+          "quote": "labels for the agent's intended role for that interaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:interaction-basis"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:role-distinction"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex017",
+          "start": 0,
+          "end": 43,
+          "quote": "The agent's warranted moves depend on both."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+        "formal-inquiry-dialogue-2026-09-27:n:role-distinction"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex018",
+          "start": 0,
+          "end": 70,
+          "quote": "All of these should like be equally well described under one formalism"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:connect-self-target"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex019",
+          "start": 0,
+          "end": 102,
+          "quote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:process-factorization"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex020",
+          "start": 0,
+          "end": 97,
+          "quote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:process-factorization"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex021",
+          "start": 0,
+          "end": 70,
+          "quote": "more of a black box thing but none of this stuff is really fundamental"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex022",
+          "start": 0,
+          "end": 90,
+          "quote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "summarize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+        "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex024",
+          "start": 0,
+          "end": 55,
+          "quote": "what we've been doing is not a separate line of thought"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate"
+      ],
+      "output_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:repo-continuity"
+      ],
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "after_move_ids": [
+        "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical"
+      ],
+      "inference_family": "unspecified"
+    }
+  ],
+  "stance_events": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex008",
+          "start": 0,
+          "end": 76,
+          "quote": "the intentional agent you're observing like is reacting to your observations"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "stance": "posits",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex008"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex020",
+          "start": 0,
+          "end": 97,
+          "quote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "stance": "posits",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex020"
+    }
+  ],
+  "question_events": [
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex001",
+          "start": 0,
+          "end": 88,
+          "quote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex005",
+          "start": 0,
+          "end": 64,
+          "quote": "Warranted analytical methodologies given some set of assumptions"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+          "start": 0,
+          "end": 173,
+          "quote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "answer_ids": [
+        "formal-inquiry-dialogue-2026-09-27:n:methodology"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "anchors": [
+        {
+          "message_id": "formal-inquiry-dialogue-2026-09-27:ex018",
+          "start": 0,
+          "end": 70,
+          "quote": "All of these should like be equally well described under one formalism"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    }
+  ],
+  "extractions": [
+    {
+      "method": "manual_curated_from_visible_conversation",
+      "provider": "OpenAI ChatGPT",
+      "model": null,
+      "prompt_version": "1.0.0",
+      "notes": [
+        "Second inquiry trajectory, intentionally separate from examples/seed.",
+        "All annotations remain proposed pending review.",
+        "No hidden reasoning is represented."
+      ]
+    }
+  ],
+  "notes": [
+    "Built for later comparison and integration with the founding inquiry graph.",
+    "Focuses on warranted analytic moves, strategic reactivity, intentional interaction roles, and noncanonical factorizations."
+  ]
+}
