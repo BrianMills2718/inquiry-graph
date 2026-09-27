@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-27
+
+- Added `docs/formal-inquiry-substrate/` with the conversation handoff, provisional shared substrate, and research/open-question map for warrant, factorization, queries, interaction roles, and strategic/reactive inquiry.
+
 ## Unreleased
 
 Expanded the founding dialogue through the epistemic-transition, assumption-context, metareasoning/reflection, and candidate-generation-interface refinements. The curated source now contains 207 excerpts and the proposed graph 214 content nodes, 233 relations, 177 moves, 52 stance events, and 71 question events. Candidate generation is now modeled as a draft-transition system `(D,d0,O,→)` explored by a separate strategy, followed by formal elaboration, evaluator feedback, and a distinct warrant layer. A worked canonical-factorization trace reconstructs the dialogue's repeated propose/test/diagnose/repair cycle. Draft-generation algebra, warrant semantics, graded-support integration and robust strategy-episode identification remain open.
