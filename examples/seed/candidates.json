@@ -1874,6 +1874,666 @@
       "review_status": "proposed",
       "kind": "hypothesis",
       "text": "Current endpoint: factor epistemic state change relative to a representation contract, keep warrant separate, and treat candidate-generation factorization as open."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-self-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex128",
+          "start": 0,
+          "end": 91,
+          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:theoretical-model-construction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex129",
+          "start": 0,
+          "end": 59,
+          "quote": "theoretical model construction under conceptual constraints"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The dialogue is performing theoretical model construction under conceptual and literature constraints."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-generation-testcase",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex130",
+          "start": 0,
+          "end": 63,
+          "quote": "This conversation itself is an example of candidate generation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The dialogue itself can serve as an adversarial test case for candidate-generation operators."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-generation-next",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex131",
+          "start": 0,
+          "end": 19,
+          "quote": "Okay, so what next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What should be formalized next after separating state update from candidate generation?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:generation-formalization-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex132",
+          "start": 0,
+          "end": 80,
+          "quote": "formalize candidate generation itself, using this conversation as the test case."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Formalize candidate generation using the dialogue as a test case while importing established operators where possible."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-reframe-primitive",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex133",
+          "start": 0,
+          "end": 134,
+          "quote": "My concern is that we want to make sure these things are clearly defined and formalized, like reframe seems to be doing a lot of work."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Is reframe a primitive operation, or is it masking several different transformations?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:concept-construction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex134",
+          "start": 0,
+          "end": 92,
+          "quote": "how do you take an existing space of concepts and like combine and compose them in some way."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Construction of a new expression or concept from constructors and vocabulary already available in the current language."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:concept-invention",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex135",
+          "start": 0,
+          "end": 43,
+          "quote": "how do new concepts get added to the space?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Introduction of genuinely new conceptual or predicate vocabulary not already definable in the current language."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:construction-invention-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex136",
+          "start": 0,
+          "end": 42,
+          "quote": "concept construction != concept invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Concept construction inside an existing language and substantive concept invention are different problems."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reframe-macro",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex137",
+          "start": 0,
+          "end": 41,
+          "quote": "reframe is almost certainly a macro-term."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:algebra-over-representations",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex138",
+          "start": 0,
+          "end": 156,
+          "quote": "the eventual formalism will not be “seven primitive cognitive operations.” It will look more like an algebra over languages, concepts, theories, and queries"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Candidate generation may be better modeled as an algebra over languages, expressions, theories and queries than as a short folk list of cognitive verbs."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-meta-model-compatibility",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex139",
+          "start": 0,
+          "end": 213,
+          "quote": "presumably when we're trying to formalize this, we want to do it in a way that is compatible with the rest of like the meta model that we've been building or exposes a gap in that meta model that we need to change"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:meta-model-stress-test",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex140",
+          "start": 0,
+          "end": 65,
+          "quote": "Use concept-generation theory as a stress test of the meta-model."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Use established concept-generation formalisms as a stress test of the epistemic meta-model."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:u-overloaded",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex141",
+          "start": 0,
+          "end": 32,
+          "quote": "our current U is doing too much."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The previous U/hypothesis-universe coordinate conflates language, expressibility, model space and live hypotheses."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:intermediate-lmhm",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex142",
+          "start": 0,
+          "end": 30,
+          "quote": "A cleaner meta-model may need:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "An intermediate repair separates language, model space, live hypotheses and graded support as K=(L,M,H,mu)."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:institution-theory-ref",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex145",
+          "start": 0,
+          "end": 147,
+          "quote": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Institution theory as an abstract separation of signatures, sentences, models and satisfaction, with signature morphisms for translation."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:institution-substrate",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex145",
+          "start": 0,
+          "end": 147,
+          "quote": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Use an institution-style logical substrate (Sig, Sen, Mod, satisfaction) rather than one overloaded universe variable."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:intermediate-stwreq",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex146",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,T,W,ρ,E,Q)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "An intermediate state proposal K=(Sigma,T,W,rho,E,Q) separates signature, explicit theory, semantic possibilities, support, evidence and query."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:expression-construction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Build an expression using constructors already licensed by the current language."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:definitional-extension",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Extend a signature with a fresh name explicitly defined from old-language expressions, ideally conservatively."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:substantive-predicate-invention",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Introduce new predicate/concept vocabulary whose semantics are not merely a definitional abbreviation of the old language."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:three-concept-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Expression construction, definitional extension and substantive concept invention are distinct operations."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:typed-candidate-space",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex149",
+          "start": 0,
+          "end": 66,
+          "quote": "candidate itself is not one type. We need a typed candidate space."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Generated epistemic candidates require types such as sentence, assumption, justification, model, signature extension, mapping or query."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-theory-commitment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex150",
+          "start": 0,
+          "end": 125,
+          "quote": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:temporary-assumption-context",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex152",
+          "start": 0,
+          "end": 77,
+          "quote": "T is probably better interpreted as a **currently active assumption context**"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A set of premises can be stipulated only for a reasoning branch without becoming a durable belief theory."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:persistent-active-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex153",
+          "start": 0,
+          "end": 55,
+          "quote": "separate epistemic state from active reasoning context."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Persistent epistemic state and the active assumption context of a reasoning episode should be represented separately."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:black-white-context",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex154",
+          "start": 0,
+          "end": 133,
+          "quote": "the black box maintains uncertain candidates; the white-box move is “temporarily stipulate one context and inspect its consequences.”"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The black-box state maintains alternatives; a white-box move temporarily stipulates one context and inspects its consequences."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-pre-update-research",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex155",
+          "start": 0,
+          "end": 101,
+          "quote": "Okay, anything else we should research or discuss before updating our documentation and dialog graph?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What established machinery should be checked before freezing the revised meta-model in documentation?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:atms-ref",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex156",
+          "start": 0,
+          "end": 68,
+          "quote": "The main thing to research is **assumption-based reasoning / ATMS**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "de Kleer's Assumption-based Truth Maintenance System as a precedent for multiple simultaneous assumption environments and dependency labels."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:atms-support-graph",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex160",
+          "start": 0,
+          "end": 88,
+          "quote": "ATMS is much closer to your white-box/black-box intuition than our flat H-set model was."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Persistent epistemic organization can be represented as assumptions, explicit justifications and minimal support environments rather than one committed theory."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:support-provenance",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex158",
+          "start": 0,
+          "end": 87,
+          "quote": "persistent epistemic state = hypotheses + dependency/support structure + graded support"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Minimal supporting environments make conditional dependency provenance explicit without warranting the assumptions themselves."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:atms-environment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex161",
+          "start": 0,
+          "end": 178,
+          "quote": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "An ATMS-style environment is a consistent set of assumptions under which consequences can be evaluated."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:atms-label",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex161",
+          "start": 0,
+          "end": 178,
+          "quote": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A label records minimal consistent assumption environments sufficient to support a datum."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:persistent-support-state",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex162",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Current persistent state: K_Sigma=(N,A,J,lambda,rho), with represented nodes, assumptions, justifications, minimal support environments and optional graded support."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:temporary-environment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex163",
+          "start": 0,
+          "end": 51,
+          "quote": "The white box is a temporary assumption environment"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A white-box reasoning branch selects a temporary assumption environment Gamma subseteq A."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:environment-closure",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex164",
+          "start": 0,
+          "end": 12,
+          "quote": "C(Γ)=Cl_J(Γ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Conditional deductive context is the closure C(Gamma)=Cl_J(Gamma) of a temporary assumption environment under justifications."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:institution-atms-orthogonal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex165",
+          "start": 0,
+          "end": 54,
+          "quote": "ATMS and institutions are orthogonal, not alternatives"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Institution theory handles language/model semantics while ATMS-like machinery handles support across assumption environments; they are complementary, not competing."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:evidence-as-node",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex166",
+          "start": 0,
+          "end": 89,
+          "quote": "I no longer think E necessarily belongs as an undifferentiated top-level coordinate of K."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Evidence need not be a privileged top-level coordinate; reports and observations can be typed provenance-bearing nodes with their own dependencies."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:query-outside-state",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex167",
+          "start": 0,
+          "end": 64,
+          "quote": "I would still keep Q but **outside the epistemic state proper**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The current query/task belongs to a reasoning episode rather than persistent epistemic state."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reasoning-episode",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex168",
+          "start": 0,
+          "end": 11,
+          "quote": "R=(K_Σ,Γ,Q)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A reasoning episode can be represented as R=(K_Sigma,Gamma,Q)."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:theory-graphs-parked",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex169",
+          "start": 0,
+          "end": 77,
+          "quote": "Theory graphs ... relevant, but I would **not add it to the foundation yet**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:current-meta-model",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-candidate-type-system",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is the minimal type system for generated epistemic candidates?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:typed-generation-open",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."
     }
   ],
   "relations": [
@@ -5092,6 +5752,1062 @@
           "ref": "dialogue-2026-09-27:n:q-candidate-generation-factorization"
         }
       ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:135",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex129",
+          "start": 0,
+          "end": 59,
+          "quote": "theoretical model construction under conceptual constraints"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:theoretical-model-construction"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-self-application"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:136",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex130",
+          "start": 0,
+          "end": 63,
+          "quote": "This conversation itself is an example of candidate generation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-testcase"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:theoretical-model-construction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:137",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex130",
+          "start": 0,
+          "end": 63,
+          "quote": "This conversation itself is an example of candidate generation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-testcase"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:q-generation-next"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:138",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex132",
+          "start": 0,
+          "end": 80,
+          "quote": "formalize candidate generation itself, using this conversation as the test case."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:generation-formalization-goal"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-generation-next"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:139",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex134",
+          "start": 0,
+          "end": 92,
+          "quote": "how do you take an existing space of concepts and like combine and compose them in some way."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-reframe-primitive"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:concept-construction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:140",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex135",
+          "start": 0,
+          "end": 43,
+          "quote": "how do new concepts get added to the space?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-reframe-primitive"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:concept-invention"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:141",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex136",
+          "start": 0,
+          "end": 42,
+          "quote": "concept construction != concept invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "dialogue-2026-09-27:n:concept-construction"
+        },
+        {
+          "role": "right",
+          "ref": "dialogue-2026-09-27:n:concept-invention"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:142",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex136",
+          "start": 0,
+          "end": 42,
+          "quote": "concept construction != concept invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:construction-invention-distinction"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-reframe-primitive"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:143",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex137",
+          "start": 0,
+          "end": 41,
+          "quote": "reframe is almost certainly a macro-term."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:reframe-macro"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:construction-invention-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:144",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex138",
+          "start": 0,
+          "end": 156,
+          "quote": "the eventual formalism will not be “seven primitive cognitive operations.” It will look more like an algebra over languages, concepts, theories, and queries"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:algebra-over-representations"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:generation-formalization-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:145",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex140",
+          "start": 0,
+          "end": 65,
+          "quote": "Use concept-generation theory as a stress test of the meta-model."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:meta-model-stress-test"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:146",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex141",
+          "start": 0,
+          "end": 32,
+          "quote": "our current U is doing too much."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:u-overloaded"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:state-universe"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:147",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex142",
+          "start": 0,
+          "end": 30,
+          "quote": "A cleaner meta-model may need:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:intermediate-lmhm"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:148",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex145",
+          "start": 0,
+          "end": 147,
+          "quote": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:institution-theory-ref"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:149",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex145",
+          "start": 0,
+          "end": 147,
+          "quote": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:institution-substrate"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:150",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex146",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,T,W,ρ,E,Q)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:intermediate-stwreq"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:151",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:expression-construction"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:three-concept-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:152",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:definitional-extension"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:three-concept-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:153",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:substantive-predicate-invention"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:three-concept-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:154",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:three-concept-distinction"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:reframe-macro"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:155",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex149",
+          "start": 0,
+          "end": 66,
+          "quote": "candidate itself is not one type. We need a typed candidate space."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:typed-candidate-space"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:institution-substrate"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:156",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex150",
+          "start": 0,
+          "end": 125,
+          "quote": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:q-theory-commitment"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:intermediate-stwreq"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:157",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex152",
+          "start": 0,
+          "end": 77,
+          "quote": "T is probably better interpreted as a **currently active assumption context**"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:temporary-assumption-context"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-theory-commitment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:158",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex153",
+          "start": 0,
+          "end": 55,
+          "quote": "separate epistemic state from active reasoning context."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:persistent-active-distinction"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:temporary-assumption-context"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:159",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex154",
+          "start": 0,
+          "end": 133,
+          "quote": "the black box maintains uncertain candidates; the white-box move is “temporarily stipulate one context and inspect its consequences.”"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:black-white-context"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:persistent-active-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:160",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex156",
+          "start": 0,
+          "end": 68,
+          "quote": "The main thing to research is **assumption-based reasoning / ATMS**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-pre-update-research"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:atms-ref"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:161",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex156",
+          "start": 0,
+          "end": 68,
+          "quote": "The main thing to research is **assumption-based reasoning / ATMS**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:atms-ref"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-theory-commitment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:162",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex160",
+          "start": 0,
+          "end": 88,
+          "quote": "ATMS is much closer to your white-box/black-box intuition than our flat H-set model was."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:atms-support-graph"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:persistent-active-distinction"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:163",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex158",
+          "start": 0,
+          "end": 87,
+          "quote": "persistent epistemic state = hypotheses + dependency/support structure + graded support"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:support-provenance"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:atms-support-graph"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:164",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex161",
+          "start": 0,
+          "end": 178,
+          "quote": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:atms-environment"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:atms-support-graph"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:165",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex161",
+          "start": 0,
+          "end": 178,
+          "quote": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:atms-label"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:atms-support-graph"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:166",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex162",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supersedes",
+      "bindings": [
+        {
+          "role": "new",
+          "ref": "dialogue-2026-09-27:n:persistent-support-state"
+        },
+        {
+          "role": "old",
+          "ref": "dialogue-2026-09-27:n:intermediate-stwreq"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:167",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex163",
+          "start": 0,
+          "end": 51,
+          "quote": "The white box is a temporary assumption environment"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:temporary-environment"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:reasoning-episode"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:168",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex164",
+          "start": 0,
+          "end": 12,
+          "quote": "C(Γ)=Cl_J(Γ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:environment-closure"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:reasoning-episode"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:169",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex165",
+          "start": 0,
+          "end": 54,
+          "quote": "ATMS and institutions are orthogonal, not alternatives"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:institution-atms-orthogonal"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:170",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex166",
+          "start": 0,
+          "end": 89,
+          "quote": "I no longer think E necessarily belongs as an undifferentiated top-level coordinate of K."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:evidence-as-node"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:intermediate-stwreq"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:171",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex167",
+          "start": 0,
+          "end": 64,
+          "quote": "I would still keep Q but **outside the epistemic state proper**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:query-outside-state"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:reasoning-episode"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:172",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:persistent-support-state"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:173",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:reasoning-episode"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:174",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex169",
+          "start": 0,
+          "end": 77,
+          "quote": "Theory graphs ... relevant, but I would **not add it to the foundation yet**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:theory-graphs-parked"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:175",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:176",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframes",
+      "bindings": [
+        {
+          "role": "original",
+          "ref": "dialogue-2026-09-27:n:q-candidate-generation-factorization"
+        },
+        {
+          "role": "replacement",
+          "ref": "dialogue-2026-09-27:n:q-candidate-type-system"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:177",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:typed-generation-open"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-candidate-type-system"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:178",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:typed-generation-open"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:q-warrant-postulates"
+        }
+      ]
     }
   ],
   "moves": [
@@ -7843,6 +9559,1007 @@
         "dialogue-2026-09-27:m:104"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:106",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex128",
+          "start": 0,
+          "end": 91,
+          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-endpoint"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-self-application"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex128",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:105"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:107",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex129",
+          "start": 0,
+          "end": 59,
+          "quote": "theoretical model construction under conceptual constraints"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-self-application"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:theoretical-model-construction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex129",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:106"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:108",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex130",
+          "start": 0,
+          "end": 63,
+          "quote": "This conversation itself is an example of candidate generation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:theoretical-model-construction"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-testcase"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex130",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:107"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:109",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex131",
+          "start": 0,
+          "end": 19,
+          "quote": "Okay, so what next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-testcase"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-generation-next"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex131",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:108"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:110",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex132",
+          "start": 0,
+          "end": 80,
+          "quote": "formalize candidate generation itself, using this conversation as the test case."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-generation-next"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex132",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:109"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:111",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex133",
+          "start": 0,
+          "end": 134,
+          "quote": "My concern is that we want to make sure these things are clearly defined and formalized, like reframe seems to be doing a lot of work."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-reframe-primitive"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex133",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:110"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:112",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex134",
+          "start": 0,
+          "end": 92,
+          "quote": "how do you take an existing space of concepts and like combine and compose them in some way."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-reframe-primitive"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:concept-construction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex134",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:111"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:113",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex135",
+          "start": 0,
+          "end": 43,
+          "quote": "how do new concepts get added to the space?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-reframe-primitive"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:concept-invention"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex135",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:112"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:114",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex136",
+          "start": 0,
+          "end": 42,
+          "quote": "concept construction != concept invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:concept-construction",
+        "dialogue-2026-09-27:n:concept-invention"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:construction-invention-distinction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex136",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:113"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:115",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex137",
+          "start": 0,
+          "end": 41,
+          "quote": "reframe is almost certainly a macro-term."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "decompose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-reframe-primitive"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reframe-macro"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex137",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:114"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:116",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex138",
+          "start": 0,
+          "end": 156,
+          "quote": "the eventual formalism will not be “seven primitive cognitive operations.” It will look more like an algebra over languages, concepts, theories, and queries"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:algebra-over-representations"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex138",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:115"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:117",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex139",
+          "start": 0,
+          "end": 213,
+          "quote": "presumably when we're trying to formalize this, we want to do it in a way that is compatible with the rest of like the meta model that we've been building or exposes a gap in that meta model that we need to change"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-meta-model-compatibility"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex139",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:116"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:118",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex140",
+          "start": 0,
+          "end": 65,
+          "quote": "Use concept-generation theory as a stress test of the meta-model."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-meta-model-compatibility"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:meta-model-stress-test"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex140",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:117"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:119",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex141",
+          "start": 0,
+          "end": 32,
+          "quote": "our current U is doing too much."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:state-universe"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:u-overloaded"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex141",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:118"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:120",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex142",
+          "start": 0,
+          "end": 30,
+          "quote": "A cleaner meta-model may need:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:u-overloaded"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:intermediate-lmhm"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex142",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:119"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:121",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex145",
+          "start": 0,
+          "end": 147,
+          "quote": "Institution theory deliberately separates a signature, the sentences expressible in that signature, the models for that signature, and satisfaction"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:intermediate-lmhm"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:institution-theory-ref",
+        "dialogue-2026-09-27:n:institution-substrate"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex145",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:120"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:122",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex146",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,T,W,ρ,E,Q)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:institution-substrate"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:intermediate-stwreq"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex146",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:121"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:123",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex147",
+          "start": 0,
+          "end": 93,
+          "quote": "expression construction != definitional extension != substantive concept/predicate invention."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "decompose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:concept-construction",
+        "dialogue-2026-09-27:n:concept-invention"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:expression-construction",
+        "dialogue-2026-09-27:n:definitional-extension",
+        "dialogue-2026-09-27:n:substantive-predicate-invention",
+        "dialogue-2026-09-27:n:three-concept-distinction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex147",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:122"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:124",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex148",
+          "start": 0,
+          "end": 61,
+          "quote": "So I would remove **reframe** from the foundational calculus."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "retract",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:reframe-macro"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reframe-macro"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex148",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:123"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:125",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex149",
+          "start": 0,
+          "end": 66,
+          "quote": "candidate itself is not one type. We need a typed candidate space."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:typed-candidate-space"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex149",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:124"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:126",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex150",
+          "start": 0,
+          "end": 125,
+          "quote": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:intermediate-stwreq"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-theory-commitment"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex150",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:125"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:127",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex152",
+          "start": 0,
+          "end": 77,
+          "quote": "T is probably better interpreted as a **currently active assumption context**"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-theory-commitment"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:temporary-assumption-context"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex152",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:126"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:128",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex153",
+          "start": 0,
+          "end": 55,
+          "quote": "separate epistemic state from active reasoning context."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:temporary-assumption-context"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:persistent-active-distinction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex153",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:127"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:129",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex154",
+          "start": 0,
+          "end": 133,
+          "quote": "the black box maintains uncertain candidates; the white-box move is “temporarily stipulate one context and inspect its consequences.”"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:persistent-active-distinction"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:black-white-context"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex154",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:128"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:130",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex155",
+          "start": 0,
+          "end": 101,
+          "quote": "Okay, anything else we should research or discuss before updating our documentation and dialog graph?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-meta-model-compatibility"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-pre-update-research"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex155",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:129"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:131",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex156",
+          "start": 0,
+          "end": 68,
+          "quote": "The main thing to research is **assumption-based reasoning / ATMS**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-pre-update-research"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:atms-ref"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex156",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:130"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:132",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex160",
+          "start": 0,
+          "end": 88,
+          "quote": "ATMS is much closer to your white-box/black-box intuition than our flat H-set model was."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:atms-ref"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:atms-support-graph"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex160",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:131"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:133",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex161",
+          "start": 0,
+          "end": 178,
+          "quote": "An **environment** is a set of assumptions; a datum can hold in many environments; and its **label** is the collection of minimal consistent environments sufficient to derive it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:atms-support-graph"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:atms-environment",
+        "dialogue-2026-09-27:n:atms-label"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex161",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:132"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:134",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex162",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:atms-support-graph"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:persistent-support-state"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex162",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:133"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:135",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex163",
+          "start": 0,
+          "end": 51,
+          "quote": "The white box is a temporary assumption environment"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:persistent-support-state"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:temporary-environment"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex163",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:134"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:136",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex164",
+          "start": 0,
+          "end": 12,
+          "quote": "C(Γ)=Cl_J(Γ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "deduce",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:temporary-environment"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:environment-closure"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex164",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:135"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:137",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex165",
+          "start": 0,
+          "end": 54,
+          "quote": "ATMS and institutions are orthogonal, not alternatives"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:institution-substrate",
+        "dialogue-2026-09-27:n:atms-support-graph"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:institution-atms-orthogonal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex165",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:136"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:138",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex166",
+          "start": 0,
+          "end": 89,
+          "quote": "I no longer think E necessarily belongs as an undifferentiated top-level coordinate of K."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:intermediate-stwreq"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:evidence-as-node"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex166",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:137"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:139",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex167",
+          "start": 0,
+          "end": 64,
+          "quote": "I would still keep Q but **outside the epistemic state proper**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:persistent-support-state"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:query-outside-state"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex167",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:138"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:140",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex168",
+          "start": 0,
+          "end": 11,
+          "quote": "R=(K_Σ,Γ,Q)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:persistent-support-state",
+        "dialogue-2026-09-27:n:temporary-environment",
+        "dialogue-2026-09-27:n:query-outside-state"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reasoning-episode"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex168",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:139"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:141",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex169",
+          "start": 0,
+          "end": 77,
+          "quote": "Theory graphs ... relevant, but I would **not add it to the foundation yet**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:theory-graphs-parked"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex169",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:140"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:142",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "summarize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:institution-substrate",
+        "dialogue-2026-09-27:n:persistent-support-state",
+        "dialogue-2026-09-27:n:reasoning-episode"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex170",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:141"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:143",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-candidate-space"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-candidate-type-system",
+        "dialogue-2026-09-27:n:typed-generation-open"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex171",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:142"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -8372,6 +11089,176 @@
       "target_id": "dialogue-2026-09-27:n:three-layer-separation",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-27:ex119"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:032",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex136",
+          "start": 0,
+          "end": 42,
+          "quote": "concept construction != concept invention."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:construction-invention-distinction",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex136"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:033",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex137",
+          "start": 0,
+          "end": 41,
+          "quote": "reframe is almost certainly a macro-term."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:reframe-macro",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex137"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:034",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex141",
+          "start": 0,
+          "end": 32,
+          "quote": "our current U is doing too much."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:u-overloaded",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex141"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:035",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex150",
+          "start": 0,
+          "end": 125,
+          "quote": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-theory-commitment",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex150"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:036",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex152",
+          "start": 0,
+          "end": 77,
+          "quote": "T is probably better interpreted as a **currently active assumption context**"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:temporary-assumption-context",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex152"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:037",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex153",
+          "start": 0,
+          "end": 55,
+          "quote": "separate epistemic state from active reasoning context."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:persistent-active-distinction",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex153"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:038",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex160",
+          "start": 0,
+          "end": 88,
+          "quote": "ATMS is much closer to your white-box/black-box intuition than our flat H-set model was."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:atms-support-graph",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex160"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:039",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex162",
+          "start": 0,
+          "end": 15,
+          "quote": "K=(Σ,N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:persistent-support-state",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex162"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:040",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex165",
+          "start": 0,
+          "end": 54,
+          "quote": "ATMS and institutions are orthogonal, not alternatives"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:institution-atms-orthogonal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex165"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:041",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:current-meta-model",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex170"
     }
   ],
   "question_events": [
@@ -9096,6 +11983,146 @@
       "replacement_id": null
     },
     {
+      "id": "dialogue-2026-09-27:qe:q-self-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex128",
+          "start": 0,
+          "end": 91,
+          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-self-application",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex128",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-generation-next",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex131",
+          "start": 0,
+          "end": 19,
+          "quote": "Okay, so what next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-generation-next",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex131",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-reframe-primitive",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex133",
+          "start": 0,
+          "end": 134,
+          "quote": "My concern is that we want to make sure these things are clearly defined and formalized, like reframe seems to be doing a lot of work."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-reframe-primitive",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex133",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-meta-model-compatibility",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex139",
+          "start": 0,
+          "end": 213,
+          "quote": "presumably when we're trying to formalize this, we want to do it in a way that is compatible with the rest of like the meta model that we've been building or exposes a gap in that meta model that we need to change"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-meta-model-compatibility",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex139",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-theory-commitment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex150",
+          "start": 0,
+          "end": 125,
+          "quote": "Um, not sure, I totally understood the T verse W thing, but it seems like it maybe relates to the white box, black box thing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-theory-commitment",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex150",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-pre-update-research",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex155",
+          "start": 0,
+          "end": 101,
+          "quote": "Okay, anything else we should research or discuss before updating our documentation and dialog graph?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-pre-update-research",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex155",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-candidate-type-system",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-type-system",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex171",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
       "id": "dialogue-2026-09-27:qe:update:1",
       "anchors": [
         {
@@ -9262,6 +12289,161 @@
       "answer_ids": [
         "dialogue-2026-09-27:n:state-delta-factorization"
       ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:9",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex129",
+          "start": 0,
+          "end": 59,
+          "quote": "theoretical model construction under conceptual constraints"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-self-application",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex129",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:theoretical-model-construction"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:10",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex132",
+          "start": 0,
+          "end": 80,
+          "quote": "formalize candidate generation itself, using this conversation as the test case."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-generation-next",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex132",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:generation-formalization-goal"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:11",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex137",
+          "start": 0,
+          "end": 41,
+          "quote": "reframe is almost certainly a macro-term."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-reframe-primitive",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex137",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:reframe-macro",
+        "dialogue-2026-09-27:n:construction-invention-distinction"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:12",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex170",
+          "start": 0,
+          "end": 15,
+          "quote": "K_Σ=(N,A,J,λ,ρ)"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-meta-model-compatibility",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex170",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:13",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex152",
+          "start": 0,
+          "end": 77,
+          "quote": "T is probably better interpreted as a **currently active assumption context**"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-theory-commitment",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex152",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:temporary-assumption-context",
+        "dialogue-2026-09-27:n:persistent-active-distinction"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:14",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex156",
+          "start": 0,
+          "end": 68,
+          "quote": "The main thing to research is **assumption-based reasoning / ATMS**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-pre-update-research",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex156",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:atms-ref",
+        "dialogue-2026-09-27:n:institution-theory-ref"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:15",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex171",
+          "start": 0,
+          "end": 67,
+          "quote": "What is the minimal type system for generated epistemic candidates?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-generation-factorization",
+      "status": "reopened",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex171",
+      "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
     }

@@ -4,11 +4,11 @@
 
 V1 turns normalized conversations or ChatGPT exports into a typed graph of content, questions, relations, inquiry moves, and actor-relative stance/status histories. It records a challenge, clarification, retraction, or reframing as its own object, with source anchors. Questions remain navigable even when the conversation moves elsewhere.
 
-The first-pass example now covers both the original V1 arc and the post-V1 return to the substantive epistemic-transition problem: **125 content nodes, 134 relations, 105 moves, 31 stance events, and 44 question-status events over 125 curated excerpts**. It includes **36 distinct questions**. This is a proposed annotation, not an independently reviewed gold dataset or a complete transcript export.
+The first-pass example now covers the original V1 arc, the return to the substantive epistemic-transition problem, and the later assumption-context/institution-theory refinement: **169 content nodes, 178 relations, 143 moves, 41 stance events, and 58 question-status events over 170 curated excerpts**. It includes **43 distinct questions**. This is a proposed annotation, not an independently reviewed gold dataset or a complete transcript export.
 
 ## Start here
 
-[Walk through the dialogue](docs/conversation-walkthrough.md) · [Current epistemic-transition draft](docs/epistemic-transition-calculus.md) · [Post-V1 research log](docs/research-log-post-v1.md) · [Open agenda and grounded move report](examples/seed/report.md) · [Inquiry diagram](examples/seed/inquiry-map.md) · [Canonical graph](examples/seed/graph.json) · [Source excerpts](examples/seed/source-excerpts.json)
+[Walk through the dialogue](docs/conversation-walkthrough.md) · [Current assumption-context meta-model](docs/assumption-context-meta-model.md) · [Earlier epistemic-transition stage](docs/epistemic-transition-calculus.md) · [Post-V1 research log](docs/research-log-post-v1.md) · [Open agenda and grounded move report](examples/seed/report.md) · [Inquiry diagram](examples/seed/inquiry-map.md) · [Canonical graph](examples/seed/graph.json) · [Source excerpts](examples/seed/source-excerpts.json)
 
 The [offline linked-record inspector](examples/seed/inspector.html) works by opening the file locally after cloning. It has no external scripts, CDN, telemetry, or server. It is a searchable/linkable record inspector, **not** an interactive force-directed canvas. GitHub displays the Mermaid diagrams directly.
 
@@ -58,7 +58,7 @@ It does **not** certify truth, detect every bad paraphrase, know a person's priv
 
 ## Project documents
 
-[Requirements](docs/requirements.md) · [Formalism](docs/formalism.md) · [Epistemic-transition research draft](docs/epistemic-transition-calculus.md) · [Post-V1 research log](docs/research-log-post-v1.md) · [Ontology](docs/ontology.md) · [Architecture](docs/architecture.md) · [Annotation guide](docs/annotation-guide.md) · [Seed review](docs/seed-review.md) · [Evaluation](docs/evaluation.md) · [Decisions](docs/decisions/index.md) · [Roadmap](docs/roadmap.md) · [Security](docs/security.md) · [Research references](docs/references.md)
+[Requirements](docs/requirements.md) · [Formalism](docs/formalism.md) · [Current assumption-context meta-model](docs/assumption-context-meta-model.md) · [Earlier epistemic-transition stage](docs/epistemic-transition-calculus.md) · [Post-V1 research log](docs/research-log-post-v1.md) · [Ontology](docs/ontology.md) · [Architecture](docs/architecture.md) · [Annotation guide](docs/annotation-guide.md) · [Seed review](docs/seed-review.md) · [Evaluation](docs/evaluation.md) · [Decisions](docs/decisions/index.md) · [Roadmap](docs/roadmap.md) · [Security](docs/security.md) · [Research references](docs/references.md)
 
 Rebuild checked-in artifacts with `python examples/build_seed.py && python tools/build_artifacts.py`. Check drift with `python tools/build_artifacts.py --check`. Canonical JSON and curation stay in Git; there is no required graph database, vector store, web application, or custom agent runtime.
 

@@ -125,7 +125,52 @@
     "world-restriction": "dialogue-2026-09-27:ex124",
     "hypothesis-moves": "dialogue-2026-09-27:ex125",
     "warrant-definition": "dialogue-2026-09-27:ex126",
-    "preserve-detail": "dialogue-2026-09-27:ex127"
+    "preserve-detail": "dialogue-2026-09-27:ex127",
+    "self-application": "dialogue-2026-09-27:ex128",
+    "theoretical-model": "dialogue-2026-09-27:ex129",
+    "candidate-testcase": "dialogue-2026-09-27:ex130",
+    "generation-next": "dialogue-2026-09-27:ex131",
+    "formalize-generation": "dialogue-2026-09-27:ex132",
+    "reframe-concern": "dialogue-2026-09-27:ex133",
+    "compose-concepts": "dialogue-2026-09-27:ex134",
+    "new-concepts": "dialogue-2026-09-27:ex135",
+    "construction-invention": "dialogue-2026-09-27:ex136",
+    "reframe-macro": "dialogue-2026-09-27:ex137",
+    "algebra-representations": "dialogue-2026-09-27:ex138",
+    "meta-model-compatibility": "dialogue-2026-09-27:ex139",
+    "stress-test-meta-model": "dialogue-2026-09-27:ex140",
+    "u-overloaded": "dialogue-2026-09-27:ex141",
+    "intermediate-lmhm": "dialogue-2026-09-27:ex142",
+    "stress-test-request": "dialogue-2026-09-27:ex143",
+    "syntax-semantic-conflation": "dialogue-2026-09-27:ex144",
+    "institution-theory": "dialogue-2026-09-27:ex145",
+    "intermediate-stwreq": "dialogue-2026-09-27:ex146",
+    "three-concept-kinds": "dialogue-2026-09-27:ex147",
+    "remove-reframe": "dialogue-2026-09-27:ex148",
+    "typed-candidates": "dialogue-2026-09-27:ex149",
+    "tw-confusion": "dialogue-2026-09-27:ex150",
+    "temporary-assumption-user": "dialogue-2026-09-27:ex151",
+    "active-assumption": "dialogue-2026-09-27:ex152",
+    "state-context-separation": "dialogue-2026-09-27:ex153",
+    "black-white-context": "dialogue-2026-09-27:ex154",
+    "pre-update-research": "dialogue-2026-09-27:ex155",
+    "atms-research": "dialogue-2026-09-27:ex156",
+    "orthogonal-combination": "dialogue-2026-09-27:ex157",
+    "persistent-support": "dialogue-2026-09-27:ex158",
+    "research-request": "dialogue-2026-09-27:ex159",
+    "atms-fit": "dialogue-2026-09-27:ex160",
+    "atms-environment-label": "dialogue-2026-09-27:ex161",
+    "atms-state": "dialogue-2026-09-27:ex162",
+    "whitebox-environment": "dialogue-2026-09-27:ex163",
+    "environment-closure": "dialogue-2026-09-27:ex164",
+    "institution-atms": "dialogue-2026-09-27:ex165",
+    "evidence-demoted": "dialogue-2026-09-27:ex166",
+    "query-outside": "dialogue-2026-09-27:ex167",
+    "reasoning-episode": "dialogue-2026-09-27:ex168",
+    "theory-graphs-parked": "dialogue-2026-09-27:ex169",
+    "revised-state": "dialogue-2026-09-27:ex170",
+    "typed-generation-open": "dialogue-2026-09-27:ex171",
+    "update-request": "dialogue-2026-09-27:ex172"
   },
   "nodes": [
     [
@@ -877,6 +922,270 @@
       "hypothesis",
       "Current endpoint: factor epistemic state change relative to a representation contract, keep warrant separate, and treat candidate-generation factorization as open.",
       "candidate-generation-open"
+    ],
+    [
+      "q-self-application",
+      "question",
+      "How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?",
+      "self-application"
+    ],
+    [
+      "theoretical-model-construction",
+      "claim",
+      "The dialogue is performing theoretical model construction under conceptual and literature constraints.",
+      "theoretical-model"
+    ],
+    [
+      "candidate-generation-testcase",
+      "claim",
+      "The dialogue itself can serve as an adversarial test case for candidate-generation operators.",
+      "candidate-testcase"
+    ],
+    [
+      "q-generation-next",
+      "question",
+      "What should be formalized next after separating state update from candidate generation?",
+      "generation-next"
+    ],
+    [
+      "generation-formalization-goal",
+      "goal",
+      "Formalize candidate generation using the dialogue as a test case while importing established operators where possible.",
+      "formalize-generation"
+    ],
+    [
+      "q-reframe-primitive",
+      "question",
+      "Is reframe a primitive operation, or is it masking several different transformations?",
+      "reframe-concern"
+    ],
+    [
+      "concept-construction",
+      "concept",
+      "Construction of a new expression or concept from constructors and vocabulary already available in the current language.",
+      "compose-concepts"
+    ],
+    [
+      "concept-invention",
+      "concept",
+      "Introduction of genuinely new conceptual or predicate vocabulary not already definable in the current language.",
+      "new-concepts"
+    ],
+    [
+      "construction-invention-distinction",
+      "claim",
+      "Concept construction inside an existing language and substantive concept invention are different problems.",
+      "construction-invention"
+    ],
+    [
+      "reframe-macro",
+      "claim",
+      "Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations.",
+      "reframe-macro"
+    ],
+    [
+      "algebra-over-representations",
+      "hypothesis",
+      "Candidate generation may be better modeled as an algebra over languages, expressions, theories and queries than as a short folk list of cognitive verbs.",
+      "algebra-representations"
+    ],
+    [
+      "q-meta-model-compatibility",
+      "question",
+      "Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?",
+      "meta-model-compatibility"
+    ],
+    [
+      "meta-model-stress-test",
+      "method",
+      "Use established concept-generation formalisms as a stress test of the epistemic meta-model.",
+      "stress-test-meta-model"
+    ],
+    [
+      "u-overloaded",
+      "claim",
+      "The previous U/hypothesis-universe coordinate conflates language, expressibility, model space and live hypotheses.",
+      "u-overloaded"
+    ],
+    [
+      "intermediate-lmhm",
+      "hypothesis",
+      "An intermediate repair separates language, model space, live hypotheses and graded support as K=(L,M,H,mu).",
+      "intermediate-lmhm"
+    ],
+    [
+      "institution-theory-ref",
+      "reference",
+      "Institution theory as an abstract separation of signatures, sentences, models and satisfaction, with signature morphisms for translation.",
+      "institution-theory"
+    ],
+    [
+      "institution-substrate",
+      "hypothesis",
+      "Use an institution-style logical substrate (Sig, Sen, Mod, satisfaction) rather than one overloaded universe variable.",
+      "institution-theory"
+    ],
+    [
+      "intermediate-stwreq",
+      "hypothesis",
+      "An intermediate state proposal K=(Sigma,T,W,rho,E,Q) separates signature, explicit theory, semantic possibilities, support, evidence and query.",
+      "intermediate-stwreq"
+    ],
+    [
+      "expression-construction",
+      "concept",
+      "Build an expression using constructors already licensed by the current language.",
+      "three-concept-kinds"
+    ],
+    [
+      "definitional-extension",
+      "concept",
+      "Extend a signature with a fresh name explicitly defined from old-language expressions, ideally conservatively.",
+      "three-concept-kinds"
+    ],
+    [
+      "substantive-predicate-invention",
+      "concept",
+      "Introduce new predicate/concept vocabulary whose semantics are not merely a definitional abbreviation of the old language.",
+      "three-concept-kinds"
+    ],
+    [
+      "three-concept-distinction",
+      "claim",
+      "Expression construction, definitional extension and substantive concept invention are distinct operations.",
+      "three-concept-kinds"
+    ],
+    [
+      "typed-candidate-space",
+      "hypothesis",
+      "Generated epistemic candidates require types such as sentence, assumption, justification, model, signature extension, mapping or query.",
+      "typed-candidates"
+    ],
+    [
+      "q-theory-commitment",
+      "question",
+      "Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?",
+      "tw-confusion"
+    ],
+    [
+      "temporary-assumption-context",
+      "hypothesis",
+      "A set of premises can be stipulated only for a reasoning branch without becoming a durable belief theory.",
+      "active-assumption"
+    ],
+    [
+      "persistent-active-distinction",
+      "claim",
+      "Persistent epistemic state and the active assumption context of a reasoning episode should be represented separately.",
+      "state-context-separation"
+    ],
+    [
+      "black-white-context",
+      "claim",
+      "The black-box state maintains alternatives; a white-box move temporarily stipulates one context and inspects its consequences.",
+      "black-white-context"
+    ],
+    [
+      "q-pre-update-research",
+      "question",
+      "What established machinery should be checked before freezing the revised meta-model in documentation?",
+      "pre-update-research"
+    ],
+    [
+      "atms-ref",
+      "reference",
+      "de Kleer's Assumption-based Truth Maintenance System as a precedent for multiple simultaneous assumption environments and dependency labels.",
+      "atms-research"
+    ],
+    [
+      "atms-support-graph",
+      "hypothesis",
+      "Persistent epistemic organization can be represented as assumptions, explicit justifications and minimal support environments rather than one committed theory.",
+      "atms-fit"
+    ],
+    [
+      "support-provenance",
+      "claim",
+      "Minimal supporting environments make conditional dependency provenance explicit without warranting the assumptions themselves.",
+      "persistent-support"
+    ],
+    [
+      "atms-environment",
+      "concept",
+      "An ATMS-style environment is a consistent set of assumptions under which consequences can be evaluated.",
+      "atms-environment-label"
+    ],
+    [
+      "atms-label",
+      "concept",
+      "A label records minimal consistent assumption environments sufficient to support a datum.",
+      "atms-environment-label"
+    ],
+    [
+      "persistent-support-state",
+      "hypothesis",
+      "Current persistent state: K_Sigma=(N,A,J,lambda,rho), with represented nodes, assumptions, justifications, minimal support environments and optional graded support.",
+      "atms-state"
+    ],
+    [
+      "temporary-environment",
+      "hypothesis",
+      "A white-box reasoning branch selects a temporary assumption environment Gamma subseteq A.",
+      "whitebox-environment"
+    ],
+    [
+      "environment-closure",
+      "hypothesis",
+      "Conditional deductive context is the closure C(Gamma)=Cl_J(Gamma) of a temporary assumption environment under justifications.",
+      "environment-closure"
+    ],
+    [
+      "institution-atms-orthogonal",
+      "claim",
+      "Institution theory handles language/model semantics while ATMS-like machinery handles support across assumption environments; they are complementary, not competing.",
+      "institution-atms"
+    ],
+    [
+      "evidence-as-node",
+      "claim",
+      "Evidence need not be a privileged top-level coordinate; reports and observations can be typed provenance-bearing nodes with their own dependencies.",
+      "evidence-demoted"
+    ],
+    [
+      "query-outside-state",
+      "claim",
+      "The current query/task belongs to a reasoning episode rather than persistent epistemic state.",
+      "query-outside"
+    ],
+    [
+      "reasoning-episode",
+      "hypothesis",
+      "A reasoning episode can be represented as R=(K_Sigma,Gamma,Q).",
+      "reasoning-episode"
+    ],
+    [
+      "theory-graphs-parked",
+      "claim",
+      "Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet.",
+      "theory-graphs-parked"
+    ],
+    [
+      "current-meta-model",
+      "hypothesis",
+      "Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query.",
+      "revised-state"
+    ],
+    [
+      "q-candidate-type-system",
+      "question",
+      "What is the minimal type system for generated epistemic candidates?",
+      "typed-generation-open"
+    ],
+    [
+      "typed-generation-open",
+      "claim",
+      "Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement.",
+      "typed-generation-open"
     ]
   ],
   "relations": [
@@ -1683,6 +1992,270 @@
       "current-endpoint",
       "q-candidate-generation-factorization",
       "candidate-generation-open"
+    ],
+    [
+      "answers",
+      "theoretical-model-construction",
+      "q-self-application",
+      "theoretical-model"
+    ],
+    [
+      "supports",
+      "candidate-generation-testcase",
+      "theoretical-model-construction",
+      "candidate-testcase"
+    ],
+    [
+      "motivates",
+      "candidate-generation-testcase",
+      "q-generation-next",
+      "candidate-testcase"
+    ],
+    [
+      "candidate_for",
+      "generation-formalization-goal",
+      "q-generation-next",
+      "formalize-generation"
+    ],
+    [
+      "motivates",
+      "q-reframe-primitive",
+      "concept-construction",
+      "compose-concepts"
+    ],
+    [
+      "motivates",
+      "q-reframe-primitive",
+      "concept-invention",
+      "new-concepts"
+    ],
+    [
+      "distinguishes",
+      "concept-construction",
+      "concept-invention",
+      "construction-invention"
+    ],
+    [
+      "answers",
+      "construction-invention-distinction",
+      "q-reframe-primitive",
+      "construction-invention"
+    ],
+    [
+      "supports",
+      "reframe-macro",
+      "construction-invention-distinction",
+      "reframe-macro"
+    ],
+    [
+      "related_to",
+      "algebra-over-representations",
+      "generation-formalization-goal",
+      "algebra-representations"
+    ],
+    [
+      "motivates",
+      "q-meta-model-compatibility",
+      "meta-model-stress-test",
+      "stress-test-meta-model"
+    ],
+    [
+      "challenges",
+      "u-overloaded",
+      "state-universe",
+      "u-overloaded"
+    ],
+    [
+      "candidate_for",
+      "intermediate-lmhm",
+      "q-meta-model-compatibility",
+      "intermediate-lmhm"
+    ],
+    [
+      "candidate_for",
+      "institution-theory-ref",
+      "q-meta-model-compatibility",
+      "institution-theory"
+    ],
+    [
+      "part_of",
+      "institution-substrate",
+      "current-meta-model",
+      "institution-theory"
+    ],
+    [
+      "candidate_for",
+      "intermediate-stwreq",
+      "q-meta-model-compatibility",
+      "intermediate-stwreq"
+    ],
+    [
+      "part_of",
+      "expression-construction",
+      "three-concept-distinction",
+      "three-concept-kinds"
+    ],
+    [
+      "part_of",
+      "definitional-extension",
+      "three-concept-distinction",
+      "three-concept-kinds"
+    ],
+    [
+      "part_of",
+      "substantive-predicate-invention",
+      "three-concept-distinction",
+      "three-concept-kinds"
+    ],
+    [
+      "supports",
+      "three-concept-distinction",
+      "reframe-macro",
+      "three-concept-kinds"
+    ],
+    [
+      "depends_on",
+      "typed-candidate-space",
+      "institution-substrate",
+      "typed-candidates"
+    ],
+    [
+      "challenges",
+      "q-theory-commitment",
+      "intermediate-stwreq",
+      "tw-confusion"
+    ],
+    [
+      "answers",
+      "temporary-assumption-context",
+      "q-theory-commitment",
+      "active-assumption"
+    ],
+    [
+      "supports",
+      "persistent-active-distinction",
+      "temporary-assumption-context",
+      "state-context-separation"
+    ],
+    [
+      "supports",
+      "black-white-context",
+      "persistent-active-distinction",
+      "black-white-context"
+    ],
+    [
+      "motivates",
+      "q-pre-update-research",
+      "atms-ref",
+      "atms-research"
+    ],
+    [
+      "candidate_for",
+      "atms-ref",
+      "q-theory-commitment",
+      "atms-research"
+    ],
+    [
+      "supports",
+      "atms-support-graph",
+      "persistent-active-distinction",
+      "atms-fit"
+    ],
+    [
+      "supports",
+      "support-provenance",
+      "atms-support-graph",
+      "persistent-support"
+    ],
+    [
+      "part_of",
+      "atms-environment",
+      "atms-support-graph",
+      "atms-environment-label"
+    ],
+    [
+      "part_of",
+      "atms-label",
+      "atms-support-graph",
+      "atms-environment-label"
+    ],
+    [
+      "supersedes",
+      "persistent-support-state",
+      "intermediate-stwreq",
+      "atms-state"
+    ],
+    [
+      "part_of",
+      "temporary-environment",
+      "reasoning-episode",
+      "whitebox-environment"
+    ],
+    [
+      "part_of",
+      "environment-closure",
+      "reasoning-episode",
+      "environment-closure"
+    ],
+    [
+      "supports",
+      "institution-atms-orthogonal",
+      "current-meta-model",
+      "institution-atms"
+    ],
+    [
+      "challenges",
+      "evidence-as-node",
+      "intermediate-stwreq",
+      "evidence-demoted"
+    ],
+    [
+      "supports",
+      "query-outside-state",
+      "reasoning-episode",
+      "query-outside"
+    ],
+    [
+      "part_of",
+      "persistent-support-state",
+      "current-meta-model",
+      "revised-state"
+    ],
+    [
+      "part_of",
+      "reasoning-episode",
+      "current-meta-model",
+      "revised-state"
+    ],
+    [
+      "related_to",
+      "theory-graphs-parked",
+      "current-meta-model",
+      "theory-graphs-parked"
+    ],
+    [
+      "answers",
+      "current-meta-model",
+      "q-meta-model-compatibility",
+      "revised-state"
+    ],
+    [
+      "reframes",
+      "q-candidate-generation-factorization",
+      "q-candidate-type-system",
+      "typed-generation-open"
+    ],
+    [
+      "candidate_for",
+      "typed-generation-open",
+      "q-candidate-type-system",
+      "typed-generation-open"
+    ],
+    [
+      "related_to",
+      "typed-generation-open",
+      "q-warrant-postulates",
+      "typed-generation-open"
     ]
   ],
   "moves": [
@@ -2754,6 +3327,399 @@
         "warrant-layer"
       ],
       "warrant-definition"
+    ],
+    [
+      "ask",
+      [
+        "current-endpoint"
+      ],
+      [
+        "q-self-application"
+      ],
+      "self-application"
+    ],
+    [
+      "clarify",
+      [
+        "q-self-application"
+      ],
+      [
+        "theoretical-model-construction"
+      ],
+      "theoretical-model"
+    ],
+    [
+      "connect",
+      [
+        "theoretical-model-construction"
+      ],
+      [
+        "candidate-generation-testcase"
+      ],
+      "candidate-testcase"
+    ],
+    [
+      "ask",
+      [
+        "candidate-generation-testcase"
+      ],
+      [
+        "q-generation-next"
+      ],
+      "generation-next"
+    ],
+    [
+      "propose",
+      [
+        "q-generation-next"
+      ],
+      [
+        "generation-formalization-goal"
+      ],
+      "formalize-generation"
+    ],
+    [
+      "challenge",
+      [
+        "generation-formalization-goal"
+      ],
+      [
+        "q-reframe-primitive"
+      ],
+      "reframe-concern"
+    ],
+    [
+      "distinguish",
+      [
+        "q-reframe-primitive"
+      ],
+      [
+        "concept-construction"
+      ],
+      "compose-concepts"
+    ],
+    [
+      "distinguish",
+      [
+        "q-reframe-primitive"
+      ],
+      [
+        "concept-invention"
+      ],
+      "new-concepts"
+    ],
+    [
+      "clarify",
+      [
+        "concept-construction",
+        "concept-invention"
+      ],
+      [
+        "construction-invention-distinction"
+      ],
+      "construction-invention"
+    ],
+    [
+      "decompose",
+      [
+        "q-reframe-primitive"
+      ],
+      [
+        "reframe-macro"
+      ],
+      "reframe-macro"
+    ],
+    [
+      "propose",
+      [
+        "generation-formalization-goal"
+      ],
+      [
+        "algebra-over-representations"
+      ],
+      "algebra-representations"
+    ],
+    [
+      "ask",
+      [
+        "generation-formalization-goal"
+      ],
+      [
+        "q-meta-model-compatibility"
+      ],
+      "meta-model-compatibility"
+    ],
+    [
+      "scope",
+      [
+        "q-meta-model-compatibility"
+      ],
+      [
+        "meta-model-stress-test"
+      ],
+      "stress-test-meta-model"
+    ],
+    [
+      "challenge",
+      [
+        "state-universe"
+      ],
+      [
+        "u-overloaded"
+      ],
+      "u-overloaded"
+    ],
+    [
+      "propose",
+      [
+        "u-overloaded"
+      ],
+      [
+        "intermediate-lmhm"
+      ],
+      "intermediate-lmhm"
+    ],
+    [
+      "clarify",
+      [
+        "intermediate-lmhm"
+      ],
+      [
+        "institution-theory-ref",
+        "institution-substrate"
+      ],
+      "institution-theory"
+    ],
+    [
+      "propose",
+      [
+        "institution-substrate"
+      ],
+      [
+        "intermediate-stwreq"
+      ],
+      "intermediate-stwreq"
+    ],
+    [
+      "decompose",
+      [
+        "concept-construction",
+        "concept-invention"
+      ],
+      [
+        "expression-construction",
+        "definitional-extension",
+        "substantive-predicate-invention",
+        "three-concept-distinction"
+      ],
+      "three-concept-kinds"
+    ],
+    [
+      "retract",
+      [
+        "reframe-macro"
+      ],
+      [
+        "reframe-macro"
+      ],
+      "remove-reframe"
+    ],
+    [
+      "clarify",
+      [
+        "generation-formalization-goal"
+      ],
+      [
+        "typed-candidate-space"
+      ],
+      "typed-candidates"
+    ],
+    [
+      "challenge",
+      [
+        "intermediate-stwreq"
+      ],
+      [
+        "q-theory-commitment"
+      ],
+      "tw-confusion"
+    ],
+    [
+      "clarify",
+      [
+        "q-theory-commitment"
+      ],
+      [
+        "temporary-assumption-context"
+      ],
+      "active-assumption"
+    ],
+    [
+      "distinguish",
+      [
+        "temporary-assumption-context"
+      ],
+      [
+        "persistent-active-distinction"
+      ],
+      "state-context-separation"
+    ],
+    [
+      "clarify",
+      [
+        "persistent-active-distinction"
+      ],
+      [
+        "black-white-context"
+      ],
+      "black-white-context"
+    ],
+    [
+      "ask",
+      [
+        "q-meta-model-compatibility"
+      ],
+      [
+        "q-pre-update-research"
+      ],
+      "pre-update-research"
+    ],
+    [
+      "connect",
+      [
+        "q-pre-update-research"
+      ],
+      [
+        "atms-ref"
+      ],
+      "atms-research"
+    ],
+    [
+      "hypothesize",
+      [
+        "atms-ref"
+      ],
+      [
+        "atms-support-graph"
+      ],
+      "atms-fit"
+    ],
+    [
+      "clarify",
+      [
+        "atms-support-graph"
+      ],
+      [
+        "atms-environment",
+        "atms-label"
+      ],
+      "atms-environment-label"
+    ],
+    [
+      "propose",
+      [
+        "atms-support-graph"
+      ],
+      [
+        "persistent-support-state"
+      ],
+      "atms-state"
+    ],
+    [
+      "clarify",
+      [
+        "persistent-support-state"
+      ],
+      [
+        "temporary-environment"
+      ],
+      "whitebox-environment"
+    ],
+    [
+      "deduce",
+      [
+        "temporary-environment"
+      ],
+      [
+        "environment-closure"
+      ],
+      "environment-closure"
+    ],
+    [
+      "connect",
+      [
+        "institution-substrate",
+        "atms-support-graph"
+      ],
+      [
+        "institution-atms-orthogonal"
+      ],
+      "institution-atms"
+    ],
+    [
+      "challenge",
+      [
+        "intermediate-stwreq"
+      ],
+      [
+        "evidence-as-node"
+      ],
+      "evidence-demoted"
+    ],
+    [
+      "distinguish",
+      [
+        "persistent-support-state"
+      ],
+      [
+        "query-outside-state"
+      ],
+      "query-outside"
+    ],
+    [
+      "connect",
+      [
+        "persistent-support-state",
+        "temporary-environment",
+        "query-outside-state"
+      ],
+      [
+        "reasoning-episode"
+      ],
+      "reasoning-episode"
+    ],
+    [
+      "scope",
+      [
+        "current-meta-model"
+      ],
+      [
+        "theory-graphs-parked"
+      ],
+      "theory-graphs-parked"
+    ],
+    [
+      "summarize",
+      [
+        "institution-substrate",
+        "persistent-support-state",
+        "reasoning-episode"
+      ],
+      [
+        "current-meta-model"
+      ],
+      "revised-state"
+    ],
+    [
+      "ask",
+      [
+        "typed-candidate-space"
+      ],
+      [
+        "q-candidate-type-system",
+        "typed-generation-open"
+      ],
+      "typed-generation-open"
     ]
   ],
   "stances": [
@@ -2911,6 +3877,56 @@
       "three-layer-separation",
       "posits",
       "three-layers"
+    ],
+    [
+      "construction-invention-distinction",
+      "posits",
+      "construction-invention"
+    ],
+    [
+      "reframe-macro",
+      "posits",
+      "reframe-macro"
+    ],
+    [
+      "u-overloaded",
+      "posits",
+      "u-overloaded"
+    ],
+    [
+      "q-theory-commitment",
+      "questions",
+      "tw-confusion"
+    ],
+    [
+      "temporary-assumption-context",
+      "posits",
+      "active-assumption"
+    ],
+    [
+      "persistent-active-distinction",
+      "posits",
+      "state-context-separation"
+    ],
+    [
+      "atms-support-graph",
+      "posits",
+      "atms-fit"
+    ],
+    [
+      "persistent-support-state",
+      "posits",
+      "atms-state"
+    ],
+    [
+      "institution-atms-orthogonal",
+      "posits",
+      "institution-atms"
+    ],
+    [
+      "current-meta-model",
+      "posits",
+      "revised-state"
     ]
   ],
   "question_updates": [
@@ -2971,6 +3987,63 @@
       [
         "state-delta-factorization"
       ]
+    ],
+    [
+      "q-self-application",
+      "answered",
+      "theoretical-model",
+      [
+        "theoretical-model-construction"
+      ]
+    ],
+    [
+      "q-generation-next",
+      "answered",
+      "formalize-generation",
+      [
+        "generation-formalization-goal"
+      ]
+    ],
+    [
+      "q-reframe-primitive",
+      "answered",
+      "reframe-macro",
+      [
+        "reframe-macro",
+        "construction-invention-distinction"
+      ]
+    ],
+    [
+      "q-meta-model-compatibility",
+      "answered",
+      "revised-state",
+      [
+        "current-meta-model"
+      ]
+    ],
+    [
+      "q-theory-commitment",
+      "answered",
+      "active-assumption",
+      [
+        "temporary-assumption-context",
+        "persistent-active-distinction"
+      ]
+    ],
+    [
+      "q-pre-update-research",
+      "answered",
+      "atms-research",
+      [
+        "atms-ref",
+        "institution-theory-ref"
+      ]
+    ],
+    [
+      "q-candidate-generation-factorization",
+      "reopened",
+      "typed-generation-open",
+      []
     ]
   ]
 }
