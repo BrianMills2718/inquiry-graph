@@ -1,0 +1,512 @@
+{
+  "$defs": {
+    "Anchor": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 1,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Anchor",
+      "type": "object"
+    },
+    "Binding": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "role",
+        "ref"
+      ],
+      "title": "Binding",
+      "type": "object"
+    },
+    "Move": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "anchors": {
+          "items": {
+            "$ref": "#/$defs/Anchor"
+          },
+          "minItems": 1,
+          "title": "Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "inferred",
+          "enum": [
+            "explicit",
+            "inferred"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "confirmed",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "ask",
+            "clarify",
+            "distinguish",
+            "challenge",
+            "retract",
+            "hypothesize",
+            "generalize",
+            "deduce",
+            "test",
+            "reframe",
+            "decompose",
+            "connect",
+            "scope",
+            "summarize",
+            "propose"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "actor_id": {
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "input_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Ids",
+          "type": "array"
+        },
+        "output_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Output Ids",
+          "type": "array"
+        },
+        "at_message_id": {
+          "title": "At Message Id",
+          "type": "string"
+        },
+        "after_move_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "After Move Ids",
+          "type": "array"
+        },
+        "inference_family": {
+          "default": "unspecified",
+          "enum": [
+            "induction",
+            "abduction",
+            "deduction",
+            "unspecified"
+          ],
+          "title": "Inference Family",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "anchors",
+        "kind",
+        "actor_id",
+        "input_ids",
+        "output_ids",
+        "at_message_id"
+      ],
+      "title": "Move",
+      "type": "object"
+    },
+    "Node": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "anchors": {
+          "items": {
+            "$ref": "#/$defs/Anchor"
+          },
+          "minItems": 1,
+          "title": "Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "inferred",
+          "enum": [
+            "explicit",
+            "inferred"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "confirmed",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "concept",
+            "claim",
+            "question",
+            "hypothesis",
+            "method",
+            "example",
+            "goal",
+            "reference"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "anchors",
+        "kind",
+        "text"
+      ],
+      "title": "Node",
+      "type": "object"
+    },
+    "QuestionEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "anchors": {
+          "items": {
+            "$ref": "#/$defs/Anchor"
+          },
+          "minItems": 1,
+          "title": "Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "inferred",
+          "enum": [
+            "explicit",
+            "inferred"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "confirmed",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "answered",
+            "resolved",
+            "deferred",
+            "superseded",
+            "reopened"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "actor_id": {
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "at_message_id": {
+          "title": "At Message Id",
+          "type": "string"
+        },
+        "answer_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Answer Ids",
+          "type": "array"
+        },
+        "resolution_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolution Basis"
+        },
+        "replacement_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Replacement Id"
+        }
+      },
+      "required": [
+        "id",
+        "anchors",
+        "question_id",
+        "status",
+        "actor_id",
+        "at_message_id"
+      ],
+      "title": "QuestionEvent",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "anchors": {
+          "items": {
+            "$ref": "#/$defs/Anchor"
+          },
+          "minItems": 1,
+          "title": "Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "inferred",
+          "enum": [
+            "explicit",
+            "inferred"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "confirmed",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "supports",
+            "challenges",
+            "depends_on",
+            "distinguishes",
+            "reframes",
+            "motivates",
+            "answers",
+            "exemplifies",
+            "candidate_for",
+            "part_of",
+            "related_to",
+            "supersedes"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "bindings": {
+          "items": {
+            "$ref": "#/$defs/Binding"
+          },
+          "minItems": 2,
+          "title": "Bindings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "anchors",
+        "kind",
+        "bindings"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "StanceEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "anchors": {
+          "items": {
+            "$ref": "#/$defs/Anchor"
+          },
+          "minItems": 1,
+          "title": "Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "inferred",
+          "enum": [
+            "explicit",
+            "inferred"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "confirmed",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "actor_id": {
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        },
+        "stance": {
+          "enum": [
+            "posits",
+            "endorses",
+            "questions",
+            "rejects",
+            "suspends",
+            "retracts"
+          ],
+          "title": "Stance",
+          "type": "string"
+        },
+        "at_message_id": {
+          "title": "At Message Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "anchors",
+        "actor_id",
+        "target_id",
+        "stance",
+        "at_message_id"
+      ],
+      "title": "StanceEvent",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/Node"
+      },
+      "title": "Nodes",
+      "type": "array"
+    },
+    "relations": {
+      "items": {
+        "$ref": "#/$defs/Relation"
+      },
+      "title": "Relations",
+      "type": "array"
+    },
+    "moves": {
+      "items": {
+        "$ref": "#/$defs/Move"
+      },
+      "title": "Moves",
+      "type": "array"
+    },
+    "stance_events": {
+      "items": {
+        "$ref": "#/$defs/StanceEvent"
+      },
+      "title": "Stance Events",
+      "type": "array"
+    },
+    "question_events": {
+      "items": {
+        "$ref": "#/$defs/QuestionEvent"
+      },
+      "title": "Question Events",
+      "type": "array"
+    }
+  },
+  "title": "Candidates",
+  "type": "object"
+}
