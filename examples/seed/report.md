@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 197, "nodes": 202, "relations": 211, "moves": 169, "stance_events": 48, "question_events": 68, "questions": 49, "review": {"proposed": 698, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 207, "nodes": 214, "relations": 233, "moves": 177, "stance_events": 52, "question_events": 71, "questions": 51, "review": {"proposed": 747, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace.
 
 ## Open agenda
 
@@ -27,7 +27,7 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Can candidate generation be given a small compositional or uniquely factorizable basis?
-`dialogue-2026-09-27:n:q-candidate-generation-factorization` · reopened · proposed
+`dialogue-2026-09-27:n:q-candidate-generation-factorization` · answered · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What is the minimal type system for generated epistemic candidates?
@@ -49,6 +49,10 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 ### How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?
 `dialogue-2026-09-27:n:q-conversation-strategy-identification` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?
+`dialogue-2026-09-27:n:q-draft-generation-algebra` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### Which beyond-observation inferences can an embedded observer make?
 `dialogue-2026-09-27:n:q-empirical` · open · proposed
@@ -237,6 +241,10 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 ### Where does canonical factorization live when treated as a reusable cognitive strategy?
 `dialogue-2026-09-27:n:q-strategy-placement` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### Can the canonical-factorization strategy trace be represented without introducing another vague primitive?
+`dialogue-2026-09-27:n:q-strategy-trace-executable` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### Do deduction, induction and abduction exhaust learning beyond observation?
 `dialogue-2026-09-27:n:q-taxonomy` · reopened · proposed
@@ -1281,3 +1289,51 @@ Inputs: dialogue-2026-09-27:n:strategy-control-layer, dialogue-2026-09-27:n:refl
 Outputs: dialogue-2026-09-27:n:q-metareasoning-research
 
 > Ok I assume we should do any remaining work/research around that
+
+**connect** · `dialogue-2026-09-27:m:170` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-generation-open
+Outputs: dialogue-2026-09-27:n:candidate-generation-interface
+
+> The common structure across **program synthesis, CEGIS, ILP/meta-interpretive learning, and formal abduction** is not a universal list of “ways to invent hypotheses.” It is a **constrained search over a generative space**, with the search space, construction operators, structural bias, and checking mechanism made explicit.
+
+**decompose** · `dialogue-2026-09-27:m:171` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-interface
+Outputs: dialogue-2026-09-27:n:draft-generation-system, dialogue-2026-09-27:n:reachable-draft-space
+
+> So I would now replace our vague
+
+**distinguish** · `dialogue-2026-09-27:m:172` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:draft-generation-system, dialogue-2026-09-27:n:strategy-control-layer
+Outputs: dialogue-2026-09-27:n:generation-operator-strategy-distinction
+
+> generative space != operators != search strategy.
+
+**distinguish** · `dialogue-2026-09-27:m:173` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:draft-generation-system, dialogue-2026-09-27:n:mmt-representation-substrate
+Outputs: dialogue-2026-09-27:n:draft-formal-boundary
+
+> A reachable draft need not yet be formally legal.
+
+**distinguish** · `dialogue-2026-09-27:m:174` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-interface, dialogue-2026-09-27:n:warrant-layer
+Outputs: dialogue-2026-09-27:n:evaluation-warrant-distinction, dialogue-2026-09-27:n:evaluator-feedback
+
+> verification/evaluation still isn&#x27;t automatically warrant.
+
+**clarify** · `dialogue-2026-09-27:m:175` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy
+Outputs: dialogue-2026-09-27:n:factorization-interface-instance
+
+> Canonical-factorization analysis is one particular π, not a candidate generator itself.
+
+**generalize** · `dialogue-2026-09-27:m:176` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-interface
+Outputs: dialogue-2026-09-27:n:universal-interface-not-operators
+
+> The universal object is probably **not the operator set**.
+
+**propose** · `dialogue-2026-09-27:m:177` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy, dialogue-2026-09-27:n:candidate-generation-interface
+Outputs: dialogue-2026-09-27:n:worked-factorization-trace, dialogue-2026-09-27:n:q-draft-generation-algebra, dialogue-2026-09-27:n:q-strategy-trace-executable
+
+> I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace

@@ -3029,6 +3029,186 @@
       "review_status": "proposed",
       "kind": "question",
       "text": "Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-generation-interface",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex207",
+          "start": 0,
+          "end": 20,
+          "quote": "It is the interface:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Candidate generation is best modeled by an interface separating draft/search space, construction operators, strategy, elaboration, evaluation feedback and warrant."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:draft-generation-system",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex201",
+          "start": 0,
+          "end": 32,
+          "quote": "So I would now replace our vague"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "For reasoning episode R, a draft-generation system G_R=(D_R,d0,O_R,→_R) defines draft states, an initial draft, operators and generative transitions."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reachable-draft-space",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex200",
+          "start": 0,
+          "end": 324,
+          "quote": "The common structure across **program synthesis, CEGIS, ILP/meta-interpretive learning, and formal abduction** is not a universal list of “ways to invent hypotheses.” It is a **constrained search over a generative space**, with the search space, construction operators, structural bias, and checking mechanism made explicit."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Reach(R) is the set of draft candidates reachable from d0 by finite sequences of available construction/refinement operators."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:generation-operator-strategy-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex202",
+          "start": 0,
+          "end": 49,
+          "quote": "generative space != operators != search strategy."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Generative space, construction operators and search/control strategy are distinct components."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:draft-formal-boundary",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex203",
+          "start": 0,
+          "end": 49,
+          "quote": "A reachable draft need not yet be formally legal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "A reachable draft may be incomplete or ill-formed and must be elaborated/checked before becoming a formal artifact."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:evaluation-warrant-distinction",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Verification or evaluation feedback does not automatically constitute epistemic warrant."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:evaluator-feedback",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Evaluator feedback is a representable diagnostic such as a counterexample, violated constraint, failed proof obligation, empirical mismatch or warrant condition."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:factorization-interface-instance",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex205",
+          "start": 0,
+          "end": 87,
+          "quote": "Canonical-factorization analysis is one particular π, not a candidate generator itself."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Canonical-factorization analysis is one strategy that searches a factorization-specific draft space using local operators and evaluators."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:universal-interface-not-operators",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex206",
+          "start": 0,
+          "end": 58,
+          "quote": "The universal object is probably **not the operator set**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The reusable cross-domain abstraction is the candidate-generation interface, not one universal operator set."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:worked-factorization-trace",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "example",
+      "text": "Worked trace of the founding dialogue from I/D/A partition through composition-space, representation-relative factorization, support-context refinement, candidate-type repair and strategy recognition."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-draft-generation-algebra",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-strategy-trace-executable",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Can the canonical-factorization strategy trace be represented without introducing another vague primitive?"
     }
   ],
   "relations": [
@@ -8095,6 +8275,534 @@
           "ref": "dialogue-2026-09-27:n:reflection-about-relation"
         }
       ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:212",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex207",
+          "start": 0,
+          "end": 20,
+          "quote": "It is the interface:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-candidate-generation-factorization"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:213",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex201",
+          "start": 0,
+          "end": 32,
+          "quote": "So I would now replace our vague"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:draft-generation-system"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:214",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex200",
+          "start": 0,
+          "end": 324,
+          "quote": "The common structure across **program synthesis, CEGIS, ILP/meta-interpretive learning, and formal abduction** is not a universal list of “ways to invent hypotheses.” It is a **constrained search over a generative space**, with the search space, construction operators, structural bias, and checking mechanism made explicit."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:reachable-draft-space"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:draft-generation-system"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:215",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex202",
+          "start": 0,
+          "end": 49,
+          "quote": "generative space != operators != search strategy."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:generation-operator-strategy-distinction"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:216",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex203",
+          "start": 0,
+          "end": 49,
+          "quote": "A reachable draft need not yet be formally legal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:draft-formal-boundary"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:217",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:evaluation-warrant-distinction"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:218",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:evaluator-feedback"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:219",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "exemplifies",
+      "bindings": [
+        {
+          "role": "example",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        },
+        {
+          "role": "general",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:220",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex205",
+          "start": 0,
+          "end": 87,
+          "quote": "Canonical-factorization analysis is one particular π, not a candidate generator itself."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:factorization-interface-instance"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:221",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex206",
+          "start": 0,
+          "end": 58,
+          "quote": "The universal object is probably **not the operator set**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:universal-interface-not-operators"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:222",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "about",
+      "bindings": [
+        {
+          "role": "subject",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        },
+        {
+          "role": "object",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:223",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-draft-generation-algebra"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:candidate-generation-interface"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:224",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-strategy-trace-executable"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:225",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:q-taxonomy"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:226",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:q-induction-abduction-blur"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:227",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:model-target-composition"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:228",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:representation-contract"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:229",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:state-delta-factorization"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:230",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:persistent-support-state"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:231",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:candidate-types-nonorthogonal"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:232",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:mmt-representation-substrate"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:233",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:factorization-diagnostics"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:worked-factorization-trace"
+        }
+      ]
     }
   ],
   "moves": [
@@ -12528,6 +13236,222 @@
         "dialogue-2026-09-27:m:168"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:170",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex200",
+          "start": 0,
+          "end": 324,
+          "quote": "The common structure across **program synthesis, CEGIS, ILP/meta-interpretive learning, and formal abduction** is not a universal list of “ways to invent hypotheses.” It is a **constrained search over a generative space**, with the search space, construction operators, structural bias, and checking mechanism made explicit."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-generation-open"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex200",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:169"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:171",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex201",
+          "start": 0,
+          "end": 32,
+          "quote": "So I would now replace our vague"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "decompose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:draft-generation-system",
+        "dialogue-2026-09-27:n:reachable-draft-space"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex201",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:170"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:172",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex202",
+          "start": 0,
+          "end": 49,
+          "quote": "generative space != operators != search strategy."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:draft-generation-system",
+        "dialogue-2026-09-27:n:strategy-control-layer"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:generation-operator-strategy-distinction"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex202",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:171"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:173",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex203",
+          "start": 0,
+          "end": 49,
+          "quote": "A reachable draft need not yet be formally legal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:draft-generation-system",
+        "dialogue-2026-09-27:n:mmt-representation-substrate"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:draft-formal-boundary"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex203",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:172"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:174",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface",
+        "dialogue-2026-09-27:n:warrant-layer"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:evaluation-warrant-distinction",
+        "dialogue-2026-09-27:n:evaluator-feedback"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex204",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:173"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:175",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex205",
+          "start": 0,
+          "end": 87,
+          "quote": "Canonical-factorization analysis is one particular π, not a candidate generator itself."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:factorization-interface-instance"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex205",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:174"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:176",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex206",
+          "start": 0,
+          "end": 58,
+          "quote": "The universal object is probably **not the operator set**."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:universal-interface-not-operators"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex206",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:175"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:177",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy",
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:worked-factorization-trace",
+        "dialogue-2026-09-27:n:q-draft-generation-algebra",
+        "dialogue-2026-09-27:n:q-strategy-trace-executable"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex208",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:176"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -13346,6 +14270,74 @@
       "target_id": "dialogue-2026-09-27:n:conversation-strategy-analysis",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-27:ex194"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:049",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex207",
+          "start": 0,
+          "end": 20,
+          "quote": "It is the interface:"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:candidate-generation-interface",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex207"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:050",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex202",
+          "start": 0,
+          "end": 49,
+          "quote": "generative space != operators != search strategy."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:generation-operator-strategy-distinction",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex202"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:051",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex204",
+          "start": 0,
+          "end": 58,
+          "quote": "verification/evaluation still isn't automatically warrant."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:evaluation-warrant-distinction",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex204"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:052",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex206",
+          "start": 0,
+          "end": 58,
+          "quote": "The universal object is probably **not the operator set**."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:universal-interface-not-operators",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex206"
     }
   ],
   "question_events": [
@@ -14330,6 +15322,46 @@
       "replacement_id": null
     },
     {
+      "id": "dialogue-2026-09-27:qe:q-draft-generation-algebra",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-draft-generation-algebra",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex208",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-strategy-trace-executable",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex208",
+          "start": 0,
+          "end": 150,
+          "quote": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-strategy-trace-executable",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex208",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
       "id": "dialogue-2026-09-27:qe:update:1",
       "anchors": [
         {
@@ -14743,6 +15775,28 @@
       ],
       "resolution_basis": null,
       "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:20",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex207",
+          "start": 0,
+          "end": 20,
+          "quote": "It is the interface:"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-generation-factorization",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex207",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
     }
   ],
   "schema_version": "1.0.0",
@@ -14752,7 +15806,7 @@
       "id": "dialogue-2026-09-27",
       "title": "From inference taxonomy to a persistent inquiry graph",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application.",
+      "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace.",
       "participants": [
         {
           "id": "participant:brian",
@@ -16341,6 +17395,86 @@
           "text": "Ok I assume we should do any remaining work/research around that",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex200",
+          "actor_id": "participant:assistant",
+          "ordinal": 198,
+          "text": "The common structure across **program synthesis, CEGIS, ILP/meta-interpretive learning, and formal abduction** is not a universal list of “ways to invent hypotheses.” It is a **constrained search over a generative space**, with the search space, construction operators, structural bias, and checking mechanism made explicit.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex201",
+          "actor_id": "participant:assistant",
+          "ordinal": 199,
+          "text": "So I would now replace our vague",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex202",
+          "actor_id": "participant:assistant",
+          "ordinal": 200,
+          "text": "generative space != operators != search strategy.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex203",
+          "actor_id": "participant:assistant",
+          "ordinal": 201,
+          "text": "A reachable draft need not yet be formally legal.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex204",
+          "actor_id": "participant:assistant",
+          "ordinal": 202,
+          "text": "verification/evaluation still isn't automatically warrant.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex205",
+          "actor_id": "participant:assistant",
+          "ordinal": 203,
+          "text": "Canonical-factorization analysis is one particular π, not a candidate generator itself.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex206",
+          "actor_id": "participant:assistant",
+          "ordinal": 204,
+          "text": "The universal object is probably **not the operator set**.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex207",
+          "actor_id": "participant:assistant",
+          "ordinal": 205,
+          "text": "It is the interface:",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex208",
+          "actor_id": "participant:assistant",
+          "ordinal": 206,
+          "text": "I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-27:ex209",
+          "actor_id": "participant:brian",
+          "ordinal": 207,
+          "text": "I approve proceed",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -16352,7 +17486,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:f4f23a10ec9eb2be84d13b1de376481807ecd18c566976fabb18b4a5175117fd",
+        "source_sha256:08976c67cd88ccaae22c86b0b89c2e1d53523707d7ffeb909d7c11dd6ed9f161",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }

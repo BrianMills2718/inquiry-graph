@@ -193,7 +193,17 @@
     "reflective-modeling": "dialogue-2026-09-27:ex195",
     "closure-self-description": "dialogue-2026-09-27:ex197",
     "conversation-trajectories": "dialogue-2026-09-27:ex198",
-    "remaining-research-request": "dialogue-2026-09-27:ex199"
+    "remaining-research-request": "dialogue-2026-09-27:ex199",
+    "generation-search-literature": "dialogue-2026-09-27:ex200",
+    "replace-vague-generator": "dialogue-2026-09-27:ex201",
+    "space-operator-strategy": "dialogue-2026-09-27:ex202",
+    "draft-not-formal": "dialogue-2026-09-27:ex203",
+    "evaluation-not-warrant": "dialogue-2026-09-27:ex204",
+    "factorization-strategy-instance": "dialogue-2026-09-27:ex205",
+    "operator-not-universal": "dialogue-2026-09-27:ex206",
+    "interface-universal": "dialogue-2026-09-27:ex207",
+    "interface-and-trace": "dialogue-2026-09-27:ex208",
+    "proceed-interface": "dialogue-2026-09-27:ex209"
   },
   "nodes": [
     [
@@ -1407,6 +1417,78 @@
       "question",
       "Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?",
       "remaining-research-request"
+    ],
+    [
+      "candidate-generation-interface",
+      "hypothesis",
+      "Candidate generation is best modeled by an interface separating draft/search space, construction operators, strategy, elaboration, evaluation feedback and warrant.",
+      "interface-universal"
+    ],
+    [
+      "draft-generation-system",
+      "hypothesis",
+      "For reasoning episode R, a draft-generation system G_R=(D_R,d0,O_R,→_R) defines draft states, an initial draft, operators and generative transitions.",
+      "replace-vague-generator"
+    ],
+    [
+      "reachable-draft-space",
+      "concept",
+      "Reach(R) is the set of draft candidates reachable from d0 by finite sequences of available construction/refinement operators.",
+      "generation-search-literature"
+    ],
+    [
+      "generation-operator-strategy-distinction",
+      "claim",
+      "Generative space, construction operators and search/control strategy are distinct components.",
+      "space-operator-strategy"
+    ],
+    [
+      "draft-formal-boundary",
+      "claim",
+      "A reachable draft may be incomplete or ill-formed and must be elaborated/checked before becoming a formal artifact.",
+      "draft-not-formal"
+    ],
+    [
+      "evaluation-warrant-distinction",
+      "claim",
+      "Verification or evaluation feedback does not automatically constitute epistemic warrant.",
+      "evaluation-not-warrant"
+    ],
+    [
+      "evaluator-feedback",
+      "concept",
+      "Evaluator feedback is a representable diagnostic such as a counterexample, violated constraint, failed proof obligation, empirical mismatch or warrant condition.",
+      "evaluation-not-warrant"
+    ],
+    [
+      "factorization-interface-instance",
+      "claim",
+      "Canonical-factorization analysis is one strategy that searches a factorization-specific draft space using local operators and evaluators.",
+      "factorization-strategy-instance"
+    ],
+    [
+      "universal-interface-not-operators",
+      "claim",
+      "The reusable cross-domain abstraction is the candidate-generation interface, not one universal operator set.",
+      "operator-not-universal"
+    ],
+    [
+      "worked-factorization-trace",
+      "example",
+      "Worked trace of the founding dialogue from I/D/A partition through composition-space, representation-relative factorization, support-context refinement, candidate-type repair and strategy recognition.",
+      "interface-and-trace"
+    ],
+    [
+      "q-draft-generation-algebra",
+      "question",
+      "What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?",
+      "interface-and-trace"
+    ],
+    [
+      "q-strategy-trace-executable",
+      "question",
+      "Can the canonical-factorization strategy trace be represented without introducing another vague primitive?",
+      "interface-and-trace"
     ]
   ],
   "relations": [
@@ -2675,6 +2757,138 @@
       "q-metareasoning-research",
       "reflection-about-relation",
       "remaining-research-request"
+    ],
+    [
+      "candidate_for",
+      "candidate-generation-interface",
+      "q-candidate-generation-factorization",
+      "interface-universal"
+    ],
+    [
+      "part_of",
+      "draft-generation-system",
+      "candidate-generation-interface",
+      "replace-vague-generator"
+    ],
+    [
+      "part_of",
+      "reachable-draft-space",
+      "draft-generation-system",
+      "generation-search-literature"
+    ],
+    [
+      "supports",
+      "generation-operator-strategy-distinction",
+      "candidate-generation-interface",
+      "space-operator-strategy"
+    ],
+    [
+      "supports",
+      "draft-formal-boundary",
+      "candidate-generation-interface",
+      "draft-not-formal"
+    ],
+    [
+      "supports",
+      "evaluation-warrant-distinction",
+      "candidate-generation-interface",
+      "evaluation-not-warrant"
+    ],
+    [
+      "part_of",
+      "evaluator-feedback",
+      "candidate-generation-interface",
+      "evaluation-not-warrant"
+    ],
+    [
+      "exemplifies",
+      "worked-factorization-trace",
+      "canonical-factorization-strategy",
+      "interface-and-trace"
+    ],
+    [
+      "related_to",
+      "factorization-interface-instance",
+      "worked-factorization-trace",
+      "factorization-strategy-instance"
+    ],
+    [
+      "supports",
+      "universal-interface-not-operators",
+      "candidate-generation-interface",
+      "operator-not-universal"
+    ],
+    [
+      "about",
+      "worked-factorization-trace",
+      "canonical-factorization-strategy",
+      "interface-and-trace"
+    ],
+    [
+      "depends_on",
+      "q-draft-generation-algebra",
+      "candidate-generation-interface",
+      "interface-and-trace"
+    ],
+    [
+      "depends_on",
+      "q-strategy-trace-executable",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "q-taxonomy",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "q-induction-abduction-blur",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "model-target-composition",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "representation-contract",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "state-delta-factorization",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "persistent-support-state",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "candidate-types-nonorthogonal",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "mmt-representation-substrate",
+      "worked-factorization-trace",
+      "interface-and-trace"
+    ],
+    [
+      "part_of",
+      "factorization-diagnostics",
+      "worked-factorization-trace",
+      "interface-and-trace"
     ]
   ],
   "moves": [
@@ -4401,6 +4615,94 @@
         "q-metareasoning-research"
       ],
       "remaining-research-request"
+    ],
+    [
+      "connect",
+      [
+        "typed-generation-open"
+      ],
+      [
+        "candidate-generation-interface"
+      ],
+      "generation-search-literature"
+    ],
+    [
+      "decompose",
+      [
+        "candidate-generation-interface"
+      ],
+      [
+        "draft-generation-system",
+        "reachable-draft-space"
+      ],
+      "replace-vague-generator"
+    ],
+    [
+      "distinguish",
+      [
+        "draft-generation-system",
+        "strategy-control-layer"
+      ],
+      [
+        "generation-operator-strategy-distinction"
+      ],
+      "space-operator-strategy"
+    ],
+    [
+      "distinguish",
+      [
+        "draft-generation-system",
+        "mmt-representation-substrate"
+      ],
+      [
+        "draft-formal-boundary"
+      ],
+      "draft-not-formal"
+    ],
+    [
+      "distinguish",
+      [
+        "candidate-generation-interface",
+        "warrant-layer"
+      ],
+      [
+        "evaluation-warrant-distinction",
+        "evaluator-feedback"
+      ],
+      "evaluation-not-warrant"
+    ],
+    [
+      "clarify",
+      [
+        "canonical-factorization-strategy"
+      ],
+      [
+        "factorization-interface-instance"
+      ],
+      "factorization-strategy-instance"
+    ],
+    [
+      "generalize",
+      [
+        "candidate-generation-interface"
+      ],
+      [
+        "universal-interface-not-operators"
+      ],
+      "operator-not-universal"
+    ],
+    [
+      "propose",
+      [
+        "canonical-factorization-strategy",
+        "candidate-generation-interface"
+      ],
+      [
+        "worked-factorization-trace",
+        "q-draft-generation-algebra",
+        "q-strategy-trace-executable"
+      ],
+      "interface-and-trace"
     ]
   ],
   "stances": [
@@ -4643,6 +4945,26 @@
       "conversation-strategy-analysis",
       "posits",
       "conversation-strategy-app"
+    ],
+    [
+      "candidate-generation-interface",
+      "posits",
+      "interface-universal"
+    ],
+    [
+      "generation-operator-strategy-distinction",
+      "posits",
+      "space-operator-strategy"
+    ],
+    [
+      "evaluation-warrant-distinction",
+      "posits",
+      "evaluation-not-warrant"
+    ],
+    [
+      "universal-interface-not-operators",
+      "posits",
+      "operator-not-universal"
     ]
   ],
   "question_updates": [
@@ -4793,6 +5115,14 @@
       [
         "reflective-self-application",
         "reflection-about-relation"
+      ]
+    ],
+    [
+      "q-candidate-generation-factorization",
+      "answered",
+      "interface-universal",
+      [
+        "candidate-generation-interface"
       ]
     ]
   ]

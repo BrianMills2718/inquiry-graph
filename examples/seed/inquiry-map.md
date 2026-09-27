@@ -173,6 +173,14 @@ flowchart TD
   n166["move: propose: Instantiate the abstract reasoning model on real conversations and identify strategy episodes and reflective relations with provenance."]
   n167["move: generalize: Conversations can serve as source-grounded datasets of instantiated reasoning trajectories and proposed strategy episodes."]
   n168["move: ask: Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"]
+  n169["move: connect: Candidate generation is best modeled by an interface separating draft/search space, construction operators, strategy, elaboration, evaluation feedback and warrant."]
+  n170["move: decompose: For reasoning episode R, a draft-generation system G_R=(D_R,d0,O_R,→_R) defines draft states, an initial draft, operators and generative transitions.; Reach(R) is the set of draft candidates reachable from d0 by finite sequences of available construction/refinement operators."]
+  n171["move: distinguish: Generative space, construction operators and search/control strategy are distinct components."]
+  n172["move: distinguish: A reachable draft may be incomplete or ill-formed and must be elaborated/checked before becoming a formal artifact."]
+  n173["move: distinguish: Verification or evaluation feedback does not automatically constitute epistemic warrant.; Evaluator feedback is a representable diagnostic such as a counterexample, violated constraint, failed proof obligation, empirical mismatch or warrant condition."]
+  n174["move: clarify: Canonical-factorization analysis is one strategy that searches a factorization-specific draft space using local operators and evaluators."]
+  n175["move: generalize: The reusable cross-domain abstraction is the candidate-generation interface, not one universal operator set."]
+  n176["move: propose: Worked trace of the founding dialogue from I/D/A partition through composition-space, representation-relative factorization, support-context refinement, candidate-type repair and strategy recognition.; What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?; Can the canonical-factorization strategy trace be represented without introducing another vague primitive?"]
   n0 -->|then| n1
   n1 -->|then| n2
   n2 -->|then| n3
@@ -346,4 +354,12 @@ flowchart TD
   n165 -->|then| n162
   n166 -->|then| n162
   n167 -->|then| n168
+  n168 -->|then| n169
+  n169 -->|then| n170
+  n170 -->|then| n171
+  n171 -->|then| n172
+  n172 -->|then| n173
+  n173 -->|then| n174
+  n174 -->|then| n175
+  n175 -->|then| n176
 ```

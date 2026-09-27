@@ -321,3 +321,40 @@ The literature check supports the object-level/meta-level distinction and strate
 The concrete application is now clearer: annotate conversations not only with atomic inquiry moves but also with proposed strategy episodes such as canonical factorization, counterexample search, literature-before-invention, goal restoration, meta-model stress testing, and reflective self-application.
 
 See [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md) for the current extension.
+
+## 21. Candidate generation became a constrained-search interface
+
+~~~mermaid
+flowchart LR
+ A[Universal creativity operators?] --> B[Compare synthesis / CEGIS / ILP / abduction]
+ B --> C[Separate draft space from operators]
+ C --> D[Separate operators from strategy]
+ D --> E[Separate formal elaboration]
+ E --> F[Separate evaluator feedback]
+ F --> G[Keep warrant separate]
+ G --> H[Reusable object is the interface]
+~~~
+
+The important change is that the project no longer assumes one universal operator basis. Different reasoning domains can instantiate different draft spaces and construction operators while sharing the same interface between generation, search/control, formal checking, evaluation feedback and warrant.
+
+## 22. Canonical factorization received a full worked trace
+
+~~~mermaid
+flowchart LR
+ A[I/D/A partition] --> B[Overlap / blur]
+ B --> C[State / parameter / structure / ontology]
+ C --> D[Joint cases break exclusivity]
+ D --> E[Composition space]
+ E --> F[Recoding breaks absolute canonicality]
+ F --> G[Representation-relative factorization]
+ G --> H[Add/delete state delta]
+ H --> I[Flat state underfactored]
+ I --> J[ATMS-style support/context split]
+ J --> K[Candidate types mix type and role]
+ K --> L[MMT/LF representation collapse]
+ L --> M[Recognize repeated repair loop as strategy]
+~~~
+
+This is the first end-to-end strategy episode reconstructed in the graph. The trace makes the recurring pattern explicit: **propose → test → diagnose factorization failure → repair → repeat**.
+
+See [candidate-generation-interface.md](candidate-generation-interface.md).
