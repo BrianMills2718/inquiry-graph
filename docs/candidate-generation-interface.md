@@ -1,6 +1,6 @@
 # Candidate-generation interface and worked trace
 
-> **Status:** current research draft. This document makes the candidate-generation split concrete without claiming a universal primitive operator set. It builds on [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md).
+> **Status:** research draft making the candidate-generation split concrete without claiming a universal primitive operator set. It builds on [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md). A subsequent pass refactors the warrant layer against this interface in [warrant-license-interface.md](warrant-license-interface.md).
 
 ## 1. Core claim
 
@@ -453,7 +453,7 @@ The current inquiry graph can already represent the worked trace with method nod
 After this concretization, the frontier is:
 
 1. **draft-generation algebra:** what domain-independent structure, if any, constrains \(\mathcal D,\mathcal O,\to\)?
-2. **warrant:** how do non-entailing candidate moves obtain conditional guarantees?
+2. **warrant:** the basic support/warrant/license/update factorization is now specified in [warrant-license-interface.md](warrant-license-interface.md); open work remains on epistemic-action types, warrant composition and graded support;
 3. **graded support:** how should \(\rho\) interact with ATMS-style minimal environments?
 4. **strategy identification:** can strategy episodes be annotated reproducibly from public reasoning traces?
 5. **strategy evaluation:** which strategies help under which tasks/resources without mistaking correlation for causation?

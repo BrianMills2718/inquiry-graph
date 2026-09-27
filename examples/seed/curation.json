@@ -203,7 +203,19 @@
     "operator-not-universal": "dialogue-2026-09-27:ex206",
     "interface-universal": "dialogue-2026-09-27:ex207",
     "interface-and-trace": "dialogue-2026-09-27:ex208",
-    "proceed-interface": "dialogue-2026-09-27:ex209"
+    "proceed-interface": "dialogue-2026-09-27:ex209",
+    "warrant-license-question": "dialogue-2026-09-27:ex210",
+    "warrant-basis-license": "dialogue-2026-09-27:ex211",
+    "warrant-target-types": "dialogue-2026-09-27:ex212",
+    "warrant-refactor": "dialogue-2026-09-27:ex213",
+    "warrant-research-request": "dialogue-2026-09-27:ex214",
+    "warrant-survives": "dialogue-2026-09-27:ex215",
+    "support-warrant-license-update": "dialogue-2026-09-27:ex216",
+    "license-not-warrant": "dialogue-2026-09-27:ex217",
+    "warrant-judgment": "dialogue-2026-09-27:ex218",
+    "scope-folded": "dialogue-2026-09-27:ex219",
+    "warrant-polymorphic-action": "dialogue-2026-09-27:ex220",
+    "defeasible-warrant": "dialogue-2026-09-27:ex221"
   },
   "nodes": [
     [
@@ -1489,6 +1501,96 @@
       "question",
       "Can the canonical-factorization strategy trace be represented without introducing another vague primitive?",
       "interface-and-trace"
+    ],
+    [
+      "q-warrant-license",
+      "question",
+      "How does the earlier warrant work relate to the revised meta-model, and is warrant the same thing as license?",
+      "warrant-license-question"
+    ],
+    [
+      "warrant-license-preliminary",
+      "hypothesis",
+      "Warrant is the structured basis for a derived license rather than a synonym for license.",
+      "warrant-basis-license"
+    ],
+    [
+      "warrant-target-preliminary",
+      "hypothesis",
+      "Candidate, transition and strategy warrants appear as distinct descriptive targets before further factorization.",
+      "warrant-target-types"
+    ],
+    [
+      "warrant-refactor-goal",
+      "goal",
+      "Refactor the existing warrant proposal against the more precise candidate-generation, strategy and epistemic-state model rather than reinventing it.",
+      "warrant-refactor"
+    ],
+    [
+      "warrant-certificate-survives",
+      "claim",
+      "The earlier assumptions/guarantee/certificate warrant shape survives the later meta-model refinements.",
+      "warrant-survives"
+    ],
+    [
+      "support-warrant-license-update-distinction",
+      "claim",
+      "Support, warrant, license and executed epistemic update are distinct stages.",
+      "support-warrant-license-update"
+    ],
+    [
+      "license-derived-status",
+      "concept",
+      "License is the context- and regime-relative status that a specified epistemic action is permitted with a stated guarantee; it is not identical to warrant.",
+      "license-not-warrant"
+    ],
+    [
+      "epistemic-action",
+      "concept",
+      "A typed epistemic action is the normalized target of warrant, e.g. derive, retain, raise support, accept, retract, use a report, or select a strategy.",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "warrant-regime",
+      "concept",
+      "A warrant regime specifies the rules, semantics and acceptance standard under which support can warrant an epistemic action.",
+      "warrant-judgment"
+    ],
+    [
+      "warrant-judgment",
+      "hypothesis",
+      "Core judgment: under warrant regime W and assumptions A, certificate pi warrants epistemic action a with guarantee G.",
+      "warrant-judgment"
+    ],
+    [
+      "scope-not-primitive",
+      "claim",
+      "Warrant scope is normally encoded in applicability assumptions and the quantified/type semantics of the guarantee rather than as a separate primitive coordinate.",
+      "scope-folded"
+    ],
+    [
+      "warrant-target-collapse",
+      "claim",
+      "Candidate, transition and strategy warrant need not be primitive warrant types; they are instances of one action-targeted warrant schema.",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "defeasible-warrant-structure",
+      "claim",
+      "Defeasible warrant requires explicit attack/defeat relations and can lose license when new defeating information arrives.",
+      "defeasible-warrant"
+    ],
+    [
+      "q-epistemic-action-types",
+      "question",
+      "What is the minimal type system for epistemic actions that can be targets of warrant?",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "q-warrant-composition",
+      "question",
+      "How should multiple independent, conflicting or defeasible warrants combine?",
+      "defeasible-warrant"
     ]
   ],
   "relations": [
@@ -2889,6 +2991,108 @@
       "factorization-diagnostics",
       "worked-factorization-trace",
       "interface-and-trace"
+    ],
+    [
+      "answers",
+      "warrant-license-preliminary",
+      "q-warrant-license",
+      "warrant-basis-license"
+    ],
+    [
+      "motivates",
+      "q-warrant-license",
+      "warrant-refactor-goal",
+      "warrant-license-question"
+    ],
+    [
+      "motivates",
+      "warrant-certificate-survives",
+      "warrant-refactor-goal",
+      "warrant-survives"
+    ],
+    [
+      "distinguishes",
+      "support-warrant-license-update-distinction",
+      "warrant-license-preliminary",
+      "support-warrant-license-update"
+    ],
+    [
+      "part_of",
+      "license-derived-status",
+      "support-warrant-license-update-distinction",
+      "license-not-warrant"
+    ],
+    [
+      "part_of",
+      "epistemic-action",
+      "warrant-judgment",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "part_of",
+      "warrant-regime",
+      "warrant-judgment",
+      "warrant-judgment"
+    ],
+    [
+      "candidate_for",
+      "warrant-judgment",
+      "q-warrant",
+      "warrant-judgment"
+    ],
+    [
+      "supports",
+      "scope-not-primitive",
+      "warrant-judgment",
+      "scope-folded"
+    ],
+    [
+      "supports",
+      "warrant-target-collapse",
+      "warrant-judgment",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "challenges",
+      "warrant-target-collapse",
+      "warrant-target-preliminary",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "supports",
+      "defeasible-warrant-structure",
+      "warrant-judgment",
+      "defeasible-warrant"
+    ],
+    [
+      "depends_on",
+      "q-epistemic-action-types",
+      "epistemic-action",
+      "warrant-polymorphic-action"
+    ],
+    [
+      "depends_on",
+      "q-warrant-composition",
+      "defeasible-warrant-structure",
+      "defeasible-warrant"
+    ],
+    [
+      "related_to",
+      "warrant-judgment",
+      "candidate-generation-interface",
+      "warrant-judgment"
+    ],
+    [
+      "related_to",
+      "warrant-judgment",
+      "persistent-support-state",
+      "warrant-judgment"
+    ],
+    [
+      "related_to",
+      "warrant-judgment",
+      "strategy-control-layer",
+      "warrant-judgment"
     ]
   ],
   "moves": [
@@ -4703,6 +4907,95 @@
         "q-strategy-trace-executable"
       ],
       "interface-and-trace"
+    ],
+    [
+      "ask",
+      [
+        "warrant-layer",
+        "current-meta-model"
+      ],
+      [
+        "q-warrant-license"
+      ],
+      "warrant-license-question"
+    ],
+    [
+      "clarify",
+      [
+        "q-warrant-license"
+      ],
+      [
+        "warrant-license-preliminary",
+        "warrant-target-preliminary"
+      ],
+      "warrant-basis-license"
+    ],
+    [
+      "scope",
+      [
+        "q-warrant-license"
+      ],
+      [
+        "warrant-refactor-goal"
+      ],
+      "warrant-refactor"
+    ],
+    [
+      "clarify",
+      [
+        "warrant-certificate"
+      ],
+      [
+        "warrant-certificate-survives"
+      ],
+      "warrant-survives"
+    ],
+    [
+      "distinguish",
+      [
+        "warrant-license-preliminary"
+      ],
+      [
+        "support-warrant-license-update-distinction",
+        "license-derived-status"
+      ],
+      "support-warrant-license-update"
+    ],
+    [
+      "propose",
+      [
+        "warrant-certificate-survives",
+        "support-warrant-license-update-distinction"
+      ],
+      [
+        "epistemic-action",
+        "warrant-regime",
+        "warrant-judgment"
+      ],
+      "warrant-judgment"
+    ],
+    [
+      "decompose",
+      [
+        "warrant-judgment"
+      ],
+      [
+        "scope-not-primitive",
+        "warrant-target-collapse"
+      ],
+      "scope-folded"
+    ],
+    [
+      "connect",
+      [
+        "warrant-judgment"
+      ],
+      [
+        "defeasible-warrant-structure",
+        "q-epistemic-action-types",
+        "q-warrant-composition"
+      ],
+      "defeasible-warrant"
     ]
   ],
   "stances": [
@@ -4965,6 +5258,36 @@
       "universal-interface-not-operators",
       "posits",
       "operator-not-universal"
+    ],
+    [
+      "q-warrant-license",
+      "questions",
+      "warrant-license-question"
+    ],
+    [
+      "warrant-license-preliminary",
+      "posits",
+      "warrant-basis-license"
+    ],
+    [
+      "warrant-refactor-goal",
+      "posits",
+      "warrant-refactor"
+    ],
+    [
+      "support-warrant-license-update-distinction",
+      "posits",
+      "support-warrant-license-update"
+    ],
+    [
+      "warrant-judgment",
+      "posits",
+      "warrant-judgment"
+    ],
+    [
+      "warrant-target-collapse",
+      "posits",
+      "warrant-polymorphic-action"
     ]
   ],
   "question_updates": [
@@ -5123,6 +5446,24 @@
       "interface-universal",
       [
         "candidate-generation-interface"
+      ]
+    ],
+    [
+      "q-warrant-license",
+      "answered",
+      "warrant-judgment",
+      [
+        "warrant-judgment",
+        "license-derived-status",
+        "support-warrant-license-update-distinction"
+      ]
+    ],
+    [
+      "q-warrant",
+      "answered",
+      "warrant-judgment",
+      [
+        "warrant-judgment"
       ]
     ]
   ]

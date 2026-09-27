@@ -2,7 +2,7 @@
   "id": "dialogue-2026-09-27",
   "title": "From inference taxonomy to a persistent inquiry graph",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace.",
+  "coverage_note": "Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace. Continuation excerpts ex210–ex221 capture the warrant/license clarification and the post-research refactoring of warrant around support, epistemic action, license, guarantee and defeasible defeat.",
   "participants": [
     {
       "id": "participant:brian",
@@ -1669,6 +1669,102 @@
       "actor_id": "participant:brian",
       "ordinal": 207,
       "text": "I approve proceed",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex210",
+      "actor_id": "participant:brian",
+      "ordinal": 208,
+      "text": "I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex211",
+      "actor_id": "participant:assistant",
+      "ordinal": 209,
+      "text": "warrant = the structured basis for a license",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex212",
+      "actor_id": "participant:assistant",
+      "ordinal": 210,
+      "text": "candidate warrant != transition warrant != strategy warrant.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex213",
+      "actor_id": "participant:assistant",
+      "ordinal": 211,
+      "text": "the meta-model changed enough that warrant should now be **refactored**, not reinvented.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex214",
+      "actor_id": "participant:brian",
+      "ordinal": 212,
+      "text": "Okay, proceed. And do any research that's necessary or helpful.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex215",
+      "actor_id": "participant:assistant",
+      "ordinal": 213,
+      "text": "The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex216",
+      "actor_id": "participant:assistant",
+      "ordinal": 214,
+      "text": "support != warrant != license != update.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex217",
+      "actor_id": "participant:assistant",
+      "ordinal": 215,
+      "text": "License is not a synonym for warrant.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex218",
+      "actor_id": "participant:assistant",
+      "ordinal": 216,
+      "text": "W; A ⊢_π a : G",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex219",
+      "actor_id": "participant:assistant",
+      "ordinal": 217,
+      "text": "scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex220",
+      "actor_id": "participant:assistant",
+      "ordinal": 218,
+      "text": "candidate, transition, and strategy warrant become instances of one polymorphic action-targeted schema.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-27:ex221",
+      "actor_id": "participant:assistant",
+      "ordinal": 219,
+      "text": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic.",
       "original_id": null,
       "timestamp": null
     }

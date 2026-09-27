@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 207, "nodes": 214, "relations": 233, "moves": 177, "stance_events": 52, "question_events": 71, "questions": 51, "review": {"proposed": 747, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 219, "nodes": 229, "relations": 250, "moves": 185, "stance_events": 58, "question_events": 76, "questions": 54, "review": {"proposed": 798, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace. Continuation excerpts ex210–ex221 capture the warrant/license clarification and the post-research refactoring of warrant around support, epistemic action, license, guarantee and defeasible defeat.
 
 ## Open agenda
 
@@ -56,6 +56,10 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### Which beyond-observation inferences can an embedded observer make?
 `dialogue-2026-09-27:n:q-empirical` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What is the minimal type system for epistemic actions that can be targets of warrant?
+`dialogue-2026-09-27:n:q-epistemic-action-types` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### Can exhaustiveness of the proposed inference taxonomy be proved?
@@ -259,7 +263,23 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What warrants the standards by which an inference is warranted?
+`dialogue-2026-09-27:n:q-warrant` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What warrants the standards by which an inference is warranted?
 `dialogue-2026-09-27:n:q-warrant` · reopened · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### How should multiple independent, conflicting or defeasible warrants combine?
+`dialogue-2026-09-27:n:q-warrant-composition` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How does the earlier warrant work relate to the revised meta-model, and is warrant the same thing as license?
+`dialogue-2026-09-27:n:q-warrant-license` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How does the earlier warrant work relate to the revised meta-model, and is warrant the same thing as license?
+`dialogue-2026-09-27:n:q-warrant-license` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What minimal warrant postulates and representation theorems should govern non-entailing commitment changes?
@@ -1337,3 +1357,51 @@ Inputs: dialogue-2026-09-27:n:canonical-factorization-strategy, dialogue-2026-09
 Outputs: dialogue-2026-09-27:n:worked-factorization-trace, dialogue-2026-09-27:n:q-draft-generation-algebra, dialogue-2026-09-27:n:q-strategy-trace-executable
 
 > I would now use this as the **candidate-generation interface** in the meta-model and annotate our conversation with one complete worked strategy trace
+
+**ask** · `dialogue-2026-09-27:m:178` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-layer, dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:q-warrant-license
+
+> I thought we kind of started on warrant. Is it that because like our meta model has changed? Now we need to revisit it? Or is like, is warrant the same as license?
+
+**clarify** · `dialogue-2026-09-27:m:179` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-warrant-license
+Outputs: dialogue-2026-09-27:n:warrant-license-preliminary, dialogue-2026-09-27:n:warrant-target-preliminary
+
+> warrant = the structured basis for a license
+
+**scope** · `dialogue-2026-09-27:m:180` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-warrant-license
+Outputs: dialogue-2026-09-27:n:warrant-refactor-goal
+
+> the meta-model changed enough that warrant should now be **refactored**, not reinvented.
+
+**clarify** · `dialogue-2026-09-27:m:181` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-certificate
+Outputs: dialogue-2026-09-27:n:warrant-certificate-survives
+
+> The earlier warrant certificate survives, but it was underfactored in one place and overfactored in another.
+
+**distinguish** · `dialogue-2026-09-27:m:182` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-license-preliminary
+Outputs: dialogue-2026-09-27:n:support-warrant-license-update-distinction, dialogue-2026-09-27:n:license-derived-status
+
+> support != warrant != license != update.
+
+**propose** · `dialogue-2026-09-27:m:183` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-certificate-survives, dialogue-2026-09-27:n:support-warrant-license-update-distinction
+Outputs: dialogue-2026-09-27:n:epistemic-action, dialogue-2026-09-27:n:warrant-regime, dialogue-2026-09-27:n:warrant-judgment
+
+> W; A ⊢_π a : G
+
+**decompose** · `dialogue-2026-09-27:m:184` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-judgment
+Outputs: dialogue-2026-09-27:n:scope-not-primitive, dialogue-2026-09-27:n:warrant-target-collapse
+
+> scope is normally represented inside the assumptions and guarantee semantics rather than as a separate primitive.
+
+**connect** · `dialogue-2026-09-27:m:185` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-judgment
+Outputs: dialogue-2026-09-27:n:defeasible-warrant-structure, dialogue-2026-09-27:n:q-epistemic-action-types, dialogue-2026-09-27:n:q-warrant-composition
+
+> Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic.

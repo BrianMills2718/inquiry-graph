@@ -8,7 +8,7 @@ This is a small local-first toolkit, not a deployed application or a learned rea
 
 ## V1.1: source reconciliation and review
 
-Import Brian's full export and reconcile the 207 curated excerpts against actual message IDs/branches. Add an explicit reviewer/annotation-decision log and a focused review UI. Evaluate false closure and actor attribution first. Add extraction-quality fixtures independent of the founding discussion.
+Import Brian's full export and reconcile the 219 curated excerpts against actual message IDs/branches. Add an explicit reviewer/annotation-decision log and a focused review UI. Evaluate false closure and actor attribution first. Add extraction-quality fixtures independent of the founding discussion.
 
 ## V1.2: cross-conversation identity and incremental updates
 
@@ -20,4 +20,4 @@ Add a local graph canvas with filters for actor, topic, status and interpretatio
 
 ## Research track, separate from product delivery
 
-Evaluate extraction fidelity, inquiry-navigation usefulness, higher-level strategy-episode annotation, and eventually policies over reasoning moves/strategies under held-out tasks and controlled budgets. Investigate links to AIF/IAT, IBIS, provenance, belief revision, metareasoning and discourse models without claiming a unique new universal ontology. Before adding a dedicated StrategyEpisode schema, test whether grounded example episodes plus method strategies, part-of links and the new about relation are sufficient for annotation/review. Do not let answering every foundational philosophy question become a release prerequisite for a useful representation tool.
+Evaluate extraction fidelity, inquiry-navigation usefulness, higher-level strategy-episode annotation, and eventually policies over reasoning moves/strategies under held-out tasks and controlled budgets. Investigate links to AIF/IAT, IBIS, provenance, belief revision, metareasoning, explicit justification, structured argumentation, assume-guarantee reasoning and discourse models without claiming a unique new universal ontology. Prototype warrant judgments and graded-support composition only after their semantics are clear enough to avoid collapsing distinct guarantees into one score. Before adding a dedicated StrategyEpisode schema, test whether grounded example episodes plus method strategies, part-of links and the new about relation are sufficient for annotation/review. Do not let answering every foundational philosophy question become a release prerequisite for a useful representation tool.

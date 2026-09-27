@@ -358,3 +358,45 @@ flowchart LR
 This is the first end-to-end strategy episode reconstructed in the graph. The trace makes the recurring pattern explicit: **propose → test → diagnose factorization failure → repair → repeat**.
 
 See [candidate-generation-interface.md](candidate-generation-interface.md).
+
+## 23. Warrant returned after its target had been clarified
+
+~~~mermaid
+flowchart LR
+ A[Earlier warrant certificate A,G,pi] --> B[Meta-model becomes more explicit]
+ B --> C[Draft generation]
+ B --> D[Formal elaboration]
+ B --> E[Evaluation/support]
+ B --> F[Epistemic update]
+ B --> G[Strategy selection]
+ C --> H[What exactly is warrant licensing?]
+ D --> H
+ E --> H
+ F --> H
+ G --> H
+~~~
+
+The user correctly noticed that warrant had already been discussed. The later work did not invalidate it; it exposed that the old target variable was underfactored.
+
+## 24. Support, warrant, license and update split apart
+
+~~~mermaid
+flowchart LR
+ A[Reasons / support] --> B[Warrant regime checks adequacy]
+ B --> C[License for typed epistemic action]
+ C --> D[Optional executed update]
+ E[Assumptions A] --> B
+ F[Certificate pi] --> B
+ G[Typed guarantee G] --> B
+ H[Defeater / attack] --> B
+~~~
+
+The current warrant judgment is:
+
+\[
+\mathfrak W;A\vdash_{\pi}a:G.
+\]
+
+This also repairs the earlier candidate/transition/strategy warrant list: those become instances of a common action-targeted schema rather than separate primitive warrant types. “License” is now an operational derived status, not a synonym for warrant.
+
+See [warrant-license-interface.md](warrant-license-interface.md).
