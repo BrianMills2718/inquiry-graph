@@ -1,6 +1,6 @@
 # Assumption-context meta-model — current research endpoint
 
-> **Status:** research draft derived from the visible 2026-09-27 dialogue and a targeted literature check. It refines, rather than erases, the earlier state-delta model in [epistemic-transition-calculus.md](epistemic-transition-calculus.md). It is not an established universal theory of cognition or warrant.
+> **Status:** research draft preserving the assumption-context stage of the 2026-09-27 inquiry. It refines, rather than erases, the earlier state-delta model in [epistemic-transition-calculus.md](epistemic-transition-calculus.md). A later extension now adds an MMT-like formal representation substrate, a strategy/control layer, and relational reflection; see [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md). It is not an established universal theory of cognition or warrant.
 
 ## 1. Why this revision was needed
 
@@ -446,11 +446,21 @@ Primary reference: Johan de Kleer, “An assumption-based TMS,” *Artificial In
 
 The project does not claim to implement either formalism in full.
 
-## 14. Parked but relevant
+## 14. Subsequent representation-layer refinement
 
-**Theory graphs / theory morphisms** remain relevant if the system later needs a modular network of theories with explicit imports and knowledge transport. They are not currently required as an additional foundational layer because institution theory already supplies the needed abstraction for language/model translations.
+The next research pass found that an MMT-like theory graph can probably supply the concrete formal representation/module layer rather than building one from scratch. In that view, theories, declarations, objects and morphisms provide a compact artifact basis; LF can be represented as one possible foundation inside the module system. Institution theory remains a semantic lens rather than necessarily a separate implementation layer.
 
-## 15. Current endpoint
+That pass also introduced an explicit boundary between **draft candidate generation** and **formal elaboration/checking**:
+
+$$
+g(R)\to d
+\quad\xrightarrow{\operatorname{Elab}_{\mathcal F}}\quad
+c\in\mathcal F\;\text{or}\;\bot.
+$$
+
+Well-formedness is deliberately distinct from epistemic warrant. See [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md).
+
+## 15. Endpoint of the assumption-context stage
 
 The current architecture is:
 

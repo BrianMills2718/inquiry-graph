@@ -34,13 +34,21 @@ Measure whether a user can find an unresolved dependency, recover a correction, 
 
 Privacy constraints should be evaluated alongside utility. A false belief attribution in a personal worldview tool may matter more than a missing peripheral concept. Keep user review and deletion/export controls on the roadmap before broader deployment.
 
-## Stage C: learning policies over reasoning moves
+## Stage C: strategy-episode annotation
 
-Only after reliable representation, compare policies over inquiry operations. Define task families with independently checkable outcomes, budgets and permissible actions. A policy can choose to seek a counterexample, inspect an assumption, clarify a term, test a prediction or decompose a question. Graph annotations are observations of expressed behavior, not privileged access to computation.
+Before learning policies, evaluate whether humans can reliably identify reusable reasoning strategies from grounded move sequences. Annotate strategy schema, episode boundaries, target (`about` relation), nested episodes and confidence/review status. Compare agreement on atomic moves with agreement on higher-level strategies; strategy segmentation is expected to be harder and may admit multiple defensible granularities.
 
-Use randomized intervention studies or controlled ablations where feasible. Correlation between a move and success is not proof the move caused success: difficult problems may provoke more reframing and more failures. Control for task difficulty, model, token/tool budget and access to evidence. Hold out entire task families for transfer evaluation.
+Candidate strategies in the founding dialogue include canonical factorization, counterexample search, literature-before-invention, meta-model stress testing, goal restoration and reflective self-application. These labels are hypotheses to validate, not a complete strategy ontology.
 
-Outcomes may include answer correctness, calibration, error discovery, robustness to perturbed premises, evidence quality, and total cost. Do not optimize a persuasion or aesthetic-preference score as a surrogate for epistemic reliability. No universal “best thinking sequence” is assumed; conditional policies are the target.
+Important error classes include hallucinating a private strategy from surface similarity, collapsing an isolated move into a full multi-step strategy, missing nested/meta episodes, and treating the same strategy name as intrinsically meta-level instead of relative to its target.
+
+## Stage D: learning policies over reasoning moves and strategies
+
+Only after reliable representation, compare policies over inquiry operations and strategy selection. Define task families with independently checkable outcomes, budgets and permissible actions. A policy can choose to seek a counterexample, inspect an assumption, clarify a term, test a prediction, decompose a question, activate a factorization strategy, or switch strategies. Graph annotations are observations of expressed behavior, not privileged access to computation.
+
+Use randomized intervention studies or controlled ablations where feasible. Correlation between a move or strategy and success is not proof it caused success: difficult problems may provoke more reframing, reflection and failures. Control for task difficulty, model, token/tool budget and access to evidence. Hold out entire task families for transfer evaluation.
+
+Outcomes may include answer correctness, calibration, error discovery, robustness to perturbed premises, evidence quality, strategy-switch efficiency and total cost. Rational-metareasoning objectives such as value of computation are candidate evaluation models, not foundational assumptions. Do not optimize a persuasion or aesthetic-preference score as a surrogate for epistemic reliability. No universal “best thinking sequence” is assumed; conditional policies are the target.
 
 ## Release evidence
 

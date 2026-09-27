@@ -1549,10 +1549,10 @@
       "id": "dialogue-2026-09-27:n:representation-contract",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -1564,10 +1564,10 @@
       "id": "dialogue-2026-09-27:n:q-canonical-transition",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -1594,10 +1594,10 @@
       "id": "dialogue-2026-09-27:n:canonical-factorization",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -1879,10 +1879,10 @@
       "id": "dialogue-2026-09-27:n:q-self-application",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex128",
+          "message_id": "dialogue-2026-09-27:ex196",
           "start": 0,
-          "end": 91,
-          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
         }
       ],
       "origin": "inferred",
@@ -2534,6 +2534,501 @@
       "review_status": "proposed",
       "kind": "claim",
       "text": "Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-next-after-context",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex173",
+          "start": 0,
+          "end": 10,
+          "quote": "What next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What should be attacked next after the assumption-context refinement?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:typed-generation-program",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex174",
+          "start": 0,
+          "end": 26,
+          "quote": "typed candidate generation"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Make typed candidate generation concrete using the conversation as a test corpus."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-typing-test",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex175",
+          "start": 0,
+          "end": 129,
+          "quote": "Can every candidate-generation move in our test corpus be assigned a unique output type and a compositional operator description?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Test whether each observed candidate-generation move has a clear artifact footprint and compositional operator description."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-types-nonorthogonal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex177",
+          "start": 0,
+          "end": 66,
+          "quote": "the seven candidate types I proposed were not actually orthogonal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The earlier seven candidate types were not orthogonal; some mixed artifact kinds with epistemic roles."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:assumption-role-not-type",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex178",
+          "start": 0,
+          "end": 97,
+          "quote": "assumption is usually a **role** played by some sentence/theory, not a separate ontological type."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Assumption is normally a role played by a sentence or theory rather than a base formal artifact type."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-footprint",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex179",
+          "start": 0,
+          "end": 56,
+          "quote": "the **footprint hypothesis survives** surprisingly well."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A generated candidate can have a compositional footprint spanning several formal artifact kinds rather than exactly one exclusive type."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:formal-syntax-module-gap",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex180",
+          "start": 0,
+          "end": 79,
+          "quote": "we need an explicit formal-syntax/module layer, not just institution semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Institution semantics alone does not provide the concrete syntax/module layer needed to construct and transform formal artifacts."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:mmt-ref",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex182",
+          "start": 0,
+          "end": 82,
+          "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "MMT as a foundation-independent theory/declaration/object/morphism representation and module system."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:mmt-representation-substrate",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex182",
+          "start": 0,
+          "end": 82,
+          "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Use an MMT-like theory graph as the concrete formal representation substrate, with LF as a possible foundation inside it."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:formal-elaboration",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex183",
+          "start": 0,
+          "end": 74,
+          "quote": "MMT/LF can establish well-formedness, typing and deductive proof validity."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Elaboration/checking maps a draft candidate to a well-formed formal artifact or failure."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:wellformed-not-warranted",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex184",
+          "start": 0,
+          "end": 157,
+          "quote": "They do not tell us whether inventing Z, choosing one causal model, extrapolating a regularity, or trusting some research source was epistemically warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Formal well-formedness, typing or deductive validity does not establish epistemic warrant for generating or accepting a candidate."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-factorization-term",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex185",
+          "start": 0,
+          "end": 39,
+          "quote": "I'm wondering what the term for this is"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:factorization-thinking-preference",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Repeated detection of over- and underfactoring is a core recurring reasoning pattern in this inquiry."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:mece-special-case",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex187",
+          "start": 0,
+          "end": 75,
+          "quote": "MECE is only one special case of the broader thing you actually care about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "MECE is a special case of the broader search for a complete nonredundant compositional factorization."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:canonical-factorization-strategy",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Canonical/primitive factorization: propose factors, test completeness/redundancy/independence/compositionality/canonicality, diagnose failures, and revise."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:factorization-diagnostics",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex189",
+          "start": 0,
+          "end": 41,
+          "quote": "underfactored, overfactored, misfactored."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Underfactored, overfactored and misfactored are diagnostics for revising a proposed primitive decomposition."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-strategy-placement",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex190",
+          "start": 0,
+          "end": 120,
+          "quote": "what would this concept of canonical factorization as a kind of cognitive strategy, where would that live in our system?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Where does canonical factorization live when treated as a reusable cognitive strategy?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:strategy-control-layer",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A strategy/control layer selects and sequences lower-level reasoning operators; strategy is distinct from primitive operator and candidate artifact."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:metastrategy-relative",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex192",
+          "start": 0,
+          "end": 31,
+          "quote": "meta-strategy / inquiry control"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Meta-strategy is not a separate infinite type hierarchy; a strategy is meta-level relative to reasoning processes or strategies it monitors or controls."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-reflective-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How should repeated self-application of the developing reasoning model be represented?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reflective-self-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex195",
+          "start": 0,
+          "end": 38,
+          "quote": "reflective / self-applicative modeling"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Reflective/self-applicative modeling uses the reasoning model to analyze the reasoning process that is constructing the model."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reflection-about-relation",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex196",
+          "start": 0,
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Meta-level status is relational: a reasoning episode is meta with respect to the reasoning artifact, strategy or episode it is about."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:closure-under-self-description",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex197",
+          "start": 0,
+          "end": 30,
+          "quote": "closure under self-description"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Reasoning episodes, strategies and the meta-model should be representable targets, giving closure under self-description."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-conversation-strategy-identification",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:conversation-strategy-analysis",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Instantiate the abstract reasoning model on real conversations and identify strategy episodes and reflective relations with provenance."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:reasoning-trajectory-dataset",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex198",
+          "start": 0,
+          "end": 69,
+          "quote": "conversations become datasets of instantiated reasoning trajectories."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Conversations can serve as source-grounded datasets of instantiated reasoning trajectories and proposed strategy episodes."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:episode-factorization-loop",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "example",
+      "text": "This dialogue repeatedly split, merged and retyped candidate primitives after detecting over-, under- or misfactoring."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:episode-self-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "example",
+      "text": "This dialogue explicitly turned the developing meta-model back onto the process used to construct that same meta-model."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:literature-before-invention-strategy",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex077",
+          "start": 0,
+          "end": 107,
+          "quote": "Oh yeah, I see like we're trying to recreate the wheel here and this has to be while it's trodden territory"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "When the problem appears well trodden, search existing formal literature before inventing new primitives."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:meta-model-stress-strategy",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex140",
+          "start": 0,
+          "end": 65,
+          "quote": "Use concept-generation theory as a stress test of the meta-model."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Force proposed external formalisms through the current meta-model and treat mismatches as evidence of a gap or bad factorization."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:goal-restoration-strategy",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex093",
+          "start": 0,
+          "end": 122,
+          "quote": "we need to step back because I think our original question is like, how do you formalize the warrant of warrant basically?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "When inquiry drifts into downstream implementation or optimization, return explicitly to the original unresolved question."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:counterexample-strategy",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex003",
+          "start": 0,
+          "end": 370,
+          "quote": "Okay, give me a concrete example of something you can learn. Through imagination that is not just a type of induction, deduction or abduction and My intuition here is that this is basically just gonna be That-That it's going to come down to when you define imagination as an observation of perceptual states or something like that, that this distinction really goes away"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Test proposed exhaustive or primitive distinctions by constructing concrete counterexamples and edge cases."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-metareasoning-research",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex199",
+          "start": 0,
+          "end": 64,
+          "quote": "Ok I assume we should do any remaining work/research around that"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"
     }
   ],
   "relations": [
@@ -5133,10 +5628,10 @@
       "id": "dialogue-2026-09-27:r:109",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -5181,10 +5676,10 @@
       "id": "dialogue-2026-09-27:r:111",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -6806,6 +7301,798 @@
         {
           "role": "target",
           "ref": "dialogue-2026-09-27:n:q-warrant-postulates"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:179",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex174",
+          "start": 0,
+          "end": 26,
+          "quote": "typed candidate generation"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:typed-generation-program"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-next-after-context"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:180",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex175",
+          "start": 0,
+          "end": 129,
+          "quote": "Can every candidate-generation move in our test corpus be assigned a unique output type and a compositional operator description?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:candidate-typing-test"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:typed-generation-program"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:181",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex177",
+          "start": 0,
+          "end": 66,
+          "quote": "the seven candidate types I proposed were not actually orthogonal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:candidate-types-nonorthogonal"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:typed-candidate-space"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:182",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex178",
+          "start": 0,
+          "end": 97,
+          "quote": "assumption is usually a **role** played by some sentence/theory, not a separate ontological type."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "dialogue-2026-09-27:n:assumption-role-not-type"
+        },
+        {
+          "role": "right",
+          "ref": "dialogue-2026-09-27:n:typed-candidate-space"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:183",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex179",
+          "start": 0,
+          "end": 56,
+          "quote": "the **footprint hypothesis survives** surprisingly well."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:candidate-footprint"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-candidate-type-system"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:184",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex180",
+          "start": 0,
+          "end": 79,
+          "quote": "we need an explicit formal-syntax/module layer, not just institution semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-27:n:formal-syntax-module-gap"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:institution-substrate"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:185",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex182",
+          "start": 0,
+          "end": 82,
+          "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:mmt-ref"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-candidate-type-system"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:186",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex182",
+          "start": 0,
+          "end": 82,
+          "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:mmt-representation-substrate"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-meta-model-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:187",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex183",
+          "start": 0,
+          "end": 74,
+          "quote": "MMT/LF can establish well-formedness, typing and deductive proof validity."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:formal-elaboration"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:mmt-representation-substrate"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:188",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex184",
+          "start": 0,
+          "end": 157,
+          "quote": "They do not tell us whether inventing Z, choosing one causal model, extrapolating a regularity, or trusting some research source was epistemically warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "dialogue-2026-09-27:n:wellformed-not-warranted"
+        },
+        {
+          "role": "right",
+          "ref": "dialogue-2026-09-27:n:formal-elaboration"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:189",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex187",
+          "start": 0,
+          "end": 75,
+          "quote": "MECE is only one special case of the broader thing you actually care about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:mece-special-case"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-factorization-term"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:190",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-27:n:q-factorization-term"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:191",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex189",
+          "start": 0,
+          "end": 41,
+          "quote": "underfactored, overfactored, misfactored."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:factorization-diagnostics"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:192",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:strategy-control-layer"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-strategy-placement"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:193",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:strategy-control-layer"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:194",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex192",
+          "start": 0,
+          "end": 31,
+          "quote": "meta-strategy / inquiry control"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:metastrategy-relative"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:strategy-control-layer"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:195",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex195",
+          "start": 0,
+          "end": 38,
+          "quote": "reflective / self-applicative modeling"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "dialogue-2026-09-27:n:reflective-self-application"
+        },
+        {
+          "role": "question",
+          "ref": "dialogue-2026-09-27:n:q-reflective-application"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:196",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex196",
+          "start": 0,
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:reflection-about-relation"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:reflective-self-application"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:197",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex197",
+          "start": 0,
+          "end": 30,
+          "quote": "closure under self-description"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-27:n:closure-under-self-description"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-27:n:reflection-about-relation"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:198",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:q-conversation-strategy-identification"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:conversation-strategy-analysis"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:199",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex198",
+          "start": 0,
+          "end": 69,
+          "quote": "conversations become datasets of instantiated reasoning trajectories."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-27:n:reasoning-trajectory-dataset"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-27:n:conversation-strategy-analysis"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:200",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "exemplifies",
+      "bindings": [
+        {
+          "role": "example",
+          "ref": "dialogue-2026-09-27:n:episode-factorization-loop"
+        },
+        {
+          "role": "general",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:201",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "exemplifies",
+      "bindings": [
+        {
+          "role": "example",
+          "ref": "dialogue-2026-09-27:n:episode-self-application"
+        },
+        {
+          "role": "general",
+          "ref": "dialogue-2026-09-27:n:reflective-self-application"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:202",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "about",
+      "bindings": [
+        {
+          "role": "subject",
+          "ref": "dialogue-2026-09-27:n:episode-factorization-loop"
+        },
+        {
+          "role": "object",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:203",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "about",
+      "bindings": [
+        {
+          "role": "subject",
+          "ref": "dialogue-2026-09-27:n:episode-self-application"
+        },
+        {
+          "role": "object",
+          "ref": "dialogue-2026-09-27:n:current-meta-model"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:204",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex077",
+          "start": 0,
+          "end": 107,
+          "quote": "Oh yeah, I see like we're trying to recreate the wheel here and this has to be while it's trodden territory"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:literature-before-invention-strategy"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:reuse-literature"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:205",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex140",
+          "start": 0,
+          "end": 65,
+          "quote": "Use concept-generation theory as a stress test of the meta-model."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:meta-model-stress-strategy"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:meta-model-stress-test"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:206",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex093",
+          "start": 0,
+          "end": 122,
+          "quote": "we need to step back because I think our original question is like, how do you formalize the warrant of warrant basically?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:goal-restoration-strategy"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:q-warrant-return"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:207",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex003",
+          "start": 0,
+          "end": 370,
+          "quote": "Okay, give me a concrete example of something you can learn. Through imagination that is not just a type of induction, deduction or abduction and My intuition here is that this is basically just gonna be That-That it's going to come down to when you define imagination as an observation of perceptual states or something like that, that this distinction really goes away"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-27:n:counterexample-strategy"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-27:n:q-exhaustive"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:208",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:canonical-factorization-strategy"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:conversation-strategy-analysis"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:209",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-27:n:reflective-self-application"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-27:n:conversation-strategy-analysis"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:210",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex199",
+          "start": 0,
+          "end": 64,
+          "quote": "Ok I assume we should do any remaining work/research around that"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-metareasoning-research"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:strategy-control-layer"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-27:r:211",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex199",
+          "start": 0,
+          "end": 64,
+          "quote": "Ok I assume we should do any remaining work/research around that"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-27:n:q-metareasoning-research"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-27:n:reflection-about-relation"
         }
       ]
     }
@@ -9214,32 +10501,6 @@
       "inference_family": "unspecified"
     },
     {
-      "id": "dialogue-2026-09-27:m:093",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex113",
-          "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "kind": "propose",
-      "actor_id": "participant:assistant",
-      "input_ids": [
-        "dialogue-2026-09-27:n:mece-property"
-      ],
-      "output_ids": [
-        "dialogue-2026-09-27:n:canonical-factorization"
-      ],
-      "at_message_id": "dialogue-2026-09-27:ex113",
-      "after_move_ids": [
-        "dialogue-2026-09-27:m:092"
-      ],
-      "inference_family": "unspecified"
-    },
-    {
       "id": "dialogue-2026-09-27:m:094",
       "anchors": [
         {
@@ -9261,7 +10522,7 @@
       ],
       "at_message_id": "dialogue-2026-09-27:ex114",
       "after_move_ids": [
-        "dialogue-2026-09-27:m:093"
+        "dialogue-2026-09-27:m:092"
       ],
       "inference_family": "unspecified"
     },
@@ -9561,32 +10822,6 @@
       "inference_family": "unspecified"
     },
     {
-      "id": "dialogue-2026-09-27:m:106",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex128",
-          "start": 0,
-          "end": 91,
-          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "kind": "ask",
-      "actor_id": "participant:brian",
-      "input_ids": [
-        "dialogue-2026-09-27:n:current-endpoint"
-      ],
-      "output_ids": [
-        "dialogue-2026-09-27:n:q-self-application"
-      ],
-      "at_message_id": "dialogue-2026-09-27:ex128",
-      "after_move_ids": [
-        "dialogue-2026-09-27:m:105"
-      ],
-      "inference_family": "unspecified"
-    },
-    {
       "id": "dialogue-2026-09-27:m:107",
       "anchors": [
         {
@@ -9608,7 +10843,7 @@
       ],
       "at_message_id": "dialogue-2026-09-27:ex129",
       "after_move_ids": [
-        "dialogue-2026-09-27:m:106"
+        "dialogue-2026-09-27:m:105"
       ],
       "inference_family": "unspecified"
     },
@@ -10560,6 +11795,739 @@
         "dialogue-2026-09-27:m:142"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:144",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex173",
+          "start": 0,
+          "end": 10,
+          "quote": "What next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-next-after-context"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex173",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:143"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:145",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex174",
+          "start": 0,
+          "end": 26,
+          "quote": "typed candidate generation"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-next-after-context"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:typed-generation-program"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex174",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:144"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:146",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex175",
+          "start": 0,
+          "end": 129,
+          "quote": "Can every candidate-generation move in our test corpus be assigned a unique output type and a compositional operator description?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-generation-program"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-typing-test"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex175",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:145"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:147",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex177",
+          "start": 0,
+          "end": 66,
+          "quote": "the seven candidate types I proposed were not actually orthogonal."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-candidate-space"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-types-nonorthogonal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex177",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:146"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:148",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex178",
+          "start": 0,
+          "end": 97,
+          "quote": "assumption is usually a **role** played by some sentence/theory, not a separate ontological type."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-types-nonorthogonal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:assumption-role-not-type"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex178",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:147"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:149",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex179",
+          "start": 0,
+          "end": 56,
+          "quote": "the **footprint hypothesis survives** surprisingly well."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-types-nonorthogonal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-footprint"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex179",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:148"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:150",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex180",
+          "start": 0,
+          "end": 79,
+          "quote": "we need an explicit formal-syntax/module layer, not just institution semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:institution-substrate"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:formal-syntax-module-gap"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex180",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:149"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:151",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex182",
+          "start": 0,
+          "end": 82,
+          "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:formal-syntax-module-gap"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:mmt-ref",
+        "dialogue-2026-09-27:n:mmt-representation-substrate"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex182",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:150"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:152",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex183",
+          "start": 0,
+          "end": 74,
+          "quote": "MMT/LF can establish well-formedness, typing and deductive proof validity."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:mmt-representation-substrate"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:formal-elaboration"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex183",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:151"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:153",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex184",
+          "start": 0,
+          "end": 157,
+          "quote": "They do not tell us whether inventing Z, choosing one causal model, extrapolating a regularity, or trusting some research source was epistemically warranted."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:formal-elaboration"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:wellformed-not-warranted"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex184",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:152"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:154",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex185",
+          "start": 0,
+          "end": 39,
+          "quote": "I'm wondering what the term for this is"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:mece-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-factorization-term"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex185",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:153"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:155",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "summarize",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:episode-factorization-loop"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:factorization-thinking-preference"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex186",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:154"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:156",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex187",
+          "start": 0,
+          "end": 75,
+          "quote": "MECE is only one special case of the broader thing you actually care about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:mece-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:mece-special-case"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex187",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:155"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:093",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:mece-property"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex188",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:156"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:157",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-factorization-term"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex188",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:156"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:158",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex189",
+          "start": 0,
+          "end": 41,
+          "quote": "underfactored, overfactored, misfactored."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:factorization-diagnostics"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex189",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:093",
+        "dialogue-2026-09-27:m:157"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:159",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex190",
+          "start": 0,
+          "end": 120,
+          "quote": "what would this concept of canonical factorization as a kind of cognitive strategy, where would that live in our system?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-strategy-placement"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex190",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:158"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:160",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:strategy-control-layer"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex191",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:159"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:161",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex192",
+          "start": 0,
+          "end": 31,
+          "quote": "meta-strategy / inquiry control"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:strategy-control-layer"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:metastrategy-relative"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex192",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:160"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:162",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-reflective-application"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex193",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:161"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:166",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:reflective-self-application"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-conversation-strategy-identification"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex194",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:162"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:167",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-conversation-strategy-identification"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:conversation-strategy-analysis"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex194",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:162"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:163",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex195",
+          "start": 0,
+          "end": 38,
+          "quote": "reflective / self-applicative modeling"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-reflective-application"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reflective-self-application"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex195",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:166",
+        "dialogue-2026-09-27:m:167"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:106",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex196",
+          "start": 0,
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-endpoint"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-self-application"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex196",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:163"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:164",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex196",
+          "start": 0,
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:reflective-self-application"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reflection-about-relation"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex196",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:163"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:165",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex197",
+          "start": 0,
+          "end": 30,
+          "quote": "closure under self-description"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:reflection-about-relation"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:closure-under-self-description"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex197",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:106",
+        "dialogue-2026-09-27:m:164"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:168",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex198",
+          "start": 0,
+          "end": 69,
+          "quote": "conversations become datasets of instantiated reasoning trajectories."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:conversation-strategy-analysis"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:reasoning-trajectory-dataset"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex198",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:165"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:169",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex199",
+          "start": 0,
+          "end": 64,
+          "quote": "Ok I assume we should do any remaining work/research around that"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:strategy-control-layer",
+        "dialogue-2026-09-27:n:reflection-about-relation"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-metareasoning-research"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex199",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:168"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -11259,6 +13227,125 @@
       "target_id": "dialogue-2026-09-27:n:current-meta-model",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-27:ex170"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:042",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex177",
+          "start": 0,
+          "end": 66,
+          "quote": "the seven candidate types I proposed were not actually orthogonal."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:candidate-types-nonorthogonal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex177"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:043",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex178",
+          "start": 0,
+          "end": 97,
+          "quote": "assumption is usually a **role** played by some sentence/theory, not a separate ontological type."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:assumption-role-not-type",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex178"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:044",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex186",
+          "start": 0,
+          "end": 155,
+          "quote": "this process of doing this and then, like, realizing you're over- or underfactored is just, like, I think very core to the way I like to think about things"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:factorization-thinking-preference",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex186"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:045",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:canonical-factorization-strategy",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex188"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:046",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:strategy-control-layer",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex191"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:047",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex195",
+          "start": 0,
+          "end": 38,
+          "quote": "reflective / self-applicative modeling"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-27:n:reflective-self-application",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex195"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:048",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:conversation-strategy-analysis",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex194"
     }
   ],
   "question_events": [
@@ -11926,10 +14013,10 @@
       "id": "dialogue-2026-09-27:qe:q-canonical-transition",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex113",
+          "message_id": "dialogue-2026-09-27:ex188",
           "start": 0,
-          "end": 61,
-          "quote": "Construct a canonical factorization of epistemic transitions."
+          "end": 23,
+          "quote": "canonical factorization"
         }
       ],
       "origin": "inferred",
@@ -11937,7 +14024,7 @@
       "question_id": "dialogue-2026-09-27:n:q-canonical-transition",
       "status": "open",
       "actor_id": "participant:assistant",
-      "at_message_id": "dialogue-2026-09-27:ex113",
+      "at_message_id": "dialogue-2026-09-27:ex188",
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
@@ -11986,18 +14073,18 @@
       "id": "dialogue-2026-09-27:qe:q-self-application",
       "anchors": [
         {
-          "message_id": "dialogue-2026-09-27:ex128",
+          "message_id": "dialogue-2026-09-27:ex196",
           "start": 0,
-          "end": 91,
-          "quote": "how do we apply this kind of framework we've been developing to what we've been doing here?"
+          "end": 77,
+          "quote": "use the model to analyze the process by which the model itself is being built"
         }
       ],
       "origin": "inferred",
       "review_status": "proposed",
       "question_id": "dialogue-2026-09-27:n:q-self-application",
       "status": "open",
-      "actor_id": "participant:brian",
-      "at_message_id": "dialogue-2026-09-27:ex128",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex196",
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
@@ -12118,6 +14205,126 @@
       "status": "open",
       "actor_id": "participant:assistant",
       "at_message_id": "dialogue-2026-09-27:ex171",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-next-after-context",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex173",
+          "start": 0,
+          "end": 10,
+          "quote": "What next?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-next-after-context",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex173",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-factorization-term",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex185",
+          "start": 0,
+          "end": 39,
+          "quote": "I'm wondering what the term for this is"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-factorization-term",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex185",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-strategy-placement",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex190",
+          "start": 0,
+          "end": 120,
+          "quote": "what would this concept of canonical factorization as a kind of cognitive strategy, where would that live in our system?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-strategy-placement",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex190",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-reflective-application",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex193",
+          "start": 0,
+          "end": 60,
+          "quote": "I often find myself that I'm doing recursion on my own stuff"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-reflective-application",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex193",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-conversation-strategy-identification",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex194",
+          "start": 0,
+          "end": 250,
+          "quote": "being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations and identify like strategies or meta-strategies I think could be like a very important application of this"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-conversation-strategy-identification",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex194",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-metareasoning-research",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex199",
+          "start": 0,
+          "end": 64,
+          "quote": "Ok I assume we should do any remaining work/research around that"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-metareasoning-research",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex199",
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
@@ -12444,6 +14651,96 @@
       "actor_id": "participant:assistant",
       "at_message_id": "dialogue-2026-09-27:ex171",
       "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:16",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex174",
+          "start": 0,
+          "end": 26,
+          "quote": "typed candidate generation"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-next-after-context",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex174",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:typed-generation-program"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:17",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex188",
+          "start": 0,
+          "end": 23,
+          "quote": "canonical factorization"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-factorization-term",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex188",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:canonical-factorization-strategy",
+        "dialogue-2026-09-27:n:mece-special-case"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:18",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex191",
+          "start": 0,
+          "end": 129,
+          "quote": "canonical factorization is not a primitive epistemic move; it is a reusable reasoning strategy that orchestrates primitive moves."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-strategy-placement",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex191",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:strategy-control-layer"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:19",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex195",
+          "start": 0,
+          "end": 38,
+          "quote": "reflective / self-applicative modeling"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-reflective-application",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex195",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:reflective-self-application",
+        "dialogue-2026-09-27:n:reflection-about-relation"
+      ],
       "resolution_basis": null,
       "replacement_id": null
     }

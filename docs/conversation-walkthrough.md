@@ -248,3 +248,76 @@ flowchart LR
 The two frameworks solve different pieces. Institution theory constrains representational/logical translation. ATMS-like machinery preserves multiple hypothetical contexts and explicit dependency provenance. Query \(Q\) is now outside persistent epistemic state; evidence is represented as typed, provenance-bearing content rather than an automatically privileged bucket.
 
 The current endpoint is documented in [assumption-context-meta-model.md](assumption-context-meta-model.md). The open frontier is still the typed algebra of candidate generation, not another attempt to declare induction/abduction primitives.
+
+## 17. Candidate typing exposed another false partition
+
+~~~mermaid
+flowchart LR
+ A[Type every generated candidate] --> B[Seven candidate types proposed]
+ B --> C[Assumption is a role, not an artifact type]
+ C --> D[Use compositional candidate footprints]
+ D --> E[Need concrete formal syntax/module layer]
+ E --> F[MMT/LF literature check]
+~~~
+
+The candidate-generation stress test reproduced the same factorization pattern seen earlier. The first type list mixed unlike dimensions. A candidate can span several artifact kinds, while labels such as “assumption” describe how an artifact is being used. The graph now preserves that correction instead of silently replacing the earlier candidate-type proposal.
+
+## 18. MMT simplified the representation layer
+
+~~~mermaid
+flowchart LR
+ A[Institution semantics] --> B[Need constructible formal artifacts]
+ B --> C[MMT-like theory graph]
+ C --> D[Theories]
+ C --> E[Declarations]
+ C --> F[Objects]
+ C --> G[Morphisms]
+ D --> H[Draft candidate]
+ E --> H
+ F --> H
+ G --> H
+ H --> I[Elaborate / check]
+ I --> J[Formal artifact or failure]
+ J --> K[Still separate from warrant]
+~~~
+
+The important split is **draft candidate → formal elaboration → warrant/evaluation**. LF/MMT-like machinery can establish well-formedness, typing and deductive validity, but those checks do not establish that a candidate was epistemically justified.
+
+## 19. MECE became canonical-factorization strategy
+
+~~~mermaid
+flowchart LR
+ A[MECE as primitive-search heuristic] --> B[User notices over/underfactoring]
+ B --> C[Generalize beyond partitions]
+ C --> D[Canonical / primitive factorization]
+ D --> E[Check completeness]
+ D --> F[Check redundancy]
+ D --> G[Check independence]
+ D --> H[Check compositionality]
+ D --> I[Check uniqueness relative to representation]
+ E --> J[Split / merge / retype and repeat]
+ F --> J
+ G --> J
+ H --> J
+ I --> J
+~~~
+
+MECE remains appropriate when the target really is a partition. The broader recurring strategy is to search for a minimal complete compositional factorization and diagnose **underfactored**, **overfactored**, or **misfactored** decompositions.
+
+## 20. Strategy and reflection became first-class analysis targets
+
+~~~mermaid
+flowchart LR
+ A[Primitive operators] --> B[Strategy selects/sequences operators]
+ B --> C[Metareasoning monitors/controls reasoning]
+ C --> D[Canonical factorization can target reasoning itself]
+ D --> E[Self-application]
+ E --> F[Model analyzes the process building the model]
+ F --> G[Conversation becomes a reasoning-trajectory dataset]
+~~~
+
+The literature check supports the object-level/meta-level distinction and strategy-selection framing, but the current formalism does not hard-code a permanent level number. Instead, reflective targeting is represented with an explicit about relation. A strategy is meta-level **relative to what it monitors or controls**.
+
+The concrete application is now clearer: annotate conversations not only with atomic inquiry moves but also with proposed strategy episodes such as canonical factorization, counterexample search, literature-before-invention, goal restoration, meta-model stress testing, and reflective self-application.
+
+See [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md) for the current extension.

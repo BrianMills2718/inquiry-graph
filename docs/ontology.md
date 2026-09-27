@@ -33,6 +33,7 @@ Each role occurs exactly once except `supports.premise`, which may occur more th
 | exemplifies | example → general | example → any |
 | candidate_for | candidate → problem | any → question/goal |
 | part_of | part → whole | any → any |
+| about | subject → object | any → any; explicit semantic target for reflective/meta-level analysis |
 | related_to | source → target | any → any; display orientation only |
 | supersedes | new → old | any → any; acyclic |
 
@@ -45,6 +46,12 @@ A challenge need not refute its target. It can question its applicability or suf
 A move has actor, inputs, outputs, occurrence, anchors, and optional previous-move IDs. A `retract` move and a `retracts` stance event are related but not redundant: one is the episode/process record, the other is an actor's change toward a particular target. They can share anchors.
 
 The optional `inference_family` is `induction`, `abduction`, `deduction`, or `unspecified`. The seed leaves it unspecified: adjudicating the exact taxonomy was itself disputed. A graph can describe the dispute without settling it in its annotation scheme.
+
+## Strategy and reflection annotations
+
+The executable graph still has no dedicated `StrategyEpisode` record. For the current research pass, reusable strategies are represented as `method` nodes and reconstructed strategy occurrences as grounded `example` nodes. Atomic moves can be linked to an episode with `part_of`; an episode can `exemplify` a strategy method. The `about` relation records the explicit target of reflective/meta-level reasoning.
+
+This is deliberately conservative. Strategy attribution remains a proposed analyst interpretation of public dialogue, not a claim that the graph directly observes a participant's private control state. A later schema may reify strategy episodes if span-level strategy analysis becomes central.
 
 ## Example: imagination
 

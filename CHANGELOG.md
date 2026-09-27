@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-Expanded the founding dialogue through the post-V1 epistemic-transition work and the later assumption-context/institution-theory refinement. Added a detailed research log, the earlier epistemic-transition-calculus stage, and a current assumption-context meta-model; extended the curated source to 170 excerpts and the proposed inquiry graph to 169 content nodes, 178 relations, 143 moves, 41 stance events, and 58 question events. The current endpoint separates logical signature/model semantics from an ATMS-inspired persistent support graph and from temporary white-box assumption environments. Query/task is outside persistent epistemic state; evidence is represented as typed provenance-bearing content. Candidate-generation factorization and warrant postulates remain explicitly open.
+Expanded the founding dialogue through the epistemic-transition, assumption-context, and metareasoning/strategy/reflection refinements. The curated source now contains 197 excerpts and the proposed graph 202 content nodes, 211 relations, 169 moves, 48 stance events, and 68 question events. The current research endpoint uses an MMT-like formal artifact substrate, an ATMS-inspired support overlay, temporary assumption environments, a draft-candidate/operator boundary, and an explicit strategy/control layer. Canonical factorization is modeled as a reusable strategy rather than a primitive move; reflection is relational through the new `about` edge rather than fixed meta-level numbers. Candidate-generation algebra, warrant semantics, graded-support integration and robust strategy-episode identification remain open.
 
 ## 1.0.0 — 2026-09-27
 

@@ -62,7 +62,7 @@ class Binding(Record):
 
 RelationKind = Literal[
     "supports", "challenges", "depends_on", "distinguishes", "reframes", "motivates",
-    "answers", "exemplifies", "candidate_for", "part_of", "related_to", "supersedes"
+    "answers", "exemplifies", "candidate_for", "part_of", "about", "related_to", "supersedes"
 ]
 
 
@@ -142,6 +142,7 @@ SIGNATURES = {
     "exemplifies": {"example": {"example"}, "general": {"*"}},
     "candidate_for": {"candidate": {"*"}, "problem": {"question", "goal"}},
     "part_of": {"part": {"*"}, "whole": {"*"}},
+    "about": {"subject": {"*"}, "object": {"*"}},
     "related_to": {"source": {"*"}, "target": {"*"}},
     "supersedes": {"new": {"*"}, "old": {"*"}},
 }
