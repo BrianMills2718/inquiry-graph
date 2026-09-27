@@ -79,3 +79,111 @@ A framing that assumed a designer was corrected. This does not erase the communi
 The induction foundation, abduction foundation, exhaustive taxonomy, physically available distinctions and ontology-reuse questions were not settled. Recognizing that these obligations were still open motivated the cross-conversation inquiry graph and the V1 request.
 
 The implemented agenda does not pick one mathematically optimal next question. It makes the open branches visible, with provenance, so that the user and a later policy can choose explicitly. The distinction between an agenda and an optimizer is intentional.
+
+## 7. Measurement and Pattern Theory were tested as the missing layer
+
+```mermaid
+flowchart LR
+ A[Is this just measurement theory?] --> B[Measurement gives accessible variables]
+ B --> C[But patterns are structures over measurements]
+ C --> D[Search existing pattern theory]
+ D --> E[Grenander / Brown Pattern Theory]
+ E --> F[Bronstein explicitly demoted]
+ F --> G[Pattern Theory useful but not foundationally complete]
+ G --> H[Predictive / causal equivalence explored]
+ H --> I[User objects: good abstraction is not all possible noticing]
+```
+
+This stage contains two important *negative* results. First, geometric deep learning was not kept in the spine merely because it had been mentioned earlier. Second, causal-state / predictive-equivalence ideas were demoted from a proposed ontology of patterns to criteria for useful or sufficient representation. Those corrections are represented rather than silently overwritten.
+
+## 8. The dots example separated integration, representation, learning, and induction
+
+```mermaid
+flowchart LR
+ A[No individual sensor carries the whole relation] --> B[Joint information / integration]
+ B --> C[IIT considered only algorithmically]
+ C --> D[Spatial dots are temporalized]
+ D --> E[Memory as temporal integration]
+ E --> F[Stateful computation substrate]
+ F --> G[Pattern extraction may be deductive]
+ G --> H[So pattern recognition is not automatically induction]
+```
+
+The temporal-dots move was especially productive: distributing the same evidence over time showed that “integration” and “memory” can share a substrate without making either identical to learning or induction. The later correction `pattern-not-induction` explicitly challenges the earlier `recognition-is-projection` and `induction-first` hypotheses.
+
+## 9. The dialogue reset to the original warrant problem
+
+```mermaid
+flowchart LR
+ A[State-space / learning machinery] --> B[We have drifted]
+ B --> C[Return to warrant of warrant]
+ C --> D[White-box: stipulate constraints]
+ C --> E[Black-box: observer has partial hypotheses]
+ D --> F[Deduction relative to assumed constraints]
+ E --> G[Ampliative commitment needs extra assumptions]
+ G --> H[Do not optimize too early]
+ H --> I[First classify the move]
+```
+
+A wording correction matters here: the embedded observer does not need to “know” the model. The graph records `assumed-not-known`; deductions are conditional on currently assumed constraints. “Warrant” is used as a conditional license or guarantee, not as certainty.
+
+## 10. MECE became a property of the representation, then a composition space
+
+```mermaid
+flowchart LR
+ A[Induction and abduction keep blurring] --> B[Stop preserving folk labels]
+ B --> C[Seek provably MECE formalism]
+ C --> D[Target coordinates: language / structure / parameter / state]
+ D --> E[Complex moves touch several coordinates]
+ E --> F[Use exact support subsets]
+ F --> G[MECE is a property, not the object's name]
+ G --> H[Canonical only relative to representation contract]
+```
+
+The move from one-target categories to a **composition space** was a user correction. A joint claim can concern several model coordinates simultaneously; forcing it into one bucket would lose information. The graph therefore keeps `model-target-composition` distinct from the later state-update basis.
+
+## 11. State change simplified to additions, deletions, representation change, and support change
+
+```mermaid
+flowchart LR
+ A[Try a basis of named epistemic moves] --> B[Five moves are not minimal]
+ B --> C[Fixed universe: H to H']
+ C --> D[A = H' minus H]
+ C --> E[D = H minus H']
+ D --> F[Expand]
+ E --> G[Restrict]
+ F --> H[Replace = add plus remove]
+ G --> H
+ H --> I[Generalize state to K = U, H, mu]
+ I --> J[Changing U requires alignment Phi]
+ J --> K[Delta K = Phi, A, D, Delta mu]
+```
+
+This is the strongest current structural result. The fixed-universe hard-update factorization is complete by set difference. The broader claim is conditional on the semantic alignment Φ; the graph does not promote it to a universal theorem of cognition.
+
+## 12. Candidate generation, warrant, and state update split apart
+
+```mermaid
+flowchart LR
+ A[Evidence + current state] --> B[Candidate generation]
+ B --> C[Candidate hypotheses / models]
+ C --> D[Warrant / evaluation]
+ D --> E[Epistemic commitment]
+ E --> F[State update: Phi, A, D, Delta mu]
+ B --> G[Open: factor candidate generation]
+ D --> H[Open: warrant postulates / certificates]
+```
+
+The current endpoint is not “induction and abduction solved.” It is the separation:
+
+[
+\text{candidate generation}
+\neq
+\text{warrant/evaluation}
+\neq
+\text{state update}.
+]
+
+Traditional induction, abduction, analogy, model invention, and causal discovery are now treated primarily as candidate-generation or reasoning-trajectory motifs until a stronger factorization is found. The warrant layer records explicit assumptions and the guarantee they are claimed to buy. The state-update layer records the resulting semantic change.
+
+The two most important open obligations are now `q-candidate-generation-factorization` and `q-warrant-postulates`. See [the current research draft](epistemic-transition-calculus.md) and [post-V1 research log](research-log-post-v1.md).

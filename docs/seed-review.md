@@ -29,3 +29,23 @@ Original source assertions are recorded as propositions someone expressed. An ea
 Prioritize the large interpretive edges: `supports` for the pseudo-proof, `supersedes` for loose terminology, `motivates` between distant topics, and `part_of` between the experimental program and worldview-map goal. They are useful navigation hypotheses but less directly stated than a retraction such as “I shouldn't have put imagination on the same footing.”
 
 Next review question boundaries. Some questions are explicitly spoken; others are curator reconstructions of the issue being explored. All need user review before being treated as the definitive structure of the user's research agenda.
+
+## Post-V1 analysis cautions
+
+**Pattern recognition is not automatically induction.** If a relational feature is logically computable from a fully observed finite configuration, making that feature explicit can be a deterministic readout or representation operation rather than an ampliative inference. The later \`pattern-not-induction\` node records this correction to the earlier \`recognition-is-projection\` idea.
+
+**Predictive/causal equivalence is a selection criterion, not a universal pattern ontology.** Computational mechanics, information bottlenecks, causal feature learning, and related methods provide principled ways to retain distinctions relevant to prediction, causation, or a task. The dialogue explicitly backed away from treating “equivalence under consequence” as the fundamental definition of every pattern an observer can notice.
+
+**IIT is optional algorithmic machinery here.** The user explicitly scoped interest in IIT to its partition/irreducibility/cause-effect-structure mathematics, not its theory of consciousness. The graph must not turn that exploratory connection into endorsement of IIT as a theory of learning or perception.
+
+**Pattern Theory is relevant but bounded.** Grenander/Brown Pattern Theory is recorded as a serious representational/inferential framework. The current inquiry does not claim that it derives an observer's complete representation space from physics, and Bronstein/geometric deep learning was deliberately demoted from the foundational spine after the user raised concern about confirmation-by-association.
+
+**No certainty claims.** “Known constraint” was corrected to **assumed constraint** for the embedded observer. The current research target classifies hypothesis/model moves and their conditional warrants; it does not require that the observer ever possess certainty about the true model.
+
+**Representation-contract relativity.** The \(L,C,P,S\) or \((\Sigma,G,\theta,x)\) decomposition is not claimed to be representation-independent. Structure can be recoded as a parameter, parameters as fixed state, and ontology variation inside a super-ontology. Use it as a declared model-description contract, not a metaphysical partition of reality.
+
+**State-delta completeness is conditional.** The add/delete factorization for fixed hypothesis universe is simple set theory. The more general \((\Phi,A,D,\Delta\mu)\) factorization is “canonical” only after semantic identity/alignment \(\Phi\) has been specified. This is not a theorem that cognition itself has exactly these internal variables.
+
+**Warrant postulates remain research work.** AGM-style postulates/representation theorems and formal-learning-style performance guarantees are precedents. The dialogue's proposed warrant certificate \((A,G,\pi)\) is a bookkeeping/analysis proposal, not an established general theorem of epistemic rationality.
+
+**Candidate generation remains open.** The strongest later separation is \`candidate generation != warrant/evaluation != state update\`. The state-update side was simplified; no MECE or uniquely factorizable basis for candidate generation has been established.
