@@ -1,6 +1,6 @@
 # Warrant, support, license, and epistemic action
 
-> **Status:** current research draft. This document revisits the earlier warrant certificate after the representation, candidate-generation, strategy, and reflection layers were made more precise. It does not claim a universal philosophical analysis of warrant. It defines the project's operational use of the term.
+> **Status:** research draft revisiting the earlier warrant certificate after the representation, candidate-generation, strategy, and reflection layers were made more precise. A subsequent pass refines epistemic actions and graded support in [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md). It does not claim a universal philosophical analysis of warrant. It defines the project's operational use of the term.
 
 ## 1. Why revisit warrant
 
@@ -633,9 +633,9 @@ This makes the relationship between the old warrant work and the newer meta-mode
 
 ### Still open
 
-1. the exact type system for epistemic actions \(\mathcal A_E\);
+1. epistemic actions are now provisionally modeled as typed partial state transducers with representation-relative primitive bases; see [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md);
 2. which warrant regimes should be first-class in an executable implementation;
-3. how graded support updates \(\rho\) are licensed and calibrated;
+3. graded support is now provisionally treated as a typed interpretation of symbolic support provenance; open work remains on choosing/validating concrete regimes and update rules;
 4. how multiple independent warrants combine;
 5. how conflicting warrant regimes are compared;
 6. how source/reliability warrants compose through testimony and measurement;

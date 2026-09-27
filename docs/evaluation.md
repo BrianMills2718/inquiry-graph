@@ -40,6 +40,8 @@ Before treating warrant as an executable or learnable layer, test whether annota
 
 Evaluate common confusions separately: support mistaken for sufficient warrant; formal validity mistaken for content acceptance; license mistaken for actual update; assumptions hidden inside an unqualified guarantee; heterogeneous guarantees collapsed into one confidence score; and defeaters ignored. Agreement on the action target and guarantee type is more important than agreement on philosophical terminology.
 
+For graded support, add provenance-sensitive fixtures in which two apparent pieces of evidence share a common source, and compare them with genuinely independent support. An acceptable annotation/evaluation layer must preserve the difference before numerical aggregation. Test regime-specific update rules separately (for example, conditioning versus uncertain-evidence updates) rather than treating every support increase as the same operation.
+
 ## Stage D: strategy-episode annotation
 
 Before learning policies, evaluate whether humans can reliably identify reusable reasoning strategies from grounded move sequences. Annotate strategy schema, episode boundaries, target (`about` relation), nested episodes and confidence/review status. Compare agreement on atomic moves with agreement on higher-level strategies; strategy segmentation is expected to be harder and may admit multiple defensible granularities.

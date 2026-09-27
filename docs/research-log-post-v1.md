@@ -715,3 +715,42 @@ Second, the earlier temptation to add an independent warrant scope field appears
 Defeaters are also kept outside the minimal warrant tuple and represented in the support/argument graph, so nonmonotonic warrant can lose a previously derived license when new defeating information arrives.
 
 The current formulation is documented in [warrant-license-interface.md](warrant-license-interface.md).
+
+## 27. Post-warrant literature pass: actions and graded support
+
+After the warrant/license refactoring, the next two open questions were:
+
+1. what should count as a primitive epistemic action; and
+2. how should multiple supports/warrants interact with graded support \(\rho\)?
+
+The research pass drew on AGM/Katsuno–Mendelzon belief change, Dynamic Epistemic Logic, provenance semirings, probabilistic ATMS work, and Jeffrey-style uncertain updating.
+
+The main action-side result is that a fixed universal verb list is probably the wrong abstraction. AGM already shows that familiar change operations can be compositionally related, while Katsuno–Mendelzon distinguish revision from update based on the semantics of what changed. Dynamic Epistemic Logic likewise treats actions as structured events with preconditions and model-transforming semantics.
+
+The project now models an epistemic action schematically as a partial state transducer:
+
+\[
+a:S\rightharpoonup S\times O_a
+\]
+
+with explicit preconditions and an effect footprint over state coordinates. “Primitive” then means primitive **relative to a declared action algebra and representation**, not metaphysically primitive.
+
+The graded-support result is similarly compositional. Instead of attaching an independent scalar to every derived node, preserve symbolic support provenance first. Alternative support routes and joint support are distinct operations:
+
+\[
+P_h=(x_a\otimes x_b)\oplus x_c.
+\]
+
+This echoes both ATMS labels and provenance-semiring work. Numeric or ordinal support then comes from a typed interpretation:
+
+\[
+\rho_\eta:\mathsf{Prov}\to V_\eta
+\]
+
+under an explicit uncertainty regime \(\eta\).
+
+Probabilistic ATMS results are especially important here: probabilities can be placed on assumptions while derived-node support is computed through shared label/provenance structure, which avoids pretending derived nodes are independent.
+
+The current synthesis is documented in [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md).
+
+This pass intentionally does **not** add new nodes to the source-grounded founding dialogue graph. The research findings are being introduced in the current assistant response rather than recovered from an already-recorded visible turn. Keeping the research note separate avoids fabricating source provenance. A later transcript reconciliation/update can ground these claims once the visible turn exists in the export.
