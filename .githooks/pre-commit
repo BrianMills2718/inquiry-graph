@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
+export PYTHONUTF8=1
 git diff --cached --check
-if [ -x .venv/bin/python ] && [ -d tests ]; then
-  .venv/bin/python -m pytest -q
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+elif [ -x .venv/bin/python ]; then
+  PY=.venv/bin/python
 else
-  echo 'Bootstrap: no project test environment yet; whitespace gate passed.'
+  echo 'Project virtual environment is required; install .[dev] before committing.' >&2
+  exit 1
 fi
+"$PY" -m pytest -q
+"$PY" tools/build_artifacts.py --check
+"$PY" -m inquiry_graph validate examples/seed/graph.json
