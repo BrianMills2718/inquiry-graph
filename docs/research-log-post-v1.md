@@ -754,3 +754,59 @@ Probabilistic ATMS results are especially important here: probabilities can be p
 The current synthesis is documented in [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md).
 
 This pass intentionally does **not** add new nodes to the source-grounded founding dialogue graph. The research findings are being introduced in the current assistant response rather than recovered from an already-recorded visible turn. Keeping the research note separate avoids fabricating source provenance. A later transcript reconciliation/update can ground these claims once the visible turn exists in the export.
+
+## 28. Positive support algebra was made concrete
+
+The next pass asked which algebra actually matches ATMS-style minimal environments.
+
+For primitive assumption tokens \(X\), define positive support values as finite antichains of finite assumption sets:
+
+\[
+\mathsf{Supp}(X)=
+\operatorname{Antichain}(\mathcal P_{\mathrm{fin}}(X)).
+\]
+
+Alternative support is:
+
+\[
+A\oplus B=
+\operatorname{Min}(A\cup B),
+\]
+
+and joint support is:
+
+\[
+A\otimes B=
+\operatorname{Min}
+\{E\cup F:E\in A,F\in B\}.
+\]
+
+This is exactly the irredundant/minimal-witness construction known from provenance work, and it forms the free distributive lattice over \(X\), equivalently positive Boolean provenance modulo logical equivalence.
+
+That makes it a particularly clean fit for ATMS labels, which already store only subset-minimal supporting environments.
+
+The important information-loss boundary is explicit: this algebra preserves minimal support sets but intentionally discards derivation multiplicity, proof-tree identity, and repeated-use counts.
+
+## 29. First concrete graded regime
+
+A small executable reference interpretation was added.
+
+Each primitive assumption \(x\) receives an independent Bernoulli probability \(p_x\). A support antichain denotes the upward-closed event that at least one minimal support environment is present. Minimal nogoods denote inconsistent worlds.
+
+The reference grade is:
+
+\[
+\rho_{\mathrm{Bern}}(A)
+=
+P(
+\llbracket A\rrbracket
+\mid
+\text{no nogood holds}
+).
+\]
+
+This is deliberately a probability of the **support condition**, not automatically \(P(h)\) for the supported proposition \(h\). Identifying the two requires an additional warrant/semantic adequacy claim.
+
+The implementation is in src/inquiry_graph/support.py, with tests covering antichain normalization, semiring/lattice laws, absorption, overlapping alternatives, and consistency conditioning.
+
+The next algebraic frontier is negative/defeasible support rather than further refinement of the positive-support algebra.

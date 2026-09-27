@@ -2,7 +2,7 @@
 
 ## Build environment checks
 
-Latest local result: **60 tests passed**; graph validation returned zero errors and warnings. The added coverage includes the generic reflective `about` relation used by the strategy/self-application annotations.
+Latest local result: **67 tests passed**; graph validation returned zero errors and warnings. The added coverage includes the generic reflective `about` relation used by the strategy/self-application annotations.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 

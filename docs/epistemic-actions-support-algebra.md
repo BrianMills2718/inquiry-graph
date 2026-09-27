@@ -1,6 +1,6 @@
 # Epistemic actions, support provenance, and graded support
 
-> **Status:** current research draft. This document follows [warrant-license-interface.md](warrant-license-interface.md) and addresses two open questions: what should count as an epistemic action target for warrant, and how should multiple supports/warrants interact with graded support \(\rho\)? The answer is intentionally interface-level rather than a claim that one universal numeric uncertainty calculus exists.
+> **Status:** research draft following [warrant-license-interface.md](warrant-license-interface.md). A subsequent pass resolves the first positive-support choice and implements a concrete reference regime in [support-antichain-probability.md](support-antichain-probability.md). The answer remains intentionally representation-relative rather than a claim that one universal numeric uncertainty calculus exists.
 
 ## 1. Main result
 
@@ -672,7 +672,7 @@ The research supports the following current commitments:
 
 1. Which action composition operators belong in the minimal action algebra: sequential composition, guarded choice, iteration, concurrency?
 2. Which state coordinates should be considered part of the action footprint in the executable formalization?
-3. Which positive support algebra best matches ATMS minimal-environment semantics: Boolean formulas, absorptive/idempotent semirings, provenance polynomials, or another structure?
+3. Positive ATMS-style minimal-environment support is now instantiated as the finite-antichain/free-distributive-lattice algebra described in [support-antichain-probability.md](support-antichain-probability.md); the next algebraic question is negative support/defeat.
 4. How should negative support/defeat interact with positive provenance without losing explanation structure?
 5. Which graded regime should be implemented first for empirical work?
 6. How should reliability of sources and measurements be represented without double-counting common provenance?
