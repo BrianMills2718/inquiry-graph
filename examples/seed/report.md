@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 72, "nodes": 75, "relations": 79, "moves": 62, "stance_events": 21, "question_events": 30, "questions": 25, "review": {"proposed": 267, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 125, "nodes": 125, "relations": 134, "moves": 105, "stance_events": 31, "question_events": 44, "questions": 36, "review": {"proposed": 439, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript.
 
 ## Open agenda
 
@@ -18,12 +18,28 @@ Rows are actor/context-relative; an assistant answer does not close a user's que
 `dialogue-2026-09-27:n:q-abduction-foundation` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
+### Can ampliative epistemic moves be represented in a provably MECE or uniquely factorizable way?
+`dialogue-2026-09-27:n:q-ampliative-mece` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### Does Bayesian updating explain warrant or merely relocate assumptions?
 `dialogue-2026-09-27:n:q-bayes-warrant` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### Can candidate generation be given a small compositional or uniquely factorizable basis?
+`dialogue-2026-09-27:n:q-candidate-generation-factorization` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What factorization of epistemic state change can be canonical relative to an explicit representation contract?
+`dialogue-2026-09-27:n:q-canonical-transition` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
 ### What claims beyond observation can have support without being explanations?
 `dialogue-2026-09-27:n:q-claims` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What role does generation of candidate constraints play in black-box inference?
+`dialogue-2026-09-27:n:q-constraint-generation` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Which beyond-observation inferences can an embedded observer make?
@@ -62,8 +78,16 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-imagination` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### Can the apparent overlap between induction and abduction be explained by a deeper compositional formalism?
+`dialogue-2026-09-27:n:q-induction-abduction-blur` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### What assumptions minimally support inductive generalization?
 `dialogue-2026-09-27:n:q-induction-foundation` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Under what conditions does evidence E contain information relevant to a proposition H?
+`dialogue-2026-09-27:n:q-information-condition` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### Can symmetry, invariance and stability supply primitives of pattern recognition?
@@ -82,12 +106,24 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-latent` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
+### What is the minimal formalization of learning relevant to this inquiry?
+`dialogue-2026-09-27:n:q-learning-formalization` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### Is algorithm classification the right level for a simple inference taxonomy?
 `dialogue-2026-09-27:n:q-level` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What possible maps take current representations beyond the information currently explicit?
 `dialogue-2026-09-27:n:q-maps` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### Is measurement theory sufficient to explain the observer-to-pattern problem?
+`dialogue-2026-09-27:n:q-measurement-sufficient` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Is measurement theory sufficient to explain the observer-to-pattern problem?
+`dialogue-2026-09-27:n:q-measurement-sufficient` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What minimal entities and relations does this inference sketch require?
@@ -104,6 +140,10 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What does higher order mean, and how does it differ from coarse-graining?
 `dialogue-2026-09-27:n:q-order` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What, if anything, is fundamental about pattern formation before criteria for useful or optimal abstraction are imposed?
+`dialogue-2026-09-27:n:q-pattern-foundation` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What operation makes a relational feature explicit to an observer?
@@ -123,7 +163,15 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What warrants the standards by which an inference is warranted?
-`dialogue-2026-09-27:n:q-warrant` · open · proposed
+`dialogue-2026-09-27:n:q-warrant` · reopened · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What minimal warrant postulates and representation theorems should govern non-entailing commitment changes?
+`dialogue-2026-09-27:n:q-warrant-postulates` · open · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How should warrant of warrant be formalized once certainty is removed from the target?
+`dialogue-2026-09-27:n:q-warrant-return` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### Does Wolfram observer theory characterize physically realizable pattern recognizers?
@@ -503,3 +551,261 @@ Inputs: dialogue-2026-09-27:n:worldview-map, dialogue-2026-09-27:n:reasoning-pro
 Outputs: dialogue-2026-09-27:n:v1
 
 > what I want you to do now is to think through what this project would look like and kind of the formalism and ontology, etc. for everything for this project and write that out and then do a first pass of instantiating that ontology with this conversation.
+
+**ask** · `dialogue-2026-09-27:m:063` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-perceptual
+Outputs: dialogue-2026-09-27:n:q-measurement-sufficient
+
+> I mean, I guess it isn&#x27;t this just basically a measurement theory thing
+
+**clarify** · `dialogue-2026-09-27:m:064` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-measurement-sufficient
+Outputs: dialogue-2026-09-27:n:measurement-boundary
+
+> Measurement theory can tell you why an observer has access to variables like position, intensity, wavelength, temperature, etc. It **doesn&#x27;t by itself characterize all the structures the observer can subsequently recognize across those measurements**.
+
+**connect** · `dialogue-2026-09-27:m:065` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:measurement-boundary
+Outputs: dialogue-2026-09-27:n:pattern-theory-candidate
+
+> The strongest hit is **Ulf Grenander&#x27;s Pattern Theory**.
+
+**challenge** · `dialogue-2026-09-27:m:066` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:bronstein
+Outputs: dialogue-2026-09-27:n:bronstein-demoted
+
+> I would now **remove Bronstein from the spine of our investigation**.
+
+**challenge** · `dialogue-2026-09-27:m:067` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:pattern-theory-candidate
+Outputs: dialogue-2026-09-27:n:pattern-theory-limit
+
+> Pattern Theory is highly relevant, but it does not solve the foundational problem we were asking.
+
+**challenge** · `dialogue-2026-09-27:m:068` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:pattern-theory-limit
+Outputs: dialogue-2026-09-27:n:q-pattern-foundation
+
+> I&#x27;m not sure that equivalence under consequence is really the fundamental. It seems like a property of a good model basically is that you&#x27;ve abstracted away all the detail that isn&#x27;t useful.
+
+**clarify** · `dialogue-2026-09-27:m:069` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-pattern-foundation
+Outputs: dialogue-2026-09-27:n:equivalence-not-fundamental
+
+> I think your objection is right, and it exposes that I jumped from **pattern formation** to **optimal representation**.
+
+**ask** · `dialogue-2026-09-27:m:070` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-natural-learning
+Outputs: dialogue-2026-09-27:n:q-learning-formalization
+
+> I think maybe still trying to figure out kind of what the formalization is of learning
+
+**distinguish** · `dialogue-2026-09-27:m:071` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:recognition-is-projection
+Outputs: dialogue-2026-09-27:n:pattern-not-induction
+
+> pattern recognition isn&#x27;t necessarily induction at all.
+
+**connect** · `dialogue-2026-09-27:m:072` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:dots
+Outputs: dialogue-2026-09-27:n:integration-layer
+
+> the phenomenon you&#x27;re identifying is more general and less controversial.
+
+**clarify** · `dialogue-2026-09-27:m:073` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:integration-layer
+Outputs: dialogue-2026-09-27:n:iit-algorithmic-scope
+
+> keep IIT on the board—but specifically its partition/irreducibility/cause-effect-structure mathematics, not its theory of consciousness.
+
+**hypothesize** · `dialogue-2026-09-27:m:074` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:integration-layer
+Outputs: dialogue-2026-09-27:n:temporal-integration
+
+> memory may just be temporal integration at this level of abstraction.
+
+**hypothesize** · `dialogue-2026-09-27:m:075` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:temporal-integration
+Outputs: dialogue-2026-09-27:n:stateful-computation
+
+> the fundamental mathematical object may simply be stateful computation over an information stream
+
+**reframe** · `dialogue-2026-09-27:m:076` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-pattern-foundation
+Outputs: dialogue-2026-09-27:n:q-warrant-return
+
+> we need to step back because I think our original question is like, how do you formalize the warrant of warrant basically?
+
+**summarize** · `dialogue-2026-09-27:m:077` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-warrant-return
+Outputs: dialogue-2026-09-27:n:warrant-return
+
+> We have drifted.
+
+**hypothesize** · `dialogue-2026-09-27:m:078` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-return
+Outputs: dialogue-2026-09-27:n:ampliative-constraints
+
+> Any warrant for ampliative inference must come from additional constraints on the space of possible worlds.
+
+**connect** · `dialogue-2026-09-27:m:079` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:white-black-box
+Outputs: dialogue-2026-09-27:n:possibility-set
+
+> Reality + partial observation + logic =&gt; possibility set
+
+**ask** · `dialogue-2026-09-27:m:080` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:possibility-set
+Outputs: dialogue-2026-09-27:n:q-constraint-generation
+
+> maybe this is really about the generation of possible constraints
+
+**challenge** · `dialogue-2026-09-27:m:081` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:method-classes
+Outputs: dialogue-2026-09-27:n:optimization-too-early
+
+> I think your maybe again trying to move too early to like the optimal strategy for warrant
+
+**reframe** · `dialogue-2026-09-27:m:082` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-warrant-return
+Outputs: dialogue-2026-09-27:n:q-information-condition
+
+> The foundational question is simply: Under what conditions does E contain information about H?
+
+**distinguish** · `dialogue-2026-09-27:m:083` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:white-black-box
+Outputs: dialogue-2026-09-27:n:assumed-not-known
+
+> unconstrained known, I would say is more like constraints assumed
+
+**ask** · `dialogue-2026-09-27:m:084` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-taxonomy
+Outputs: dialogue-2026-09-27:n:q-induction-abduction-blur
+
+> induction and abduction ... seem to always blur together for me.
+
+**clarify** · `dialogue-2026-09-27:m:085` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-induction-abduction-blur
+Outputs: dialogue-2026-09-27:n:constraint-broader-explanation
+
+> constraint is broader than explanation.
+
+**scope** · `dialogue-2026-09-27:m:086` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-induction-abduction-blur, dialogue-2026-09-27:n:q-exhaustive
+Outputs: dialogue-2026-09-27:n:formalism-goal
+
+> what&#x27;s relevant to me is just coming up with our own definition that gives us a coherent and clear formalism
+
+**propose** · `dialogue-2026-09-27:m:087` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:formalism-goal
+Outputs: dialogue-2026-09-27:n:mece-first-cut
+
+> The first cut actually is MECE: K entails H or K does not entail H.
+
+**clarify** · `dialogue-2026-09-27:m:088` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:mece-first-cut
+Outputs: dialogue-2026-09-27:n:mece-goal
+
+> my goal is to come up with coherent and clear formalism that can kind of provably be MECE
+
+**ask** · `dialogue-2026-09-27:m:089` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:mece-goal
+Outputs: dialogue-2026-09-27:n:q-ampliative-mece
+
+> my goal is to come up with coherent and clear formalism that can kind of provably be MECE
+
+**propose** · `dialogue-2026-09-27:m:090` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:mece-goal
+Outputs: dialogue-2026-09-27:n:model-target-composition
+
+> define primitive coordinates ... and classify an inference by the **exact subset it modifies/constrains**
+
+**ask** · `dialogue-2026-09-27:m:091` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:mece-goal
+Outputs: dialogue-2026-09-27:n:q-canonical-transition
+
+> MECE is even the wrong kind of terminology ... maybe it&#x27;s something like a meta model or an executable ontology
+
+**clarify** · `dialogue-2026-09-27:m:092` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-canonical-transition
+Outputs: dialogue-2026-09-27:n:mece-property
+
+> MECE is a property we want the formalism to have, not really the name of the thing we&#x27;re building.
+
+**propose** · `dialogue-2026-09-27:m:093` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:mece-property
+Outputs: dialogue-2026-09-27:n:canonical-factorization
+
+> Construct a canonical factorization of epistemic transitions.
+
+**reframe** · `dialogue-2026-09-27:m:094` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-warrant
+Outputs: dialogue-2026-09-27:n:certainty-free-goal
+
+> my belief is you obviously you can never know anything. So this is really just about like the types of like moves I guess for like hypotheses and stuff.
+
+**clarify** · `dialogue-2026-09-27:m:095` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:certainty-free-goal
+Outputs: dialogue-2026-09-27:n:hypothesis-move-calculus
+
+> we should **stop using “know” entirely** in the core formalism.
+
+**challenge** · `dialogue-2026-09-27:m:096` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:hypothesis-move-calculus
+Outputs: dialogue-2026-09-27:n:five-not-minimal
+
+> The five are not a minimal basis.
+
+**propose** · `dialogue-2026-09-27:m:097` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:five-not-minimal
+Outputs: dialogue-2026-09-27:n:expand-restrict-basis
+
+> the minimal state-changing basis is actually just {EXPAND, RESTRICT} plus identity.
+
+**decompose** · `dialogue-2026-09-27:m:098` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:hypothesis-move-calculus
+Outputs: dialogue-2026-09-27:n:candidate-generation, dialogue-2026-09-27:n:warrant-layer, dialogue-2026-09-27:n:state-delta-factorization
+
+> generation != evaluation/warrant != state update.
+
+**propose** · `dialogue-2026-09-27:m:099` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:state-delta-factorization
+Outputs: dialogue-2026-09-27:n:state-universe, dialogue-2026-09-27:n:live-hypotheses, dialogue-2026-09-27:n:graded-support
+
+> the overall state should probably be K=(U,H,mu).
+
+**summarize** · `dialogue-2026-09-27:m:100` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:state-universe, dialogue-2026-09-27:n:live-hypotheses, dialogue-2026-09-27:n:graded-support
+Outputs: dialogue-2026-09-27:n:state-delta-factorization
+
+> Delta K = (Delta U, A, D, Delta mu).
+
+**ask** · `dialogue-2026-09-27:m:101` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation
+Outputs: dialogue-2026-09-27:n:q-candidate-generation-factorization
+
+> candidate generation ... is what I would attack next—not the state-update side anymore.
+
+**summarize** · `dialogue-2026-09-27:m:102` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:state-delta-factorization, dialogue-2026-09-27:n:three-layer-separation, dialogue-2026-09-27:n:q-candidate-generation-factorization
+Outputs: dialogue-2026-09-27:n:current-endpoint
+
+> candidate generation ... is what I would attack next—not the state-update side anymore.
+
+**propose** · `dialogue-2026-09-27:m:103` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-layer
+Outputs: dialogue-2026-09-27:n:warrant-certificate
+
+> A warrant certificate can be represented schematically as Cert(U)=(A,G,pi)
+
+**clarify** · `dialogue-2026-09-27:m:104` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-certificate
+Outputs: dialogue-2026-09-27:n:ampliative-world-restriction
+
+> Nontrivial ampliative warrant always depends on restricting the possible-world class.
+
+**clarify** · `dialogue-2026-09-27:m:105` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:warrant-layer
+Outputs: dialogue-2026-09-27:n:warrant-layer
+
+> warrant = conditions under which a move has a specified justification or guarantee

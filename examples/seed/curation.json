@@ -72,7 +72,60 @@
     "abduction-open": "dialogue-2026-09-27:ex071",
     "worldview-map": "dialogue-2026-09-27:ex072",
     "open-node": "dialogue-2026-09-27:ex073",
-    "v1-request": "dialogue-2026-09-27:ex074"
+    "v1-request": "dialogue-2026-09-27:ex074",
+    "measurement-sufficient": "dialogue-2026-09-27:ex075",
+    "measurement-boundary": "dialogue-2026-09-27:ex076",
+    "wheel-again": "dialogue-2026-09-27:ex077",
+    "pattern-theory": "dialogue-2026-09-27:ex078",
+    "bronstein-bias": "dialogue-2026-09-27:ex079",
+    "bronstein-demoted": "dialogue-2026-09-27:ex080",
+    "pattern-theory-limit": "dialogue-2026-09-27:ex081",
+    "equivalence-objection": "dialogue-2026-09-27:ex082",
+    "equivalence-correction": "dialogue-2026-09-27:ex083",
+    "learning-formalization": "dialogue-2026-09-27:ex084",
+    "pattern-not-induction": "dialogue-2026-09-27:ex085",
+    "holistic-pattern": "dialogue-2026-09-27:ex086",
+    "integration-layer": "dialogue-2026-09-27:ex087",
+    "iit-scope-user": "dialogue-2026-09-27:ex088",
+    "iit-scope": "dialogue-2026-09-27:ex089",
+    "temporal-dots": "dialogue-2026-09-27:ex090",
+    "temporal-integration": "dialogue-2026-09-27:ex091",
+    "stateful-computation": "dialogue-2026-09-27:ex092",
+    "warrant-return": "dialogue-2026-09-27:ex093",
+    "drift-admission": "dialogue-2026-09-27:ex094",
+    "ampliative-constraints": "dialogue-2026-09-27:ex095",
+    "white-black-return": "dialogue-2026-09-27:ex096",
+    "possibility-set": "dialogue-2026-09-27:ex097",
+    "constraint-generation": "dialogue-2026-09-27:ex098",
+    "optimization-too-early": "dialogue-2026-09-27:ex099",
+    "information-condition": "dialogue-2026-09-27:ex100",
+    "assumed-not-known": "dialogue-2026-09-27:ex101",
+    "induction-abduction-blur": "dialogue-2026-09-27:ex102",
+    "constraint-broader": "dialogue-2026-09-27:ex103",
+    "formalism-goal": "dialogue-2026-09-27:ex104",
+    "mece-first-cut": "dialogue-2026-09-27:ex105",
+    "mece-typo": "dialogue-2026-09-27:ex106",
+    "mece-goal": "dialogue-2026-09-27:ex107",
+    "provable-construction": "dialogue-2026-09-27:ex108",
+    "composition-space": "dialogue-2026-09-27:ex109",
+    "support-subset": "dialogue-2026-09-27:ex110",
+    "formal-object": "dialogue-2026-09-27:ex111",
+    "mece-property": "dialogue-2026-09-27:ex112",
+    "canonical-factorization": "dialogue-2026-09-27:ex113",
+    "certainty-free-goal": "dialogue-2026-09-27:ex114",
+    "stop-know": "dialogue-2026-09-27:ex115",
+    "move-calculus": "dialogue-2026-09-27:ex116",
+    "five-not-minimal": "dialogue-2026-09-27:ex117",
+    "expand-restrict": "dialogue-2026-09-27:ex118",
+    "three-layers": "dialogue-2026-09-27:ex119",
+    "state-model": "dialogue-2026-09-27:ex120",
+    "state-delta": "dialogue-2026-09-27:ex121",
+    "candidate-generation-open": "dialogue-2026-09-27:ex122",
+    "warrant-certificate": "dialogue-2026-09-27:ex123",
+    "world-restriction": "dialogue-2026-09-27:ex124",
+    "hypothesis-moves": "dialogue-2026-09-27:ex125",
+    "warrant-definition": "dialogue-2026-09-27:ex126",
+    "preserve-detail": "dialogue-2026-09-27:ex127"
   },
   "nodes": [
     [
@@ -524,6 +577,306 @@
       "goal",
       "Deliver a coherent first-pass ontology, conversation instantiation, code and project documentation in GitHub.",
       "v1-request"
+    ],
+    [
+      "q-measurement-sufficient",
+      "question",
+      "Is measurement theory sufficient to explain the observer-to-pattern problem?",
+      "measurement-sufficient"
+    ],
+    [
+      "measurement-boundary",
+      "claim",
+      "Measurement theory can characterize accessible measured variables without by itself characterizing every structure recognized over those measurements.",
+      "measurement-boundary"
+    ],
+    [
+      "pattern-theory-candidate",
+      "reference",
+      "Grenander/Brown Pattern Theory as a candidate formal language for generators, configurations, transformations, variation, observation and inference.",
+      "pattern-theory"
+    ],
+    [
+      "bronstein-demoted",
+      "claim",
+      "Bronstein/geometric deep learning should not be part of the foundational spine merely because it was suggested earlier.",
+      "bronstein-demoted"
+    ],
+    [
+      "pattern-theory-limit",
+      "claim",
+      "Pattern Theory supplies broad representational and inferential machinery but does not by itself derive all observer representations from physics.",
+      "pattern-theory-limit"
+    ],
+    [
+      "q-pattern-foundation",
+      "question",
+      "What, if anything, is fundamental about pattern formation before criteria for useful or optimal abstraction are imposed?",
+      "equivalence-objection"
+    ],
+    [
+      "equivalence-not-fundamental",
+      "claim",
+      "Equivalence under predictive or causal consequence is better treated as a relevance or model-selection criterion than as the ontology of all patterns.",
+      "equivalence-correction"
+    ],
+    [
+      "q-learning-formalization",
+      "question",
+      "What is the minimal formalization of learning relevant to this inquiry?",
+      "learning-formalization"
+    ],
+    [
+      "pattern-not-induction",
+      "claim",
+      "Pattern recognition or relational feature extraction from a fully observed finite configuration need not be inductive.",
+      "pattern-not-induction"
+    ],
+    [
+      "integration-layer",
+      "hypothesis",
+      "Distributed measurements may support joint relational representations not encoded by any individual sensor.",
+      "integration-layer"
+    ],
+    [
+      "iit-algorithmic-scope",
+      "claim",
+      "IIT is considered only for algorithmic partition, irreducibility and cause-effect-structure machinery, not for consciousness claims.",
+      "iit-scope-user"
+    ],
+    [
+      "temporal-integration",
+      "hypothesis",
+      "Memory can be treated abstractly as integration of measurements distributed across time.",
+      "temporal-integration"
+    ],
+    [
+      "stateful-computation",
+      "hypothesis",
+      "Stateful computation over an information stream is a general substrate for memory and integration, but does not by itself settle epistemic warrant.",
+      "stateful-computation"
+    ],
+    [
+      "q-warrant-return",
+      "question",
+      "How should warrant of warrant be formalized once certainty is removed from the target?",
+      "warrant-return"
+    ],
+    [
+      "warrant-return",
+      "claim",
+      "The inquiry should return from implementation-level pattern and learning theories to the original warrant question.",
+      "drift-admission"
+    ],
+    [
+      "ampliative-constraints",
+      "hypothesis",
+      "Ampliative warrant requires assumptions or constraints beyond bare logical entailment from finite evidence.",
+      "ampliative-constraints"
+    ],
+    [
+      "possibility-set",
+      "hypothesis",
+      "External reality plus partial observation plus logic yields a set of compatible possibilities, not by itself a unique ampliative conclusion.",
+      "possibility-set"
+    ],
+    [
+      "q-constraint-generation",
+      "question",
+      "What role does generation of candidate constraints play in black-box inference?",
+      "constraint-generation"
+    ],
+    [
+      "optimization-too-early",
+      "claim",
+      "Choosing an optimal hypothesis is downstream of first characterizing the kinds of epistemic moves available.",
+      "optimization-too-early"
+    ],
+    [
+      "q-information-condition",
+      "question",
+      "Under what conditions does evidence E contain information relevant to a proposition H?",
+      "information-condition"
+    ],
+    [
+      "assumed-not-known",
+      "claim",
+      "For an embedded observer, constraints used in derivations should be described as assumed rather than known.",
+      "assumed-not-known"
+    ],
+    [
+      "q-induction-abduction-blur",
+      "question",
+      "Can the apparent overlap between induction and abduction be explained by a deeper compositional formalism?",
+      "induction-abduction-blur"
+    ],
+    [
+      "constraint-broader-explanation",
+      "claim",
+      "A constraint is broader than an explanation or mechanism; empirical, causal and explanatory commitments can occupy different levels.",
+      "constraint-broader"
+    ],
+    [
+      "formalism-goal",
+      "goal",
+      "Construct a coherent formalism for epistemic moves without preserving historical inference labels when they obscure the structure.",
+      "formalism-goal"
+    ],
+    [
+      "q-ampliative-mece",
+      "question",
+      "Can ampliative epistemic moves be represented in a provably MECE or uniquely factorizable way?",
+      "mece-goal"
+    ],
+    [
+      "mece-first-cut",
+      "hypothesis",
+      "Relative to a current epistemic state, entailment versus non-entailment is an immediate MECE logical split.",
+      "mece-first-cut"
+    ],
+    [
+      "mece-goal",
+      "goal",
+      "Make exhaustiveness and non-overlap provable by construction rather than asserted from a folk taxonomy.",
+      "mece-goal"
+    ],
+    [
+      "model-target-composition",
+      "hypothesis",
+      "Model-target effects can be represented as an exact subset of language, structure, parameter and state coordinates rather than one exclusive target.",
+      "support-subset"
+    ],
+    [
+      "representation-contract",
+      "claim",
+      "Any nontrivial target factorization is canonical only relative to a declared representation contract, because structure, parameters and state can be recoded.",
+      "canonical-factorization"
+    ],
+    [
+      "q-canonical-transition",
+      "question",
+      "What factorization of epistemic state change can be canonical relative to an explicit representation contract?",
+      "canonical-factorization"
+    ],
+    [
+      "mece-property",
+      "claim",
+      "MECE is a desired property of the formalism, not the name of the formal object.",
+      "mece-property"
+    ],
+    [
+      "canonical-factorization",
+      "goal",
+      "Construct a canonical factorization of epistemic transitions relative to an explicit semantic representation contract.",
+      "canonical-factorization"
+    ],
+    [
+      "certainty-free-goal",
+      "goal",
+      "Classify hypothesis and model moves without requiring certainty or strong knowledge claims.",
+      "certainty-free-goal"
+    ],
+    [
+      "hypothesis-move-calculus",
+      "goal",
+      "Develop a formal compositional calculus of hypothesis-space transformations with a separate warrant layer.",
+      "move-calculus"
+    ],
+    [
+      "five-not-minimal",
+      "claim",
+      "The earlier five proposed move types were not a minimal state-update basis.",
+      "five-not-minimal"
+    ],
+    [
+      "expand-restrict-basis",
+      "hypothesis",
+      "For a fixed hypothesis universe, hard live-set changes reduce to additions and deletions; preserve, restrict, expand and replace are derived cases.",
+      "expand-restrict"
+    ],
+    [
+      "state-universe",
+      "concept",
+      "U: the current semantic universe or model space of expressible hypotheses.",
+      "state-model"
+    ],
+    [
+      "live-hypotheses",
+      "concept",
+      "H: the currently live hypotheses or possibilities within U.",
+      "state-model"
+    ],
+    [
+      "graded-support",
+      "concept",
+      "mu: optional graded support or plausibility over live hypotheses.",
+      "state-model"
+    ],
+    [
+      "add-set",
+      "concept",
+      "A: hypotheses newly live after semantic alignment of the previous state.",
+      "state-delta"
+    ],
+    [
+      "delete-set",
+      "concept",
+      "D: previously live aligned hypotheses no longer live after the update.",
+      "state-delta"
+    ],
+    [
+      "state-delta-factorization",
+      "hypothesis",
+      "Epistemic state change can be factored, relative to semantic alignment, into representation-space change, additions, deletions and graded-support change.",
+      "state-delta"
+    ],
+    [
+      "candidate-generation",
+      "concept",
+      "Candidate generation maps current state and evidence to candidate propositions, models or structures before evaluation and commitment.",
+      "candidate-generation-open"
+    ],
+    [
+      "warrant-layer",
+      "concept",
+      "Warrant evaluates whether a candidate-to-commitment move has a specified justification or guarantee under explicit assumptions.",
+      "warrant-definition"
+    ],
+    [
+      "warrant-certificate",
+      "hypothesis",
+      "A warrant certificate records explicit assumptions, a claimed guarantee and support connecting the assumptions to that guarantee.",
+      "warrant-certificate"
+    ],
+    [
+      "three-layer-separation",
+      "claim",
+      "Candidate generation, warrant/evaluation and epistemic state update are distinct layers and should not be collapsed into a named inference method.",
+      "three-layers"
+    ],
+    [
+      "ampliative-world-restriction",
+      "claim",
+      "Nontrivial ampliative guarantees require restrictions on the admissible possible-world or problem class.",
+      "world-restriction"
+    ],
+    [
+      "q-candidate-generation-factorization",
+      "question",
+      "Can candidate generation be given a small compositional or uniquely factorizable basis?",
+      "candidate-generation-open"
+    ],
+    [
+      "q-warrant-postulates",
+      "question",
+      "What minimal warrant postulates and representation theorems should govern non-entailing commitment changes?",
+      "warrant-certificate"
+    ],
+    [
+      "current-endpoint",
+      "hypothesis",
+      "Current endpoint: factor epistemic state change relative to a representation contract, keep warrant separate, and treat candidate-generation factorization as open.",
+      "candidate-generation-open"
     ]
   ],
   "relations": [
@@ -1000,6 +1353,336 @@
       "v1",
       "q-existing-ontology",
       "v1-request"
+    ],
+    [
+      "related_to",
+      "q-measurement-sufficient",
+      "q-perceptual",
+      "measurement-sufficient"
+    ],
+    [
+      "answers",
+      "measurement-boundary",
+      "q-measurement-sufficient",
+      "measurement-boundary"
+    ],
+    [
+      "candidate_for",
+      "pattern-theory-candidate",
+      "q-pattern-operation",
+      "pattern-theory"
+    ],
+    [
+      "supersedes",
+      "bronstein-demoted",
+      "bronstein",
+      "bronstein-demoted"
+    ],
+    [
+      "challenges",
+      "pattern-theory-limit",
+      "pattern-theory-candidate",
+      "pattern-theory-limit"
+    ],
+    [
+      "reframes",
+      "q-pattern-operation",
+      "q-pattern-foundation",
+      "equivalence-objection"
+    ],
+    [
+      "challenges",
+      "equivalence-not-fundamental",
+      "invariant-pattern",
+      "equivalence-correction"
+    ],
+    [
+      "related_to",
+      "q-learning-formalization",
+      "q-natural-learning",
+      "learning-formalization"
+    ],
+    [
+      "challenges",
+      "pattern-not-induction",
+      "recognition-is-projection",
+      "pattern-not-induction"
+    ],
+    [
+      "challenges",
+      "pattern-not-induction",
+      "induction-first",
+      "pattern-not-induction"
+    ],
+    [
+      "related_to",
+      "integration-layer",
+      "dots",
+      "integration-layer"
+    ],
+    [
+      "related_to",
+      "iit-algorithmic-scope",
+      "integration-layer",
+      "iit-scope"
+    ],
+    [
+      "related_to",
+      "temporal-integration",
+      "integration-layer",
+      "temporal-integration"
+    ],
+    [
+      "related_to",
+      "stateful-computation",
+      "temporal-integration",
+      "stateful-computation"
+    ],
+    [
+      "related_to",
+      "q-warrant-return",
+      "q-warrant",
+      "warrant-return"
+    ],
+    [
+      "motivates",
+      "warrant-return",
+      "q-warrant-return",
+      "drift-admission"
+    ],
+    [
+      "candidate_for",
+      "ampliative-constraints",
+      "q-warrant-return",
+      "ampliative-constraints"
+    ],
+    [
+      "related_to",
+      "possibility-set",
+      "white-black-box",
+      "possibility-set"
+    ],
+    [
+      "related_to",
+      "q-constraint-generation",
+      "q-induction-foundation",
+      "constraint-generation"
+    ],
+    [
+      "challenges",
+      "optimization-too-early",
+      "method-classes",
+      "optimization-too-early"
+    ],
+    [
+      "reframes",
+      "q-warrant-return",
+      "q-information-condition",
+      "information-condition"
+    ],
+    [
+      "distinguishes",
+      "assumed-not-known",
+      "white-black-box",
+      "assumed-not-known"
+    ],
+    [
+      "related_to",
+      "q-induction-abduction-blur",
+      "q-taxonomy",
+      "induction-abduction-blur"
+    ],
+    [
+      "related_to",
+      "constraint-broader-explanation",
+      "q-induction-abduction-blur",
+      "constraint-broader"
+    ],
+    [
+      "motivates",
+      "q-induction-abduction-blur",
+      "formalism-goal",
+      "formalism-goal"
+    ],
+    [
+      "reframes",
+      "q-exhaustive",
+      "q-ampliative-mece",
+      "mece-goal"
+    ],
+    [
+      "candidate_for",
+      "mece-first-cut",
+      "q-ampliative-mece",
+      "mece-first-cut"
+    ],
+    [
+      "part_of",
+      "mece-goal",
+      "formalism-goal",
+      "mece-goal"
+    ],
+    [
+      "candidate_for",
+      "model-target-composition",
+      "q-ampliative-mece",
+      "support-subset"
+    ],
+    [
+      "depends_on",
+      "canonical-factorization",
+      "representation-contract",
+      "canonical-factorization"
+    ],
+    [
+      "related_to",
+      "mece-property",
+      "mece-goal",
+      "mece-property"
+    ],
+    [
+      "motivates",
+      "mece-goal",
+      "canonical-factorization",
+      "canonical-factorization"
+    ],
+    [
+      "motivates",
+      "q-warrant",
+      "certainty-free-goal",
+      "certainty-free-goal"
+    ],
+    [
+      "depends_on",
+      "hypothesis-move-calculus",
+      "certainty-free-goal",
+      "move-calculus"
+    ],
+    [
+      "depends_on",
+      "hypothesis-move-calculus",
+      "canonical-factorization",
+      "move-calculus"
+    ],
+    [
+      "challenges",
+      "five-not-minimal",
+      "method-classes",
+      "five-not-minimal"
+    ],
+    [
+      "candidate_for",
+      "expand-restrict-basis",
+      "q-canonical-transition",
+      "expand-restrict"
+    ],
+    [
+      "part_of",
+      "state-universe",
+      "state-delta-factorization",
+      "state-model"
+    ],
+    [
+      "part_of",
+      "live-hypotheses",
+      "state-delta-factorization",
+      "state-model"
+    ],
+    [
+      "part_of",
+      "graded-support",
+      "state-delta-factorization",
+      "state-model"
+    ],
+    [
+      "part_of",
+      "add-set",
+      "state-delta-factorization",
+      "state-delta"
+    ],
+    [
+      "part_of",
+      "delete-set",
+      "state-delta-factorization",
+      "state-delta"
+    ],
+    [
+      "answers",
+      "state-delta-factorization",
+      "q-canonical-transition",
+      "state-delta"
+    ],
+    [
+      "related_to",
+      "candidate-generation",
+      "q-induction-abduction-blur",
+      "candidate-generation-open"
+    ],
+    [
+      "related_to",
+      "warrant-layer",
+      "q-warrant-return",
+      "warrant-definition"
+    ],
+    [
+      "candidate_for",
+      "warrant-certificate",
+      "q-warrant-postulates",
+      "warrant-certificate"
+    ],
+    [
+      "supports",
+      "ampliative-world-restriction",
+      "warrant-certificate",
+      "world-restriction"
+    ],
+    [
+      "distinguishes",
+      "candidate-generation",
+      "warrant-layer",
+      "three-layers"
+    ],
+    [
+      "related_to",
+      "three-layer-separation",
+      "state-delta-factorization",
+      "three-layers"
+    ],
+    [
+      "reframes",
+      "q-ampliative-mece",
+      "q-candidate-generation-factorization",
+      "candidate-generation-open"
+    ],
+    [
+      "depends_on",
+      "q-candidate-generation-factorization",
+      "candidate-generation",
+      "candidate-generation-open"
+    ],
+    [
+      "related_to",
+      "q-warrant-postulates",
+      "q-warrant",
+      "warrant-certificate"
+    ],
+    [
+      "part_of",
+      "state-delta-factorization",
+      "current-endpoint",
+      "state-delta"
+    ],
+    [
+      "part_of",
+      "three-layer-separation",
+      "current-endpoint",
+      "three-layers"
+    ],
+    [
+      "depends_on",
+      "current-endpoint",
+      "q-candidate-generation-factorization",
+      "candidate-generation-open"
     ]
   ],
   "moves": [
@@ -1632,6 +2315,445 @@
         "v1"
       ],
       "v1-request"
+    ],
+    [
+      "ask",
+      [
+        "q-perceptual"
+      ],
+      [
+        "q-measurement-sufficient"
+      ],
+      "measurement-sufficient"
+    ],
+    [
+      "clarify",
+      [
+        "q-measurement-sufficient"
+      ],
+      [
+        "measurement-boundary"
+      ],
+      "measurement-boundary"
+    ],
+    [
+      "connect",
+      [
+        "measurement-boundary"
+      ],
+      [
+        "pattern-theory-candidate"
+      ],
+      "pattern-theory"
+    ],
+    [
+      "challenge",
+      [
+        "bronstein"
+      ],
+      [
+        "bronstein-demoted"
+      ],
+      "bronstein-demoted"
+    ],
+    [
+      "challenge",
+      [
+        "pattern-theory-candidate"
+      ],
+      [
+        "pattern-theory-limit"
+      ],
+      "pattern-theory-limit"
+    ],
+    [
+      "challenge",
+      [
+        "pattern-theory-limit"
+      ],
+      [
+        "q-pattern-foundation"
+      ],
+      "equivalence-objection"
+    ],
+    [
+      "clarify",
+      [
+        "q-pattern-foundation"
+      ],
+      [
+        "equivalence-not-fundamental"
+      ],
+      "equivalence-correction"
+    ],
+    [
+      "ask",
+      [
+        "q-natural-learning"
+      ],
+      [
+        "q-learning-formalization"
+      ],
+      "learning-formalization"
+    ],
+    [
+      "distinguish",
+      [
+        "recognition-is-projection"
+      ],
+      [
+        "pattern-not-induction"
+      ],
+      "pattern-not-induction"
+    ],
+    [
+      "connect",
+      [
+        "dots"
+      ],
+      [
+        "integration-layer"
+      ],
+      "integration-layer"
+    ],
+    [
+      "clarify",
+      [
+        "integration-layer"
+      ],
+      [
+        "iit-algorithmic-scope"
+      ],
+      "iit-scope"
+    ],
+    [
+      "hypothesize",
+      [
+        "integration-layer"
+      ],
+      [
+        "temporal-integration"
+      ],
+      "temporal-integration"
+    ],
+    [
+      "hypothesize",
+      [
+        "temporal-integration"
+      ],
+      [
+        "stateful-computation"
+      ],
+      "stateful-computation"
+    ],
+    [
+      "reframe",
+      [
+        "q-pattern-foundation"
+      ],
+      [
+        "q-warrant-return"
+      ],
+      "warrant-return"
+    ],
+    [
+      "summarize",
+      [
+        "q-warrant-return"
+      ],
+      [
+        "warrant-return"
+      ],
+      "drift-admission"
+    ],
+    [
+      "hypothesize",
+      [
+        "warrant-return"
+      ],
+      [
+        "ampliative-constraints"
+      ],
+      "ampliative-constraints"
+    ],
+    [
+      "connect",
+      [
+        "white-black-box"
+      ],
+      [
+        "possibility-set"
+      ],
+      "possibility-set"
+    ],
+    [
+      "ask",
+      [
+        "possibility-set"
+      ],
+      [
+        "q-constraint-generation"
+      ],
+      "constraint-generation"
+    ],
+    [
+      "challenge",
+      [
+        "method-classes"
+      ],
+      [
+        "optimization-too-early"
+      ],
+      "optimization-too-early"
+    ],
+    [
+      "reframe",
+      [
+        "q-warrant-return"
+      ],
+      [
+        "q-information-condition"
+      ],
+      "information-condition"
+    ],
+    [
+      "distinguish",
+      [
+        "white-black-box"
+      ],
+      [
+        "assumed-not-known"
+      ],
+      "assumed-not-known"
+    ],
+    [
+      "ask",
+      [
+        "q-taxonomy"
+      ],
+      [
+        "q-induction-abduction-blur"
+      ],
+      "induction-abduction-blur"
+    ],
+    [
+      "clarify",
+      [
+        "q-induction-abduction-blur"
+      ],
+      [
+        "constraint-broader-explanation"
+      ],
+      "constraint-broader"
+    ],
+    [
+      "scope",
+      [
+        "q-induction-abduction-blur",
+        "q-exhaustive"
+      ],
+      [
+        "formalism-goal"
+      ],
+      "formalism-goal"
+    ],
+    [
+      "propose",
+      [
+        "formalism-goal"
+      ],
+      [
+        "mece-first-cut"
+      ],
+      "mece-first-cut"
+    ],
+    [
+      "clarify",
+      [
+        "mece-first-cut"
+      ],
+      [
+        "mece-goal"
+      ],
+      "mece-goal"
+    ],
+    [
+      "ask",
+      [
+        "mece-goal"
+      ],
+      [
+        "q-ampliative-mece"
+      ],
+      "mece-goal"
+    ],
+    [
+      "propose",
+      [
+        "mece-goal"
+      ],
+      [
+        "model-target-composition"
+      ],
+      "support-subset"
+    ],
+    [
+      "ask",
+      [
+        "mece-goal"
+      ],
+      [
+        "q-canonical-transition"
+      ],
+      "formal-object"
+    ],
+    [
+      "clarify",
+      [
+        "q-canonical-transition"
+      ],
+      [
+        "mece-property"
+      ],
+      "mece-property"
+    ],
+    [
+      "propose",
+      [
+        "mece-property"
+      ],
+      [
+        "canonical-factorization"
+      ],
+      "canonical-factorization"
+    ],
+    [
+      "reframe",
+      [
+        "q-warrant"
+      ],
+      [
+        "certainty-free-goal"
+      ],
+      "certainty-free-goal"
+    ],
+    [
+      "clarify",
+      [
+        "certainty-free-goal"
+      ],
+      [
+        "hypothesis-move-calculus"
+      ],
+      "stop-know"
+    ],
+    [
+      "challenge",
+      [
+        "hypothesis-move-calculus"
+      ],
+      [
+        "five-not-minimal"
+      ],
+      "five-not-minimal"
+    ],
+    [
+      "propose",
+      [
+        "five-not-minimal"
+      ],
+      [
+        "expand-restrict-basis"
+      ],
+      "expand-restrict"
+    ],
+    [
+      "decompose",
+      [
+        "hypothesis-move-calculus"
+      ],
+      [
+        "candidate-generation",
+        "warrant-layer",
+        "state-delta-factorization"
+      ],
+      "three-layers"
+    ],
+    [
+      "propose",
+      [
+        "state-delta-factorization"
+      ],
+      [
+        "state-universe",
+        "live-hypotheses",
+        "graded-support"
+      ],
+      "state-model"
+    ],
+    [
+      "summarize",
+      [
+        "state-universe",
+        "live-hypotheses",
+        "graded-support"
+      ],
+      [
+        "state-delta-factorization"
+      ],
+      "state-delta"
+    ],
+    [
+      "ask",
+      [
+        "candidate-generation"
+      ],
+      [
+        "q-candidate-generation-factorization"
+      ],
+      "candidate-generation-open"
+    ],
+    [
+      "summarize",
+      [
+        "state-delta-factorization",
+        "three-layer-separation",
+        "q-candidate-generation-factorization"
+      ],
+      [
+        "current-endpoint"
+      ],
+      "candidate-generation-open"
+    ],
+    [
+      "propose",
+      [
+        "warrant-layer"
+      ],
+      [
+        "warrant-certificate"
+      ],
+      "warrant-certificate"
+    ],
+    [
+      "clarify",
+      [
+        "warrant-certificate"
+      ],
+      [
+        "ampliative-world-restriction"
+      ],
+      "world-restriction"
+    ],
+    [
+      "clarify",
+      [
+        "warrant-layer"
+      ],
+      [
+        "warrant-layer"
+      ],
+      "warrant-definition"
     ]
   ],
   "stances": [
@@ -1739,6 +2861,56 @@
       "recurrent-inference",
       "posits",
       "loop-return"
+    ],
+    [
+      "bronstein-demoted",
+      "posits",
+      "bronstein-demoted"
+    ],
+    [
+      "pattern-theory-limit",
+      "posits",
+      "pattern-theory-limit"
+    ],
+    [
+      "equivalence-not-fundamental",
+      "posits",
+      "equivalence-correction"
+    ],
+    [
+      "pattern-not-induction",
+      "posits",
+      "pattern-not-induction"
+    ],
+    [
+      "iit-algorithmic-scope",
+      "posits",
+      "iit-scope-user"
+    ],
+    [
+      "assumed-not-known",
+      "posits",
+      "assumed-not-known"
+    ],
+    [
+      "mece-goal",
+      "posits",
+      "mece-goal"
+    ],
+    [
+      "certainty-free-goal",
+      "posits",
+      "certainty-free-goal"
+    ],
+    [
+      "state-delta-factorization",
+      "posits",
+      "state-delta"
+    ],
+    [
+      "three-layer-separation",
+      "posits",
+      "three-layers"
     ]
   ],
   "question_updates": [
@@ -1777,6 +2949,28 @@
       "open",
       "foundations-open",
       []
+    ],
+    [
+      "q-measurement-sufficient",
+      "answered",
+      "measurement-boundary",
+      [
+        "measurement-boundary"
+      ]
+    ],
+    [
+      "q-warrant",
+      "reopened",
+      "warrant-return",
+      []
+    ],
+    [
+      "q-canonical-transition",
+      "answered",
+      "state-delta",
+      [
+        "state-delta-factorization"
+      ]
     ]
   ]
 }

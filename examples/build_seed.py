@@ -31,13 +31,22 @@ for i, (kind, a, b, key) in enumerate(cur["relations"], 1):
     roles = list(SIGNATURES[kind])
     c.relations.append(Relation(id=f"{source.id}:r:{i:03}",kind=kind,
         bindings=[Binding(role=roles[0],ref=nid(a)),Binding(role=roles[1],ref=nid(b))],anchors=ground(key)))
-last = None
+move_rows = []
 for i, (kind, inputs, outputs, key) in enumerate(cur["moves"], 1):
-    move_id = f"{source.id}:m:{i:03}"
-    # 'after' is source chronology only, not a claim the previous move caused this one.
-    c.moves.append(Move(id=move_id,kind=kind,input_ids=[nid(s) for s in inputs],
-        output_ids=[nid(s) for s in outputs],after_move_ids=[last] if last else [],**event(key)))
-    last = move_id
+    move_rows.append((f"{source.id}:m:{i:03}", kind, inputs, outputs, key, mid(key).ordinal))
+
+# 'after' records source chronology only, not causal succession. Multiple
+# reconstructed moves can be grounded in the same excerpt; those moves are
+# parallel and all depend on the immediately preceding distinct excerpt group.
+previous_group_ids = []
+for ordinal in sorted({row[5] for row in move_rows}):
+    group = [row for row in move_rows if row[5] == ordinal]
+    current_group_ids = []
+    for move_id, kind, inputs, outputs, key, _ in group:
+        c.moves.append(Move(id=move_id,kind=kind,input_ids=[nid(s) for s in inputs],
+            output_ids=[nid(s) for s in outputs],after_move_ids=previous_group_ids,**event(key)))
+        current_group_ids.append(move_id)
+    previous_group_ids = current_group_ids
 for i,(target, stance, key) in enumerate(cur["stances"],1):
     c.stance_events.append(StanceEvent(id=f"{source.id}:s:{i:03}", target_id=nid(target),
         stance=stance, origin="explicit", **event(key)))

@@ -69,3 +69,9 @@ Merge is an exact-identity union: identical records at the same ID collapse; dif
 ## 8. Conditional usefulness, not an axiomatic theory of learning
 
 The graph supports asking which states and moves are associated with better outcomes. A policy could be written `π(move | expressed_state, history, task)`. V1 neither learns that policy nor equates observed move sequences with the model's actual computation. Empirical comparisons need independent task outcomes, matched baselines and held-out tasks. The representation makes such work possible without claiming to solve induction, abduction, or the metaphysics of observers.
+
+## 9. Research formalism versus graph ontology
+
+The later dialogue develops a separate research proposal for factoring epistemic states and transitions. That proposal is documented in [epistemic-transition-calculus.md](epistemic-transition-calculus.md) and should **not** be confused with the executable inquiry-graph schema above. The graph records that proposal, its objections, and its open questions; it does not enforce the proposed calculus as its own ontology.
+
+The current research endpoint models an epistemic state schematically as `K = (U, H, mu)` and factors a state change, relative to a semantic alignment map, into representation-space change, additions, deletions, and graded-support change. Candidate generation and warrant/evaluation are intentionally separate layers. These remain research hypotheses, while the source-grounding and graph-validation rules in sections 1–7 are implemented contracts.
