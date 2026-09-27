@@ -810,3 +810,54 @@ This is deliberately a probability of the **support condition**, not automatical
 The implementation is in src/inquiry_graph/support.py, with tests covering antichain normalization, semiring/lattice laws, absorption, overlapping alternatives, and consistency conditioning.
 
 The next algebraic frontier is negative/defeasible support rather than further refinement of the positive-support algebra.
+
+## 30. Defeat was separated from positive support
+
+The next pass checked the obvious existing formalisms before attempting a negative-support algebra.
+
+The result is that “negative support” was the wrong primitive target. Pollock distinguishes **rebutting** defeaters, which support an opposing conclusion, from **undercutting** defeaters, which attack the inferential connection itself. ASPIC+ makes the structure still more explicit by distinguishing rebutting attacks on defeasible conclusions, undercutting attacks on defeasible inference steps, and undermining attacks on ordinary premises. ASPIC+ also separates **attack** from **defeat**, because preferences and attack type can determine whether an attack succeeds.
+
+Assumption-Based Argumentation is especially close to the ATMS-like assumption layer: assumptions have contraries, and an assumption/set is attacked when another supported argument derives one of those contraries.
+
+The architecture is therefore:
+
+[
+\boxed{
+\text{positive support provenance}
++
+\text{structured attacks}
++
+\text{attack-to-defeat resolution}
++
+\text{abstract acceptability semantics}
+}
+]
+
+rather than signed support values.
+
+## 31. First executable defeat semantics
+
+A small research module now represents arguments carrying the existing positive SupportAntichain and explicit successful typed defeats.
+
+The first acceptability semantics is Dung grounded semantics:
+
+[
+Gr=\operatorname{lfp}(F),
+]
+
+where the characteristic function returns arguments whose defeaters are themselves defeated by the candidate defending set.
+
+The implementation intentionally consumes **successful defeats**, not raw attacks. Automatic ASPIC+/ABA attack construction and preference-sensitive attack-to-defeat resolution remain upstream and open.
+
+This keeps the layers clean:
+
+[
+\text{argument exists and has positive support}
+\neq
+\text{argument is dialectically acceptable}.
+]
+
+The integration is documented in [defeat-argumentation-integration.md](defeat-argumentation-integration.md).
+
+As with the previous literature-driven passes, this research note is not retroactively inserted into the stored source-grounded dialogue graph; the current live turn can be grounded later during transcript reconciliation.
+

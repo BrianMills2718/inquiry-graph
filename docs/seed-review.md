@@ -141,3 +141,16 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Independence is a regime assumption.** The executable probability interpreter is a small reference model, not the project's universal uncertainty calculus. Correlated assumptions require a different interpretation over the same symbolic support structure.
 
 **Negative support is still separate.** Rebuttal, undercutting, priorities and support-for-negation are not represented by the positive antichain algebra. Do not encode defeat by ad hoc negative numbers.
+
+## Defeat/argumentation refinement cautions
+
+**Positive support is not dialectical acceptance.** An argument can retain its minimal support environments even while being defeated. Do not delete or numerically negate its support provenance when a counterargument appears.
+
+**Attack is not automatically defeat.** ASPIC+ distinguishes conflict from successful defeat; rebutting and undermining attacks may depend on preferences or conflict-point comparisons. The current executable module consumes already-resolved defeats and does not infer success from the attack-kind label.
+
+**Rebut, undercut and undermine target different structures.** Rebuttal concerns a defeasible conclusion, undercutting concerns an inference step, and undermining concerns an ordinary premise. Avoid flattening them into a generic negative-support edge when the target location matters.
+
+**Grounded semantics is deliberately conservative.** Mutual or cyclic defeats may remain undecided. This is not an error and should not be rewritten as a forced winner.
+
+**ABA and ASPIC+ are candidate structured-attack bridges, not interchangeable names.** ABA aligns naturally with assumptions/contraries; ASPIC+ provides richer explicit attack locations, strict/defeasible rules and preference handling. The project has not yet selected one as the universal structured-argument layer.
+
