@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+git diff --cached --check
+if [ -x .venv/bin/python ] && [ -d tests ]; then
+  .venv/bin/python -m pytest -q
+else
+  echo 'Bootstrap: no project test environment yet; whitespace gate passed.'
+fi

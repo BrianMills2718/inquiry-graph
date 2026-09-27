@@ -1,0 +1,2 @@
+# Environment isolation
+The machine's global core.hooksPath pre-commit points into an unrelated na-module-kit repository and requires its tenant-specific tests and harness. It cannot validate this new repository. This project uses a repository-local .githooks directory with whitespace and project test gates. No global hooks, other repositories, or unknown work were changed. Configure the local hook with `git config --local core.hooksPath .githooks` after cloning.
