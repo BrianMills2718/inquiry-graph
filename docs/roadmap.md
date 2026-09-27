@@ -8,7 +8,7 @@ This is a small local-first toolkit, not a deployed application or a learned rea
 
 ## V1.1: source reconciliation and review
 
-Import Brian's full export and reconcile the 197 curated excerpts against actual message IDs/branches. Add an explicit reviewer/annotation-decision log and a focused review UI. Evaluate false closure and actor attribution first. Add extraction-quality fixtures independent of the founding discussion.
+Import Brian's full export and reconcile the 207 curated excerpts against actual message IDs/branches. Add an explicit reviewer/annotation-decision log and a focused review UI. Evaluate false closure and actor attribution first. Add extraction-quality fixtures independent of the founding discussion.
 
 ## V1.2: cross-conversation identity and incremental updates
 

@@ -85,3 +85,15 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Reflection does not imply hidden introspection.** A public conversation can explicitly discuss its own reasoning process. That licenses an about relation to the represented dialogue/model, not a claim of privileged access to hidden neural or model-internal states.
 
 **Strategy episodes remain provisional.** The current executable schema has no dedicated strategy-episode record. Strategy methods and grounded example episodes are a conservative bridge. If empirical strategy analysis becomes central, reify episodes only after designing span membership, nesting, attribution and review semantics.
+
+## Candidate-generation-interface cautions
+
+**The interface is more general than any one synthesis literature.** Program synthesis, CEGIS, ILP and abduction motivate the separation among draft space, operators, search strategy and feedback. The project is not claiming those domains are identical or that their local operator sets can be unified without loss.
+
+**Reachable draft is not accepted hypothesis.** Membership in \(\operatorname{Reach}(R)\) means constructible under the declared draft system, not formally valid, empirically supported or warranted.
+
+**Evaluator feedback is typed, not truth itself.** A counterexample, type error, literature hit, data mismatch or failed proof obligation has different semantics. Do not collapse all evaluator outputs into one confidence score without an explicit aggregation rule.
+
+**The worked canonical-factorization trace is reconstructed.** It summarizes a long public dialogue into draft/evaluation/repair stages. The trace is useful for testing the interface but remains a curator interpretation, not a verbatim hidden reasoning log.
+
+**Question closure is partial.** The interface gives a concrete answer to how candidate generation can be structured without a universal operator list, but the draft-generation algebra and warrant problem remain open.

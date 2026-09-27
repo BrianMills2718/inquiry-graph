@@ -1,6 +1,6 @@
 # Metareasoning, strategy, and reflection — current extension
 
-> **Status:** research draft extending the assumption-context meta-model. It integrates established work on metareasoning, strategy selection, and reflective architectures with the project's existing formal representation, support-context, and dialogue-provenance layers. It is not a claim that one optimal strategy calculus has been established.
+> **Status:** research draft extending the assumption-context meta-model. It integrates established work on metareasoning, strategy selection, and reflective architectures with the project's existing formal representation, support-context, and dialogue-provenance layers. A later pass makes the candidate-generation/search interface and one worked canonical-factorization trace explicit in [candidate-generation-interface.md](candidate-generation-interface.md). It is not a claim that one optimal strategy calculus has been established.
 
 ## 1. Why another layer is needed
 
@@ -478,7 +478,17 @@ R=(\mathcal F,K_{\mathcal F},\Gamma,Q)
 
 Reflection is not another stack layer. It is enabled because the objects in these layers are first-class targets connected by about.
 
-## 17. What remains genuinely unresolved
+## 17. Subsequent candidate-generation concretization
+
+The next pass replaced the vague generator `g(R) -> d` with a structured draft-generation system
+
+\[
+\mathcal G_R=(\mathcal D_R,d_0,\mathcal O_R,\rightarrow_R),
+\]
+
+separating **what drafts are reachable**, **which construction/refinement operators are available**, **how strategy explores that space**, **formal elaboration**, **evaluation feedback**, and **epistemic warrant**. The founding conversation was then reconstructed as a worked canonical-factorization trace through several failure/repair cycles. See [candidate-generation-interface.md](candidate-generation-interface.md).
+
+## 18. What remains genuinely unresolved
 
 The research frontier is now narrower:
 

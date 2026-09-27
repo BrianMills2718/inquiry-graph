@@ -173,1385 +173,1503 @@ flowchart TD
   n166["move: propose"]
   n167["move: generalize"]
   n168["move: ask"]
-  n169["concept: A: hypotheses newly live after semantic alignment of the previous state."]
-  n170["reference: AIF+ and Inference Anchoring Theory as candidate dialogue/argument representations."]
-  n171["hypothesis: Candidate generation may be better modeled as an algebra over languages, expressions, theories and queries than as a short folk list of cognitive verbs."]
-  n172["hypothesis: Ampliative warrant requires assumptions or constraints beyond bare logical entailment from finite evidence."]
-  n173["claim: Nontrivial ampliative guarantees require restrictions on the admissible possible-world or problem class."]
-  n174["claim: For an embedded observer, constraints used in derivations should be described as assumed rather than known."]
-  n175["claim: Assumption is normally a role played by a sentence or theory rather than a base formal artifact type."]
-  n176["concept: An ATMS-style environment is a consistent set of assumptions under which consequences can be evaluated."]
-  n177["concept: A label records minimal consistent assumption environments sufficient to support a datum."]
-  n178["reference: de Kleer's Assumption-based Truth Maintenance System as a precedent for multiple simultaneous assumption environments and dependency labels."]
-  n179["hypothesis: Persistent epistemic organization can be represented as assumptions, explicit justifications and minimal support environments rather than one committed theory."]
-  n180["goal: Derive a taxonomy from modest explicit assumptions rather than simply assuming it."]
-  n181["claim: Conditionalization presupposes a hypothesis space, likelihoods and priors; it does not ground all of them."]
-  n182["method: A Bayesian or causal DAG as a candidate representation of inferential relationships."]
-  n183["hypothesis: Belief change depends on existing representations and an agent-specific updating process."]
-  n184["claim: The black-box state maintains alternatives; a white-box move temporarily stipulates one context and inspects its consequences."]
-  n185["reference: Bronstein and geometric deep learning as a candidate framework for learning primitives."]
-  n186["claim: Bronstein/geometric deep learning should not be part of the foundational spine merely because it was suggested earlier."]
-  n187["hypothesis: A generated candidate can have a compositional footprint spanning several formal artifact kinds rather than exactly one exclusive type."]
-  n188["concept: Candidate generation maps current state and evidence to candidate propositions, models or structures before evaluation and commitment."]
-  n189["claim: The dialogue itself can serve as an adversarial test case for candidate-generation operators."]
-  n190["claim: The earlier seven candidate types were not orthogonal; some mixed artifact kinds with epistemic roles."]
-  n191["method: Test whether each observed candidate-generation move has a clear artifact footprint and compositional operator description."]
-  n192["goal: Construct a canonical factorization of epistemic transitions relative to an explicit semantic representation contract."]
-  n193["method: Canonical/primitive factorization: propose factors, test completeness/redundancy/independence/compositionality/canonicality, diagnose failures, and revise."]
-  n194["goal: Classify hypothesis and model moves without requiring certainty or strong knowledge claims."]
-  n195["claim: Explanations are only a subset of claims that go beyond observations."]
-  n196["claim: Reasoning episodes, strategies and the meta-model should be representable targets, giving closure under self-description."]
-  n197["claim: Internal coherence alone does not establish correspondence with reality."]
-  n198["concept: Construction of a new expression or concept from constructors and vocabulary already available in the current language."]
-  n199["concept: Introduction of genuinely new conceptual or predicate vocabulary not already definable in the current language."]
-  n200["claim: A constraint is broader than an explanation or mechanism; empirical, causal and explanatory commitments can occupy different levels."]
-  n201["claim: Concept construction inside an existing language and substantive concept invention are different problems."]
-  n202["goal: Instantiate the abstract reasoning model on real conversations and identify strategy episodes and reflective relations with provenance."]
-  n203["method: Test proposed exhaustive or primitive distinctions by constructing concrete counterexamples and edge cases."]
-  n204["hypothesis: Current endpoint: factor epistemic state change relative to a representation contract, keep warrant separate, and treat candidate-generation factorization as open."]
-  n205["hypothesis: Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query."]
-  n206["claim: Deduction and inference by an embedded empirical observer have different dependencies."]
-  n207["concept: Extend a signature with a fresh name explicitly defined from old-language expressions, ideally conservatively."]
-  n208["concept: D: previously live aligned hypotheses no longer live after the update."]
-  n209["hypothesis: Treat communication as a designed transformation of a recipient representation."]
-  n210["example: Recognizing spatial separation of black and white dots from individual positions and colors."]
-  n211["hypothesis: Conditional deductive context is the closure C(Gamma)=Cl_J(Gamma) of a temporary assumption environment under justifications."]
-  n212["example: This dialogue repeatedly split, merged and retyped candidate primitives after detecting over-, under- or misfactoring."]
-  n213["example: This dialogue explicitly turned the developing meta-model back onto the process used to construct that same meta-model."]
-  n214["claim: Equivalence under predictive or causal consequence is better treated as a relevance or model-selection criterion than as the ontology of all patterns."]
-  n215["goal: Evaluate reasoning-move trajectories and learn which strategies work under which conditions."]
-  n216["claim: Evidence need not be a privileged top-level coordinate; reports and observations can be typed provenance-bearing nodes with their own dependencies."]
-  n217["hypothesis: For a fixed hypothesis universe, hard live-set changes reduce to additions and deletions; preserve, restrict, expand and replace are derived cases."]
-  n218["concept: Build an expression using constructors already licensed by the current language."]
-  n219["concept: Underfactored, overfactored and misfactored are diagnostics for revising a proposed primitive decomposition."]
-  n220["claim: Repeated detection of over- and underfactoring is a core recurring reasoning pattern in this inquiry."]
-  n221["claim: The earlier five proposed move types were not a minimal state-update basis."]
-  n222["concept: Elaboration/checking maps a draft candidate to a well-formed formal artifact or failure."]
-  n223["method: Model an inference method as a function from evidence histories to hypotheses."]
-  n224["claim: Institution semantics alone does not provide the concrete syntax/module layer needed to construct and transform formal artifacts."]
-  n225["goal: Construct a coherent formalism for epistemic moves without preserving historical inference labels when they obscure the structure."]
-  n226["goal: Formalize candidate generation using the dialogue as a test case while importing established operators where possible."]
-  n227["hypothesis: Generative structure could be the umbrella object for the inquiry."]
-  n228["method: Symmetry, deformation stability and scale separation/locality as geometric learning priors."]
-  n229["method: When inquiry drifts into downstream implementation or optimization, return explicitly to the original unresolved question."]
-  n230["concept: mu: optional graded support or plausibility over live hypotheses."]
-  n231["reference: Hoel, causal emergence, coarse-graining and entropy, raised as related work."]
-  n232["goal: Develop a formal compositional calculus of hypothesis-space transformations with a separate warrant layer."]
-  n233["claim: Observed conversations underdetermine a person's internal beliefs and update mechanism."]
-  n234["claim: IIT is considered only for algorithmic partition, irreducibility and cause-effect-structure machinery, not for consciousness claims."]
-  n235["hypothesis: Imagination might contribute an additional way to learn beyond observation."]
-  n236["claim: Imagination can generate candidates without independently justifying them."]
-  n237["hypothesis: Inductive pattern recognition could initialize a loop through abduction and deduction."]
-  n238["claim: Institution theory handles language/model semantics while ATMS-like machinery handles support across assumption environments; they are complementary, not competing."]
-  n239["hypothesis: Use an institution-style logical substrate (Sig, Sen, Mod, satisfaction) rather than one overloaded universe variable."]
-  n240["reference: Institution theory as an abstract separation of signatures, sentences, models and satisfaction, with signature morphisms for translation."]
-  n241["hypothesis: Distributed measurements may support joint relational representations not encoded by any individual sensor."]
-  n242["hypothesis: An intermediate repair separates language, model space, live hypotheses and graded support as K=(L,M,H,mu)."]
-  n243["hypothesis: An intermediate state proposal K=(Sigma,T,W,rho,E,Q) separates signature, explicit theory, semantic possibilities, support, evidence and query."]
-  n244["hypothesis: A pattern can be represented by what remains invariant across specified transformations."]
-  n245["claim: An unobserved explanatory variable need not specify the process by which an effect occurs."]
-  n246["concept: Latent structure as an unobserved explanatory representation, not necessarily a causal mechanism."]
-  n247["method: When the problem appears well trodden, search existing formal literature before inventing new primitives."]
-  n248["concept: H: the currently live hypotheses or possibilities within U."]
-  n249["claim: Measurement theory can characterize accessible measured variables without by itself characterizing every structure recognized over those measurements."]
-  n250["hypothesis: Sensors determine accessible distinctions, while memory enables relations across time."]
-  n251["reference: Measurement theory, psychophysics, information theory and computational mechanics as relevant literatures."]
-  n252["hypothesis: Relative to a current epistemic state, entailment versus non-entailment is an immediate MECE logical split."]
-  n253["goal: Make exhaustiveness and non-overlap provable by construction rather than asserted from a folk taxonomy."]
-  n254["claim: MECE is a desired property of the formalism, not the name of the formal object."]
-  n255["claim: MECE is a special case of the broader search for a complete nonredundant compositional factorization."]
-  n256["method: Force proposed external formalisms through the current meta-model and treat mismatches as evidence of a gap or bad factorization."]
-  n257["method: Use established concept-generation formalisms as a stress test of the epistemic meta-model."]
-  n258["claim: Meta-strategy is not a separate infinite type hierarchy; a strategy is meta-level relative to reasoning processes or strategies it monitors or controls."]
-  n259["concept: Classes of evidence-to-conclusion mappings with shared properties."]
-  n260["reference: MMT as a foundation-independent theory/declaration/object/morphism representation and module system."]
-  n261["hypothesis: Use an MMT-like theory graph as the concrete formal representation substrate, with LF as a possible foundation inside it."]
-  n262["hypothesis: Model-target effects can be represented as an exact subset of language, structure, parameter and state coordinates rather than one exclusive target."]
-  n263["claim: Natural learning need not assume a designer; deliberate communication is an additional case."]
-  n264["hypothesis: Optimal explanation or design is a further problem for an observer with an uncertain model of other observers."]
-  n265["concept: God-view versus embedded-observer perspective."]
-  n266["hypothesis: Combine AIF/IAT argument and dialogue structure with provenance and inquiry-transition records."]
-  n267["concept: An open node is an unresolved question or epistemic obligation, not just a mentioned topic."]
-  n268["claim: Choosing an optimal hypothesis is downstream of first characterizing the kinds of epistemic moves available."]
-  n269["claim: Pattern recognition or relational feature extraction from a fully observed finite configuration need not be inductive."]
-  n270["reference: Grenander/Brown Pattern Theory as a candidate formal language for generators, configurations, transformations, variation, observation and inference."]
-  n271["claim: Pattern Theory supplies broad representational and inferential machinery but does not by itself derive all observer representations from physics."]
-  n272["hypothesis: Induction concerns empirical patterns while abduction concerns mechanisms."]
-  n273["claim: Persistent epistemic state and the active assumption context of a reasoning episode should be represented separately."]
-  n274["hypothesis: Current persistent state: K_Sigma=(N,A,J,lambda,rho), with represented nodes, assumptions, justifications, minimal support environments and optional graded support."]
-  n275["concept: Physically realizable pattern recognition, rather than normatively justified recognition."]
-  n276["hypothesis: External reality plus partial observation plus logic yields a set of compatible possibilities, not by itself a unique ampliative conclusion."]
-  n277["example: From the observed sequence 2, 4, 6, 8 to the expectation 10."]
-  n278["claim: Recognizing a sample pattern and licensing its extension beyond the sample are distinct operations."]
-  n279["question: What assumptions and criteria support abductive model selection?"]
-  n280["question: Can ampliative epistemic moves be represented in a provably MECE or uniquely factorizable way?"]
-  n281["question: Does Bayesian updating explain warrant or merely relocate assumptions?"]
-  n282["question: Can candidate generation be given a small compositional or uniquely factorizable basis?"]
-  n283["question: What is the minimal type system for generated epistemic candidates?"]
-  n284["question: What factorization of epistemic state change can be canonical relative to an explicit representation contract?"]
-  n285["question: What claims beyond observation can have support without being explanations?"]
-  n286["question: What role does generation of candidate constraints play in black-box inference?"]
-  n287["question: How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?"]
-  n288["question: Which beyond-observation inferences can an embedded observer make?"]
-  n289["question: Can exhaustiveness of the proposed inference taxonomy be proved?"]
-  n290["question: Which existing ontology captures temporal inquiry evolution and reasoning moves?"]
-  n291["question: What general dynamics make explanations and visual presentations effective?"]
-  n292["question: What is the space of possible explanatory hypotheses?"]
-  n293["question: What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?"]
-  n294["question: What should be formalized next after separating state update from candidate generation?"]
-  n295["question: What general heuristics or formal scaffolding improve thinking across problems?"]
-  n296["question: Can imagination yield knowledge not reducible to inference or introspection?"]
-  n297["question: Can the apparent overlap between induction and abduction be explained by a deeper compositional formalism?"]
-  n298["question: What assumptions minimally support inductive generalization?"]
-  n299["question: Under what conditions does evidence E contain information relevant to a proposition H?"]
-  n300["question: Can symmetry, invariance and stability supply primitives of pattern recognition?"]
-  n301["question: Is structure a set of constraints, or does emergence and computational irreducibility change the ontology?"]
-  n302["question: How is latent structure different from a mechanism?"]
-  n303["question: What is the minimal formalization of learning relevant to this inquiry?"]
-  n304["question: Is algorithm classification the right level for a simple inference taxonomy?"]
-  n305["question: What possible maps take current representations beyond the information currently explicit?"]
-  n306["question: Is measurement theory sufficient to explain the observer-to-pattern problem?"]
-  n307["question: Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?"]
-  n308["question: Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"]
-  n309["question: What minimal entities and relations does this inference sketch require?"]
-  n310["question: How does an embedded observer learn from a non-designed world?"]
-  n311["question: What should be attacked next after the assumption-context refinement?"]
-  n312["question: What does higher order mean, and how does it differ from coarse-graining?"]
-  n313["question: What, if anything, is fundamental about pattern formation before criteria for useful or optimal abstraction are imposed?"]
-  n314["question: What operation makes a relational feature explicit to an observer?"]
-  n315["question: Which dimensions of perceptual space are available to a physically embedded observer?"]
-  n316["question: Which pattern-recognition mappings can physical embedded observers implement?"]
-  n317["question: What established machinery should be checked before freezing the revised meta-model in documentation?"]
-  n318["question: How should repeated self-application of the developing reasoning model be represented?"]
-  n319["question: Is reframe a primitive operation, or is it masking several different transformations?"]
-  n320["question: How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?"]
-  n321["question: Where does canonical factorization live when treated as a reusable cognitive strategy?"]
-  n322["question: Do deduction, induction and abduction exhaust learning beyond observation?"]
-  n323["question: Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?"]
-  n324["question: What warrants the standards by which an inference is warranted?"]
-  n325["question: What minimal warrant postulates and representation theorems should govern non-entailing commitment changes?"]
-  n326["question: How should warrant of warrant be formalized once certainty is removed from the target?"]
-  n327["question: Does Wolfram observer theory characterize physically realizable pattern recognizers?"]
-  n328["claim: The current query/task belongs to a reasoning episode rather than persistent epistemic state."]
-  n329["claim: A mechanism being physically implementable does not establish that it tracks truth."]
-  n330["hypothesis: A reasoning episode can be represented as R=(K_Sigma,Gamma,Q)."]
-  n331["goal: Map the moves that changed the inquiry, not only the concepts mentioned."]
-  n332["claim: Conversations can serve as source-grounded datasets of instantiated reasoning trajectories and proposed strategy episodes."]
-  n333["hypothesis: Recognizing a pattern may itself perform the relevant beyond-token representational step."]
-  n334["hypothesis: Induction, abduction and deduction can feed back into one another rather than forming a fixed pipeline."]
-  n335["hypothesis: Meta-level status is relational: a reasoning episode is meta with respect to the reasoning artifact, strategy or episode it is about."]
-  n336["method: Reflective/self-applicative modeling uses the reasoning model to analyze the reasoning process that is constructing the model."]
-  n337["claim: Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations."]
-  n338["claim: Extracting relations is not necessarily a many-to-one, information-discarding coarse-graining."]
-  n339["claim: Any nontrivial target factorization is canonical only relative to a declared representation contract, because structure, parameters and state can be recoded."]
-  n340["hypothesis: The relevant map may run between representations rather than raw observations and concepts."]
-  n341["hypothesis: Representational lift may be a primitive operation prior to prediction."]
-  n342["goal: Anchor the investigation in existing formal theories rather than reinventing terminology."]
-  n343["hypothesis: Assume an external reality with sufficiently stable rules."]
-  n344["hypothesis: Epistemic state change can be factored, relative to semantic alignment, into representation-space change, additions, deletions and graded-support change."]
-  n345["concept: U: the current semantic universe or model space of expressible hypotheses."]
-  n346["hypothesis: Stateful computation over an information stream is a general substrate for memory and integration, but does not by itself settle epistemic warrant."]
-  n347["hypothesis: A strategy/control layer selects and sequences lower-level reasoning operators; strategy is distinct from primitive operator and candidate artifact."]
-  n348["concept: Introduce new predicate/concept vocabulary whose semantics are not merely a definitional abbreviation of the old language."]
-  n349["claim: Minimal supporting environments make conditional dependency provenance explicit without warranting the assumptions themselves."]
-  n350["hypothesis: Memory can be treated abstractly as integration of measurements distributed across time."]
-  n351["hypothesis: A set of premises can be stipulated only for a reasoning branch without becoming a durable belief theory."]
-  n352["hypothesis: A white-box reasoning branch selects a temporary assumption environment Gamma subseteq A."]
-  n353["claim: The dialogue is performing theoretical model construction under conceptual and literature constraints."]
-  n354["claim: Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet."]
-  n355["claim: Expression construction, definitional extension and substantive concept invention are distinct operations."]
-  n356["claim: Candidate generation, warrant/evaluation and epistemic state update are distinct layers and should not be collapsed into a named inference method."]
-  n357["hypothesis: Entailment, projection along stable structure and inversion toward generators may recover three inference forms."]
-  n358["hypothesis: Generated epistemic candidates require types such as sentence, assumption, justification, model, signature extension, mapping or query."]
-  n359["claim: Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."]
-  n360["goal: Make typed candidate generation concrete using the conversation as a test corpus."]
-  n361["goal: Represent the conversation with typed entities and relation roles."]
-  n362["claim: The previous U/hypothesis-universe coordinate conflates language, expressibility, model space and live hypotheses."]
-  n363["goal: Deliver a coherent first-pass ontology, conversation instantiation, code and project documentation in GitHub."]
-  n364["hypothesis: A warrant certificate records explicit assumptions, a claimed guarantee and support connecting the assumptions to that guarantee."]
-  n365["concept: Warrant evaluates whether a candidate-to-commitment move has a specified justification or guarantee under explicit assumptions."]
-  n366["claim: The inquiry should return from implementation-level pattern and learning theories to the original warrant question."]
-  n367["claim: Formal well-formedness, typing or deductive validity does not establish epistemic warrant for generating or accepting a candidate."]
-  n368["hypothesis: A stipulated model supports within-model reasoning; an embedded observer must infer the model from observations."]
-  n369["reference: Wolfram observer theory and rulial space, raised as a related research direction."]
-  n370["goal: Build a persistent cross-conversation map of worldview, questions, dependencies and revisions."]
-  n371["relation: challenges"]
-  n372["relation: supersedes"]
-  n373["relation: answers"]
-  n374["relation: motivates"]
-  n375["relation: candidate_for"]
-  n376["relation: motivates"]
-  n377["relation: reframes"]
-  n378["relation: motivates"]
-  n379["relation: candidate_for"]
-  n380["relation: motivates"]
-  n381["relation: answers"]
-  n382["relation: challenges"]
-  n383["relation: candidate_for"]
-  n384["relation: reframes"]
-  n385["relation: challenges"]
-  n386["relation: answers"]
-  n387["relation: motivates"]
-  n388["relation: reframes"]
-  n389["relation: candidate_for"]
-  n390["relation: challenges"]
-  n391["relation: answers"]
-  n392["relation: related_to"]
-  n393["relation: challenges"]
-  n394["relation: supports"]
+  n169["move: connect"]
+  n170["move: decompose"]
+  n171["move: distinguish"]
+  n172["move: distinguish"]
+  n173["move: distinguish"]
+  n174["move: clarify"]
+  n175["move: generalize"]
+  n176["move: propose"]
+  n177["concept: A: hypotheses newly live after semantic alignment of the previous state."]
+  n178["reference: AIF+ and Inference Anchoring Theory as candidate dialogue/argument representations."]
+  n179["hypothesis: Candidate generation may be better modeled as an algebra over languages, expressions, theories and queries than as a short folk list of cognitive verbs."]
+  n180["hypothesis: Ampliative warrant requires assumptions or constraints beyond bare logical entailment from finite evidence."]
+  n181["claim: Nontrivial ampliative guarantees require restrictions on the admissible possible-world or problem class."]
+  n182["claim: For an embedded observer, constraints used in derivations should be described as assumed rather than known."]
+  n183["claim: Assumption is normally a role played by a sentence or theory rather than a base formal artifact type."]
+  n184["concept: An ATMS-style environment is a consistent set of assumptions under which consequences can be evaluated."]
+  n185["concept: A label records minimal consistent assumption environments sufficient to support a datum."]
+  n186["reference: de Kleer's Assumption-based Truth Maintenance System as a precedent for multiple simultaneous assumption environments and dependency labels."]
+  n187["hypothesis: Persistent epistemic organization can be represented as assumptions, explicit justifications and minimal support environments rather than one committed theory."]
+  n188["goal: Derive a taxonomy from modest explicit assumptions rather than simply assuming it."]
+  n189["claim: Conditionalization presupposes a hypothesis space, likelihoods and priors; it does not ground all of them."]
+  n190["method: A Bayesian or causal DAG as a candidate representation of inferential relationships."]
+  n191["hypothesis: Belief change depends on existing representations and an agent-specific updating process."]
+  n192["claim: The black-box state maintains alternatives; a white-box move temporarily stipulates one context and inspects its consequences."]
+  n193["reference: Bronstein and geometric deep learning as a candidate framework for learning primitives."]
+  n194["claim: Bronstein/geometric deep learning should not be part of the foundational spine merely because it was suggested earlier."]
+  n195["hypothesis: A generated candidate can have a compositional footprint spanning several formal artifact kinds rather than exactly one exclusive type."]
+  n196["concept: Candidate generation maps current state and evidence to candidate propositions, models or structures before evaluation and commitment."]
+  n197["hypothesis: Candidate generation is best modeled by an interface separating draft/search space, construction operators, strategy, elaboration, evaluation feedback and warrant."]
+  n198["claim: The dialogue itself can serve as an adversarial test case for candidate-generation operators."]
+  n199["claim: The earlier seven candidate types were not orthogonal; some mixed artifact kinds with epistemic roles."]
+  n200["method: Test whether each observed candidate-generation move has a clear artifact footprint and compositional operator description."]
+  n201["goal: Construct a canonical factorization of epistemic transitions relative to an explicit semantic representation contract."]
+  n202["method: Canonical/primitive factorization: propose factors, test completeness/redundancy/independence/compositionality/canonicality, diagnose failures, and revise."]
+  n203["goal: Classify hypothesis and model moves without requiring certainty or strong knowledge claims."]
+  n204["claim: Explanations are only a subset of claims that go beyond observations."]
+  n205["claim: Reasoning episodes, strategies and the meta-model should be representable targets, giving closure under self-description."]
+  n206["claim: Internal coherence alone does not establish correspondence with reality."]
+  n207["concept: Construction of a new expression or concept from constructors and vocabulary already available in the current language."]
+  n208["concept: Introduction of genuinely new conceptual or predicate vocabulary not already definable in the current language."]
+  n209["claim: A constraint is broader than an explanation or mechanism; empirical, causal and explanatory commitments can occupy different levels."]
+  n210["claim: Concept construction inside an existing language and substantive concept invention are different problems."]
+  n211["goal: Instantiate the abstract reasoning model on real conversations and identify strategy episodes and reflective relations with provenance."]
+  n212["method: Test proposed exhaustive or primitive distinctions by constructing concrete counterexamples and edge cases."]
+  n213["hypothesis: Current endpoint: factor epistemic state change relative to a representation contract, keep warrant separate, and treat candidate-generation factorization as open."]
+  n214["hypothesis: Current architecture combines an institution-style logical substrate, ATMS-inspired persistent support state, temporary assumption environment, and external query."]
+  n215["claim: Deduction and inference by an embedded empirical observer have different dependencies."]
+  n216["concept: Extend a signature with a fresh name explicitly defined from old-language expressions, ideally conservatively."]
+  n217["concept: D: previously live aligned hypotheses no longer live after the update."]
+  n218["hypothesis: Treat communication as a designed transformation of a recipient representation."]
+  n219["example: Recognizing spatial separation of black and white dots from individual positions and colors."]
+  n220["claim: A reachable draft may be incomplete or ill-formed and must be elaborated/checked before becoming a formal artifact."]
+  n221["hypothesis: For reasoning episode R, a draft-generation system G_R=(D_R,d0,O_R,→_R) defines draft states, an initial draft, operators and generative transitions."]
+  n222["hypothesis: Conditional deductive context is the closure C(Gamma)=Cl_J(Gamma) of a temporary assumption environment under justifications."]
+  n223["example: This dialogue repeatedly split, merged and retyped candidate primitives after detecting over-, under- or misfactoring."]
+  n224["example: This dialogue explicitly turned the developing meta-model back onto the process used to construct that same meta-model."]
+  n225["claim: Equivalence under predictive or causal consequence is better treated as a relevance or model-selection criterion than as the ontology of all patterns."]
+  n226["goal: Evaluate reasoning-move trajectories and learn which strategies work under which conditions."]
+  n227["claim: Verification or evaluation feedback does not automatically constitute epistemic warrant."]
+  n228["concept: Evaluator feedback is a representable diagnostic such as a counterexample, violated constraint, failed proof obligation, empirical mismatch or warrant condition."]
+  n229["claim: Evidence need not be a privileged top-level coordinate; reports and observations can be typed provenance-bearing nodes with their own dependencies."]
+  n230["hypothesis: For a fixed hypothesis universe, hard live-set changes reduce to additions and deletions; preserve, restrict, expand and replace are derived cases."]
+  n231["concept: Build an expression using constructors already licensed by the current language."]
+  n232["concept: Underfactored, overfactored and misfactored are diagnostics for revising a proposed primitive decomposition."]
+  n233["claim: Canonical-factorization analysis is one strategy that searches a factorization-specific draft space using local operators and evaluators."]
+  n234["claim: Repeated detection of over- and underfactoring is a core recurring reasoning pattern in this inquiry."]
+  n235["claim: The earlier five proposed move types were not a minimal state-update basis."]
+  n236["concept: Elaboration/checking maps a draft candidate to a well-formed formal artifact or failure."]
+  n237["method: Model an inference method as a function from evidence histories to hypotheses."]
+  n238["claim: Institution semantics alone does not provide the concrete syntax/module layer needed to construct and transform formal artifacts."]
+  n239["goal: Construct a coherent formalism for epistemic moves without preserving historical inference labels when they obscure the structure."]
+  n240["goal: Formalize candidate generation using the dialogue as a test case while importing established operators where possible."]
+  n241["claim: Generative space, construction operators and search/control strategy are distinct components."]
+  n242["hypothesis: Generative structure could be the umbrella object for the inquiry."]
+  n243["method: Symmetry, deformation stability and scale separation/locality as geometric learning priors."]
+  n244["method: When inquiry drifts into downstream implementation or optimization, return explicitly to the original unresolved question."]
+  n245["concept: mu: optional graded support or plausibility over live hypotheses."]
+  n246["reference: Hoel, causal emergence, coarse-graining and entropy, raised as related work."]
+  n247["goal: Develop a formal compositional calculus of hypothesis-space transformations with a separate warrant layer."]
+  n248["claim: Observed conversations underdetermine a person's internal beliefs and update mechanism."]
+  n249["claim: IIT is considered only for algorithmic partition, irreducibility and cause-effect-structure machinery, not for consciousness claims."]
+  n250["hypothesis: Imagination might contribute an additional way to learn beyond observation."]
+  n251["claim: Imagination can generate candidates without independently justifying them."]
+  n252["hypothesis: Inductive pattern recognition could initialize a loop through abduction and deduction."]
+  n253["claim: Institution theory handles language/model semantics while ATMS-like machinery handles support across assumption environments; they are complementary, not competing."]
+  n254["hypothesis: Use an institution-style logical substrate (Sig, Sen, Mod, satisfaction) rather than one overloaded universe variable."]
+  n255["reference: Institution theory as an abstract separation of signatures, sentences, models and satisfaction, with signature morphisms for translation."]
+  n256["hypothesis: Distributed measurements may support joint relational representations not encoded by any individual sensor."]
+  n257["hypothesis: An intermediate repair separates language, model space, live hypotheses and graded support as K=(L,M,H,mu)."]
+  n258["hypothesis: An intermediate state proposal K=(Sigma,T,W,rho,E,Q) separates signature, explicit theory, semantic possibilities, support, evidence and query."]
+  n259["hypothesis: A pattern can be represented by what remains invariant across specified transformations."]
+  n260["claim: An unobserved explanatory variable need not specify the process by which an effect occurs."]
+  n261["concept: Latent structure as an unobserved explanatory representation, not necessarily a causal mechanism."]
+  n262["method: When the problem appears well trodden, search existing formal literature before inventing new primitives."]
+  n263["concept: H: the currently live hypotheses or possibilities within U."]
+  n264["claim: Measurement theory can characterize accessible measured variables without by itself characterizing every structure recognized over those measurements."]
+  n265["hypothesis: Sensors determine accessible distinctions, while memory enables relations across time."]
+  n266["reference: Measurement theory, psychophysics, information theory and computational mechanics as relevant literatures."]
+  n267["hypothesis: Relative to a current epistemic state, entailment versus non-entailment is an immediate MECE logical split."]
+  n268["goal: Make exhaustiveness and non-overlap provable by construction rather than asserted from a folk taxonomy."]
+  n269["claim: MECE is a desired property of the formalism, not the name of the formal object."]
+  n270["claim: MECE is a special case of the broader search for a complete nonredundant compositional factorization."]
+  n271["method: Force proposed external formalisms through the current meta-model and treat mismatches as evidence of a gap or bad factorization."]
+  n272["method: Use established concept-generation formalisms as a stress test of the epistemic meta-model."]
+  n273["claim: Meta-strategy is not a separate infinite type hierarchy; a strategy is meta-level relative to reasoning processes or strategies it monitors or controls."]
+  n274["concept: Classes of evidence-to-conclusion mappings with shared properties."]
+  n275["reference: MMT as a foundation-independent theory/declaration/object/morphism representation and module system."]
+  n276["hypothesis: Use an MMT-like theory graph as the concrete formal representation substrate, with LF as a possible foundation inside it."]
+  n277["hypothesis: Model-target effects can be represented as an exact subset of language, structure, parameter and state coordinates rather than one exclusive target."]
+  n278["claim: Natural learning need not assume a designer; deliberate communication is an additional case."]
+  n279["hypothesis: Optimal explanation or design is a further problem for an observer with an uncertain model of other observers."]
+  n280["concept: God-view versus embedded-observer perspective."]
+  n281["hypothesis: Combine AIF/IAT argument and dialogue structure with provenance and inquiry-transition records."]
+  n282["concept: An open node is an unresolved question or epistemic obligation, not just a mentioned topic."]
+  n283["claim: Choosing an optimal hypothesis is downstream of first characterizing the kinds of epistemic moves available."]
+  n284["claim: Pattern recognition or relational feature extraction from a fully observed finite configuration need not be inductive."]
+  n285["reference: Grenander/Brown Pattern Theory as a candidate formal language for generators, configurations, transformations, variation, observation and inference."]
+  n286["claim: Pattern Theory supplies broad representational and inferential machinery but does not by itself derive all observer representations from physics."]
+  n287["hypothesis: Induction concerns empirical patterns while abduction concerns mechanisms."]
+  n288["claim: Persistent epistemic state and the active assumption context of a reasoning episode should be represented separately."]
+  n289["hypothesis: Current persistent state: K_Sigma=(N,A,J,lambda,rho), with represented nodes, assumptions, justifications, minimal support environments and optional graded support."]
+  n290["concept: Physically realizable pattern recognition, rather than normatively justified recognition."]
+  n291["hypothesis: External reality plus partial observation plus logic yields a set of compatible possibilities, not by itself a unique ampliative conclusion."]
+  n292["example: From the observed sequence 2, 4, 6, 8 to the expectation 10."]
+  n293["claim: Recognizing a sample pattern and licensing its extension beyond the sample are distinct operations."]
+  n294["question: What assumptions and criteria support abductive model selection?"]
+  n295["question: Can ampliative epistemic moves be represented in a provably MECE or uniquely factorizable way?"]
+  n296["question: Does Bayesian updating explain warrant or merely relocate assumptions?"]
+  n297["question: Can candidate generation be given a small compositional or uniquely factorizable basis?"]
+  n298["question: What is the minimal type system for generated epistemic candidates?"]
+  n299["question: What factorization of epistemic state change can be canonical relative to an explicit representation contract?"]
+  n300["question: What claims beyond observation can have support without being explanations?"]
+  n301["question: What role does generation of candidate constraints play in black-box inference?"]
+  n302["question: How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?"]
+  n303["question: What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?"]
+  n304["question: Which beyond-observation inferences can an embedded observer make?"]
+  n305["question: Can exhaustiveness of the proposed inference taxonomy be proved?"]
+  n306["question: Which existing ontology captures temporal inquiry evolution and reasoning moves?"]
+  n307["question: What general dynamics make explanations and visual presentations effective?"]
+  n308["question: What is the space of possible explanatory hypotheses?"]
+  n309["question: What general concept subsumes MECE-style primitive analysis when the decomposition is compositional rather than a partition?"]
+  n310["question: What should be formalized next after separating state update from candidate generation?"]
+  n311["question: What general heuristics or formal scaffolding improve thinking across problems?"]
+  n312["question: Can imagination yield knowledge not reducible to inference or introspection?"]
+  n313["question: Can the apparent overlap between induction and abduction be explained by a deeper compositional formalism?"]
+  n314["question: What assumptions minimally support inductive generalization?"]
+  n315["question: Under what conditions does evidence E contain information relevant to a proposition H?"]
+  n316["question: Can symmetry, invariance and stability supply primitives of pattern recognition?"]
+  n317["question: Is structure a set of constraints, or does emergence and computational irreducibility change the ontology?"]
+  n318["question: How is latent structure different from a mechanism?"]
+  n319["question: What is the minimal formalization of learning relevant to this inquiry?"]
+  n320["question: Is algorithm classification the right level for a simple inference taxonomy?"]
+  n321["question: What possible maps take current representations beyond the information currently explicit?"]
+  n322["question: Is measurement theory sufficient to explain the observer-to-pattern problem?"]
+  n323["question: Can candidate-generation formalisms fit the existing meta-model, and if not, what gap do they expose?"]
+  n324["question: Which established metareasoning and reflection formalisms should constrain the strategy/self-application layer before it is frozen?"]
+  n325["question: What minimal entities and relations does this inference sketch require?"]
+  n326["question: How does an embedded observer learn from a non-designed world?"]
+  n327["question: What should be attacked next after the assumption-context refinement?"]
+  n328["question: What does higher order mean, and how does it differ from coarse-graining?"]
+  n329["question: What, if anything, is fundamental about pattern formation before criteria for useful or optimal abstraction are imposed?"]
+  n330["question: What operation makes a relational feature explicit to an observer?"]
+  n331["question: Which dimensions of perceptual space are available to a physically embedded observer?"]
+  n332["question: Which pattern-recognition mappings can physical embedded observers implement?"]
+  n333["question: What established machinery should be checked before freezing the revised meta-model in documentation?"]
+  n334["question: How should repeated self-application of the developing reasoning model be represented?"]
+  n335["question: Is reframe a primitive operation, or is it masking several different transformations?"]
+  n336["question: How does the developing epistemic framework characterize the reasoning occurring in this dialogue itself?"]
+  n337["question: Where does canonical factorization live when treated as a reusable cognitive strategy?"]
+  n338["question: Can the canonical-factorization strategy trace be represented without introducing another vague primitive?"]
+  n339["question: Do deduction, induction and abduction exhaust learning beyond observation?"]
+  n340["question: Should the model treat a theory used in a derivation as a durable commitment, or only as a temporary assumption context?"]
+  n341["question: What warrants the standards by which an inference is warranted?"]
+  n342["question: What minimal warrant postulates and representation theorems should govern non-entailing commitment changes?"]
+  n343["question: How should warrant of warrant be formalized once certainty is removed from the target?"]
+  n344["question: Does Wolfram observer theory characterize physically realizable pattern recognizers?"]
+  n345["claim: The current query/task belongs to a reasoning episode rather than persistent epistemic state."]
+  n346["concept: Reach(R) is the set of draft candidates reachable from d0 by finite sequences of available construction/refinement operators."]
+  n347["claim: A mechanism being physically implementable does not establish that it tracks truth."]
+  n348["hypothesis: A reasoning episode can be represented as R=(K_Sigma,Gamma,Q)."]
+  n349["goal: Map the moves that changed the inquiry, not only the concepts mentioned."]
+  n350["claim: Conversations can serve as source-grounded datasets of instantiated reasoning trajectories and proposed strategy episodes."]
+  n351["hypothesis: Recognizing a pattern may itself perform the relevant beyond-token representational step."]
+  n352["hypothesis: Induction, abduction and deduction can feed back into one another rather than forming a fixed pipeline."]
+  n353["hypothesis: Meta-level status is relational: a reasoning episode is meta with respect to the reasoning artifact, strategy or episode it is about."]
+  n354["method: Reflective/self-applicative modeling uses the reasoning model to analyze the reasoning process that is constructing the model."]
+  n355["claim: Reframe is a dialogue-level macro that may decompose into query, language, theory/support or context transformations."]
+  n356["claim: Extracting relations is not necessarily a many-to-one, information-discarding coarse-graining."]
+  n357["claim: Any nontrivial target factorization is canonical only relative to a declared representation contract, because structure, parameters and state can be recoded."]
+  n358["hypothesis: The relevant map may run between representations rather than raw observations and concepts."]
+  n359["hypothesis: Representational lift may be a primitive operation prior to prediction."]
+  n360["goal: Anchor the investigation in existing formal theories rather than reinventing terminology."]
+  n361["hypothesis: Assume an external reality with sufficiently stable rules."]
+  n362["hypothesis: Epistemic state change can be factored, relative to semantic alignment, into representation-space change, additions, deletions and graded-support change."]
+  n363["concept: U: the current semantic universe or model space of expressible hypotheses."]
+  n364["hypothesis: Stateful computation over an information stream is a general substrate for memory and integration, but does not by itself settle epistemic warrant."]
+  n365["hypothesis: A strategy/control layer selects and sequences lower-level reasoning operators; strategy is distinct from primitive operator and candidate artifact."]
+  n366["concept: Introduce new predicate/concept vocabulary whose semantics are not merely a definitional abbreviation of the old language."]
+  n367["claim: Minimal supporting environments make conditional dependency provenance explicit without warranting the assumptions themselves."]
+  n368["hypothesis: Memory can be treated abstractly as integration of measurements distributed across time."]
+  n369["hypothesis: A set of premises can be stipulated only for a reasoning branch without becoming a durable belief theory."]
+  n370["hypothesis: A white-box reasoning branch selects a temporary assumption environment Gamma subseteq A."]
+  n371["claim: The dialogue is performing theoretical model construction under conceptual and literature constraints."]
+  n372["claim: Theory graphs remain relevant for modular theory networks but are not required as an additional foundational layer yet."]
+  n373["claim: Expression construction, definitional extension and substantive concept invention are distinct operations."]
+  n374["claim: Candidate generation, warrant/evaluation and epistemic state update are distinct layers and should not be collapsed into a named inference method."]
+  n375["hypothesis: Entailment, projection along stable structure and inversion toward generators may recover three inference forms."]
+  n376["hypothesis: Generated epistemic candidates require types such as sentence, assumption, justification, model, signature extension, mapping or query."]
+  n377["claim: Typed candidate generation remains the main unresolved formal layer after the assumption-context refinement."]
+  n378["goal: Make typed candidate generation concrete using the conversation as a test corpus."]
+  n379["goal: Represent the conversation with typed entities and relation roles."]
+  n380["claim: The previous U/hypothesis-universe coordinate conflates language, expressibility, model space and live hypotheses."]
+  n381["claim: The reusable cross-domain abstraction is the candidate-generation interface, not one universal operator set."]
+  n382["goal: Deliver a coherent first-pass ontology, conversation instantiation, code and project documentation in GitHub."]
+  n383["hypothesis: A warrant certificate records explicit assumptions, a claimed guarantee and support connecting the assumptions to that guarantee."]
+  n384["concept: Warrant evaluates whether a candidate-to-commitment move has a specified justification or guarantee under explicit assumptions."]
+  n385["claim: The inquiry should return from implementation-level pattern and learning theories to the original warrant question."]
+  n386["claim: Formal well-formedness, typing or deductive validity does not establish epistemic warrant for generating or accepting a candidate."]
+  n387["hypothesis: A stipulated model supports within-model reasoning; an embedded observer must infer the model from observations."]
+  n388["reference: Wolfram observer theory and rulial space, raised as a related research direction."]
+  n389["example: Worked trace of the founding dialogue from I/D/A partition through composition-space, representation-relative factorization, support-context refinement, candidate-type repair and strategy recognition."]
+  n390["goal: Build a persistent cross-conversation map of worldview, questions, dependencies and revisions."]
+  n391["relation: challenges"]
+  n392["relation: supersedes"]
+  n393["relation: answers"]
+  n394["relation: motivates"]
   n395["relation: candidate_for"]
-  n396["relation: depends_on"]
-  n397["relation: motivates"]
+  n396["relation: motivates"]
+  n397["relation: reframes"]
   n398["relation: motivates"]
-  n399["relation: related_to"]
-  n400["relation: related_to"]
-  n401["relation: candidate_for"]
+  n399["relation: candidate_for"]
+  n400["relation: motivates"]
+  n401["relation: answers"]
   n402["relation: challenges"]
-  n403["relation: motivates"]
+  n403["relation: candidate_for"]
   n404["relation: reframes"]
-  n405["relation: distinguishes"]
-  n406["relation: related_to"]
-  n407["relation: candidate_for"]
-  n408["relation: candidate_for"]
-  n409["relation: exemplifies"]
+  n405["relation: challenges"]
+  n406["relation: answers"]
+  n407["relation: motivates"]
+  n408["relation: reframes"]
+  n409["relation: candidate_for"]
   n410["relation: challenges"]
-  n411["relation: exemplifies"]
-  n412["relation: motivates"]
-  n413["relation: candidate_for"]
-  n414["relation: challenges"]
-  n415["relation: related_to"]
-  n416["relation: answers"]
-  n417["relation: candidate_for"]
+  n411["relation: answers"]
+  n412["relation: related_to"]
+  n413["relation: challenges"]
+  n414["relation: supports"]
+  n415["relation: candidate_for"]
+  n416["relation: depends_on"]
+  n417["relation: motivates"]
   n418["relation: motivates"]
-  n419["relation: candidate_for"]
-  n420["relation: candidate_for"]
-  n421["relation: reframes"]
-  n422["relation: answers"]
-  n423["relation: candidate_for"]
-  n424["relation: part_of"]
-  n425["relation: candidate_for"]
-  n426["relation: candidate_for"]
-  n427["relation: part_of"]
-  n428["relation: motivates"]
-  n429["relation: candidate_for"]
-  n430["relation: related_to"]
-  n431["relation: related_to"]
-  n432["relation: related_to"]
+  n419["relation: related_to"]
+  n420["relation: related_to"]
+  n421["relation: candidate_for"]
+  n422["relation: challenges"]
+  n423["relation: motivates"]
+  n424["relation: reframes"]
+  n425["relation: distinguishes"]
+  n426["relation: related_to"]
+  n427["relation: candidate_for"]
+  n428["relation: candidate_for"]
+  n429["relation: exemplifies"]
+  n430["relation: challenges"]
+  n431["relation: exemplifies"]
+  n432["relation: motivates"]
   n433["relation: candidate_for"]
-  n434["relation: reframes"]
-  n435["relation: challenges"]
-  n436["relation: depends_on"]
-  n437["relation: supersedes"]
-  n438["relation: challenges"]
-  n439["relation: related_to"]
-  n440["relation: depends_on"]
-  n441["relation: depends_on"]
-  n442["relation: related_to"]
-  n443["relation: challenges"]
-  n444["relation: motivates"]
-  n445["relation: part_of"]
-  n446["relation: part_of"]
-  n447["relation: motivates"]
-  n448["relation: depends_on"]
-  n449["relation: depends_on"]
+  n434["relation: challenges"]
+  n435["relation: related_to"]
+  n436["relation: answers"]
+  n437["relation: candidate_for"]
+  n438["relation: motivates"]
+  n439["relation: candidate_for"]
+  n440["relation: candidate_for"]
+  n441["relation: reframes"]
+  n442["relation: answers"]
+  n443["relation: candidate_for"]
+  n444["relation: part_of"]
+  n445["relation: candidate_for"]
+  n446["relation: candidate_for"]
+  n447["relation: part_of"]
+  n448["relation: motivates"]
+  n449["relation: candidate_for"]
   n450["relation: related_to"]
-  n451["relation: answers"]
-  n452["relation: candidate_for"]
-  n453["relation: supersedes"]
-  n454["relation: challenges"]
-  n455["relation: reframes"]
-  n456["relation: challenges"]
-  n457["relation: related_to"]
+  n451["relation: related_to"]
+  n452["relation: related_to"]
+  n453["relation: candidate_for"]
+  n454["relation: reframes"]
+  n455["relation: challenges"]
+  n456["relation: depends_on"]
+  n457["relation: supersedes"]
   n458["relation: challenges"]
-  n459["relation: challenges"]
-  n460["relation: related_to"]
-  n461["relation: related_to"]
+  n459["relation: related_to"]
+  n460["relation: depends_on"]
+  n461["relation: depends_on"]
   n462["relation: related_to"]
-  n463["relation: related_to"]
-  n464["relation: related_to"]
-  n465["relation: motivates"]
-  n466["relation: candidate_for"]
-  n467["relation: related_to"]
-  n468["relation: related_to"]
-  n469["relation: challenges"]
-  n470["relation: reframes"]
-  n471["relation: distinguishes"]
-  n472["relation: related_to"]
-  n473["relation: related_to"]
-  n474["relation: motivates"]
+  n463["relation: challenges"]
+  n464["relation: motivates"]
+  n465["relation: part_of"]
+  n466["relation: part_of"]
+  n467["relation: motivates"]
+  n468["relation: depends_on"]
+  n469["relation: depends_on"]
+  n470["relation: related_to"]
+  n471["relation: answers"]
+  n472["relation: candidate_for"]
+  n473["relation: supersedes"]
+  n474["relation: challenges"]
   n475["relation: reframes"]
-  n476["relation: candidate_for"]
-  n477["relation: part_of"]
-  n478["relation: candidate_for"]
-  n479["relation: depends_on"]
+  n476["relation: challenges"]
+  n477["relation: related_to"]
+  n478["relation: challenges"]
+  n479["relation: challenges"]
   n480["relation: related_to"]
-  n481["relation: motivates"]
-  n482["relation: motivates"]
-  n483["relation: depends_on"]
-  n484["relation: depends_on"]
-  n485["relation: challenges"]
+  n481["relation: related_to"]
+  n482["relation: related_to"]
+  n483["relation: related_to"]
+  n484["relation: related_to"]
+  n485["relation: motivates"]
   n486["relation: candidate_for"]
-  n487["relation: part_of"]
-  n488["relation: part_of"]
-  n489["relation: part_of"]
-  n490["relation: part_of"]
-  n491["relation: part_of"]
-  n492["relation: answers"]
+  n487["relation: related_to"]
+  n488["relation: related_to"]
+  n489["relation: challenges"]
+  n490["relation: reframes"]
+  n491["relation: distinguishes"]
+  n492["relation: related_to"]
   n493["relation: related_to"]
-  n494["relation: related_to"]
-  n495["relation: candidate_for"]
-  n496["relation: supports"]
-  n497["relation: distinguishes"]
-  n498["relation: related_to"]
-  n499["relation: reframes"]
-  n500["relation: depends_on"]
-  n501["relation: related_to"]
-  n502["relation: part_of"]
-  n503["relation: part_of"]
+  n494["relation: motivates"]
+  n495["relation: reframes"]
+  n496["relation: candidate_for"]
+  n497["relation: part_of"]
+  n498["relation: candidate_for"]
+  n499["relation: depends_on"]
+  n500["relation: related_to"]
+  n501["relation: motivates"]
+  n502["relation: motivates"]
+  n503["relation: depends_on"]
   n504["relation: depends_on"]
-  n505["relation: answers"]
-  n506["relation: supports"]
-  n507["relation: motivates"]
-  n508["relation: candidate_for"]
-  n509["relation: motivates"]
-  n510["relation: motivates"]
-  n511["relation: distinguishes"]
+  n505["relation: challenges"]
+  n506["relation: candidate_for"]
+  n507["relation: part_of"]
+  n508["relation: part_of"]
+  n509["relation: part_of"]
+  n510["relation: part_of"]
+  n511["relation: part_of"]
   n512["relation: answers"]
-  n513["relation: supports"]
+  n513["relation: related_to"]
   n514["relation: related_to"]
-  n515["relation: motivates"]
-  n516["relation: challenges"]
-  n517["relation: candidate_for"]
-  n518["relation: candidate_for"]
-  n519["relation: part_of"]
-  n520["relation: candidate_for"]
-  n521["relation: part_of"]
+  n515["relation: candidate_for"]
+  n516["relation: supports"]
+  n517["relation: distinguishes"]
+  n518["relation: related_to"]
+  n519["relation: reframes"]
+  n520["relation: depends_on"]
+  n521["relation: related_to"]
   n522["relation: part_of"]
   n523["relation: part_of"]
-  n524["relation: supports"]
-  n525["relation: depends_on"]
-  n526["relation: challenges"]
-  n527["relation: answers"]
-  n528["relation: supports"]
-  n529["relation: supports"]
+  n524["relation: depends_on"]
+  n525["relation: answers"]
+  n526["relation: supports"]
+  n527["relation: motivates"]
+  n528["relation: candidate_for"]
+  n529["relation: motivates"]
   n530["relation: motivates"]
-  n531["relation: candidate_for"]
-  n532["relation: supports"]
+  n531["relation: distinguishes"]
+  n532["relation: answers"]
   n533["relation: supports"]
-  n534["relation: part_of"]
-  n535["relation: part_of"]
-  n536["relation: supersedes"]
-  n537["relation: part_of"]
-  n538["relation: part_of"]
-  n539["relation: supports"]
-  n540["relation: challenges"]
-  n541["relation: supports"]
+  n534["relation: related_to"]
+  n535["relation: motivates"]
+  n536["relation: challenges"]
+  n537["relation: candidate_for"]
+  n538["relation: candidate_for"]
+  n539["relation: part_of"]
+  n540["relation: candidate_for"]
+  n541["relation: part_of"]
   n542["relation: part_of"]
   n543["relation: part_of"]
-  n544["relation: related_to"]
-  n545["relation: answers"]
-  n546["relation: reframes"]
-  n547["relation: candidate_for"]
-  n548["relation: related_to"]
-  n549["relation: candidate_for"]
-  n550["relation: candidate_for"]
-  n551["relation: challenges"]
-  n552["relation: distinguishes"]
-  n553["relation: candidate_for"]
-  n554["relation: challenges"]
-  n555["relation: candidate_for"]
-  n556["relation: candidate_for"]
+  n544["relation: supports"]
+  n545["relation: depends_on"]
+  n546["relation: challenges"]
+  n547["relation: answers"]
+  n548["relation: supports"]
+  n549["relation: supports"]
+  n550["relation: motivates"]
+  n551["relation: candidate_for"]
+  n552["relation: supports"]
+  n553["relation: supports"]
+  n554["relation: part_of"]
+  n555["relation: part_of"]
+  n556["relation: supersedes"]
   n557["relation: part_of"]
-  n558["relation: distinguishes"]
-  n559["relation: answers"]
-  n560["relation: candidate_for"]
-  n561["relation: part_of"]
-  n562["relation: answers"]
+  n558["relation: part_of"]
+  n559["relation: supports"]
+  n560["relation: challenges"]
+  n561["relation: supports"]
+  n562["relation: part_of"]
   n563["relation: part_of"]
-  n564["relation: supports"]
+  n564["relation: related_to"]
   n565["relation: answers"]
-  n566["relation: related_to"]
-  n567["relation: supports"]
-  n568["relation: motivates"]
-  n569["relation: motivates"]
-  n570["relation: exemplifies"]
-  n571["relation: exemplifies"]
-  n572["relation: about"]
-  n573["relation: about"]
-  n574["relation: related_to"]
-  n575["relation: related_to"]
-  n576["relation: related_to"]
-  n577["relation: related_to"]
-  n578["relation: part_of"]
-  n579["relation: part_of"]
-  n580["relation: depends_on"]
-  n581["relation: depends_on"]
+  n566["relation: reframes"]
+  n567["relation: candidate_for"]
+  n568["relation: related_to"]
+  n569["relation: candidate_for"]
+  n570["relation: candidate_for"]
+  n571["relation: challenges"]
+  n572["relation: distinguishes"]
+  n573["relation: candidate_for"]
+  n574["relation: challenges"]
+  n575["relation: candidate_for"]
+  n576["relation: candidate_for"]
+  n577["relation: part_of"]
+  n578["relation: distinguishes"]
+  n579["relation: answers"]
+  n580["relation: candidate_for"]
+  n581["relation: part_of"]
+  n582["relation: answers"]
+  n583["relation: part_of"]
+  n584["relation: supports"]
+  n585["relation: answers"]
+  n586["relation: related_to"]
+  n587["relation: supports"]
+  n588["relation: motivates"]
+  n589["relation: motivates"]
+  n590["relation: exemplifies"]
+  n591["relation: exemplifies"]
+  n592["relation: about"]
+  n593["relation: about"]
+  n594["relation: related_to"]
+  n595["relation: related_to"]
+  n596["relation: related_to"]
+  n597["relation: related_to"]
+  n598["relation: part_of"]
+  n599["relation: part_of"]
+  n600["relation: depends_on"]
+  n601["relation: depends_on"]
+  n602["relation: candidate_for"]
+  n603["relation: part_of"]
+  n604["relation: part_of"]
+  n605["relation: supports"]
+  n606["relation: supports"]
+  n607["relation: supports"]
+  n608["relation: part_of"]
+  n609["relation: exemplifies"]
+  n610["relation: related_to"]
+  n611["relation: supports"]
+  n612["relation: about"]
+  n613["relation: depends_on"]
+  n614["relation: depends_on"]
+  n615["relation: part_of"]
+  n616["relation: part_of"]
+  n617["relation: part_of"]
+  n618["relation: part_of"]
+  n619["relation: part_of"]
+  n620["relation: part_of"]
+  n621["relation: part_of"]
+  n622["relation: part_of"]
+  n623["relation: part_of"]
   n0 -->|then| n1
-  n0 -->|output| n322
+  n0 -->|output| n339
   n1 -->|then| n2
-  n1 -->|output| n235
+  n1 -->|output| n250
   n2 -->|then| n3
-  n2 -->|output| n296
+  n2 -->|output| n312
   n3 -->|then| n4
-  n3 -->|output| n236
+  n3 -->|output| n251
   n4 -->|then| n5
-  n4 -->|output| n324
+  n4 -->|output| n341
   n5 -->|then| n6
-  n5 -->|output| n180
+  n5 -->|output| n188
   n6 -->|then| n7
-  n6 -->|output| n289
+  n6 -->|output| n305
   n7 -->|then| n8
-  n7 -->|output| n206
+  n7 -->|output| n215
   n8 -->|then| n9
-  n8 -->|output| n288
+  n8 -->|output| n304
   n9 -->|then| n10
-  n9 -->|output| n182
-  n9 -->|output| n272
+  n9 -->|output| n190
+  n9 -->|output| n287
   n10 -->|then| n11
-  n10 -->|output| n302
+  n10 -->|output| n318
   n11 -->|then| n12
-  n11 -->|output| n245
+  n11 -->|output| n260
   n12 -->|then| n13
-  n12 -->|output| n292
+  n12 -->|output| n308
   n13 -->|then| n14
-  n13 -->|output| n285
+  n13 -->|output| n300
   n14 -->|then| n15
-  n14 -->|output| n340
+  n14 -->|output| n358
   n15 -->|then| n16
-  n15 -->|output| n305
+  n15 -->|output| n321
   n16 -->|then| n17
-  n16 -->|output| n342
+  n16 -->|output| n360
   n17 -->|then| n18
-  n17 -->|output| n223
+  n17 -->|output| n237
   n18 -->|then| n19
-  n18 -->|output| n281
+  n18 -->|output| n296
   n19 -->|then| n20
-  n19 -->|output| n181
+  n19 -->|output| n189
   n20 -->|then| n21
-  n20 -->|output| n259
+  n20 -->|output| n274
   n21 -->|then| n22
-  n21 -->|output| n304
+  n21 -->|output| n320
   n22 -->|then| n23
-  n22 -->|output| n343
+  n22 -->|output| n361
   n23 -->|then| n24
-  n23 -->|output| n357
+  n23 -->|output| n375
   n24 -->|then| n25
-  n24 -->|output| n309
+  n24 -->|output| n325
   n25 -->|then| n26
-  n25 -->|output| n301
+  n25 -->|output| n317
   n26 -->|then| n27
-  n26 -->|output| n265
+  n26 -->|output| n280
   n27 -->|then| n28
-  n27 -->|output| n237
+  n27 -->|output| n252
   n28 -->|then| n29
-  n28 -->|output| n278
+  n28 -->|output| n293
   n29 -->|then| n30
-  n29 -->|output| n275
-  n29 -->|output| n316
+  n29 -->|output| n290
+  n29 -->|output| n332
   n30 -->|then| n31
-  n30 -->|output| n327
+  n30 -->|output| n344
   n31 -->|then| n32
-  n31 -->|output| n231
+  n31 -->|output| n246
   n32 -->|then| n33
-  n32 -->|output| n333
+  n32 -->|output| n351
   n33 -->|then| n34
-  n33 -->|output| n210
-  n33 -->|output| n314
+  n33 -->|output| n219
+  n33 -->|output| n330
   n34 -->|then| n35
-  n34 -->|output| n341
+  n34 -->|output| n359
   n35 -->|then| n36
-  n35 -->|output| n312
+  n35 -->|output| n328
   n36 -->|then| n37
-  n36 -->|output| n338
+  n36 -->|output| n356
   n37 -->|then| n38
-  n37 -->|output| n185
+  n37 -->|output| n193
   n38 -->|then| n39
-  n38 -->|output| n300
+  n38 -->|output| n316
   n39 -->|then| n40
-  n39 -->|output| n228
+  n39 -->|output| n243
   n40 -->|then| n41
-  n40 -->|output| n315
+  n40 -->|output| n331
   n41 -->|then| n42
-  n41 -->|output| n250
+  n41 -->|output| n265
   n42 -->|then| n43
-  n42 -->|output| n361
+  n42 -->|output| n379
   n43 -->|then| n44
-  n43 -->|output| n331
+  n43 -->|output| n349
   n44 -->|then| n45
-  n44 -->|output| n170
+  n44 -->|output| n178
   n45 -->|then| n46
-  n45 -->|output| n290
+  n45 -->|output| n306
   n46 -->|then| n47
-  n46 -->|output| n266
+  n46 -->|output| n281
   n47 -->|then| n48
-  n47 -->|output| n295
+  n47 -->|output| n311
   n48 -->|then| n49
-  n48 -->|output| n215
+  n48 -->|output| n226
   n49 -->|then| n50
-  n49 -->|output| n183
+  n49 -->|output| n191
   n50 -->|then| n51
-  n50 -->|output| n233
+  n50 -->|output| n248
   n51 -->|then| n52
-  n51 -->|output| n291
+  n51 -->|output| n307
   n52 -->|then| n53
-  n52 -->|output| n209
+  n52 -->|output| n218
   n53 -->|then| n54
-  n53 -->|output| n310
+  n53 -->|output| n326
   n54 -->|then| n55
-  n54 -->|output| n264
+  n54 -->|output| n279
   n55 -->|then| n56
-  n55 -->|output| n263
+  n55 -->|output| n278
   n56 -->|then| n57
-  n56 -->|output| n334
+  n56 -->|output| n352
   n57 -->|then| n58
-  n57 -->|output| n298
+  n57 -->|output| n314
   n58 -->|then| n59
-  n58 -->|output| n279
+  n58 -->|output| n294
   n59 -->|then| n60
-  n59 -->|output| n370
+  n59 -->|output| n390
   n60 -->|then| n61
-  n60 -->|output| n267
+  n60 -->|output| n282
   n61 -->|then| n62
-  n61 -->|output| n363
+  n61 -->|output| n382
   n62 -->|then| n63
-  n62 -->|output| n306
+  n62 -->|output| n322
   n63 -->|then| n64
-  n63 -->|output| n249
+  n63 -->|output| n264
   n64 -->|then| n65
-  n64 -->|output| n270
+  n64 -->|output| n285
   n65 -->|then| n66
-  n65 -->|output| n186
+  n65 -->|output| n194
   n66 -->|then| n67
-  n66 -->|output| n271
+  n66 -->|output| n286
   n67 -->|then| n68
-  n67 -->|output| n313
+  n67 -->|output| n329
   n68 -->|then| n69
-  n68 -->|output| n214
+  n68 -->|output| n225
   n69 -->|then| n70
-  n69 -->|output| n303
+  n69 -->|output| n319
   n70 -->|then| n71
-  n70 -->|output| n269
+  n70 -->|output| n284
   n71 -->|then| n72
-  n71 -->|output| n241
+  n71 -->|output| n256
   n72 -->|then| n73
-  n72 -->|output| n234
+  n72 -->|output| n249
   n73 -->|then| n74
-  n73 -->|output| n350
+  n73 -->|output| n368
   n74 -->|then| n75
-  n74 -->|output| n346
+  n74 -->|output| n364
   n75 -->|then| n76
-  n75 -->|output| n326
+  n75 -->|output| n343
   n76 -->|then| n77
-  n76 -->|output| n366
+  n76 -->|output| n385
   n77 -->|then| n78
-  n77 -->|output| n172
+  n77 -->|output| n180
   n78 -->|then| n79
-  n78 -->|output| n276
+  n78 -->|output| n291
   n79 -->|then| n80
-  n79 -->|output| n286
+  n79 -->|output| n301
   n80 -->|then| n81
-  n80 -->|output| n268
+  n80 -->|output| n283
   n81 -->|then| n82
-  n81 -->|output| n299
+  n81 -->|output| n315
   n82 -->|then| n83
-  n82 -->|output| n174
+  n82 -->|output| n182
   n83 -->|then| n84
-  n83 -->|output| n297
+  n83 -->|output| n313
   n84 -->|then| n85
-  n84 -->|output| n200
+  n84 -->|output| n209
   n85 -->|then| n86
-  n85 -->|output| n225
+  n85 -->|output| n239
   n86 -->|then| n87
   n86 -->|then| n88
-  n86 -->|output| n252
+  n86 -->|output| n267
   n87 -->|then| n89
-  n87 -->|output| n253
+  n87 -->|output| n268
   n88 -->|then| n89
-  n88 -->|output| n280
+  n88 -->|output| n295
   n89 -->|then| n90
-  n89 -->|output| n262
+  n89 -->|output| n277
   n90 -->|then| n91
-  n90 -->|output| n284
+  n90 -->|output| n299
   n91 -->|then| n93
-  n91 -->|output| n254
+  n91 -->|output| n269
   n92 -->|then| n157
-  n92 -->|output| n192
+  n92 -->|output| n201
   n93 -->|then| n94
-  n93 -->|output| n194
+  n93 -->|output| n203
   n94 -->|then| n95
-  n94 -->|output| n232
+  n94 -->|output| n247
   n95 -->|then| n96
-  n95 -->|output| n221
+  n95 -->|output| n235
   n96 -->|then| n97
-  n96 -->|output| n217
+  n96 -->|output| n230
   n97 -->|then| n98
-  n97 -->|output| n188
-  n97 -->|output| n344
-  n97 -->|output| n365
+  n97 -->|output| n196
+  n97 -->|output| n362
+  n97 -->|output| n384
   n98 -->|then| n99
-  n98 -->|output| n230
-  n98 -->|output| n248
-  n98 -->|output| n345
+  n98 -->|output| n245
+  n98 -->|output| n263
+  n98 -->|output| n363
   n99 -->|then| n100
   n99 -->|then| n101
-  n99 -->|output| n344
+  n99 -->|output| n362
   n100 -->|then| n102
-  n100 -->|output| n282
+  n100 -->|output| n297
   n101 -->|then| n102
-  n101 -->|output| n204
+  n101 -->|output| n213
   n102 -->|then| n103
-  n102 -->|output| n364
+  n102 -->|output| n383
   n103 -->|then| n104
-  n103 -->|output| n173
+  n103 -->|output| n181
   n104 -->|then| n106
-  n104 -->|output| n365
+  n104 -->|output| n384
   n105 -->|then| n164
-  n105 -->|output| n320
+  n105 -->|output| n336
   n106 -->|then| n107
-  n106 -->|output| n353
+  n106 -->|output| n371
   n107 -->|then| n108
-  n107 -->|output| n189
+  n107 -->|output| n198
   n108 -->|then| n109
-  n108 -->|output| n294
+  n108 -->|output| n310
   n109 -->|then| n110
-  n109 -->|output| n226
+  n109 -->|output| n240
   n110 -->|then| n111
-  n110 -->|output| n319
+  n110 -->|output| n335
   n111 -->|then| n112
-  n111 -->|output| n198
+  n111 -->|output| n207
   n112 -->|then| n113
-  n112 -->|output| n199
+  n112 -->|output| n208
   n113 -->|then| n114
-  n113 -->|output| n201
+  n113 -->|output| n210
   n114 -->|then| n115
-  n114 -->|output| n337
+  n114 -->|output| n355
   n115 -->|then| n116
-  n115 -->|output| n171
+  n115 -->|output| n179
   n116 -->|then| n117
-  n116 -->|output| n307
+  n116 -->|output| n323
   n117 -->|then| n118
-  n117 -->|output| n257
+  n117 -->|output| n272
   n118 -->|then| n119
-  n118 -->|output| n362
+  n118 -->|output| n380
   n119 -->|then| n120
-  n119 -->|output| n242
+  n119 -->|output| n257
   n120 -->|then| n121
-  n120 -->|output| n239
-  n120 -->|output| n240
+  n120 -->|output| n254
+  n120 -->|output| n255
   n121 -->|then| n122
-  n121 -->|output| n243
+  n121 -->|output| n258
   n122 -->|then| n123
-  n122 -->|output| n207
-  n122 -->|output| n218
-  n122 -->|output| n348
-  n122 -->|output| n355
+  n122 -->|output| n216
+  n122 -->|output| n231
+  n122 -->|output| n366
+  n122 -->|output| n373
   n123 -->|then| n124
-  n123 -->|output| n337
+  n123 -->|output| n355
   n124 -->|then| n125
-  n124 -->|output| n358
+  n124 -->|output| n376
   n125 -->|then| n126
-  n125 -->|output| n323
+  n125 -->|output| n340
   n126 -->|then| n127
-  n126 -->|output| n351
+  n126 -->|output| n369
   n127 -->|then| n128
-  n127 -->|output| n273
+  n127 -->|output| n288
   n128 -->|then| n129
-  n128 -->|output| n184
+  n128 -->|output| n192
   n129 -->|then| n130
-  n129 -->|output| n317
+  n129 -->|output| n333
   n130 -->|then| n131
-  n130 -->|output| n178
+  n130 -->|output| n186
   n131 -->|then| n132
-  n131 -->|output| n179
+  n131 -->|output| n187
   n132 -->|then| n133
-  n132 -->|output| n176
-  n132 -->|output| n177
+  n132 -->|output| n184
+  n132 -->|output| n185
   n133 -->|then| n134
-  n133 -->|output| n274
+  n133 -->|output| n289
   n134 -->|then| n135
-  n134 -->|output| n352
+  n134 -->|output| n370
   n135 -->|then| n136
-  n135 -->|output| n211
+  n135 -->|output| n222
   n136 -->|then| n137
-  n136 -->|output| n238
+  n136 -->|output| n253
   n137 -->|then| n138
-  n137 -->|output| n216
+  n137 -->|output| n229
   n138 -->|then| n139
-  n138 -->|output| n328
+  n138 -->|output| n345
   n139 -->|then| n140
-  n139 -->|output| n330
+  n139 -->|output| n348
   n140 -->|then| n141
-  n140 -->|output| n354
+  n140 -->|output| n372
   n141 -->|then| n142
-  n141 -->|output| n205
+  n141 -->|output| n214
   n142 -->|then| n143
-  n142 -->|output| n283
-  n142 -->|output| n359
+  n142 -->|output| n298
+  n142 -->|output| n377
   n143 -->|then| n144
-  n143 -->|output| n311
+  n143 -->|output| n327
   n144 -->|then| n145
-  n144 -->|output| n360
+  n144 -->|output| n378
   n145 -->|then| n146
-  n145 -->|output| n191
+  n145 -->|output| n200
   n146 -->|then| n147
-  n146 -->|output| n190
+  n146 -->|output| n199
   n147 -->|then| n148
-  n147 -->|output| n175
+  n147 -->|output| n183
   n148 -->|then| n149
-  n148 -->|output| n187
+  n148 -->|output| n195
   n149 -->|then| n150
-  n149 -->|output| n224
+  n149 -->|output| n238
   n150 -->|then| n151
-  n150 -->|output| n260
-  n150 -->|output| n261
+  n150 -->|output| n275
+  n150 -->|output| n276
   n151 -->|then| n152
-  n151 -->|output| n222
+  n151 -->|output| n236
   n152 -->|then| n153
-  n152 -->|output| n367
+  n152 -->|output| n386
   n153 -->|then| n154
-  n153 -->|output| n293
+  n153 -->|output| n309
   n154 -->|then| n155
-  n154 -->|output| n220
+  n154 -->|output| n234
   n155 -->|then| n92
   n155 -->|then| n156
-  n155 -->|output| n255
+  n155 -->|output| n270
   n156 -->|then| n157
-  n156 -->|output| n193
+  n156 -->|output| n202
   n157 -->|then| n158
-  n157 -->|output| n219
+  n157 -->|output| n232
   n158 -->|then| n159
-  n158 -->|output| n321
+  n158 -->|output| n337
   n159 -->|then| n160
-  n159 -->|output| n347
+  n159 -->|output| n365
   n160 -->|then| n161
-  n160 -->|output| n258
+  n160 -->|output| n273
   n161 -->|then| n165
   n161 -->|then| n166
-  n161 -->|output| n318
+  n161 -->|output| n334
   n162 -->|then| n105
   n162 -->|then| n163
-  n162 -->|output| n336
+  n162 -->|output| n354
   n163 -->|then| n164
-  n163 -->|output| n335
+  n163 -->|output| n353
   n164 -->|then| n167
-  n164 -->|output| n196
+  n164 -->|output| n205
   n165 -->|then| n162
-  n165 -->|output| n287
+  n165 -->|output| n302
   n166 -->|then| n162
-  n166 -->|output| n202
+  n166 -->|output| n211
   n167 -->|then| n168
-  n167 -->|output| n332
-  n168 -->|output| n308
-  n169 -->|part| n490
-  n170 -->|input| n45
-  n170 -->|candidate| n425
-  n171 -->|source| n514
-  n172 -->|candidate| n466
-  n173 -->|premise| n496
-  n174 -->|left| n471
-  n175 -->|left| n552
-  n176 -->|part| n534
-  n177 -->|part| n535
-  n178 -->|input| n131
-  n178 -->|candidate| n531
-  n179 -->|input| n132
-  n179 -->|input| n133
-  n179 -->|input| n136
-  n179 -->|premise| n532
-  n180 -->|input| n6
-  n180 -->|reason| n376
-  n181 -->|answer| n391
-  n182 -->|input| n18
-  n182 -->|candidate| n379
-  n183 -->|input| n50
-  n183 -->|input| n51
-  n184 -->|premise| n529
-  n185 -->|input| n38
-  n185 -->|input| n65
-  n185 -->|candidate| n417
-  n185 -->|reason| n418
-  n186 -->|new| n453
-  n187 -->|candidate| n553
-  n188 -->|input| n100
-  n188 -->|source| n493
-  n188 -->|left| n497
-  n189 -->|input| n108
-  n189 -->|premise| n506
-  n189 -->|reason| n507
-  n190 -->|input| n147
-  n190 -->|input| n148
-  n190 -->|challenger| n551
-  n191 -->|candidate| n550
-  n192 -->|dependent| n479
-  n193 -->|input| n157
-  n193 -->|input| n158
-  n193 -->|input| n159
-  n193 -->|candidate| n560
-  n193 -->|part| n563
-  n193 -->|part| n578
-  n194 -->|input| n94
-  n195 -->|challenger| n385
-  n195 -->|answer| n386
-  n196 -->|premise| n567
-  n197 -->|candidate| n375
-  n198 -->|input| n113
-  n198 -->|input| n122
-  n198 -->|left| n511
-  n199 -->|input| n113
-  n199 -->|input| n122
-  n200 -->|source| n473
-  n201 -->|answer| n512
-  n202 -->|input| n167
-  n203 -->|source| n577
-  n204 -->|input| n105
-  n204 -->|dependent| n504
-  n205 -->|input| n140
-  n205 -->|input| n143
-  n205 -->|input| n161
-  n205 -->|answer| n545
-  n206 -->|input| n8
-  n206 -->|reason| n378
-  n207 -->|part| n522
-  n208 -->|part| n491
-  n209 -->|input| n53
-  n209 -->|input| n55
-  n209 -->|candidate| n433
-  n210 -->|input| n34
-  n210 -->|input| n71
-  n210 -->|example| n411
-  n210 -->|reason| n412
-  n211 -->|part| n538
-  n212 -->|input| n154
-  n212 -->|example| n570
-  n212 -->|subject| n572
-  n213 -->|example| n571
-  n213 -->|subject| n573
-  n214 -->|challenger| n456
-  n215 -->|input| n49
-  n215 -->|candidate| n429
-  n215 -->|source| n430
-  n215 -->|part| n446
-  n216 -->|challenger| n540
-  n217 -->|candidate| n486
-  n218 -->|part| n521
-  n219 -->|part| n561
-  n221 -->|input| n96
-  n221 -->|challenger| n485
-  n222 -->|input| n152
-  n222 -->|part| n557
-  n223 -->|input| n20
-  n223 -->|candidate| n389
-  n224 -->|input| n150
-  n224 -->|challenger| n554
-  n225 -->|input| n86
-  n226 -->|input| n110
-  n226 -->|input| n115
-  n226 -->|input| n116
-  n226 -->|input| n124
-  n226 -->|candidate| n508
-  n227 -->|candidate| n383
-  n228 -->|candidate| n419
-  n229 -->|source| n576
-  n230 -->|input| n99
-  n230 -->|part| n489
-  n231 -->|candidate| n408
-  n232 -->|input| n95
-  n232 -->|input| n97
-  n232 -->|dependent| n483
-  n232 -->|dependent| n484
-  n233 -->|source| n431
-  n234 -->|source| n461
-  n235 -->|input| n2
-  n235 -->|input| n3
-  n236 -->|new| n372
-  n236 -->|answer| n373
-  n237 -->|input| n28
-  n237 -->|input| n56
-  n237 -->|candidate| n401
-  n238 -->|premise| n539
-  n239 -->|input| n121
-  n239 -->|input| n136
-  n239 -->|input| n141
-  n239 -->|input| n149
-  n239 -->|part| n519
-  n240 -->|candidate| n518
-  n241 -->|input| n72
-  n241 -->|input| n73
-  n241 -->|source| n460
-  n242 -->|input| n120
-  n242 -->|candidate| n517
-  n243 -->|input| n125
-  n243 -->|input| n137
-  n243 -->|candidate| n520
-  n244 -->|candidate| n420
-  n245 -->|input| n12
-  n245 -->|answer| n381
-  n245 -->|challenger| n382
-  n246 -->|input| n10
-  n247 -->|source| n574
-  n248 -->|input| n99
-  n248 -->|part| n488
-  n249 -->|input| n64
-  n249 -->|answer| n451
-  n250 -->|answer| n422
-  n251 -->|candidate| n423
-  n252 -->|input| n87
-  n252 -->|candidate| n476
-  n253 -->|input| n88
-  n253 -->|input| n89
-  n253 -->|input| n90
-  n253 -->|input| n153
-  n253 -->|input| n155
-  n253 -->|part| n477
-  n253 -->|reason| n481
-  n254 -->|input| n92
-  n254 -->|source| n480
-  n255 -->|answer| n559
-  n256 -->|source| n575
-  n258 -->|premise| n564
-  n259 -->|input| n21
-  n259 -->|input| n80
-  n259 -->|source| n392
-  n260 -->|candidate| n555
-  n261 -->|input| n151
-  n261 -->|candidate| n556
-  n262 -->|candidate| n478
-  n263 -->|new| n437
-  n264 -->|input| n56
-  n264 -->|dependent| n436
-  n265 -->|source| n399
-  n266 -->|input| n47
-  n266 -->|candidate| n426
-  n267 -->|part| n445
-  n268 -->|challenger| n469
-  n269 -->|challenger| n458
-  n269 -->|challenger| n459
-  n270 -->|input| n66
-  n270 -->|candidate| n452
-  n271 -->|input| n67
-  n271 -->|challenger| n454
-  n272 -->|reason| n380
-  n273 -->|input| n128
-  n273 -->|premise| n528
-  n274 -->|input| n134
-  n274 -->|input| n138
-  n274 -->|input| n139
-  n274 -->|input| n141
-  n274 -->|new| n536
-  n274 -->|part| n542
-  n275 -->|reason| n403
-  n275 -->|left| n405
-  n276 -->|input| n79
-  n276 -->|source| n467
-  n277 -->|example| n409
-  n278 -->|input| n29
-  n278 -->|input| n32
-  n278 -->|challenger| n402
-  n279 -->|input| n59
-  n280 -->|original| n499
-  n281 -->|input| n19
-  n281 -->|challenger| n390
-  n282 -->|input| n101
-  n282 -->|dependent| n500
-  n282 -->|original| n546
-  n284 -->|input| n91
-  n285 -->|input| n14
-  n285 -->|original| n388
-  n286 -->|source| n468
-  n287 -->|input| n166
-  n287 -->|reason| n568
-  n288 -->|input| n9
-  n288 -->|input| n27
-  n289 -->|input| n7
-  n289 -->|input| n23
-  n289 -->|input| n58
-  n289 -->|input| n85
-  n289 -->|dependent| n440
-  n289 -->|dependent| n441
-  n289 -->|original| n475
-  n290 -->|input| n46
-  n290 -->|reason| n428
-  n291 -->|input| n52
-  n291 -->|source| n432
-  n291 -->|original| n434
-  n292 -->|input| n13
-  n292 -->|original| n384
-  n293 -->|input| n156
-  n294 -->|input| n109
-  n295 -->|input| n48
-  n296 -->|input| n3
-  n296 -->|challenger| n371
-  n297 -->|input| n84
-  n297 -->|input| n85
-  n297 -->|source| n472
-  n297 -->|reason| n474
-  n298 -->|input| n59
-  n298 -->|source| n442
-  n298 -->|challenger| n443
-  n300 -->|input| n39
-  n301 -->|input| n26
-  n302 -->|input| n11
-  n303 -->|source| n457
-  n304 -->|input| n22
-  n304 -->|challenger| n393
-  n305 -->|input| n16
-  n305 -->|input| n17
-  n305 -->|original| n404
-  n306 -->|input| n63
-  n306 -->|source| n450
-  n307 -->|input| n117
-  n307 -->|input| n129
-  n307 -->|reason| n515
-  n308 -->|dependent| n580
-  n308 -->|dependent| n581
-  n309 -->|input| n25
-  n309 -->|reason| n398
-  n310 -->|input| n54
-  n310 -->|input| n69
-  n310 -->|challenger| n435
-  n311 -->|input| n144
-  n312 -->|input| n36
-  n312 -->|challenger| n414
-  n313 -->|input| n68
-  n313 -->|input| n75
-  n314 -->|input| n37
-  n314 -->|input| n40
-  n314 -->|original| n421
-  n314 -->|original| n455
-  n315 -->|input| n41
-  n315 -->|input| n42
-  n315 -->|input| n62
-  n316 -->|input| n30
-  n316 -->|input| n31
-  n317 -->|input| n130
-  n317 -->|reason| n530
-  n318 -->|input| n162
-  n319 -->|input| n111
-  n319 -->|input| n112
-  n319 -->|input| n114
-  n319 -->|reason| n509
-  n319 -->|reason| n510
-  n320 -->|input| n106
-  n322 -->|input| n1
-  n322 -->|input| n4
-  n322 -->|input| n8
-  n322 -->|input| n83
-  n322 -->|reason| n374
-  n322 -->|original| n377
-  n323 -->|input| n126
-  n323 -->|challenger| n526
-  n324 -->|input| n5
-  n324 -->|input| n93
-  n324 -->|reason| n482
-  n325 -->|source| n501
-  n326 -->|input| n76
-  n326 -->|input| n81
-  n326 -->|source| n464
-  n326 -->|original| n470
-  n327 -->|source| n406
-  n328 -->|input| n139
-  n328 -->|premise| n541
-  n330 -->|input| n141
-  n330 -->|part| n543
-  n331 -->|input| n44
-  n331 -->|input| n59
-  n331 -->|input| n61
-  n331 -->|part| n427
-  n331 -->|reason| n444
-  n332 -->|reason| n569
-  n333 -->|input| n33
-  n333 -->|input| n70
-  n333 -->|challenger| n410
-  n334 -->|challenger| n438
-  n334 -->|source| n439
-  n335 -->|input| n164
-  n335 -->|input| n168
-  n335 -->|source| n566
-  n336 -->|input| n163
-  n336 -->|input| n165
-  n336 -->|answer| n565
-  n336 -->|part| n579
-  n337 -->|input| n123
-  n337 -->|premise| n513
-  n338 -->|source| n415
-  n338 -->|answer| n416
-  n340 -->|input| n15
-  n340 -->|reason| n387
-  n341 -->|input| n35
-  n341 -->|input| n36
-  n341 -->|candidate| n413
-  n342 -->|input| n17
-  n343 -->|input| n23
-  n343 -->|premise| n394
-  n344 -->|input| n98
-  n344 -->|input| n101
-  n344 -->|answer| n492
-  n344 -->|part| n502
-  n345 -->|input| n99
-  n345 -->|input| n118
-  n345 -->|part| n487
-  n346 -->|source| n463
-  n347 -->|input| n160
-  n347 -->|input| n168
-  n347 -->|answer| n562
-  n348 -->|part| n523
-  n349 -->|premise| n533
-  n350 -->|input| n74
-  n350 -->|source| n462
-  n351 -->|input| n127
-  n351 -->|answer| n527
-  n352 -->|input| n135
-  n352 -->|input| n139
-  n352 -->|part| n537
-  n353 -->|input| n107
-  n353 -->|answer| n505
-  n354 -->|source| n544
-  n355 -->|premise| n524
-  n356 -->|input| n101
-  n356 -->|source| n498
-  n356 -->|part| n503
-  n357 -->|input| n24
-  n357 -->|input| n57
-  n357 -->|candidate| n395
-  n357 -->|dependent| n396
-  n357 -->|reason| n397
-  n358 -->|input| n142
-  n358 -->|input| n146
-  n358 -->|dependent| n525
-  n359 -->|candidate| n547
-  n359 -->|source| n548
-  n360 -->|input| n145
-  n360 -->|candidate| n549
-  n361 -->|input| n43
-  n361 -->|part| n424
-  n362 -->|input| n119
-  n362 -->|challenger| n516
-  n363 -->|dependent| n448
-  n363 -->|dependent| n449
-  n364 -->|input| n103
-  n364 -->|candidate| n495
-  n365 -->|input| n102
-  n365 -->|input| n104
-  n365 -->|source| n494
-  n366 -->|input| n77
-  n366 -->|reason| n465
-  n367 -->|left| n558
-  n368 -->|input| n78
-  n368 -->|input| n82
-  n368 -->|source| n400
-  n369 -->|candidate| n407
-  n370 -->|input| n60
-  n370 -->|input| n61
-  n370 -->|reason| n447
-  n371 -->|target| n235
-  n372 -->|old| n235
-  n373 -->|question| n296
-  n374 -->|result| n324
-  n375 -->|problem| n324
-  n376 -->|result| n289
-  n377 -->|replacement| n288
-  n378 -->|result| n288
-  n379 -->|problem| n288
-  n380 -->|result| n302
-  n381 -->|question| n302
-  n382 -->|target| n272
-  n383 -->|problem| n292
-  n384 -->|replacement| n285
-  n385 -->|target| n227
-  n386 -->|question| n285
-  n387 -->|result| n305
-  n388 -->|replacement| n305
-  n389 -->|problem| n305
-  n390 -->|target| n182
-  n391 -->|question| n281
-  n392 -->|target| n223
-  n393 -->|target| n259
-  n394 -->|conclusion| n357
-  n395 -->|problem| n289
-  n396 -->|prerequisite| n343
-  n397 -->|result| n309
-  n398 -->|result| n301
-  n399 -->|target| n301
-  n400 -->|target| n265
-  n401 -->|problem| n288
-  n402 -->|target| n237
-  n403 -->|result| n316
-  n404 -->|replacement| n316
-  n405 -->|right| n329
-  n406 -->|target| n316
-  n407 -->|problem| n316
-  n408 -->|problem| n316
-  n409 -->|general| n278
-  n410 -->|target| n278
-  n411 -->|general| n333
-  n412 -->|result| n314
-  n413 -->|problem| n314
-  n414 -->|target| n341
-  n415 -->|target| n341
-  n416 -->|question| n312
-  n417 -->|problem| n314
-  n418 -->|result| n300
-  n419 -->|problem| n300
-  n420 -->|problem| n314
-  n421 -->|replacement| n315
-  n422 -->|question| n315
-  n423 -->|problem| n315
-  n424 -->|whole| n331
-  n425 -->|problem| n290
-  n426 -->|problem| n290
-  n427 -->|whole| n266
-  n428 -->|result| n295
-  n429 -->|problem| n295
-  n430 -->|target| n183
-  n431 -->|target| n183
-  n432 -->|target| n183
-  n433 -->|problem| n291
-  n434 -->|replacement| n310
-  n435 -->|target| n209
-  n436 -->|prerequisite| n310
-  n437 -->|old| n209
-  n438 -->|target| n237
-  n439 -->|target| n288
-  n440 -->|prerequisite| n298
-  n441 -->|prerequisite| n279
-  n442 -->|target| n315
-  n443 -->|target| n357
-  n444 -->|result| n370
-  n445 -->|whole| n370
-  n446 -->|whole| n370
-  n447 -->|result| n363
-  n448 -->|prerequisite| n331
-  n449 -->|prerequisite| n290
-  n450 -->|target| n315
-  n451 -->|question| n306
-  n452 -->|problem| n314
-  n453 -->|old| n185
-  n454 -->|target| n270
-  n455 -->|replacement| n313
-  n456 -->|target| n244
-  n457 -->|target| n310
-  n458 -->|target| n333
-  n459 -->|target| n237
-  n460 -->|target| n210
-  n461 -->|target| n241
-  n462 -->|target| n241
-  n463 -->|target| n350
-  n464 -->|target| n324
-  n465 -->|result| n326
-  n466 -->|problem| n326
-  n467 -->|target| n368
-  n468 -->|target| n298
-  n469 -->|target| n259
-  n470 -->|replacement| n299
-  n471 -->|right| n368
-  n472 -->|target| n322
-  n473 -->|target| n297
-  n474 -->|result| n225
-  n475 -->|replacement| n280
-  n476 -->|problem| n280
-  n477 -->|whole| n225
-  n478 -->|problem| n280
-  n479 -->|prerequisite| n339
-  n480 -->|target| n253
-  n481 -->|result| n192
-  n482 -->|result| n194
-  n483 -->|prerequisite| n194
-  n484 -->|prerequisite| n192
-  n485 -->|target| n259
-  n486 -->|problem| n284
-  n487 -->|whole| n344
-  n488 -->|whole| n344
-  n489 -->|whole| n344
-  n490 -->|whole| n344
-  n491 -->|whole| n344
-  n492 -->|question| n284
-  n493 -->|target| n297
-  n494 -->|target| n326
-  n495 -->|problem| n325
-  n496 -->|conclusion| n364
-  n497 -->|right| n365
-  n498 -->|target| n344
-  n499 -->|replacement| n282
-  n500 -->|prerequisite| n188
-  n501 -->|target| n324
-  n502 -->|whole| n204
-  n503 -->|whole| n204
-  n504 -->|prerequisite| n282
-  n505 -->|question| n320
-  n506 -->|conclusion| n353
-  n507 -->|result| n294
-  n508 -->|problem| n294
-  n509 -->|result| n198
-  n510 -->|result| n199
-  n511 -->|right| n199
-  n512 -->|question| n319
-  n513 -->|conclusion| n201
-  n514 -->|target| n226
-  n515 -->|result| n257
-  n516 -->|target| n345
-  n517 -->|problem| n307
-  n518 -->|problem| n307
-  n519 -->|whole| n205
-  n520 -->|problem| n307
-  n521 -->|whole| n355
-  n522 -->|whole| n355
-  n523 -->|whole| n355
-  n524 -->|conclusion| n337
-  n525 -->|prerequisite| n239
-  n526 -->|target| n243
-  n527 -->|question| n323
-  n528 -->|conclusion| n351
-  n529 -->|conclusion| n273
-  n530 -->|result| n178
-  n531 -->|problem| n323
-  n532 -->|conclusion| n273
-  n533 -->|conclusion| n179
-  n534 -->|whole| n179
-  n535 -->|whole| n179
-  n536 -->|old| n243
-  n537 -->|whole| n330
-  n538 -->|whole| n330
-  n539 -->|conclusion| n205
-  n540 -->|target| n243
-  n541 -->|conclusion| n330
-  n542 -->|whole| n205
-  n543 -->|whole| n205
-  n544 -->|target| n205
-  n545 -->|question| n307
-  n546 -->|replacement| n283
-  n547 -->|problem| n283
-  n548 -->|target| n325
-  n549 -->|problem| n311
-  n550 -->|problem| n360
-  n551 -->|target| n358
-  n552 -->|right| n358
-  n553 -->|problem| n283
-  n554 -->|target| n239
-  n555 -->|problem| n283
-  n556 -->|problem| n307
-  n557 -->|whole| n261
-  n558 -->|right| n222
-  n559 -->|question| n293
-  n560 -->|problem| n293
-  n561 -->|whole| n193
-  n562 -->|question| n321
-  n563 -->|whole| n347
-  n564 -->|conclusion| n347
-  n565 -->|question| n318
-  n566 -->|target| n336
-  n567 -->|conclusion| n335
-  n568 -->|result| n202
-  n569 -->|result| n202
-  n570 -->|general| n193
-  n571 -->|general| n336
-  n572 -->|object| n205
-  n573 -->|object| n205
-  n574 -->|target| n342
-  n575 -->|target| n257
-  n576 -->|target| n326
-  n577 -->|target| n289
-  n578 -->|whole| n202
-  n579 -->|whole| n202
-  n580 -->|prerequisite| n347
-  n581 -->|prerequisite| n335
+  n167 -->|output| n350
+  n168 -->|then| n169
+  n168 -->|output| n324
+  n169 -->|then| n170
+  n169 -->|output| n197
+  n170 -->|then| n171
+  n170 -->|output| n221
+  n170 -->|output| n346
+  n171 -->|then| n172
+  n171 -->|output| n241
+  n172 -->|then| n173
+  n172 -->|output| n220
+  n173 -->|then| n174
+  n173 -->|output| n227
+  n173 -->|output| n228
+  n174 -->|then| n175
+  n174 -->|output| n233
+  n175 -->|then| n176
+  n175 -->|output| n381
+  n176 -->|output| n303
+  n176 -->|output| n338
+  n176 -->|output| n389
+  n177 -->|part| n510
+  n178 -->|input| n45
+  n178 -->|candidate| n445
+  n179 -->|source| n534
+  n180 -->|candidate| n486
+  n181 -->|premise| n516
+  n182 -->|left| n491
+  n183 -->|left| n572
+  n184 -->|part| n554
+  n185 -->|part| n555
+  n186 -->|input| n131
+  n186 -->|candidate| n551
+  n187 -->|input| n132
+  n187 -->|input| n133
+  n187 -->|input| n136
+  n187 -->|premise| n552
+  n188 -->|input| n6
+  n188 -->|reason| n396
+  n189 -->|answer| n411
+  n190 -->|input| n18
+  n190 -->|candidate| n399
+  n191 -->|input| n50
+  n191 -->|input| n51
+  n192 -->|premise| n549
+  n193 -->|input| n38
+  n193 -->|input| n65
+  n193 -->|candidate| n437
+  n193 -->|reason| n438
+  n194 -->|new| n473
+  n195 -->|candidate| n573
+  n196 -->|input| n100
+  n196 -->|source| n513
+  n196 -->|left| n517
+  n197 -->|input| n170
+  n197 -->|input| n173
+  n197 -->|input| n175
+  n197 -->|input| n176
+  n197 -->|candidate| n602
+  n198 -->|input| n108
+  n198 -->|premise| n526
+  n198 -->|reason| n527
+  n199 -->|input| n147
+  n199 -->|input| n148
+  n199 -->|challenger| n571
+  n199 -->|part| n621
+  n200 -->|candidate| n570
+  n201 -->|dependent| n499
+  n202 -->|input| n157
+  n202 -->|input| n158
+  n202 -->|input| n159
+  n202 -->|input| n174
+  n202 -->|input| n176
+  n202 -->|candidate| n580
+  n202 -->|part| n583
+  n202 -->|part| n598
+  n203 -->|input| n94
+  n204 -->|challenger| n405
+  n204 -->|answer| n406
+  n205 -->|premise| n587
+  n206 -->|candidate| n395
+  n207 -->|input| n113
+  n207 -->|input| n122
+  n207 -->|left| n531
+  n208 -->|input| n113
+  n208 -->|input| n122
+  n209 -->|source| n493
+  n210 -->|answer| n532
+  n211 -->|input| n167
+  n212 -->|source| n597
+  n213 -->|input| n105
+  n213 -->|dependent| n524
+  n214 -->|input| n140
+  n214 -->|input| n143
+  n214 -->|input| n161
+  n214 -->|answer| n565
+  n215 -->|input| n8
+  n215 -->|reason| n398
+  n216 -->|part| n542
+  n217 -->|part| n511
+  n218 -->|input| n53
+  n218 -->|input| n55
+  n218 -->|candidate| n453
+  n219 -->|input| n34
+  n219 -->|input| n71
+  n219 -->|example| n431
+  n219 -->|reason| n432
+  n220 -->|premise| n606
+  n221 -->|input| n171
+  n221 -->|input| n172
+  n221 -->|part| n603
+  n222 -->|part| n558
+  n223 -->|input| n154
+  n223 -->|example| n590
+  n223 -->|subject| n592
+  n224 -->|example| n591
+  n224 -->|subject| n593
+  n225 -->|challenger| n476
+  n226 -->|input| n49
+  n226 -->|candidate| n449
+  n226 -->|source| n450
+  n226 -->|part| n466
+  n227 -->|premise| n607
+  n228 -->|part| n608
+  n229 -->|challenger| n560
+  n230 -->|candidate| n506
+  n231 -->|part| n541
+  n232 -->|part| n581
+  n232 -->|part| n623
+  n233 -->|source| n610
+  n235 -->|input| n96
+  n235 -->|challenger| n505
+  n236 -->|input| n152
+  n236 -->|part| n577
+  n237 -->|input| n20
+  n237 -->|candidate| n409
+  n238 -->|input| n150
+  n238 -->|challenger| n574
+  n239 -->|input| n86
+  n240 -->|input| n110
+  n240 -->|input| n115
+  n240 -->|input| n116
+  n240 -->|input| n124
+  n240 -->|candidate| n528
+  n241 -->|premise| n605
+  n242 -->|candidate| n403
+  n243 -->|candidate| n439
+  n244 -->|source| n596
+  n245 -->|input| n99
+  n245 -->|part| n509
+  n246 -->|candidate| n428
+  n247 -->|input| n95
+  n247 -->|input| n97
+  n247 -->|dependent| n503
+  n247 -->|dependent| n504
+  n248 -->|source| n451
+  n249 -->|source| n481
+  n250 -->|input| n2
+  n250 -->|input| n3
+  n251 -->|new| n392
+  n251 -->|answer| n393
+  n252 -->|input| n28
+  n252 -->|input| n56
+  n252 -->|candidate| n421
+  n253 -->|premise| n559
+  n254 -->|input| n121
+  n254 -->|input| n136
+  n254 -->|input| n141
+  n254 -->|input| n149
+  n254 -->|part| n539
+  n255 -->|candidate| n538
+  n256 -->|input| n72
+  n256 -->|input| n73
+  n256 -->|source| n480
+  n257 -->|input| n120
+  n257 -->|candidate| n537
+  n258 -->|input| n125
+  n258 -->|input| n137
+  n258 -->|candidate| n540
+  n259 -->|candidate| n440
+  n260 -->|input| n12
+  n260 -->|answer| n401
+  n260 -->|challenger| n402
+  n261 -->|input| n10
+  n262 -->|source| n594
+  n263 -->|input| n99
+  n263 -->|part| n508
+  n264 -->|input| n64
+  n264 -->|answer| n471
+  n265 -->|answer| n442
+  n266 -->|candidate| n443
+  n267 -->|input| n87
+  n267 -->|candidate| n496
+  n268 -->|input| n88
+  n268 -->|input| n89
+  n268 -->|input| n90
+  n268 -->|input| n153
+  n268 -->|input| n155
+  n268 -->|part| n497
+  n268 -->|reason| n501
+  n269 -->|input| n92
+  n269 -->|source| n500
+  n270 -->|answer| n579
+  n271 -->|source| n595
+  n273 -->|premise| n584
+  n274 -->|input| n21
+  n274 -->|input| n80
+  n274 -->|source| n412
+  n275 -->|candidate| n575
+  n276 -->|input| n151
+  n276 -->|input| n172
+  n276 -->|candidate| n576
+  n276 -->|part| n622
+  n277 -->|candidate| n498
+  n277 -->|part| n617
+  n278 -->|new| n457
+  n279 -->|input| n56
+  n279 -->|dependent| n456
+  n280 -->|source| n419
+  n281 -->|input| n47
+  n281 -->|candidate| n446
+  n282 -->|part| n465
+  n283 -->|challenger| n489
+  n284 -->|challenger| n478
+  n284 -->|challenger| n479
+  n285 -->|input| n66
+  n285 -->|candidate| n472
+  n286 -->|input| n67
+  n286 -->|challenger| n474
+  n287 -->|reason| n400
+  n288 -->|input| n128
+  n288 -->|premise| n548
+  n289 -->|input| n134
+  n289 -->|input| n138
+  n289 -->|input| n139
+  n289 -->|input| n141
+  n289 -->|new| n556
+  n289 -->|part| n562
+  n289 -->|part| n620
+  n290 -->|reason| n423
+  n290 -->|left| n425
+  n291 -->|input| n79
+  n291 -->|source| n487
+  n292 -->|example| n429
+  n293 -->|input| n29
+  n293 -->|input| n32
+  n293 -->|challenger| n422
+  n294 -->|input| n59
+  n295 -->|original| n519
+  n296 -->|input| n19
+  n296 -->|challenger| n410
+  n297 -->|input| n101
+  n297 -->|dependent| n520
+  n297 -->|original| n566
+  n299 -->|input| n91
+  n300 -->|input| n14
+  n300 -->|original| n408
+  n301 -->|source| n488
+  n302 -->|input| n166
+  n302 -->|reason| n588
+  n303 -->|dependent| n613
+  n304 -->|input| n9
+  n304 -->|input| n27
+  n305 -->|input| n7
+  n305 -->|input| n23
+  n305 -->|input| n58
+  n305 -->|input| n85
+  n305 -->|dependent| n460
+  n305 -->|dependent| n461
+  n305 -->|original| n495
+  n306 -->|input| n46
+  n306 -->|reason| n448
+  n307 -->|input| n52
+  n307 -->|source| n452
+  n307 -->|original| n454
+  n308 -->|input| n13
+  n308 -->|original| n404
+  n309 -->|input| n156
+  n310 -->|input| n109
+  n311 -->|input| n48
+  n312 -->|input| n3
+  n312 -->|challenger| n391
+  n313 -->|input| n84
+  n313 -->|input| n85
+  n313 -->|source| n492
+  n313 -->|reason| n494
+  n313 -->|part| n616
+  n314 -->|input| n59
+  n314 -->|source| n462
+  n314 -->|challenger| n463
+  n316 -->|input| n39
+  n317 -->|input| n26
+  n318 -->|input| n11
+  n319 -->|source| n477
+  n320 -->|input| n22
+  n320 -->|challenger| n413
+  n321 -->|input| n16
+  n321 -->|input| n17
+  n321 -->|original| n424
+  n322 -->|input| n63
+  n322 -->|source| n470
+  n323 -->|input| n117
+  n323 -->|input| n129
+  n323 -->|reason| n535
+  n324 -->|dependent| n600
+  n324 -->|dependent| n601
+  n325 -->|input| n25
+  n325 -->|reason| n418
+  n326 -->|input| n54
+  n326 -->|input| n69
+  n326 -->|challenger| n455
+  n327 -->|input| n144
+  n328 -->|input| n36
+  n328 -->|challenger| n434
+  n329 -->|input| n68
+  n329 -->|input| n75
+  n330 -->|input| n37
+  n330 -->|input| n40
+  n330 -->|original| n441
+  n330 -->|original| n475
+  n331 -->|input| n41
+  n331 -->|input| n42
+  n331 -->|input| n62
+  n332 -->|input| n30
+  n332 -->|input| n31
+  n333 -->|input| n130
+  n333 -->|reason| n550
+  n334 -->|input| n162
+  n335 -->|input| n111
+  n335 -->|input| n112
+  n335 -->|input| n114
+  n335 -->|reason| n529
+  n335 -->|reason| n530
+  n336 -->|input| n106
+  n338 -->|dependent| n614
+  n339 -->|input| n1
+  n339 -->|input| n4
+  n339 -->|input| n8
+  n339 -->|input| n83
+  n339 -->|reason| n394
+  n339 -->|original| n397
+  n339 -->|part| n615
+  n340 -->|input| n126
+  n340 -->|challenger| n546
+  n341 -->|input| n5
+  n341 -->|input| n93
+  n341 -->|reason| n502
+  n342 -->|source| n521
+  n343 -->|input| n76
+  n343 -->|input| n81
+  n343 -->|source| n484
+  n343 -->|original| n490
+  n344 -->|source| n426
+  n345 -->|input| n139
+  n345 -->|premise| n561
+  n346 -->|part| n604
+  n348 -->|input| n141
+  n348 -->|part| n563
+  n349 -->|input| n44
+  n349 -->|input| n59
+  n349 -->|input| n61
+  n349 -->|part| n447
+  n349 -->|reason| n464
+  n350 -->|reason| n589
+  n351 -->|input| n33
+  n351 -->|input| n70
+  n351 -->|challenger| n430
+  n352 -->|challenger| n458
+  n352 -->|source| n459
+  n353 -->|input| n164
+  n353 -->|input| n168
+  n353 -->|source| n586
+  n354 -->|input| n163
+  n354 -->|input| n165
+  n354 -->|answer| n585
+  n354 -->|part| n599
+  n355 -->|input| n123
+  n355 -->|premise| n533
+  n356 -->|source| n435
+  n356 -->|answer| n436
+  n357 -->|part| n618
+  n358 -->|input| n15
+  n358 -->|reason| n407
+  n359 -->|input| n35
+  n359 -->|input| n36
+  n359 -->|candidate| n433
+  n360 -->|input| n17
+  n361 -->|input| n23
+  n361 -->|premise| n414
+  n362 -->|input| n98
+  n362 -->|input| n101
+  n362 -->|answer| n512
+  n362 -->|part| n522
+  n362 -->|part| n619
+  n363 -->|input| n99
+  n363 -->|input| n118
+  n363 -->|part| n507
+  n364 -->|source| n483
+  n365 -->|input| n160
+  n365 -->|input| n168
+  n365 -->|input| n171
+  n365 -->|answer| n582
+  n366 -->|part| n543
+  n367 -->|premise| n553
+  n368 -->|input| n74
+  n368 -->|source| n482
+  n369 -->|input| n127
+  n369 -->|answer| n547
+  n370 -->|input| n135
+  n370 -->|input| n139
+  n370 -->|part| n557
+  n371 -->|input| n107
+  n371 -->|answer| n525
+  n372 -->|source| n564
+  n373 -->|premise| n544
+  n374 -->|input| n101
+  n374 -->|source| n518
+  n374 -->|part| n523
+  n375 -->|input| n24
+  n375 -->|input| n57
+  n375 -->|candidate| n415
+  n375 -->|dependent| n416
+  n375 -->|reason| n417
+  n376 -->|input| n142
+  n376 -->|input| n146
+  n376 -->|dependent| n545
+  n377 -->|input| n169
+  n377 -->|candidate| n567
+  n377 -->|source| n568
+  n378 -->|input| n145
+  n378 -->|candidate| n569
+  n379 -->|input| n43
+  n379 -->|part| n444
+  n380 -->|input| n119
+  n380 -->|challenger| n536
+  n381 -->|premise| n611
+  n382 -->|dependent| n468
+  n382 -->|dependent| n469
+  n383 -->|input| n103
+  n383 -->|candidate| n515
+  n384 -->|input| n102
+  n384 -->|input| n104
+  n384 -->|input| n173
+  n384 -->|source| n514
+  n385 -->|input| n77
+  n385 -->|reason| n485
+  n386 -->|left| n578
+  n387 -->|input| n78
+  n387 -->|input| n82
+  n387 -->|source| n420
+  n388 -->|candidate| n427
+  n389 -->|example| n609
+  n389 -->|subject| n612
+  n390 -->|input| n60
+  n390 -->|input| n61
+  n390 -->|reason| n467
+  n391 -->|target| n250
+  n392 -->|old| n250
+  n393 -->|question| n312
+  n394 -->|result| n341
+  n395 -->|problem| n341
+  n396 -->|result| n305
+  n397 -->|replacement| n304
+  n398 -->|result| n304
+  n399 -->|problem| n304
+  n400 -->|result| n318
+  n401 -->|question| n318
+  n402 -->|target| n287
+  n403 -->|problem| n308
+  n404 -->|replacement| n300
+  n405 -->|target| n242
+  n406 -->|question| n300
+  n407 -->|result| n321
+  n408 -->|replacement| n321
+  n409 -->|problem| n321
+  n410 -->|target| n190
+  n411 -->|question| n296
+  n412 -->|target| n237
+  n413 -->|target| n274
+  n414 -->|conclusion| n375
+  n415 -->|problem| n305
+  n416 -->|prerequisite| n361
+  n417 -->|result| n325
+  n418 -->|result| n317
+  n419 -->|target| n317
+  n420 -->|target| n280
+  n421 -->|problem| n304
+  n422 -->|target| n252
+  n423 -->|result| n332
+  n424 -->|replacement| n332
+  n425 -->|right| n347
+  n426 -->|target| n332
+  n427 -->|problem| n332
+  n428 -->|problem| n332
+  n429 -->|general| n293
+  n430 -->|target| n293
+  n431 -->|general| n351
+  n432 -->|result| n330
+  n433 -->|problem| n330
+  n434 -->|target| n359
+  n435 -->|target| n359
+  n436 -->|question| n328
+  n437 -->|problem| n330
+  n438 -->|result| n316
+  n439 -->|problem| n316
+  n440 -->|problem| n330
+  n441 -->|replacement| n331
+  n442 -->|question| n331
+  n443 -->|problem| n331
+  n444 -->|whole| n349
+  n445 -->|problem| n306
+  n446 -->|problem| n306
+  n447 -->|whole| n281
+  n448 -->|result| n311
+  n449 -->|problem| n311
+  n450 -->|target| n191
+  n451 -->|target| n191
+  n452 -->|target| n191
+  n453 -->|problem| n307
+  n454 -->|replacement| n326
+  n455 -->|target| n218
+  n456 -->|prerequisite| n326
+  n457 -->|old| n218
+  n458 -->|target| n252
+  n459 -->|target| n304
+  n460 -->|prerequisite| n314
+  n461 -->|prerequisite| n294
+  n462 -->|target| n331
+  n463 -->|target| n375
+  n464 -->|result| n390
+  n465 -->|whole| n390
+  n466 -->|whole| n390
+  n467 -->|result| n382
+  n468 -->|prerequisite| n349
+  n469 -->|prerequisite| n306
+  n470 -->|target| n331
+  n471 -->|question| n322
+  n472 -->|problem| n330
+  n473 -->|old| n193
+  n474 -->|target| n285
+  n475 -->|replacement| n329
+  n476 -->|target| n259
+  n477 -->|target| n326
+  n478 -->|target| n351
+  n479 -->|target| n252
+  n480 -->|target| n219
+  n481 -->|target| n256
+  n482 -->|target| n256
+  n483 -->|target| n368
+  n484 -->|target| n341
+  n485 -->|result| n343
+  n486 -->|problem| n343
+  n487 -->|target| n387
+  n488 -->|target| n314
+  n489 -->|target| n274
+  n490 -->|replacement| n315
+  n491 -->|right| n387
+  n492 -->|target| n339
+  n493 -->|target| n313
+  n494 -->|result| n239
+  n495 -->|replacement| n295
+  n496 -->|problem| n295
+  n497 -->|whole| n239
+  n498 -->|problem| n295
+  n499 -->|prerequisite| n357
+  n500 -->|target| n268
+  n501 -->|result| n201
+  n502 -->|result| n203
+  n503 -->|prerequisite| n203
+  n504 -->|prerequisite| n201
+  n505 -->|target| n274
+  n506 -->|problem| n299
+  n507 -->|whole| n362
+  n508 -->|whole| n362
+  n509 -->|whole| n362
+  n510 -->|whole| n362
+  n511 -->|whole| n362
+  n512 -->|question| n299
+  n513 -->|target| n313
+  n514 -->|target| n343
+  n515 -->|problem| n342
+  n516 -->|conclusion| n383
+  n517 -->|right| n384
+  n518 -->|target| n362
+  n519 -->|replacement| n297
+  n520 -->|prerequisite| n196
+  n521 -->|target| n341
+  n522 -->|whole| n213
+  n523 -->|whole| n213
+  n524 -->|prerequisite| n297
+  n525 -->|question| n336
+  n526 -->|conclusion| n371
+  n527 -->|result| n310
+  n528 -->|problem| n310
+  n529 -->|result| n207
+  n530 -->|result| n208
+  n531 -->|right| n208
+  n532 -->|question| n335
+  n533 -->|conclusion| n210
+  n534 -->|target| n240
+  n535 -->|result| n272
+  n536 -->|target| n363
+  n537 -->|problem| n323
+  n538 -->|problem| n323
+  n539 -->|whole| n214
+  n540 -->|problem| n323
+  n541 -->|whole| n373
+  n542 -->|whole| n373
+  n543 -->|whole| n373
+  n544 -->|conclusion| n355
+  n545 -->|prerequisite| n254
+  n546 -->|target| n258
+  n547 -->|question| n340
+  n548 -->|conclusion| n369
+  n549 -->|conclusion| n288
+  n550 -->|result| n186
+  n551 -->|problem| n340
+  n552 -->|conclusion| n288
+  n553 -->|conclusion| n187
+  n554 -->|whole| n187
+  n555 -->|whole| n187
+  n556 -->|old| n258
+  n557 -->|whole| n348
+  n558 -->|whole| n348
+  n559 -->|conclusion| n214
+  n560 -->|target| n258
+  n561 -->|conclusion| n348
+  n562 -->|whole| n214
+  n563 -->|whole| n214
+  n564 -->|target| n214
+  n565 -->|question| n323
+  n566 -->|replacement| n298
+  n567 -->|problem| n298
+  n568 -->|target| n342
+  n569 -->|problem| n327
+  n570 -->|problem| n378
+  n571 -->|target| n376
+  n572 -->|right| n376
+  n573 -->|problem| n298
+  n574 -->|target| n254
+  n575 -->|problem| n298
+  n576 -->|problem| n323
+  n577 -->|whole| n276
+  n578 -->|right| n236
+  n579 -->|question| n309
+  n580 -->|problem| n309
+  n581 -->|whole| n202
+  n582 -->|question| n337
+  n583 -->|whole| n365
+  n584 -->|conclusion| n365
+  n585 -->|question| n334
+  n586 -->|target| n354
+  n587 -->|conclusion| n353
+  n588 -->|result| n211
+  n589 -->|result| n211
+  n590 -->|general| n202
+  n591 -->|general| n354
+  n592 -->|object| n214
+  n593 -->|object| n214
+  n594 -->|target| n360
+  n595 -->|target| n272
+  n596 -->|target| n343
+  n597 -->|target| n305
+  n598 -->|whole| n211
+  n599 -->|whole| n211
+  n600 -->|prerequisite| n365
+  n601 -->|prerequisite| n353
+  n602 -->|problem| n297
+  n603 -->|whole| n197
+  n604 -->|whole| n221
+  n605 -->|conclusion| n197
+  n606 -->|conclusion| n197
+  n607 -->|conclusion| n197
+  n608 -->|whole| n197
+  n609 -->|general| n202
+  n610 -->|target| n389
+  n611 -->|conclusion| n197
+  n612 -->|object| n202
+  n613 -->|prerequisite| n197
+  n614 -->|prerequisite| n389
+  n615 -->|whole| n389
+  n616 -->|whole| n389
+  n617 -->|whole| n389
+  n618 -->|whole| n389
+  n619 -->|whole| n389
+  n620 -->|whole| n389
+  n621 -->|whole| n389
+  n622 -->|whole| n389
+  n623 -->|whole| n389
 ```

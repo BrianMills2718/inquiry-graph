@@ -595,3 +595,71 @@ This makes it possible to use the same framework both abstractly and empirically
 - later evaluate which strategies and meta-strategies correlate with useful outcomes.
 
 The current extension is documented in [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md).
+
+## 23. Candidate generation became a constrained-search interface
+
+The next research pass compared the open candidate-generation problem with program synthesis, CEGIS, meta-interpretive learning and formal abduction.
+
+The key result was another factorization:
+
+\[
+\boxed{
+\text{generative space}
+\neq
+\text{construction operators}
+\neq
+\text{search/control strategy}
+\neq
+\text{formal checking}
+\neq
+\text{warrant}.
+}
+\]
+
+Rather than searching for one universal list of creativity operators, the project now defines a **draft-generation system** for each reasoning episode:
+
+\[
+\mathcal G_R=
+(\mathcal D_R,d_0,\mathcal O_R,\rightarrow_R),
+\]
+
+with reachable draft space
+
+\[
+\operatorname{Reach}(R)=
+\{d\mid d_0\xrightarrow{\mathcal O_R *}d\}.
+\]
+
+A strategy \(\pi\) explores that space. Formal elaboration checks whether a draft can become a valid formal artifact. Evaluators return feedback such as counterexamples, failed constraints, empirical mismatch or warrant requirements. Warrant remains a separate conditional-justification layer.
+
+This reframed the universal object from “the operator set” to **the interface between search space, operators, strategy, elaboration, evaluation and warrant**.
+
+## 24. Canonical factorization became the worked strategy trace
+
+The founding dialogue was then reconstructed as one explicit instance of that interface.
+
+The trace runs through:
+
+1. deduction/induction/abduction as an initial partition;
+2. state/parameter/structure/ontology as a target-type decomposition;
+3. power-set composition after joint cases broke exclusivity;
+4. representation-relative canonicality after recoding counterexamples;
+5. add/delete state-delta factorization;
+6. ATMS-style persistent support plus temporary assumption contexts;
+7. correction of candidate types that mixed artifact type with epistemic role;
+8. MMT/LF-style collapse of formal artifact types;
+9. recognition of the repeated repair loop as the canonical-factorization strategy itself.
+
+At each stage the dialogue can be represented as:
+
+\[
+\text{draft}
+\to
+\text{evaluation}
+\to
+\text{diagnostic feedback}
+\to
+\text{repair operator}.
+\]
+
+This is the first complete strategy trace instantiated against the evolving meta-model. It is documented in [candidate-generation-interface.md](candidate-generation-interface.md).
