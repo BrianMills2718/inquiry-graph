@@ -129,3 +129,15 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 **Graded support is regime-indexed.** Probability, belief/plausibility, ranking, reliability, and cost are not interchangeable numeric meanings. A value should be accompanied by the regime and assumptions that make the update/composition rule valid.
 
 **Multiple warrants need not aggregate.** Distinct warrant regimes or heterogeneous guarantees should remain parallel unless an explicit meta-rule licenses comparison or aggregation. The aggregation rule itself can become a warrant target.
+
+## Positive-support algebra cautions
+
+**Minimal support is not full proof provenance.** The antichain/free-distributive-lattice representation intentionally forgets derivation multiplicity, proof-tree identity and repeated-use counts. Use richer provenance if those distinctions matter.
+
+**Absorption is semantic, not merely an optimization.** If environment \(\{a\}\) already suffices, \(\{a,b\}\) is removed because it contributes no new minimal support condition. That matches ATMS label semantics.
+
+**The reference probability is probability of the support event.** The checked-in IndependentBernoulliRegime computes the probability that at least one support environment holds, conditioned on consistency. Do not silently relabel that value as the truth probability of the supported claim without an additional warrant.
+
+**Independence is a regime assumption.** The executable probability interpreter is a small reference model, not the project's universal uncertainty calculus. Correlated assumptions require a different interpretation over the same symbolic support structure.
+
+**Negative support is still separate.** Rebuttal, undercutting, priorities and support-for-negation are not represented by the positive antichain algebra. Do not encode defeat by ad hoc negative numbers.
