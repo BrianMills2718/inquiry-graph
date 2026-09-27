@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inquiry-graph"
+version = "1.0.0"
+description = "Source-grounded, attributed inquiry graphs from conversations"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.11,<3", "networkx>=3.4,<4"]
+
+[project.optional-dependencies]
+llm = ["openai>=2,<3"]
+dev = ["pytest>=8,<10", "jsonschema>=4.23,<5"]
+
+[project.scripts]
+inquiry-graph = "inquiry_graph.cli:main"
+ig = "inquiry_graph.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/inquiry_graph"]
