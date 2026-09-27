@@ -1,0 +1,66 @@
+name: Materialize verified V1 source snapshot
+on:
+  push:
+    branches: [feat/v1-portable]
+    paths: ['.delivery/parts/**', '.github/workflows/materialize-v1.yml']
+permissions:
+  contents: write
+jobs:
+  materialize:
+    if: github.repository == 'BrianMills2718/inquiry-graph'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify and unpack the private source snapshot
+        run: |
+          python - <<'PY'
+          import hashlib, io, tarfile
+          from pathlib import Path, PurePosixPath
+          root = Path.cwd().resolve()
+          parts = [root / '.delivery/parts' / f'{i:02d}.bin' for i in range(9)]
+          raw = b''.join(p.read_bytes() for p in parts)
+          assert len(raw) == 49540, 'delivery size mismatch'
+          assert hashlib.sha256(raw).hexdigest() == '005de575852b009c180ab05d8e8561794725400819fff70c34058d33adbde2ee', 'delivery checksum mismatch'
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:xz') as archive:
+              members = archive.getmembers()
+              assert len(members) == 39
+              assert sum(m.size for m in members) < 10_000_000
+              assert len({m.name for m in members}) == len(members)
+              for member in members:
+                  path = PurePosixPath(member.name)
+                  assert member.isfile() and not path.is_absolute()
+                  assert '..' not in path.parts and path.parts[0] not in ('.git', '.github', '.delivery')
+                  target = root.joinpath(*path.parts)
+                  assert target.resolve().is_relative_to(root)
+                  assert not target.is_symlink()
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.extractfile(member).read())
+          print('Verified 39 source files; original bootstrap files preserved.')
+          PY
+      - name: Fresh installation, generated artifacts and acceptance tests
+        run: |
+          python -m pip install -e '.[dev,llm]'
+          python examples/build_seed.py
+          python tools/build_artifacts.py
+          python -m pytest -q
+          inquiry-graph validate examples/seed/graph.json
+          python tools/build_artifacts.py --check
+          python -m pip check
+      - name: Publish the tested expanded checkpoint
+        run: |
+          set -eu
+          remote_sha=$(git ls-remote origin refs/heads/feat/v1-portable | cut -f1)
+          test "$remote_sha" = "$GITHUB_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -- .delivery/parts/*.bin
+          git add README.md CHANGELOG.md .gitignore pyproject.toml src tests docs examples schemas tools
+          git diff --cached --check
+          git commit -m 'feat: publish verified V1 inquiry graph toolkit and annotated conversation'
+          git push origin HEAD:feat/v1-portable
