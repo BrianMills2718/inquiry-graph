@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling>=1.25,<2"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=70,<84"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "inquiry-graph"
@@ -21,5 +21,5 @@ ig = "inquiry_graph.cli:main"
 testpaths = ["tests"]
 pythonpath = ["src"]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/inquiry_graph"]
+[tool.setuptools.packages.find]
+where = ["src"]

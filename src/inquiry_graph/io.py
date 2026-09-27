@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 from uuid import uuid4
 
-from .model import Conversation, Graph, Candidates, Extraction, COLLECTIONS
+from .model import Conversation, Graph, Candidates, Extraction, COLLECTIONS, anchor
 from .validate import require_valid
 
 
@@ -52,13 +52,13 @@ def import_export(data, conversation_id=None):
         if not isinstance(obj, dict):
             raise ValueError("export entries must be objects")
         cid = obj.get("id") or obj.get("conversation_id")
-        if not cid:
-            raise ValueError("export conversation requires id")
+        if not isinstance(cid, str) or not cid:
+            raise ValueError("export conversation requires a string id")
         if conversation_id and cid != conversation_id:
             continue
         mapping = obj.get("mapping")
         current = obj.get("current_node")
-        if not isinstance(mapping, dict) or current not in mapping:
+        if not isinstance(mapping, dict) or not isinstance(current, str) or current not in mapping:
             raise ValueError(f"{cid}: mapping/current_node missing or invalid; select active branch explicitly")
         chain, seen = [], set()
         while current is not None:
@@ -68,12 +68,20 @@ def import_export(data, conversation_id=None):
                 raise ValueError(f"{cid}: dangling parent {current}")
             seen.add(current)
             record = mapping[current]
+            if not isinstance(record, dict):
+                raise ValueError(f"{cid}: mapping node must be an object")
+            if record.get("parent") is not None and not isinstance(record["parent"], str):
+                raise ValueError(f"{cid}: parent ID must be a string or null")
             chain.append((current, record.get("message")))
             current = record.get("parent")
         messages, participants, skipped = [], {}, 0
         for key, msg in reversed(chain):
             if not msg:
                 continue
+            if not isinstance(msg, dict) or not isinstance(msg.get("author"), dict) or not isinstance(msg.get("content"), dict):
+                raise ValueError(f"{cid}: malformed message, author or content")
+            if msg.get("metadata") is not None and not isinstance(msg["metadata"], dict):
+                raise ValueError(f"{cid}: metadata must be an object")
             role = msg.get("author", {}).get("role")
             # Exclude analysis/commentary/system/tool and non-user-visible recipients.
             channel = (msg.get("metadata") or {}).get("channel") or msg.get("channel")
@@ -84,6 +92,8 @@ def import_export(data, conversation_id=None):
                 skipped += 1
                 continue
             parts = (msg.get("content") or {}).get("parts", [])
+            if not isinstance(parts, list):
+                raise ValueError(f"{cid}: content parts must be an array")
             text_parts = [p for p in parts if isinstance(p, str)]
             skipped += len(parts) - len(text_parts)
             text = "\n".join(text_parts)
@@ -110,9 +120,25 @@ def import_export(data, conversation_id=None):
 def ingest(source: Conversation, candidates: Candidates, *, method="response-file", model=None):
     """Source records are trusted inputs, never LLM-owned output. Review always starts proposed."""
     values = candidates.model_dump(mode="json")
+    messages = {m.id: m for m in source.messages}
     for field in COLLECTIONS:
         for obj in values[field]:
             obj["review_status"] = "proposed"
+            grounded = []
+            for span in obj["anchors"]:
+                message = messages.get(span["message_id"])
+                if message is None:
+                    raise ValueError(f"unknown source message {span['message_id']}")
+                try:
+                    exact = anchor(message, span["quote"])
+                except ValueError as exc:
+                    # A repeated quote requires an exact supplied position to select it.
+                    if "ambiguous quote" not in str(exc) or message.text[span["start"]:span["end"]] != span["quote"]:
+                        raise
+                    grounded.append(span)
+                else:
+                    grounded.append(exact.model_dump(mode="json"))
+            obj["anchors"] = grounded
     digest = hashlib.sha256(source.model_dump_json().encode()).hexdigest()
     graph = Graph(id=f"graph:{source.id}", conversations=[source], **values,
                   extractions=[Extraction(method=method, model=model,
