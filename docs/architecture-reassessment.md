@@ -168,16 +168,11 @@ From this point:
 
 The next project work should split into three tracks rather than continue one foundational chain.
 
-### Track A — verification
+### Track A — verification — completed
 
-Run the complete repository suite in a live environment:
+The complete repository suite has now been run in the native Windows environment. Result: **138 tests passed**, seed fixture rebuilding succeeded, **8 artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` found no broken requirements.
 
-- pytest;
-- canonical graph validation;
-- artifact reproduction;
-- package/dependency check.
-
-This is the highest-priority engineering debt because several new modules currently exist as committed executable specifications without a fresh integrated run.
+The run exposed and fixed three Windows portability problems: subprocess stdout encoding, locale-default seed-file decoding, and pytest collection of imported `Testimony*` dataclasses. Track A is therefore no longer blocking the research-layer architecture.
 
 ### Track B — benchmark expansion and empirical evaluation
 
