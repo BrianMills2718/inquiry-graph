@@ -892,3 +892,29 @@ The important constraint is reversibility. Generated ABA assumptions for defeasi
 
 The full benchmark and revisit conditions are documented in [aba-aspic-benchmark.md](aba-aspic-benchmark.md).
 
+## 33. Minimal ABA construction bridge was implemented
+
+The benchmark decision was then instantiated directly rather than left as architecture prose.
+
+The executable ABA layer now contains:
+
+[
+mathcal B=(R,A,overline{cdot})
+]
+
+with Horn-style rules, explicit assumptions, contraries, and source/role metadata on assumptions generated from richer defeasible structures.
+
+Support propagation reuses the existing antichain algebra. For each derivable conclusion, the framework computes its subset-minimal assumption environments, then constructs one quotient argument per:
+
+[
+(	ext{conclusion},	ext{minimal environment}).
+]
+
+This deliberately identifies deductions that have the same conclusion and minimal support set. That is consistent with the current support-provenance abstraction, but it is an explicit information-loss boundary: a future framework requiring comparison of distinct proof trees with identical supports would need finer argument identity.
+
+Basic ABA attacks are generated when an argument concludes the contrary of an assumption used by another argument. The attacked assumption carries its reconstructed attack origin (`undermine`, `undercut`, or `rebut`), so the ABA execution substrate does not erase the richer semantic distinction.
+
+A helper compiles a defeasible rule into a strict rule guarded by a typed applicability assumption while retaining the source rule identifier. Basic-ABA attacks then project directly to the already implemented Dung defeat framework.
+
+The Windows repository agent remained offline during this pass, so the new ABA scenarios were replicated and executed independently rather than claimed as a full repository test run.
+
