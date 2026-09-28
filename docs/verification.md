@@ -2,11 +2,11 @@
 
 ## Build environment checks
 
-Last fully executed local repository result: **67 tests passed**; graph validation returned zero errors and warnings. That run predates the newest defeat, ABA, argument-preference, and preference-filtering modules. Those newer modules are present in GitHub with unit tests, but the full repository suite has not yet been re-executed against them because the remote local agent became unavailable.
+Latest integrated native-Windows verification: **138 tests passed** on Python 3.14.7; fixture rebuilding succeeded; all **8 generated artifacts** matched; canonical graph validation returned zero errors and warnings; and `pip check` reported no broken requirements. This run includes the defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and strategy-performance research layers.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
-An independent **fresh Windows virtual environment** then installed `.[dev,llm]` from the package index successfully and passed **all 59 tests** on Python 3.14.7, Pydantic 2.13.5, NetworkX 3.7 and OpenAI SDK 2.54.0. Fixture rebuilding, all eight generated-artifact checks, canonical graph validation and `pip check` passed. This independently checks packaging, newer dependencies and native Windows without relying on WSL.
+The current verified environment uses Python 3.14.7, Pydantic 2.13.5 and NetworkX 3.7. An earlier fresh Windows virtual environment had independently installed `.[dev,llm]` from the package index and passed the then-current suite as well. Together these checks cover native Windows packaging plus the current integrated research-layer code without relying on WSL.
 
 Commands exercised:
 
@@ -26,11 +26,11 @@ The integrated tests exercise import, prepare, response-file extraction, validat
 
 The repository CI is configured to install the package with development and optional provider dependencies on Python 3.11 and 3.13, rebuild the fixture and artifacts, run tests, validate the graph, and check generated-file drift and dependency consistency.
 
-**Hosted CI is not verified as passing.** Repeated hosted runs, including later research-layer branches, have failed or been cancelled before runner steps were recorded and have exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures, and do not infer CI success from the workflow file. The executed local suites remain the last full-repository verification record; newer research-layer code is explicitly execution-pending.
+**Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The native-Windows integrated run above is the current full-repository execution record.
 
 ## Explicitly not verified
 
-The newest defeat/ABA/preference, warrant/license integration, graded-support warrant, strict-Horn deductive warrant, measurement/testimony reliability, statistical/PAC warrant, and strategy-performance warrant code has not yet been exercised by a full repository pytest/artifact/graph-validation run. Unit and end-to-end test files are committed as executable specifications, but no new passing full-suite count is claimed. No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
+The integrated research-layer code has now been exercised by a full repository pytest/artifact/graph-validation run. Remaining unverified areas are: no live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence yet that the tool improves downstream reasoning. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
 
 ## Recovery
 

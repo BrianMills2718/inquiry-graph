@@ -2,8 +2,8 @@ import pytest
 
 from inquiry_graph.reliability import (
     MeasurementCertificate,
-    TestimonyCertificate,
-    TestimonyReliabilityModel,
+    TestimonyCertificate as _TestimonyCertificate,
+    TestimonyReliabilityModel as _TestimonyReliabilityModel,
 )
 from inquiry_graph.warrant import (
     EpistemicAction,
@@ -103,13 +103,13 @@ def test_measurement_context_assumptions_remain_separate_from_certificate():
 
 
 def test_testimony_model_computes_posterior_for_positive_report():
-    reliability = TestimonyReliabilityModel(
+    reliability = _TestimonyReliabilityModel(
         source_id="witness-1",
         reference_class="weather-reports",
         sensitivity=0.9,
         false_positive_rate=0.1,
     )
-    certificate = TestimonyCertificate(
+    certificate = _TestimonyCertificate(
         id="t1",
         claim="it-rained",
         prior_probability=0.2,
@@ -123,13 +123,13 @@ def test_testimony_model_computes_posterior_for_positive_report():
 
 
 def test_testimony_regime_warrants_recording_posterior_not_accepting_claim():
-    reliability = TestimonyReliabilityModel(
+    reliability = _TestimonyReliabilityModel(
         source_id="witness-1",
         reference_class="weather-reports",
         sensitivity=0.99,
         false_positive_rate=0.01,
     )
-    certificate = TestimonyCertificate(
+    certificate = _TestimonyCertificate(
         id="t1",
         claim="it-rained",
         prior_probability=0.5,
@@ -166,22 +166,22 @@ def test_testimony_regime_warrants_recording_posterior_not_accepting_claim():
 
 
 def test_testimony_reliability_is_reference_class_relative():
-    first = TestimonyCertificate(
+    first = _TestimonyCertificate(
         id="t-weather",
         claim="it-rained",
         prior_probability=0.5,
-        reliability=TestimonyReliabilityModel(
+        reliability=_TestimonyReliabilityModel(
             source_id="same-source",
             reference_class="weather-reports",
             sensitivity=0.95,
             false_positive_rate=0.05,
         ),
     )
-    second = TestimonyCertificate(
+    second = _TestimonyCertificate(
         id="t-medical",
         claim="diagnosis-x",
         prior_probability=0.5,
-        reliability=TestimonyReliabilityModel(
+        reliability=_TestimonyReliabilityModel(
             source_id="same-source",
             reference_class="medical-reports",
             sensitivity=0.6,
@@ -196,11 +196,11 @@ def test_testimony_reliability_is_reference_class_relative():
 
 
 def test_testimony_zero_probability_report_is_rejected():
-    certificate = TestimonyCertificate(
+    certificate = _TestimonyCertificate(
         id="t1",
         claim="h",
         prior_probability=0.0,
-        reliability=TestimonyReliabilityModel(
+        reliability=_TestimonyReliabilityModel(
             source_id="s",
             reference_class="r",
             sensitivity=0.0,
@@ -224,7 +224,7 @@ def test_reliability_certificate_validation():
         )
 
     with pytest.raises(ValueError, match="sensitivity"):
-        TestimonyReliabilityModel(
+        _TestimonyReliabilityModel(
             source_id="s",
             reference_class="r",
             sensitivity=1.1,
@@ -232,7 +232,7 @@ def test_reliability_certificate_validation():
         )
 
     with pytest.raises(ValueError, match="reference class"):
-        TestimonyReliabilityModel(
+        _TestimonyReliabilityModel(
             source_id="s",
             reference_class="",
             sensitivity=0.5,
