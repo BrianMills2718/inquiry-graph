@@ -3,12 +3,13 @@
 > **Status:** canonical project-1 handoff.
 > **Purpose:** preserve the current state of the formal epistemic reasoning meta-model so a future agent can resume without reconstructing this long conversation.
 > **Scope:** this document covers the foundational meta-model, not the product-level inquiry system. It also records the relation to the inquiry-representation project and the main open research directions.
+> **Notation:** see §5.1 for the symbol table. Each symbol has one meaning throughout.
 
 ## 1. Project identity
 
 The cleanest name for the foundational project is:
 
-# **Formal Epistemic Reasoning Meta-Model**
+**Formal Epistemic Reasoning Meta-Model**
 
 The project is not intended to be one theory of knowledge, one logic, one universal confidence calculus, one list of inference types, one cognitive architecture, or one argumentation formalism.
 
@@ -22,27 +23,21 @@ A second foundational question motivated much of the work:
 
 > **What warrants a reasoning move, and what warrants that warrant?**
 
+This second question is a descendant of Toulmin's distinction between a *warrant* and its *backing* (see §20).
+
 The inquiry-graph project emerged later as a distinct but related project for representing actual inquiry histories.
 
 ## 2. Three related projects
 
 ### Project 1 — Formal Epistemic Reasoning Meta-Model
 
-Goal:
-
-\[
-\text{represent the structure of epistemic reasoning itself.}
-\]
+**Goal:** represent the structure of epistemic reasoning itself.
 
 ### Project 2 — Inquiry Representation Model
 
 A source-grounded representation of actual inquiry histories: utterances, claims, questions, moves, alternatives, objections, revisions, strategies, stance, provenance, and question status.
 
-Goal:
-
-\[
-\text{represent how an inquiry actually develops.}
-\]
+**Goal:** represent how an inquiry actually develops.
 
 ### Project 3 — Inquiry System
 
@@ -50,11 +45,7 @@ A useful tool built on the first two.
 
 Possible functions include navigating unresolved questions, recovering abandoned branches, inspecting assumptions and dependencies, comparing competing arguments, exposing why a view changed, identifying recurring reasoning strategies, recommending what to inspect next, and helping a person or model resume a long inquiry.
 
-Goal:
-
-\[
-\text{make inquiry easier, more auditable, and potentially better.}
-\]
+**Goal:** make inquiry easier, more auditable, and potentially better.
 
 These projects are related but should not be conflated.
 
@@ -66,53 +57,29 @@ The Formal Epistemic Reasoning Meta-Model can characterize operations represente
 
 The future Inquiry System can use both models to reason about inquiry and potentially about its own reasoning.
 
-Thus:
-
-\[
-\boxed{
-\text{meta-model}
-\leftrightarrow
-\text{inquiry representation}
-\leftrightarrow
-\text{useful system}
-}
-\]
-
-Reflection is represented relationally:
-
-\[
-\operatorname{about}(x,y).
-\]
-
-An object is “meta” relative to another object when it reasons about or controls that target.
+Reflection is represented relationally, as $\operatorname{about}(x,y)$. An object is "meta" relative to another object when it reasons about or controls that target.
 
 ## 4. Main substantive result
 
-The original inquiry began with traditional categories such as:
+The original inquiry began with traditional categories such as deduction, induction, and abduction.
 
-\[
-\text{deduction},\quad
-\text{induction},\quad
-\text{abduction}.
-\]
-
-The work strongly suggests that these are not an adequate primitive partition of epistemic reasoning.
+The work suggests that these are not an adequate primitive partition of epistemic reasoning.
 
 The central reason is that they mix levels.
 
-Something called “abduction” may include candidate generation, admissibility constraints, explanatory scoring, defeasible support, and a later epistemic update.
+Something called "abduction" may include candidate generation, admissibility constraints, explanatory scoring, defeasible support, and a later epistemic update.
 
-Something called “induction” may refer to a learning algorithm, a statistical theorem, a support change, a prediction policy, or an epistemic update.
+Something called "induction" may refer to a learning algorithm, a statistical theorem, a support change, a prediction policy, or an epistemic update.
 
 Deduction is better defined, but even there:
 
-\[
+$$
 \text{derivation}
 \neq
 \text{acceptance of premises}
 \neq
 \text{state update}.
-\]
+$$
 
 The main replacement is therefore not a new flat taxonomy. It is a **factorized architecture**.
 
@@ -120,7 +87,7 @@ The main replacement is therefore not a new flat taxonomy. It is a **factorized 
 
 The current stable distinction is:
 
-\[
+$$
 \boxed{
 \text{formal representation}
 \neq
@@ -136,27 +103,61 @@ The current stable distinction is:
 \neq
 \text{epistemic action/update}
 \neq
-\text{strategy/control}.
+\text{strategy/control}
 }
-\]
+$$
 
 These categories should not be treated as a partition of all objects. They are architectural dimensions/layers.
 
-A useful high-level state description is:
+A reasoning state is described as:
 
-\[
-\boxed{
-R=(\mathcal F,K_{\mathcal F},\Gamma,Q,\Pi)
-}
-\]
+$$
+s=(\mathcal F,K_{\mathcal F},\Gamma,Q,\Pi)\in\mathcal S
+$$
 
 where:
 
-- \(\mathcal F\): formal representation substrate;
-- \(K_{\mathcal F}\): persistent support/provenance state;
-- \(\Gamma\): temporary assumption context;
-- \(Q\): current question/task;
-- \(\Pi\): strategy/control state.
+- $\mathcal F$: formal representation substrate;
+- $K_{\mathcal F}$: persistent support/provenance state;
+- $\Gamma$: temporary assumption context;
+- $Q$: current question/task;
+- $\Pi$: strategy/control state;
+- $\mathcal S$: the space of reasoning states.
+
+### 5.1 Notation
+
+Earlier drafts reused several letters for unrelated objects. The following conventions are canonical; other documents in `docs/` may still use older symbols.
+
+| Symbol | Meaning | Section |
+|---|---|---|
+| $s$, $\mathcal S$ | reasoning state, state space | §5, §11 |
+| $\mathcal F$ | formal representation substrate | §6 |
+| $K_{\mathcal F}=(N,A,J,\lambda,\rho)$ | persistent support state | §7 |
+| $N$ | represented nodes | §7 |
+| $A\subseteq N$ | assumable nodes (only use of $A$) | §7 |
+| $J$ | justification structure | §7 |
+| $\lambda(n)$ | label: minimal support environments of $n$ | §7 |
+| $\rho_\eta$ | graded interpretation under regime $\eta$ | §9 |
+| $\Gamma$ | temporary assumption context | §7 |
+| $\operatorname{Cl}_J(\Gamma)$ | closure of a context | §7 |
+| $X$ | primitive assumption tokens | §8 |
+| $E, F$ | assumption environments (finite subsets of $X$) | §8 |
+| $\sigma,\tau$ | support antichains | §8, §9 |
+| $R$ | reasoning episode | §10 |
+| $\mathcal G_R,\ \mathcal D_R,\ d,\ \mathcal O_R$ | generative space, drafts, draft, operators | §10 |
+| $c$ | elaborated candidate in $\mathcal F$ | §10 |
+| $\operatorname{Ev}_j$ | evaluator | §10 |
+| $\pi$ | strategy (only use of $\pi$) | §10 |
+| $\Pi$ | strategy/control state | §5 |
+| $a$ | epistemic action | §11 |
+| $O_a$ | output of action $a$ | §11 |
+| $\mathsf{Act},\ \mathsf B$ | action set, action basis | §11 |
+| $\mathfrak W$ | warrant regime | §12 |
+| $\Phi$ | applicability assumptions of a warrant | §12 |
+| $\kappa$ | certificate/support object | §12 |
+| $G$ | typed guarantee | §12, §14 |
+| $C$ | current context (for licensing) | §13 |
+| $\Delta_i$ | paired utility difference | §18.7 |
 
 ## 6. Formal representation layer
 
@@ -164,8 +165,7 @@ The representation layer is best understood through theory-graph/logical-framewo
 
 A compact candidate formal-artifact basis is:
 
-\[
-\boxed{
+$$
 \mathcal F=
 \{
 \mathsf{Theory},
@@ -173,8 +173,7 @@ A compact candidate formal-artifact basis is:
 \mathsf{Object},
 \mathsf{Morphism}
 \}.
-}
-\]
+$$
 
 Interpretation:
 
@@ -189,13 +188,13 @@ LF may be used as a foundation/meta-theory inside such a framework rather than a
 
 Important distinction:
 
-\[
+$$
 \boxed{
 \text{formal object identity}
 \neq
-\text{epistemic role}.
+\text{epistemic role}
 }
-\]
+$$
 
 An assumption is usually a role played by a proposition/declaration/object in an epistemic context, not necessarily a distinct formal artifact type.
 
@@ -203,98 +202,84 @@ An assumption is usually a role played by a proposition/declaration/object in an
 
 The ATMS-inspired persistent support state is:
 
-\[
-\boxed{
+$$
 K_{\mathcal F}
 =
 (N,A,J,\lambda,\rho)
-}
-\]
+$$
 
 where:
 
-- \(N\): represented propositions/reports/hypotheses/etc.;
-- \(A\subseteq N\): assumable nodes;
-- \(J\): justification/dependency structure;
-- \(\lambda(n)\): minimal assumption environments supporting \(n\);
-- \(\rho\): optional typed graded interpretations.
+- $N$: represented propositions/reports/hypotheses/etc.;
+- $A\subseteq N$: assumable nodes;
+- $J$: justification/dependency structure;
+- $\lambda(n)$: minimal assumption environments supporting $n$;
+- $\rho$: optional typed graded interpretations.
 
-A temporary reasoning context is:
-
-\[
-\Gamma\subseteq A.
-\]
-
-Its closure is:
-
-\[
-C(\Gamma)=\operatorname{Cl}_J(\Gamma).
-\]
+A temporary reasoning context is $\Gamma\subseteq A$. Its closure under the justifications is $\operatorname{Cl}_J(\Gamma)$.
 
 This supports a black-box/white-box distinction:
 
 - persistent state retains multiple hypothetical alternatives;
 - a temporary context can stipulate assumptions and inspect consequences.
 
-Selecting \(\Gamma\) does not imply permanent acceptance.
+Selecting $\Gamma$ does not imply permanent acceptance.
 
 ## 8. Positive support algebra
 
-For primitive assumption tokens \(X\), positive support is represented by finite antichains of finite assumption environments:
+For primitive assumption tokens $X$, positive support is represented by finite antichains of finite assumption environments:
 
-\[
-\boxed{
+$$
 \mathsf{Supp}(X)
 =
 \operatorname{Antichain}
-(
+\big(
 \mathcal P_{\mathrm{fin}}(X)
-).
-}
-\]
+\big).
+$$
 
-Normalization:
+Normalization, for a set $\sigma$ of environments:
 
-\[
-\operatorname{Min}(S)
+$$
+\operatorname{Min}(\sigma)
 =
 \{
-E\in S:
-\nexists E'\in S,\,
-E'\subsetneq E
+E\in\sigma:
+\nexists F\in\sigma,\
+F\subsetneq E
 \}.
-\]
+$$
 
 Alternative support:
 
-\[
-A\oplus B
+$$
+\sigma\oplus\tau
 =
-\operatorname{Min}(A\cup B).
-\]
+\operatorname{Min}(\sigma\cup\tau).
+$$
 
 Joint support:
 
-\[
-A\otimes B
+$$
+\sigma\otimes\tau
 =
 \operatorname{Min}
 \{
 E\cup F:
-E\in A,\,
-F\in B
+E\in\sigma,\
+F\in\tau
 \}.
-\]
+$$
 
 Identities:
 
-\[
+$$
 0=\varnothing,
 \qquad
 1=\{\varnothing\}.
-\]
+$$
 
-This is the free distributive lattice over \(X\), equivalently monotone Boolean provenance modulo logical equivalence, and an idempotent commutative semiring.
+This is the free bounded distributive lattice over $X$, equivalently monotone Boolean provenance (PosBool) modulo logical equivalence, and an idempotent, absorptive commutative semiring.
 
 The information-loss boundary is explicit: this representation preserves minimal support environments but discards proof multiplicity, proof-tree identity, repeated-use counts, and chronological construction history.
 
@@ -304,56 +289,58 @@ That loss is intentional at the support layer.
 
 Numeric/ordinal support is not primitive.
 
-The general pattern is:
+The general pattern is
 
-\[
-\boxed{
+$$
 \rho_\eta:
 \mathsf{Prov}
 \to
 V_\eta
-}
-\]
+$$
 
-for an interpretation regime \(\eta\).
+for an interpretation regime $\eta$ with value space $V_\eta$.
 
 A concrete executable reference regime uses independent Bernoulli assumptions, optionally conditioned on nogoods.
 
-If \(A\) is a support antichain:
+If $\sigma$ is a support antichain:
 
-\[
-\rho_{\mathrm{Bern}}(A)
+$$
+\rho_{\mathrm{Bern}}(\sigma)
 =
-P(
-\llbracket A\rrbracket
+P\big(
+[\![\sigma]\!]
 \mid
 \text{consistency}
-).
-\]
+\big).
+$$
 
 Critical distinction:
 
-\[
+$$
 \boxed{
 \rho_{\mathrm{Bern}}(\lambda(h))
 \neq
 P(h)
-\text{ by definition}.
+\text{ by definition}
 }
-\]
+$$
 
-The value is probability that the support condition holds under the model.
+The value is the probability that the support condition holds under the model.
 
 Turning that into proposition probability requires additional semantics/warrant.
+
+Two further caveats:
+
+- **Independence is a modeling assumption**, not a default truth. Correlated assumptions (shared sources, common causes) will make $\rho_{\mathrm{Bern}}$ miscalibrated.
+- **Exact computation is #P-hard in general**, since it subsumes computing the probability of a monotone DNF formula under independent variables. Reference instances are small; realistic sizes will need approximation (e.g., sampling) or knowledge compilation.
 
 ## 10. Candidate generation
 
 Candidate generation is separate from warrant and state update.
 
-For a reasoning episode \(R\):
+For a reasoning episode $R$:
 
-\[
-\boxed{
+$$
 \mathcal G_R
 =
 (
@@ -362,69 +349,66 @@ d_0,
 \mathcal O_R,
 \to_R
 )
-}
-\]
+$$
 
 where:
 
-- \(\mathcal D_R\): admissible draft states;
-- \(d_0\): initial/partial draft;
-- \(\mathcal O_R\): construction/refinement operators;
-- \(\to_R\): transition relation.
+- $\mathcal D_R$: admissible draft states;
+- $d_0$: initial/partial draft;
+- $\mathcal O_R$: construction/refinement operators;
+- $\to_R$: transition relation.
 
 Reachable drafts:
 
-\[
+$$
 \operatorname{Reach}(R)
 =
 \{
 d:
 d_0
-\xrightarrow{\mathcal O_R *}
+\xrightarrow{\mathcal O_R^{*}}
 d
 \}.
-\]
+$$
 
 A strategy:
 
-\[
-\boxed{
+$$
 \pi:
 \operatorname{Hist}(R,\mathcal G_R)
 \to
-\mathcal P(
+\mathcal P\big(
 \mathcal O_R
 \cup
 \{\operatorname{stop}\}
-).
-}
-\]
+\big).
+$$
 
 Formal elaboration:
 
-\[
+$$
 \operatorname{Elab}_{\mathcal F}(d)
 =
 \begin{cases}
 c\in\mathcal F & \text{if formalizable}\\
 \bot & \text{otherwise.}
 \end{cases}
-\]
+$$
 
 Evaluation:
 
-\[
-V_j(R,c)
+$$
+\operatorname{Ev}_j(R,c)
 \to
 (
 \operatorname{status},
 f_j
 ).
-\]
+$$
 
 Core distinction:
 
-\[
+$$
 \boxed{
 \text{generative space}
 \neq
@@ -434,51 +418,34 @@ Core distinction:
 \neq
 \text{evaluation}
 \neq
-\text{warrant}.
+\text{warrant}
 }
-\]
+$$
 
-This area remains the largest theoretical open question.
-
-See Section 21.
+This area remains the largest theoretical open question. See §21.2.
 
 ## 11. Epistemic actions
 
 An epistemic action is modeled schematically as a typed partial state transducer:
 
-\[
-\boxed{
+$$
 a:
-S
+\mathcal S
 \rightharpoonup
-S\times O_a.
-}
-\]
+\mathcal S\times O_a.
+$$
 
-Candidate state coordinates include:
-
-\[
-\{
-\mathcal F,
-K_{\mathcal F},
-\Gamma,
-Q,
-\Pi,
-O
-\}.
-\]
+Candidate state coordinates include $\mathcal F$, $K_{\mathcal F}$, $\Gamma$, $Q$, $\Pi$, and accumulated outputs.
 
 Examples include deriving a consequence, recording a support grade, retaining a candidate, raising support, accepting, retracting, revising, changing temporary context, selecting a reasoning operator, and selecting a strategy.
 
 No universal folk verb list is assumed primitive.
 
-A primitive action basis is representation-relative:
+A primitive action basis is representation-relative: the action set $\mathsf{Act}$ is generated as the closure of a basis $\mathsf B$ under the chosen composition operations,
 
-\[
-A
-=
-\langle B\rangle_{\mathcal A}.
-\]
+$$
+\mathsf{Act}=\langle\mathsf B\rangle.
+$$
 
 Whether there is a canonical/minimal basis is still open.
 
@@ -486,30 +453,32 @@ Whether there is a canonical/minimal basis is still open.
 
 The central warrant judgment is:
 
-\[
+$$
 \boxed{
 \mathfrak W;
-A
-\vdash_\pi
+\Phi
+\vdash_\kappa
 a:G
 }
-\]
+$$
 
 read:
 
-> under warrant regime \(\mathfrak W\) and applicability assumptions \(A\), certificate/support object \(\pi\) warrants epistemic action \(a\) with guarantee \(G\).
+> under warrant regime $\mathfrak W$ and applicability assumptions $\Phi$, certificate/support object $\kappa$ warrants epistemic action $a$ with guarantee $G$.
 
 Components:
 
-- \(\mathfrak W\): warrant regime;
-- \(A\): explicit applicability assumptions;
-- \(\pi\): certificate/support object;
-- \(a\): target epistemic action;
-- \(G\): typed guarantee.
+- $\mathfrak W$: warrant regime;
+- $\Phi$: explicit applicability assumptions;
+- $\kappa$: certificate/support object;
+- $a$: target epistemic action;
+- $G$: typed guarantee.
+
+The applicability assumptions $\Phi$ play a role close to the *critical questions* attached to argumentation schemes (§20): they are the conditions under which the certificate is fit for the action.
 
 This preserves:
 
-\[
+$$
 \boxed{
 \text{support}
 \neq
@@ -517,9 +486,9 @@ This preserves:
 \neq
 \text{license}
 \neq
-\text{update}.
+\text{update}
 }
-\]
+$$
 
 A support object may exist without being adequate for a given action.
 
@@ -529,42 +498,21 @@ A licensed action may not be executed.
 
 ## 13. License
 
-Given current context \(C\):
+Given current context $C$ with $C\models\Phi$ and $\mathfrak W;\Phi\vdash_\kappa a:G$, derive:
 
-\[
-C\models A
-\]
-
-and:
-
-\[
-\mathfrak W;
-A
-\vdash_\pi
-a:G,
-\]
-
-derive:
-
-\[
+$$
 \boxed{
-\operatorname{Licensed}_{\mathfrak W,C}(a:G).
+\operatorname{Licensed}_{\mathfrak W,C}(a:G)
 }
-\]
+$$
 
-Current executable benchmark regimes approximate:
-
-\[
-C\models A
-\]
-
-with explicit set inclusion.
+Current executable benchmark regimes approximate $C\models\Phi$ with explicit set inclusion.
 
 That is an implementation simplification, not the foundational semantics.
 
 ## 14. Typed guarantees
 
-Guarantee \(G\) is deliberately heterogeneous.
+Guarantee $G$ is deliberately heterogeneous.
 
 Examples include:
 
@@ -584,8 +532,7 @@ Positive support remains separate from dialectical status.
 
 Current decomposition:
 
-\[
-\boxed{
+$$
 \text{positive support}
 +
 \text{structured attack}
@@ -593,8 +540,7 @@ Current decomposition:
 \text{attack-to-defeat resolution}
 +
 \text{acceptability semantics}.
-}
-\]
+$$
 
 The first executable argumentation bridge is ABA-like.
 
@@ -608,25 +554,19 @@ The downstream abstract semantics currently uses Dung grounded semantics.
 
 Thus:
 
-\[
+$$
 \boxed{
 \text{argument has support}
 \neq
-\text{argument is dialectically acceptable}.
+\text{argument is dialectically acceptable}
 }
-\]
+$$
 
 ## 16. Preference-sensitive defeat
 
 The current binary preference regime uses a strict relation over assumptions.
 
-If:
-
-\[
-\alpha<\beta
-\]
-
-means \(\alpha\) is less preferred than \(\beta\), an attack on \(\beta\) is blocked if the attacking support relies on such an \(\alpha\).
+If $\alpha<\beta$ means $\alpha$ is less preferred than $\beta$, an attack on $\beta$ is blocked if the attacking support relies on such an $\alpha$.
 
 This is intentionally only the normal-attack filtering part of ABA+-style preference handling.
 
@@ -638,16 +578,14 @@ That richer path is explicitly deferred in GitHub issue #18.
 
 ## 17. Argument identity boundary
 
-For the current ABA/ABA+-style executable layer, argument identity is quotiented by:
+For the current ABA/ABA+-style executable layer, argument identity is quotiented by
 
-\[
-\boxed{
+$$
 (
-\text{conclusion},
+\text{conclusion},\
 \text{minimal supporting assumption environment}
 ).
-}
-\]
+$$
 
 This is sufficient for the selected assumption-centered semantics.
 
@@ -655,13 +593,13 @@ It is not a claim that proof objects themselves are identical.
 
 Thus:
 
-\[
+$$
 \boxed{
 \text{formal derivation identity}
 \neq
-\text{ABA dialectical argument identity}.
+\text{ABA dialectical argument identity}
 }
-\]
+$$
 
 First-class derivation/subargument structure is deferred until a semantics requires it.
 
@@ -670,6 +608,8 @@ That richer path is preserved in GitHub issue #17.
 ## 18. Executable warrant regimes
 
 The repository contains executable benchmark instances spanning distinct guarantee types.
+
+Note that **none of these regimes licenses unconditional acceptance of a proposition or deployment of a predictor or strategy beyond the stated selection rule.** Each licenses a recording, derivation, or typed defeasible action. How acceptance is licensed is an open problem (§21.1).
 
 ### 18.1 Grounded dialectical warrant
 
@@ -683,17 +623,11 @@ Grounded acceptability does not automatically license unconditional acceptance.
 
 An independent-Bernoulli support certificate can warrant recording a support grade.
 
-Even a grade such as \(0.99\) does not automatically warrant acceptance.
+Even a grade such as $0.99$ does not automatically warrant acceptance.
 
 ### 18.3 Deductive warrant
 
-A checked strict-Horn certificate can warrant:
-
-\[
-\operatorname{derive}(h)
-\]
-
-relative to explicit premises.
+A checked strict-Horn certificate can warrant $\operatorname{derive}(h)$ relative to explicit premises.
 
 A valid derivation does not warrant accepting the premises.
 
@@ -705,15 +639,7 @@ It does not directly warrant exact proposition acceptance.
 
 ### 18.5 Testimony warrant
 
-A source model specifies:
-
-\[
-P(R^+\mid H),
-\qquad
-P(R^+\mid\neg H)
-\]
-
-for a source/reference class.
+A source model specifies $P(R^+\mid H)$ and $P(R^+\mid\neg H)$ for a source/reference class, where $R^+$ is a positive report and $H$ the reported proposition.
 
 A certificate can warrant recording the posterior under that model.
 
@@ -721,9 +647,9 @@ It does not make source reliability context-free.
 
 ### 18.6 Statistical warrant
 
-A finite-class uniform-convergence certificate computes:
+A finite-class uniform-convergence certificate computes
 
-\[
+$$
 \epsilon
 =
 \sqrt{
@@ -735,35 +661,43 @@ A finite-class uniform-convergence certificate computes:
 2m
 }
 }.
-\]
+$$
 
-It can warrant recording:
+It can warrant recording that, for every $h\in\mathcal H$,
 
-\[
+$$
 L_D(h)
 \le
 L_S(h)+\epsilon
-\]
+$$
 
-with confidence \(1-\delta\), conditional on sampling assumptions.
+with confidence $1-\delta$.
+
+Applicability assumptions $\Phi$ for this regime:
+
+- the sample $S$ of size $m$ is i.i.d. from distribution $D$;
+- the loss is bounded in $[0,1]$;
+- $\mathcal H$ is finite and fixed before seeing $S$.
+
+The bound is Hoeffding plus a union bound, holds uniformly over $\mathcal H$, and is two-sided.
 
 It does not warrant predictor deployment.
 
 ### 18.7 Strategy-performance warrant
 
-For paired normalized utilities:
+For paired normalized utilities
 
-\[
-D_i
+$$
+\Delta_i
 =
 u_i(\pi)-u_i(\pi_0)
-\in[-1,1].
-\]
+\in[-1,1],
+$$
 
-A strategy may be selected only when the lower confidence bound:
+a strategy $\pi$ may be selected over baseline $\pi_0$ only when the lower confidence bound
 
-\[
-\bar D
+$$
+\bar\Delta
 -
 \sqrt{
 \frac{
@@ -772,9 +706,17 @@ A strategy may be selected only when the lower confidence bound:
 n
 }
 }
-\]
+$$
 
-is strictly positive, subject to task-distribution and utility assumptions.
+is strictly positive.
+
+Applicability assumptions $\Phi$ for this regime:
+
+- the $n$ task instances are i.i.d. draws from the target task distribution;
+- utilities are normalized so that $\Delta_i\in[-1,1]$;
+- the comparison is a single, pre-specified test with fixed $n$.
+
+If several candidate strategies are compared, $\delta$ must be corrected (for example, $\delta/k$ for $k$ candidates by a union bound). If results are inspected repeatedly with the option to stop early, a fixed-$n$ Hoeffding bound is invalid and an anytime-valid bound is required. The implementation should be checked against these conditions.
 
 ## 19. Current verification status
 
@@ -790,6 +732,8 @@ Current full result:
 
 The verification run includes support algebra, defeat, ABA, preference filtering, warrant/license, graded support, strict-Horn deduction, measurement/testimony, statistical/PAC, and strategy-performance.
 
+These tests verify that the reference implementations behave as specified. They do not test the central hypothesis (§28) that the factorization improves reasoning or inquiry; that is an empirical question (§21.9).
+
 Hosted GitHub Actions remains a separate infrastructure problem: runs have repeatedly failed or cancelled before runner steps/logs.
 
 Do not treat hosted pre-run failure as an application-level failure.
@@ -797,6 +741,12 @@ Do not treat hosted pre-run failure as an application-level failure.
 ## 20. Comparison to existing work
 
 The current meta-model is best understood as a synthesis/interface, not as a replacement for the mature frameworks it uses.
+
+### Context of discovery vs. context of justification
+
+Reichenbach's distinction (*Experience and Prediction*, 1938) between how hypotheses are arrived at and how they are justified is the direct philosophical ancestor of this project's separation of candidate generation from warrant.
+
+The project does not adopt the stronger positivist conclusion that discovery is outside epistemology. The generation–evaluation feedback loop (§21.7) treats generation as an object of formal study. This aligns with the "friends of discovery" literature (Hanson, Nickles) and with Simon and colleagues' treatment of discovery as heuristic search (Langley, Simon, Bradshaw & Zytkow, *Scientific Discovery*, 1987), which directly supports the constrained-search framing in §21.2.
 
 ### Formal epistemology
 
@@ -810,14 +760,7 @@ AGM provides postulates and representation theorems for belief-state change.
 
 This project reuses the idea that change operations deserve formal semantics, but does not make belief revision the universal form of reasoning.
 
-The present action model is broader:
-
-\[
-a:
-S
-\rightharpoonup
-S\times O_a.
-\]
+The present action model $a:\mathcal S\rightharpoonup\mathcal S\times O_a$ is broader.
 
 ### Dynamic epistemic logic
 
@@ -839,7 +782,7 @@ The project extends beyond ATMS by separating support provenance, argument defea
 
 These supply mature algebraic machinery for alternative versus joint provenance.
 
-The current positive-support antichain algebra is essentially a minimal-witness/free-distributive-lattice instance of this family.
+The current positive-support antichain algebra is essentially a minimal-witness/PosBool instance of this family.
 
 ### Structured argumentation
 
@@ -849,11 +792,31 @@ The project uses an ABA-first executable substrate with explicit typed metadata 
 
 It does not claim a novel replacement argumentation theory.
 
+### Toulmin's argument model
+
+Toulmin (*The Uses of Argument*, 1958) analyzes arguments into data, claim, **warrant**, **backing**, qualifier, and rebuttal. This project's use of "warrant" and its question "what warrants the warrant?" correspond closely to Toulmin's warrant and backing. The typed guarantee $G$ plays a role related to Toulmin's qualifier, and defeat corresponds loosely to rebuttal.
+
+Differences: Toulmin's warrant licenses an inference from data to claim, and is informal and field-dependent. Here a warrant targets a typed epistemic *action*, carries an explicit applicability set $\Phi$, and in the reference regimes is mechanically checkable. Warrant-of-warrant (§21.4) is Toulmin's backing made into a recursive, representable target.
+
+### Argumentation schemes and critical questions
+
+Walton-style argumentation schemes (Walton, Reed & Macagno, *Argumentation Schemes*, 2008) pair stereotyped patterns (expert opinion, witness testimony, cause to effect, etc.) with critical questions that probe their applicability.
+
+Each executable warrant regime in §18 can be read as a typed, checkable scheme, with its applicability assumptions $\Phi$ playing the role of critical questions promoted to explicit conditions. The testimony regime (§18.5) is close to the scheme for witness testimony, with source reliability made quantitative.
+
+Differences: schemes are usually informal and conclude propositions. This project types the guarantee and targets actions.
+
+### Carneades
+
+Carneades (Gordon, Prakken & Walton, 2007) models argument evaluation with **proof standards** (e.g., preponderance of evidence, clear and convincing evidence, beyond reasonable doubt) assigned per issue, and distinguishes premises, assumptions, and exceptions in how critical questions allocate burden of proof.
+
+This is the closest existing precedent for *action-relative adequacy*: what counts as enough depends on what is being decided. It is directly relevant to the acceptance-licensing problem (§21.1), where proof standards are one candidate mechanism. Carneades' assumption/exception distinction is also a candidate refinement of $\Phi$ (§21.5).
+
 ### Justification Logic
 
 Justification Logic supplies a strong precedent for treating reasons/certificates as explicit objects.
 
-The present warrant interface extends the target from “reason for proposition” to “certificate adequate for a typed epistemic action with a typed guarantee.”
+The present warrant interface extends the target from "reason for proposition" to "certificate adequate for a typed epistemic action with a typed guarantee."
 
 ### Formal learning theory / PAC
 
@@ -877,13 +840,34 @@ The project does not attempt to replace logical frameworks.
 
 These should remain visible in any future handoff.
 
-### 21.1 Candidate generation
+### 21.1 Acceptance licensing
+
+Every implemented warrant regime (§18) licenses a recording, derivation, or typed defeasible action. None licenses $\operatorname{accept}(h)$, deployment of a predictor, or action in the world beyond the strategy-selection rule. The caution is principled, but it means the pipeline currently stops short of the action that most use cases need.
+
+Until this is resolved, the framework functions as an **audit and recording system**, not a decision system.
+
+Acceptance is where heterogeneous guarantees must meet a decision, so this problem is tightly coupled to warrant composition (§21.3). Candidate approaches:
+
+- **Proof standards.** Attach an action-relative adequacy threshold to each acceptance action, as in Carneades (§20).
+- **Decision-theoretic acceptance.** License acceptance when expected utility of acting on $h$ exceeds alternatives given stakes, making acceptance stakes-sensitive.
+- **Dialectical acceptance.** Add an explicit rule mapping a declared acceptability status (e.g., grounded-IN under stated preferences) to acceptance, with the rule itself as a warranted object.
+- **Acceptance as commitment.** Treat acceptance as a policy-level commitment distinct from belief or credence (cf. L. J. Cohen, *An Essay on Belief and Acceptance*, 1992).
+
+Questions include:
+
+- Is acceptance one action type, or a stakes-relative family?
+- Can a single regime license acceptance, or does acceptance always require composition?
+- What guarantee type does an acceptance carry?
+- How are threshold-based acceptance paradoxes handled (lottery and preface: high-probability acceptance is not closed under conjunction)?
+- When should acceptance be revocable, and what licenses retraction?
+
+### 21.2 Candidate generation
 
 This is the largest unresolved foundational area.
 
 Current interface:
 
-\[
+$$
 \mathcal G_R
 =
 (
@@ -892,7 +876,7 @@ d_0,
 \mathcal O_R,
 \to_R
 ).
-\]
+$$
 
 We know how to represent generative spaces, construction/refinement operators, strategies, elaboration, and evaluators.
 
@@ -900,43 +884,35 @@ We do **not** yet have a satisfying general theory of how new hypotheses, predic
 
 Important prior conclusions:
 
-\[
+$$
 \boxed{
 \text{concept construction}
 \neq
-\text{concept invention}.
+\text{concept invention}
 }
-\]
+$$
 
 and:
 
-\[
+$$
 \boxed{
 \text{expression construction}
 \neq
 \text{definitional extension}
 \neq
-\text{substantive predicate invention}.
+\text{substantive predicate invention}
 }
-\]
+$$
 
-The literature suggests constrained search over a generative space is a more robust abstraction than a universal “creativity operator” list.
+The literature (including the discovery-as-search tradition, §20) suggests constrained search over a generative space is a more robust abstraction than a universal "creativity operator" list.
 
 Candidate generation should be the next foundational topic discussed after this closeout.
 
-### 21.2 Warrant composition
+### 21.3 Warrant composition
 
 Multiple warrant regimes may support related actions.
 
-There is currently no universal rule:
-
-\[
-\mathfrak W_1
-+
-\mathfrak W_2
-\to
-\mathfrak W_*.
-\]
+There is currently no universal rule combining $\mathfrak W_1$ and $\mathfrak W_2$ into a joint regime $\mathfrak W_*$.
 
 Questions include:
 
@@ -948,86 +924,69 @@ Questions include:
 
 Current stance: do not introduce scalar aggregation by default.
 
-### 21.3 Warrant of warrant
+### 21.4 Warrant of warrant
 
 The regress remains explicit.
 
-If:
-
-\[
-\mathfrak W;A
-\vdash_\pi
-a:G,
-\]
-
-the assumptions, certificate checker, reliability model, or warrant regime may themselves become targets of warrant.
+If $\mathfrak W;\Phi\vdash_\kappa a:G$, the assumptions $\Phi$, the certificate checker, the reliability model, or the warrant regime $\mathfrak W$ may themselves become targets of warrant. This is Toulmin's backing (§20) made recursive.
 
 The framework supports axiomatic stopping points, empirical reliability chains, proof chains, defeasible/coherence-based stopping, and unresolved assumptions.
 
 No fake universal closure is assumed.
 
-### 21.4 Context entailment
+### 21.5 Context entailment
 
-The foundational license condition is:
-
-\[
-C\models A.
-\]
+The foundational license condition is $C\models\Phi$.
 
 Executable benchmark regimes currently use explicit set inclusion.
 
-Open problem: connect the warrant layer to richer theory/context semantics so context satisfaction can use actual logical entailment, morphism-aware entailment, graded assumptions, or defeasible context.
+Open problem: connect the warrant layer to richer theory/context semantics so context satisfaction can use actual logical entailment, morphism-aware entailment, graded assumptions, or defeasible context. Carneades' distinction between assumptions (presumed unless challenged) and exceptions (must be raised to count) is one candidate refinement of $\Phi$.
 
-### 21.5 Epistemic action algebra
+### 21.6 Epistemic action algebra
 
-We have a generic action type:
+We have a generic action type $a:\mathcal S\rightharpoonup\mathcal S\times O_a$.
 
-\[
-a:
-S
-\rightharpoonup
-S\times O_a.
-\]
-
-But we do not have a representation theorem showing a unique/minimal primitive basis.
+But we do not have a representation theorem showing a unique/minimal primitive basis $\mathsf B$.
 
 Likely result: primitive action bases are representation-relative.
 
 Open questions include useful normal forms, action equivalence, and compositional generation of revision/update/accept/retract.
 
-### 21.6 Candidate-generation/warrant interaction
+### 21.7 Candidate-generation/warrant interaction
 
 Generation and evaluation are separated, but the feedback loop deserves deeper study:
 
-\[
-R_t
+$$
+s_t
 \xrightarrow[\pi]{\mathcal G}
 d_t
 \xrightarrow{\operatorname{Elab}}
 c_t
-\xrightarrow{V}
+\xrightarrow{\operatorname{Ev}}
 f_t
 \xrightarrow{\operatorname{control/update}}
-R_{t+1}.
-\]
+s_{t+1}.
+$$
 
 Open question: what general properties make such a loop effective?
 
 Possible dimensions include completeness, convergence, search bias, cost, information gain, repairability, and representation change.
 
-### 21.7 Reflection and self-application
+### 21.8 Reflection and self-application
 
-Because strategies, warrants, and the meta-model itself are representable targets, the framework is reflectively closed at the representation level.
+Strategies, warrants, and the meta-model itself are representable targets, so the framework can **represent** reflection: it can hold objects that are about its own components.
+
+This should not be read as a claim that reflective reasoning within the framework is sound or complete. Self-referential trust has known limits. For example, by Löb's theorem a consistent theory extending arithmetic cannot prove its own reflection principle ("if provable then true") for every sentence. Any regime that warrants trust in its own warrant regimes will need explicit stopping points (§21.4) rather than self-certification.
 
 Open questions include fixed points, self-modifying warrant policies, trust bootstrapping, meta-regress control, and reflective consistency.
 
-### 21.8 Empirical adequacy of the factorization
+### 21.9 Empirical adequacy of the factorization
 
 The architecture is conceptually coherent and executable in reference cases.
 
 It is not yet empirically established that the factorization improves annotation reliability, reasoning quality, auditability, inquiry navigation, or strategy selection.
 
-This is now primarily an empirical question.
+This is now primarily an empirical question, and it is the test of the central hypothesis (§28).
 
 ## 22. Explicitly deferred richer branches
 
@@ -1053,7 +1012,7 @@ Expected direction: hyperargumentation/set-to-set semantics rather than forcing 
 - typed warrants;
 - representation-relative epistemic actions;
 - explicit separation of defeasible attack/defeat from support;
-- relational reflection;
+- relational reflection (as representation, not as a soundness claim);
 - candidate-generation interface.
 
 ### Implemented reference instances
@@ -1074,6 +1033,7 @@ Expected direction: hyperargumentation/set-to-set semantics rather than forcing 
 
 ### Open research
 
+- acceptance licensing;
 - candidate generation theory;
 - warrant composition;
 - context entailment;
@@ -1090,11 +1050,13 @@ Do not add more argumentation frameworks, probability calculi, belief-revision o
 
 The project has enough machinery to test.
 
+(The related-work additions in §20 are comparisons for positioning, not new machinery.)
+
 ## 25. Recommended next foundational discussion
 
 The next theoretical discussion should be:
 
-# **Candidate generation**
+**Candidate generation**
 
 Specifically:
 
@@ -1111,6 +1073,8 @@ Specifically:
 
 This topic is intentionally left open for the next session.
 
+Acceptance licensing (§21.1) is the recommended follow-on integrative topic, since it determines whether the framework can support decisions rather than only audits.
+
 ## 26. Relation to the accompanying paper
 
 The accompanying paper draft:
@@ -1120,28 +1084,32 @@ The accompanying paper draft:
 - frames the main contribution as **factorization and interface synthesis**, not invention of each component;
 - identifies candidate generation and warrant composition as the major next research problems.
 
-Future literature review should explicitly compare against formal epistemology, AGM and belief-base change, dynamic epistemic logic, ATMS and truth-maintenance, provenance semirings, Justification Logic, Dung/ABA/ASPIC+, probabilistic argumentation, formal learning theory, metareasoning, logical frameworks/theory graphs, and cognitive architectures if relevant.
+The paper should be updated to match this document: add acceptance licensing as a major open problem, present the central claim as a hypothesis, and add the related work below.
+
+Future literature review should explicitly compare against Reichenbach's discovery/justification distinction and the discovery-as-search tradition, Toulmin's argument model, argumentation schemes and critical questions, Carneades and proof standards, formal epistemology, AGM and belief-base change, dynamic epistemic logic, ATMS and truth-maintenance, provenance semirings, Justification Logic, Dung/ABA/ASPIC+, probabilistic argumentation, formal learning theory, metareasoning, logical frameworks/theory graphs, the belief/acceptance literature, and cognitive architectures if relevant.
 
 ## 27. Repository handoff map
 
 Canonical high-level documents:
 
-- docs/formal-epistemic-reasoning-metamodel.md — this document;
-- docs/paper-formal-epistemic-reasoning-metamodel.md — paper draft;
-- docs/project-status.md — current project-management status;
-- docs/architecture-reassessment.md — stop-rule/reassessment;
-- docs/research-log-post-v1.md — chronological research development;
-- docs/warrant-license-interface.md — warrant formalism;
-- docs/candidate-generation-interface.md — candidate-generation work;
-- docs/end-to-end-warrant-benchmark.md — executable warrant benchmark;
-- docs/epistemic-actions-support-algebra.md — actions/support;
-- docs/support-antichain-probability.md — positive support;
-- docs/defeat-argumentation-integration.md — defeat;
-- docs/preference-regimes.md — preference boundary;
-- docs/metareasoning-strategy-reflection.md — strategy/reflection;
-- docs/assumption-context-meta-model.md — ATMS-style contexts;
-- docs/epistemic-transition-calculus.md — earlier transition calculus;
-- docs/decisions/ — ADRs.
+- `docs/formal-epistemic-reasoning-metamodel.md` — this document;
+- `docs/paper-formal-epistemic-reasoning-metamodel.md` — paper draft;
+- `docs/project-status.md` — current project-management status;
+- `docs/architecture-reassessment.md` — stop-rule/reassessment;
+- `docs/research-log-post-v1.md` — chronological research development;
+- `docs/warrant-license-interface.md` — warrant formalism;
+- `docs/candidate-generation-interface.md` — candidate-generation work;
+- `docs/end-to-end-warrant-benchmark.md` — executable warrant benchmark;
+- `docs/epistemic-actions-support-algebra.md` — actions/support;
+- `docs/support-antichain-probability.md` — positive support;
+- `docs/defeat-argumentation-integration.md` — defeat;
+- `docs/preference-regimes.md` — preference boundary;
+- `docs/metareasoning-strategy-reflection.md` — strategy/reflection;
+- `docs/assumption-context-meta-model.md` — ATMS-style contexts;
+- `docs/epistemic-transition-calculus.md` — earlier transition calculus;
+- `docs/decisions/` — ADRs.
+
+Other documents may use pre-§5.1 notation (e.g., $A$ for applicability assumptions, $\pi$ for certificates). §5.1 is canonical where they differ.
 
 Open architectural issues:
 
@@ -1150,21 +1118,19 @@ Open architectural issues:
 
 ## 28. Final closeout assessment
 
-The meta-model is not “finished” in the sense of a complete philosophy of epistemology.
+The meta-model is not "finished" in the sense of a complete philosophy of epistemology.
 
 It is, however, **architecturally mature enough to freeze as a versioned research object**.
 
-Its strongest current claim is:
+Its central **hypothesis** is:
 
-\[
-\boxed{
-\text{epistemic reasoning is better modeled as a composition of distinct generative, support, warrant, action, and control structures than as a flat taxonomy of inference types.}
-}
-\]
+> Epistemic reasoning is better modeled as a composition of distinct generative, support, warrant, action, and control structures than as a flat taxonomy of inference types.
+
+This hypothesis is conceptually motivated and implemented in reference cases. It has not yet been empirically tested (§21.9), and the passing test suite (§19) verifies implementations, not the hypothesis.
 
 The most important unresolved foundational problem is candidate generation.
 
-The most important unresolved integrative problem is warrant composition.
+The most important unresolved integrative problems are acceptance licensing and warrant composition, which are closely linked.
 
 The most important empirical question is whether the factorization improves actual reasoning/inquiry work.
 
@@ -1173,16 +1139,21 @@ The most important empirical question is whether the factorization improves actu
 - [x] Canonical name chosen: **Formal Epistemic Reasoning Meta-Model**
 - [x] Core factorization recorded
 - [x] Main formal objects recorded
+- [x] Canonical notation table recorded (§5.1)
 - [x] Warrant interface recorded
-- [x] Executable benchmark regimes recorded
+- [x] Executable benchmark regimes recorded, with applicability assumptions
 - [x] Verification status recorded
 - [x] Deferred argumentation branches preserved
+- [x] Acceptance licensing marked as major open problem
 - [x] Candidate generation marked as major open problem
 - [x] Warrant composition marked as major open problem
 - [x] Context entailment/action algebra/reflection open questions recorded
 - [x] Relation to Inquiry Representation Model recorded
 - [x] Relation to future Inquiry System recorded
 - [x] Paper draft prepared
+- [ ] Paper draft updated to match this revision (acceptance problem, hypothesis framing, related work)
+- [ ] Other `docs/` files migrated to §5.1 notation
+- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7)
 - [ ] Candidate-generation research resumed in a fresh focused session
 - [ ] Full comparison to adjacent existing meta-models/frameworks deepened
 - [ ] Empirical usefulness study performed
