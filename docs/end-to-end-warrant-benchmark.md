@@ -289,7 +289,7 @@ The implementation explicitly prevents that.
 | A1 | alternative support routes | executable | one defeated route need not erase another |
 | G1 | graded/probabilistic support | executable for grade recording | computed support probability can license recording the grade, not accepting the proposition |
 | S1 | statistical/PAC guarantee | formal interface only | typed statistical guarantee must remain scoped |
-| M1 | measurement/testimony | formal interface only | provenance/reliability assumptions must remain explicit |
+| M1 | measurement/testimony | executable narrow regimes | measurement records uncertainty/calibration; testimony records model-relative posterior without acceptance |
 | T1 | transition/action guarantee | formal interface only | pre/post guarantee distinct from proposition support |
 | R1 | strategy selection | formal interface only | strategy performance warrant needs task/resource scope |
 | W1 | warrant-of-warrant | representable, not closed | assumptions/checkers may themselves become warrant targets |
@@ -326,10 +326,9 @@ The next additions should be selected because they exercise genuinely different 
 
 Priority order:
 
-1. measurement/testimony reliability regime;
-2. statistical/PAC regime;
-3. strategy-performance regime;
-4. only then any decision policy that consumes graded support values.
+1. statistical/PAC regime;
+2. strategy-performance regime;
+3. only then any decision policy that consumes graded support values.
 
 Each new regime should instantiate the same action-targeted warrant interface rather than add a new top-level ontology.
 
@@ -430,3 +429,67 @@ with guarantee:
 A valid proof does not license accepting \(\Gamma\). If the current context omits a premise, the conditional warrant can remain valid while the current license is absent.
 
 This is ADR 011.
+
+
+## 12. Executable measurement case
+
+A measurement certificate records:
+
+\[
+(q,v,u,\text{unit},\text{calibration reference},\text{model reference})
+\]
+
+where \(u\) is a non-negative standard uncertainty.
+
+The measurement warrant regime may license only:
+
+\[
+\operatorname{recordMeasurementResult}(q).
+\]
+
+Its guarantee is that the recorded result carries explicit uncertainty and calibration provenance.
+
+It does not warrant accepting an exact proposition such as:
+
+\[
+q=v.
+\]
+
+That stronger move would require a separate interpretation/conformity/decision regime.
+
+## 13. Executable testimony case
+
+A positive testimonial report is modeled through:
+
+\[
+P(R^+\mid H)
+\]
+
+and:
+
+\[
+P(R^+\mid\neg H)
+\]
+
+for an explicit source and reference class.
+
+Given prior \(P(H)\), the certificate computes:
+
+\[
+P(H\mid R^+)
+=
+\frac{P(R^+\mid H)P(H)}
+{P(R^+\mid H)P(H)+P(R^+\mid\neg H)P(\neg H)}.
+\]
+
+The testimony regime may warrant only recording this posterior under the declared source model.
+
+It does not warrant:
+
+\[
+\operatorname{accept}(H).
+\]
+
+The source's reliability parameters are explicitly reference-class relative; the same source may have different reliability models in different domains.
+
+This is ADR 012.
