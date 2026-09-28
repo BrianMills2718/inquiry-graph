@@ -1,6 +1,6 @@
 # Candidate-generation interface and worked trace
 
-> **Status:** research draft making the candidate-generation split concrete without claiming a universal primitive operator set. It builds on [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md). A subsequent pass refactors the warrant layer against this interface in [warrant-license-interface.md](warrant-license-interface.md).
+> **Status:** research draft retained as the first candidate-generation interface. A broader literature-driven refinement is now recorded in [candidate-generation-landscape.md](candidate-generation-landscape.md) and ADR 015. The important correction is to distinguish ordinary exploration within a generative system from transformations that change the generative language, bias, operators, or evaluators.
 
 ## 1. Core claim
 
@@ -460,3 +460,58 @@ After this concretization, the frontier is:
 6. **reflection bounds:** how should self-application be typed/guarded in a formal implementation?
 
 The interface is deliberately designed so those questions can be attacked independently.
+
+
+## 14. Literature-driven refinement
+
+The broader landscape survey found close precedents in Wiggins/Boden creative-system models, program synthesis/CEGIS, ILP/MIL, anti-unification, abductive logic programming, HR theory formation, conceptual blending, and Bayesian program learning.
+
+The original tuple:
+
+\[
+\mathcal G_R=
+(\mathcal D_R,d_0,\mathcal O_R,\to_R)
+\]
+
+should therefore be read as a minimal fixed-space projection of a richer generative regime:
+
+\[
+\boxed{
+\mathcal G_R
+=
+(
+\mathcal A_R,
+\mathcal L_R,
+\mathcal D_R,
+B_R,
+\mathcal O_R,
+\to_R,
+V_R
+)
+}
+\]
+
+where:
+
+- \(\mathcal A_R\) is the candidate/artifact ontology;
+- \(\mathcal L_R\) is the representation or generative language;
+- \(\mathcal D_R\) is the draft space;
+- \(B_R\) is admissibility/generative bias;
+- \(\mathcal O_R\) is the construction/traversal operator family;
+- \(\to_R\) is ordinary candidate transition;
+- \(V_R\) is evaluation.
+
+Strategy remains separate.
+
+Transformational generation is represented as:
+
+\[
+\mu:
+\mathcal G_R
+\rightharpoonup
+\mathcal G'_R.
+\]
+
+Thus an ordinary candidate move and a representation-space change are no longer forced into one operator category.
+
+See [candidate-generation-landscape.md](candidate-generation-landscape.md) and ADR 015 for the adoption decision.
