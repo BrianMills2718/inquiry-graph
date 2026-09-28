@@ -922,7 +922,7 @@ and:
 
 The literature suggests constrained search over a generative space is a more robust abstraction than a universal “creativity operator” list.
 
-Candidate generation should be the next foundational topic discussed after this closeout.
+Candidate generation has now received a first dedicated landscape survey. The immediate next task is not invention but framework mapping: test CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR theory formation, and conceptual blending against the revised typed generative-system interface in `docs/candidate-generation-landscape.md`.
 
 ### 21.2 Warrant composition
 
@@ -1183,6 +1183,7 @@ The most important empirical question is whether the factorization improves actu
 - [x] Relation to Inquiry Representation Model recorded
 - [x] Relation to future Inquiry System recorded
 - [x] Paper draft prepared
-- [ ] Candidate-generation research resumed in a fresh focused session
+- [x] Candidate-generation landscape survey resumed and adoption decision recorded
+- [ ] Candidate-generation framework mappings completed across the selected mature systems
 - [ ] Full comparison to adjacent existing meta-models/frameworks deepened
 - [ ] Empirical usefulness study performed
