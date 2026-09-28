@@ -166,3 +166,34 @@ def test_warrant_value_object_validation():
             action=EpistemicAction("derive"),
             guarantee=Guarantee("deductive", "relative truth preservation"),
         )
+
+
+def test_grounded_argument_does_not_license_out_of_scope_action_or_guarantee():
+    framework = DefeatFramework([argument("cert")])
+    regime = GroundedDialecticalWarrantRegime()
+
+    accept_claim = WarrantJudgment(
+        regime="grounded-dialectical",
+        certificate_argument="cert",
+        action=EpistemicAction("accept", "h"),
+        guarantee=Guarantee(
+            "defeasible-acceptability",
+            "certificate remains acceptable under grounded semantics",
+        ),
+    )
+    accept_assessment = regime.assess(accept_claim, framework)
+    assert accept_assessment.warranted is False
+    assert "outside" in accept_assessment.reason
+
+    deductive_claim = WarrantJudgment(
+        regime="grounded-dialectical",
+        certificate_argument="cert",
+        action=EpistemicAction("raise_support", "h"),
+        guarantee=Guarantee(
+            "deductive-truth-preservation",
+            "truth preserving relative to premises",
+        ),
+    )
+    deductive_assessment = regime.assess(deductive_claim, framework)
+    assert deductive_assessment.warranted is False
+    assert "outside" in deductive_assessment.reason
