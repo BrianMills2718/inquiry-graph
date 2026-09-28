@@ -287,7 +287,7 @@ The implementation explicitly prevents that.
 | F4 | unresolved dialectical cycle | executable at warrant-unit level | skeptical grounded regime does not license undecided certificate |
 | C1 | applicability assumptions | executable | warrant and current license differ |
 | A1 | alternative support routes | executable | one defeated route need not erase another |
-| G1 | graded/probabilistic support | support interpreter executable; warrant regime pending | numeric support is not itself a universal license |
+| G1 | graded/probabilistic support | executable for grade recording | computed support probability can license recording the grade, not accepting the proposition |
 | S1 | statistical/PAC guarantee | formal interface only | typed statistical guarantee must remain scoped |
 | M1 | measurement/testimony | formal interface only | provenance/reliability assumptions must remain explicit |
 | T1 | transition/action guarantee | formal interface only | pre/post guarantee distinct from proposition support |
@@ -327,10 +327,10 @@ The next additions should be selected because they exercise genuinely different 
 Priority order:
 
 1. deductive proof regime;
-2. graded-support update regime;
-3. measurement/testimony reliability regime;
-4. statistical/PAC regime;
-5. strategy-performance regime.
+2. measurement/testimony reliability regime;
+3. statistical/PAC regime;
+4. strategy-performance regime;
+5. only then any decision policy that consumes graded support values.
 
 Each new regime should instantiate the same action-targeted warrant interface rather than add a new top-level ontology.
 
@@ -349,3 +349,44 @@ The current research task is now:
 \]
 
 Failures in the benchmark should drive the next formal revision.
+
+
+## 10. Executable graded-support case
+
+The independent-Bernoulli support regime now supplies a second executable warrant specialization.
+
+Given symbolic support \(P_h\) and an explicit independent-Bernoulli model \(M\), the certificate computes:
+
+\[
+\rho_M(P_h).
+\]
+
+The regime may warrant only:
+
+\[
+\operatorname{recordSupportGrade}(h,\rho_M(P_h)).
+\]
+
+It does not warrant:
+
+\[
+\operatorname{accept}(h)
+\]
+
+or:
+
+\[
+\operatorname{useForAction}(h).
+\]
+
+Even a value such as:
+
+\[
+0.99
+\]
+
+does not become an acceptance threshold by convention.
+
+Any regime that consumes this value to license another action must state its own assumptions, decision rule and guarantee.
+
+This is ADR 010.
