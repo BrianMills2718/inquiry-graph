@@ -1334,3 +1334,69 @@ It does not license using the predictor or accepting any proposition about its f
 
 This is recorded in ADR 013.
 
+## 43. Strategy selection became a first-class warrant target
+
+The final planned benchmark family targeted strategy selection itself.
+
+A strategy-performance certificate compares one candidate strategy with one baseline on paired tasks using a declared normalized utility in \([0,1]\).
+
+For task \(i\):
+
+\[
+D_i=u_i(\pi)-u_i(\pi_0)\in[-1,1].
+\]
+
+Under i.i.d. task sampling, Hoeffding yields a lower confidence bound:
+
+\[
+E[D]
+\ge
+\bar D
+-
+\sqrt{
+\frac{2\log(1/\delta)}{n}
+}.
+\]
+
+The warrant regime may license:
+
+\[
+\operatorname{selectStrategy}(\pi)
+\]
+
+only when this lower bound is strictly positive.
+
+Task-distribution stability and adequacy of the utility definition remain explicit warrant assumptions.
+
+The implementation deliberately requires any reasoning cost to be incorporated into the declared normalized utility before evaluation. It does not add raw quality and raw cost quantities with incompatible units.
+
+This is recorded in ADR 014.
+
+## 44. Architecture checkpoint: stop expanding by default
+
+With strategy-performance added, the executable benchmark now spans several genuinely different guarantee types:
+
+- defeasible acceptability;
+- preference-sensitive defeat;
+- graded support reporting;
+- checked deduction;
+- measurement uncertainty/calibration;
+- testimonial source reliability;
+- statistical generalization;
+- strategy-performance selection.
+
+The fact that these heterogeneous cases fit the same action-targeted warrant interface is evidence that the factorization is useful enough to test empirically.
+
+The project therefore changes phase.
+
+New formal layers should now require a concrete failing benchmark/use case.
+
+The next work is:
+
+1. integrated verification;
+2. benchmark-driven failure analysis;
+3. source reconciliation;
+4. empirical usefulness evaluation.
+
+The detailed checkpoint is in [architecture-reassessment.md](architecture-reassessment.md).
+
