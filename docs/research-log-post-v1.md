@@ -1230,3 +1230,59 @@ The strict-Horn language is a benchmark implementation, not a commitment to Horn
 
 This is recorded in ADR 011.
 
+## 41. Measurement and testimony were added as model-relative evidence-channel regimes
+
+The next benchmark expansion targeted measurement and testimony.
+
+The literature check reinforced a distinction already implicit in the project.
+
+Metrology does not treat a measurement result as an exact truth statement. The GUM/VIM tradition makes measurement result, uncertainty, calibration and traceability explicit parts of the measurement account.
+
+Formal testimony models likewise treat source reliability through an explicit probabilistic model. Reliability is not simply one global scalar attached to a person independently of domain or reference class.
+
+The executable benchmark therefore adds two deliberately weak warrant regimes.
+
+### Measurement
+
+A certificate records:
+
+\[
+(q,v,u,\text{unit},\text{calibration reference},\text{model reference})
+\]
+
+where \(u\) is standard uncertainty.
+
+The warrant may license only recording the measurement result with its uncertainty/provenance.
+
+It does not license accepting the exact proposition:
+
+\[
+q=v.
+\]
+
+### Testimony
+
+A source model records, for one explicit reference class:
+
+\[
+P(R^+\mid H)
+\]
+
+and:
+
+\[
+P(R^+\mid\neg H).
+\]
+
+Together with an explicit prior it yields:
+
+\[
+P(H\mid R^+).
+\]
+
+The warrant may license only recording that posterior under the declared model.
+
+It does not license accepting \(H\), and it does not generalize the source's reliability to unrelated reference classes.
+
+This extends the benchmark without adding a new top-level ontology. It is recorded in ADR 012.
+
