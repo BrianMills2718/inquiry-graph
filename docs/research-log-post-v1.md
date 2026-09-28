@@ -1286,3 +1286,51 @@ It does not license accepting \(H\), and it does not generalize the source's rel
 
 This extends the benchmark without adding a new top-level ontology. It is recorded in ADR 012.
 
+## 42. Statistical warrant was instantiated as a finite-class theorem certificate
+
+The next benchmark cell was statistical/PAC warrant.
+
+Rather than attaching a generic “confidence” number to a predictor, the project implemented a standard finite-class uniform-convergence theorem.
+
+For bounded loss in \([0,1]\), finite hypothesis class \(\mathcal H\), sample size \(m\), and confidence parameter \(\delta\), the certificate computes:
+
+\[
+\epsilon=
+\sqrt{
+\frac{\log(2|\mathcal H|/\delta)}{2m}
+}
+\]
+
+and records the theorem-level bound:
+
+\[
+L_D(h)\le L_S(h)+\epsilon
+\]
+
+with probability at least:
+
+\[
+1-\delta,
+\]
+
+simultaneously for all \(h\in\mathcal H\).
+
+The implementation clips the reported upper loss bound at \(1\).
+
+The important architectural point is that the theorem calculation does not establish its own applicability assumptions.
+
+Conditions such as:
+
+- i.i.d. sampling;
+- bounded loss;
+- declared finite hypothesis-class size;
+- no unmodelled train/deployment shift;
+
+remain explicit warrant assumptions/current-context conditions.
+
+The regime may license only recording the generalization bound.
+
+It does not license using the predictor or accepting any proposition about its future performance without an additional decision/warrant regime.
+
+This is recorded in ADR 013.
+
