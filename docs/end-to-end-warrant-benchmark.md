@@ -291,7 +291,7 @@ The implementation explicitly prevents that.
 | S1 | statistical/PAC guarantee | executable finite-class bound | theorem-level population-loss bound remains conditional on i.i.d./bounded-loss setup |
 | M1 | measurement/testimony | executable narrow regimes | measurement records uncertainty/calibration; testimony records model-relative posterior without acceptance |
 | T1 | transition/action guarantee | formal interface only | pre/post guarantee distinct from proposition support |
-| R1 | strategy selection | formal interface only | strategy performance warrant needs task/resource scope |
+| R1 | strategy selection | executable paired-utility regime | selection requires a positive lower confidence bound over a declared task class |
 | W1 | warrant-of-warrant | representable, not closed | assumptions/checkers may themselves become warrant targets |
 
 ## 7. What this benchmark tells us
@@ -326,8 +326,8 @@ The next additions should be selected because they exercise genuinely different 
 
 Priority order:
 
-1. strategy-performance regime;
-2. only then any decision policy that consumes graded support values.
+1. empirical validation of the existing regimes;
+2. only then any additional decision policy or formal layer motivated by benchmark failure.
 
 Each new regime should instantiate the same action-targeted warrant interface rather than add a new top-level ontology.
 
