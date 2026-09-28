@@ -7,8 +7,8 @@ from inquiry_graph.model import (Conversation, Candidates, Node, Relation, Bindi
 from inquiry_graph.io import ingest, write_json
 
 ROOT = Path(__file__).resolve().parent
-source = Conversation.model_validate_json((ROOT / "seed/source-excerpts.json").read_text())
-cur = json.loads((ROOT / "seed/curation.json").read_text())
+source = Conversation.model_validate_json((ROOT / "seed/source-excerpts.json").read_text(encoding="utf-8"))
+cur = json.loads((ROOT / "seed/curation.json").read_text(encoding="utf-8"))
 messages = {m.id: m for m in source.messages}
 keys = cur["source_keys"]
 def mid(key):

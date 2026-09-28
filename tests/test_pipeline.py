@@ -199,7 +199,7 @@ def test_render_deterministic_across_hash_seeds():
     code="from inquiry_graph.io import load; from inquiry_graph.model import Graph; from inquiry_graph.render import mermaid,dot; g=load('examples/seed/graph.json',Graph); print(mermaid(g,'inquiry')); print(dot(g,'inquiry'))"
     results=[]
     for seed in ('1','2'):
-        env=dict(os.environ,PYTHONHASHSEED=seed,PYTHONPATH=str(root/'src'))
+        env=dict(os.environ,PYTHONHASHSEED=seed,PYTHONPATH=str(root/'src'),PYTHONIOENCODING='utf-8')
         results.append(subprocess.check_output([sys.executable,'-c',code],cwd=root,env=env))
     assert results[0]==results[1]
 
