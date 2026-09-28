@@ -1137,3 +1137,42 @@ The project-management rule is now:
 
 See [end-to-end-warrant-benchmark.md](end-to-end-warrant-benchmark.md) and ADR 009.
 
+## 39. Numeric support received a deliberately weak warrant regime
+
+The next benchmark gap was graded support.
+
+The positive-support layer already had an independent-Bernoulli interpretation:
+
+\[
+\rho_{\mathrm{Bern}}:
+\mathsf{Supp}(X)\to[0,1].
+\]
+
+The key design question was what epistemic action such a number should license.
+
+The project explicitly rejected an implicit global confidence threshold.
+
+Even:
+
+\[
+\rho=0.99
+\]
+
+does not, by itself, warrant accepting the proposition.
+
+The first graded-support warrant regime therefore licenses only:
+
+\[
+\operatorname{recordSupportGrade}(h,\rho).
+\]
+
+Its guarantee is descriptive: the recorded value equals the support-event probability under the explicit independent-Bernoulli model.
+
+Any later action policy that consumes the number must be a separate warrant regime with explicit assumptions, decision rule, risk semantics and guarantee.
+
+This required one useful generalization of the executable warrant interface. The certificate field had been named specifically for argument certificates; it is now regime-neutral so the same warrant schema can target argument IDs, proof objects, support computations, calibration certificates, statistical results or other typed certificate objects.
+
+The compatibility alias for the original dialectical argument field is retained for existing callers.
+
+This is recorded in ADR 010 and the end-to-end benchmark.
+
