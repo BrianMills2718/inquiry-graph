@@ -744,3 +744,52 @@ Therefore:
 \]
 
 This is ADR 011 and is intended as an executable benchmark fragment, not the final proof language.
+
+
+## 20. Measurement and testimony specializations
+
+Two additional executable warrant regimes now cover evidence channels that are neither deductive proof nor generic defeasible argument.
+
+### Measurement-result regime
+
+A measurement certificate contains:
+
+- measured quantity;
+- value;
+- standard uncertainty;
+- unit;
+- calibration reference;
+- optional measurement-model reference.
+
+The regime may warrant only:
+
+\[
+\operatorname{recordMeasurementResult}(q).
+\]
+
+Its guarantee is that the recorded result carries explicit uncertainty and calibration provenance.
+
+This does not license accepting an exact proposition about the measurand.
+
+### Testimony-posterior regime
+
+A testimonial certificate contains:
+
+- claim;
+- explicit prior probability;
+- source identifier;
+- reference class;
+- sensitivity \(P(R^+\mid H)\);
+- false-positive rate \(P(R^+\mid\neg H)\).
+
+The certificate computes the Bayesian posterior for a positive report.
+
+The regime may warrant only:
+
+\[
+\operatorname{recordTestimonialPosterior}(H).
+\]
+
+It does not license accepting \(H\) or treating source reliability as context-free.
+
+These are benchmark regimes, not universal theories of metrology or testimony. See ADR 012.
