@@ -145,24 +145,20 @@ The following separations are stable enough for integration testing:
 
 The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, finite-class statistical generalization bounds under explicit sampling assumptions, and strategy-selection warrants based on positive lower confidence bounds for paired normalized utility.
 
-The next milestone is benchmark expansion rather than ontology expansion:
+The integrated verification gate is now cleared. The next milestone is benchmark-driven validation rather than ontology expansion:
 
-1. run integrated verification;
-2. maintain and expand the benchmark only from concrete failures;
-3. evaluate empirical usefulness and source reconciliation;
-4. add any new formal layer only when a benchmark/use case requires it;
-6. reassess the architecture only from concrete benchmark failures;
-7. return to deeper candidate-generation theory after the downstream warrant pipeline has broader coverage.
+1. maintain and expand the benchmark only from concrete failures;
+2. run adversarial/failure analysis across the existing warrant regimes;
+3. reconcile the full conversation export and test source completeness;
+4. evaluate empirical usefulness for inquiry navigation/auditability;
+5. add any new formal layer only when a benchmark/use case requires it;
+6. return to deeper candidate-generation theory only after downstream benchmark failures identify a real need.
 
-## Verification debt
+## Verification status
 
-The last fully executed local repository suite predates some of the newest defeat/ABA/preference code.
+The current integrated native-Windows suite is green: **138 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. The verification run covers the current defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and strategy-performance code.
 
-Hosted GitHub Actions repeatedly fails before runner steps and has not supplied application-level verification.
-
-Therefore code merged after the last local run should be treated as **implementation present, full-suite execution pending** until an executable environment is available.
-
-This verification debt is operational, not a reason to stop preserving research and code in GitHub.
+Hosted GitHub Actions remains a separate infrastructure problem: repeated hosted runs fail or cancel before runner steps/logs. Do not treat that hosted pre-run failure as an application-level failure.
 
 ## Source-grounding debt
 
