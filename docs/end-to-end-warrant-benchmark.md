@@ -280,7 +280,7 @@ The implementation explicitly prevents that.
 
 | Case | Domain | Current status | Main invariant |
 |---|---|---|---|
-| D1 | deductive proof | interface specified, dedicated executable regime pending | proof licenses derive relative to premises, not premise acceptance |
+| D1 | deductive proof | executable in strict-Horn fragment | checked proof can license derive relative to premises, not premise acceptance |
 | F1 | defeasible unchallenged | executable | accepted certificate can license defeasible support |
 | F2 | defeasible defeated | executable | support may remain while warrant fails |
 | F3 | preference-sensitive defeat | executable | preferences change defeat, not support provenance |
@@ -326,11 +326,10 @@ The next additions should be selected because they exercise genuinely different 
 
 Priority order:
 
-1. deductive proof regime;
-2. measurement/testimony reliability regime;
-3. statistical/PAC regime;
-4. strategy-performance regime;
-5. only then any decision policy that consumes graded support values.
+1. measurement/testimony reliability regime;
+2. statistical/PAC regime;
+3. strategy-performance regime;
+4. only then any decision policy that consumes graded support values.
 
 Each new regime should instantiate the same action-targeted warrant interface rather than add a new top-level ontology.
 
@@ -390,3 +389,44 @@ does not become an acceptance threshold by convention.
 Any regime that consumes this value to license another action must state its own assumptions, decision rule and guarantee.
 
 This is ADR 010.
+
+
+## 11. Executable deductive case
+
+The strict-Horn deductive regime supplies a checked proof fragment.
+
+A certificate states:
+
+\[
+(\Gamma,R,h)
+\]
+
+where \(\Gamma\) is the explicit premise set, \(R\) is a finite set of strict Horn rules, and \(h\) is the conclusion.
+
+The checker computes the least closure:
+
+\[
+\operatorname{Cl}_R(\Gamma).
+\]
+
+The certificate is valid iff:
+
+\[
+h\in\operatorname{Cl}_R(\Gamma).
+\]
+
+The warrant regime may license only:
+
+\[
+\operatorname{derive}(h)
+\]
+
+with guarantee:
+
+\[
+\text{truth preservation relative to the explicit premises}.
+\]
+
+A valid proof does not license accepting \(\Gamma\). If the current context omits a premise, the conditional warrant can remain valid while the current license is absent.
+
+This is ADR 011.

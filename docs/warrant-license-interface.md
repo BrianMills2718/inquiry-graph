@@ -711,3 +711,36 @@ It does **not** license unconditional acceptance or treating the value as \(P(h)
 Any policy that consumes a grade to license a stronger epistemic action requires a separate warrant regime with its own assumptions, decision rule and guarantee.
 
 This is recorded in ADR 010.
+
+
+## 19. Checked deductive specialization
+
+A third executable specialization now covers a finite strict-Horn proof fragment.
+
+A proof certificate includes explicit premises, strict Horn rules and a target conclusion. The checker computes the least Horn closure and verifies the target is derivable.
+
+The regime may warrant only:
+
+\[
+\operatorname{derive}(h)
+\]
+
+with guarantee:
+
+\[
+\text{truth preservation relative to explicit premises}.
+\]
+
+The warrant assumptions must include all proof premises. Current license separately requires those assumptions to be present in the current context.
+
+Therefore:
+
+\[
+\boxed{
+\text{valid proof}
+\not\Rightarrow
+\text{premises accepted}.
+}
+\]
+
+This is ADR 011 and is intended as an executable benchmark fragment, not the final proof language.

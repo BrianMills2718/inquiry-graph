@@ -12,3 +12,4 @@
 | [008](008-preference-regime-binary-vs-aba-plus.md) | Keep binary preference-sensitive defeat Dung-compatible; full ABA+ is a set-to-set escalation path | Accepted for current research architecture |
 | [009](009-grounded-dialectical-warrant-regime.md) | First executable warrant regime uses grounded dialectical acceptability with typed actions/guarantees | Accepted for current research architecture |
 | [010](010-graded-support-reports-not-acceptance.md) | Numeric support warrants grade reporting, not acceptance; action policies require separate warrant regimes | Accepted for current research architecture |
+| [011](011-strict-horn-deductive-warrant.md) | Deductive warrant is checked derivability relative to explicit premises; premises are not thereby accepted | Accepted for current research architecture |

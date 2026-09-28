@@ -24,6 +24,7 @@ from dataclasses import dataclass
 from typing import Iterable
 
 from .defeat import DefeatFramework, GroundedStatus
+from .proof import StrictHornProofCertificate
 from .support import IndependentBernoulliRegime, SupportAntichain
 
 
@@ -105,6 +106,11 @@ class GroundedWarrantAssessment(WarrantAssessment):
 @dataclass(frozen=True)
 class SupportProbabilityAssessment(WarrantAssessment):
     value: float
+
+
+@dataclass(frozen=True)
+class DeductiveProofAssessment(WarrantAssessment):
+    proof_valid: bool
 
 
 @dataclass(frozen=True)
@@ -308,3 +314,112 @@ class IndependentBernoulliSupportWarrantRegime:
             self.assess(judgment, certificate),
             context_assumptions,
         )
+
+class StrictHornDeductiveWarrantRegime:
+    """Checked deductive warrant for the finite strict-Horn fragment.
+
+    A valid certificate warrants only deriving its stated conclusion relative to
+    its explicit premises. It does not warrant accepting those premises.
+    """
+
+    id = "strict-horn-deductive"
+    action_kind = "derive"
+    guarantee_kind = "truth-preservation-relative-to-premises"
+
+    def assess(
+        self,
+        judgment: WarrantJudgment,
+        certificate: StrictHornProofCertificate,
+    ) -> DeductiveProofAssessment:
+        if judgment.regime != self.id:
+            raise ValueError(
+                f"judgment regime {judgment.regime!r} does not match {self.id!r}"
+            )
+        if judgment.certificate_id != certificate.id:
+            raise ValueError(
+                "warrant certificate id does not match supplied certificate"
+            )
+
+        if not certificate.premises <= judgment.assumptions:
+            missing = certificate.premises - judgment.assumptions
+            return DeductiveProofAssessment(
+                judgment=judgment,
+                warranted=False,
+                proof_valid=certificate.valid,
+                reason=(
+                    "warrant assumptions omit proof premises: "
+                    f"{sorted(missing)}"
+                ),
+            )
+
+        if judgment.action.kind != self.action_kind:
+            return DeductiveProofAssessment(
+                judgment=judgment,
+                warranted=False,
+                proof_valid=certificate.valid,
+                reason=(
+                    f"action kind {judgment.action.kind!r} is outside the "
+                    "strict-Horn deductive regime"
+                ),
+            )
+
+        if judgment.action.target != certificate.conclusion:
+            return DeductiveProofAssessment(
+                judgment=judgment,
+                warranted=False,
+                proof_valid=certificate.valid,
+                reason="action target does not match proof conclusion",
+            )
+
+        if judgment.guarantee.kind != self.guarantee_kind:
+            return DeductiveProofAssessment(
+                judgment=judgment,
+                warranted=False,
+                proof_valid=certificate.valid,
+                reason=(
+                    f"guarantee kind {judgment.guarantee.kind!r} is outside the "
+                    "strict-Horn deductive regime"
+                ),
+            )
+
+        if not certificate.valid:
+            return DeductiveProofAssessment(
+                judgment=judgment,
+                warranted=False,
+                proof_valid=False,
+                reason="certificate conclusion is not derivable from its premises",
+            )
+
+        return DeductiveProofAssessment(
+            judgment=judgment,
+            warranted=True,
+            proof_valid=True,
+            reason=(
+                "strict-Horn checker derives the target conclusion from the "
+                "explicit proof premises"
+            ),
+        )
+
+    def derive_license(
+        self,
+        assessment: DeductiveProofAssessment,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        if assessment.judgment.regime != self.id:
+            raise ValueError(
+                f"assessment regime {assessment.judgment.regime!r} "
+                f"does not match {self.id!r}"
+            )
+        return derive_license(assessment, context_assumptions)
+
+    def evaluate(
+        self,
+        judgment: WarrantJudgment,
+        certificate: StrictHornProofCertificate,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        return self.derive_license(
+            self.assess(judgment, certificate),
+            context_assumptions,
+        )
+

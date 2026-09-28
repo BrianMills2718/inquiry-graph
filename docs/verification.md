@@ -30,7 +30,7 @@ The repository CI is configured to install the package with development and opti
 
 ## Explicitly not verified
 
-The newest defeat/ABA/preference, warrant/license integration, and graded-support warrant code has not yet been exercised by a full repository pytest/artifact/graph-validation run. Unit and end-to-end test files are committed as executable specifications, but no new passing full-suite count is claimed. No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
+The newest defeat/ABA/preference, warrant/license integration, graded-support warrant, and strict-Horn deductive warrant code has not yet been exercised by a full repository pytest/artifact/graph-validation run. Unit and end-to-end test files are committed as executable specifications, but no new passing full-suite count is claimed. No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
 
 ## Recovery
 
