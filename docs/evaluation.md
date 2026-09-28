@@ -36,7 +36,7 @@ Privacy constraints should be evaluated alongside utility. A false belief attrib
 
 ## Stage C: warrant annotation and discrimination
 
-Before treating warrant as an executable or learnable layer, test whether annotators can reliably distinguish **support**, **warrant**, **license**, and **executed update** in grounded examples. Require explicit identification of the epistemic action being licensed, applicability assumptions, warrant regime, certificate/support object, and typed guarantee. Include deductive, defeasible, statistical, measurement/testimony, transition, and strategy-selection cases.
+The first defeasible warrant/license vertical slice is now executable; human annotation/evaluation remains necessary. Test whether annotators can reliably distinguish **support**, **warrant**, **license**, and **executed update** in grounded examples. Require explicit identification of the epistemic action being licensed, applicability assumptions, warrant regime, certificate/support object, and typed guarantee. Include deductive, defeasible, statistical, measurement/testimony, transition, and strategy-selection cases.
 
 Evaluate common confusions separately: support mistaken for sufficient warrant; formal validity mistaken for content acceptance; license mistaken for actual update; assumptions hidden inside an unqualified guarantee; heterogeneous guarantees collapsed into one confidence score; and defeaters ignored. Agreement on the action target and guarantee type is more important than agreement on philosophical terminology.
 
@@ -61,3 +61,6 @@ Outcomes may include answer correctness, calibration, error discovery, robustnes
 ## Release evidence
 
 Exact test counts and commands belong in `docs/verification.md` and the linked CI run. The optional provider adapter is protocol-tested with a fake client; the API boundary has not been tested with a paid live request. No human-reviewed belief map or learned policy is claimed.
+
+
+The integration benchmark in `docs/end-to-end-warrant-benchmark.md` should be used as the executable regression set for Stage C. New warrant regimes should add cases there before being treated as part of the stable research architecture.
