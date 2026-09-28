@@ -143,14 +143,17 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The next milestone is composition, not ontology expansion:
+The project now has its first executable vertical slice from support through preference-sensitive defeat and grounded acceptability to typed defeasible warrant/license.
 
-1. finish the preference-sensitive binary defeat implementation;
-2. connect dialectical acceptability explicitly to warrant/license;
-3. define what graded support values license under typed regimes rather than global thresholds;
-4. build a small end-to-end benchmark across deductive, defeasible, statistical, testimonial/measurement and conflicting-evidence cases;
-5. reassess the architecture from benchmark failures;
-6. only then return to deeper candidate-generation theory.
+The next milestone is benchmark expansion rather than ontology expansion:
+
+1. add a dedicated deductive proof regime;
+2. define a typed graded-support update regime without global confidence thresholds;
+3. add measurement/testimony reliability cases;
+4. add statistical/PAC cases;
+5. add strategy-performance cases;
+6. reassess the architecture only from concrete benchmark failures;
+7. return to deeper candidate-generation theory after the downstream warrant pipeline has broader coverage.
 
 ## Verification debt
 
@@ -172,6 +175,7 @@ Eventually import the full conversation export and reconcile curated excerpts to
 
 - [Formalism](formalism.md)
 - [Warrant/license](warrant-license-interface.md)
+- [End-to-end warrant benchmark](end-to-end-warrant-benchmark.md)
 - [Candidate generation](candidate-generation-interface.md)
 - [Positive support](support-antichain-probability.md)
 - [Defeat integration](defeat-argumentation-integration.md)
