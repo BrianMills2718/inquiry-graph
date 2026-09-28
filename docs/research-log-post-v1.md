@@ -1032,3 +1032,108 @@ The project-management consequence is that the next milestone should now be **wa
 
 The durable "forest" view is now maintained in [project-status.md](project-status.md), while the two richer escalation paths are tracked by GitHub issues #17 and #18.
 
+## 37. Warrant/license became executable for one typed defeasible regime
+
+The next integration pass connected dialectical acceptability to the earlier action-targeted warrant judgment.
+
+A naive rule of the form:
+
+\[
+\text{grounded-IN argument}
+\Rightarrow
+\text{any epistemic action is licensed}
+\]
+
+was rejected.
+
+That would collapse argument acceptability into universal epistemic permission.
+
+The first executable regime is therefore deliberately typed:
+
+\[
+\mathfrak W_{\mathrm{grounded\text{-}dialectical}}.
+\]
+
+It requires:
+
+1. a certificate argument that is grounded-IN;
+2. an action kind belonging to the regime's defeasible action vocabulary;
+3. guarantee kind = defeasible acceptability.
+
+Current actions include retaining a candidate, raising support, or using a claim defeasibly.
+
+Unconditional acceptance and deductive truth claims remain outside this regime.
+
+The executable license step separately checks current applicability assumptions. The first implementation uses exact set inclusion:
+
+\[
+A\subseteq C
+\]
+
+as a deliberately weak approximation to:
+
+\[
+C\models A.
+\]
+
+Thus the code now preserves:
+
+\[
+\boxed{
+\text{acceptability}
+\neq
+\text{conditional warrant}
+\neq
+\text{current license}
+\neq
+\text{execution}.
+}
+\]
+
+No epistemic state update is performed automatically.
+
+## 38. The first vertical slice now composes end to end
+
+A regression benchmark now exercises:
+
+\[
+\text{minimal support}
+\to
+\text{ABA argument}
+\to
+\text{attack}
+\to
+\text{preference-filtered defeat}
+\to
+\text{grounded acceptability}
+\to
+\text{typed warrant}
+\to
+\text{license}.
+\]
+
+Cases cover:
+
+- unchallenged defeasible support;
+- successful defeating support;
+- preference-blocked weak counterargument;
+- unmet warrant applicability assumptions;
+- two alternative support routes where only one is defeated;
+- preference changes that alter license while leaving positive support unchanged.
+
+This is the first point at which the project has a complete executable research-layer vertical slice.
+
+The benchmark also makes the remaining gaps concrete rather than ontological: deductive, graded, measurement/testimony, statistical/PAC and strategy-performance warrant regimes still need executable instances.
+
+The project-management rule is now:
+
+\[
+\boxed{
+\text{expand benchmark coverage}
+>
+\text{expand ontology}.
+}
+\]
+
+See [end-to-end-warrant-benchmark.md](end-to-end-warrant-benchmark.md) and ADR 009.
+
