@@ -502,7 +502,7 @@ The unacceptable version would introduce anonymous assumptions with no typed pro
 
 ## 13. Implementation consequence
 
-The next executable structured layer should therefore be a deliberately small ABA core:
+The deliberately small ABA core is now implemented as `src/inquiry_graph/aba.py`:
 
 \[
 \mathcal B=(L,R,A,\overline{\cdot})
@@ -528,7 +528,9 @@ Attack objects should retain their reconstructed structured origin:
 - undercut;
 - rebut.
 
-The existing defeat framework remains downstream.
+The existing defeat framework remains downstream. `ABAFramework.to_defeat_framework()` projects basic-ABA attacks to the Dung layer because basic ABA has no preference-sensitive attack-to-defeat filter.
+
+The implementation computes a least Horn closure annotated with the existing minimal-support antichains. It then quotients ABA deductions by **conclusion + minimal assumption environment**. This intentionally discards proof multiplicity, matching the project's current support-provenance semantics. If future argument comparison needs distinct proof trees with the same conclusion/support set, this quotient must be refined.
 
 ## 14. Revisit conditions
 
