@@ -154,3 +154,7 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 
 **ABA and ASPIC+ are candidate structured-attack bridges, not interchangeable names.** ABA aligns naturally with assumptions/contraries; ASPIC+ provides richer explicit attack locations, strict/defeasible rules and preference handling. The project has not yet selected one as the universal structured-argument layer.
 
+## Argument-identity boundary caution
+
+**ABA argument identity is a semantic quotient, not proof identity.** The executable ABA/ABA+ layer may collapse deductions with the same conclusion and supporting assumptions because basic ABA attack and ABA+ assumption preferences cannot distinguish them. Do not infer that the underlying derivations are literally the same formal object. If later attack, preference, warrant or explanation semantics distinguish such deductions, first-class derivation/subargument structure must be introduced before using those semantics.
+
