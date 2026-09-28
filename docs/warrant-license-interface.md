@@ -827,3 +827,32 @@ conditional on the theorem's sampling/loss assumptions.
 The regime may warrant only recording this generalization bound. It does not establish that the sample is actually i.i.d., that deployment matches the sampling distribution, or that the predictor should be used. Those remain separate applicability/decision questions.
 
 See ADR 013.
+
+
+## 22. Strategy-performance specialization
+
+The metareasoning layer now has an executable strategy-selection warrant.
+
+For a candidate strategy \(\pi\), baseline \(\pi_0\), and paired normalized task utilities in \([0,1]\), define:
+
+\[
+D_i=u_i(\pi)-u_i(\pi_0)\in[-1,1].
+\]
+
+For \(n\) i.i.d. benchmark tasks and confidence parameter \(\delta\), the certificate computes the lower confidence bound:
+
+\[
+\bar D-\sqrt{\frac{2\log(1/\delta)}{n}}.
+\]
+
+The warrant regime may license:
+
+\[
+\operatorname{selectStrategy}(\pi)
+\]
+
+only when this lower bound is strictly positive.
+
+The guarantee remains relative to the declared task class and normalized utility definition. Benchmark-task sampling, task-distribution stability, and utility adequacy remain explicit applicability assumptions.
+
+This is ADR 014.
