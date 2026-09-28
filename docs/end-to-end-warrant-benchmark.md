@@ -288,7 +288,7 @@ The implementation explicitly prevents that.
 | C1 | applicability assumptions | executable | warrant and current license differ |
 | A1 | alternative support routes | executable | one defeated route need not erase another |
 | G1 | graded/probabilistic support | executable for grade recording | computed support probability can license recording the grade, not accepting the proposition |
-| S1 | statistical/PAC guarantee | formal interface only | typed statistical guarantee must remain scoped |
+| S1 | statistical/PAC guarantee | executable finite-class bound | theorem-level population-loss bound remains conditional on i.i.d./bounded-loss setup |
 | M1 | measurement/testimony | executable narrow regimes | measurement records uncertainty/calibration; testimony records model-relative posterior without acceptance |
 | T1 | transition/action guarantee | formal interface only | pre/post guarantee distinct from proposition support |
 | R1 | strategy selection | formal interface only | strategy performance warrant needs task/resource scope |
@@ -326,9 +326,8 @@ The next additions should be selected because they exercise genuinely different 
 
 Priority order:
 
-1. statistical/PAC regime;
-2. strategy-performance regime;
-3. only then any decision policy that consumes graded support values.
+1. strategy-performance regime;
+2. only then any decision policy that consumes graded support values.
 
 Each new regime should instantiate the same action-targeted warrant interface rather than add a new top-level ontology.
 

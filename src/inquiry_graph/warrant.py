@@ -26,6 +26,7 @@ from typing import Iterable
 from .defeat import DefeatFramework, GroundedStatus
 from .proof import StrictHornProofCertificate
 from .reliability import MeasurementCertificate, TestimonyCertificate
+from .statistical import FiniteClassUniformConvergenceCertificate
 from .support import IndependentBernoulliRegime, SupportAntichain
 
 
@@ -126,6 +127,14 @@ class TestimonyAssessment(WarrantAssessment):
     posterior_probability: float
     source_id: str
     reference_class: str
+
+
+@dataclass(frozen=True)
+class StatisticalBoundAssessment(WarrantAssessment):
+    empirical_loss: float
+    epsilon: float
+    upper_loss_bound: float
+    confidence: float
 
 
 @dataclass(frozen=True)
@@ -595,6 +604,90 @@ class TestimonyPosteriorWarrantRegime:
         self,
         judgment: WarrantJudgment,
         certificate: TestimonyCertificate,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        return self.derive_license(
+            self.assess(judgment, certificate),
+            context_assumptions,
+        )
+
+class FiniteClassUniformConvergenceWarrantRegime:
+    """Warrant recording a finite-class generalization bound.
+
+    This uses the standard Hoeffding + union-bound uniform convergence theorem
+    for a finite hypothesis class and loss in [0, 1].
+
+    The regime does not establish that the real-world sampling assumptions hold;
+    those must appear explicitly in the warrant assumptions/current context.
+    It also does not license proposition acceptance.
+    """
+
+    id = "finite-class-uniform-convergence"
+    action_kind = "record_generalization_bound"
+    guarantee_kind = "finite-class-uniform-convergence"
+
+    def assess(
+        self,
+        judgment: WarrantJudgment,
+        certificate: FiniteClassUniformConvergenceCertificate,
+    ) -> StatisticalBoundAssessment:
+        if judgment.regime != self.id:
+            raise ValueError(
+                f"judgment regime {judgment.regime!r} does not match {self.id!r}"
+            )
+        if judgment.certificate_id != certificate.id:
+            raise ValueError(
+                "warrant certificate id does not match supplied certificate"
+            )
+
+        if judgment.action.kind != self.action_kind:
+            warranted = False
+            reason = (
+                f"action kind {judgment.action.kind!r} is outside the "
+                "finite-class uniform-convergence regime"
+            )
+        elif judgment.action.target != certificate.hypothesis_id:
+            warranted = False
+            reason = "action target does not match bounded hypothesis"
+        elif judgment.guarantee.kind != self.guarantee_kind:
+            warranted = False
+            reason = (
+                f"guarantee kind {judgment.guarantee.kind!r} is outside the "
+                "finite-class uniform-convergence regime"
+            )
+        else:
+            warranted = True
+            reason = (
+                "bound follows from the finite-class Hoeffding/union-bound "
+                "calculation, conditional on the explicit sampling/loss assumptions"
+            )
+
+        return StatisticalBoundAssessment(
+            judgment=judgment,
+            warranted=warranted,
+            empirical_loss=certificate.empirical_loss,
+            epsilon=certificate.epsilon,
+            upper_loss_bound=certificate.upper_loss_bound,
+            confidence=certificate.confidence,
+            reason=reason,
+        )
+
+    def derive_license(
+        self,
+        assessment: StatisticalBoundAssessment,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        if assessment.judgment.regime != self.id:
+            raise ValueError(
+                f"assessment regime {assessment.judgment.regime!r} "
+                f"does not match {self.id!r}"
+            )
+        return derive_license(assessment, context_assumptions)
+
+    def evaluate(
+        self,
+        judgment: WarrantJudgment,
+        certificate: FiniteClassUniformConvergenceCertificate,
         context_assumptions: Iterable[str] = (),
     ) -> LicenseDecision:
         return self.derive_license(
