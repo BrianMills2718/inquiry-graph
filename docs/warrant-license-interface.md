@@ -1,6 +1,6 @@
 # Warrant, support, license, and epistemic action
 
-> **Status:** research draft revisiting the earlier warrant certificate after the representation, candidate-generation, strategy, and reflection layers were made more precise. A subsequent pass refines epistemic actions and graded support in [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md). It does not claim a universal philosophical analysis of warrant. It defines the project's operational use of the term.
+> **Status:** research interface with one executable regime. The general action-targeted warrant judgment remains representation-relative; the first executable specialization is the skeptical grounded-dialectical regime documented in [end-to-end-warrant-benchmark.md](end-to-end-warrant-benchmark.md) and ADR 009. A separate pass refines epistemic actions and graded support in [epistemic-actions-support-algebra.md](epistemic-actions-support-algebra.md). It does not claim a universal philosophical analysis of warrant.
 
 ## 1. Why revisit warrant
 
@@ -641,3 +641,48 @@ This makes the relationship between the old warrant work and the newer meta-mode
 6. how source/reliability warrants compose through testimony and measurement;
 7. how strategy-performance warrants transfer across task distributions;
 8. which parts of the warrant judgment should be encoded directly in the inquiry graph versus a separate formal layer.
+
+
+## 17. First executable specialization
+
+The first implemented warrant regime is deliberately narrow:
+
+\[
+\mathfrak W_{\mathrm{grounded\text{-}dialectical}}.
+\]
+
+It requires:
+
+- certificate argument grounded-IN under the current binary defeat graph;
+- action kind in the regime's defeasible action vocabulary;
+- guarantee kind = defeasible acceptability.
+
+Current action kinds are:
+
+\[
+\operatorname{retainCandidate},
+\quad
+\operatorname{raiseSupport},
+\quad
+\operatorname{useDefeasibly}.
+\]
+
+This regime does **not** license unconditional acceptance or deductive truth claims.
+
+The executable license step additionally requires:
+
+\[
+A\subseteq C,
+\]
+
+where \(A\) is the warrant's explicit applicability-assumption set and \(C\) is the current context-assumption set.
+
+This set-inclusion rule is only the first executable approximation to general:
+
+\[
+C\models A.
+\]
+
+No update is automatically executed.
+
+See [end-to-end-warrant-benchmark.md](end-to-end-warrant-benchmark.md) for the vertical-slice cases.
