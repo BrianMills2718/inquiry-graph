@@ -1176,3 +1176,57 @@ The compatibility alias for the original dialectical argument field is retained 
 
 This is recorded in ADR 010 and the end-to-end benchmark.
 
+## 40. Deductive warrant was instantiated as an actually checked fragment
+
+The next benchmark cell was deduction.
+
+Rather than introducing a boolean field saying a proof had been checked, the project added a small executable strict-Horn checker.
+
+A proof certificate contains:
+
+\[
+(\Gamma,R,h),
+\]
+
+where \(\Gamma\) is the explicit premise set, \(R\) is a finite strict-Horn rule set and \(h\) is the claimed conclusion.
+
+The checker computes:
+
+\[
+\operatorname{Cl}_R(\Gamma)
+\]
+
+and accepts the certificate exactly when:
+
+\[
+h\in\operatorname{Cl}_R(\Gamma).
+\]
+
+The associated warrant regime licenses only:
+
+\[
+\operatorname{derive}(h)
+\]
+
+with guarantee:
+
+\[
+\text{truth preservation relative to the explicit premises}.
+\]
+
+The warrant assumptions must include the proof premises, while the license step separately checks whether those assumptions are currently active.
+
+This yields the intended distinction:
+
+\[
+\boxed{
+\text{valid derivation}
+\neq
+\text{premises accepted}.
+}
+\]
+
+The strict-Horn language is a benchmark implementation, not a commitment to Horn logic as the final formal representation. Richer proof checkers can later plug into the same action-targeted warrant interface.
+
+This is recorded in ADR 011.
+
