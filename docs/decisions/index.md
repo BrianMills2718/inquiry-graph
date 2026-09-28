@@ -8,3 +8,4 @@
 | [004](004-grounding-and-review.md) | Exact source grounding with proposed interpretations and human review | Accepted for V1 |
 | [005](005-identity-and-history.md) | Explicit identity union and Git history, no automatic semantic merge | Accepted for V1 |
 | [006](006-extraction-adapter.md) | Thin structured-output adapter and offline response-file boundary | Accepted for V1 |
+| [007](007-aba-argument-identity-quotient.md) | Keep ABA argument identity as conclusion + support quotient; escalate to proof structure only when semantics require it | Accepted for current research architecture |

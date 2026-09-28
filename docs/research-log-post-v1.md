@@ -918,3 +918,36 @@ A helper compiles a defeasible rule into a strict rule guarded by a typed applic
 
 The Windows repository agent remained offline during this pass, so the new ABA scenarios were replicated and executed independently rather than claimed as a full repository test run.
 
+## 34. The argument-identity boundary was stress-tested before preferences
+
+The next pass revisited an implementation shortcut in the ABA core: distinct deductions with the same conclusion and same supporting assumption environment were being collapsed into one executable argument.
+
+A first instinct was to reify full derivation DAGs before proceeding. A literature check changed that conclusion.
+
+ABA attack semantics is deliberately assumption-centred: an attacking deduction matters through the conclusion it derives, while a target matters through the assumptions it uses. ABA+ adds preferences over assumptions, not ASPIC+-style last-link preferences over derivation trees.
+
+Therefore, for the currently selected ABA/ABA+ semantics, two deductions with identical conclusion and assumption support are dialectically equivalent.
+
+The project now treats:
+
+[
+(	ext{conclusion},	ext{assumption support})
+]
+
+as an explicit **ABA dialectical quotient**, rather than pretending it is the identity of the underlying proof object.
+
+This preserves the layered distinction:
+
+[
+oxed{
+	ext{formal derivation identity}
+
+eq
+	ext{ABA dialectical argument identity}.
+}
+]
+
+The richer derivation structure becomes mandatory only if later semantics make the collapsed deductions observably different—for example ASPIC+ subargument attack, unguarded inference-step attack, last-link preferences, proof-sensitive warrant, or exact explanation requirements.
+
+This decision is recorded both in [argument-identity-boundary.md](argument-identity-boundary.md) and ADR 007.
+
