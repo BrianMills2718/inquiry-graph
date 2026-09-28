@@ -143,13 +143,12 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, and testimony-posterior recording under an explicit reference-class-relative source model.
+The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, and finite-class statistical generalization bounds under explicit sampling assumptions.
 
 The next milestone is benchmark expansion rather than ontology expansion:
 
-1. add statistical/PAC cases;
-2. add strategy-performance cases;
-3. add any decision policy over graded support only as a separate warrant regime;
+1. add strategy-performance cases;
+2. add any decision policy over graded support only as a separate warrant regime;
 6. reassess the architecture only from concrete benchmark failures;
 7. return to deeper candidate-generation theory after the downstream warrant pipeline has broader coverage.
 
