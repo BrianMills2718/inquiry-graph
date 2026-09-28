@@ -27,6 +27,7 @@ from .defeat import DefeatFramework, GroundedStatus
 from .proof import StrictHornProofCertificate
 from .reliability import MeasurementCertificate, TestimonyCertificate
 from .statistical import FiniteClassUniformConvergenceCertificate
+from .strategy import StrategyPerformanceCertificate
 from .support import IndependentBernoulliRegime, SupportAntichain
 
 
@@ -135,6 +136,15 @@ class StatisticalBoundAssessment(WarrantAssessment):
     epsilon: float
     upper_loss_bound: float
     confidence: float
+
+
+@dataclass(frozen=True)
+class StrategyPerformanceAssessment(WarrantAssessment):
+    mean_advantage: float
+    lower_advantage_bound: float
+    confidence: float
+    task_class: str
+    baseline_id: str
 
 
 @dataclass(frozen=True)
@@ -688,6 +698,100 @@ class FiniteClassUniformConvergenceWarrantRegime:
         self,
         judgment: WarrantJudgment,
         certificate: FiniteClassUniformConvergenceCertificate,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        return self.derive_license(
+            self.assess(judgment, certificate),
+            context_assumptions,
+        )
+
+class StrategyPerformanceWarrantRegime:
+    """Warrant selecting a strategy only when benchmark advantage is positive.
+
+    The certificate uses paired normalized utilities in [0, 1] and a Hoeffding
+    lower confidence bound on expected candidate-minus-baseline advantage.
+
+    The regime warrants select_strategy only when the lower confidence bound is
+    strictly positive. It remains conditional on explicit assumptions such as
+    i.i.d. benchmark tasks, stable task distribution, and adequacy of the
+    declared utility definition.
+    """
+
+    id = "strategy-performance"
+    action_kind = "select_strategy"
+    guarantee_kind = "positive-expected-utility-advantage"
+
+    def assess(
+        self,
+        judgment: WarrantJudgment,
+        certificate: StrategyPerformanceCertificate,
+    ) -> StrategyPerformanceAssessment:
+        if judgment.regime != self.id:
+            raise ValueError(
+                f"judgment regime {judgment.regime!r} does not match {self.id!r}"
+            )
+        if judgment.certificate_id != certificate.id:
+            raise ValueError(
+                "warrant certificate id does not match supplied certificate"
+            )
+
+        lower = certificate.lower_advantage_bound
+
+        if judgment.action.kind != self.action_kind:
+            warranted = False
+            reason = (
+                f"action kind {judgment.action.kind!r} is outside the "
+                "strategy-performance regime"
+            )
+        elif judgment.action.target != certificate.strategy_id:
+            warranted = False
+            reason = "action target does not match candidate strategy"
+        elif judgment.guarantee.kind != self.guarantee_kind:
+            warranted = False
+            reason = (
+                f"guarantee kind {judgment.guarantee.kind!r} is outside the "
+                "strategy-performance regime"
+            )
+        elif lower <= 0.0:
+            warranted = False
+            reason = (
+                "paired benchmark does not establish a strictly positive "
+                "expected utility advantage over the baseline"
+            )
+        else:
+            warranted = True
+            reason = (
+                "paired bounded-utility benchmark establishes a strictly "
+                "positive lower confidence bound over the declared task class"
+            )
+
+        return StrategyPerformanceAssessment(
+            judgment=judgment,
+            warranted=warranted,
+            mean_advantage=certificate.mean_advantage,
+            lower_advantage_bound=lower,
+            confidence=certificate.confidence,
+            task_class=certificate.task_class,
+            baseline_id=certificate.baseline_id,
+            reason=reason,
+        )
+
+    def derive_license(
+        self,
+        assessment: StrategyPerformanceAssessment,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        if assessment.judgment.regime != self.id:
+            raise ValueError(
+                f"assessment regime {assessment.judgment.regime!r} "
+                f"does not match {self.id!r}"
+            )
+        return derive_license(assessment, context_assumptions)
+
+    def evaluate(
+        self,
+        judgment: WarrantJudgment,
+        certificate: StrategyPerformanceCertificate,
         context_assumptions: Iterable[str] = (),
     ) -> LicenseDecision:
         return self.derive_license(
