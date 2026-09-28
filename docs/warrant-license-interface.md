@@ -686,3 +686,28 @@ C\models A.
 No update is automatically executed.
 
 See [end-to-end-warrant-benchmark.md](end-to-end-warrant-benchmark.md) for the vertical-slice cases.
+
+
+## 18. Graded support does not imply acceptance
+
+A second executable specialization now covers the independent-Bernoulli support interpretation.
+
+Its certificate contains:
+
+- one symbolic support antichain;
+- one explicit independent-Bernoulli model;
+- one certificate identifier.
+
+The regime computes the support-event probability and may warrant only the epistemic action:
+
+\[
+\operatorname{recordSupportGrade}.
+\]
+
+Its typed guarantee is that the recorded value is the support-event probability under the explicit model.
+
+It does **not** license unconditional acceptance or treating the value as \(P(h)\).
+
+Any policy that consumes a grade to license a stronger epistemic action requires a separate warrant regime with its own assumptions, decision rule and guarantee.
+
+This is recorded in ADR 010.
