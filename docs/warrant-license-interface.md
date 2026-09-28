@@ -793,3 +793,37 @@ The regime may warrant only:
 It does not license accepting \(H\) or treating source reliability as context-free.
 
 These are benchmark regimes, not universal theories of metrology or testimony. See ADR 012.
+
+
+## 21. Finite-class statistical specialization
+
+A statistical warrant specialization now implements the standard finite-class uniform-convergence bound for loss in \([0,1]\).
+
+For finite \(\mathcal H\), sample size \(m\), empirical loss \(L_S(h)\), and confidence parameter \(\delta\), the certificate computes:
+
+\[
+\epsilon=
+\sqrt{
+\frac{\log(2|\mathcal H|/\delta)}{2m}
+}
+\]
+
+and the upper bound:
+
+\[
+L_D(h)
+\le
+\min(1,L_S(h)+\epsilon)
+\]
+
+with confidence at least:
+
+\[
+1-\delta,
+\]
+
+conditional on the theorem's sampling/loss assumptions.
+
+The regime may warrant only recording this generalization bound. It does not establish that the sample is actually i.i.d., that deployment matches the sampling distribution, or that the predictor should be used. Those remain separate applicability/decision questions.
+
+See ADR 013.
