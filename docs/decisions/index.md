@@ -15,3 +15,4 @@
 | [011](011-strict-horn-deductive-warrant.md) | Deductive warrant is checked derivability relative to explicit premises; premises are not thereby accepted | Accepted for current research architecture |
 | [012](012-measurement-testimony-warrant.md) | Measurement/testimony warrant model-relative result/posterior recording, not proposition acceptance | Accepted for current research architecture |
 | [013](013-finite-class-statistical-warrant.md) | Statistical warrant records finite-class uniform-convergence bounds under explicit sampling assumptions | Accepted for current research architecture |
+| [014](014-strategy-performance-warrant.md) | Strategy selection requires a positive lower confidence bound on paired utility advantage | Accepted for current research architecture |
