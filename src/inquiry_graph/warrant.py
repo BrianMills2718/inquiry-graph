@@ -94,9 +94,23 @@ class LicenseDecision:
 
 
 class GroundedDialecticalWarrantRegime:
-    """Skeptical defeasible regime using grounded IN status as adequacy."""
+    """Skeptical defeasible regime using grounded IN status as adequacy.
+
+    This regime is intentionally narrow. Grounded acceptability is sufficient
+    only for defeasible actions whose guarantee is itself dialectical
+    acceptability. It does not license unconditional acceptance, deductive truth
+    claims, or arbitrary actions merely because some argument is grounded-in.
+    """
 
     id = "grounded-dialectical"
+    allowed_action_kinds = frozenset(
+        {
+            "retain_candidate",
+            "raise_support",
+            "use_defeasibly",
+        }
+    )
+    guarantee_kind = "defeasible-acceptability"
 
     def assess(
         self,
@@ -113,13 +127,27 @@ class GroundedDialecticalWarrantRegime:
             )
 
         status = framework.grounded_statuses()[judgment.certificate_argument]
-        warranted = status is GroundedStatus.IN
 
-        if status is GroundedStatus.IN:
-            reason = "certificate argument is grounded-in"
+        if judgment.action.kind not in self.allowed_action_kinds:
+            warranted = False
+            reason = (
+                f"action kind {judgment.action.kind!r} is outside the "
+                "grounded-dialectical regime"
+            )
+        elif judgment.guarantee.kind != self.guarantee_kind:
+            warranted = False
+            reason = (
+                f"guarantee kind {judgment.guarantee.kind!r} is outside the "
+                "grounded-dialectical regime"
+            )
+        elif status is GroundedStatus.IN:
+            warranted = True
+            reason = "typed certificate argument is grounded-in"
         elif status is GroundedStatus.OUT:
+            warranted = False
             reason = "certificate argument is defeated under grounded semantics"
         else:
+            warranted = False
             reason = "certificate argument is undecided under grounded semantics"
 
         return WarrantAssessment(
