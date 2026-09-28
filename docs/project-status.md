@@ -143,12 +143,14 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, and finite-class statistical generalization bounds under explicit sampling assumptions.
+The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, finite-class statistical generalization bounds under explicit sampling assumptions, and strategy-selection warrants based on positive lower confidence bounds for paired normalized utility.
 
 The next milestone is benchmark expansion rather than ontology expansion:
 
-1. add strategy-performance cases;
-2. add any decision policy over graded support only as a separate warrant regime;
+1. run integrated verification;
+2. maintain and expand the benchmark only from concrete failures;
+3. evaluate empirical usefulness and source reconciliation;
+4. add any new formal layer only when a benchmark/use case requires it;
 6. reassess the architecture only from concrete benchmark failures;
 7. return to deeper candidate-generation theory after the downstream warrant pipeline has broader coverage.
 
@@ -180,4 +182,5 @@ Eventually import the full conversation export and reconcile curated excerpts to
 - [Argument identity boundary](argument-identity-boundary.md)
 - [Preference regimes](preference-regimes.md)
 - [Architectural decisions](decisions/index.md)
+- [Architecture reassessment](architecture-reassessment.md)
 - [Research log](research-log-post-v1.md)
