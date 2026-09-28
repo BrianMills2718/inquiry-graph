@@ -861,3 +861,34 @@ The integration is documented in [defeat-argumentation-integration.md](defeat-ar
 
 As with the previous literature-driven passes, this research note is not retroactively inserted into the stored source-grounded dialogue graph; the current live turn can be grounded later during transcript reconciliation.
 
+## 32. ABA versus ASPIC+ was tested as a requirements benchmark
+
+Rather than selecting a framework by general reputation, the next pass encoded six discriminating cases in both families:
+
+1. assumption contrary;
+2. conclusion rebuttal;
+3. rule undercutting;
+4. premise attack;
+5. preference-sensitive conflict;
+6. strict versus defeasible inference.
+
+The comparison showed that ABA is native for the assumption-centred cases and can systematically encode the richer defeasible cases by reifying rule applicability or defeasible availability as typed assumptions. ASPIC+ represents rebuttal, undercutting, undermining, strict/defeasible rules and preferences more directly.
+
+The key literature comparison agrees with this result: ASPIC+ can represent ABA, while the ABA approach deliberately translates defeasible rules, preferences, rebutting and undercutting behavior into rules plus assumptions so attack reduces to premise attack.
+
+The architectural consequence is not an exclusive framework choice:
+
+[
+\boxed{
+\text{ABA execution substrate}
++
+\text{ASPIC+-compatible semantic metadata}
++
+\text{Dung acceptability}
+}
+]
+
+The important constraint is reversibility. Generated ABA assumptions for defeasible rules must retain typed provenance back to their source rule and semantic role. Otherwise a rule undercut becomes indistinguishable from an ordinary premise attack.
+
+The full benchmark and revisit conditions are documented in [aba-aspic-benchmark.md](aba-aspic-benchmark.md).
+

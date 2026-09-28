@@ -326,4 +326,4 @@ Given the current ATMS-like assumption model, ABA is probably the smallest natur
 
 Given the need to distinguish rebuttal, undercutting, premise attacks, strict/defeasible rules, and preferences, ASPIC+ is the richer bridge.
 
-The project should test both against concrete warrant examples before committing to one executable structured-argument formalism.
+The six-case benchmark in [aba-aspic-benchmark.md](aba-aspic-benchmark.md) now supports an ABA-first executable bridge, provided that generated applicability assumptions and attacks retain ASPIC+-compatible semantic provenance. Escalate to ABA+ or fuller ASPIC+ machinery when preference/rule-structure requirements cross the explicit revisit conditions.
