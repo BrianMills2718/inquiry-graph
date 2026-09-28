@@ -951,3 +951,84 @@ The richer derivation structure becomes mandatory only if later semantics make t
 
 This decision is recorded both in [argument-identity-boundary.md](argument-identity-boundary.md) and ADR 007.
 
+## 35. Preference work exposed a second representation boundary
+
+The planned next step was initially described as "implement ABA+ preferences."
+
+A fresh literature check showed that this would have been too casual.
+
+ABA+ does not merely filter binary attacks. If an attacking deduction relies on an assumption strictly less preferred than the attacked assumption, ABA+ may **reverse** the attack.
+
+Formally, if:
+
+\[
+S\vdash\overline a,
+\]
+
+then the attack is normal when:
+
+\[
+\nexists s\in S:s<a,
+\]
+
+and preference-reversed when:
+
+\[
+\exists s\in S:s<a.
+\]
+
+The important new result is representational. Recent work by Dimopoulos et al. (2026) shows that general ABA+ is naturally set-to-set and does not in general have the ordinary binary Dung instantiation available for basic ABA. Their Hyper Argumentation Frameworks use:
+
+\[
+R\subseteq 2^A\times(2^A\setminus\{\varnothing\}).
+\]
+
+That makes a naive "reverse this one argument edge" implementation potentially false to ABA+.
+
+The project therefore introduced an explicit preference-regime boundary.
+
+For the current binary Dung pipeline, use only the **normal-attack preference condition**:
+
+\[
+A\hookrightarrow_{\mathfrak P_N}B
+\iff
+A\leadsto B
+\land
+\nexists\alpha\in\operatorname{Supp}(A):
+\alpha<\beta,
+\]
+
+where \(\beta\) is the attacked assumption.
+
+Attacks failing this condition are recorded as blocked, not reversed.
+
+This is deliberately not called full ABA+.
+
+Full ABA+ / set-to-set attack semantics is preserved as GitHub issue #18 rather than silently approximated.
+
+## 36. Preference filtering became executable and auditable
+
+The ABA implementation now contains a finite strict preference relation over assumptions.
+
+The relation is transitively closed and rejects cycles.
+
+Every basic ABA attack receives an audit result:
+
+\[
+(attack,status,blockingPreferences),
+\]
+
+with:
+
+\[
+status\in\{\text{defeat},\text{blocked}\}.
+\]
+
+Successful attacks can still be projected into the existing Dung defeat framework.
+
+This gives the first explicit preference-sensitive dialectical path while keeping the richer ABA+ branch separate.
+
+The project-management consequence is that the next milestone should now be **warrant/license integration and end-to-end cases**, rather than importing further adjacent argumentation machinery.
+
+The durable "forest" view is now maintained in [project-status.md](project-status.md), while the two richer escalation paths are tracked by GitHub issues #17 and #18.
+
