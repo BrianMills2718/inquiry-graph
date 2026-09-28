@@ -8,11 +8,14 @@ ABA/ASPIC+ benchmark:
 - minimal-support argument construction;
 - attacks induced by deriving assumption contraries;
 - reversible metadata for generated assumptions;
-- projection of basic-ABA attacks to the downstream Dung defeat framework.
+- projection of basic-ABA attacks to the downstream Dung defeat framework;
+- a Dung-compatible assumption-preference filter with explicit audit results.
 
-Basic ABA has no preference-sensitive attack-to-defeat filter, so every ABA
-attack projects to a defeat. ABA+/ASPIC+-style preferences remain an upstream
-extension point.
+Important: the preference filter implemented here is **not full ABA+**. Full
+ABA+ may reverse attacks between sets of assumptions and does not generally
+admit a faithful binary-Dung instantiation. The filter below keeps only ABA+
+"normal" attacks: an attack is blocked when its supporting environment contains
+an assumption strictly less preferred than the attacked assumption.
 """
 from __future__ import annotations
 
@@ -28,6 +31,58 @@ AssumptionRole = Literal[
     "preference_guard",
     "conclusion_guard",
 ]
+
+
+@dataclass(frozen=True)
+class AssumptionPreferences:
+    """Finite strict preference relation over assumptions.
+
+    A pair (a, b) means a < b: assumption a is strictly less preferred than b.
+    The constructor closes the relation transitively and rejects cycles.
+    """
+
+    less_preferred: frozenset[tuple[str, str]]
+
+    def __init__(self, pairs: Iterable[tuple[str, str]] = ()) -> None:
+        closure = set(pairs)
+        if any(not left or not right for left, right in closure):
+            raise ValueError("preference endpoints must be non-empty")
+
+        changed = True
+        while changed:
+            changed = False
+            additions = {
+                (left, right2)
+                for left, right in closure
+                for left2, right2 in closure
+                if right == left2 and (left, right2) not in closure
+            }
+            if additions:
+                closure.update(additions)
+                changed = True
+
+        if any(left == right for left, right in closure):
+            raise ValueError("strict assumption preferences must be acyclic")
+
+        object.__setattr__(self, "less_preferred", frozenset(closure))
+
+    @property
+    def assumptions(self) -> frozenset[str]:
+        return frozenset(
+            name for pair in self.less_preferred for name in pair
+        )
+
+    def is_less_preferred(self, left: str, right: str) -> bool:
+        return (left, right) in self.less_preferred
+
+
+@dataclass(frozen=True)
+class ABAAttackResolution:
+    """Audit record for preference-sensitive attack filtering."""
+
+    attack: "ABAAttack"
+    status: Literal["defeat", "blocked"]
+    blocking_preferences: tuple[tuple[str, str], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -195,6 +250,80 @@ class ABAFramework:
         defeats = tuple(
             Defeat(source=attack.source, target=attack.target, kind=attack.kind)
             for attack in self.attacks()
+        )
+        return DefeatFramework(defeat_arguments, defeats)
+
+    def resolve_attacks(
+        self,
+        preferences: AssumptionPreferences,
+    ) -> tuple[ABAAttackResolution, ...]:
+        """Resolve basic ABA attacks with a Dung-compatible preference filter.
+
+        If a source argument derives the contrary of target assumption beta but
+        uses some alpha with alpha < beta, the attack is blocked. Otherwise it
+        succeeds as a defeat.
+
+        This is the "normal attack" half of ABA+ preference handling. It does
+        not implement ABA+ reverse attacks between sets of assumptions.
+        """
+        unknown = preferences.assumptions - self.assumptions.keys()
+        if unknown:
+            raise ValueError(
+                f"unknown assumptions in preferences: {sorted(unknown)}"
+            )
+
+        arguments = {argument.id: argument for argument in self.arguments()}
+        result: list[ABAAttackResolution] = []
+
+        for attack in self.attacks():
+            source = arguments[attack.source]
+            blocking = tuple(
+                sorted(
+                    (
+                        assumption_name,
+                        attack.attacked_assumption,
+                    )
+                    for assumption_name in source.environment
+                    if preferences.is_less_preferred(
+                        assumption_name,
+                        attack.attacked_assumption,
+                    )
+                )
+            )
+            result.append(
+                ABAAttackResolution(
+                    attack=attack,
+                    status="blocked" if blocking else "defeat",
+                    blocking_preferences=blocking,
+                )
+            )
+
+        return tuple(result)
+
+    def preference_filtered_attacks(
+        self,
+        preferences: AssumptionPreferences,
+    ) -> tuple[ABAAttack, ...]:
+        """Return successful attacks after Dung-compatible preference filtering."""
+        return tuple(
+            resolution.attack
+            for resolution in self.resolve_attacks(preferences)
+            if resolution.status == "defeat"
+        )
+
+    def to_preference_defeat_framework(
+        self,
+        preferences: AssumptionPreferences,
+    ) -> DefeatFramework:
+        """Project preference-filtered attacks to the binary Dung layer."""
+        arguments = self.arguments()
+        defeat_arguments = tuple(
+            DefeatArgument(id=argument.id, support=argument.support)
+            for argument in arguments
+        )
+        defeats = tuple(
+            Defeat(source=attack.source, target=attack.target, kind=attack.kind)
+            for attack in self.preference_filtered_attacks(preferences)
         )
         return DefeatFramework(defeat_arguments, defeats)
 
