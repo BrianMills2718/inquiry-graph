@@ -158,3 +158,13 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 
 **ABA argument identity is a semantic quotient, not proof identity.** The executable ABA/ABA+ layer may collapse deductions with the same conclusion and supporting assumptions because basic ABA attack and ABA+ assumption preferences cannot distinguish them. Do not infer that the underlying derivations are literally the same formal object. If later attack, preference, warrant or explanation semantics distinguish such deductions, first-class derivation/subargument structure must be introduced before using those semantics.
 
+## Preference-regime cautions
+
+**Do not call the binary preference filter full ABA+.** The implemented regime blocks a basic ABA attack when its support uses an assumption strictly less preferred than the attacked assumption. Full ABA+ may reverse set-to-set attacks and is tracked separately in issue #18.
+
+**Blocked attacks remain provenance.** Preference filtering changes whether an attack becomes a defeat; it should not erase the underlying attack or the preference pairs that blocked it.
+
+**Preference is regime/context, not proposition truth.** A change in assumption ordering can change defeat/acceptability without changing the positive support derivations themselves.
+
+**Full ABA+ and proof-tree escalation are independent.** Issue #18 tracks collective/set-to-set preference semantics; issue #17 tracks derivation/subargument structure. Do not conflate them.
+

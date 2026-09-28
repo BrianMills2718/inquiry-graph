@@ -2,7 +2,7 @@
 
 ## Build environment checks
 
-Latest local result: **67 tests passed**; graph validation returned zero errors and warnings. The added coverage includes the generic reflective `about` relation used by the strategy/self-application annotations.
+Last fully executed local repository result: **67 tests passed**; graph validation returned zero errors and warnings. That run predates the newest defeat, ABA, argument-preference, and preference-filtering modules. Those newer modules are present in GitHub with unit tests, but the full repository suite has not yet been re-executed against them because the remote local agent became unavailable.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
@@ -26,11 +26,11 @@ The integrated tests exercise import, prepare, response-file extraction, validat
 
 The repository CI is configured to install the package with development and optional provider dependencies on Python 3.11 and 3.13, rebuild the fixture and artifacts, run tests, validate the graph, and check generated-file drift and dependency consistency.
 
-**Hosted CI is not verified as passing.** The initial hosted verification run [36299272214](https://github.com/BrianMills2718/inquiry-graph/actions/runs/36299272214), job 108563774972, failed before any step or runner was recorded and produced no downloadable logs. The cause has not been verified. Do not confuse that pre-execution failure with a failing application test, and do not infer CI success from the workflow file. Release verification is the two executed local suites above; Python 3.11 has not been independently executed.
+**Hosted CI is not verified as passing.** Repeated hosted runs, including later research-layer branches, have failed or been cancelled before runner steps were recorded and have exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures, and do not infer CI success from the workflow file. The executed local suites remain the last full-repository verification record; newer research-layer code is explicitly execution-pending.
 
 ## Explicitly not verified
 
-No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
+The newest defeat/ABA/preference code has not yet been exercised by a full repository pytest/artifact/graph-validation run. No live paid API extraction, no model comparison, no full conversation-export reconciliation, no independent human adjudication of the 798 proposed annotations, and no evidence that the tool improves downstream reasoning yet. The provider boundary is tested with fake clients for normal output, refusal, truncation and transport error. The HTML is a static linked-record inspector, not a deployed application.
 
 ## Recovery
 
