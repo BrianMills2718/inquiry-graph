@@ -1,0 +1,4118 @@
+{
+  "model": "scientific-hypergraph-v2",
+  "imports": [
+    "hypergraph-kernel-v2"
+  ],
+  "normalization": {
+    "sourceModel": "inquiry-graph-1.0.0",
+    "algorithm": "inquiry-graph-to-scientific-hypergraph-v2",
+    "sourceArtifact": "formal-inquiry-2026-09-27"
+  },
+  "projection": {
+    "profile": "inquiry-profile-v0",
+    "status": "structural-proof",
+    "sourceGraphId": "formal-inquiry-2026-09-27",
+    "note": "Inquiry semantics are preserved in ig:* relation types/properties; no new carrier primitive is introduced."
+  },
+  "elements": [
+    {
+      "id": "formal-inquiry-2026-09-27",
+      "label": "formal-inquiry-2026-09-27",
+      "layer": "inquiry-graph",
+      "igRecordClass": "Graph",
+      "igSchemaVersion": "1.0.0",
+      "igNotes": [
+        "Built for later comparison and integration with the founding inquiry graph.",
+        "Focuses on warranted analytic moves, strategic reactivity, intentional interaction roles, and noncanonical factorizations."
+      ]
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27",
+      "label": "From analytic methodology to a factorization-relative substrate of inquiry",
+      "layer": "source",
+      "igRecordClass": "Conversation",
+      "igRecordOrdinal": 0,
+      "igTitle": "From analytic methodology to a factorization-relative substrate of inquiry",
+      "igSourceKind": "curated_excerpts",
+      "igCoverageNote": "Selected verbatim snippets from the visible 2026-09-27 user/assistant conversation, curated as a second inquiry trajectory distinct from the founding seed. This is not a full export, not hidden reasoning, and not a gold annotation. Ordinals are curated excerpt order."
+    },
+    {
+      "id": "participant:brian",
+      "label": "Brian",
+      "layer": "source",
+      "igRecordClass": "Participant",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 0,
+      "igLabel": "Brian",
+      "igRole": "user"
+    },
+    {
+      "id": "participant:assistant",
+      "label": "Assistant",
+      "layer": "source",
+      "igRecordClass": "Participant",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 1,
+      "igLabel": "Assistant",
+      "igRole": "assistant"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "label": "message 1",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 0,
+      "igActorId": "participant:brian",
+      "igOrdinal": 1,
+      "igText": "this scope or spectrum or space of different types of claims or assertions or hypotheses",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "label": "message 2",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 1,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 2,
+      "igText": "Think of it as separate dials, not one ladder.",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "label": "message 3",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 2,
+      "igActorId": "participant:brian",
+      "igOrdinal": 3,
+      "igText": "a formalization, of like, an embedded agent",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex004",
+      "label": "message 4",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 3,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 4,
+      "igText": "An embedded agent has to choose its ontology, its stance, and its intervention interface all at once",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "label": "message 5",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 4,
+      "igActorId": "participant:brian",
+      "igOrdinal": 5,
+      "igText": "Warranted analytical methodologies given some set of assumptions",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "label": "message 6",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 5,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 6,
+      "igText": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "label": "message 7",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 6,
+      "igActorId": "participant:brian",
+      "igOrdinal": 7,
+      "igText": "that seems to be a relatively trivial extension unless I'm missing something",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "label": "message 8",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 7,
+      "igActorId": "participant:brian",
+      "igOrdinal": 8,
+      "igText": "the intentional agent you're observing like is reacting to your observations",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "label": "message 9",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 8,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 9,
+      "igText": "a typed system of transitions whose validity depends on what you take the system to be",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "label": "message 10",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 9,
+      "igActorId": "participant:brian",
+      "igOrdinal": 10,
+      "igText": "what even is an analytic methodology",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "label": "message 11",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 10,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 11,
+      "igText": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted.",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "label": "message 12",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 11,
+      "igActorId": "participant:brian",
+      "igOrdinal": 12,
+      "igText": "fundamental formal difference between observe and intervene",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex013",
+      "label": "message 13",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 12,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 13,
+      "igText": "The distinction is not interaction versus no interaction",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex014",
+      "label": "message 14",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 13,
+      "igActorId": "participant:brian",
+      "igOrdinal": 14,
+      "igText": "measurement or intervention is like an agentic intentionality",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "label": "message 15",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 14,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 15,
+      "igText": "labels for the agent's intended role for that interaction",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex016",
+      "label": "message 16",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 15,
+      "igActorId": "participant:brian",
+      "igOrdinal": 16,
+      "igText": "warranted analytic moves given your assumptions about like what you're interacting with",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "label": "message 17",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 16,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 17,
+      "igText": "The agent's warranted moves depend on both.",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "label": "message 18",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 17,
+      "igActorId": "participant:brian",
+      "igOrdinal": 18,
+      "igText": "All of these should like be equally well described under one formalism",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "label": "message 19",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 18,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 19,
+      "igText": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut.",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "label": "message 20",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 19,
+      "igActorId": "participant:brian",
+      "igOrdinal": 20,
+      "igText": "arbitrary kind of boundary that an agent might draw between what is internal and what is external",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "label": "message 21",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 20,
+      "igActorId": "participant:brian",
+      "igOrdinal": 21,
+      "igText": "more of a black box thing but none of this stuff is really fundamental",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "label": "message 22",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 21,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 22,
+      "igText": "canonical substrate plus noncanonical factorizations plus relations between factorizations",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex023",
+      "label": "message 23",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 22,
+      "igActorId": "participant:brian",
+      "igOrdinal": 23,
+      "igText": "advise on how it relates to what we've been doing",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "label": "message 24",
+      "layer": "source",
+      "igRecordClass": "Message",
+      "igConversationId": "formal-inquiry-dialogue-2026-09-27",
+      "igRecordOrdinal": 23,
+      "igActorId": "participant:assistant",
+      "igOrdinal": 24,
+      "igText": "what we've been doing is not a separate line of thought",
+      "igOriginalId": null,
+      "igTimestamp": null
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "label": "What is the space of claim, hypothesis, model, stance and intervention types relevant to inquiry?",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 0,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "question",
+      "igText": "What is the space of claim, hypothesis, model, stance and intervention types relevant to inquiry?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "label": "Inference modes, query types, stances and intervention levels should be treated as separate dimensions rather than one ladder.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 1,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "Inference modes, query types, stances and intervention levels should be treated as separate dimensions rather than one ladder."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "label": "Generalize the framework to an embedded agent that must choose representations and interactions.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 2,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "goal",
+      "igText": "Generalize the framework to an embedded agent that must choose representations and interactions."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "label": "Given assumptions, which analytic methodologies or moves are warranted?",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 3,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "question",
+      "igText": "Given assumptions, which analytic methodologies or moves are warranted?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "label": "Assumptions constrain which inferential procedures are licensed, not only which conclusions follow.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 4,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "Assumptions constrain which inferential procedures are licensed, not only which conclusions follow."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "label": "Simply considering multiple assumption sets is too trivial to be the sought generalization.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 5,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "Simply considering multiple assumption sets is too trivial to be the sought generalization."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "label": "A target may react to being observed, making evidence generation dependent on the analyst's behavior.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 6,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "example",
+      "igText": "A target may react to being observed, making evidence generation dependent on the analyst's behavior."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "label": "Analytic moves should be typed, with validity depending on the assumed kind of system.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 7,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Analytic moves should be typed, with validity depending on the assumed kind of system."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "label": "What is an analytic methodology?",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 8,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "question",
+      "igText": "What is an analytic methodology?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "label": "An analytic methodology is a rule-governed transformation from available information to claims plus assumptions that warrant it.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 9,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "An analytic methodology is a rule-governed transformation from available information to claims plus assumptions that warrant it."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "label": "Observation and intervention are not fundamentally distinct because both are interactions.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 10,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Observation and intervention are not fundamentally distinct because both are interactions."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "label": "Measurement and intervention are intentional or functional roles of an interaction rather than distinct ontological event kinds.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 11,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Measurement and intervention are intentional or functional roles of an interaction rather than distinct ontological event kinds."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "label": "Warranted moves depend on the model/stance used for both analyst and target.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 12,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Warranted moves depend on the model/stance used for both analyst and target."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "label": "Can conceptual reasoning, statistics, causal modeling, intervention and strategic gameplay share one formal substrate?",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 13,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "question",
+      "igText": "Can conceptual reasoning, statistics, causal modeling, intervention and strategic gameplay share one formal substrate?"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "label": "Use a process plus chosen factorization/cut and generalized operations as the common substrate.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 14,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Use a process plus chosen factorization/cut and generalized operations as the common substrate."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "label": "The internal/external boundary is itself a modeling cut rather than a fundamental distinction.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 15,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "The internal/external boundary is itself a modeling cut rather than a fundamental distinction."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "label": "Non-fundamental agent boundaries may still matter pragmatically for observability and tractability.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 16,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "Non-fundamental agent boundaries may still matter pragmatically for observability and tractability."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "label": "Seek a canonical substrate with noncanonical factorizations and explicit relations between factorizations.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 17,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "hypothesis",
+      "igText": "Seek a canonical substrate with noncanonical factorizations and explicit relations between factorizations."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "label": "This line of thought is a generalization of existing Inquiry Graph machinery rather than a separate research program.",
+      "layer": "inquiry-content",
+      "igRecordClass": "Node",
+      "igRecordOrdinal": 18,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "claim",
+      "igText": "This line of thought is a generalization of existing Inquiry Graph machinery rather than a separate research program."
+    },
+    {
+      "id": "proj:formal-inquiry-2026-09-27:extraction:0",
+      "label": "extraction 0",
+      "layer": "extraction-review",
+      "igRecordClass": "Extraction",
+      "igRecordOrdinal": 0,
+      "igMethod": "manual_curated_from_visible_conversation",
+      "igProvider": "OpenAI ChatGPT",
+      "igModel": null,
+      "igPromptVersion": "1.0.0",
+      "igNotes": [
+        "Second inquiry trajectory, intentionally separate from examples/seed.",
+        "All annotations remain proposed pending review.",
+        "No hidden reasoning is represented."
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "proj:formal-inquiry-2026-09-27:conversation:0",
+      "relationType": "ig:hasConversation",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:participant:0",
+      "relationType": "ig:hasParticipant",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:participant:1",
+      "relationType": "ig:hasParticipant",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:0",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex001:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:1",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex002:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:2",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex003:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:3",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex004:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:4",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex005:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:5",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex006:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:6",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex007:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:7",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex008:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:8",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex009:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:9",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex010:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:10",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex011:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:11",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex012:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:12",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex013:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:13",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex014:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:14",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex015:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:15",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex016:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:16",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex017:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:17",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex018:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:18",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex019:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:19",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex020:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:20",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex021:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:21",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex022:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:22",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex023:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:message:23",
+      "relationType": "ig:containsMessage",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:formal-inquiry-dialogue-2026-09-27:ex024:actor",
+      "relationType": "ig:messageActor",
+      "layer": "source-structure",
+      "igRecordClass": "ProjectionLink"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-claim-space:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 88,
+      "igQuote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amulti-axis:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 46,
+      "igQuote": "Think of it as separate dials, not one ladder."
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aembedded-agent:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "a formalization, of like, an embedded agent"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-warranted-methods:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 64,
+      "igQuote": "Warranted analytical methodologies given some set of assumptions"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aassumption-method-license:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 111,
+      "igQuote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atrivial-extension-objection:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "that seems to be a relatively trivial extension unless I'm missing something"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Astrategic-reactivity:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "the intentional agent you're observing like is reacting to your observations"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atyped-transitions:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 86,
+      "igQuote": "a typed system of transitions whose validity depends on what you take the system to be"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-methodology:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 36,
+      "igQuote": "what even is an analytic methodology"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amethodology:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 173,
+      "igQuote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainteraction-basis:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 59,
+      "igQuote": "fundamental formal difference between observe and intervene"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arole-distinction:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 57,
+      "igQuote": "labels for the agent's intended role for that interaction"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aself-target-modeling:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "The agent's warranted moves depend on both."
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-unified-substrate:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "All of these should like be equally well described under one formalism"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aprocess-factorization:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 102,
+      "igQuote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainternal-external-cut:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 97,
+      "igQuote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ablack-box-pragmatics:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "more of a black box thing but none of this stuff is really fundamental"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Acanonical-substrate:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 90,
+      "igQuote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arepo-continuity:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 55,
+      "igQuote": "what we've been doing is not a separate line of thought"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "relationType": "ig:relation:answers",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 0,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "answers"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amulti-axis-answers:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 46,
+      "igQuote": "Think of it as separate dials, not one ladder."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "relationType": "ig:relation:related_to",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 1,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "related_to"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aembedded-related:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "a formalization, of like, an embedded agent"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "relationType": "ig:relation:answers",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 2,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "answers"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aassumption-answers:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 111,
+      "igQuote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "relationType": "ig:relation:challenges",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 3,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "challenges"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Atrivial-challenges:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "that seems to be a relatively trivial extension unless I'm missing something"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "relationType": "ig:relation:motivates",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 4,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "motivates"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Areactivity-motivates:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 86,
+      "igQuote": "a typed system of transitions whose validity depends on what you take the system to be"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "relationType": "ig:relation:answers",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 5,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "answers"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amethodology-answers:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 173,
+      "igQuote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "relationType": "ig:relation:challenges",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 6,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "challenges"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-challenges:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 59,
+      "igQuote": "fundamental formal difference between observe and intervene"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "relationType": "ig:relation:supports",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 7,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "supports"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-supports-role:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 57,
+      "igQuote": "labels for the agent's intended role for that interaction"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "relationType": "ig:relation:related_to",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 8,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "related_to"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aself-target-related:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "The agent's warranted moves depend on both."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "relationType": "ig:relation:answers",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 9,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "answers"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Asubstrate-answers:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 102,
+      "igQuote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "relationType": "ig:relation:supports",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 10,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "supports"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acut-supports:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 97,
+      "igQuote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "relationType": "ig:relation:related_to",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 11,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "related_to"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ablackbox-related:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "more of a black box thing but none of this stuff is really fundamental"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "relationType": "ig:relation:supports",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 12,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "supports"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acanonical-supported:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 90,
+      "igQuote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "relationType": "ig:relation:related_to",
+      "layer": "inquiry-semantic",
+      "igRecordClass": "Relation",
+      "igRecordOrdinal": 13,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "related_to"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Arepo-related:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 55,
+      "igQuote": "what we've been doing is not a separate line of thought"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "relationType": "ig:move:ask",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 0,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "ask",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-claim-space:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 88,
+      "igQuote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "relationType": "ig:move:decompose",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 1,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "decompose",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adecompose-axes:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 46,
+      "igQuote": "Think of it as separate dials, not one ladder."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "relationType": "ig:move:reframe",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 2,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "reframe",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Abroaden-embedded:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "a formalization, of like, an embedded agent"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "relationType": "ig:move:ask",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 3,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "ask",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-warranted-methods:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 64,
+      "igQuote": "Warranted analytical methodologies given some set of assumptions"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "relationType": "ig:move:propose",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 4,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "propose",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Astate-method-license:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 111,
+      "igQuote": "your assumptions don't just license conclusions, they license the kind of inferences you're even allowed to run"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "relationType": "ig:move:challenge",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 5,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "challenge",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-trivial:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "that seems to be a relatively trivial extension unless I'm missing something"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "relationType": "ig:move:test",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 6,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "test",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Atest-strategic-case:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "the intentional agent you're observing like is reacting to your observations"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "relationType": "ig:move:reframe",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 7,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "reframe",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-typed:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 86,
+      "igQuote": "a typed system of transitions whose validity depends on what you take the system to be"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "relationType": "ig:move:ask",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 8,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "ask",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-methodology:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 36,
+      "igQuote": "what even is an analytic methodology"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "relationType": "ig:move:clarify",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 9,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "clarify",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adefine-methodology:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 173,
+      "igQuote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "relationType": "ig:move:challenge",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 10,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "challenge",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-observe-intervene:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 59,
+      "igQuote": "fundamental formal difference between observe and intervene"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "relationType": "ig:move:reframe",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 11,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "reframe",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-intentional-role:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 57,
+      "igQuote": "labels for the agent's intended role for that interaction"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "relationType": "ig:move:connect",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 12,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "connect",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-self-target:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 43,
+      "igQuote": "The agent's warranted moves depend on both."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "relationType": "ig:move:ask",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 13,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "ask",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-unified-substrate:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "All of these should like be equally well described under one formalism"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "relationType": "ig:move:propose",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 14,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "propose",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Apropose-process-factorization:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 102,
+      "igQuote": "Treat the primitive not as “agent versus world,” but as a process, plus a chosen factorization or cut."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "relationType": "ig:move:challenge",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 15,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "challenge",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-boundary:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 97,
+      "igQuote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "relationType": "ig:move:clarify",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 16,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "clarify",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aqualify-blackbox:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "more of a black box thing but none of this stuff is really fundamental"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "relationType": "ig:move:summarize",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 17,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "summarize",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Asummarize-canonical:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 90,
+      "igQuote": "canonical substrate plus noncanonical factorizations plus relations between factorizations"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "relationType": "ig:move:connect",
+      "layer": "inquiry-process",
+      "igRecordClass": "Move",
+      "igRecordOrdinal": 18,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igKind": "connect",
+      "igInferenceFamily": "unspecified"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-repo:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 55,
+      "igQuote": "what we've been doing is not a separate line of thought"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "relationType": "ig:StanceEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "StanceEvent",
+      "igRecordOrdinal": 0,
+      "igOrigin": "explicit",
+      "igReviewStatus": "proposed",
+      "igStance": "posits"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-reactivity:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 76,
+      "igQuote": "the intentional agent you're observing like is reacting to your observations"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "relationType": "ig:StanceEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "StanceEvent",
+      "igRecordOrdinal": 1,
+      "igOrigin": "explicit",
+      "igReviewStatus": "proposed",
+      "igStance": "posits"
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-cut:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 97,
+      "igQuote": "arbitrary kind of boundary that an agent might draw between what is internal and what is external"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "relationType": "ig:QuestionEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "QuestionEvent",
+      "igRecordOrdinal": 0,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igStatus": "open",
+      "igResolutionBasis": null
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Aclaim-space-open:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 88,
+      "igQuote": "this scope or spectrum or space of different types of claims or assertions or hypotheses"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "relationType": "ig:QuestionEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "QuestionEvent",
+      "igRecordOrdinal": 1,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igStatus": "open",
+      "igResolutionBasis": null
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Awarrant-open:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 64,
+      "igQuote": "Warranted analytical methodologies given some set of assumptions"
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "relationType": "ig:QuestionEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "QuestionEvent",
+      "igRecordOrdinal": 2,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igStatus": "answered",
+      "igResolutionBasis": null
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Amethod-answered:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 173,
+      "igQuote": "An analytic methodology is a rule-governed way of transforming available information into claims, together with the assumptions under which that transformation is warranted."
+    },
+    {
+      "id": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "relationType": "ig:QuestionEvent",
+      "layer": "inquiry-state",
+      "igRecordClass": "QuestionEvent",
+      "igRecordOrdinal": 3,
+      "igOrigin": "inferred",
+      "igReviewStatus": "proposed",
+      "igStatus": "open",
+      "igResolutionBasis": null
+    },
+    {
+      "id": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Asubstrate-open:0",
+      "relationType": "ig:GroundingAnchor",
+      "layer": "source-grounding",
+      "igRecordClass": "Anchor",
+      "igOwner": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "igAnchorOrdinal": 0,
+      "igStart": 0,
+      "igEnd": 70,
+      "igQuote": "All of these should like be equally well described under one formalism"
+    }
+  ],
+  "bindings": [
+    {
+      "relation": "proj:formal-inquiry-2026-09-27:conversation:0",
+      "role": "ig:graph",
+      "participant": "formal-inquiry-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-2026-09-27:conversation:0",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:participant:0",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:participant:0",
+      "role": "ig:participant",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:participant:1",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:participant:1",
+      "role": "ig:participant",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:0",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:0",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex001:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex001:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:1",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:1",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex002:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex002:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:2",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:2",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex003:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex003:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:3",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:3",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex004",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex004:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex004",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex004:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:4",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:4",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex005:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex005:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:5",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:5",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex006:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex006:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:6",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:6",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex007:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex007:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:7",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:7",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex008:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex008:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:8",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:8",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex009:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex009:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:9",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:9",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex010:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex010:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:10",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:10",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex011:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex011:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:11",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:11",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex012:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex012:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:12",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:12",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex013",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex013:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex013",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex013:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:13",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:13",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex014",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex014:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex014",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex014:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:14",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:14",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex015:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex015:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:15",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:15",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex016",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex016:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex016",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex016:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:16",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:16",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex017:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex017:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:17",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:17",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex018:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex018:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:18",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:18",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex019:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex019:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:19",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:19",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex020:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex020:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:20",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:20",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex021:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex021:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:21",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:21",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex022:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex022:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:22",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:22",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex023",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex023:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex023",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex023:actor",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:23",
+      "role": "ig:conversation",
+      "participant": "formal-inquiry-dialogue-2026-09-27",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:message:23",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex024:actor",
+      "role": "ig:message",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:formal-inquiry-dialogue-2026-09-27:ex024:actor",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-claim-space:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-claim-space:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amulti-axis:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amulti-axis:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aembedded-agent:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aembedded-agent:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-warranted-methods:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-warranted-methods:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aassumption-method-license:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aassumption-method-license:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atrivial-extension-objection:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atrivial-extension-objection:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Astrategic-reactivity:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Astrategic-reactivity:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atyped-transitions:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Atyped-transitions:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-methodology:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-methodology:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amethodology:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Amethodology:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainteraction-basis:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainteraction-basis:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arole-distinction:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arole-distinction:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aself-target-modeling:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aself-target-modeling:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-unified-substrate:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aq-unified-substrate:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aprocess-factorization:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Aprocess-factorization:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainternal-external-cut:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ainternal-external-cut:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ablack-box-pragmatics:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Ablack-box-pragmatics:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Acanonical-substrate:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Acanonical-substrate:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arepo-continuity:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3An%3Arepo-continuity:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "role": "ig:answer",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amulti-axis-answers:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:multi-axis-answers",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amulti-axis-answers:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "role": "ig:source",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aembedded-related:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:embedded-related",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aembedded-related:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "role": "ig:answer",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aassumption-answers:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:assumption-answers",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aassumption-answers:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "role": "ig:challenger",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Atrivial-challenges:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:trivial-challenges",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Atrivial-challenges:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "role": "ig:reason",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "role": "ig:result",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Areactivity-motivates:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:reactivity-motivates",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Areactivity-motivates:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "role": "ig:answer",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amethodology-answers:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:methodology-answers",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Amethodology-answers:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "role": "ig:challenger",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-challenges:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:interaction-challenges",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-challenges:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "role": "ig:premise",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "role": "ig:conclusion",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-supports-role:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:interaction-supports-role",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ainteraction-supports-role:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "role": "ig:source",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aself-target-related:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:self-target-related",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Aself-target-related:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "role": "ig:answer",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Asubstrate-answers:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:substrate-answers",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Asubstrate-answers:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "role": "ig:premise",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "role": "ig:conclusion",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acut-supports:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:cut-supports",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acut-supports:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "role": "ig:source",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ablackbox-related:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:blackbox-related",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Ablackbox-related:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "role": "ig:premise",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "role": "ig:conclusion",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acanonical-supported:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:canonical-supported",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Acanonical-supported:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "role": "ig:source",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Arepo-related:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:r:repo-related",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Ar%3Arepo-related:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-claim-space:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-claim-space:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:multi-axis",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-claim-space",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adecompose-axes:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adecompose-axes:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex002",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:decompose-axes",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Abroaden-embedded:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Abroaden-embedded:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex003",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:embedded-agent",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:broaden-embedded",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-warranted-methods:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-warranted-methods:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-warranted-methods",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Astate-method-license:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Astate-method-license:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex006",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:assumption-method-license",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:trivial-extension-objection",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:state-method-license",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-trivial:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-trivial:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex007",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-trivial",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Atest-strategic-case:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Atest-strategic-case:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:test-strategic-case",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-typed:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-typed:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex009",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:typed-transitions",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:reframe-typed",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-methodology:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-methodology:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex010",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-methodology",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adefine-methodology:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Adefine-methodology:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:define-methodology",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-observe-intervene:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-observe-intervene:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex012",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:interaction-basis",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-observe-intervene",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-intentional-role:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Areframe-intentional-role:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex015",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:role-distinction",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:reframe-intentional-role",
+      "qualifier": "ordinal:5"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-self-target:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-self-target:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex017",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:self-target-modeling",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:connect-self-target",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-unified-substrate:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aask-unified-substrate:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:ask-unified-substrate",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Apropose-process-factorization:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Apropose-process-factorization:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex019",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:propose-process-factorization",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-boundary:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Achallenge-boundary:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:black-box-pragmatics",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:challenge-boundary",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aqualify-blackbox:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aqualify-blackbox:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex021",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:process-factorization",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:qualify-blackbox",
+      "qualifier": "ordinal:5"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Asummarize-canonical:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Asummarize-canonical:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex022",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "role": "ig:input",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:canonical-substrate",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "role": "ig:output",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:repo-continuity",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "role": "ig:after",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:summarize-canonical",
+      "qualifier": "ordinal:4"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-repo:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:m:connect-repo",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Am%3Aconnect-repo:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex024",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:strategic-reactivity",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-reactivity:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:s:brian-reactivity",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-reactivity:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex008",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "role": "ig:target",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:internal-external-cut",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-cut:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:s:brian-cut",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3As%3Abrian-cut:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex020",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-claim-space",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Aclaim-space-open:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:qev:claim-space-open",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Aclaim-space-open:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex001",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-warranted-methods",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Awarrant-open:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:qev:warrant-open",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Awarrant-open:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex005",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-methodology",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "role": "ig:actor",
+      "participant": "participant:assistant",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "role": "ig:answer",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:methodology",
+      "qualifier": "ordinal:3"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Amethod-answered:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:qev:method-answered",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Amethod-answered:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex011",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "role": "ig:question",
+      "participant": "formal-inquiry-dialogue-2026-09-27:n:q-unified-substrate",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "role": "ig:actor",
+      "participant": "participant:brian",
+      "qualifier": "ordinal:1"
+    },
+    {
+      "relation": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "role": "ig:occurrence",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:2"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Asubstrate-open:0",
+      "role": "ig:anchoredObject",
+      "participant": "formal-inquiry-dialogue-2026-09-27:qev:substrate-open",
+      "qualifier": "ordinal:0"
+    },
+    {
+      "relation": "proj:anchor:formal-inquiry-dialogue-2026-09-27%3Aqev%3Asubstrate-open:0",
+      "role": "ig:sourceMessage",
+      "participant": "formal-inquiry-dialogue-2026-09-27:ex018",
+      "qualifier": "ordinal:1"
+    }
+  ]
+}
