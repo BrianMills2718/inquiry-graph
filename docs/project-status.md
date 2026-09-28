@@ -168,6 +168,8 @@ Eventually import the full conversation export and reconcile curated excerpts to
 
 ## Canonical entry points
 
+- [Formal Epistemic Reasoning Meta-Model closeout](formal-epistemic-reasoning-metamodel.md)
+- [ArXiv-style paper draft](paper-formal-epistemic-reasoning-metamodel.md)
 - [Formalism](formalism.md)
 - [Warrant/license](warrant-license-interface.md)
 - [End-to-end warrant benchmark](end-to-end-warrant-benchmark.md)
