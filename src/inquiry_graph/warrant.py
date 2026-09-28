@@ -1,18 +1,22 @@
-"""Executable warrant/license boundary for dialectical certificates.
-
-This module makes one narrow part of the research formalism executable:
-
-    support/argument -> acceptability -> warrant assessment -> license
-
-It deliberately does not execute the epistemic action itself.
+"""Executable warrant/license boundaries for typed warrant regimes.
 
 The core distinction is:
-- a warrant judgment is a conditional claim under applicability assumptions;
-- a license is derived only when the warrant is adequate under its regime and
-  the current context satisfies those assumptions.
 
-The first executable regime is skeptical grounded acceptability over the
-existing binary DefeatFramework.
+    certificate/support -> regime-specific warrant assessment -> current license
+
+A warrant assessment is conditional on explicit applicability assumptions.
+A license is derived only when the warrant is adequate under its regime and the
+current context satisfies those assumptions.
+
+No epistemic action is executed automatically.
+
+Two narrow regimes are currently executable:
+
+- skeptical grounded-dialectical acceptability;
+- exact reporting of an independent-Bernoulli support probability.
+
+The second regime deliberately licenses only recording/reporting the computed
+support grade. It does not turn a probability into unconditional acceptance.
 """
 from __future__ import annotations
 
@@ -20,6 +24,7 @@ from dataclasses import dataclass
 from typing import Iterable
 
 from .defeat import DefeatFramework, GroundedStatus
+from .support import IndependentBernoulliRegime, SupportAntichain
 
 
 @dataclass(frozen=True)
@@ -48,7 +53,7 @@ class WarrantJudgment:
 
     regime: str
     assumptions: frozenset[str]
-    certificate_argument: str
+    certificate_id: str
     action: EpistemicAction
     guarantee: Guarantee
 
@@ -57,31 +62,49 @@ class WarrantJudgment:
         *,
         regime: str,
         assumptions: Iterable[str] = (),
-        certificate_argument: str,
+        certificate_id: str | None = None,
+        certificate_argument: str | None = None,
         action: EpistemicAction,
         guarantee: Guarantee,
     ) -> None:
         if not regime:
             raise ValueError("warrant regime must be non-empty")
-        if not certificate_argument:
-            raise ValueError("certificate argument must be non-empty")
+        if certificate_id and certificate_argument and certificate_id != certificate_argument:
+            raise ValueError("certificate_id and certificate_argument disagree")
+        certificate = certificate_id or certificate_argument
+        if not certificate:
+            raise ValueError("certificate id must be non-empty")
+
         normalized = frozenset(assumptions)
         if any(not assumption for assumption in normalized):
             raise ValueError("warrant assumptions must be non-empty strings")
 
         object.__setattr__(self, "regime", regime)
         object.__setattr__(self, "assumptions", normalized)
-        object.__setattr__(self, "certificate_argument", certificate_argument)
+        object.__setattr__(self, "certificate_id", certificate)
         object.__setattr__(self, "action", action)
         object.__setattr__(self, "guarantee", guarantee)
+
+    @property
+    def certificate_argument(self) -> str:
+        return self.certificate_id
 
 
 @dataclass(frozen=True)
 class WarrantAssessment:
     judgment: WarrantJudgment
     warranted: bool
-    certificate_status: GroundedStatus
     reason: str
+
+
+@dataclass(frozen=True)
+class GroundedWarrantAssessment(WarrantAssessment):
+    certificate_status: GroundedStatus
+
+
+@dataclass(frozen=True)
+class SupportProbabilityAssessment(WarrantAssessment):
+    value: float
 
 
 @dataclass(frozen=True)
@@ -93,22 +116,40 @@ class LicenseDecision:
     reason: str
 
 
-class GroundedDialecticalWarrantRegime:
-    """Skeptical defeasible regime using grounded IN status as adequacy.
+def derive_license(
+    assessment: WarrantAssessment,
+    context_assumptions: Iterable[str] = (),
+) -> LicenseDecision:
+    """Derive a current license from a conditional warrant assessment."""
+    context = frozenset(context_assumptions)
+    if any(not assumption for assumption in context):
+        raise ValueError("context assumptions must be non-empty strings")
 
-    This regime is intentionally narrow. Grounded acceptability is sufficient
-    only for defeasible actions whose guarantee is itself dialectical
-    acceptability. It does not license unconditional acceptance, deductive truth
-    claims, or arbitrary actions merely because some argument is grounded-in.
-    """
+    unmet = assessment.judgment.assumptions - context
+    licensed = assessment.warranted and not unmet
+
+    if not assessment.warranted:
+        reason = "conditional warrant is not adequate under the regime"
+    elif unmet:
+        reason = "current context does not satisfy all warrant assumptions"
+    else:
+        reason = "warrant is adequate and current assumptions are satisfied"
+
+    return LicenseDecision(
+        assessment=assessment,
+        context_assumptions=context,
+        licensed=licensed,
+        unmet_assumptions=frozenset(unmet),
+        reason=reason,
+    )
+
+
+class GroundedDialecticalWarrantRegime:
+    """Skeptical defeasible regime using grounded IN status as adequacy."""
 
     id = "grounded-dialectical"
     allowed_action_kinds = frozenset(
-        {
-            "retain_candidate",
-            "raise_support",
-            "use_defeasibly",
-        }
+        {"retain_candidate", "raise_support", "use_defeasibly"}
     )
     guarantee_kind = "defeasible-acceptability"
 
@@ -116,17 +157,17 @@ class GroundedDialecticalWarrantRegime:
         self,
         judgment: WarrantJudgment,
         framework: DefeatFramework,
-    ) -> WarrantAssessment:
+    ) -> GroundedWarrantAssessment:
         if judgment.regime != self.id:
             raise ValueError(
                 f"judgment regime {judgment.regime!r} does not match {self.id!r}"
             )
-        if judgment.certificate_argument not in framework.arguments:
+        if judgment.certificate_id not in framework.arguments:
             raise ValueError(
                 "certificate argument is not present in the defeat framework"
             )
 
-        status = framework.grounded_statuses()[judgment.certificate_argument]
+        status = framework.grounded_statuses()[judgment.certificate_id]
 
         if judgment.action.kind not in self.allowed_action_kinds:
             warranted = False
@@ -150,7 +191,7 @@ class GroundedDialecticalWarrantRegime:
             warranted = False
             reason = "certificate argument is undecided under grounded semantics"
 
-        return WarrantAssessment(
+        return GroundedWarrantAssessment(
             judgment=judgment,
             warranted=warranted,
             certificate_status=status,
@@ -159,7 +200,7 @@ class GroundedDialecticalWarrantRegime:
 
     def derive_license(
         self,
-        assessment: WarrantAssessment,
+        assessment: GroundedWarrantAssessment,
         context_assumptions: Iterable[str] = (),
     ) -> LicenseDecision:
         if assessment.judgment.regime != self.id:
@@ -167,28 +208,7 @@ class GroundedDialecticalWarrantRegime:
                 f"assessment regime {assessment.judgment.regime!r} "
                 f"does not match {self.id!r}"
             )
-
-        context = frozenset(context_assumptions)
-        if any(not assumption for assumption in context):
-            raise ValueError("context assumptions must be non-empty strings")
-
-        unmet = assessment.judgment.assumptions - context
-        licensed = assessment.warranted and not unmet
-
-        if not assessment.warranted:
-            reason = "conditional warrant is not adequate under the regime"
-        elif unmet:
-            reason = "current context does not satisfy all warrant assumptions"
-        else:
-            reason = "warrant is adequate and current assumptions are satisfied"
-
-        return LicenseDecision(
-            assessment=assessment,
-            context_assumptions=context,
-            licensed=licensed,
-            unmet_assumptions=frozenset(unmet),
-            reason=reason,
-        )
+        return derive_license(assessment, context_assumptions)
 
     def evaluate(
         self,
@@ -196,6 +216,95 @@ class GroundedDialecticalWarrantRegime:
         framework: DefeatFramework,
         context_assumptions: Iterable[str] = (),
     ) -> LicenseDecision:
-        """Convenience composition of warrant assessment and license derivation."""
-        assessment = self.assess(judgment, framework)
-        return self.derive_license(assessment, context_assumptions)
+        return self.derive_license(
+            self.assess(judgment, framework),
+            context_assumptions,
+        )
+
+
+@dataclass(frozen=True)
+class SupportProbabilityCertificate:
+    id: str
+    support: SupportAntichain
+    model: IndependentBernoulliRegime
+
+    def __post_init__(self) -> None:
+        if not self.id:
+            raise ValueError("support-probability certificate id must be non-empty")
+
+
+class IndependentBernoulliSupportWarrantRegime:
+    """Warrant exact reporting of support probability under explicit assumptions.
+
+    This regime licenses only recording the computed support grade. It does not
+    license accepting the proposition or treating the value as P(h).
+    """
+
+    id = "independent-bernoulli-support"
+    action_kind = "record_support_grade"
+    guarantee_kind = "support-probability"
+
+    def assess(
+        self,
+        judgment: WarrantJudgment,
+        certificate: SupportProbabilityCertificate,
+    ) -> SupportProbabilityAssessment:
+        if judgment.regime != self.id:
+            raise ValueError(
+                f"judgment regime {judgment.regime!r} does not match {self.id!r}"
+            )
+        if judgment.certificate_id != certificate.id:
+            raise ValueError(
+                "warrant certificate id does not match supplied certificate"
+            )
+
+        value = certificate.model.support_probability(certificate.support)
+
+        if judgment.action.kind != self.action_kind:
+            warranted = False
+            reason = (
+                f"action kind {judgment.action.kind!r} is outside the "
+                "independent-Bernoulli support regime"
+            )
+        elif judgment.guarantee.kind != self.guarantee_kind:
+            warranted = False
+            reason = (
+                f"guarantee kind {judgment.guarantee.kind!r} is outside the "
+                "independent-Bernoulli support regime"
+            )
+        else:
+            warranted = True
+            reason = (
+                "support probability was computed under the explicit "
+                "independent-Bernoulli model"
+            )
+
+        return SupportProbabilityAssessment(
+            judgment=judgment,
+            warranted=warranted,
+            value=value,
+            reason=reason,
+        )
+
+    def derive_license(
+        self,
+        assessment: SupportProbabilityAssessment,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        if assessment.judgment.regime != self.id:
+            raise ValueError(
+                f"assessment regime {assessment.judgment.regime!r} "
+                f"does not match {self.id!r}"
+            )
+        return derive_license(assessment, context_assumptions)
+
+    def evaluate(
+        self,
+        judgment: WarrantJudgment,
+        certificate: SupportProbabilityCertificate,
+        context_assumptions: Iterable[str] = (),
+    ) -> LicenseDecision:
+        return self.derive_license(
+            self.assess(judgment, certificate),
+            context_assumptions,
+        )

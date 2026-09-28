@@ -143,15 +143,15 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The project now has its first executable vertical slice from support through preference-sensitive defeat and grounded acceptability to typed defeasible warrant/license.
+The project now has its first executable defeasible vertical slice from support through preference-sensitive defeat and grounded acceptability to typed warrant/license, plus a separate executable graded-support regime that licenses only recording a computed support grade.
 
 The next milestone is benchmark expansion rather than ontology expansion:
 
 1. add a dedicated deductive proof regime;
-2. define a typed graded-support update regime without global confidence thresholds;
-3. add measurement/testimony reliability cases;
-4. add statistical/PAC cases;
-5. add strategy-performance cases;
+2. add measurement/testimony reliability cases;
+3. add statistical/PAC cases;
+4. add strategy-performance cases;
+5. add any decision policy over graded support only as a separate warrant regime;
 6. reassess the architecture only from concrete benchmark failures;
 7. return to deeper candidate-generation theory after the downstream warrant pipeline has broader coverage.
 
