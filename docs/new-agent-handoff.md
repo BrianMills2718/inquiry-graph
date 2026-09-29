@@ -2,7 +2,10 @@
 
 > **Prepared:** 2026-09-29  
 > **Repository:** \`BrianMills2718/inquiry-graph\` (private)  
+> **Current main:** \`81f136fa73c843a97267e5d04a01c9be885beb8c\`  
 > **Purpose:** allow a new agent to continue without reconstructing the long founding conversation.
+>
+> **Immediate warning:** start with GitHub issue **#46** before extending the formal layer. The integration suite is green, but an independent semantic audit reproduced three correctness defects that remain in current code.
 
 ## 1. Read this first
 
@@ -273,7 +276,7 @@ These are benchmark/reference regimes, not claims of universal adequacy.
 
 ## 8. Verification status
 
-Last independently executed integrated native-Windows baseline (post-PR-#36 `main` at `4ad3942`, 2026-09-29):
+Last independently executed integrated native-Windows baseline (post-PR-#36 code at `4ad3942`, 2026-09-29):
 
 - **142 tests passed**
 - seed fixture rebuilt successfully
@@ -288,6 +291,10 @@ Environment used:
 - Python 3.14.7
 - Pydantic 2.13.5
 - NetworkX 3.7
+
+Current `main` is `81f136f`; the commits since `4ad3942` are documentation-only, so the execution record still covers the current executable tree.
+
+**But:** issue #46 is a semantic-audit failure on that same executable layer. Passing tests do not establish the correctness of the binary preference semantics, flat-ABA precondition, or grounded-warrant target binding.
 
 Hosted GitHub Actions remains broken before runner execution. That is issue #2 and should be treated as infrastructure debt, not application failure.
 
@@ -335,9 +342,19 @@ This is **not** a fully reconciled conversation export.
 
 Issue #3 tracks reconciliation against the full export.
 
-## 10. Main research frontier
+## 10. Immediate correctness gate and main research frontier
 
-The current main foundational/integrative open problem is:
+The next agent should **first resolve issue #46** before extending acceptance semantics.
+
+Issue #46 reports three reproduced defects that still apply to current code because only documentation changed after the audited commit:
+
+1. the binary preference-removal filter can make an assumption and its contrary both grounded-IN;
+2. flat ABA is claimed but not enforced when an assumption is also a rule head;
+3. grounded-dialectical warrant can ignore an unrelated action target.
+
+The first defect is especially important because it turns issue #18 from a purely hypothetical escalation path into an active design question: either implement a faithful preference semantics with the needed rationality properties, or explicitly remove/demote the current filter from warrant-bearing use.
+
+After #46 is resolved, the main foundational/integrative open problem is:
 
 # **Acceptance licensing + warrant composition**
 
@@ -402,15 +419,9 @@ Do not preemptively add derivation DAGs.
 
 ### Issue #18 — full ABA+ / hyperargumentation
 
-Current preference layer is deliberately binary and Dung-compatible.
+Current preference layer is deliberately binary, but issue #46 has now demonstrated a concrete consistency failure caused by attack removal without reversal.
 
-Escalate only if:
-
-- attack reversal;
-- collective set-to-set attacks;
-- faithful full ABA+ semantics
-
-materially affect a benchmark/use case.
+Treat #18 as **conditionally activated for review**, not automatically as a mandate to implement the entire HYPAF/full-ABA+ stack. The new agent should first decide whether a faithful preference semantics is needed in the warrant-bearing reference layer or whether the current filter should be explicitly demoted/removed.
 
 ## 13. Product / Inquiry System track
 
@@ -439,15 +450,14 @@ Issue #3/source reconciliation is a prerequisite for treating the founding inqui
 
 At handoff:
 
-- **#2** — hosted CI Python 3.11/3.13 matrix; low-priority infrastructure debt because local verification is green.
-- **#3** — full conversation export reconciliation and review of 798 proposed annotations.
-- **#17** — escalation path for first-class derivation/subargument structure.
-- **#18** — escalation path for full ABA+ / set-to-set hyperargumentation.
-- **#34** — acceptance licensing and warrant composition; **main foundational priority**.
+- **#46** — formal-layer semantic defects; **immediate correctness priority**.
+- **#34** — acceptance licensing and warrant composition; next foundational priority after #46.
 - **#38** — empirical usefulness of the inquiry representation / Inquiry System.
+- **#3** — full conversation export reconciliation and review of 798 proposed annotations.
 - **#40** — systematic comparison against the closest integrated frameworks, with adoption/alignment rather than novelty as the goal.
-- **#38** — evaluate whether the inquiry representation is actually useful; main empirical/product-validation issue.
-- **#40** — systematic comparison matrix against the closest integrated frameworks; main research-positioning/adoption issue.
+- **#18** — full ABA+ / set-to-set hyperargumentation; now conditionally activated for review by #46's preference counterexample.
+- **#17** — escalation path for first-class derivation/subargument structure; still dormant.
+- **#2** — hosted CI Python 3.11/3.13 matrix; low-priority infrastructure debt because local execution verification is green.
 
 ## 15. Open pull requests that are separate from current main
 
@@ -551,9 +561,9 @@ Do not:
 
 Choose **one** track instead of continuing everything at once.
 
-### Track A — foundational research
+### Track A — formal correctness, then foundational research
 
-Start with issue #34: acceptance licensing + warrant composition.
+Start with issue #46. Fix/enforce the clear local defects first, and make the preference-semantics decision together with issue #18. Then proceed to issue #34: acceptance licensing + warrant composition.
 
 ### Track B — useful system/product
 
@@ -577,18 +587,19 @@ The roadmap, project status, architecture reassessment, canonical closeout, pape
 
 Current priority order is authoritative as follows:
 
-1. **Issue #34 — acceptance licensing + warrant composition** if continuing foundational research.
-2. **Useful Inquiry System/product track** may proceed independently; do not block it on philosophical closure.
-3. **Issue #38 — empirical usefulness** for the inquiry representation/product.
-4. **Issue #3 — source reconciliation** when the full export is available.
-5. **Issue #40 — systematic integrated-framework comparison** for adoption/positioning and paper cleanup.
-6. **Issues #17/#18** remain escalation-only, not active implementation plans.
-7. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; the post-merge integrated rerun passed (142 tests, native Windows and Linux).
-8. **Issue #2** remains low-priority hosted-CI infrastructure debt.
-9. **PR #8/#15** remain intentionally separate and must not be merged casually.
+1. **Issue #46 — formal-layer semantic defects.** Resolve before extending the warrant/acceptance layer.
+2. **Issue #34 — acceptance licensing + warrant composition** after #46.
+3. **Useful Inquiry System/product track** may proceed independently; do not block it on philosophical closure.
+4. **Issue #38 — empirical usefulness** for the inquiry representation/product.
+5. **Issue #3 — source reconciliation** when the full export is available.
+6. **Issue #40 — systematic integrated-framework comparison** for adoption/positioning and paper cleanup.
+7. **Issue #18** is now conditionally activated for preference-semantics review by #46; **issue #17** remains escalation-only.
+8. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; the post-merge integrated rerun passed (142 tests, native Windows and Linux).
+9. **Issue #2** remains low-priority hosted-CI infrastructure debt.
+10. **PR #8/#15** remain intentionally separate and must not be merged casually.
 
 If a future document conflicts with this handoff, prefer the canonical closeout and current ADRs, then update this handoff rather than inferring intent from historical notes.
 
 ## 22. One-sentence handoff
 
-The foundational architecture is now broadly mapped to mature prior work and internally verified; **do not keep expanding it by default**—the main research frontier is acceptance/warrant composition, while the most important product question is whether the inquiry representation is actually useful.
+The foundational architecture is broadly mapped to mature prior work and execution-verified, but **issue #46 is the immediate semantic-correctness gate**; fix that before acceptance/warrant composition, while the product track can independently test whether the inquiry representation is actually useful.
