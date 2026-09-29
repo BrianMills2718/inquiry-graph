@@ -1,0 +1,278 @@
+[
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "C": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "A": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Z",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "C": {
+   "label": "X",
+   "points_covered": 0,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "A": {
+   "label": "Z",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "C": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "A": {
+   "label": "Y",
+   "points_covered": 4,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Z",
+   "points_covered": 0,
+   "contradicts_key": true,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "B": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "A": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 2,
+   "contradicts_key": true,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Y",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Z",
+   "points_covered": 2,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 4,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Z",
+   "points_covered": 4,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "A": {
+   "label": "X",
+   "points_covered": 1,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Y",
+   "points_covered": 0,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "B": {
+   "label": "Z",
+   "points_covered": 0,
+   "contradicts_key": true,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ },
+ {
+  "B": {
+   "label": "X",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "C": {
+   "label": "Y",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  },
+  "A": {
+   "label": "Z",
+   "points_covered": 3,
+   "contradicts_key": false,
+   "attribution_error": false,
+   "false_closure": false
+  }
+ }
+]

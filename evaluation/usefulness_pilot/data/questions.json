@@ -1,0 +1,278 @@
+{
+ "model": "openrouter/openai/gpt-5.6-luna",
+ "kept": [
+  {
+   "category": "open_questions",
+   "question": "At the end of the transcript, what remained unresolved about the primitive epistemic actions?",
+   "answer_key": "The project had not yet fixed a primitive vocabulary of epistemic actions; defining that vocabulary was identified as the next hard task.",
+   "key_points": [
+    "No final primitive action set had been selected.",
+    "The unresolved issue concerns actions such as deriving, raising support, accepting, or selecting a strategy.",
+    "The question remained open after the warrant/license refactor."
+   ],
+   "evidence": [
+    {
+     "message_index": 158,
+     "quote": "The next hard question is narrower again: **what are the primitive epistemic actions"
+    },
+    {
+     "message_index": 158,
+     "quote": "The common target is an epistemic action such as"
+    }
+   ]
+  },
+  {
+   "category": "open_questions",
+   "question": "At the end of the transcript, how were multiple warrants supposed to combine or conflict when graded support rho is used?",
+   "answer_key": "The combination and conflict rules for multiple warrants remained unspecified, especially for graded support rather than hard acceptance.",
+   "key_points": [
+    "The project had not defined how warrants aggregate.",
+    "It had not defined how attacking or defeating warrants affect graded support.",
+    "The unresolved issue was explicitly tied to graded rho versus hard acceptance."
+   ],
+   "evidence": [
+    {
+     "message_index": 158,
+     "quote": "how do multiple warrants combine or conflict—especially when \\(\\rho\\) is graded rather than hard acceptance?"
+    },
+    {
+     "message_index": 158,
+     "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+    }
+   ]
+  },
+  {
+   "category": "rejection_reason",
+   "question": "Why was Bronstein's geometric deep-learning framework removed from the foundational investigation?",
+   "answer_key": "Bronstein was judged too narrow and too closely tied to engineering architectures under supplied geometric priors; its symmetry and invariance ideas were retained only as a later engineering connection.",
+   "key_points": [
+    "The assistant acknowledged over-connecting Bronstein because Brian had mentioned it.",
+    "Bronstein assumes or exploits known geometric structure rather than deriving an observer's representational space.",
+    "Grenander-style Pattern Theory was considered closer to the foundational question."
+   ],
+   "evidence": [
+    {
+     "message_index": 46,
+     "quote": "Geometric deep learning is useful much later if we're asking how to engineer neural architectures that exploit known structural priors. It doesn't currently buy us anything for the foundational question."
+    },
+    {
+     "message_index": 44,
+     "quote": "I would now **remove Bronstein from the spine of our investigation**."
+    }
+   ]
+  },
+  {
+   "category": "rejection_reason",
+   "question": "Why was “reframe” removed as a primitive operator in the candidate-generation calculus?",
+   "answer_key": "“Reframe” was dropped as a primitive because it bundled several distinct operations, including changing the query, language, theory, meta-level, or evaluation criterion; it remained only as a dialogue-level macro-move.",
+   "key_points": [
+    "The term was too coarse to support formal decomposition.",
+    "Its cases were separated into query transformation, signature change, theory change, and other operations.",
+    "The label was retained for annotation but not for the foundational operator calculus."
+   ],
+   "evidence": [
+    {
+     "message_index": 126,
+     "quote": "So I would remove **reframe** from the foundational calculus. It remains perfectly useful as a dialogue annotation, but it's a **macro-move**, not a primitive epistemic operator."
+    }
+   ]
+  },
+  {
+   "category": "assumptions_dependencies",
+   "question": "What did the claim that the add/delete factorization of an epistemic transition is unique depend on?",
+   "answer_key": "It depended on a fixed semantic identity or representation-alignment contract, so that the old and new hypotheses could be compared as members of the same aligned universe.",
+   "key_points": [
+    "The hypothesis universe or semantic identity conditions must be fixed.",
+    "A representation map such as Phi must align the old and new spaces.",
+    "Only then are additions and deletions uniquely determined by set difference.",
+    "The result was not claimed to be representation-independent."
+   ],
+   "evidence": [
+    {
+     "message_index": 112,
+     "quote": "Relative to fixed semantic identity conditions:"
+    },
+    {
+     "message_index": 112,
+     "quote": "Given a fixed \\(\\Phi\\), the \\(A,D\\) factorization is **unique by set difference**."
+    }
+   ]
+  },
+  {
+   "category": "attribution",
+   "question": "Who supplied the correction that deduction should use “assumed” rather than “known” constraints, and what did the assistant do with it?",
+   "answer_key": "Brian supplied the correction; the assistant explicitly accepted it and reformulated deduction as conditional on an active assumption context rather than on certainty about the world.",
+   "key_points": [
+    "Brian objected to describing constraints as known from an embedded observer's perspective.",
+    "He proposed treating them as assumed for the purpose of a derivation.",
+    "The assistant adopted that wording and used it in the white-box/black-box formalization."
+   ],
+   "evidence": [
+    {
+     "message_index": 75,
+     "quote": "Um, unconstrained known, I would say is more like constraints assumed because then we don't have to get into this like the black box embedded observer can never know for sure"
+    },
+    {
+     "message_index": 76,
+     "quote": "Yes—**“constraints assumed” is better**. From the embedded observer's standpoint, even a highly confirmed law remains part of the assumed model for purposes of deduction:"
+    }
+   ]
+  },
+  {
+   "category": "attribution",
+   "question": "Who proposed placing canonical-factorization analysis above object-level operators as a meta-strategy, and how did Brian respond?",
+   "answer_key": "The assistant proposed canonical factorization as a meta-strategy; Brian endorsed the direction by connecting it to his own recursive modeling practice and its application to concrete conversations.",
+   "key_points": [
+    "The assistant located canonical factorization above domain-specific operators.",
+    "It was characterized as a strategy for choosing and testing operators, not as an object-level move.",
+    "Brian responded that modeling the model and instantiating it for conversations was an important application."
+   ],
+   "evidence": [
+    {
+     "message_index": 144,
+     "quote": "It should live **above the domain-specific candidate operators**, as a **meta-strategy for transforming the current problem representation**."
+    },
+    {
+     "message_index": 145,
+     "quote": "But yeah, this general idea of being able to like formalize all of this stuff kind of in an abstract sense, but then also to instantiate that model for specific conversations"
+    }
+   ]
+  },
+  {
+   "category": "abandoned_or_deferred",
+   "question": "What happened to Hoel's causal-emergence and coarse-graining line of inquiry?",
+   "answer_key": "It was deferred rather than rejected outright: Hoel and coarse-graining might reappear, but they were not to be privileged before establishing that coarse-graining was fundamental.",
+   "key_points": [
+    "Hoel's work was judged relevant to macro-representation and causal information.",
+    "It was not needed for the immediate foundational investigation.",
+    "The line was explicitly left open for later reconsideration."
+   ],
+   "evidence": [
+    {
+     "message_index": 46,
+     "quote": "Likewise, Hoel isn't necessary at this stage. Coarse-graining may reappear, but we shouldn't privilege it before knowing whether it's fundamental."
+    }
+   ]
+  },
+  {
+   "category": "abandoned_or_deferred",
+   "question": "What happened to theory-graph work after the ATMS and institution-theory synthesis?",
+   "answer_key": "Theory graphs were parked as a possible later implementation aid for modular theories, imports, and morphisms; they were not added to the foundational model because they did not expose a missing primitive.",
+   "key_points": [
+    "Theory graphs were recognized as relevant to modular theory organization.",
+    "They were not needed for the current foundational architecture.",
+    "They were deferred until modular formal theories became an implementation requirement."
+   ],
+   "evidence": [
+    {
+     "message_index": 132,
+     "quote": "That's plausible for our eventual executable implementation, but it doesn't expose a missing primitive right now. So I would park it."
+    }
+   ]
+  },
+  {
+   "category": "revision_sequence",
+   "question": "What sequence of revisions led from the flat hypothesis-state model to the final MMT-plus-ATMS reasoning-episode architecture?",
+   "answer_key": "The model progressed from a flat live-hypothesis set, to a state with a temporary reasoning context, to an ATMS-like persistent support graph with assumption environments, and finally to an MMT formal-artifact substrate combined with that support overlay.",
+   "key_points": [
+    "The initial model treated the live hypotheses as a flat set.",
+    "The model then separated persistent epistemic state from a temporary assumption context.",
+    "ATMS introduced alternative assumption environments, justifications, and minimal support labels.",
+    "MMT later supplied the formal theories, declarations, objects, and morphisms underneath the support overlay."
+   ],
+   "evidence": [
+    {
+     "message_index": 112,
+     "quote": "Let the observer's live hypothesis set at time \\(t\\) be"
+    },
+    {
+     "message_index": 132,
+     "quote": "The persistent black-box observer does **not** select one theory as true."
+    },
+    {
+     "message_index": 140,
+     "quote": "MMT can probably supply most of our formal-representation layer essentially as-is."
+    }
+   ]
+  },
+  {
+   "category": "resume_point",
+   "question": "What was the immediate next step for the unresolved problem of primitive epistemic actions?",
+   "answer_key": "Define a primitive action vocabulary and determine which actions are fundamental, rather than adding another broad philosophical taxonomy.",
+   "key_points": [
+    "The next task was to specify primitive epistemic actions.",
+    "The action vocabulary should be expressed in the revised warrant/action framework.",
+    "Candidate examples include derive, raise support, accept, and select strategy, but the set was not yet settled."
+   ],
+   "evidence": [
+    {
+     "message_index": 158,
+     "quote": "The next hard question is narrower again: **what are the primitive epistemic actions"
+    }
+   ]
+  },
+  {
+   "category": "resume_point",
+   "question": "What was the next step for graded support and conflicting warrants?",
+   "answer_key": "Develop a model for how multiple warrants combine, attack, defeat, or otherwise affect graded support, especially where the system does not make a hard acceptance decision.",
+   "key_points": [
+    "The unresolved issue was warrant aggregation and conflict.",
+    "The model must handle graded rho rather than only elimination or acceptance.",
+    "Defeat or attack structure was identified as likely necessary for non-monotonic warrant."
+   ],
+   "evidence": [
+    {
+     "message_index": 158,
+     "quote": "how do multiple warrants combine or conflict—especially when \\(\\rho\\) is graded rather than hard acceptance?"
+    },
+    {
+     "message_index": 158,
+     "quote": "Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic."
+    }
+   ]
+  }
+ ],
+ "dropped": [
+  {
+   "category": "assumptions_dependencies",
+   "question": "What did the proposed performance-warrant theorem depend on in order to license an ampliative update rule?",
+   "answer_key": "It depended on explicitly defining an admissible class of worlds through assumptions and specifying a performance guarantee that the update rule could be proved to satisfy across that class.",
+   "key_points": [
+    "Assumptions define the admissible world or environment class.",
+    "A guarantee specifies what counts as successful inference.",
+    "A proof must establish the guarantee for every world in the assumed class."
+   ],
+   "evidence": [
+    {
+     "message_index": 104,
+     "quote": "Specify a class of worlds/environments \\(\\mathcal W_A\\) defined by assumptions \\(A\\)."
+    },
+    {
+     "message_index": 104,
+     "quote": "Specify an epistemic objective or guarantee \\(G\\)."
+    }
+   ]
+  },
+  {
+   "category": "revision_sequence",
+   "question": "What sequence of changes turned the earlier warrant certificate into the final distinction among support, warrant, license, and update?",
+   "answer_key": "The work began with a certificate consisting of assumptions, a guarantee, and a justification; after separating generation, elaboration, evaluation, and updating, it distinguished support from warrant and warrant from the context-relative license to act.",
+   "key_points": [
+    "The earlier certificate used assumptions, guarantee, and justification.",
+    "The refined pipeline separated candidate generation, formal admissibility, evaluation, and epistemic update.",
+    "The final formulation treated warrant as the structured basis and license as the resulting permitted status.",
+    "Support remained distinct from both warrant and license."
+   ],
+   "evidence": [
+    {
+     "message_index": 156,
+     "quote": "Earlier we had something like: \\(\\operatorname{Cert}(\\tau)=(A_W,G_W,\\pi)\\) meaning: under assumptions \\(A_W\\), there is some justification \\(\\pi\\) for guarantee \\(G_W\\) about a move \\(\\tau\\)."
+    },
+    {
+     "message_index": 158,
+     "quote": "License is not a synonym for warrant. In the project terminology, warrant is the structured basis establishing that an epistemic action is adequate under specified conditions; license is the resulting context-relative status that the action is permitted."
+    }
+   ]
+  }
+ ]
+}

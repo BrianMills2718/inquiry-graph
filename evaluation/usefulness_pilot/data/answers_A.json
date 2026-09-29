@@ -1,0 +1,65 @@
+{
+ "cost": 0.0232711,
+ "answers": [
+  {
+   "question_number": 1,
+   "answer": "It remained unresolved which epistemic actions should count as primitive. The conversation had separated candidate generation, formal elaboration, evaluation, warrant, and updating, but had not yet settled the minimal action vocabulary.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 2,
+   "answer": "It was still unresolved. The next task was explicitly to determine how multiple warrants combine or defeat one another when support is graded by \\(\\rho\\), rather than represented as hard acceptance or rejection.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 3,
+   "answer": "Bronstein’s framework was removed because it addresses how to engineer learning architectures given specified geometric priors—symmetry, invariance, locality, and stability—rather than deriving the representational space available to an embedded observer. Grenander-style Pattern Theory was judged closer to the foundational question, making Bronstein unnecessary baggage at that stage.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 4,
+   "answer": "“Reframe” was too coarse to be a primitive: it bundled distinct operations such as changing the query, changing the representation language, changing the theory/context, or moving to a meta-level. It was retained as a useful dialogue-level macro-move, but removed from the foundational operator calculus.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 5,
+   "answer": "The uniqueness claim depended on fixing a semantic hypothesis universe and an alignment/representation contract \\(\\Phi\\). Given \\(H\\), \\(H'\\), and fixed alignment, additions and deletions are uniquely determined as \\(A=H'\\setminus\\Phi(H)\\) and \\(D=\\Phi(H)\\setminus H'\\); it was not claimed to be representation-independent.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 6,
+   "answer": "Brian supplied the correction, saying that constraints should be treated as “assumed” rather than “known.” The assistant adopted that terminology and recast deduction as conditional reasoning from an active assumption context, avoiding any implication of certainty.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 7,
+   "answer": "The assistant proposed placing canonical-factorization analysis above object-level operators as a meta-strategy controlling which operators to use and how to test their decomposition. Brian responded affirmatively, then connected it to his broader practice of recursively applying a developing meta-model to the process of building that model.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 8,
+   "answer": "Hoel’s causal-emergence and coarse-graining line was demoted and dropped from the foundational investigation. The assistant said coarse-graining might reappear later, but it should not be privileged before establishing whether it was fundamental.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 9,
+   "answer": "Theory-graph work was parked rather than incorporated into the foundation. Institution theory was used for logical signatures, models, and morphisms, while ATMS handled alternative assumption environments and support; theory graphs/MMT were reserved for a later modular-theory implementation if needed.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 10,
+   "answer": "The model moved from a flat hypothesis state \\(H_t\\subseteq\\mathcal U\\), to add/delete deltas and graded support, then to separating language, models, and theories. It next adopted an ATMS-style support graph with assumptions, justifications, and minimal environments, while institution theory supplied signatures/sentences/models; finally MMT was selected as the formal artifact substrate, with ATMS as the epistemic overlay and reasoning episodes carrying temporary assumption contexts.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 11,
+   "answer": "The immediate next step was to define and test the primitive epistemic actions, rather than add more candidate theories. This meant specifying action targets and semantics, then determining which actions are genuinely primitive versus compositions or readouts.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 12,
+   "answer": "The next step was to model warrant interaction explicitly: how warrants combine, how they conflict or defeat one another, and how they change graded support \\(\\rho\\). This was to extend the existing support/dependency graph beyond hard acceptance and rejection.",
+   "cannot_answer": false
+  }
+ ]
+}

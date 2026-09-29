@@ -1,0 +1,65 @@
+{
+ "cost": 0.00371485,
+ "answers": [
+  {
+   "question_number": 1,
+   "answer": "No final set of primitive epistemic actions had been established. The seven proposed candidate types were not orthogonal, “reframe” had been removed as a macro-term, and the work had shifted toward defining an interface and testing typed, compositional operators rather than asserting a universal operator list.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 2,
+   "answer": "The material does not specify a rule for numerically combining multiple warrants under graded support ρ. It only says that support is distinct from warrant and license, and that conflicting or defeasible warrants require explicit attack/defeat structure.",
+   "cannot_answer": true
+  },
+  {
+   "question_number": 3,
+   "answer": "Bronstein’s framework was removed because it was being imported largely because Brian had mentioned it, and although relevant to symmetry, stability, and scale, it did not solve the foundational problem of characterizing the relevant epistemic or pattern-forming primitives.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 4,
+   "answer": "“Reframe” was removed because it was judged to be a macro-term rather than a primitive operation. The formalism instead needed to distinguish expression construction, definitional extension, and substantive concept or predicate invention.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 5,
+   "answer": "The material does not state what the uniqueness claim about add/delete factorization depended on. It discusses canonical factorization and underfactoring or overfactoring, but does not provide the conditions establishing uniqueness.",
+   "cannot_answer": true
+  },
+  {
+   "question_number": 6,
+   "answer": "Brian supplied the correction, saying that “known” constraints should instead be treated as constraints “assumed.” The assistant adopted this by interpreting T as the currently active assumption context and separating it from the broader epistemic state.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 7,
+   "answer": "The assistant proposed treating canonical-factorization analysis as a meta-strategy or inquiry-control mechanism above primitive operators. Brian responded positively in effect: he connected it to his own recursive, self-applicative modeling and to analyzing reasoning strategies in specific conversations.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 8,
+   "answer": "Hoel’s causal-emergence and coarse-graining line was mentioned as a possible direction but was not developed into the foundation. The investigation moved instead toward representational lift, Pattern Theory, institution theory, ATMS, and formal candidate generation.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 9,
+   "answer": "Theory graphs were retained as potentially relevant but explicitly deferred; they were not added to the foundation after the ATMS/institution-theory synthesis.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 10,
+   "answer": "The model moved from the flat K=(U,H,μ) state with EXPAND/RESTRICT, to the institution-based K=(Σ,T,W,ρ,E,Q), which separated syntax, assumptions or theory, possible worlds, support, evidence, and queries. It then adopted ATMS structure K=(Σ,N,A,J,λ,ρ), represented reasoning episodes as R=(KΣ,Γ,Q), kept Q outside the epistemic state, and used MMT to supply the formal syntax, typing, and proof layer while ATMS supplied assumption environments, dependencies, and graded support.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 11,
+   "answer": "The immediate next step was to formalize and test candidate generation on the conversation itself: determine whether each move could receive a unique output type and a compositional operator description, then work through a complete strategy trace.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 12,
+   "answer": "The next step was to make support, warrant, license, and update distinct and add explicit attack or defeat structure for conflicting or defeasible warrants. The material does not specify the actual aggregation rule for multiple graded supports under ρ.",
+   "cannot_answer": false
+  }
+ ]
+}
