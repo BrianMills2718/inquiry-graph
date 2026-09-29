@@ -6,6 +6,8 @@
 
 ## Current phase
 
+For the final cross-project checkpoint from the long founding session, see [session-closeout-2026-09-29.md](session-closeout-2026-09-29.md).
+
 The foundational theory has been split out.
 
 This repository should now answer: **does a source-grounded inquiry graph provide useful capabilities beyond the transcript itself?**
