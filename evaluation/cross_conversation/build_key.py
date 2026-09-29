@@ -64,11 +64,20 @@ def render(conv: Conversation) -> str:
     return "\n\n".join(f"[{m.ordinal}] {label[m.actor_id]}:\n{m.text}" for m in conv.messages)
 
 
-def per_chat(cid: str, priv: Path = PRIV, out: Path = OUT) -> dict:
+def per_chat(
+    cid: str,
+    priv: Path = PRIV,
+    out: Path = OUT,
+    *,
+    model: str | None = None,
+    call_options: dict | None = None,
+    trace_prefix: str = "inquiry-graph/xconv-key",
+) -> dict:
     path = out / f"{cid}.positions.json"
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
     conv = Conversation.model_validate_json((priv / f"{cid}.conv.json").read_text(encoding="utf-8"))
+    print(f"{cid}: extracting reference positions", flush=True)
     prompt = f"""Read this entire conversation between BRIAN and an ASSISTANT ("{conv.title}").
 List Brian's own substantive positions and open questions about ideas (not work instructions such as
 "proceed", "write the doc", "review the repo"). Include positions he asserts, leans toward, rejects or is
@@ -78,9 +87,10 @@ exact verbatim quote (5-30 words) from that message. Aim for the 10-25 most impo
 
 CONVERSATION:
 {render(conv)}"""
-    res, meta = call_llm_structured(MODEL, [{"role": "user", "content": prompt}], response_model=ChatPositions,
-                                    reasoning_effort="high", task="synthesis",
-                                    trace_id=f"inquiry-graph/xconv-key/positions/{cid}", **COMMON)
+    trace_id = f"{trace_prefix}/positions/{cid}"
+    res, meta = call_llm_structured(model or MODEL, [{"role": "user", "content": prompt}],
+                                    response_model=ChatPositions, reasoning_effort="high", task="synthesis",
+                                    trace_id=trace_id, **{**COMMON, **(call_options or {})})
     brian = {m.ordinal: m for m in conv.messages if m.actor_id.endswith("brian")}
     kept, dropped = [], []
     for i, p in enumerate(res.positions):
@@ -94,19 +104,30 @@ CONVERSATION:
         else:
             dropped.append(rec)
     data = {"chat": cid, "title": conv.title, "kept": kept, "dropped": dropped, "cost": meta.cost,
-            "trace_id": f"inquiry-graph/xconv-key/positions/{cid}"}
+            "trace_id": trace_id}
     path.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"{cid}: {len(kept)} positions kept, {len(dropped)} dropped (quote not in a Brian message); ${meta.cost:.3f}")
+    print(f"{cid}: {len(kept)} positions kept, {len(dropped)} dropped (quote not in a Brian message); ${meta.cost:.3f}",
+          flush=True)
     return data
 
 
-def cross(all_positions: list[dict], out: Path = OUT, spec: str | None = None, n_chats: int = 5) -> dict:
+def cross(
+    all_positions: list[dict],
+    out: Path = OUT,
+    spec: str | None = None,
+    n_chats: int = 5,
+    *,
+    model: str | None = None,
+    call_options: dict | None = None,
+    trace_prefix: str = "inquiry-graph/xconv-key",
+) -> dict:
     path = out / "cross_key.json"
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
     listing = "\n".join(f"{p['id']} | chat \"{p['chat_title']}\" {p.get('date') or ''} | {p['kind']}/{p['stance']} | {p['statement']}"
                         for chat in all_positions for p in chat["kept"])
     spec = spec or DEFAULT_SPEC
+    print(f"cross key: comparing verified positions from {n_chats} chats", flush=True)
     prompt = f"""Below are Brian's verified positions and open questions from {n_chats} of his conversations
 (each line gives the chat title and date).
 {spec}
@@ -115,9 +136,10 @@ position_summary may use 1 chat if only one addresses it). Do not use outside kn
 
 POSITIONS (id | chat | kind/stance | statement):
 {listing}"""
-    res, meta = call_llm_structured(MODEL, [{"role": "user", "content": prompt}], response_model=CrossKey,
-                                    reasoning_effort="high", task="synthesis",
-                                    trace_id="inquiry-graph/xconv-key/cross", **COMMON)
+    trace_id = f"{trace_prefix}/cross"
+    res, meta = call_llm_structured(model or MODEL, [{"role": "user", "content": prompt}],
+                                    response_model=CrossKey, reasoning_effort="high", task="synthesis",
+                                    trace_id=trace_id, **{**COMMON, **(call_options or {})})
     known = {p["id"]: p for chat in all_positions for p in chat["kept"]}
     kept, dropped = [], []
     for it in res.items:
@@ -126,9 +148,10 @@ POSITIONS (id | chat | kind/stance | statement):
         needs_two = it.category != "position_summary"
         ok = ids and len(ids) == len(it.position_ids) and (len(chats) >= 2 or not needs_two)
         (kept if ok else dropped).append({**it.model_dump(), "chats": sorted(chats)})
-    data = {"kept": kept, "dropped": dropped, "cost": meta.cost, "trace_id": "inquiry-graph/xconv-key/cross"}
+    data = {"kept": kept, "dropped": dropped, "cost": meta.cost, "trace_id": trace_id}
     path.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"cross key: {len(kept)} items kept, {len(dropped)} dropped (unknown ids or single-chat); ${meta.cost:.3f}")
+    print(f"cross key: {len(kept)} items kept, {len(dropped)} dropped (unknown ids or single-chat); ${meta.cost:.3f}",
+          flush=True)
     return data
 
 
