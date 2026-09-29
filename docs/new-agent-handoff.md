@@ -442,6 +442,7 @@ At handoff:
 - **#17** — escalation path for first-class derivation/subargument structure.
 - **#18** — escalation path for full ABA+ / set-to-set hyperargumentation.
 - **#34** — acceptance licensing and warrant composition; **main foundational priority**.
+- **#37** — scope the strategy-performance statistical guarantee for multiple comparisons, adaptive search and optional stopping; correctness/hardening follow-up, not a reason to expand the core architecture.
 
 ## 15. Open pull requests that are separate from current main
 
@@ -576,8 +577,9 @@ Current priority order is authoritative as follows:
 3. **Issue #3 — source reconciliation** when the full export is available.
 4. **Paper/research communication** if preparing an external research artifact.
 5. **Issues #17/#18** remain escalation-only, not active implementation plans.
-6. **Issue #2** remains low-priority hosted-CI infrastructure debt.
-7. **PR #8/#15** remain intentionally separate and must not be merged casually.
+6. **Issue #37** is a bounded statistical-scope review for the strategy-performance reference regime.
+7. **Issue #2** remains low-priority hosted-CI infrastructure debt.
+8. **PR #8/#15** remain intentionally separate and must not be merged casually.
 
 If a future document conflicts with this handoff, prefer the canonical closeout and current ADRs, then update this handoff rather than inferring intent from historical notes.
 
