@@ -42,7 +42,7 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 ### Maintenance
 
-**P2 — Systematic framework comparison / paper normalization.** Track in issue #40. The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of older historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; only a fresh independent integrated rerun of current main remains as verification follow-up.
+**P2 — Systematic framework comparison / paper normalization.** Track in issue #40. The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of older historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; its post-merge integrated rerun passed (142 tests).
 
 **P3 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. The last independently executed application-level baseline is local and green: 142 tests on post-PR-#36 `main` (native Windows and Linux), 8 artifacts, graph 0 errors/0 warnings, dependency check clean.
 
