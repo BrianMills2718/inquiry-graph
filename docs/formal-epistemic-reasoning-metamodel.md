@@ -1049,9 +1049,9 @@ Expected direction: hyperargumentation/set-to-set semantics rather than forcing 
 - Bernoulli support interpretation;
 - ABA construction;
 - typed attack origins;
-- binary preference filtering;
+- binary preference filtering (**implementation currently under semantic audit in issue #46; do not treat its rationality properties as established**);
 - grounded Dung semantics;
-- grounded dialectical warrant;
+- grounded dialectical warrant (**target-binding bug reported in issue #46 until fixed**);
 - graded-support warrant;
 - strict-Horn deductive warrant;
 - measurement warrant;
