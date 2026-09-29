@@ -769,18 +769,13 @@ Existing mature approaches cover important fragments:
 
 The challenge is whether these can be placed under one useful meta-interface without pretending they share one universal primitive operator basis.
 
-The present candidate-generation interface is intentionally weak enough to cover all of them:
+The candidate-generation interface was subsequently stress-tested against CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR automated theory formation, and computational conceptual blending. All five fit a revised typed regime without a new top-level coordinate:
 
 \[
-(
-\mathcal D,
-\mathcal O,
-\to,
-\operatorname{Elab},
-V,
-\pi
-).
+\mathcal G_R=(\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,\to_R,V_R).
 \]
+
+A generation episode is separated as \(E_G=(R,\mathcal G_R,d_0)\), and changes to the generative regime itself are modeled separately as \(\mu:\mathcal G_R\rightharpoonup\mathcal G'_R\). The mapping also shows that transformationality is representation-relative: generating a fresh predicate may remain an ordinary transition if the existing meta-language already permits predicate invention.
 
 The central open questions are:
 
