@@ -152,7 +152,7 @@ The integrated verification gate is now cleared. The next milestone is benchmark
 3. reconcile the full conversation export and test source completeness;
 4. evaluate empirical usefulness for inquiry navigation/auditability;
 5. add any new formal layer only when a benchmark/use case requires it;
-6. candidate-generation framework mapping and cross-framework glue surveys are now complete. Existing blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar cover most orchestration needs. Further foundational work should focus only on typed adapter semantics and warrant/guarantee transport across generator composition if a concrete case requires it.
+6. candidate-generation framework mapping and cross-framework glue surveys are now complete. Existing blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar cover most orchestration needs. Formal adapter/guarantee transport has now been mapped to existing institution/DOL/Hets, MMT theory-morphism, abstract-interpretation and contract/refinement machinery. Further foundational work should be driven only by concrete failures in typed adapter metadata, preservation-certificate composition, or non-formal/empirical translation cases.
 
 ## Verification status
 
@@ -173,6 +173,7 @@ Eventually import the full conversation export and reconcile curated excerpts to
 - [Formalism](formalism.md)
 - [Warrant/license](warrant-license-interface.md)
 - [End-to-end warrant benchmark](end-to-end-warrant-benchmark.md)
+- [Warrant/guarantee transport](warrant-guarantee-transport.md)
 - [Candidate-generation cross-framework glue](candidate-generation-cross-framework-glue.md)
 - [Candidate generation framework mappings](candidate-generation-framework-mappings.md)
 - [Candidate generation landscape](candidate-generation-landscape.md)
