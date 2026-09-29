@@ -106,9 +106,20 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
     - v1.0: about 5/12 correct (below the gate).
     - v1.1: 7–9/12 correct (all 6 pulls_against and evolves right). A strict count was just under the gate.
     - v1.2: 10/11 correct, 9/11 strict. The only clear error is a thematic stretch between Peircean categories and the question of whether inference types are exhaustive. **Gate passed.**
-- **Current increment:** 2 (select and extract 25 more chats).
-- **Blockers:** none.
-- **Resume event:** n/a.
+- **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
+  records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
+  `private/xconv/scale_run/corpus.json`.
+- **Current increment:** 3 (independent reference key).
+- **C3 state:** 8 of 30 per-chat key files exist in the original OpenRouter run; the cross-key,
+  route answers and grades are absent. OpenRouter rejected the next key request because the
+  account could afford only 29,639 tokens. A separate Codex CLI subscription probe on one chat
+  returned 20 positions with all 20 quotes matching Brian-authored messages; the client reported
+  `subscription_included` and `$0`, but no token counts. This proves one-chat route compatibility,
+  not full-run capacity. Keep any Codex campaign separate and regenerate all 30 keys consistently.
+- **Blocker:** the original OpenRouter route cannot continue at the current balance; capacity for
+  the full Codex campaign is not established.
+- **Resume event:** prepare a separate Codex-backed campaign, then monitor Codex usage while
+  generating the full reference key and running the comparison stages.
 
 ## Evaluator-Facing Objective
 
