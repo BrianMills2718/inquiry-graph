@@ -122,8 +122,19 @@ non_gating_utility_review:
 
 ## Current State
 
-- **Demonstrated:** the single-chat model-reader pilot (`evaluation/usefulness_pilot/results.md`): transcript 0.81, graph 0.65, excerpts 0.59.
-- **Current increment:** 1 (live producer).
+- **Demonstrated:**
+  - The single-chat model-reader pilot (`evaluation/usefulness_pilot/results.md`).
+  - **C1 (2026-09-29):** live extraction of "Inference Beyond Observation" through `llm_client`.
+    - Input: 211 visible messages in 17 chunks, 2 minutes, $0.072, prompt `live-2.2.0`.
+    - Output: 174 nodes, 153 stances (52 by Brian), 25 question events and 57 relations. `validate`: valid, 0 errors.
+    - Traces: `inquiry-graph/live-extract/chatgpt:6ab8563b-…/chunk00`–`chunk16`. All 17 show 1 call, 0 errors, `finish_reason=stop`.
+    - Spot checks of 12 random Brian stances per prompt round:
+      - v2.0: 9/12 right; 2 wrong target or type; 1 arguable.
+      - v2.1: 0 wrong, but 4/12 procedural noise.
+      - v2.2: 11/12 right; 1 wrong target (a question attached to the assistant's answer); 0 procedural.
+    - Speaker attribution is enforced by code. In v2.2 all 12 sampled stances quote Brian's own messages.
+    - Quote realignment (formatting-insensitive matching, anchored to exact source text) raised node grounding from 43% to about 80%.
+- **Current increment:** 2 (select the other 4 chats and build the reference key).
 - **Blockers:** none.
 - **Resume event:** n/a.
 

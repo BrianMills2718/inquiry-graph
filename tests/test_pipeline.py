@@ -6,7 +6,7 @@ from inquiry_graph.io import ingest, merge, write_json, import_export
 from inquiry_graph.model import Candidates, COLLECTIONS
 from inquiry_graph.views import open_questions, trace, network
 from inquiry_graph.render import html_view, mermaid, dot
-from inquiry_graph.extract import call_openai, prepare
+from inquiry_graph.extract import prepare
 from inquiry_graph.cli import main
 
 
@@ -108,21 +108,47 @@ def test_import_path_traversal_is_not_filename(tmp_path):
     assert len(files)==1 and len(files[0].stem)==24
 
 
-def test_provider_protocol_without_network(graph):
-    captured={}
-    candidates=Candidates()
-    def parse(**kw):
-        captured.update(kw)
-        return SimpleNamespace(output_parsed=candidates,status='completed')
-    assert call_openai(graph.conversations[0],'test-model',SimpleNamespace(responses=SimpleNamespace(parse=parse)))==candidates
-    assert captured['text_format'] is Candidates and captured['store'] is False
-    assert 'UNTRUSTED DATA' in captured['input'][0]['content']
+def test_live_convert_grounds_quotes_and_enforces_speaker(graph):
+    from collections import Counter
+    from inquiry_graph.live_extract import LChunk, convert
+    conv=graph.conversations[0]
+    user=next(m for m in conv.messages if m.actor_id.endswith('brian'))
+    asst=next(m for m in conv.messages if m.actor_id.endswith('assistant'))
+    out=LChunk.model_validate({
+        'nodes':[{'key':'a','kind':'claim','text':'t','message':user.ordinal,'quote':user.text[:20]},
+                 {'key':'b','kind':'claim','text':'t','message':user.ordinal,'quote':'not in the message at all'}],
+        'stances':[{'speaker':'user','target':'a','stance':'posits','message':user.ordinal,'quote':user.text[:20]},
+                   {'speaker':'user','target':'a','stance':'endorses','message':asst.ordinal,'quote':asst.text[:20]}]})
+    drops=Counter()
+    c=convert(conv,0,out,drops)
+    assert [n.anchors[0].quote for n in c.nodes]==[user.text[:20]]
+    assert len(c.stance_events)==1 and c.stance_events[0].actor_id==user.actor_id
+    assert drops['quote_not_found']==1 and drops['speaker_not_author']==1
 
 
-@pytest.mark.parametrize('status,parsed',[('incomplete',Candidates()),('completed',None)])
-def test_provider_refusal_or_truncation(graph,status,parsed):
-    client=SimpleNamespace(responses=SimpleNamespace(parse=lambda **kw:SimpleNamespace(status=status,output_parsed=parsed)))
-    with pytest.raises(ValueError):call_openai(graph.conversations[0],'test-model',client)
+def test_live_prune_removes_invalid_and_counts(graph):
+    from collections import Counter
+    from inquiry_graph.live_extract import prune_to_valid
+    from inquiry_graph.model import Graph
+    g=Graph.model_validate(graph.model_dump())
+    q=g.question_events[0]
+    claim=next(n for n in g.nodes if n.kind=='claim')
+    g.question_events[0]=q.model_copy(update={'question_id':claim.id})
+    drops=Counter()
+    pruned=prune_to_valid(g,drops)
+    assert q.id not in {e.id for e in pruned.question_events}
+    assert drops['invalid:question_type']==1
+
+
+def test_bridge_transcript_keeps_only_visible_speech():
+    from inquiry_graph.bridge import parse_bridge_markdown
+    text=("# T\nconversation 6ab8563b-cbfc-83ea-81ed-a0acdea0ea9c · x\n\n"
+          "## assistant (2026-01-01T00:00:00Z)\n\n## user (2026-01-01T00:00:01Z)\nHello there\n\n"
+          "## tool (2026-01-01T00:00:02Z)\nfile contents\n\n## assistant (2026-01-01T00:00:03Z)\nHi\n")
+    conv,skipped=parse_bridge_markdown(text)
+    assert conv.id=='chatgpt:6ab8563b-cbfc-83ea-81ed-a0acdea0ea9c'
+    assert [m.text for m in conv.messages]==['Hello there','Hi']
+    assert skipped=={'tool':1,'empty':1}
 
 
 def test_render_escapes_untrusted_content(graph):
@@ -185,10 +211,10 @@ def test_hidden_export_messages_are_skipped():
 def test_transport_error_quarantined(graph,tmp_path,monkeypatch):
     from inquiry_graph import cli
     def fail(*args,**kw):raise ConnectionError('transport unavailable')
-    monkeypatch.setattr(cli,'call_openai',fail)
+    monkeypatch.setattr(cli,'llm_extract',fail)
     src=tmp_path/'source.json';write_json(src,graph.conversations[0])
     output=tmp_path/'graph.json'
-    assert main(['extract',str(src),str(output),'--openai','--model','test-model',
+    assert main(['extract',str(src),str(output),'--llm','--model','test-model',
                  '--quarantine-dir',str(tmp_path/'quarantine')])==1
     assert not output.exists() and list((tmp_path/'quarantine').glob('failed-*.json'))
 

@@ -8,7 +8,8 @@ import sys
 from .model import Conversation, Graph, Candidates
 from .io import load, write_json, import_export, ingest, merge, quarantine
 from .validate import validate, require_valid
-from .extract import prepare, call_openai
+from .extract import prepare
+from .bridge import parse_bridge_markdown
 from .views import stats, open_questions, trace, relations_of_kind
 from .render import mermaid, dot, report, html_view
 
@@ -38,9 +39,16 @@ def parser():
     s.add_argument("output")
     source = s.add_mutually_exclusive_group(required=True)
     source.add_argument("--response-file")
-    source.add_argument("--openai", action="store_true")
-    s.add_argument("--model")
+    source.add_argument("--llm", action="store_true", help="live chunked extraction through llm_client")
+    s.add_argument("--model", help="llm_client model id; default: llm_client get_model('extraction')")
+    s.add_argument("--cache-dir", default="private/llm-cache")
+    s.add_argument("--report", help="write the grounding/drop report here")
     s.add_argument("--quarantine-dir", default="private/quarantine")
+    s.add_argument("--force", action="store_true")
+    s = sub.add_parser("import-bridge", help="normalize a chatgpt-bridge read_chatgpt_chat transcript")
+    s.add_argument("input")
+    s.add_argument("output")
+    s.add_argument("--user-label", default="Brian")
     s.add_argument("--force", action="store_true")
     s = sub.add_parser("merge")
     s.add_argument("inputs", nargs="+")
@@ -87,15 +95,22 @@ def run(args):
             if args.response_file:
                 raw = Path(args.response_file).read_text(encoding="utf-8")
                 candidates = Candidates.model_validate_json(raw)
+                graph = ingest(source,candidates,method="response-file",model=args.model)
             else:
-                candidates = call_openai(source,args.model)
-                raw = candidates.model_dump(mode="json")
-            graph = ingest(source,candidates,method="response-file" if args.response_file else "openai-structured",model=args.model)
+                graph, report = llm_extract(source, args.model, Path(args.cache_dir))
+                raw = report
+                if args.report:
+                    write_json(args.report, report, args.force)
             write_json(args.output,graph,args.force)
         except Exception as exc:
             location = quarantine(args.quarantine_dir,raw,exc)
             raise ValueError(f"Extraction rejected; diagnostics in {location}") from exc
         return stats(graph)
+    elif args.cmd == "import-bridge":
+        conv, skipped = parse_bridge_markdown(Path(args.input).read_text(encoding="utf-8"), user_label=args.user_label)
+        require_valid(Graph(id="import-check", conversations=[conv]))
+        write_json(args.output, conv, args.force)
+        return {"conversation": conv.id, "messages": len(conv.messages), "skipped": skipped}
     elif args.cmd == "merge":
         graph = merge([load(path,Graph) for path in args.inputs])
         write_json(args.output,graph,args.force)
@@ -137,3 +152,13 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+def llm_extract(source, model, cache_dir):
+    """Run the live extractor; import lazily so the base install needs no LLM client."""
+    import asyncio
+    from .live_extract import extract_conversation
+    if not model:
+        from llm_client import get_model
+        model = get_model("extraction")
+    return asyncio.run(extract_conversation(source, model, cache_dir))
