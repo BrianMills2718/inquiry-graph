@@ -13,25 +13,40 @@ clustered by topic. inquiry-graph = per-chat producer; onto-canon6 = cross-sourc
 ## State
 - Merged: inquiry-graph PRs #44, #45, #49-#59 (goal 1 cross-chat positions proof done; goal 2
   step C1, the relation-typed linker v1.2, done, 10/11 hand-checked). Router PR #44 merged.
-- Worktree `~/code/inquiry-graph/worktrees/linker`, branch `goal/linker-scale`, HEAD `aaa5361`:
+- Worktree `~/code/inquiry-graph/worktrees/linker`, branch `goal/linker-scale`:
   - includes the parameterized `build_key`, the `live_extract` supersession-cycle fix + test,
     and `evaluation/cross_conversation_scale/scale.py`.
   - UNTRACKED and to be deleted once a shared viewer exists: `tools/build_inquiry_map.py`,
     `tools/inquiry_map_template.html` (hand-rolled D3; Brian rejected this approach).
 - Goal docs: `docs/goals/cross-conversation-linker.md` (C2-C5 remain).
 
-## BLOCKER: OpenRouter credits (needs Brian)
+## Scale-run provider status (2026-09-29)
 The 30-chat scale run (`scale.py`) exited in the "key" stage: OpenRouter refused
 `build_key.per_chat` with "requires more credits ... can only afford 29639" tokens.
 Corpus (30 chats, ~4.2M chars, all graphs valid) and linker outputs are already cached under
-`private/xconv/scale_run/`. Do NOT cap max_tokens to dodge it (AGENTS.md rule). After credits
-are topped up, rerun: `cd worktrees/linker && .venv/bin/python evaluation/cross_conversation_scale/scale.py > private/xconv/scale_run.log 2>&1`
-The runner does skip existing outputs. At this handoff, all 30 corpus IDs have valid graphs;
-8 of 30 per-chat key JSONs exist, and their IDs all belong to the corpus. The other 22 key
-calls and the cross-key call are still needed. Linker exports exist; route answer files and
-`grades.json` do not, so completing the evaluation also needs route A (15 calls), B/C (one
-call each), and judging (15 calls). These counts come from the current cache and the stage
-loops in `scale.py`; the run was not resumed. Check the log with `grep -v TIMEOUT`.
+`private/xconv/scale_run/`. Do NOT cap max_tokens to dodge it (AGENTS.md rule).
+
+A bounded Codex-subscription probe succeeded on chat `6a7bd3db` through
+`codex/gpt-5.6-luna` using the installed Codex CLI and metadata-only observability. It returned
+20 positions; all 20 quotes matched Brian-authored messages. The client reported
+`billing_mode=subscription_included`, `$0`, and no token usage counts. Trace:
+`inquiry-graph/xconv-key/codex-subscription-probe/6a7bd3db-20260929-attempt2`.
+Codex `/status` showed Pro, 84% of the weekly limit and 48% of Luna Reserve remaining at the
+time checked. This proves the route works for one chat, not that the remaining 30-chat workload
+fits the available allowance. The scale run has not been resumed; its original OpenRouter cache
+is unchanged.
+
+For a consistent Codex reference-key set, use a separate run directory and regenerate all 30
+per-chat keys rather than mixing the eight existing OpenRouter keys with Codex output. The
+cross-key, route-answer and grading stages also remain outstanding. Do not buy OpenRouter credits
+or infer full-run capacity from the single probe.
+
+At this handoff, all 30 corpus IDs have valid graphs; 8 of 30 per-chat key JSONs exist, and
+their IDs all belong to the corpus. The other 22 key calls and the cross-key call are still
+needed in the original run. Linker exports exist; route answer files and `grades.json` do not,
+so completing the evaluation also needs route A (15 calls), B/C (one call each), and judging
+(15 calls). These counts come from the current cache and the stage loops in `scale.py`. Do not
+resume the original mixed-provider cache as a completed evaluation.
 
 ## Jev/Laya extraction check (2026-09-29)
 
@@ -72,7 +87,10 @@ exploratory and not replayable. Neither System 1 probe establishes a drop-in rep
 the reference-key generator. Do not infer extraction precision from these results.
 
 ## Next steps
-1. Finish goal 2: after the rerun, hand-check >= 4 grades, write
+1. Add a Codex CLI subscription route to the scale-run entrypoint, keep its output in a separate
+   campaign directory, and regenerate all 30 reference keys consistently. Check usage while
+   running; the one-call trace has no token counts. Then finish the scale evaluation, hand-check
+   >= 4 grades, write
    `evaluation/cross_conversation_scale/results.md`, comment on issue #38, open the PR.
    Report counts and exit status.
 2. Graph viewer (Brian: "every time i ask for a graph ... my coding agents try to recreate the
