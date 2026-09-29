@@ -444,6 +444,8 @@ At handoff:
 - **#17** — escalation path for first-class derivation/subargument structure.
 - **#18** — escalation path for full ABA+ / set-to-set hyperargumentation.
 - **#34** — acceptance licensing and warrant composition; **main foundational priority**.
+- **#38** — empirical usefulness of the inquiry representation / Inquiry System.
+- **#40** — systematic comparison against the closest integrated frameworks, with adoption/alignment rather than novelty as the goal.
 - **#38** — evaluate whether the inquiry representation is actually useful; main empirical/product-validation issue.
 - **#40** — systematic comparison matrix against the closest integrated frameworks; main research-positioning/adoption issue.
 
@@ -581,9 +583,9 @@ Current priority order is authoritative as follows:
 4. **Issue #3 — source reconciliation** when the full export is available.
 5. **Issue #40 — systematic integrated-framework comparison** for adoption/positioning and paper cleanup.
 6. **Issues #17/#18** remain escalation-only, not active implementation plans.
-6. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
-7. **Issue #2** remains low-priority hosted-CI infrastructure debt.
-8. **PR #8/#15** remain intentionally separate and must not be merged casually.
+7. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
+8. **Issue #2** remains low-priority hosted-CI infrastructure debt.
+9. **PR #8/#15** remain intentionally separate and must not be merged casually.
 
 If a future document conflicts with this handoff, prefer the canonical closeout and current ADRs, then update this handoff rather than inferring intent from historical notes.
 
