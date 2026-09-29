@@ -152,7 +152,7 @@ The integrated verification gate is now cleared. The next milestone is benchmark
 3. reconcile the full conversation export and test source completeness;
 4. evaluate empirical usefulness for inquiry navigation/auditability;
 5. add any new formal layer only when a benchmark/use case requires it;
-6. candidate-generation mapping is now complete across CEGIS, MIL, anti-unification, HR, and conceptual blending; further theory should focus only on generative-regime equivalence/composition, operator or bias invention, and generator-level warrant.
+6. candidate-generation framework mapping and cross-framework glue surveys are now complete. Existing blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar cover most orchestration needs. Further foundational work should focus only on typed adapter semantics and warrant/guarantee transport across generator composition if a concrete case requires it.
 
 ## Verification status
 
@@ -173,6 +173,7 @@ Eventually import the full conversation export and reconcile curated excerpts to
 - [Formalism](formalism.md)
 - [Warrant/license](warrant-license-interface.md)
 - [End-to-end warrant benchmark](end-to-end-warrant-benchmark.md)
+- [Candidate-generation cross-framework glue](candidate-generation-cross-framework-glue.md)
 - [Candidate generation framework mappings](candidate-generation-framework-mappings.md)
 - [Candidate generation landscape](candidate-generation-landscape.md)
 - [Candidate generation interface](candidate-generation-interface.md)
