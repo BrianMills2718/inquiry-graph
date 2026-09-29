@@ -1532,3 +1532,45 @@ Likely mature ingredients include:
 
 This result is recorded in ADR 017 and [candidate-generation-cross-framework-glue.md](candidate-generation-cross-framework-glue.md).
 
+## 47. Guarantee transport is largely an existing heterogeneous-formal-methods problem
+
+The cross-framework glue pass left one apparently substantive question:
+
+> if a generator establishes a guarantee in its native representation and an adapter translates the output, what guarantee survives?
+
+A dedicated literature pass showed that this is also heavily precedented.
+
+For formal logics, institution theory provides satisfaction-preserving translations through morphisms/comorphisms. Hets and DOL operationalize graphs of heterogeneous logics, first-class translations, tool integration and heterogeneous proof management.
+
+MMT/LF-style theory morphisms provide theorem/judgment preservation.
+
+For lossy translations, abstract interpretation provides sound one-way guarantee transfer.
+
+For component/interface transformations, refinement and assume-guarantee/contract theories provide preservation and composition machinery, while also showing an important caution: preserving refinement does not imply preserving serial composition or every other constructor.
+
+The architecture therefore adopts:
+
+\[
+\boxed{
+\text{artifact translation}
+\not\Rightarrow
+\text{guarantee transport}.
+}
+\]
+
+An adapter must carry a typed preservation relation:
+
+\[
+\operatorname{Preserves}_\tau(G_S,G_T)
+\]
+
+with a certificate/theorem appropriate to the guarantee family.
+
+Adapters are usefully classified from opaque translation through provenance-only, sound one-way, exact satisfaction/judgment preserving, and composition-preserving translations.
+
+If no preservation certificate exists, translated output is only a candidate and must be re-warranted in the target regime.
+
+This also exposed that warrant assumptions should be typed: formal/representation-internal assumptions may translate through a morphism while external applicability assumptions such as calibration validity or i.i.d. sampling remain residual obligations.
+
+This result is recorded in ADR 018 and [warrant-guarantee-transport.md](warrant-guarantee-transport.md).
+
