@@ -112,9 +112,9 @@ Likely use:
 - SSSOM for common pairwise correspondences and exchange/governance metadata;
 - EDOAL-style expressive correspondence only when the mapping genuinely cannot be represented pairwise.
 
-## 4. Matching/evaluation infrastructure: OAEI + MELT
+## 4. Matching/evaluation infrastructure: OAEI + MELT (reference only; empirical work approval-gated)
 
-Use OAEI methodology and MELT as the primary reference for matcher evaluation rather than defining a bespoke benchmark methodology.
+OAEI methodology and MELT are useful prior art for matcher evaluation if empirical comparison is later needed. Do not create or run a benchmark by default; first use first-principles reasoning and current SOTA/prior-art research. Any benchmark or comparative empirical evaluation requires Brian's explicit approval.
 
 Established pattern:
 
@@ -281,19 +281,23 @@ Likely custom work is small and should be justified one predicate/invariant at a
 
 Before adding any such predicate, search for a standard relation with the same semantics and document why it is inadequate.
 
-## 11. Recommended first benchmark
+## 11. Empirical-work gate
 
-Only after the standards crosswalk is fixed:
+Do not create a reference benchmark, held-out split, matcher bakeoff, or other
+comparative empirical program by default.
 
-1. choose a small set of cross-trajectory candidate pairs;
-2. type each pair using the most specific established predicate available;
-3. use Inquiry-specific predicates only for demonstrated gaps;
-4. record uncertain/no-decision separately from negative/distinct;
-5. hold out part of the set;
-6. evaluate candidate retrieval separately from semantic adjudication;
-7. test global invariant/coherence effects separately from pairwise correctness.
+Use:
 
-This yields a benchmark compatible with established ontology-matching practice rather than a bespoke scoring scheme.
+```text
+first principles
+  -> SOTA/prior-art research
+  -> semantic/architecture decision
+  -> targeted empirical check only if material uncertainty remains
+```
+
+Any benchmark or comparative empirical evaluation requires Brian's explicit
+approval. If later approved, prefer the smallest discriminating experiment that
+resolves the named uncertainty.
 
 ## 12. Adoption posture
 
