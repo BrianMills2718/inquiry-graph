@@ -54,13 +54,18 @@ Likely capabilities:
 
 Do not optimize for human-facing UI. Choose storage/query technology only after measuring actual multi-conversation retrieval needs.
 
-## P3 — Cross-conversation identity and incremental updates
+## P3 — Downstream cross-conversation integration
 
-Introduce reviewed identity proposals with reasons and undo history.
+Cross-source identity, alignment, governed assertions and tension/conflict detection belong in the downstream `onto-canon6` direction, not in Inquiry Graph.
 
-Do not silently merge by similarity.
+Inquiry Graph should emit per-conversation, source-grounded attributed structure that can be consumed downstream. When the multi-conversation usefulness experiment reaches this stage:
 
-Add chunking/reconciliation for larger conversations with boundary provenance.
+- test the handoff contract into the downstream canonicalization layer;
+- preserve speaker/stance, source provenance, question state, rationale and deferred-branch outcomes;
+- measure whether downstream integration recovers cross-conversation tensions without silent semantic merging;
+- keep any reviewed identity proposals, reasons and undo history in the downstream owner rather than creating a second canonical store here.
+
+Incremental/chunked processing for larger **individual conversations** may still be added here when evaluation requires it, with boundary provenance preserved.
 
 ## Maintenance — hosted CI
 
