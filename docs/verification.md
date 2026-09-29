@@ -6,7 +6,7 @@
 
 An independent Linux rerun on a tree byte-identical to the same `main` (Python 3.10.12, Pydantic 2.13.5, NetworkX 3.4.2, jsonschema 4.26.0) also produced **142 passed**, the same fixture counts, 8 artifacts with `--check` passing, 0 validation errors/warnings, and byte-identical rebuilt `examples/seed/*`; `dot -Tsvg examples/seed/inquiry.dot` exited 0 there. Its `pip check` flagged only an unrelated system pipx/argcomplete conflict.
 
-These two runs cover PR #36's strategy-performance multiple-comparison/optional-stopping correction. Current `main` is `81f136f`; `main` is four documentation-only commits ahead of verified code commit `4ad3942`, so this execution record still covers the executable tree. The previous integrated native-Windows record, before PR #36, was **138 tests passed** with the same fixture, artifact, validation and dependency results.
+These two runs cover PR #36's strategy-performance multiple-comparison/optional-stopping correction. At the handoff review, the commits after verified code commit `4ad3942` were documentation-only, so this execution record still covered the executable tree. Check the current branch diff before assuming that remains true. The previous integrated native-Windows record, before PR #36, was **138 tests passed** with the same fixture, artifact, validation and dependency results.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
