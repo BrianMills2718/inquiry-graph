@@ -126,6 +126,14 @@ Formal epistemology is methodologically plural. It uses probability theory, logi
 
 The contribution proposed here is therefore architectural rather than foundational in the sense of replacing that plurality.
 
+### 3.1a Discovery, justification, warrants, and acceptance
+
+Reichenbach's distinction between the context of discovery and the context of justification is a direct philosophical precedent for separating candidate generation from warrant. The present framework does not assume that the process that proposes a candidate is itself what justifies later epistemic commitment.
+
+Toulmin's distinction among data, warrant, claim, and backing is likewise an important ancestor of the explicit-warrant view developed here, although the present framework targets typed epistemic actions rather than only argumentative claims.
+
+Carneades and related proof-standard approaches show that argument acceptance may depend on issue-relative proof standards rather than one universal evidential threshold. The belief-versus-acceptance literature also motivates treating acceptance as a policy/commitment notion distinct from graded credence. These traditions are central to the current open problem of acceptance licensing and warrant composition.
+
 ### 3.2 AGM belief revision and belief change
 
 AGM theory represents belief-state change through postulates and representation theorems for operations such as expansion, contraction, and revision. Closely related work distinguishes belief sets from belief bases and studies iterated revision.
