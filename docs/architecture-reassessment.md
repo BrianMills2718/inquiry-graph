@@ -83,26 +83,32 @@ The fact that they all fit the same action-targeted warrant interface is evidenc
 
 The following are still research questions, but they do not currently justify another top-level layer.
 
+### Acceptance licensing and warrant composition
+
+This is now the main foundational/integrative frontier.
+
+The executable regimes deliberately distinguish support, warrant, current license and execution, but they mostly license recording, deriving or typed defeasible-use actions rather than unconditional proposition acceptance.
+
+Open questions include:
+
+- what acceptance/commitment/use-for-action means;
+- whether acceptance is task/stakes-relative;
+- how heterogeneous typed guarantees compose;
+- how closure problems such as lottery/preface cases are handled;
+- what licenses retraction/revision;
+- whether acceptance policies are themselves warrantable meta-policies.
+
+This is tracked in issue #34.
+
 ### Candidate generation
 
-The deepest unresolved theoretical area remains the generative side:
+Candidate generation is no longer the deepest general unknown.
 
-\[
-\mathcal G_R=
-(\mathcal D_R,d_0,\mathcal O_R,\to_R).
-\]
+The project has mapped CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR theory formation and conceptual blending into a typed generative-system interface, and has mapped cross-framework orchestration to blackboards, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar and reflection.
 
-We have an interface and worked strategies, not a universal algebra of hypothesis invention.
+Formal guarantee transport is likewise mapped to institutions/DOL/Hets, MMT theory morphisms, abstract interpretation and contract/refinement theory.
 
-This should be revisited only after the downstream warrant pipeline has been exercised on real inquiry traces.
-
-### Warrant composition
-
-Multiple warrant regimes can coexist or conflict.
-
-There is no universal aggregation rule yet.
-
-This is intentional: heterogeneous guarantees should not be scalarized without an explicit meta-regime.
+Reopen candidate-generation foundations only if a concrete case breaks those mappings.
 
 ### Context entailment
 
@@ -174,9 +180,11 @@ The complete repository suite has now been run in the native Windows environment
 
 The run exposed and fixed three Windows portability problems: subprocess stdout encoding, locale-default seed-file decoding, and pytest collection of imported `Testimony*` dataclasses. Track A is therefore no longer blocking the research-layer architecture.
 
-### Track B — benchmark expansion and empirical evaluation
+### Track B — targeted benchmark and empirical evaluation
 
-Turn the current examples into a maintained benchmark corpus and test:
+The first targeted meta-model benchmark should now focus on acceptance/warrant composition rather than adding more warrant-regime examples.
+
+In parallel, turn the current examples into a maintained benchmark corpus and test:
 
 - annotation discrimination;
 - end-to-end warrant behavior;
