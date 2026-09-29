@@ -32,6 +32,8 @@ Baselines: plain summary; untyped entity-relation extraction; argument-only AIF/
 
 Tracked in issue #38.
 
+First pilot, 2026-09-29, with a model as the reader: [evaluation/usefulness_pilot/results.md](../evaluation/usefulness_pilot/results.md). The raw transcript beat the graph report (0.81 vs 0.65 key points covered over 12 questions). The graph did a little better than its own excerpts (0.59). It lost mainly on the reasons behind decisions. Human-reader and beyond-context tests are still open.
+
 Measure whether a user can find an unresolved dependency, recover a correction, distinguish an assistant suggestion from their own endorsement, and resume an interrupted question. Compare raw transcript search, summary, concept graph, and inquiry graph. Use completion accuracy, time and mistaken closure/attribution—not only user preference or visual appeal.
 
 Privacy constraints should be evaluated alongside utility. A false belief attribution in a personal worldview tool may matter more than a missing peripheral concept. Keep user review and deletion/export controls on the roadmap before broader deployment.

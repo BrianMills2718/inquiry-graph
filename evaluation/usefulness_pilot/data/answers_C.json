@@ -1,0 +1,65 @@
+{
+ "cost": 0.00777685,
+ "answers": [
+  {
+   "question_number": 1,
+   "answer": "It remained unresolved what the minimal, typed and exhaustive set of primitive epistemic actions should be. In particular, the framework had not settled whether ampliative actions could be uniquely factored, or how candidate-generation actions should be typed relative to state updates and warrants.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 2,
+   "answer": "No definitive combination rule had been fixed. The intended next move was to specify how graded support \u001brho aggregates across independent warrants and how conflicting or defeasible warrants generate explicit attack/defeat relations, rather than assuming monotonic accumulation.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 3,
+   "answer": "Bronstein\u0019s geometric deep-learning framework was demoted because it supplied useful representation machinery\u0014symmetry, stability and locality\u0014but did not provide the foundational account of perceptual primitives, epistemic transitions or warrant that the investigation required. It was therefore treated as an application or supporting reference rather than part of the foundational spine.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 4,
+   "answer": "“Reframe” was removed because it was judged to be a macro-term, not a primitive operation. It bundled distinct processes such as expression construction, definitional extension and substantive concept or predicate invention, which should be represented separately in an algebra over representations.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 5,
+   "answer": "The uniqueness claim depended on fixing an explicit representation contract: the state coordinates, their meanings, and the normalization conventions for changes. Thus the decomposition into universe change, additions, deletions and support change was canonical only relative to that representation, not intrinsically unique.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 6,
+   "answer": "Brian supplied the correction, objecting that deduction should use constraints that are “assumed,” not necessarily “known.” The assistant adopted it by treating theories as temporary active assumption contexts and later representing them with ATMS environments and labels.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 7,
+   "answer": "The assistant proposed placing canonical-factorization analysis above object-level operators as a reusable meta-strategy or inquiry-control layer. Brian responded positively, describing the process of detecting over- and under-factoring as central to how he thinks and asking how the strategy should live in the system.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 8,
+   "answer": "The material does not explicitly record a final disposition of Hoel\u0019s causal-emergence and coarse-graining line of inquiry. It was raised as a possible connection, while related coarse-graining and integration ideas remained supporting possibilities rather than an established foundational component.",
+   "cannot_answer": true
+  },
+  {
+   "question_number": 9,
+   "answer": "Theory-graph work was parked rather than incorporated into the foundation. After the institution-theory and ATMS synthesis, the model treated institutional semantics and assumption-based support as sufficient for the current core, leaving theory graphs as a later, relevant extension.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 10,
+   "answer": "The model first used a flat state, K=(U,H,\u001bmu), then separated candidate generation, warrant/evaluation and state update. Because U was overloaded, institution theory introduced signatures, sentences, models and satisfaction; T was then reinterpreted as a temporary assumption context, and ATMS added environments and support labels. MMT supplied the formal syntax and proof substrate, yielding a persistent state K\u001b5=(N,A,J,\u001blambda,\u001brho) plus reasoning episodes R=(K\u001b5,\u001bGamma,Q), with temporary assumption environments kept outside the persistent state.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 11,
+   "answer": "The immediate next step was to define and test a minimal typed system for epistemic actions and generated candidates. The proposed test was to assign each candidate-generation move in the corpus a unique output type and compositional operator description, while checking whether the resulting action basis was actually exhaustive and non-overlapping.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 12,
+   "answer": "The next step was to formalize warrant composition: specify how \u001brho combines independent support and how conflicts are represented through explicit attack or defeat relations. This required postulates or test cases for aggregation, defeasible defeat and the distinction between support, warrant, license and update.",
+   "cannot_answer": false
+  }
+ ]
+}
