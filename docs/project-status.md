@@ -39,9 +39,9 @@ Current seed:
 
 Track: issue #38.
 
-**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons/outcomes and deferred-branch rationale, rerun the AI-reader pilot, then move to multi-conversation histories that exceed any single model context. **Do not add a human-reader evaluation track; the intended reader is AI.**
 
-Build the smallest view/workflow needed to test whether the graph helps users or models recover:
+Build the smallest machine-consumable representation/workflow needed to test whether an AI can recover:
 
 - open questions;
 - revisions and rationale;
@@ -102,4 +102,4 @@ See `docs/verification.md`.
 
 ## One-line status
 
-**The next meaningful result should be empirical evidence that Inquiry Graph is useful, not another formal layer.**
+**The next meaningful result should be evidence that Inquiry Graph helps an AI recover Brian's attributed positions, rationale, open questions and cross-conversation tensions when the full history cannot fit in context.**
