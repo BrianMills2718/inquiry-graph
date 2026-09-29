@@ -856,3 +856,30 @@ only when this lower bound is strictly positive.
 The guarantee remains relative to the declared task class and normalized utility definition. Benchmark-task sampling, task-distribution stability, and utility adequacy remain explicit applicability assumptions.
 
 This is ADR 014.
+
+
+## 23. Transporting warrants across representations
+
+A warrant does not survive representation translation merely because the artifact can be translated.
+
+For adapter \(\tau\), require a typed preservation result:
+
+\[
+\operatorname{Preserves}_\tau(G_S,G_T).
+\]
+
+Formal examples include institution satisfaction preservation and MMT theory-morphism theorem preservation. Sound abstractions/refinements may justify only one-way/weakened target guarantees.
+
+When no preservation certificate exists, target-side re-warrant is required.
+
+Transport can itself be represented using the existing warrant schema rather than introducing another primitive judgment.
+
+If:
+
+\[
+\mathfrak W_S;A_S\vdash_{\pi_S}a_S:G_S
+\]
+
+and an adapter certificate warrants transport to \(G_T\), then only mapped assumptions/actions/certificates may enter the target warrant; external assumptions that do not translate remain residual applicability obligations.
+
+See [warrant-guarantee-transport.md](warrant-guarantee-transport.md) and ADR 018.
