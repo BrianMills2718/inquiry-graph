@@ -10,7 +10,7 @@ requires-python = ">=3.11"
 dependencies = ["pydantic>=2.11,<3", "networkx>=3.4,<4"]
 
 [project.optional-dependencies]
-llm = ["openai>=2,<3"]
+llm = ["llm-client @ git+https://github.com/BrianMills2718/llm_client.git@2e544d66641a3b9f00d2df540ed2a32d086e819e"]
 dev = ["pytest>=8,<10", "jsonschema>=4.23,<5"]
 
 [project.scripts]

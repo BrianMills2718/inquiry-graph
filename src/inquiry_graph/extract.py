@@ -31,27 +31,3 @@ def prepare(source):
             "role_signatures": {k: {r: sorted(t) for r, t in v.items()} for k, v in SIGNATURES.items()},
             "schema": schema, "source": source.model_dump(mode="json"),
             "schema_sha256": hashlib.sha256(json.dumps(schema, sort_keys=True).encode()).hexdigest()}
-
-
-def call_openai(source, model, client=None):
-    """Official SDK. Requires an explicitly selected structured-output-compatible model."""
-    if not model:
-        raise ValueError("an explicit model is required")
-    if client is None:
-        from openai import OpenAI
-        client = OpenAI(max_retries=0, timeout=180)
-    request = prepare(source)
-    payload = {"source": request["source"], "role_signatures": request["role_signatures"]}
-    response = client.responses.parse(
-        model=model,
-        input=[{"role": "system", "content": INSTRUCTIONS},
-               {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
-        text_format=Candidates,
-        max_output_tokens=16000,
-        store=False,
-    )
-    if getattr(response, "status", "completed") != "completed":
-        raise ValueError("provider response incomplete; no graph accepted")
-    if response.output_parsed is None:
-        raise ValueError("provider refused or returned no parsed candidates")
-    return response.output_parsed

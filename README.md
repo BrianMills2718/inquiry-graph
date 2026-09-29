@@ -50,7 +50,7 @@ inquiry-graph import /path/to/conversations.json private/imported --conversation
 
 The importer follows each export's `current_node` parent chain: **only the active branch**, not an accidental mixture of alternative replies. Without `--conversation-id`, all conversations are imported into distinct hash-named JSON files. Only visible user/assistant text is imported; skipped parts are counted. This is an export adapter, not access to all your ChatGPT conversations. Review exports before sharing them.
 
-Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). An optional official OpenAI SDK adapter is available with `pip install -e '.[llm]'` and `extract SOURCE OUTPUT --openai --model MODEL_ID`; choose a structured-output-compatible model explicitly and use securely provisioned credentials. No key is stored in this repository. **The provider protocol is mock-tested; no live paid extraction was run for this release.**
+Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `pip install -e '.[llm]'` (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
 
 ## What is guaranteed—and what is not
 

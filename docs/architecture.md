@@ -27,7 +27,7 @@ The only runtime dependencies for offline operation are Pydantic and NetworkX. T
 
 **Source boundary:** imported text and source identifiers are input records, never LLM-generated fields. The selected export branch is explicit. Source scope is not the whole account.
 
-**Provider boundary:** only `extract --openai` sends source text externally. `prepare`, response-file extraction, validation, merge, query and rendering are local. The adapter makes one call, disables SDK retries, supplies a timeout and output cap, and asks the provider not to store the response. `store=False` is not a claim of universal zero retention; provider/account policies still apply.
+**Provider boundary:** only `extract --llm` sends source text externally, through Brian's shared `llm_client` (OpenRouter route, traced per chunk as `inquiry-graph/live-extract/<conversation>/chunkNN`). `prepare`, `import-bridge`, response-file extraction, validation, merge, query and rendering are local. The live extractor works in message chunks. The model returns quotes, not offsets; `live_extract.locate` finds each quote in the source with formatting ignored and anchors the exact source text. Items that cannot be grounded or fail validation are dropped and counted in the `--report`. Model outputs are cached under `--cache-dir` by prompt version and chunk hash.
 
 **Validation boundary:** provider schemas are not trusted as referentially complete. A successful parse can still fail source/ref/type/time checks. Inferred relationships remain proposed. An LLM cannot self-certify its output as human-confirmed because ingestion resets review metadata. Unique quotes have their offsets recomputed deterministically; repeated quotes require an exact supplied position, not fuzzy matching.
 
