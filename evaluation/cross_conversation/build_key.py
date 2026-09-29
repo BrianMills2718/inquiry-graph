@@ -24,6 +24,12 @@ from inquiry_graph.model import Conversation  # noqa: E402
 PRIV = ROOT / "private/xconv"
 OUT = PRIV / "key"
 CHATS = ["6ab8563b", "6ab96260", "69c07755", "6a988a7a", "6a171ac3"]
+DEFAULT_SPEC = """Write 12 questions an AI assistant to Brian might be asked about his views ACROSS these conversations:
+- 3 agreement_across_chats: the same view expressed in two or more chats;
+- 3 conflict_or_tension: views in different chats that pull against each other (say how);
+- 2 recurring_open_question: a question he raises in more than one chat and never settles;
+- 2 change_over_time: a view that shifts between chats (chats span March to September 2026);
+- 2 position_summary: his overall position on a named topic, drawing on several chats."""
 MODEL = get_model("synthesis")
 COMMON = dict(model_policy="enforce_allowlist", max_budget=4.00)
 
@@ -58,11 +64,11 @@ def render(conv: Conversation) -> str:
     return "\n\n".join(f"[{m.ordinal}] {label[m.actor_id]}:\n{m.text}" for m in conv.messages)
 
 
-def per_chat(cid: str) -> dict:
-    path = OUT / f"{cid}.positions.json"
+def per_chat(cid: str, priv: Path = PRIV, out: Path = OUT) -> dict:
+    path = out / f"{cid}.positions.json"
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
-    conv = Conversation.model_validate_json((PRIV / f"{cid}.conv.json").read_text(encoding="utf-8"))
+    conv = Conversation.model_validate_json((priv / f"{cid}.conv.json").read_text(encoding="utf-8"))
     prompt = f"""Read this entire conversation between BRIAN and an ASSISTANT ("{conv.title}").
 List Brian's own substantive positions and open questions about ideas (not work instructions such as
 "proceed", "write the doc", "review the repo"). Include positions he asserts, leans toward, rejects or is
@@ -80,7 +86,8 @@ CONVERSATION:
     for i, p in enumerate(res.positions):
         msg = brian.get(p.message)
         spans = locate(msg.text, p.quote) if msg else []
-        rec = {**p.model_dump(), "id": f"{cid}:p{i:02d}", "chat": cid, "chat_title": conv.title}
+        rec = {**p.model_dump(), "id": f"{cid}:p{i:02d}", "chat": cid, "chat_title": conv.title,
+               "date": (conv.messages[0].timestamp or "")[:10] or None}
         if spans:
             rec["verified_quote"] = spans[0]
             kept.append(rec)
@@ -93,19 +100,16 @@ CONVERSATION:
     return data
 
 
-def cross(all_positions: list[dict]) -> dict:
-    path = OUT / "cross_key.json"
+def cross(all_positions: list[dict], out: Path = OUT, spec: str | None = None, n_chats: int = 5) -> dict:
+    path = out / "cross_key.json"
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
-    listing = "\n".join(f"{p['id']} | chat \"{p['chat_title']}\" | {p['kind']}/{p['stance']} | {p['statement']}"
+    listing = "\n".join(f"{p['id']} | chat \"{p['chat_title']}\" {p.get('date') or ''} | {p['kind']}/{p['stance']} | {p['statement']}"
                         for chat in all_positions for p in chat["kept"])
-    prompt = f"""Below are Brian's verified positions and open questions from 5 of his conversations.
-Write 12 questions an AI assistant to Brian might be asked about his views ACROSS these conversations:
-- 3 agreement_across_chats: the same view expressed in two or more chats;
-- 3 conflict_or_tension: views in different chats that pull against each other (say how);
-- 2 recurring_open_question: a question he raises in more than one chat and never settles;
-- 2 change_over_time: a view that shifts between chats (chats span March to September 2026);
-- 2 position_summary: his overall position on a named topic, drawing on several chats.
+    spec = spec or DEFAULT_SPEC
+    prompt = f"""Below are Brian's verified positions and open questions from {n_chats} of his conversations
+(each line gives the chat title and date).
+{spec}
 Each answer must be supported by the listed position ids (from at least 2 different chats, except
 position_summary may use 1 chat if only one addresses it). Do not use outside knowledge.
 
