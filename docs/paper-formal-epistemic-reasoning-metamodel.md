@@ -499,15 +499,15 @@ The core judgment is:
 \[
 \boxed{
 \mathfrak W;
-A
-\vdash_\pi
+\Phi
+\vdash_\kappa
 a:G.
 }
 \]
 
 Interpretation:
 
-under warrant regime \(\mathfrak W\) and applicability assumptions \(A\), certificate \(\pi\) is sufficient to warrant epistemic action \(a\) with guarantee \(G\).
+under warrant regime \(\mathfrak W\) and applicability assumptions \(\Phi\), certificate \(\kappa\) is sufficient to warrant epistemic action \(a\) with guarantee \(G\).
 
 This formulation has several consequences.
 
@@ -524,7 +524,7 @@ Fourth, heterogeneous warrant regimes need not collapse into a common scalar.
 Given current context \(C\):
 
 \[
-C\models A
+C\models\Phi
 \]
 
 and a valid warrant judgment, define:
@@ -543,9 +543,9 @@ An epistemic action is represented as:
 
 \[
 a:
-S
+\mathcal S
 \rightharpoonup
-S\times O_a.
+\mathcal S\times O_a.
 \]
 
 This permits:
