@@ -273,13 +273,15 @@ These are benchmark/reference regimes, not claims of universal adequacy.
 
 ## 8. Verification status
 
-Latest integrated native-Windows verification:
+Last independently executed integrated native-Windows baseline:
 
 - **138 tests passed**
 - seed fixture rebuilt successfully
 - **8 generated artifacts** matched
 - graph validation: **0 errors / 0 warnings**
 - dependency check: clean
+
+PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping correction and records **142 tests passed** on its tested branch. The current handoff agent reviewed the patch but could not independently rerun current main because the Windows execution channel was degraded. Treat a fresh integrated rerun as a small verification follow-up, not a foundational blocker.
 
 Environment used:
 
@@ -442,7 +444,6 @@ At handoff:
 - **#17** — escalation path for first-class derivation/subargument structure.
 - **#18** — escalation path for full ABA+ / set-to-set hyperargumentation.
 - **#34** — acceptance licensing and warrant composition; **main foundational priority**.
-- **#37** — scope the strategy-performance statistical guarantee for multiple comparisons, adaptive search and optional stopping; correctness/hardening follow-up, not a reason to expand the core architecture.
 
 ## 15. Open pull requests that are separate from current main
 
@@ -490,7 +491,7 @@ Known cleanup work that remains:
 
 - older stage documents still use pre-closeout notation and should be treated as historical unless explicitly migrated;
 - the paper draft is still not submission-ready: it needs a systematic related-work pass, bibliography normalization, and a stronger formal/empirical evaluation story;
-- the strategy-performance implementation/documentation should be explicitly checked for multiple-comparison and optional-stopping conditions before treating its statistical guarantee as broadly applicable;
+- PR #36 now handles declared multiple comparisons and optional stopping for the strategy-performance reference regime; benchmark reuse/adaptive-selection assumptions still need to be stated truthfully by callers;
 - full comparison to adjacent integrated meta-models/cognitive architectures is not exhaustive;
 - source reconciliation and empirical usefulness remain undone.
 
@@ -577,7 +578,7 @@ Current priority order is authoritative as follows:
 3. **Issue #3 — source reconciliation** when the full export is available.
 4. **Paper/research communication** if preparing an external research artifact.
 5. **Issues #17/#18** remain escalation-only, not active implementation plans.
-6. **Issue #37** is a bounded statistical-scope review for the strategy-performance reference regime.
+6. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
 7. **Issue #2** remains low-priority hosted-CI infrastructure debt.
 8. **PR #8/#15** remain intentionally separate and must not be merged casually.
 
