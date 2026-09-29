@@ -2,6 +2,8 @@
 
 **Status:** curator interpretation, all graph annotations proposed. Not an independent gold standard. Exact anchor tests establish consistency with the stored excerpts, not byte-for-byte verification against the still-pending full conversation export.
 
+> **Repository split note (2026-09-29):** the formal epistemic theory discussed in many cautions below now lives in `BrianMills2718/epistemic-warrant`. Treat those sections as historical review context; current theory status/issue numbering is authoritative in that repository.
+
 ## What the seed preserves
 
 The source spans the initial inference taxonomy, imagination objection and retraction, warrant regress, deduction/empirical distinction, mapping/formal-learning detour, physically realizable pattern recognition, dots and relational representation, observer-accessible measurement, dialogical maps, ontology reuse, reasoning-policy experiments, belief dynamics, explanation/design, natural learning, recurrent inference, unresolved foundations, and the persistent cross-chat project.
@@ -66,7 +68,7 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 
 **Reframe remains a dialogue macro.** It is useful in the inquiry graph but should not be read as one primitive epistemic transformation. At the formal layer it may correspond to query change, signature change, support-graph change, environment change, or a composition.
 
-**Typed candidate generation remains open.** The latest model clarifies that generated candidates can be sentences, assumptions, justifications, models, signature extensions, mappings or queries. No exhaustive operator basis has yet been established.
+**Typed candidate generation remains representation-relative.** Later work in `epistemic-warrant` maps candidate generation to typed generative regimes and mature off-the-shelf frameworks rather than seeking an exhaustive universal operator basis.
 
 ## Strategy/reflection refinement cautions
 
@@ -160,11 +162,11 @@ Next review question boundaries. Some questions are explicitly spoken; others ar
 
 ## Preference-regime cautions
 
-**Do not call the binary preference filter full ABA+.** The implemented regime blocks a basic ABA attack when its support uses an assumption strictly less preferred than the attacked assumption. Full ABA+ may reverse set-to-set attacks and is tracked separately in issue #18.
+**Do not call the binary preference filter full ABA+.** The implemented regime blocks a basic ABA attack when its support uses an assumption strictly less preferred than the attacked assumption. Full ABA+ may reverse set-to-set attacks and is tracked separately in `BrianMills2718/epistemic-warrant#4`.
 
 **Blocked attacks remain provenance.** Preference filtering changes whether an attack becomes a defeat; it should not erase the underlying attack or the preference pairs that blocked it.
 
 **Preference is regime/context, not proposition truth.** A change in assumption ordering can change defeat/acceptability without changing the positive support derivations themselves.
 
-**Full ABA+ and proof-tree escalation are independent.** Issue #18 tracks collective/set-to-set preference semantics; issue #17 tracks derivation/subargument structure. Do not conflate them.
+**Full ABA+ and proof-tree escalation are independent.** `BrianMills2718/epistemic-warrant#4` tracks collective/set-to-set preference semantics; `BrianMills2718/epistemic-warrant#3` tracks derivation/subargument structure. Do not conflate them.
 
