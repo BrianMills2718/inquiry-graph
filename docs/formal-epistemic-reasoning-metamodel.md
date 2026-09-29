@@ -861,52 +861,60 @@ Questions include:
 - How are threshold-based acceptance paradoxes handled (lottery and preface: high-probability acceptance is not closed under conjunction)?
 - When should acceptance be revocable, and what licenses retraction?
 
-### 21.2 Candidate generation
+### 21.2 Candidate generation — substantially mapped
 
-This is the largest unresolved foundational area.
+Candidate generation is no longer the largest general foundational unknown.
 
-Current interface:
+A dedicated landscape survey, five-framework mapping, and cross-framework orchestration survey now cover:
+
+- CEGIS/program synthesis;
+- Meta-Interpretive Learning and predicate invention;
+- anti-unification;
+- HR automated theory formation;
+- computational conceptual blending;
+- blackboard systems/control;
+- multistrategy learning;
+- algorithm selection/portfolios;
+- hyper-heuristics and algorithm configuration;
+- PRODIGY, Soar and computational reflection.
+
+The current typed generative regime is:
 
 $$
-\mathcal G_R
-=
+\mathcal G_R=
 (
+\mathcal A_R,
+\mathcal L_R,
 \mathcal D_R,
-d_0,
+B_R,
 \mathcal O_R,
-\to_R
-).
+\to_R,
+V_R
+),
 $$
 
-We know how to represent generative spaces, construction/refinement operators, strategies, elaboration, and evaluators.
-
-We do **not** yet have a satisfying general theory of how new hypotheses, predicates, concepts, analogies, representations, and explanatory structures are generated.
-
-Important prior conclusions:
+with concrete episodes:
 
 $$
-\boxed{
-\text{concept construction}
-\neq
-\text{concept invention}
-}
+E_G=(R,\mathcal G_R,d_0),
 $$
 
-and:
+and generative-system transformations:
 
 $$
-\boxed{
-\text{expression construction}
-\neq
-\text{definitional extension}
-\neq
-\text{substantive predicate invention}
-}
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
 $$
 
-The literature (including the discovery-as-search tradition, §20) suggests constrained search over a generative space is a more robust abstraction than a universal "creativity operator" list.
+Formal guarantee transport across heterogeneous representations is also substantially mapped to institution theory, DOL/Hets, MMT theory morphisms, abstract interpretation and contract/refinement theory.
 
-Candidate generation has now received both a dedicated landscape survey and a five-framework mapping test. CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR theory formation, and conceptual blending all fit the revised typed generative-system interface without another top-level coordinate. The important refinements are that generation episodes should be separated from reusable regimes, artifact ontologies may be heterogeneous, draft states may be graphs, and transformationality is representation-relative. See `docs/candidate-generation-framework-mappings.md` and ADR 016.
+Remaining candidate-generation questions are narrower:
+
+- equivalence/composition of generative regimes;
+- operator or bias invention when existing meta-learning machinery is insufficient;
+- substantive concept-invention semantics;
+- typed preservation of guarantees/provenance through non-formal or empirical adapters.
+
+Reopen candidate-generation foundations only when a concrete benchmark cannot be represented faithfully by the existing mappings.
 
 ### 21.3 Warrant composition
 
@@ -1054,26 +1062,31 @@ The project has enough machinery to test.
 
 ## 25. Recommended next foundational discussion
 
-The next theoretical discussion should be:
+The next focused theoretical discussion should be:
 
-**Candidate generation**
+**Acceptance licensing and warrant composition** — tracked in issue #34.
 
-Specifically:
+The implemented warrant regimes deliberately stop short of a generic rule for:
 
-1. What is the object being generated?
-2. What distinctions exist between expression construction, definitional extension, predicate invention, theory extension, analogy, and representation change?
-3. What parts can be treated as constrained search?
-4. What cannot?
-5. Can mature frameworks such as program synthesis, ILP/MIL, anti-unification, abductive logic programming, theory morphisms, and concept learning be unified at the interface level?
-6. Is there a useful factorization analogous to the warrant factorization?
-7. What would count as a canonical or minimal generative basis?
-8. How should representation-changing operations be modeled?
-9. What guarantees can be stated about search without collapsing generation into evaluation?
-10. How should learned/generated operators themselves become candidates?
+$$
+\operatorname{accept}(h)
+$$
 
-This topic is intentionally left open for the next session.
+or broader use-for-action.
 
-Acceptance licensing (§21.1) is the recommended follow-on integrative topic, since it determines whether the framework can support decisions rather than only audits.
+Questions to attack next:
+
+1. What exactly is acceptance: belief, commitment, policy, premise-for-reasoning, or a stakes-relative family of actions?
+2. When may one warrant regime license acceptance directly?
+3. When must heterogeneous warrants be composed?
+4. How should proof standards, dialectical status, probabilities, measurement/testimony reliability and statistical guarantees interact without one universal scalar?
+5. How should lottery/preface-style closure failures constrain acceptance policies?
+6. What licenses retraction/revision of an accepted proposition?
+7. Can acceptance/composition policies themselves be represented and warranted as meta-policies?
+
+Before inventing machinery, compare Carneades/proof standards, belief-vs-acceptance work, decision-theoretic/stakes-sensitive acceptance, formal belief revision/nonmonotonic consequence, structured argumentation acceptance, and decision-rule/contract formalisms.
+
+Candidate generation should remain frozen unless a concrete use case breaks ADRs 015–018.
 
 ## 26. Relation to the accompanying paper
 
@@ -1082,9 +1095,10 @@ The accompanying paper draft:
 - states the architecture as a research contribution;
 - compares it to adjacent formal traditions;
 - frames the main contribution as **factorization and interface synthesis**, not invention of each component;
-- identifies candidate generation and warrant composition as the major next research problems.
+- identifies acceptance licensing and warrant composition as the main current foundational/integrative frontier;
+- treats candidate generation and formal guarantee transport as substantially mapped to mature prior work rather than as broad unexplored gaps.
 
-The paper should be updated to match this document: add acceptance licensing as a major open problem, present the central claim as a hypothesis, and add the related work below.
+The paper should remain aligned with this document: the central claim is a hypothesis, acceptance licensing is explicit, and the candidate-generation/transport literature is treated as prior art to adopt rather than novelty to invent.
 
 Future literature review should explicitly compare against Reichenbach's discovery/justification distinction and the discovery-as-search tradition, Toulmin's argument model, argumentation schemes and critical questions, Carneades and proof standards, formal epistemology, AGM and belief-base change, dynamic epistemic logic, ATMS and truth-maintenance, provenance semirings, Justification Logic, Dung/ABA/ASPIC+, probabilistic argumentation, formal learning theory, metareasoning, logical frameworks/theory graphs, the belief/acceptance literature, and cognitive architectures if relevant.
 
@@ -1092,13 +1106,18 @@ Future literature review should explicitly compare against Reichenbach's discove
 
 Canonical high-level documents:
 
+- `docs/new-agent-handoff.md` — operational handoff and current priorities;
 - `docs/formal-epistemic-reasoning-metamodel.md` — this document;
 - `docs/paper-formal-epistemic-reasoning-metamodel.md` — paper draft;
 - `docs/project-status.md` — current project-management status;
 - `docs/architecture-reassessment.md` — stop-rule/reassessment;
 - `docs/research-log-post-v1.md` — chronological research development;
 - `docs/warrant-license-interface.md` — warrant formalism;
-- `docs/candidate-generation-interface.md` — candidate-generation work;
+- `docs/candidate-generation-interface.md` — initial candidate-generation interface;
+- `docs/candidate-generation-landscape.md` — mature prior-art landscape;
+- `docs/candidate-generation-framework-mappings.md` — five-framework mapping test;
+- `docs/candidate-generation-cross-framework-glue.md` — orchestration prior art;
+- `docs/warrant-guarantee-transport.md` — certified transport across representations;
 - `docs/end-to-end-warrant-benchmark.md` — executable warrant benchmark;
 - `docs/epistemic-actions-support-algebra.md` — actions/support;
 - `docs/support-antichain-probability.md` — positive support;
@@ -1111,10 +1130,13 @@ Canonical high-level documents:
 
 Other documents may use pre-§5.1 notation (e.g., $A$ for applicability assumptions, $\pi$ for certificates). §5.1 is canonical where they differ.
 
-Open architectural issues:
+Open issues relevant to handoff:
 
-- issue #17 — derivation/subargument structure;
-- issue #18 — full ABA+ / hyperargumentation.
+- issue #2 — hosted CI infrastructure (low priority while local integrated verification is green);
+- issue #3 — full export/source reconciliation and annotation review;
+- issue #17 — derivation/subargument structure escalation;
+- issue #18 — full ABA+ / hyperargumentation escalation;
+- issue #34 — acceptance licensing and warrant composition (main meta-model frontier).
 
 ## 28. Final closeout assessment
 
@@ -1145,7 +1167,7 @@ The most important empirical question is whether the factorization improves actu
 - [x] Verification status recorded
 - [x] Deferred argumentation branches preserved
 - [x] Acceptance licensing marked as major open problem
-- [x] Candidate generation marked as major open problem
+- [x] Candidate generation landscape/mappings/orchestration completed and broad open problem narrowed
 - [x] Warrant composition marked as major open problem
 - [x] Context entailment/action algebra/reflection open questions recorded
 - [x] Relation to Inquiry Representation Model recorded
@@ -1157,6 +1179,6 @@ The most important empirical question is whether the factorization improves actu
 - [x] Warrant/guarantee transport compared against Hets/DOL/institutions, MMT morphisms, abstract interpretation and contract/refinement theories
 - [ ] Full comparison to adjacent existing meta-models/frameworks deepened
 - [ ] Empirical usefulness study performed
-- [ ] Paper draft updated to match this revision (acceptance problem, hypothesis framing, related work)
+- [ ] Paper draft fully aligned with the current closeout and handoff
 - [ ] Other `docs/` files migrated to §5.1 notation
 - [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7)
