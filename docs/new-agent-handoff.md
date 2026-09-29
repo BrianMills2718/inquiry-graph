@@ -444,6 +444,8 @@ At handoff:
 - **#17** — escalation path for first-class derivation/subargument structure.
 - **#18** — escalation path for full ABA+ / set-to-set hyperargumentation.
 - **#34** — acceptance licensing and warrant composition; **main foundational priority**.
+- **#38** — evaluate whether the inquiry representation is actually useful; main empirical/product-validation issue.
+- **#40** — systematic comparison matrix against the closest integrated frameworks; main research-positioning/adoption issue.
 
 ## 15. Open pull requests that are separate from current main
 
@@ -553,7 +555,7 @@ Start with issue #34: acceptance licensing + warrant composition.
 
 ### Track B — useful system/product
 
-Treat the Inquiry System as a separate project. Prototype the human-readable inquiry view and test whether it earns the graph/meta-model complexity.
+Work issue #38. Treat the Inquiry System as a separate project. Prototype the smallest human-readable inquiry view needed to test whether the representation earns the graph/meta-model complexity.
 
 ### Track C — source integrity
 
@@ -561,7 +563,7 @@ Work issue #3 when the full export is available.
 
 ### Track D — paper/research communication
 
-Normalize the paper against the canonical closeout, update related work, and present the architecture as synthesis/interface work rather than a novelty claim.
+Work issue #40. Build the systematic comparison matrix against the closest integrated frameworks, replace project terminology with established terminology where appropriate, and use that result to normalize the paper. Present the architecture as synthesis/interface work rather than a novelty claim.
 
 ### Track E — old formal-inquiry/hypergraph branch
 
@@ -575,9 +577,10 @@ Current priority order is authoritative as follows:
 
 1. **Issue #34 — acceptance licensing + warrant composition** if continuing foundational research.
 2. **Useful Inquiry System/product track** may proceed independently; do not block it on philosophical closure.
-3. **Issue #3 — source reconciliation** when the full export is available.
-4. **Paper/research communication** if preparing an external research artifact.
-5. **Issues #17/#18** remain escalation-only, not active implementation plans.
+3. **Issue #38 — empirical usefulness** for the inquiry representation/product.
+4. **Issue #3 — source reconciliation** when the full export is available.
+5. **Issue #40 — systematic integrated-framework comparison** for adoption/positioning and paper cleanup.
+6. **Issues #17/#18** remain escalation-only, not active implementation plans.
 6. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
 7. **Issue #2** remains low-priority hosted-CI infrastructure debt.
 8. **PR #8/#15** remain intentionally separate and must not be merged casually.

@@ -161,8 +161,8 @@ Priority order:
 
 1. **Acceptance licensing + warrant composition** — issue #34. This is the main remaining foundational/integrative problem: when heterogeneous typed warrants are sufficient for stronger actions such as acceptance, commitment, use-for-action, retraction or revision.
 2. **Source reconciliation** — issue #3. Reconcile the 219 curated excerpts / 798 proposed annotations against a full export when available.
-3. **Empirical usefulness** — test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
-4. **Documentation/paper normalization** — the paper's high-level priorities and canonical warrant notation are now synchronized. Remaining work is systematic related-work/bibliography normalization and optional migration of historical docs to canonical notation. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping scope; a fresh independent integrated rerun of current main remains a small verification follow-up.
+3. **Empirical usefulness** — issue #38. Test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
+4. **Systematic framework comparison / paper normalization** — issue #40. The paper's high-level priorities and canonical warrant notation are synchronized. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping scope; a fresh independent integrated rerun of current main remains a small verification follow-up.
 5. **Hosted CI** — issue #2 is infrastructure debt only; local integrated verification is green.
 6. **Escalation-only branches** — issues #17 and #18 remain dormant unless concrete benchmark cases require richer derivation/subargument or full ABA+ set-to-set semantics.
 

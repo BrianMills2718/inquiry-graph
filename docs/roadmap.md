@@ -30,7 +30,7 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 **P0 — Acceptance licensing and warrant composition.** Track in issue #34. The model can represent heterogeneous warrants but does not yet have a general rule for when they license stronger actions such as acceptance, commitment, use-for-action, revision or retraction.
 
-**P1 — Empirical adequacy.** Test whether the factorization and source-grounded inquiry representation improve real reasoning/audit/navigation tasks. Do not add new formal layers unless a benchmark/use case exposes a concrete failure.
+**P1 — Empirical adequacy.** Track in issue #38. Test whether the factorization and source-grounded inquiry representation improve real reasoning/audit/navigation tasks. Do not add new formal layers unless a benchmark/use case exposes a concrete failure.
 
 **Deferred escalation only.** Issue #17 preserves first-class derivation/subargument structure; issue #18 preserves full ABA+ / set-to-set hyperargumentation. Do not implement either preemptively.
 
@@ -38,11 +38,11 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 **P0 when data is available — Source reconciliation.** Issue #3 now reflects the current 219 curated excerpts and 798 proposed annotations. Reconcile against the full conversation export before treating the graph as source-complete.
 
-**P1 — Useful Inquiry System.** Product work may proceed separately from foundational research: navigation, open-question recovery, provenance/revision inspection, strategy visualization, and evaluation of whether the representation is actually useful.
+**P1 — Useful Inquiry System.** Track the empirical/product-validation work in issue #38. Product work may proceed separately from foundational research: navigation, open-question recovery, provenance/revision inspection, strategy visualization, and evaluation of whether the representation is actually useful.
 
 ### Maintenance
 
-**P2 — Documentation/paper normalization.** The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. The paper's top-level notation/priorities are now synchronized to acceptance/composition and the completed candidate-generation/transport surveys. Remaining work is systematic related-work/bibliography normalization and optional migration of older historical docs. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; only a fresh independent integrated rerun of current main remains as verification follow-up.
+**P2 — Systematic framework comparison / paper normalization.** Track in issue #40. The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of older historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; only a fresh independent integrated rerun of current main remains as verification follow-up.
 
 **P3 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. The last independently executed application-level baseline is local and green: 138 tests, 8 artifacts, graph 0 errors/0 warnings, dependency check clean. PR #36 records 142 passing tests after its strategy-performance fix; a fresh independent rerun of current main is pending.
 
