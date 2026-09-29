@@ -157,20 +157,25 @@ The following separations are stable enough for integration testing:
 
 The foundational architecture is now in **handoff / selective-research mode**, not expansion mode.
 
+A new independent formal-layer audit has opened **issue #46**, which is now the immediate correctness gate. It reports three reproduced defects in the current executable reference layer: the binary preference-removal filter can make an assumption and its contrary both grounded-IN; flat ABA is claimed but not enforced when an assumption is also a rule head; and the grounded-dialectical warrant can ignore a mismatched action target. These are semantic defects not detected by the green integration suite.
+
 Priority order:
 
-1. **Acceptance licensing + warrant composition** — issue #34. This is the main remaining foundational/integrative problem: when heterogeneous typed warrants are sufficient for stronger actions such as acceptance, commitment, use-for-action, retraction or revision.
-2. **Source reconciliation** — issue #3. Reconcile the 219 curated excerpts / 798 proposed annotations against a full export when available.
-3. **Empirical usefulness** — issue #38. Test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
-4. **Systematic framework comparison / paper normalization** — issue #40. The paper's high-level priorities and canonical warrant notation are synchronized. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping scope, and the post-merge integrated rerun passed (see Verification status).
-6. **Hosted CI** — issue #2 is infrastructure debt only; local integrated verification is green.
-7. **Escalation-only branches** — issues #17 and #18 remain dormant unless concrete benchmark cases require richer derivation/subargument or full ABA+ set-to-set semantics.
+1. **Resolve formal-layer audit defects** — issue #46. Fix the flatness and warrant-target bugs, and make an explicit architecture decision on the preference filter before building stronger acceptance semantics. The preference inconsistency is a concrete trigger to revisit issue #18 rather than treating full ABA+/attack reversal as purely hypothetical.
+2. **Acceptance licensing + warrant composition** — issue #34. This is the main remaining foundational/integrative problem: when heterogeneous typed warrants are sufficient for stronger actions such as acceptance, commitment, use-for-action, retraction or revision.
+3. **Source reconciliation** — issue #3. Reconcile the 219 curated excerpts / 798 proposed annotations against a full export when available.
+4. **Empirical usefulness** — issue #38. Test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
+5. **Systematic framework comparison / paper normalization** — issue #40. The paper's high-level priorities and canonical warrant notation are synchronized. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping scope, and the post-merge integrated rerun passed (see Verification status).
+6. **Hosted CI** — issue #2 is infrastructure debt only; local integrated execution is green.
+7. **Escalation branches** — issue #17 remains dormant; issue #18 now has a concrete preference-semantics trigger via issue #46 and should be reviewed together with that fix.
 
 Candidate generation itself is no longer a broad open mystery: mature frameworks cover fixed-space generation, representation/vocabulary extension, orchestration, operator/heuristic generation and guarantee transport. Formal adapter transport should reuse institution/DOL/Hets, MMT morphisms, abstract interpretation and contract/refinement machinery; unverified translations carry artifacts/provenance only and require target-side re-warrant.
 
 ## Verification status
 
-The last independently executed integrated native-Windows baseline, on post-PR-#36 `main` (2026-09-29), was green: **142 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. An independent Linux/Python 3.10 run of the same tree reproduced these results.
+The last independently executed integrated native-Windows baseline, on post-PR-#36 code at `4ad3942` (2026-09-29), was green: **142 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. An independent Linux/Python 3.10 run of the same code tree reproduced these results. Current `main` is `81f136f`; the commits since `4ad3942` are documentation-only, so that execution record still covers the current code.
+
+However, issue #46 is a separate **semantic audit failure** on the same executable layer. Passing tests therefore establish implementation/test consistency, not correctness of the preference semantics, flat-ABA precondition, or grounded-warrant target binding.
 
 Hosted GitHub Actions remains a separate infrastructure problem: repeated hosted runs fail or cancel before runner steps/logs. Do not treat that hosted pre-run failure as an application-level failure.
 

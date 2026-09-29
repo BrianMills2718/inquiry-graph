@@ -1,5 +1,7 @@
 # Preference regimes: Dung-compatible filtering now, full ABA+ as an escalation path
 
+> **Semantic audit warning (2026-09-29):** issue #46 reproduces a case in which the current attack-removal preference filter makes an assumption and its contrary both grounded-IN. The documented distinction from full ABA+ remains correct, but the executable filter must not be treated as a rational preference semantics until #46 is resolved. This is now a concrete trigger to review issue #18's attack-reversal/full-ABA+ boundary.
+
 > **Status:** current implementation decision. This note corrects the earlier plan to "implement ABA+ next" after checking the preference literature more carefully.
 
 ## 1. The literature changes the implementation plan

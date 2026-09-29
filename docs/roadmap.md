@@ -28,11 +28,13 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 ### Foundational research
 
-**P0 — Acceptance licensing and warrant composition.** Track in issue #34. The model can represent heterogeneous warrants but does not yet have a general rule for when they license stronger actions such as acceptance, commitment, use-for-action, revision or retraction.
+**P0 — Formal-layer correctness audit.** Track in issue #46. Before extending acceptance/warrant composition, fix the grounded-warrant target-binding bug and enforce flat ABA; then resolve the preference-semantics counterexample. The latter is a concrete reason to review issue #18 (full ABA+/attack reversal) rather than leaving it purely dormant.
 
-**P1 — Empirical adequacy.** Track in issue #38. Test whether the factorization and source-grounded inquiry representation improve real reasoning/audit/navigation tasks. Do not add new formal layers unless a benchmark/use case exposes a concrete failure.
+**P1 — Acceptance licensing and warrant composition.** Track in issue #34. The model can represent heterogeneous warrants but does not yet have a general rule for when they license stronger actions such as acceptance, commitment, use-for-action, revision or retraction.
 
-**Deferred escalation only.** Issue #17 preserves first-class derivation/subargument structure; issue #18 preserves full ABA+ / set-to-set hyperargumentation. Do not implement either preemptively.
+**P2 — Empirical adequacy.** Track in issue #38. Test whether the factorization and source-grounded inquiry representation improve real reasoning/audit/navigation tasks. Do not add new formal layers unless a benchmark/use case exposes a concrete failure.
+
+**Escalation policy.** Issue #17 remains deferred. Issue #18 is no longer purely hypothetical because issue #46 exhibits a concrete inconsistency caused by attack removal without reversal; decide whether to activate a faithful preference semantics or remove/demote the current filter before stronger warrant work.
 
 ### Inquiry-representation/product track
 
@@ -42,9 +44,9 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 ### Maintenance
 
-**P2 — Systematic framework comparison / paper normalization.** Track in issue #40. The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of older historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; its post-merge integrated rerun passed (142 tests).
+**P3 — Systematic framework comparison / paper normalization.** Track in issue #40. The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Build the closest-framework comparison/adoption matrix first, then use it to normalize terminology, related work and bibliography. Optional migration of older historical docs remains lower priority. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; its post-merge integrated rerun passed (142 tests).
 
-**P3 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. The last independently executed application-level baseline is local and green: 142 tests on post-PR-#36 `main` (native Windows and Linux), 8 artifacts, graph 0 errors/0 warnings, dependency check clean.
+**P4 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. The last independently executed application-level baseline is local and green: 142 tests on post-PR-#36 `main` (native Windows and Linux), 8 artifacts, graph 0 errors/0 warnings, dependency check clean.
 
 ### Separate open PR stacks
 
