@@ -162,14 +162,14 @@ The integrated verification gate is cleared and the broad architecture is frozen
 ### Meta-model priority
 
 1. **Acceptance licensing and warrant composition** — issue #34.
-2. Update the paper draft to match the current closeout: acceptance problem, hypothesis framing, and the completed candidate-generation/transport surveys.
-3. Audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions.
+2. Keep the paper draft aligned with the current closeout and literature comparisons.
+3. Audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions — issue #39.
 4. Add new foundational machinery only when a concrete benchmark cannot be represented faithfully.
 
 ### Inquiry representation / system priority
 
 1. Reconcile the full conversation export and review the 798 proposed annotations — issue #3.
-2. Define a concrete usefulness test for the inquiry representation.
+2. Define and run a concrete usefulness test for the inquiry representation — issue #38.
 3. Build only the smallest view/workflow needed for that test.
 4. Evaluate whether the representation improves navigation/auditability compared with reading the transcript directly.
 
