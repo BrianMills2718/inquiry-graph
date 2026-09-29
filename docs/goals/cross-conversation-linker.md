@@ -100,7 +100,13 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 ## Current State
 
 - **Demonstrated:** the previous goal's C1–C6 (`evaluation/cross_conversation/results.md`).
-- **Current increment:** 1.
+- **C1 (2026-09-29):** the linker (`src/inquiry_graph/linker.py`, v`linker-1.2.0`) and tests (`tests/test_linker.py`) are in place.
+  - **Run on the previous 5 chats:** 146 Brian positions and 180 recalled cross-chat pairs. After judging: 146 unrelated, 15 extends, 14 agrees, 3 evolves, 2 pulls_against. Judge cost $0.032. Traces: `inquiry-graph/xconv-linker/linker5/judge-000`…`011`.
+  - **Hand checks, per prompt round:**
+    - v1.0: about 5/12 correct (below the gate).
+    - v1.1: 7–9/12 correct (all 6 pulls_against and evolves right). A strict count was just under the gate.
+    - v1.2: 10/11 correct, 9/11 strict. The only clear error is a thematic stretch between Peircean categories and the question of whether inference types are exhaustive. **Gate passed.**
+- **Current increment:** 2 (select and extract 25 more chats).
 - **Blockers:** none.
 - **Resume event:** n/a.
 
