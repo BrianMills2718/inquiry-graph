@@ -704,35 +704,65 @@ u_i(\pi)-u_i(\pi_0)
 \in[-1,1],
 $$
 
-a strategy $\pi$ may be selected over baseline $\pi_0$ only when the lower confidence bound
+let \(k\ge 1\) be the declared number of candidate-vs-baseline comparisons and define the per-comparison error budget:
 
 $$
-\bar\Delta
--
+\delta_c=\frac{\delta}{k}.
+$$
+
+For a fixed sample size \(n\), the implemented one-sided Hoeffding radius is:
+
+$$
+r_{\mathrm{fixed}}
+=
 \sqrt{
 \frac{
-2\log(1/\delta)
+2\log(1/\delta_c)
 }{
 n
 }
+}.
+$$
+
+If results may be inspected sequentially with data-dependent stopping, the certificate instead uses the conservative anytime-valid union-bound radius:
+
+$$
+r_{\mathrm{seq}}(n)
+=
+\sqrt{
+\frac{
+2\log(n(n+1)/\delta_c)
+}{
+n
 }
+},
+$$
+
+corresponding to error allocation \(\delta_{c,n}=\delta_c/[n(n+1)]\).
+
+A strategy \(\pi\) may be selected over baseline \(\pi_0\) only when the relevant lower bound
+
+$$
+\bar\Delta-r
 $$
 
 is strictly positive.
 
-Applicability assumptions $\Phi$ for this regime:
+Applicability assumptions \(\Phi\) include:
 
-- the $n$ task instances are i.i.d. draws from the target task distribution;
-- utilities are normalized so that $\Delta_i\in[-1,1]$;
-- the comparison is a single, pre-specified test with fixed $n$.
+- task instances are i.i.d. draws from the declared target task distribution;
+- utilities are normalized so that \(\Delta_i\in[-1,1]\);
+- the declared comparison count \(k\) covers the candidate screening family to which the family-wise guarantee is intended to apply;
+- the declared stopping rule (fixed-n or sequential) matches the actual evaluation procedure;
+- benchmark reuse/adaptive search does not introduce additional selection effects beyond the declared correction without further warrant.
 
-If several candidate strategies are compared, $\delta$ must be corrected (for example, $\delta/k$ for $k$ candidates by a union bound). If results are inspected repeatedly with the option to stop early, a fixed-$n$ Hoeffding bound is invalid and an anytime-valid bound is required. The implementation should be checked against these conditions.
+PR #36 implemented these controls and added regression tests. The certificate cannot detect false declarations by the caller; those remain applicability assumptions.
 
 ## 19. Current verification status
 
 The integrated current repository has been executed successfully on native Windows.
 
-Current full result:
+Last independently executed integrated result before PR #36:
 
 - **138 tests passed**;
 - seed fixture rebuilt successfully;
@@ -740,7 +770,7 @@ Current full result:
 - graph validation: **0 errors / 0 warnings**;
 - dependency check: no broken requirements.
 
-The verification run includes support algebra, defeat, ABA, preference filtering, warrant/license, graded support, strict-Horn deduction, measurement/testimony, statistical/PAC, and strategy-performance.
+PR #36 subsequently changed the strategy-performance certificate/tests and records a local full-suite result of **142 passed**. The current handoff agent reviewed that patch but could not independently repeat the post-merge run because the remote Windows execution channel was degraded. Therefore the implementation change is merged, while a fresh independent integrated rerun of current main remains a small verification follow-up.
 
 These tests verify that the reference implementations behave as specified. They do not test the central hypothesis (§28) that the factorization improves reasoning or inquiry; that is an empirical question (§21.9).
 
@@ -1174,4 +1204,4 @@ The most important empirical question is whether the factorization improves actu
 - [ ] Empirical usefulness study performed
 - [x] Paper draft updated to match this revision (acceptance problem, candidate-generation narrowing, canonical warrant notation)
 - [ ] Other `docs/` files migrated to §5.1 notation
-- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7; issue #37)
+- [x] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7; PR #36)
