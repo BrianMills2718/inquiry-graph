@@ -1574,3 +1574,43 @@ This also exposed that warrant assumptions should be typed: formal/representatio
 
 This result is recorded in ADR 018 and [warrant-guarantee-transport.md](warrant-guarantee-transport.md).
 
+## 48. Session closeout and new-agent handoff
+
+A final project-management review separated the work into three related projects:
+
+1. the **Formal Epistemic Reasoning Meta-Model**;
+2. the **Inquiry Representation Model**;
+3. the future **Inquiry System**.
+
+The review also corrected several stale planning statements.
+
+Candidate generation is no longer treated as the largest general foundational unknown. The landscape, five-framework mapping, cross-framework orchestration survey, and formal guarantee-transport survey now cover the broad problem with mature prior art.
+
+Integrated verification is complete rather than pending.
+
+The main current meta-model frontier is now:
+
+\[
+\boxed{
+\text{acceptance licensing}
++
+\text{warrant composition}
+}
+\]
+
+tracked in issue #34.
+
+The main inquiry-representation frontier is source reconciliation and annotation adjudication, tracked in issue #3.
+
+The main useful-system question is empirical:
+
+> does the inquiry representation actually help a person or model navigate, audit, resume, or improve an inquiry compared with the transcript alone?
+
+That evaluation is tracked in issue #38.
+
+A separate technical audit of the strategy-performance warrant under multiple comparisons / optional stopping is issue #39.
+
+A systematic comparison against the closest integrated prior frameworks is issue #40. The goal of that comparison is adoption/alignment, not novelty.
+
+A canonical operational handoff now lives in [new-agent-handoff.md](new-agent-handoff.md). It should be the first document read by a future agent.
+
