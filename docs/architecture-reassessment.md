@@ -36,7 +36,7 @@ J,\lambda,\rho_\eta
 \downarrow
 \\[4pt]
 \textbf{candidate generation}\\
-\mathcal G_R,\pi_s
+E_G=(R,\mathcal G_R,d_0),\;\Pi
 \\[4pt]
 \downarrow
 \\[4pt]
@@ -46,7 +46,7 @@ J,\lambda,\rho_\eta
 \downarrow
 \\[4pt]
 \textbf{regime-specific warrant}\\
-\mathfrak W;A\vdash_\pi a:G
+\mathfrak W;\Phi\vdash_\kappa a:G
 \\[4pt]
 \downarrow
 \\[4pt]
