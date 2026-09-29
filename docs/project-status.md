@@ -40,14 +40,26 @@ Positive support is represented as finite antichains of minimal assumption envir
 
 ### Candidate generation
 
-Candidate generation is a constrained-search interface:
+Candidate generation is now treated as a typed generative regime rather than a universal creativity operator:
 
 \[
 \mathcal G_R=
-(\mathcal D_R,d_0,\mathcal O_R,\to_R)
+(\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,\to_R,V_R)
 \]
 
-controlled by a strategy rather than one universal creativity operator.
+with a concrete episode:
+
+\[
+E_G=(R,\mathcal G_R,d_0)
+\]
+
+and representation-level transformations modeled separately as:
+
+\[
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
+\]
+
+CEGIS, Meta-Interpretive Learning, anti-unification, HR theory formation, and conceptual blending have all been mapped into this interface. Cross-framework orchestration is treated as typed blackboard/portfolio control using mature work in blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar.
 
 ### Warrant
 
@@ -143,16 +155,18 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, finite-class statistical generalization bounds under explicit sampling assumptions, and strategy-selection warrants based on positive lower confidence bounds for paired normalized utility.
+The foundational architecture is now in **handoff / selective-research mode**, not expansion mode.
 
-The integrated verification gate is now cleared. The next milestone is benchmark-driven validation rather than ontology expansion:
+Priority order:
 
-1. maintain and expand the benchmark only from concrete failures;
-2. run adversarial/failure analysis across the existing warrant regimes;
-3. reconcile the full conversation export and test source completeness;
-4. evaluate empirical usefulness for inquiry navigation/auditability;
-5. add any new formal layer only when a benchmark/use case requires it;
-6. candidate-generation framework mapping and cross-framework glue surveys are now complete. Existing blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar cover most orchestration needs. Formal adapter/guarantee transport has now been mapped to existing institution/DOL/Hets, MMT theory-morphism, abstract-interpretation and contract/refinement machinery. Further foundational work should be driven only by concrete failures in typed adapter metadata, preservation-certificate composition, or non-formal/empirical translation cases.
+1. **Acceptance licensing + warrant composition** — issue #34. This is the main remaining foundational/integrative problem: when heterogeneous typed warrants are sufficient for stronger actions such as acceptance, commitment, use-for-action, retraction or revision.
+2. **Source reconciliation** — issue #3. Reconcile the 219 curated excerpts / 798 proposed annotations against a full export when available.
+3. **Empirical usefulness** — test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
+4. **Documentation/paper normalization** — migrate older docs to the canonical notation in the closeout; bring the paper draft fully in sync; review strategy-performance multiple-comparison/optional-stopping conditions.
+5. **Hosted CI** — issue #2 is infrastructure debt only; local integrated verification is green.
+6. **Escalation-only branches** — issues #17 and #18 remain dormant unless concrete benchmark cases require richer derivation/subargument or full ABA+ set-to-set semantics.
+
+Candidate generation itself is no longer a broad open mystery: mature frameworks cover fixed-space generation, representation/vocabulary extension, orchestration, operator/heuristic generation and guarantee transport. Formal adapter transport should reuse institution/DOL/Hets, MMT morphisms, abstract interpretation and contract/refinement machinery; unverified translations carry artifacts/provenance only and require target-side re-warrant.
 
 ## Verification status
 
@@ -168,6 +182,7 @@ Eventually import the full conversation export and reconcile curated excerpts to
 
 ## Canonical entry points
 
+- [New-agent handoff](new-agent-handoff.md)
 - [Formal Epistemic Reasoning Meta-Model closeout](formal-epistemic-reasoning-metamodel.md)
 - [ArXiv-style paper draft](paper-formal-epistemic-reasoning-metamodel.md)
 - [Formalism](formalism.md)
