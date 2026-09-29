@@ -134,9 +134,15 @@ non_gating_utility_review:
       - v2.2: 11/12 right; 1 wrong target (a question attached to the assistant's answer); 0 procedural.
     - Speaker attribution is enforced by code. In v2.2 all 12 sampled stances quote Brian's own messages.
     - Quote realignment (formatting-insensitive matching, anchored to exact source text) raised node grounding from 43% to about 80%.
-- **Current increment:** 2 (select the other 4 chats and build the reference key).
+- **C2–C6 (2026-09-29):** see `evaluation/cross_conversation/results.md`.
+  - **C2:** the key has 103 verified positions over 5 chats and 12 cross-chat questions.
+  - **C3:** 148 Brian stances were carried into onto-canon6 `6864aa16c` with speaker, stance and evidence span. Question status, relations, assistant stances and dates were not carried.
+  - **C4:** 0 cross-chat identities and 0 opposed conflicts; 3 within-chat clusters and 2 within-chat stance tensions.
+  - **C5:** full transcripts 0.56 vs onto-canon6 export 0.58 key points covered. The export cost $0.008 against $0.170.
+  - **C6: replace.** Keep inquiry-graph as the producer. Replace "same claim" alignment with a relation-typed cross-chat linker, add question status and dates, and test at archive scale.
+- **Current increment:** complete. All acceptance checks C1–C6 are reported.
 - **Blockers:** none.
-- **Resume event:** n/a.
+- **Resume event:** a replacement goal for the relation-typed cross-chat linker at archive scale.
 
 ## Evaluator-Facing Objective
 

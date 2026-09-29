@@ -1,0 +1,96 @@
+{
+ "rows": [
+  {
+   "q": 1,
+   "category": "agreement_across_chats",
+   "A": 1.0,
+   "B": 1.0
+  },
+  {
+   "q": 2,
+   "category": "agreement_across_chats",
+   "A": 1.0,
+   "B": 0.75
+  },
+  {
+   "q": 3,
+   "category": "agreement_across_chats",
+   "A": 0.67,
+   "B": 0.67
+  },
+  {
+   "q": 4,
+   "category": "conflict_or_tension",
+   "A": 0.75,
+   "B": 0.75
+  },
+  {
+   "q": 5,
+   "category": "conflict_or_tension",
+   "A": 0.67,
+   "B": 0.67
+  },
+  {
+   "q": 6,
+   "category": "conflict_or_tension",
+   "A": 0.5,
+   "B": 0.5
+  },
+  {
+   "q": 7,
+   "category": "recurring_open_question",
+   "A": 0.25,
+   "B": 0.25
+  },
+  {
+   "q": 8,
+   "category": "recurring_open_question",
+   "A": 0.25,
+   "B": 0.25
+  },
+  {
+   "q": 9,
+   "category": "change_over_time",
+   "A": 0.33,
+   "B": 0.67
+  },
+  {
+   "q": 10,
+   "category": "change_over_time",
+   "A": 0.25,
+   "B": 0.5
+  },
+  {
+   "q": 11,
+   "category": "position_summary",
+   "A": 0.5,
+   "B": 0.5
+  },
+  {
+   "q": 12,
+   "category": "position_summary",
+   "A": 0.5,
+   "B": 0.5
+  }
+ ],
+ "summary": {
+  "A": {
+   "mean_points": 0.56,
+   "fully_right": 2,
+   "contradicts": 1,
+   "attribution_errors": 1,
+   "unsupported": 5,
+   "cannot_answer": 0,
+   "answer_cost": 0.17
+  },
+  "B": {
+   "mean_points": 0.58,
+   "fully_right": 1,
+   "contradicts": 1,
+   "attribution_errors": 1,
+   "unsupported": 6,
+   "cannot_answer": 0,
+   "answer_cost": 0.008
+  }
+ }
+}
