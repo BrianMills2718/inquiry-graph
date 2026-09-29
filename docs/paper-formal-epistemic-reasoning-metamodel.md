@@ -983,3 +983,29 @@ A submission-ready bibliography should be generated from the repository referenc
 - Kakas, Kowalski, and Toni on abductive logic programming.
 
 See docs/references.md for the working bibliography.
+
+
+## Cross-framework orchestration after the candidate-generation mapping
+
+The remaining integration problem is also strongly covered by prior work.
+
+Classical blackboard systems provide a mature architecture for heterogeneous knowledge sources operating over shared evolving state, while Hayes-Roth's blackboard-control architecture explicitly separates object-level problem solving from control over which knowledge source/action should fire next. Michalski's multistrategy learning work provides a direct conceptual precedent for dynamically combining different inferential learning strategies. Rice-style algorithm selection, hyper-heuristics, and modern algorithm-configuration methods provide established machinery for choosing, generating, sequencing, and tuning generators/heuristics. PRODIGY and Soar provide integrated examples of planning/learning and impasse-driven procedural knowledge generation, and computational reflection provides a mature semantics for modifying the reasoning machinery itself.
+
+Accordingly, the candidate-generation layer is now best interpreted as a typed blackboard-style orchestration:
+
+\[
+\mathcal C
+=
+(
+\mathbb B,
+\mathcal K,
+\mathcal P,
+\Pi,
+\mathcal M,
+\mathfrak W
+)
+\]
+
+with a shared typed state \(\mathbb B\), a portfolio of generators/evaluators \(\mathcal K\), representation adapters \(\mathcal P\), a controller \(\Pi\), reflective transformations \(\mathcal M\), and explicit warrant regimes \(\mathfrak W\).
+
+This significantly narrows the remaining research gap. The open issue is no longer generic orchestration. It is how a guarantee established in a generator's native representation should be transported through an adapter and composed with guarantees from other generators. That problem connects naturally to institution satisfaction conditions, proof translation, refinement, abstract-interpretation soundness, and assume-guarantee contracts.
