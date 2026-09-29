@@ -109,6 +109,12 @@ The green theory suite does **not** resolve the semantic defects in epistemic-wa
 - Do not treat green tests as proof of semantic correctness.
 - Do not merge Inquiry Graph PR #8/#15 without an explicit architecture decision.
 
+## Final audit status
+
+A final plan/documentation audit was completed before handoff. The canonical product documents agree on the current priority order: issue #38 usefulness first, issue #3 source reconciliation second, issue #2 hosted CI as maintenance. The roadmap was corrected so cross-conversation identity/canonicalization remains downstream-owned rather than being reintroduced as an Inquiry Graph product layer.
+
+No additional foundational work is required in this repository before handoff.
+
 ## Fresh-agent routing
 
 If assigned **product/usefulness**, start in this repository with `docs/new-agent-handoff.md` and issue #38.
