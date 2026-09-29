@@ -30,6 +30,8 @@ Baselines: plain summary; untyped entity-relation extraction; argument-only AIF/
 
 ## Stage B: usefulness for inquiry navigation
 
+Tracked as issue #38.
+
 Measure whether a user can find an unresolved dependency, recover a correction, distinguish an assistant suggestion from their own endorsement, and resume an interrupted question. Compare raw transcript search, summary, concept graph, and inquiry graph. Use completion accuracy, time and mistaken closure/attribution—not only user preference or visual appeal.
 
 Privacy constraints should be evaluated alongside utility. A false belief attribution in a personal worldview tool may matter more than a missing peripheral concept. Keep user review and deletion/export controls on the roadmap before broader deployment.
@@ -42,11 +44,13 @@ Evaluate common confusions separately: support mistaken for sufficient warrant; 
 
 For graded support, add provenance-sensitive fixtures in which two apparent pieces of evidence share a common source, and compare them with genuinely independent support. An acceptable annotation/evaluation layer must preserve the difference before numerical aggregation. Test regime-specific update rules separately (for example, conditioning versus uncertain-evidence updates) rather than treating every support increase as the same operation.
 
+The next Stage C research target is acceptance licensing / warrant composition (issue #34). Add benchmark cases where the same support profile leads to different acceptance/use-for-action decisions under different stakes, proof standards or policies. Explicitly test lottery/preface-style closure failures and require the acceptance policy itself to be represented rather than hidden in a threshold.
+
 ## Stage D: strategy-episode annotation
 
 Before learning policies, evaluate whether humans can reliably identify reusable reasoning strategies from grounded move sequences. Annotate strategy schema, episode boundaries, target (`about` relation), nested episodes and confidence/review status. Compare agreement on atomic moves with agreement on higher-level strategies; strategy segmentation is expected to be harder and may admit multiple defensible granularities.
 
-Candidate strategies in the founding dialogue include canonical factorization, counterexample search, literature-before-invention, meta-model stress testing, goal restoration and reflective self-application. These labels are hypotheses to validate, not a complete strategy ontology.
+Candidate strategies in the founding dialogue include canonical factorization, counterexample search, literature-before-invention, meta-model stress testing, goal restoration and reflective self-application. The current strategy-performance reference warrant is fixed-sample; adaptive/multiple-comparison validity is tracked separately in issue #39. These labels are hypotheses to validate, not a complete strategy ontology.
 
 Important error classes include hallucinating a private strategy from surface similarity, collapsing an isolated move into a full multi-step strategy, missing nested/meta episodes, and treating the same strategy name as intrinsically meta-level instead of relative to its target.
 
