@@ -246,9 +246,10 @@ The canonical notation in §5.1 of docs/formal-epistemic-reasoning-metamodel.md 
 ## 8. Priority order for a new meta-model agent
 
 1. **Acceptance licensing / warrant composition** — issue #34.
-2. **Update the paper to match the current closeout** — acceptance, hypothesis framing, current candidate-generation/transport literature.
-3. **Audit strategy-performance statistical assumptions** — multiple comparison / optional stopping.
-4. Only then consider further foundational theory, and only if a benchmark exposes a real gap.
+2. **Systematic comparison against the closest integrated prior frameworks** — issue #40. The goal is adoption/alignment, not novelty.
+3. Keep the paper aligned with the comparison and acceptance work.
+4. **Audit strategy-performance statistical assumptions** — issue #39.
+5. Only then consider further foundational theory, and only if a benchmark exposes a real gap.
 
 Do not reopen candidate generation broadly unless a concrete use case breaks ADRs 015–018.
 
@@ -342,7 +343,8 @@ Otherwise prefer existing-framework adoption, implementation, validation, and em
 - #18 full ABA+/hyperargumentation escalation;
 - #34 acceptance licensing / warrant composition;
 - #38 empirical usefulness of the inquiry representation/system;
-- #39 strategy-performance adaptive-statistics audit.
+- #39 strategy-performance adaptive-statistics audit;
+- #40 systematic comparison matrix against closest integrated frameworks.
 
 Latest architectural decisions:
 - ADR 015 typed generative systems;
