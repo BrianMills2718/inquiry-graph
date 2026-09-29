@@ -1473,3 +1473,62 @@ Generator warrants may concern coverage, completeness, least-generality, converg
 
 This result is recorded in ADR 016 and [candidate-generation-framework-mappings.md](candidate-generation-framework-mappings.md).
 
+## 46. Cross-framework candidate-generation glue is mostly established prior art
+
+After the five-framework mapping, the remaining question was how heterogeneous generators should interoperate.
+
+A dedicated landscape pass found mature precedents for nearly every part of this problem:
+
+- blackboard systems for heterogeneous knowledge sources over shared state;
+- Hayes-Roth-style blackboard control for deciding which source/action should run next;
+- Michalski multistrategy learning for task-adaptive integration of inference strategies;
+- Rice-style algorithm selection and portfolios for choosing algorithms by task features/performance;
+- hyper-heuristics for selecting or generating heuristics;
+- algorithm configuration for tuning generator parameters;
+- PRODIGY for integrated planning plus multiple learning mechanisms over common knowledge structures;
+- Soar for impasse-driven subgoaling and learned procedural rules;
+- computational reflection for modifying reasoning machinery itself;
+- COMPOSER/metareasoning for the utility of learned control knowledge.
+
+The project therefore adopts:
+
+\[
+\boxed{
+\text{typed blackboard}
++
+\text{generator portfolio}
++
+\text{explicit controller}
++
+\text{reflection}
++
+\text{warrant}
+}
+\]
+
+rather than a new universal orchestration calculus.
+
+This leaves one especially important cross-framework question.
+
+Suppose a generator has a guarantee \(G_i\) in its native representation \(L_i\), and an adapter:
+
+\[
+p_i:L_i\to\mathbb B
+\]
+
+translates its output into the shared representation.
+
+What guarantee survives the translation?
+
+That is a warrant/guarantee transport problem rather than an orchestration problem.
+
+Likely mature ingredients include:
+
+- institution satisfaction conditions;
+- proof translation;
+- refinement;
+- abstract-interpretation soundness;
+- assume-guarantee contracts.
+
+This result is recorded in ADR 017 and [candidate-generation-cross-framework-glue.md](candidate-generation-cross-framework-glue.md).
+
