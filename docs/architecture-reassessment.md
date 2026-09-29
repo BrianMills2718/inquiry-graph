@@ -83,26 +83,56 @@ The fact that they all fit the same action-targeted warrant interface is evidenc
 
 The following are still research questions, but they do not currently justify another top-level layer.
 
-### Candidate generation
+### Acceptance licensing and warrant composition — current foundational priority
 
-The deepest unresolved theoretical area remains the generative side:
+The main unresolved foundational/integrative problem is no longer candidate generation. It is the transition from typed warrants to stronger epistemic actions such as:
+
+- accept;
+- commit;
+- use-for-action;
+- revise;
+- retract.
+
+The current executable regimes mostly license recording, derivation, defeasible use, or strategy selection. There is no general rule for composing heterogeneous guarantees or deciding when they are sufficient for stronger actions.
+
+This is tracked in GitHub issue #34.
+
+Current stance:
+
+\[
+\boxed{
+\text{do not collapse heterogeneous guarantees into one scalar threshold by default.}
+}
+\]
+
+Acceptance/composition policies should be explicit, typed, action-relative, and themselves warrantable.
+
+### Candidate generation — substantially mapped
+
+Candidate generation is no longer a broad foundational gap.
+
+The current typed interface is:
 
 \[
 \mathcal G_R=
-(\mathcal D_R,d_0,\mathcal O_R,\to_R).
+(\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,\to_R,V_R)
 \]
 
-We have an interface and worked strategies, not a universal algebra of hypothesis invention.
+with generation episode:
 
-This should be revisited only after the downstream warrant pipeline has been exercised on real inquiry traces.
+\[
+E_G=(R,\mathcal G_R,d_0)
+\]
 
-### Warrant composition
+and regime transformation:
 
-Multiple warrant regimes can coexist or conflict.
+\[
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
+\]
 
-There is no universal aggregation rule yet.
+This has been mapped against CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR theory formation, and conceptual blending. Cross-framework orchestration and guarantee transport have also been mapped to mature work in blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, reflection, Hets/DOL/institutions, MMT, abstract interpretation, and contract/refinement theory.
 
-This is intentional: heterogeneous guarantees should not be scalarized without an explicit meta-regime.
+Further candidate-generation theory should be pursued only if a concrete integration case exposes a failure.
 
 ### Context entailment
 
@@ -174,7 +204,13 @@ The complete repository suite has now been run in the native Windows environment
 
 The run exposed and fixed three Windows portability problems: subprocess stdout encoding, locale-default seed-file decoding, and pytest collection of imported `Testimony*` dataclasses. Track A is therefore no longer blocking the research-layer architecture.
 
-### Track B — benchmark expansion and empirical evaluation
+### Track B — selective foundational research
+
+If foundational research continues, begin with issue #34: acceptance licensing and warrant composition. Compare existing proof-standard, acceptance/commitment, decision-theoretic, structured-argumentation, and belief-revision work before inventing a new policy calculus.
+
+Do not reopen candidate generation, derivation DAGs, or full ABA+ unless a concrete case triggers their documented escalation conditions.
+
+### Track C — benchmark expansion and empirical evaluation
 
 Turn the current examples into a maintained benchmark corpus and test:
 
@@ -184,7 +220,7 @@ Turn the current examples into a maintained benchmark corpus and test:
 - strategy episodes;
 - robustness to changed assumptions/defeaters/preferences.
 
-### Track C — source reconciliation/product usefulness
+### Track D — source reconciliation/product usefulness
 
 Reconcile the full conversation export, then evaluate whether the inquiry graph materially helps users navigate open questions, provenance, revisions, and reasoning strategies.
 
