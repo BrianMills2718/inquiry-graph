@@ -8,13 +8,15 @@
 
 The foundational theory has been split out.
 
-This repository should now answer:
+This repository should now answer: **does a source-grounded inquiry graph provide useful capabilities beyond the transcript itself?**
 
-[
-oxed{
-	ext{Does a source-grounded inquiry graph provide useful capabilities beyond the transcript itself?}
-}
-]
+## Product goal (Brian, 2026-09-29)
+
+The reader is always an AI, never Brian. The graphs exist so an AI can understand everything Brian is interested in and his positions, and can identify gaps, open questions and conflicts across **all** his conversations. Do not design for human reading: no dashboards, UI polish or human-reader tests.
+
+The 2026-09-29 pilot showed that one conversation fits in a model's context, and there the raw transcript beats the graph. The graph's case is therefore across many conversations: Brian's attributed positions (kept separate from assistant proposals), open questions and conflicts, where no model can read everything.
+
+**Division of labour with onto-canon6.** onto-canon6 owns cross-source identity, alignment, governed assertions and tension (conflict) detection. Its proposed general-kernel PRD already requires preserving stance and speaker, lists `StanceEvent`, and uses both inquiry-graph trajectories (including open PRs #8 and #15) as round-trip acceptance cases. inquiry-graph should be the per-conversation producer (conversation to attributed stances, questions, moves and rationale) feeding that kernel, not a second cross-conversation store.
 
 Do not expand the ontology by default.
 
