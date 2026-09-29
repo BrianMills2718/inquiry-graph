@@ -6,7 +6,7 @@
 
 An independent Linux rerun on a tree byte-identical to the same `main` (Python 3.10.12, Pydantic 2.13.5, NetworkX 3.4.2, jsonschema 4.26.0) also produced **142 passed**, the same fixture counts, 8 artifacts with `--check` passing, 0 validation errors/warnings, and byte-identical rebuilt `examples/seed/*`; `dot -Tsvg examples/seed/inquiry.dot` exited 0 there. Its `pip check` flagged only an unrelated system pipx/argcomplete conflict.
 
-These two runs cover PR #36's strategy-performance multiple-comparison/optional-stopping correction. The previous integrated native-Windows record, before PR #36, was **138 tests passed** with the same fixture, artifact, validation and dependency results.
+These two runs cover PR #36's strategy-performance multiple-comparison/optional-stopping correction. Current `main` is `81f136f`; `main` is four documentation-only commits ahead of verified code commit `4ad3942`, so this execution record still covers the executable tree. The previous integrated native-Windows record, before PR #36, was **138 tests passed** with the same fixture, artifact, validation and dependency results.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
@@ -31,6 +31,12 @@ The integrated tests exercise import, prepare, response-file extraction, validat
 The repository CI is configured to install the package with development and optional provider dependencies on Python 3.11 and 3.13, rebuild the fixture and artifacts, run tests, validate the graph, and check generated-file drift and dependency consistency.
 
 **Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The post-PR-#36 142-test native-Windows and Linux reruns above are the current independently repeated integrated execution records.
+
+## Semantic-audit caveat
+
+A later independent formal-layer audit opened **issue #46** against code ancestor `024201f`. A comparison from that commit to current `main` shows only documentation changes, so the reported defects still apply to the current executable tree until fixed. The audit reproduced: (1) a preference-removal counterexample in which an assumption and its contrary can both become grounded-IN; (2) failure to enforce flat ABA when an assumption is also a rule head; and (3) a grounded-dialectical warrant that can ignore a mismatched action target. These are semantic/rationality defects that the 142-test suite does not currently catch.
+
+Therefore a green integration run must not be described as proof that the formal reference regimes are semantically correct. Issue #46 is the immediate correctness gate before stronger acceptance/warrant work.
 
 ## Explicitly not verified
 
