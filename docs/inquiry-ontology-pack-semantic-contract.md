@@ -753,3 +753,14 @@ Changes to this semantic contract should answer:
 
 Do not widen the ontology simply because an external standard contains more
 terms.
+
+
+## 16. Factorization / stance hypotheses remain representable, not primitive
+
+The research formalism in [factorization-stance-agenthood-hypotheses.md](factorization-stance-agenthood-hypotheses.md) currently requires no new executable Inquiry type.
+
+Represent factorization, stance, black-box/white-box, and agenthood proposals using existing Hypothesis/Method/Question objects plus candidate/support/challenge/dependency/reframing relations and inquiry moves.
+
+Do not add Agent, Environment, FactorizationHypothesis, or StanceHypothesis as foundational Inquiry or OntoCanon kernel primitives merely because they are useful modeling concepts.
+
+Promote a distinct Inquiry-pack term only if repeated real cases demonstrate that the current content/relation representation loses a required semantic distinction.
