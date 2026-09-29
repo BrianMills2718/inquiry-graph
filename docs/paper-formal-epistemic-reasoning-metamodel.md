@@ -1009,3 +1009,32 @@ Accordingly, the candidate-generation layer is now best interpreted as a typed b
 with a shared typed state \(\mathbb B\), a portfolio of generators/evaluators \(\mathcal K\), representation adapters \(\mathcal P\), a controller \(\Pi\), reflective transformations \(\mathcal M\), and explicit warrant regimes \(\mathfrak W\).
 
 This significantly narrows the remaining research gap. The open issue is no longer generic orchestration. It is how a guarantee established in a generator's native representation should be transported through an adapter and composed with guarantees from other generators. That problem connects naturally to institution satisfaction conditions, proof translation, refinement, abstract-interpretation soundness, and assume-guarantee contracts.
+
+
+## Guarantee transport across heterogeneous representations
+
+The candidate-generation integration work initially left a question about transporting guarantees across adapters. Existing formal methods substantially answer this too.
+
+For logical systems, institution morphisms/comorphisms provide sentence/model translations constrained by a satisfaction condition, and Hets/DOL operationalize heterogeneous logic graphs and proof management. MMT-style theory morphisms provide proof/judgment preservation. Abstract interpretation provides sound one-way transport under abstraction, while refinement and assume-guarantee/contract theories provide operation-specific preservation and composition results.
+
+This suggests a typed preservation relation for an adapter \(\tau\):
+
+\[
+\operatorname{Preserves}_\tau(G_S,G_T).
+\]
+
+Artifact translation alone does not establish such a relation.
+
+A useful implementation taxonomy is:
+
+- T0 syntactic/opaque translation: no semantic guarantee transport;
+- T1 provenance/structural correspondence only;
+- T2 sound one-way transport;
+- T3 exact satisfaction/judgment preservation;
+- T4 compositional transport for the actual operators used.
+
+The classification is guarantee-specific. A translation may preserve refinement but not serial composition, or theoremhood but not a statistical calibration property.
+
+No new primitive warrant judgment is needed. Transport itself can be represented as a warranted action, and the target warrant is composed only when the translation certificate maps the assumptions, action, certificate, and guarantee needed by the target regime.
+
+For the formal multi-logic case, Hets/DOL and institution/MMT machinery should be treated as prior art to adopt rather than functionality to reproduce.
