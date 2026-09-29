@@ -142,7 +142,7 @@ non_gating_utility_review:
   - **C6: replace.** Keep inquiry-graph as the producer. Replace "same claim" alignment with a relation-typed cross-chat linker, add question status and dates, and test at archive scale.
 - **Current increment:** complete. All acceptance checks C1–C6 are reported.
 - **Blockers:** none.
-- **Resume event:** a replacement goal for the relation-typed cross-chat linker at archive scale.
+- **Resume event:** superseded by `docs/goals/cross-conversation-linker.md` (2026-09-29).
 
 ## Evaluator-Facing Objective
 
