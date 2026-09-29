@@ -8,7 +8,7 @@ The first-pass example now covers the original V1 arc, the epistemic-transition 
 
 ## Start here
 
-[Walk through the dialogue](docs/conversation-walkthrough.md) · [New-agent handoff](docs/new-agent-handoff.md) · [Evaluation plan](docs/evaluation.md) · [Roadmap](docs/roadmap.md) · [Open agenda and grounded move report](examples/seed/report.md) · [Inquiry diagram](examples/seed/inquiry-map.md) · [Canonical graph](examples/seed/graph.json) · [Source excerpts](examples/seed/source-excerpts.json)
+[New-agent handoff](docs/new-agent-handoff.md) · [Project status](docs/project-status.md) · [Walk through the dialogue](docs/conversation-walkthrough.md) · [Evaluation plan](docs/evaluation.md) · [Roadmap](docs/roadmap.md) · [Open agenda and grounded move report](examples/seed/report.md) · [Inquiry diagram](examples/seed/inquiry-map.md) · [Canonical graph](examples/seed/graph.json) · [Source excerpts](examples/seed/source-excerpts.json)
 
 The formal theory of support, defeat, warrant and license, its reference code and the paper draft moved to **[epistemic-warrant](https://github.com/BrianMills2718/epistemic-warrant)** on 2026-09-29, with full history. The two shared no code.
 
@@ -60,7 +60,7 @@ It does **not** certify truth, detect every bad paraphrase, know a person's priv
 
 ## Project documents
 
-[New-agent handoff](docs/new-agent-handoff.md) · [Requirements](docs/requirements.md) · [Implementation brief](docs/implementation-brief.md) · [Formalism](docs/formalism.md) · [Ontology](docs/ontology.md) · [Architecture](docs/architecture.md) · [Annotation guide](docs/annotation-guide.md) · [Seed review](docs/seed-review.md) · [Conversation walkthrough](docs/conversation-walkthrough.md) · [Evaluation](docs/evaluation.md) · [Verification](docs/verification.md) · [Decisions](docs/decisions/index.md) · [Roadmap](docs/roadmap.md) · [Security](docs/security.md) · [References](docs/references.md)
+[New-agent handoff](docs/new-agent-handoff.md) · [Project status](docs/project-status.md) · [Requirements](docs/requirements.md) · [Implementation brief](docs/implementation-brief.md) · [Formalism](docs/formalism.md) · [Ontology](docs/ontology.md) · [Architecture](docs/architecture.md) · [Annotation guide](docs/annotation-guide.md) · [Seed review](docs/seed-review.md) · [Conversation walkthrough](docs/conversation-walkthrough.md) · [Evaluation](docs/evaluation.md) · [Verification](docs/verification.md) · [Decisions](docs/decisions/index.md) · [Roadmap](docs/roadmap.md) · [Security](docs/security.md) · [References](docs/references.md)
 
 Rebuild checked-in artifacts with `python examples/build_seed.py && python tools/build_artifacts.py`. Check drift with `python tools/build_artifacts.py --check`. Canonical JSON and curation stay in Git; there is no required graph database, vector store, web application, or custom agent runtime.
 
