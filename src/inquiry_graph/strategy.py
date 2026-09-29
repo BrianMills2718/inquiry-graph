@@ -17,12 +17,27 @@ cross-unit aggregation between quality and cost.
 
 It also does not establish transfer beyond the declared task distribution; that
 remains an explicit warrant assumption.
+
+Two further validity conditions are made explicit on the certificate:
+
+- ``comparisons`` (k): the number of candidate strategies compared against the
+  baseline in the same selection. The per-comparison error level is delta/k
+  (Bonferroni/union bound), so ``confidence`` stays family-wise over all k.
+- ``stopping_rule``: ``"fixed-n"`` means n was fixed before the data were seen
+  and the bound is the plain Hoeffding radius. ``"sequential"`` means results
+  may have been inspected repeatedly with the option to stop early. A fixed-n
+  radius is invalid there, so the certificate uses an anytime-valid radius
+  obtained by a union bound over all sample sizes with delta_n = delta / (n(n+1)):
+
+      E[D] >= mean(D) - sqrt(2 * log(n(n+1)/delta) / n)   for all n simultaneously.
 """
 from __future__ import annotations
 
 from dataclasses import dataclass
 from math import isfinite, log, sqrt
 from typing import Iterable
+
+STOPPING_RULES = frozenset({"fixed-n", "sequential"})
 
 
 @dataclass(frozen=True)
@@ -35,6 +50,8 @@ class StrategyPerformanceCertificate:
     strategy_utilities: tuple[float, ...]
     baseline_utilities: tuple[float, ...]
     delta: float
+    comparisons: int
+    stopping_rule: str
 
     def __init__(
         self,
@@ -47,6 +64,8 @@ class StrategyPerformanceCertificate:
         strategy_utilities: Iterable[float],
         baseline_utilities: Iterable[float],
         delta: float,
+        comparisons: int = 1,
+        stopping_rule: str = "fixed-n",
     ) -> None:
         if not id:
             raise ValueError("strategy certificate id must be non-empty")
@@ -60,6 +79,16 @@ class StrategyPerformanceCertificate:
             raise ValueError("utility definition must be non-empty")
         if not isfinite(delta) or delta <= 0.0 or delta >= 1.0:
             raise ValueError("delta must lie strictly between 0 and 1")
+        if (
+            isinstance(comparisons, bool)
+            or not isinstance(comparisons, int)
+            or comparisons < 1
+        ):
+            raise ValueError("comparisons must be a positive integer")
+        if stopping_rule not in STOPPING_RULES:
+            raise ValueError(
+                f"stopping_rule must be one of {sorted(STOPPING_RULES)}"
+            )
 
         strategy = tuple(strategy_utilities)
         baseline = tuple(baseline_utilities)
@@ -79,6 +108,8 @@ class StrategyPerformanceCertificate:
         object.__setattr__(self, "strategy_utilities", strategy)
         object.__setattr__(self, "baseline_utilities", baseline)
         object.__setattr__(self, "delta", delta)
+        object.__setattr__(self, "comparisons", comparisons)
+        object.__setattr__(self, "stopping_rule", stopping_rule)
 
     @property
     def sample_size(self) -> int:
@@ -99,9 +130,19 @@ class StrategyPerformanceCertificate:
         return sum(self.utility_differences) / self.sample_size
 
     @property
+    def per_comparison_delta(self) -> float:
+        """Error level for this comparison after the Bonferroni correction."""
+        return self.delta / self.comparisons
+
+    @property
     def hoeffding_radius(self) -> float:
         # Differences lie in [-1, 1], whose range width is 2.
-        return sqrt(2.0 * log(1.0 / self.delta) / self.sample_size)
+        n = self.sample_size
+        delta = self.per_comparison_delta
+        if self.stopping_rule == "sequential":
+            # Anytime-valid: union bound over n with delta_n = delta / (n(n+1)).
+            return sqrt(2.0 * log(n * (n + 1) / delta) / n)
+        return sqrt(2.0 * log(1.0 / delta) / n)
 
     @property
     def lower_advantage_bound(self) -> float:
