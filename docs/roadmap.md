@@ -40,7 +40,7 @@ The main foundational frontier is **acceptance licensing and warrant composition
 - treat acceptance policies as explicit warrantable policies/meta-regimes;
 - study how heterogeneous typed guarantees compose without premature scalarization.
 
-A second technical task is to audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions before interpreting it as a general adaptive-selection guarantee.
+A second technical task is to audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions before interpreting it as a general adaptive-selection guarantee (issue #39).
 
 ### Empirical / representation priority
 
@@ -49,7 +49,7 @@ The inquiry graph remains a curated first-pass reconstruction.
 Priority product/research work is:
 
 1. reconcile the full conversation export and adjudicate the 798 proposed annotations (issue #3);
-2. define a concrete inquiry-navigation/auditability usefulness test;
+2. define and run a concrete inquiry-navigation/auditability usefulness test (issue #38);
 3. compare the graph-assisted workflow against reading the transcript directly;
 4. only then expand UI, storage, automation, or learned reasoning policies.
 
