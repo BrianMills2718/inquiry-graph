@@ -273,13 +273,15 @@ These are benchmark/reference regimes, not claims of universal adequacy.
 
 ## 8. Verification status
 
-Latest integrated native-Windows verification:
+Last independently executed integrated native-Windows baseline:
 
 - **138 tests passed**
 - seed fixture rebuilt successfully
 - **8 generated artifacts** matched
 - graph validation: **0 errors / 0 warnings**
 - dependency check: clean
+
+PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping correction and records **142 tests passed** on its tested branch. The current handoff agent reviewed the patch but could not independently rerun current main because the Windows execution channel was degraded. Treat a fresh integrated rerun as a small verification follow-up, not a foundational blocker.
 
 Environment used:
 
@@ -483,15 +485,17 @@ When documents disagree, prefer this order:
 
 ## 17. Documentation debt
 
-Known cleanup work:
+The final handoff review synchronized the canonical project status, architecture reassessment, closeout checklist, and paper draft with the current priority: acceptance licensing + warrant composition. The paper now reflects the narrowing of candidate generation and uses the canonical warrant notation in its top-level statement.
 
-- older docs still use pre-closeout notation;
-- the paper draft is a research draft, not submission-ready;
-- paper sections written before PR #30 and the candidate-generation/transport surveys need final normalization;
-- the strategy-performance implementation/documentation should be explicitly checked for multiple-comparison and optional-stopping conditions before treating its statistical guarantee as broadly applicable;
-- some older docs still describe candidate generation as the “largest open problem”; the canonical closeout/status/handoff supersede those statements.
+Known cleanup work that remains:
 
-Do not spend time normalizing all documentation unless that work is useful for the next goal.
+- older stage documents still use pre-closeout notation and should be treated as historical unless explicitly migrated;
+- the paper draft is still not submission-ready: it needs a systematic related-work pass, bibliography normalization, and a stronger formal/empirical evaluation story;
+- PR #36 now handles declared multiple comparisons and optional stopping for the strategy-performance reference regime; benchmark reuse/adaptive-selection assumptions still need to be stated truthfully by callers;
+- full comparison to adjacent integrated meta-models/cognitive architectures is not exhaustive;
+- source reconciliation and empirical usefulness remain undone.
+
+Do not spend time normalizing every historical document unless that work directly serves the next chosen track.
 
 ## 18. Research methodology / user preference
 
@@ -563,6 +567,23 @@ Normalize the paper against the canonical closeout, update related work, and pre
 
 Review/rebase PR #8 and stacked PR #15 only if the user explicitly wants that trajectory resumed.
 
-## 21. One-sentence handoff
+## 21. Final handoff review
+
+The roadmap, project status, architecture reassessment, canonical closeout, paper draft, open-issue list, and deliberately separate PR #8/#15 stack were reviewed together before handoff.
+
+Current priority order is authoritative as follows:
+
+1. **Issue #34 — acceptance licensing + warrant composition** if continuing foundational research.
+2. **Useful Inquiry System/product track** may proceed independently; do not block it on philosophical closure.
+3. **Issue #3 — source reconciliation** when the full export is available.
+4. **Paper/research communication** if preparing an external research artifact.
+5. **Issues #17/#18** remain escalation-only, not active implementation plans.
+6. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
+7. **Issue #2** remains low-priority hosted-CI infrastructure debt.
+8. **PR #8/#15** remain intentionally separate and must not be merged casually.
+
+If a future document conflicts with this handoff, prefer the canonical closeout and current ADRs, then update this handoff rather than inferring intent from historical notes.
+
+## 22. One-sentence handoff
 
 The foundational architecture is now broadly mapped to mature prior work and internally verified; **do not keep expanding it by default**—the main research frontier is acceptance/warrant composition, while the most important product question is whether the inquiry representation is actually useful.

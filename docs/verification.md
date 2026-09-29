@@ -2,7 +2,9 @@
 
 ## Build environment checks
 
-Latest integrated native-Windows verification: **138 tests passed** on Python 3.14.7; fixture rebuilding succeeded; all **8 generated artifacts** matched; canonical graph validation returned zero errors and warnings; and `pip check` reported no broken requirements. This run includes the defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and strategy-performance research layers.
+Last independently executed integrated native-Windows verification before PR #36: **138 tests passed** on Python 3.14.7; fixture rebuilding succeeded; all **8 generated artifacts** matched; canonical graph validation returned zero errors and warnings; and `pip check` reported no broken requirements. That run includes the defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and pre-PR-#36 strategy-performance research layers.
+
+PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping correction and records a local full-suite result of **142 tests passed** on its tested branch. The final handoff review could not independently repeat that post-merge run because the remote Windows execution channel was degraded. A fresh integrated rerun of current `main` is therefore the only current execution-verification follow-up.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
@@ -26,7 +28,7 @@ The integrated tests exercise import, prepare, response-file extraction, validat
 
 The repository CI is configured to install the package with development and optional provider dependencies on Python 3.11 and 3.13, rebuild the fixture and artifacts, run tests, validate the graph, and check generated-file drift and dependency consistency.
 
-**Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The native-Windows integrated run above is the current full-repository execution record.
+**Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The 138-test native-Windows run above is the last independently repeated integrated execution record; PR #36's 142-test run is recorded in its pull request and should be independently rerun on current main when execution is available.
 
 ## Explicitly not verified
 

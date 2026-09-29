@@ -54,7 +54,35 @@ E[D]
 }
 \]
 
-with probability at least \(1-\delta\).
+with probability at least \(1-\delta\) for one pre-specified comparison at fixed sample size.
+
+### Statistical scope refinement (PR #36)
+
+If \(k\) candidate strategies are screened against the same baseline, the implementation uses the per-comparison error budget:
+
+\[
+\delta_c=\delta/k
+\]
+
+so the fixed-sample Hoeffding radius becomes:
+
+\[
+\sqrt{
+\frac{2\log(1/\delta_c)}{n}
+}.
+\]
+
+If results may be inspected repeatedly with data-dependent stopping, the implementation can instead use a conservative anytime-valid union-bound radius:
+
+\[
+\sqrt{
+\frac{2\log(n(n+1)/\delta_c)}{n}
+},
+\]
+
+corresponding to \(\delta_{c,n}=\delta_c/[n(n+1)]\).
+
+The caller must truthfully declare the comparison count and stopping regime. Benchmark reuse or adaptive candidate generation can still create additional selection effects not captured by those declarations and therefore remains an applicability-assumption question.
 
 The strategy-performance warrant regime may license:
 
@@ -74,7 +102,9 @@ The warrant should therefore keep assumptions such as:
 - stable task distribution;
 - validity of the declared utility function;
 - utility values bounded in \([0,1]\);
-- no hidden benchmark leakage or adaptive re-use invalidating the guarantee;
+- declared comparison count covers the screening family for which the family-wise guarantee is claimed;
+- declared stopping rule matches the actual fixed-sample or sequential evaluation procedure;
+- no hidden benchmark leakage or adaptive re-use invalidating the stated correction;
 
 explicit in the warrant/context.
 

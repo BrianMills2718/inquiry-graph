@@ -42,9 +42,9 @@ The repository has moved beyond architecture discovery. The current research/pro
 
 ### Maintenance
 
-**P2 — Documentation/paper normalization.** The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. Older docs still contain legacy notation. The paper draft needs a final sync to the acceptance/composition priority and the completed candidate-generation/transport surveys.
+**P2 — Documentation/paper normalization.** The canonical notation is in `docs/formal-epistemic-reasoning-metamodel.md`. The paper's top-level notation/priorities are now synchronized to acceptance/composition and the completed candidate-generation/transport surveys. Remaining work is systematic related-work/bibliography normalization and optional migration of older historical docs. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping assumptions; only a fresh independent integrated rerun of current main remains as verification follow-up.
 
-**P3 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. Current application-level verification is local and green: 138 tests, 8 artifacts, graph 0 errors/0 warnings, dependency check clean.
+**P3 — Hosted CI.** Issue #2 remains open because GitHub-hosted jobs fail/cancel before runner steps. The last independently executed application-level baseline is local and green: 138 tests, 8 artifacts, graph 0 errors/0 warnings, dependency check clean. PR #36 records 142 passing tests after its strategy-performance fix; a fresh independent rerun of current main is pending.
 
 ### Separate open PR stacks
 
