@@ -66,7 +66,7 @@ CEGIS, Meta-Interpretive Learning, anti-unification, HR theory formation, and co
 The current warrant judgment is:
 
 \[
-\mathfrak W;A\vdash_\pi a:G.
+\mathfrak W;\Phi\vdash_\kappa a:G.
 \]
 
 Support, warrant, derived license and executed update remain separate.
