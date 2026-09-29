@@ -226,6 +226,8 @@ Keep these open unless a concrete benchmark triggers them.
 Low priority because the integrated local suite is green.
 
 ### Empirical usefulness
+Tracked in issue #38.
+
 Still untested:
 - whether the graph improves navigation;
 - whether it improves auditability;
@@ -234,6 +236,8 @@ Still untested:
 - whether the meta-model improves reasoning rather than merely describing it.
 
 ### Strategy-performance statistical caveat
+Tracked in issue #39.
+
 The closeout flags multiple comparisons and optional stopping. Audit this before interpreting the current benchmark as a general adaptive strategy-selection guarantee.
 
 ### Documentation consistency
@@ -336,7 +340,9 @@ Otherwise prefer existing-framework adoption, implementation, validation, and em
 - #3 full export/source reconciliation;
 - #17 derivation/subargument escalation;
 - #18 full ABA+/hyperargumentation escalation;
-- #34 acceptance licensing / warrant composition.
+- #34 acceptance licensing / warrant composition;
+- #38 empirical usefulness of the inquiry representation/system;
+- #39 strategy-performance adaptive-statistics audit.
 
 Latest architectural decisions:
 - ADR 015 typed generative systems;
