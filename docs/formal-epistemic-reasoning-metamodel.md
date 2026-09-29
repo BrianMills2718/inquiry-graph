@@ -144,7 +144,10 @@ Earlier drafts reused several letters for unrelated objects. The following conve
 | $E, F$ | assumption environments (finite subsets of $X$) | §8 |
 | $\sigma,\tau$ | support antichains | §8, §9 |
 | $R$ | reasoning episode | §10 |
-| $\mathcal G_R,\ \mathcal D_R,\ d,\ \mathcal O_R$ | generative space, drafts, draft, operators | §10 |
+| $\mathcal G_R$ | typed generative regime | §10 |
+| $\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,V_R$ | artifact ontology, language, draft space, bias, operators, evaluators | §10 |
+| $E_G,d_0$ | generation episode and initial draft | §10 |
+| $\mu$ | generative-regime transformation | §10 |
 | $c$ | elaborated candidate in $\mathcal F$ | §10 |
 | $\operatorname{Ev}_j$ | evaluator | §10 |
 | $\pi$ | strategy (only use of $\pi$) | §10 |
@@ -336,55 +339,51 @@ Two further caveats:
 
 ## 10. Candidate generation
 
-Candidate generation is separate from warrant and state update.
-
-For a reasoning episode $R$:
+Candidate generation is separate from warrant and state update and is now treated as a typed generative regime:
 
 $$
-\mathcal G_R
-=
+\mathcal G_R=
 (
+\mathcal A_R,
+\mathcal L_R,
 \mathcal D_R,
-d_0,
+B_R,
 \mathcal O_R,
-\to_R
-)
+\to_R,
+V_R
+).
 $$
 
-where:
+Here:
 
-- $\mathcal D_R$: admissible draft states;
-- $d_0$: initial/partial draft;
-- $\mathcal O_R$: construction/refinement operators;
-- $\to_R$: transition relation.
+- \(\mathcal A_R\): artifact/candidate ontology;
+- \(\mathcal L_R\): representation or generative language;
+- \(\mathcal D_R\): draft/candidate state space;
+- \(B_R\): admissibility/search bias;
+- \(\mathcal O_R\): construction/traversal operators;
+- \(\to_R\): ordinary candidate transition;
+- \(V_R\): evaluator family.
 
-Reachable drafts:
+A concrete generation episode is:
 
 $$
-\operatorname{Reach}(R)
-=
-\{
-d:
-d_0
-\xrightarrow{\mathcal O_R^{*}}
-d
-\}.
+E_G=(R,\mathcal G_R,d_0).
 $$
 
-A strategy:
+Strategy/control remains separate:
 
 $$
 \pi:
-\operatorname{Hist}(R,\mathcal G_R)
+\operatorname{Hist}(E_G)
 \to
-\mathcal P\big(
+\mathcal P(
 \mathcal O_R
 \cup
 \{\operatorname{stop}\}
-\big).
+).
 $$
 
-Formal elaboration:
+Formal elaboration maps a draft \(d\) into the formal substrate when possible:
 
 $$
 \operatorname{Elab}_{\mathcal F}(d)
@@ -395,7 +394,7 @@ c\in\mathcal F & \text{if formalizable}\\
 \end{cases}
 $$
 
-Evaluation:
+Evaluation returns typed diagnostic feedback:
 
 $$
 \operatorname{Ev}_j(R,c)
@@ -406,23 +405,34 @@ f_j
 ).
 $$
 
+A change to the represented generative regime itself is distinct from an ordinary candidate transition:
+
+$$
+\mu:
+\mathcal G_R
+\rightharpoonup
+\mathcal G'_R.
+$$
+
+Transformationality is representation-relative: generating a new predicate or concept is not automatically a \(\mu\)-transition if the existing meta-language already supports such generated declarations.
+
+The interface has been mapped successfully to CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR automated theory formation and computational conceptual blending. Cross-framework orchestration and guarantee transport are largely covered by mature blackboard/multistrategy/algorithm-selection/reflection and Hets/DOL/MMT/refinement traditions.
+
 Core distinction:
 
 $$
 \boxed{
-\text{generative space}
+\text{generative regime}
 \neq
-\text{operators}
+\text{ordinary candidate transition}
 \neq
-\text{strategy}
+\text{strategy/control}
 \neq
 \text{evaluation}
 \neq
 \text{warrant}
 }
 $$
-
-This area remains the largest theoretical open question. See §21.2.
 
 ## 11. Epistemic actions
 
@@ -863,50 +873,38 @@ Questions include:
 
 ### 21.2 Candidate generation
 
-This is the largest unresolved foundational area.
+Candidate generation is no longer the largest broad foundational gap.
 
-Current interface:
+A dedicated landscape survey, five-framework mapping, cross-framework orchestration survey, and guarantee-transport survey now show that most of the relevant machinery already exists across program synthesis/CEGIS, ILP/MIL, anti-unification, automated theory formation, conceptual blending, Bayesian program learning, blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, reflection, Hets/DOL/institutions, MMT and refinement/abstract-interpretation machinery.
 
-$$
-\mathcal G_R
-=
-(
-\mathcal D_R,
-d_0,
-\mathcal O_R,
-\to_R
-).
-$$
-
-We know how to represent generative spaces, construction/refinement operators, strategies, elaboration, and evaluators.
-
-We do **not** yet have a satisfying general theory of how new hypotheses, predicates, concepts, analogies, representations, and explanatory structures are generated.
-
-Important prior conclusions:
+The current generative-regime interface is:
 
 $$
-\boxed{
-\text{concept construction}
-\neq
-\text{concept invention}
-}
+\mathcal G_R=
+(\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,\to_R,V_R)
 $$
 
-and:
+with generation episode:
 
 $$
-\boxed{
-\text{expression construction}
-\neq
-\text{definitional extension}
-\neq
-\text{substantive predicate invention}
-}
+E_G=(R,\mathcal G_R,d_0)
 $$
 
-The literature (including the discovery-as-search tradition, §20) suggests constrained search over a generative space is a more robust abstraction than a universal "creativity operator" list.
+and regime transformation:
 
-Candidate generation has now received both a dedicated landscape survey and a five-framework mapping test. CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR theory formation, and conceptual blending all fit the revised typed generative-system interface without another top-level coordinate. The important refinements are that generation episodes should be separated from reusable regimes, artifact ontologies may be heterogeneous, draft states may be graphs, and transformationality is representation-relative. See `docs/candidate-generation-framework-mappings.md` and ADR 016.
+$$
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
+$$
+
+Remaining questions are narrower and should be pursued only when needed:
+
+- generative-regime equivalence/composition;
+- operator or bias invention when existing meta-learning/hyper-heuristic machinery is inadequate;
+- semantics of substantive concept invention;
+- typed adapter metadata and preservation certificates;
+- generator-level warrant.
+
+See the candidate-generation landscape/mapping/glue documents, warrant-guarantee transport document, and ADRs 015–018.
 
 ### 21.3 Warrant composition
 
@@ -1054,26 +1052,43 @@ The project has enough machinery to test.
 
 ## 25. Recommended next foundational discussion
 
-The next theoretical discussion should be:
+The next foundational discussion should be:
 
-**Candidate generation**
+**Acceptance licensing and warrant composition** — tracked in GitHub issue #34.
 
-Specifically:
+The framework already separates:
 
-1. What is the object being generated?
-2. What distinctions exist between expression construction, definitional extension, predicate invention, theory extension, analogy, and representation change?
-3. What parts can be treated as constrained search?
-4. What cannot?
-5. Can mature frameworks such as program synthesis, ILP/MIL, anti-unification, abductive logic programming, theory morphisms, and concept learning be unified at the interface level?
-6. Is there a useful factorization analogous to the warrant factorization?
-7. What would count as a canonical or minimal generative basis?
-8. How should representation-changing operations be modeled?
-9. What guarantees can be stated about search without collapsing generation into evaluation?
-10. How should learned/generated operators themselves become candidates?
+$$
+\text{support}
+\neq
+\text{warrant}
+\neq
+\text{license}
+\neq
+\text{execution}.
+$$
 
-This topic is intentionally left open for the next session.
+What remains unresolved is when heterogeneous typed warrants are sufficient for stronger epistemic actions such as:
 
-Acceptance licensing (§21.1) is the recommended follow-on integrative topic, since it determines whether the framework can support decisions rather than only audits.
+- accept;
+- commit;
+- use-for-action;
+- revise;
+- retract.
+
+Questions include:
+
+1. Is acceptance one action type or a stakes/task-relative family?
+2. Can a single warrant regime license acceptance, or is composition generally required?
+3. How should deductive, defeasible, probabilistic, testimonial, measurement and statistical guarantees combine without being forced into one scalar?
+4. What guarantee does an acceptance action carry?
+5. How should lottery/preface-style closure failures be handled?
+6. What licenses retraction/revision?
+7. Can acceptance/composition policies themselves be warranted meta-level objects?
+
+Before inventing machinery, compare Carneades proof standards, belief-versus-acceptance literature, decision-theoretic acceptance, structured argumentation, formal belief revision, and explicit policy/contract formalisms.
+
+Candidate-generation research is now secondary and should resume only if concrete integration/benchmark cases expose a missing distinction.
 
 ## 26. Relation to the accompanying paper
 

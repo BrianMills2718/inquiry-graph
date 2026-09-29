@@ -1,5 +1,7 @@
 # A Factorized Meta-Model for Epistemic Reasoning
 
+> **Draft status:** research preprint draft, not submission-ready. The canonical current model/notation is in `docs/formal-epistemic-reasoning-metamodel.md`, and the current priorities are in `docs/new-agent-handoff.md`. Some earlier sections of this paper still use legacy notation or describe candidate generation as a larger open problem than it now is.
+
 **Author:** TBD  
 **Draft status:** preprint / arXiv-style research draft  
 **Repository artifact:** Formal Epistemic Reasoning Meta-Model project
