@@ -44,7 +44,7 @@ Evaluate common confusions separately: support mistaken for sufficient warrant; 
 
 For graded support, add provenance-sensitive fixtures in which two apparent pieces of evidence share a common source, and compare them with genuinely independent support. An acceptable annotation/evaluation layer must preserve the difference before numerical aggregation. Test regime-specific update rules separately (for example, conditioning versus uncertain-evidence updates) rather than treating every support increase as the same operation.
 
-The next Stage C research target is acceptance licensing / warrant composition (issue #34). Add benchmark cases where the same support profile leads to different acceptance/use-for-action decisions under different stakes, proof standards, or explicit policies. Test lottery/preface-style closure failures and require the acceptance policy itself to be represented rather than hidden in a threshold.
+The next Stage C theory target is acceptance licensing / warrant composition in `BrianMills2718/epistemic-warrant#1`. Add benchmark cases where the same support profile leads to different acceptance/use-for-action decisions under different stakes, proof standards, or explicit policies. Test lottery/preface-style closure failures and require the acceptance policy itself to be represented rather than hidden in a threshold.
 
 ## Stage D: strategy-episode annotation
 
@@ -67,4 +67,4 @@ Outcomes may include answer correctness, calibration, error discovery, robustnes
 Exact test counts and commands belong in `docs/verification.md` and the linked CI run. The optional provider adapter is protocol-tested with a fake client; the API boundary has not been tested with a paid live request. No human-reviewed belief map or learned policy is claimed.
 
 
-The integration benchmark in `docs/end-to-end-warrant-benchmark.md` should be used as the executable regression set for Stage C. New warrant regimes should add cases there before being treated as part of the stable research architecture.
+The warrant integration benchmark now lives in `BrianMills2718/epistemic-warrant` (`docs/end-to-end-warrant-benchmark.md`). New formal warrant-regime evaluation belongs in that repository; this repository's primary evaluation target is Stage B / issue #38.
