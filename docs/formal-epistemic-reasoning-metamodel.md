@@ -144,7 +144,10 @@ Earlier drafts reused several letters for unrelated objects. The following conve
 | $E, F$ | assumption environments (finite subsets of $X$) | §8 |
 | $\sigma,\tau$ | support antichains | §8, §9 |
 | $R$ | reasoning episode | §10 |
-| $\mathcal G_R,\ \mathcal D_R,\ d,\ \mathcal O_R$ | generative space, drafts, draft, operators | §10 |
+| $\mathcal G_R$ | typed generative regime | §10 |
+| $\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,V_R$ | artifact ontology, language, draft space, bias, operators, evaluators | §10 |
+| $E_G,d_0$ | generation episode and initial draft | §10 |
+| $\mu$ | generative-regime transformation | §10 |
 | $c$ | elaborated candidate in $\mathcal F$ | §10 |
 | $\operatorname{Ev}_j$ | evaluator | §10 |
 | $\pi$ | strategy (only use of $\pi$) | §10 |
@@ -336,55 +339,51 @@ Two further caveats:
 
 ## 10. Candidate generation
 
-Candidate generation is separate from warrant and state update.
-
-For a reasoning episode $R$:
+Candidate generation is separate from warrant and state update and is now treated as a typed generative regime:
 
 $$
-\mathcal G_R
-=
+\mathcal G_R=
 (
+\mathcal A_R,
+\mathcal L_R,
 \mathcal D_R,
-d_0,
+B_R,
 \mathcal O_R,
-\to_R
-)
+\to_R,
+V_R
+).
 $$
 
-where:
+Here:
 
-- $\mathcal D_R$: admissible draft states;
-- $d_0$: initial/partial draft;
-- $\mathcal O_R$: construction/refinement operators;
-- $\to_R$: transition relation.
+- \(\mathcal A_R\): artifact/candidate ontology;
+- \(\mathcal L_R\): representation or generative language;
+- \(\mathcal D_R\): draft/candidate state space;
+- \(B_R\): admissibility/search bias;
+- \(\mathcal O_R\): construction/traversal operators;
+- \(\to_R\): ordinary candidate transition;
+- \(V_R\): evaluator family.
 
-Reachable drafts:
+A concrete generation episode is:
 
 $$
-\operatorname{Reach}(R)
-=
-\{
-d:
-d_0
-\xrightarrow{\mathcal O_R^{*}}
-d
-\}.
+E_G=(R,\mathcal G_R,d_0).
 $$
 
-A strategy:
+Strategy/control remains separate:
 
 $$
 \pi:
-\operatorname{Hist}(R,\mathcal G_R)
+\operatorname{Hist}(E_G)
 \to
-\mathcal P\big(
+\mathcal P(
 \mathcal O_R
 \cup
 \{\operatorname{stop}\}
-\big).
+).
 $$
 
-Formal elaboration:
+Formal elaboration maps a draft \(d\) into the formal substrate when possible:
 
 $$
 \operatorname{Elab}_{\mathcal F}(d)
@@ -395,7 +394,7 @@ c\in\mathcal F & \text{if formalizable}\\
 \end{cases}
 $$
 
-Evaluation:
+Evaluation returns typed diagnostic feedback:
 
 $$
 \operatorname{Ev}_j(R,c)
@@ -406,23 +405,34 @@ f_j
 ).
 $$
 
+A change to the represented generative regime itself is distinct from an ordinary candidate transition:
+
+$$
+\mu:
+\mathcal G_R
+\rightharpoonup
+\mathcal G'_R.
+$$
+
+Transformationality is representation-relative: generating a new predicate or concept is not automatically a \(\mu\)-transition if the existing meta-language already supports such generated declarations.
+
+The interface has been mapped successfully to CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR automated theory formation and computational conceptual blending. Cross-framework orchestration and guarantee transport are largely covered by mature blackboard/multistrategy/algorithm-selection/reflection and Hets/DOL/MMT/refinement traditions.
+
 Core distinction:
 
 $$
 \boxed{
-\text{generative space}
+\text{generative regime}
 \neq
-\text{operators}
+\text{ordinary candidate transition}
 \neq
-\text{strategy}
+\text{strategy/control}
 \neq
 \text{evaluation}
 \neq
 \text{warrant}
 }
 $$
-
-This area remains the largest theoretical open question. See §21.2.
 
 ## 11. Epistemic actions
 
