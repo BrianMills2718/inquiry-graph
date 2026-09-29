@@ -179,3 +179,74 @@ def test_strategy_certificate_validation():
             baseline_utilities=[0.4],
             delta=0.05,
         )
+
+
+def test_bonferroni_correction_widens_radius_for_multiple_comparisons():
+    base = certificate([0.9] * 100, [0.5] * 100, delta=0.05)
+    corrected = StrategyPerformanceCertificate(
+        id="strategy:canonical-factorization",
+        strategy_id="canonical-factorization",
+        baseline_id="baseline-search",
+        task_class="factorization-benchmarks",
+        utility_definition="u",
+        strategy_utilities=[0.9] * 100,
+        baseline_utilities=[0.5] * 100,
+        delta=0.05,
+        comparisons=5,
+    )
+
+    assert corrected.per_comparison_delta == pytest.approx(0.01)
+    assert corrected.hoeffding_radius == pytest.approx(
+        math.sqrt(2 * math.log(5 / 0.05) / 100)
+    )
+    assert corrected.hoeffding_radius > base.hoeffding_radius
+    assert corrected.confidence == pytest.approx(0.95)
+
+
+def _cert(**kwargs):
+    params = dict(
+        id="strategy:canonical-factorization",
+        strategy_id="canonical-factorization",
+        baseline_id="baseline-search",
+        task_class="factorization-benchmarks",
+        utility_definition="u",
+        strategy_utilities=[0.65] * 500,
+        baseline_utilities=[0.5] * 500,
+        delta=0.05,
+    )
+    params.update(kwargs)
+    return StrategyPerformanceCertificate(**params)
+
+
+def test_many_comparisons_can_remove_warrant():
+    regime = StrategyPerformanceWarrantRegime()
+
+    single = regime.assess(judgment(), _cert())
+    many = regime.assess(judgment(), _cert(comparisons=100))
+
+    assert single.warranted is True
+    assert many.warranted is False
+
+
+def test_sequential_stopping_uses_anytime_valid_radius():
+    fixed = _cert()
+    sequential = _cert(stopping_rule="sequential")
+    n = 500
+
+    assert sequential.hoeffding_radius == pytest.approx(
+        math.sqrt(2 * math.log(n * (n + 1) / 0.05) / n)
+    )
+    assert sequential.hoeffding_radius > fixed.hoeffding_radius
+
+    regime = StrategyPerformanceWarrantRegime()
+    assessment = regime.assess(judgment(), sequential)
+    assert assessment.warranted is False
+
+
+def test_comparison_and_stopping_rule_validation():
+    with pytest.raises(ValueError, match="comparisons"):
+        _cert(comparisons=0)
+    with pytest.raises(ValueError, match="comparisons"):
+        _cert(comparisons=True)
+    with pytest.raises(ValueError, match="stopping_rule"):
+        _cert(stopping_rule="peek-when-convenient")
