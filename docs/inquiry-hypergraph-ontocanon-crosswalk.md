@@ -165,6 +165,14 @@ kernel incidence**:
 
 The exact OntoCanon storage/identity path remains pending the local carrier audit.
 
+## Inquiry semantic contract
+
+The carrier-independent domain semantics are frozen in
+[`inquiry-ontology-pack-semantic-contract.md`](inquiry-ontology-pack-semantic-contract.md).
+That document is the translation source for an eventual executable OntoCanon
+Inquiry pack; current Pydantic/storage shapes are not automatically permanent
+ontology semantics.
+
 ## 5. Inquiry ontology pack
 
 The following belong in an Inquiry ontology pack rather than the carrier.
