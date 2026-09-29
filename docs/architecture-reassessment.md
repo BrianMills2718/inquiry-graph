@@ -182,6 +182,8 @@ The run exposed and fixed three Windows portability problems: subprocess stdout 
 
 ### Track B — targeted benchmark and empirical evaluation
 
+Acceptance/warrant-composition research is tracked in issue #34. Empirical usefulness evaluation is tracked separately in issue #38, and the adaptive-statistics audit for strategy-performance warrant is issue #39.
+
 The first targeted meta-model benchmark should now focus on acceptance/warrant composition rather than adding more warrant-regime examples.
 
 In parallel, turn the current examples into a maintained benchmark corpus and test:
