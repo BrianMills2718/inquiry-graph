@@ -183,15 +183,16 @@ Switch to `epistemic-warrant`; do not continue theory in this repository.
 ## 13. Canonical product documents
 
 1. `docs/new-agent-handoff.md`
-2. `docs/project-status.md`
-3. `docs/roadmap.md`
-4. `docs/verification.md`
-5. `docs/formalism.md`
-6. `docs/requirements.md`
-7. `docs/annotation-guide.md`
-8. `docs/evaluation.md`
-9. `docs/architecture.md`
-10. `docs/decisions/index.md`
+2. `docs/session-closeout-2026-09-29.md`
+3. `docs/project-status.md`
+4. `docs/roadmap.md`
+5. `docs/verification.md`
+6. `docs/formalism.md`
+7. `docs/requirements.md`
+8. `docs/annotation-guide.md`
+9. `docs/evaluation.md`
+10. `docs/architecture.md`
+11. `docs/decisions/index.md`
 
 Historical theory documents were moved to `epistemic-warrant`.
 
