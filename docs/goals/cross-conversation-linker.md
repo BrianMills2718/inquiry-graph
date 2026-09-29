@@ -110,16 +110,27 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
 - **Current increment:** 3 (independent reference key).
-- **C3 state:** 8 of 30 per-chat key files exist in the original OpenRouter run; the cross-key,
-  route answers and grades are absent. OpenRouter rejected the next key request because the
-  account could afford only 29,639 tokens. A separate Codex CLI subscription probe on one chat
-  returned 20 positions with all 20 quotes matching Brian-authored messages; the client reported
-  `subscription_included` and `$0`, but no token counts. This proves one-chat route compatibility,
-  not full-run capacity. Keep any Codex campaign separate and regenerate all 30 keys consistently.
-- **Blocker:** the original OpenRouter route cannot continue at the current balance; capacity for
-  the full Codex campaign is not established.
-- **Resume event:** prepare a separate Codex-backed campaign, then monitor Codex usage while
-  generating the full reference key and running the comparison stages.
+- **C3 state (2026-09-29 21:02 UTC):** the original OpenRouter run still has 8/30 key files and
+  cannot continue at the current credit balance. A separate, manifest-pinned Codex CLI campaign
+  is running under `private/xconv/scale_run_codex/` with:
+  `python evaluation/cross_conversation_scale/scale.py --codex-subscription --keys-only`.
+  It has 11/30 per-chat keys so far: 212 kept positions, 18 dropped, and $0 recorded cost. An
+  independent code audit found all 212 `verified_quote` values as exact substrings of the cited
+  Brian-authored messages, with no wrong message indices or assistant-authored items. Seven model
+  quote strings differ from their source slices; cite `verified_quote` when a verbatim source span
+  is needed. No quote text is included in this report.
+- **C3 trace:** `inquiry-graph/xconv-key/codex/positions/6ab8563b` was inspected directly: one
+  successful `codex/gpt-5.6-luna` call, zero tool calls/errors, 318.6 seconds, 138,144 tokens,
+  and $0 API cost. The serial campaign process remained live at the status check above.
+- **C4 preflight:** the cached 30-chat B export is 437,686 characters with 620 positions and 233
+  typed cross-chat links; the C export is 330,267 characters with the same 620 positions and no
+  links. The A/B/C answer and blind-grade outputs are still absent.
+- **Blocker:** the original OpenRouter route remains out of credits. The Codex-backed campaign is
+  active and has made progress; its full-run capacity is not established until it finishes.
+- **Resume event:** let the current `--keys-only` process finish. Then rerun
+  `python evaluation/cross_conversation_scale/scale.py --codex-subscription` without
+  `--keys-only` to continue from its isolated cache through the cross-key, answer routes, and
+  blind grades. Do not restart while the process remains live or mix its key with OpenRouter keys.
 
 ## Evaluator-Facing Objective
 
