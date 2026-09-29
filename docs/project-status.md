@@ -162,9 +162,10 @@ The integrated verification gate is cleared and the broad architecture is frozen
 ### Meta-model priority
 
 1. **Acceptance licensing and warrant composition** — issue #34.
-2. Keep the paper draft aligned with the current closeout and literature comparisons.
-3. Audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions — issue #39.
-4. Add new foundational machinery only when a concrete benchmark cannot be represented faithfully.
+2. **Systematic comparison against the closest integrated frameworks** — issue #40; prefer replacing project-specific machinery with mature off-the-shelf theory where possible.
+3. Keep the paper draft aligned with the acceptance/comparison work.
+4. Audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions — issue #39.
+5. Add new foundational machinery only when a concrete benchmark cannot be represented faithfully.
 
 ### Inquiry representation / system priority
 
