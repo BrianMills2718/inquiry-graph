@@ -18,11 +18,11 @@
 
 Track: issue #38.
 
-**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on decision rationale and side-line outcomes. Next: record those explicitly, rerun the AI-reader pilot, then test multi-conversation histories that exceed a single context window. Human-reader evaluation is out of scope.
 
 Goal: determine whether the graph earns its complexity.
 
-Compare transcript-only vs graph-assisted performance on tasks such as unresolved-question recovery, rationale/revision recovery, attribution, dependency recovery, branch recovery and long-context resumption.
+Compare transcript-only/context-limited vs graph-assisted AI performance on unresolved-question recovery, rationale/revision recovery, attribution, dependency recovery, branch recovery, cross-conversation conflict/tension recovery, and long-context resumption.
 
 Do not build a polished UI first.
 
@@ -39,19 +39,20 @@ When the full export is available:
 - audit actor attribution and question closure;
 - adjudicate proposed annotations.
 
-## P2 — Product workflow/UI
+## P2 — Machine-consumable product workflow
 
-Only after P0 identifies useful workflows.
+Only after P0 identifies useful retrieval/representation workflows for an AI reader.
 
-Likely candidates:
+Likely capabilities:
 
-- open-question view;
-- revision/rationale trace;
-- provenance/dependency inspector;
-- actor/stance filters;
-- strategy/reasoning-history view.
+- open-question retrieval;
+- revision/rationale traces;
+- provenance/dependency retrieval;
+- actor/stance filtering;
+- strategy/reasoning-history retrieval;
+- compact cross-conversation context assembly.
 
-Choose storage/UI technology after measuring actual query/data needs.
+Do not optimize for human-facing UI. Choose storage/query technology only after measuring actual multi-conversation retrieval needs.
 
 ## P3 — Cross-conversation identity and incremental updates
 
