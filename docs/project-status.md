@@ -173,7 +173,7 @@ Candidate generation itself is no longer a broad open mystery: mature frameworks
 
 ## Verification status
 
-The last independently executed integrated native-Windows baseline, on post-PR-#36 code at `4ad3942` (2026-09-29), was green: **142 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. An independent Linux/Python 3.10 run of the same code tree reproduced these results. Current `main` is `81f136f`; the commits since `4ad3942` are documentation-only, so that execution record still covers the current code.
+The last independently executed integrated native-Windows baseline, on post-PR-#36 code at `4ad3942` (2026-09-29), was green: **142 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. An independent Linux/Python 3.10 run of the same code tree reproduced these results. At the handoff review, commits after verified code commit `4ad3942` were documentation-only, so that execution record still covered the executable tree. Check current `main` before resuming work.
 
 However, issue #46 is a separate **semantic audit failure** on the same executable layer. Passing tests therefore establish implementation/test consistency, not correctness of the preference semantics, flat-ABA precondition, or grounded-warrant target binding.
 
