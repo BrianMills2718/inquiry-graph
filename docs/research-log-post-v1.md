@@ -1400,3 +1400,76 @@ The next work is:
 
 The detailed checkpoint is in [architecture-reassessment.md](architecture-reassessment.md).
 
+## 45. Candidate-generation mapping test
+
+The candidate-generation landscape pass was followed by an explicit stress test against five mature frameworks:
+
+1. program synthesis / CEGIS;
+2. Meta-Interpretive Learning;
+3. anti-unification;
+4. HR automated theory formation;
+5. computational conceptual blending.
+
+The revised interface:
+
+\[
+\mathcal G_R=
+(
+\mathcal A_R,
+\mathcal L_R,
+\mathcal D_R,
+B_R,
+\mathcal O_R,
+\to_R,
+V_R
+)
+\]
+
+was sufficient for all five without adding another top-level coordinate.
+
+A concrete generation episode is now distinguished from the reusable regime:
+
+\[
+E_G=(R,\mathcal G_R,d_0).
+\]
+
+The mapping produced three important refinements.
+
+First, \(\mathcal A_R\) may be a typed heterogeneous artifact ontology. HR interleaves concepts, conjectures, proofs and countermodels.
+
+Second, \(d\in\mathcal D_R\) may be a graph-structured draft state rather than one candidate object.
+
+Third, and most importantly, transformationality is representation-relative. Predicate invention or concept invention is not automatically a \(\mu\)-transition if the current meta-language already supports generation of fresh declarations.
+
+Therefore:
+
+\[
+\boxed{
+\text{new object-language symbol}
+\not\Rightarrow
+\text{new generative meta-language}.
+}
+\]
+
+Use:
+
+\[
+\mu:\mathcal G_R\to\mathcal G'_R
+\]
+
+only when the represented generative regime itself changes.
+
+The mapping also sharpened the warrant boundary:
+
+\[
+\boxed{
+\text{generator warrant}
+\neq
+\text{candidate-content warrant}.
+}
+\]
+
+Generator warrants may concern coverage, completeness, least-generality, convergence, termination or cost; they do not establish the truth of generated candidates.
+
+This result is recorded in ADR 016 and [candidate-generation-framework-mappings.md](candidate-generation-framework-mappings.md).
+
