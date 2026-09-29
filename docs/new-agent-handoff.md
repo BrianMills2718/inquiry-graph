@@ -292,7 +292,7 @@ Environment used:
 - Pydantic 2.13.5
 - NetworkX 3.7
 
-Current `main` is `81f136f`; the commits since `4ad3942` are documentation-only, so the execution record still covers the current executable tree.
+At handoff review, changes after verified code commit `4ad3942` were documentation-only; the execution record therefore still covered the executable tree. Check current `main` before resuming work rather than relying on a frozen branch SHA in this document.
 
 **But:** issue #46 is a semantic-audit failure on that same executable layer. Passing tests do not establish the correctness of the binary preference semantics, flat-ABA precondition, or grounded-warrant target binding.
 
