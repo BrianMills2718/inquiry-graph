@@ -32,7 +32,9 @@ The integrated native-Windows repository verification is green: 138 tests passed
 
 ### Current research priority
 
-The main foundational frontier is **acceptance licensing and warrant composition** (issue #34):
+The main foundational frontier is **acceptance licensing and warrant composition** (issue #34). A parallel literature-alignment task is the systematic comparison against the closest integrated frameworks (issue #40), with the explicit goal of adopting existing theory rather than proving novelty.
+
+For acceptance/warrant composition:
 
 - define acceptance/commitment/use-for-action precisely;
 - compare proof-standard, decision-theoretic, argumentation, belief-revision and acceptance literature;
