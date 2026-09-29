@@ -20,4 +20,50 @@ Add a local graph canvas with filters for actor, topic, status and interpretatio
 
 ## Research track, separate from product delivery
 
-Evaluate extraction fidelity, inquiry-navigation usefulness, higher-level strategy-episode annotation, and eventually policies over reasoning moves/strategies under held-out tasks and controlled budgets. Investigate links to AIF/IAT, IBIS, provenance, belief revision/update, dynamic epistemic logic, metareasoning, explicit justification, structured argumentation, assume-guarantee reasoning and discourse models without claiming a unique new universal ontology. The positive-support choice is instantiated as finite antichains of minimal assumption environments (free distributive lattice / positive Boolean provenance), with a small independent-Bernoulli reference regime conditioned on nogoods. Defeasible conflict is now kept in a separate argumentation layer with typed rebut/undercut/undermine defeats and Dung grounded semantics. The six-case benchmark selected an **ABA-first executable bridge with ASPIC+-compatible attack-origin metadata**, and the basic ABA core is now implemented: Horn-style rules, assumptions, contraries, minimal-support argument construction, typed attacks, and projection into the Dung defeat layer. The argument-identity boundary is resolved: keep the conclusion + assumption-support quotient for the current ABA dialectical layer and escalate to first-class derivation trees only if ASPIC+-level attacks/preferences or proof-sensitive warrants require them. Preference-sensitive binary defeat is now implemented as a Dung-compatible normal-attack filter with explicit blocked-attack audit records. Full ABA+ reversal is tracked separately because general ABA+ is set-to-set and may require a hyperargumentation layer. The first warrant/license integration and defeasible end-to-end vertical slice are implemented. Graded support now has a separate executable regime that warrants recording the computed support-event probability but not accepting the proposition. The deductive benchmark is executable in a checked strict-Horn fragment, and measurement/testimony now have narrow executable result-recording regimes. The strategy-performance benchmark is now executable as well. The formal warrant benchmark set is broad enough for an architecture reassessment: the next work should be integrated verification, benchmark-driven failure analysis, source reconciliation and empirical usefulness, with new formal layers added only when a concrete case fails. New foundational layers should be added only when a benchmark case cannot be represented without distortion. Action-algebra choices (sequential composition, guarded choice, iteration) and richer quantitative regimes remain separate research tracks. Do not assign independent scalar confidence directly to derived nodes. Before adding a dedicated StrategyEpisode schema, test whether grounded example episodes plus method strategies, part-of links and the new about relation are sufficient for annotation/review. Do not let answering every foundational philosophy question become a release prerequisite for a useful representation tool.
+### Current stable research architecture
+
+The research layer now has executable reference regimes for positive support, defeasible argumentation, graded support, deduction, measurement, testimony, finite-class statistical learning, and strategy selection.
+
+Candidate generation has been mapped to mature work in synthesis/CEGIS, MIL, anti-unification, HR theory formation, conceptual blending, blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, algorithm configuration, PRODIGY, Soar and reflection.
+
+Guarantee transport has been mapped to institution theory, DOL/Hets, MMT/LF theory morphisms, abstract interpretation and contract/refinement theory.
+
+The integrated native-Windows repository verification is green: 138 tests passed, 8 artifacts matched, graph validation has 0 errors / 0 warnings, and dependency checks are clean.
+
+### Current research priority
+
+The main foundational frontier is **acceptance licensing and warrant composition** (issue #34):
+
+- define acceptance/commitment/use-for-action precisely;
+- compare proof-standard, decision-theoretic, argumentation, belief-revision and acceptance literature;
+- avoid one universal confidence threshold;
+- treat acceptance policies as explicit warrantable policies/meta-regimes;
+- study how heterogeneous typed guarantees compose without premature scalarization.
+
+A second technical task is to audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions before interpreting it as a general adaptive-selection guarantee.
+
+### Empirical / representation priority
+
+The inquiry graph remains a curated first-pass reconstruction.
+
+Priority product/research work is:
+
+1. reconcile the full conversation export and adjudicate the 798 proposed annotations (issue #3);
+2. define a concrete inquiry-navigation/auditability usefulness test;
+3. compare the graph-assisted workflow against reading the transcript directly;
+4. only then expand UI, storage, automation, or learned reasoning policies.
+
+### Scope control
+
+Do not add a new foundational layer merely because adjacent literature exists.
+
+Reopen architecture only when a concrete benchmark/use case cannot be represented without distortion.
+
+Keep the documented escalation paths dormant unless triggered:
+
+- issue #17: first-class derivation/subargument structure;
+- issue #18: full ABA+ / set-to-set hyperargumentation.
+
+Hosted CI restoration (issue #2) is lower priority than research/product work because integrated local verification is already green.
+
+Do not let answering every foundational philosophy question become a release prerequisite for a useful representation tool.
