@@ -18,6 +18,8 @@
 
 Track: issue #38.
 
+**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+
 Goal: determine whether the graph earns its complexity.
 
 Compare transcript-only vs graph-assisted performance on tasks such as unresolved-question recovery, rationale/revision recovery, attribution, dependency recovery, branch recovery and long-context resumption.
@@ -27,6 +29,8 @@ Do not build a polished UI first.
 ## P1 — Source reconciliation
 
 Track: issue #3.
+
+The live thread can now be read through the ChatGPT bridge, so this no longer waits on an export. The partial check on issue #3 matched 136 of 219 excerpts verbatim; about 50 voice-mode excerpts still need the export.
 
 When the full export is available:
 

@@ -60,6 +60,8 @@ The main product/scientific question is:
 
 Issue #38 is the primary active product track.
 
+**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+
 Start with the smallest useful test, not a polished UI.
 
 Suggested tasks:
