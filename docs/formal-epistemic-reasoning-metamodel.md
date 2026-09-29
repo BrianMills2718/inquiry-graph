@@ -1178,7 +1178,7 @@ The most important empirical question is whether the factorization improves actu
 - [x] Cross-framework candidate-generation glue compared against blackboards, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar and reflection
 - [x] Warrant/guarantee transport compared against Hets/DOL/institutions, MMT morphisms, abstract interpretation and contract/refinement theories
 - [ ] Full comparison to adjacent existing meta-models/frameworks deepened
-- [ ] Empirical usefulness study performed
-- [ ] Paper draft fully aligned with the current closeout and handoff
+- [ ] Empirical usefulness study performed — issue #38
+- [x] Paper draft substantively aligned with the current closeout and handoff
 - [ ] Other `docs/` files migrated to §5.1 notation
-- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7)
+- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7) — issue #39
