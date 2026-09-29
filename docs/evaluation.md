@@ -30,6 +30,8 @@ Baselines: plain summary; untyped entity-relation extraction; argument-only AIF/
 
 ## Stage B: usefulness for inquiry navigation
 
+Tracked in issue #38.
+
 Measure whether a user can find an unresolved dependency, recover a correction, distinguish an assistant suggestion from their own endorsement, and resume an interrupted question. Compare raw transcript search, summary, concept graph, and inquiry graph. Use completion accuracy, time and mistaken closure/attribution—not only user preference or visual appeal.
 
 Privacy constraints should be evaluated alongside utility. A false belief attribution in a personal worldview tool may matter more than a missing peripheral concept. Keep user review and deletion/export controls on the roadmap before broader deployment.
@@ -41,6 +43,8 @@ The first defeasible warrant/license vertical slice is now executable; human ann
 Evaluate common confusions separately: support mistaken for sufficient warrant; formal validity mistaken for content acceptance; license mistaken for actual update; assumptions hidden inside an unqualified guarantee; heterogeneous guarantees collapsed into one confidence score; and defeaters ignored. Agreement on the action target and guarantee type is more important than agreement on philosophical terminology.
 
 For graded support, add provenance-sensitive fixtures in which two apparent pieces of evidence share a common source, and compare them with genuinely independent support. An acceptable annotation/evaluation layer must preserve the difference before numerical aggregation. Test regime-specific update rules separately (for example, conditioning versus uncertain-evidence updates) rather than treating every support increase as the same operation.
+
+The next Stage C research target is acceptance licensing / warrant composition (issue #34). Add benchmark cases where the same support profile leads to different acceptance/use-for-action decisions under different stakes, proof standards, or explicit policies. Test lottery/preface-style closure failures and require the acceptance policy itself to be represented rather than hidden in a threshold.
 
 ## Stage D: strategy-episode annotation
 
