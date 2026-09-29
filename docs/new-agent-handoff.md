@@ -273,15 +273,15 @@ These are benchmark/reference regimes, not claims of universal adequacy.
 
 ## 8. Verification status
 
-Last independently executed integrated native-Windows baseline:
+Last independently executed integrated native-Windows baseline (post-PR-#36 `main` at `4ad3942`, 2026-09-29):
 
-- **138 tests passed**
+- **142 tests passed**
 - seed fixture rebuilt successfully
 - **8 generated artifacts** matched
 - graph validation: **0 errors / 0 warnings**
 - dependency check: clean
 
-PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping correction and records **142 tests passed** on its tested branch. The current handoff agent reviewed the patch but could not independently rerun current main because the Windows execution channel was degraded. Treat a fresh integrated rerun as a small verification follow-up, not a foundational blocker.
+An independent Linux/Python 3.10 run of the same tree reproduced these results. Details: `docs/verification.md`.
 
 Environment used:
 
@@ -583,7 +583,7 @@ Current priority order is authoritative as follows:
 4. **Issue #3 — source reconciliation** when the full export is available.
 5. **Issue #40 — systematic integrated-framework comparison** for adoption/positioning and paper cleanup.
 6. **Issues #17/#18** remain escalation-only, not active implementation plans.
-7. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; only a fresh independent integrated rerun remains.
+7. **PR #36** completed the bounded strategy-performance multiple-comparison/optional-stopping correction; the post-merge integrated rerun passed (142 tests, native Windows and Linux).
 8. **Issue #2** remains low-priority hosted-CI infrastructure debt.
 9. **PR #8/#15** remain intentionally separate and must not be merged casually.
 

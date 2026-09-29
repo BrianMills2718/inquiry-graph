@@ -729,7 +729,7 @@ The current implementation includes reference modules for:
 
 The integrated repository has been executed on native Windows:
 
-- 138 tests passed;
+- 142 tests passed;
 - the seed fixture rebuilt;
 - 8 generated artifacts matched;
 - graph validation returned zero errors and warnings;
