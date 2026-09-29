@@ -1128,7 +1128,7 @@ Its central **hypothesis** is:
 
 This hypothesis is conceptually motivated and implemented in reference cases. It has not yet been empirically tested (§21.9), and the passing test suite (§19) verifies implementations, not the hypothesis.
 
-The most important unresolved foundational problem is candidate generation.
+The candidate-generation problem is now substantially narrowed: mature frameworks cover fixed-space generation, vocabulary extension, concept formation, generator selection, heuristic generation, orchestration, parameter tuning and reflection. The main remaining foundational issue is typed warrant/guarantee transport across representation adapters and composed generators, plus narrower questions about bias/operator invention when existing meta-learning machinery is insufficient.
 
 The most important unresolved integrative problems are acceptance licensing and warrant composition, which are closely linked.
 
@@ -1153,6 +1153,7 @@ The most important empirical question is whether the factorization improves actu
 - [x] Paper draft prepared
 - [x] Candidate-generation landscape survey resumed and adoption decision recorded
 - [x] Candidate-generation framework mappings completed across CEGIS, MIL, anti-unification, HR, and conceptual blending
+- [x] Cross-framework candidate-generation glue compared against blackboards, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar and reflection
 - [ ] Full comparison to adjacent existing meta-models/frameworks deepened
 - [ ] Empirical usefulness study performed
 - [ ] Paper draft updated to match this revision (acceptance problem, hypothesis framing, related work)

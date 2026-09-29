@@ -18,3 +18,4 @@
 | [014](014-strategy-performance-warrant.md) | Strategy selection requires a positive lower confidence bound on paired utility advantage | Accepted for current research architecture |
 | [015](015-candidate-generative-system-transformations.md) | Candidate generation is a typed generative system; exploratory transitions and generative-system transformations are distinct | Accepted for current research architecture |
 | [016](016-candidate-framework-mapping-survives.md) | Candidate-generation interface survives CEGIS, MIL, anti-unification, HR, and conceptual-blending mappings; transformationality is representation-relative | Accepted for current research architecture |
+| [017](017-cross-framework-generator-orchestration.md) | Use blackboard-style typed orchestration, explicit controller, generator portfolio and reflection instead of inventing a new universal glue calculus | Accepted for current research architecture |
