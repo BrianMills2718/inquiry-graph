@@ -162,7 +162,7 @@ Priority order:
 1. **Acceptance licensing + warrant composition** — issue #34. This is the main remaining foundational/integrative problem: when heterogeneous typed warrants are sufficient for stronger actions such as acceptance, commitment, use-for-action, retraction or revision.
 2. **Source reconciliation** — issue #3. Reconcile the 219 curated excerpts / 798 proposed annotations against a full export when available.
 3. **Empirical usefulness** — test whether the factorization and inquiry representation actually improve auditability, navigation, reasoning quality or strategy selection. Treat the useful Inquiry System as a separate product project if desired.
-4. **Documentation/paper normalization** — the paper's high-level priorities and canonical warrant notation are now synchronized. Remaining work is systematic related-work/bibliography normalization, optional migration of historical docs to canonical notation, and issue #37 for strategy-performance multiple-comparison/optional-stopping scope.
+4. **Documentation/paper normalization** — the paper's high-level priorities and canonical warrant notation are now synchronized. Remaining work is systematic related-work/bibliography normalization and optional migration of historical docs to canonical notation. PR #36 resolved the strategy-performance multiple-comparison/optional-stopping scope; a fresh independent integrated rerun of current main remains a small verification follow-up.
 5. **Hosted CI** — issue #2 is infrastructure debt only; local integrated verification is green.
 6. **Escalation-only branches** — issues #17 and #18 remain dormant unless concrete benchmark cases require richer derivation/subargument or full ABA+ set-to-set semantics.
 
@@ -170,7 +170,7 @@ Candidate generation itself is no longer a broad open mystery: mature frameworks
 
 ## Verification status
 
-The current integrated native-Windows suite is green: **138 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. The verification run covers the current defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and strategy-performance code.
+The last independently executed integrated native-Windows baseline was green: **138 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping fix and records **142 tests passed** on its tested branch. A fresh independent integrated rerun of current main is still pending because the remote Windows execution channel became degraded during final handoff.
 
 Hosted GitHub Actions remains a separate infrastructure problem: repeated hosted runs fail or cancel before runner steps/logs. Do not treat that hosted pre-run failure as an application-level failure.
 
