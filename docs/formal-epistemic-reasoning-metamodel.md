@@ -1177,8 +1177,8 @@ The most important empirical question is whether the factorization improves actu
 - [x] Candidate-generation framework mappings completed across CEGIS, MIL, anti-unification, HR, and conceptual blending
 - [x] Cross-framework candidate-generation glue compared against blackboards, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar and reflection
 - [x] Warrant/guarantee transport compared against Hets/DOL/institutions, MMT morphisms, abstract interpretation and contract/refinement theories
-- [ ] Full comparison to adjacent existing meta-models/frameworks deepened
+- [ ] Full comparison to adjacent existing meta-models/frameworks deepened — issue #40
 - [ ] Empirical usefulness study performed — issue #38
 - [x] Paper draft substantively aligned with the current closeout and handoff
-- [ ] Other `docs/` files migrated to §5.1 notation
+- [x] Canonical-notation policy clarified: §5.1 controls; historical docs need not be mechanically rewritten
 - [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7) — issue #39
