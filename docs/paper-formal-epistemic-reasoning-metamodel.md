@@ -9,10 +9,10 @@
 Formal epistemology contains mature theories of belief revision, probabilistic updating, structured argumentation, justification, formal learning, epistemic action, and metareasoning. These theories are powerful, but they often take different objects as primitive and therefore answer different questions. A recurring source of confusion is to treat “inference” as one undifferentiated operation, or to classify all reasoning under a small flat taxonomy such as deduction, induction, and abduction. This paper proposes a factorized meta-model in which formal representation, candidate generation, support provenance, structured defeat, warrant, license, epistemic action, and strategy/control are represented separately and composed through explicit interfaces. The central warrant judgment is written
 
 \[
-\mathfrak W;A\vdash_\pi a:G,
+\mathfrak W;\Phi\vdash_\kappa a:G,
 \]
 
-meaning that under warrant regime \(\mathfrak W\) and applicability assumptions \(A\), certificate \(\pi\) warrants epistemic action \(a\) with typed guarantee \(G\). Positive support is represented independently using finite antichains of minimal assumption environments, while defeasible conflict is handled by structured attack/defeat semantics. The architecture is instantiated with executable reference regimes for deductive derivation, defeasible acceptability, probabilistic support reporting, measurement, testimony, finite-class statistical learning, and strategy selection. The proposal is not a new replacement logic for these domains. Its intended contribution is an interface-level factorization that clarifies how heterogeneous epistemic guarantees, actions, and reasoning processes relate without forcing them into one confidence scalar or one universal inference taxonomy. We identify candidate generation, warrant composition, context entailment, and reflective self-application as major open problems.
+meaning that under warrant regime \(\mathfrak W\) and applicability assumptions \(\Phi\), certificate \(\kappa\) warrants epistemic action \(a\) with typed guarantee \(G\). Positive support is represented independently using finite antichains of minimal assumption environments, while defeasible conflict is handled by structured attack/defeat semantics. The architecture is instantiated with executable reference regimes for deductive derivation, defeasible acceptability, probabilistic support reporting, measurement, testimony, finite-class statistical learning, and strategy selection. The proposal is not a new replacement logic for these domains. Its intended contribution is an interface-level factorization that clarifies how heterogeneous epistemic guarantees, actions, and reasoning processes relate without forcing them into one confidence scalar or one universal inference taxonomy. We treat the factorization as a research hypothesis rather than a representation theorem. Candidate generation and formal guarantee transport are substantially mapped to mature prior work; the main current theoretical frontier is acceptance licensing and composition of heterogeneous warrants, with context semantics and empirical adequacy also open.
 
 ## 1. Introduction
 
@@ -390,81 +390,38 @@ without further warrant.
 
 ## 9. Candidate generation
 
-For a reasoning episode \(R\), define a draft-generation system:
+Candidate generation is represented as a typed generative regime rather than a universal inference primitive:
 
 \[
-\mathcal G_R
-=
+\mathcal G_R=
 (
+\mathcal A_R,
+\mathcal L_R,
 \mathcal D_R,
-d_0,
+B_R,
 \mathcal O_R,
-\to_R
+\to_R,
+V_R
 ).
 \]
 
-Reachability is:
+Here \(\mathcal A_R\) is the artifact ontology, \(\mathcal L_R\) the generative language, \(\mathcal D_R\) the draft state space, \(B_R\) admissibility/search bias, \(\mathcal O_R\) construction operators, \(\to_R\) ordinary candidate transition, and \(V_R\) evaluators.
+
+A concrete generation episode separates the reusable regime from its starting state:
 
 \[
-\operatorname{Reach}(R)
-=
-\{
-d:
-d_0
-\xrightarrow{\mathcal O_R*}
-d
-\}.
+E_G=(R,\mathcal G_R,d_0).
 \]
 
-A strategy controls operator choice:
+Changes to the generative regime itself are represented separately:
 
 \[
-\pi:
-\operatorname{Hist}(R,\mathcal G_R)
-\to
-\mathcal P(
-\mathcal O_R
-\cup
-\{\operatorname{stop}\}
-).
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
 \]
 
-Formal elaboration maps drafts into formal artifacts when possible:
+This interface has been stress-tested against CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR automated theory formation, and computational conceptual blending without requiring another top-level coordinate. Cross-framework orchestration is closely aligned to blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar, and computational reflection.
 
-\[
-\operatorname{Elab}_{\mathcal F}(d)
-=
-c
-\]
-
-or fails.
-
-Evaluation functions produce diagnostic feedback:
-
-\[
-V_j(R,c)
-\to
-(
-\operatorname{status},
-f_j
-).
-\]
-
-This yields the loop:
-
-\[
-R_t
-\xrightarrow[\pi]{\mathcal G}
-d_t
-\xrightarrow{\operatorname{Elab}}
-c_t
-\xrightarrow{V}
-f_t
-\xrightarrow{\operatorname{control/update}}
-R_{t+1}.
-\]
-
-Candidate generation remains the least developed theoretical component.
+Thus candidate generation is no longer treated as a broad unexplored foundation. Remaining questions are narrower: generative-regime equivalence/composition, operator and bias invention when existing meta-learning machinery is insufficient, substantive concept-invention semantics, and empirical/uncertified representation adapters.
 
 ## 10. Defeasible argumentation
 
@@ -497,15 +454,15 @@ The core judgment is:
 \[
 \boxed{
 \mathfrak W;
-A
-\vdash_\pi
+\Phi
+\vdash_\kappa
 a:G.
 }
 \]
 
 Interpretation:
 
-under warrant regime \(\mathfrak W\) and applicability assumptions \(A\), certificate \(\pi\) is sufficient to warrant epistemic action \(a\) with guarantee \(G\).
+under warrant regime \(\mathfrak W\) and applicability assumptions \(\Phi\), certificate \(\kappa\) is sufficient to warrant epistemic action \(a\) with guarantee \(G\).
 
 This formulation has several consequences.
 
@@ -522,7 +479,7 @@ Fourth, heterogeneous warrant regimes need not collapse into a common scalar.
 Given current context \(C\):
 
 \[
-C\models A
+C\models\Phi
 \]
 
 and a valid warrant judgment, define:
@@ -735,13 +692,11 @@ The integrated repository has been executed on native Windows:
 
 This verifies internal implementation consistency, not philosophical correctness or empirical usefulness.
 
-## 19. What appears to be new
+## 19. Proposed contribution and hypothesis
 
-Most mathematical components are established.
+Most mathematical components are established, and the project explicitly prefers adoption of mature work over novelty.
 
-The proposed contribution should therefore be stated conservatively.
-
-The likely novelty is the **factorization and interface synthesis**:
+The proposed contribution is therefore a **factorization and interface synthesis** and should be treated as a research hypothesis rather than as a proved representation theorem:
 
 1. separating candidate generation from evaluation and warrant;
 2. targeting warrant at typed epistemic actions rather than only propositions;
@@ -750,46 +705,30 @@ The likely novelty is the **factorization and interface synthesis**:
 5. integrating ATMS-like provenance, structured argumentation, formal-learning guarantees, measurement/testimony certificates, and strategy warrants through one action-targeted interface;
 6. making reflection relational rather than committing to a fixed meta-level hierarchy.
 
-A strong novelty claim would require a deeper systematic literature review.
+The claim requiring evaluation is not that these component theories are new, but that keeping these interfaces explicit improves representation, audit, composition, or control of heterogeneous reasoning. That requires comparative and empirical evaluation.
 
-## 20. Open problem: candidate generation
+## 20. Candidate generation: landscape result
 
-Candidate generation is the largest unresolved part.
+Candidate generation has now been compared against mature approaches including program synthesis/CEGIS, ILP and Meta-Interpretive Learning, anti-unification, abductive logic programming, HR theory formation, conceptual blending, Bayesian program learning, blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, algorithm configuration, PRODIGY, Soar, and reflection.
 
-Existing mature approaches cover important fragments:
+The result is adoption-oriented: these mechanisms can be represented through the typed generative-system interface of §9, and ordinary exploration should be distinguished from changes to the generative regime itself.
 
-- program synthesis searches program spaces under specifications;
-- CEGIS alternates candidate generation and counterexample-guided repair;
-- inductive logic programming searches hypotheses under background knowledge and examples;
-- meta-interpretive learning introduces reusable predicates and metarules;
-- anti-unification computes generalizations;
-- abductive logic programming generates hypotheses constrained by integrity conditions;
-- theory morphisms generate or test structural translations;
-- conceptual-combination systems construct new representations.
+Formal guarantee transport between heterogeneous representations is likewise substantially covered by institution theory, DOL/Hets, MMT theory morphisms, abstract interpretation, and contract/refinement theory.
 
-The challenge is whether these can be placed under one useful meta-interface without pretending they share one universal primitive operator basis.
+Remaining candidate-generation questions are therefore narrower and should be reopened only when concrete cases require them:
 
-The candidate-generation interface was subsequently stress-tested against CEGIS/program synthesis, Meta-Interpretive Learning, anti-unification, HR automated theory formation, and computational conceptual blending. All five fit a revised typed regime without a new top-level coordinate:
+- equivalence/composition of generative regimes;
+- operator or bias invention not already handled by existing meta-learning approaches;
+- substantive concept-invention semantics;
+- empirical or opaque adapters that lack certified preservation results.
 
-\[
-\mathcal G_R=(\mathcal A_R,\mathcal L_R,\mathcal D_R,B_R,\mathcal O_R,\to_R,V_R).
-\]
+## 21. Open problem: acceptance licensing and warrant composition
 
-A generation episode is separated as \(E_G=(R,\mathcal G_R,d_0)\), and changes to the generative regime itself are modeled separately as \(\mu:\mathcal G_R\rightharpoonup\mathcal G'_R\). The mapping also shows that transformationality is representation-relative: generating a fresh predicate may remain an ordinary transition if the existing meta-language already permits predicate invention.
+The framework can represent multiple warrants but does not yet give a general rule for when a proposition should be accepted, committed to, or used as a premise for downstream reasoning/action.
 
-The central open questions are:
+Every executable reference regime deliberately stops short of treating its local success condition as unconditional proposition acceptance. This creates the main current theoretical frontier: acceptance is where heterogeneous typed guarantees may need to meet an explicit policy or decision rule.
 
-- what is generated?
-- how does the representation vocabulary itself change?
-- when does construction become substantive concept invention?
-- can generative completeness be defined relative to a representation language?
-- how should operator invention be represented?
-- how should search bias itself be warranted?
-- can different generative spaces be compared structurally?
-
-## 21. Open problem: warrant composition
-
-The framework can represent multiple warrants but does not yet give a universal composition rule.
+The framework also does not give a universal warrant-composition rule.
 
 Suppose a target action has:
 
@@ -804,6 +743,10 @@ These supports may be mutually reinforcing, redundant, incomparable, or in confl
 The correct combination rule may itself depend on a meta-regime.
 
 A future theory of warrant composition should therefore preserve typed guarantees rather than immediately scalarizing them.
+
+Questions include whether acceptance is a single epistemic action or a stakes/task-relative family, how acceptance differs from belief/credence/commitment, how lottery/preface-style closure problems constrain threshold policies, and whether acceptance/composition policies should themselves be warranted meta-policies.
+
+Relevant existing directions include proof standards such as Carneades, the belief-versus-acceptance literature, decision-theoretic/stakes-sensitive acceptance, structured argumentation acceptance, and belief-revision/nonmonotonic consequence. The project should not introduce a universal probability threshold by default.
 
 ## 22. Open problem: context semantics
 
@@ -953,11 +896,11 @@ This permits deductive, defeasible, probabilistic, statistical, testimonial, mea
 
 The architecture is mature enough to support reference implementations and benchmark cases.
 
-Its largest foundational gap is candidate generation.
+Candidate generation and formal guarantee transport are now substantially mapped to mature prior work and are no longer the main general gaps.
 
-Its largest integrative gap is warrant composition.
+The main current foundational/integrative gap is **acceptance licensing and warrant composition**: how typed heterogeneous guarantees can justify stronger commitments or use-for-action without collapsing into an unjustified universal scalar.
 
-Its next scientific test is empirical: whether this factorization actually improves the representation, audit, navigation, or control of real reasoning processes.
+The next scientific test is empirical: whether this factorization actually improves the representation, audit, navigation, composition, or control of real reasoning processes.
 
 ## References
 
