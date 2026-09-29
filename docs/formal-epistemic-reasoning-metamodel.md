@@ -1174,4 +1174,4 @@ The most important empirical question is whether the factorization improves actu
 - [ ] Empirical usefulness study performed
 - [x] Paper draft updated to match this revision (acceptance problem, candidate-generation narrowing, canonical warrant notation)
 - [ ] Other `docs/` files migrated to §5.1 notation
-- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7)
+- [ ] Strategy-performance implementation checked for multiple-comparison and optional-stopping conditions (§18.7; issue #37)
