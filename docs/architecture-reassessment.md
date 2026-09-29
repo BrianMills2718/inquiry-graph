@@ -83,7 +83,13 @@ The fact that they all fit the same action-targeted warrant interface is evidenc
 
 The following are still research questions, but they do not currently justify another top-level layer.
 
-### Acceptance licensing and warrant composition — current foundational priority
+### Formal-layer semantic audit — immediate correctness priority
+
+Issue #46 has exposed three reproduced defects in the executable reference layer: preference attack-removal can violate consistency, flat ABA is not enforced, and grounded-dialectical warrant can ignore its action target. These defects do not overturn the high-level factorization, but they do invalidate the assumption that all current reference regimes are semantically safe merely because the integration suite is green.
+
+Resolve issue #46 before extending stronger acceptance semantics. In particular, the preference counterexample supplies a concrete trigger for revisiting issue #18's ABA+/attack-reversal boundary.
+
+### Acceptance licensing and warrant composition — next foundational priority
 
 The main unresolved foundational/integrative problem is no longer candidate generation. It is the transition from typed warrants to stronger epistemic actions such as:
 
@@ -178,7 +184,7 @@ Trigger only if proof-sensitive or ASPIC+-level semantics distinguish arguments 
 
 Full ABA+ / set-to-set hyperargumentation.
 
-Trigger only if reverse or collective attacks matter to benchmark outcomes.
+Issue #46 now supplies a concrete preference-semantics failure in the current attack-removal filter. Treat #18 as conditionally activated for design review: either adopt a faithful preference semantics that restores the required rationality properties, or explicitly demote/remove the current filter from warrant-bearing use.
 
 ## 6. Project-management stop rule
 
@@ -198,15 +204,15 @@ From this point:
 
 The next project work should split into three tracks rather than continue one foundational chain.
 
-### Track A — verification — completed
+### Track A — execution verification — completed
 
 The complete repository suite has now been run in the native Windows environment. Result: **138 tests passed**, seed fixture rebuilding succeeded, **8 artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` found no broken requirements.
 
 The run exposed and fixed three Windows portability problems: subprocess stdout encoding, locale-default seed-file decoding, and pytest collection of imported `Testimony*` dataclasses. Track A is therefore no longer blocking the research-layer architecture.
 
-### Track B — selective foundational research
+### Track B — semantic correctness, then selective foundational research
 
-If foundational research continues, begin with issue #34: acceptance licensing and warrant composition. Compare existing proof-standard, acceptance/commitment, decision-theoretic, structured-argumentation, and belief-revision work before inventing a new policy calculus.
+Begin with issue #46. Only after the reference-layer defects are resolved should foundational research continue with issue #34: acceptance licensing and warrant composition. Compare existing proof-standard, acceptance/commitment, decision-theoretic, structured-argumentation, and belief-revision work before inventing a new policy calculus.
 
 Do not reopen candidate generation, derivation DAGs, or full ABA+ unless a concrete case triggers their documented escalation conditions.
 
