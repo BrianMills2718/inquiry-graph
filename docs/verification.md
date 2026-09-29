@@ -1,5 +1,7 @@
 # Verification record
 
+> **After the 2026-09-29 split,** this repository's suite is the 60 tool tests. The other 82 of the 142 recorded below moved to [epistemic-warrant](https://github.com/BrianMills2718/epistemic-warrant) with the formal code. The 142 figures describe the pre-split tree.
+
 ## Build environment checks
 
 **Current: post-PR-#36 native-Windows rerun of `main` at `4ad3942` (2026-09-29).** In a fresh Windows virtual environment (Python 3.14.7, Pydantic 2.13.5, NetworkX 3.7, jsonschema 4.26.0, pytest 9.1.1) with `.[dev]` installed from the package index: **142 tests passed**; the seed fixture rebuilt to 229 nodes, 250 relations and 185 moves; `tools/build_artifacts.py` generated **8 artifacts** and `--check` passed (8 checked); canonical graph validation returned zero errors and warnings; `query ... stats` reported 798 proposed and 0 confirmed annotations; and `pip check` reported no broken requirements. The rebuilt `examples/seed/*` and `schemas/*` files matched `main` except for Windows CRLF line endings (`git diff --ignore-cr-at-eol` empty). Graphviz is not installed on that Windows host, so the `dot` step was not run there.

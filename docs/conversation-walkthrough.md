@@ -186,7 +186,7 @@ The current endpoint is not “induction and abduction solved.” It is the sepa
 
 Traditional induction, abduction, analogy, model invention, and causal discovery are now treated primarily as candidate-generation or reasoning-trajectory motifs until a stronger factorization is found. The warrant layer records explicit assumptions and the guarantee they are claimed to buy. The state-update layer records the resulting semantic change.
 
-The two most important open obligations are now `q-candidate-generation-factorization` and `q-warrant-postulates`. See [the current research draft](epistemic-transition-calculus.md) and [post-V1 research log](research-log-post-v1.md).
+The two most important open obligations are now `q-candidate-generation-factorization` and `q-warrant-postulates`. See [the current research draft](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/epistemic-transition-calculus.md) and [post-V1 research log](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/research-log-post-v1.md).
 
 ## 13. The conversation itself became a test case for candidate generation
 
@@ -247,7 +247,7 @@ flowchart LR
 
 The two frameworks solve different pieces. Institution theory constrains representational/logical translation. ATMS-like machinery preserves multiple hypothetical contexts and explicit dependency provenance. Query \(Q\) is now outside persistent epistemic state; evidence is represented as typed, provenance-bearing content rather than an automatically privileged bucket.
 
-The current endpoint is documented in [assumption-context-meta-model.md](assumption-context-meta-model.md). The open frontier is still the typed algebra of candidate generation, not another attempt to declare induction/abduction primitives.
+The current endpoint is documented in [assumption-context-meta-model.md](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/assumption-context-meta-model.md). The open frontier is still the typed algebra of candidate generation, not another attempt to declare induction/abduction primitives.
 
 ## 17. Candidate typing exposed another false partition
 
@@ -320,7 +320,7 @@ The literature check supports the object-level/meta-level distinction and strate
 
 The concrete application is now clearer: annotate conversations not only with atomic inquiry moves but also with proposed strategy episodes such as canonical factorization, counterexample search, literature-before-invention, goal restoration, meta-model stress testing, and reflective self-application.
 
-See [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md) for the current extension.
+See [metareasoning-strategy-reflection.md](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/metareasoning-strategy-reflection.md) for the current extension.
 
 ## 21. Candidate generation became a constrained-search interface
 
@@ -357,7 +357,7 @@ flowchart LR
 
 This is the first end-to-end strategy episode reconstructed in the graph. The trace makes the recurring pattern explicit: **propose → test → diagnose factorization failure → repair → repeat**.
 
-See [candidate-generation-interface.md](candidate-generation-interface.md).
+See [candidate-generation-interface.md](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/candidate-generation-interface.md).
 
 ## 23. Warrant returned after its target had been clarified
 
@@ -399,4 +399,4 @@ The current warrant judgment is:
 
 This also repairs the earlier candidate/transition/strategy warrant list: those become instances of a common action-targeted schema rather than separate primitive warrant types. “License” is now an operational derived status, not a synonym for warrant.
 
-See [warrant-license-interface.md](warrant-license-interface.md).
+See [warrant-license-interface.md](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/warrant-license-interface.md).
