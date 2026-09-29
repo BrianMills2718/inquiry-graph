@@ -13,9 +13,8 @@ clustered by topic. inquiry-graph = per-chat producer; onto-canon6 = cross-sourc
 ## State
 - Merged: inquiry-graph PRs #44, #45, #49-#59 (goal 1 cross-chat positions proof done; goal 2
   step C1, the relation-typed linker v1.2, done, 10/11 hand-checked). Router PR #44 merged.
-- Worktree `~/code/inquiry-graph/worktrees/linker`, branch `goal/linker-scale`:
-  - commit 4ac5994 (WIP, parameterizes `build_key`)
-  - committed with this handoff: `live_extract` supersession-cycle fix + test (63 tests pass)
+- Worktree `~/code/inquiry-graph/worktrees/linker`, branch `goal/linker-scale`, HEAD `aaa5361`:
+  - includes the parameterized `build_key`, the `live_extract` supersession-cycle fix + test,
     and `evaluation/cross_conversation_scale/scale.py`.
   - UNTRACKED and to be deleted once a shared viewer exists: `tools/build_inquiry_map.py`,
     `tools/inquiry_map_template.html` (hand-rolled D3; Brian rejected this approach).
@@ -27,7 +26,50 @@ The 30-chat scale run (`scale.py`) exited in the "key" stage: OpenRouter refused
 Corpus (30 chats, ~4.2M chars, all graphs valid) and linker outputs are already cached under
 `private/xconv/scale_run/`. Do NOT cap max_tokens to dodge it (AGENTS.md rule). After credits
 are topped up, rerun: `cd worktrees/linker && .venv/bin/python evaluation/cross_conversation_scale/scale.py > private/xconv/scale_run.log 2>&1`
-(expect cached stages to skip). Check the log with `grep -v TIMEOUT`.
+The runner does skip existing outputs. At this handoff, all 30 corpus IDs have valid graphs;
+8 of 30 per-chat key JSONs exist, and their IDs all belong to the corpus. The other 22 key
+calls and the cross-key call are still needed. Linker exports exist; route answer files and
+`grades.json` do not, so completing the evaluation also needs route A (15 calls), B/C (one
+call each), and judging (15 calls). These counts come from the current cache and the stage
+loops in `scale.py`; the run was not resumed. Check the log with `grep -v TIMEOUT`.
+
+## Jev/Laya extraction check (2026-09-29)
+
+Local prior art in OntoCanon6 is a Jev predicate-ranking spike, not a conversational
+position extractor: `~/code/onto-canon6/worktrees/jev-ontology-adjudication-20260921/docs/experiments/jev_extraction_spike_results_20260920.md`
+reports 5,995 predicates, Recall@1 31.25%, Recall@16 93.75%, and a mean 19.94 predicates
+scoring at least 0.5. Its follow-up
+`docs/experiments/jev_text_to_graph_usage_20260922.md` demonstrates LangExtract followed by
+Jev predicate/type selection on short text examples.
+
+Verified online prior art:
+- [jev-mcp](https://github.com/jkudish/jev-mcp) has `jev_extract`: regexes propose candidate
+  spans, Jev selects among them, and accepted values are returned verbatim. This is a useful
+  grounding pattern, not a complete conversation-position pipeline.
+- [zero-shot-ie-bench](https://github.com/umstek/zero-shot-ie-bench) compares extractors and
+  typed-decision systems, including Jev and Laya. It is an evaluation harness, not a personal
+  chat extractor.
+- [Laya](https://github.com/NandhaKishorM/laya) is an open-source typed decision engine that
+  can run locally. Its choice/score/yes-no decisions can filter candidate text, but it does
+  not generate self-contained position statements.
+
+Larger-chat Jev probe: chat `6a988a7a`, 235 Brian-authored sentence candidates in eight
+  batches, using `openrouter/typesafe/jev-1.13` (resolved to
+  `typesafe/jev-1.13-20260917`). It labeled 181 position, 16 question, and 38 other. Against
+  the independently generated, quote-verified reference key, it labeled all 10 of 10
+  sentence-covered positions as positions and 4 of 5 covered open questions as questions;
+  all 3 synthetic controls passed. Stance matched the key on 6 of 15 covered excerpts. Total
+  reported cost was $0.001558326, with 37,103 input tokens, 9,969 output tokens, and 2.87
+  seconds across nine calls. This is recall evidence only: the key is model-generated, not
+  human ground truth, and the 181 predicted positions leave precision unmeasured. The stance
+  agreement is weak. The calls used OpenRouter, so Jev here does not remove that account
+  dependency. Trace `inquiry-graph/xconv-system1-pilot/jev-6a988a7a-batched-20260929` has
+  nine metadata-only records; prompts, outputs, and per-candidate labels were not persisted.
+
+Earlier one-chat Laya probe on `698975ae` labeled 4 of 16 quote-verified position controls as
+positions and matched stance on 2 of 16. That probe has no durable trace, so treat it as
+exploratory and not replayable. Neither System 1 probe establishes a drop-in replacement for
+the reference-key generator. Do not infer extraction precision from these results.
 
 ## Next steps
 1. Finish goal 2: after the rerun, hand-check >= 4 grades, write
