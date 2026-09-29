@@ -170,7 +170,7 @@ Candidate generation itself is no longer a broad open mystery: mature frameworks
 
 ## Verification status
 
-The last independently executed integrated native-Windows baseline was green: **138 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping fix and records **142 tests passed** on its tested branch. A fresh independent integrated rerun of current main is still pending because the remote Windows execution channel became degraded during final handoff.
+The last independently executed integrated native-Windows baseline, on post-PR-#36 `main` (2026-09-29), was green: **142 tests passed**, the seed fixture rebuilt, all **8 generated artifacts** matched, canonical graph validation returned **0 errors / 0 warnings**, and `pip check` reported no broken requirements. An independent Linux/Python 3.10 run of the same tree reproduced these results.
 
 Hosted GitHub Actions remains a separate infrastructure problem: repeated hosted runs fail or cancel before runner steps/logs. Do not treat that hosted pre-run failure as an application-level failure.
 

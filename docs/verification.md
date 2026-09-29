@@ -2,9 +2,11 @@
 
 ## Build environment checks
 
-Last independently executed integrated native-Windows verification before PR #36: **138 tests passed** on Python 3.14.7; fixture rebuilding succeeded; all **8 generated artifacts** matched; canonical graph validation returned zero errors and warnings; and `pip check` reported no broken requirements. That run includes the defeat, ABA, preference, warrant/license, graded-support, deductive, measurement/testimony, statistical/PAC, and pre-PR-#36 strategy-performance research layers.
+**Current: post-PR-#36 native-Windows rerun of `main` at `4ad3942` (2026-09-29).** In a fresh Windows virtual environment (Python 3.14.7, Pydantic 2.13.5, NetworkX 3.7, jsonschema 4.26.0, pytest 9.1.1) with `.[dev]` installed from the package index: **142 tests passed**; the seed fixture rebuilt to 229 nodes, 250 relations and 185 moves; `tools/build_artifacts.py` generated **8 artifacts** and `--check` passed (8 checked); canonical graph validation returned zero errors and warnings; `query ... stats` reported 798 proposed and 0 confirmed annotations; and `pip check` reported no broken requirements. The rebuilt `examples/seed/*` and `schemas/*` files matched `main` except for Windows CRLF line endings (`git diff --ignore-cr-at-eol` empty). Graphviz is not installed on that Windows host, so the `dot` step was not run there.
 
-PR #36 subsequently merged a strategy-performance multiple-comparison/optional-stopping correction and records a local full-suite result of **142 tests passed** on its tested branch. The final handoff review could not independently repeat that post-merge run because the remote Windows execution channel was degraded. A fresh integrated rerun of current `main` is therefore the only current execution-verification follow-up.
+An independent Linux rerun on a tree byte-identical to the same `main` (Python 3.10.12, Pydantic 2.13.5, NetworkX 3.4.2, jsonschema 4.26.0) also produced **142 passed**, the same fixture counts, 8 artifacts with `--check` passing, 0 validation errors/warnings, and byte-identical rebuilt `examples/seed/*`; `dot -Tsvg examples/seed/inquiry.dot` exited 0 there. Its `pip check` flagged only an unrelated system pipx/argcomplete conflict.
+
+These two runs cover PR #36's strategy-performance multiple-comparison/optional-stopping correction. The previous integrated native-Windows record, before PR #36, was **138 tests passed** with the same fixture, artifact, validation and dependency results.
 
 The offline suite passed in the isolated conversation build environment with Python 3.13, Pydantic 2.13.4 and NetworkX 3.6.1. The editable package built using preinstalled dependencies; this environment had no package-index DNS access.
 
@@ -28,7 +30,7 @@ The integrated tests exercise import, prepare, response-file extraction, validat
 
 The repository CI is configured to install the package with development and optional provider dependencies on Python 3.11 and 3.13, rebuild the fixture and artifacts, run tests, validate the graph, and check generated-file drift and dependency consistency.
 
-**Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The 138-test native-Windows run above is the last independently repeated integrated execution record; PR #36's 142-test run is recorded in its pull request and should be independently rerun on current main when execution is available.
+**Hosted CI is still not verified as passing.** Repeated hosted runs have failed or been cancelled before runner steps were recorded and exposed no useful job logs. The cause has not been verified. Do not confuse those pre-execution failures with application-test failures. The post-PR-#36 142-test native-Windows and Linux reruns above are the current independently repeated integrated execution records.
 
 ## Explicitly not verified
 

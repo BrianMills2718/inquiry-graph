@@ -762,15 +762,15 @@ PR #36 implemented these controls and added regression tests. The certificate ca
 
 The integrated current repository has been executed successfully on native Windows.
 
-Last independently executed integrated result before PR #36:
+Latest independently executed integrated result, after PR #36 (native Windows, Python 3.14.7, fresh virtual environment, `main` at `4ad3942`, 2026-09-29):
 
-- **138 tests passed**;
-- seed fixture rebuilt successfully;
-- **8 generated artifacts** matched;
+- **142 tests passed**;
+- seed fixture rebuilt successfully (229 nodes, 250 relations, 185 moves);
+- **8 generated artifacts** matched (`--check` passed);
 - graph validation: **0 errors / 0 warnings**;
 - dependency check: no broken requirements.
 
-PR #36 subsequently changed the strategy-performance certificate/tests and records a local full-suite result of **142 passed**. The current handoff agent reviewed that patch but could not independently repeat the post-merge run because the remote Windows execution channel was degraded. Therefore the implementation change is merged, while a fresh independent integrated rerun of current main remains a small verification follow-up.
+An independent Linux/Python 3.10 run of the same tree reproduced these results and also rendered the DOT output with Graphviz. The earlier pre-PR-#36 record was 138 passed. Details: `docs/verification.md`.
 
 These tests verify that the reference implementations behave as specified. They do not test the central hypothesis (§28) that the factorization improves reasoning or inquiry; that is an empirical question (§21.9).
 
