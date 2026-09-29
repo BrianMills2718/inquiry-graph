@@ -1,98 +1,175 @@
-# Inquiry Graph ↔ Hypergraph Kernel ↔ OntoCanon Crosswalk
+# Inquiry Graph ↔ OntoCanon ↔ Scientific Hypergraph Crosswalk
 
 ## Status
 
-Research/architecture crosswalk. This document does **not** change the executable Inquiry Graph ontology, Scientific Hypergraph kernel, or OntoCanon contracts.
+Research/architecture crosswalk. This document does **not** change the executable
+Inquiry Graph ontology or OntoCanon contracts.
 
-## Result
+This document supersedes the earlier architectural reading in which Scientific
+Hypergraph owned the general carrier and OntoCanon sat outside it as a governance
+layer.
 
-The three systems are complementary:
+The current target architecture is:
 
 ```text
-Inquiry Graph
-  owns the domain semantics and source-grounded reconstruction of inquiry
-        ↓ lossless structural projection
-
-Scientific Hypergraph domain-free kernel
-  owns the maximally permissive typed n-ary carrier:
-  ModelElement + RelationInstance + RoleType + RoleBinding
-        ↓ governed semantic admission / identity / reconciliation
-
 OntoCanon
-  owns evidence custody, governance, durable commitment,
-  identity/canonicalization, semantic alignment, revision and export
+  domain-free governed semantic carrier
+  + generic identity / alignment / provenance / governance mechanisms
+        ↑
+        ├── Inquiry ontology pack + profile
+        │     -> governed Inquiry Graph instances
+        │
+        └── Scientific ontology pack + profile
+              -> governed scientific semantic instances
 ```
 
-The present Inquiry Graph ontology has **no known carrier-level structure that requires a new primitive beyond the Hypergraph kernel**.
+Scientific Hypergraph remains highly relevant as:
 
-The remaining integration gap is primarily at the **OntoCanon governance boundary**, especially first-class governance of arbitrary relation instances and addressable role bindings without coercing them into assertion-specific terminology/contracts.
+- a proving domain;
+- a donor of already-worked generic carrier semantics;
+- concrete evidence for relation-as-participant and RoleBinding-as-participant;
+- an interoperability/migration source while OntoCanon's general carrier is
+  still being reconciled.
 
-## 1. Carrier correspondence
+It should not remain the permanent owner of a second domain-free carrier if those
+semantics are genuinely generic and belong in OntoCanon.
 
-| Inquiry Graph object | Hypergraph representation | Notes |
+## 1. Architectural ownership
+
+### Inquiry Graph
+
+Owns inquiry-domain semantics and source-grounded reconstruction:
+
+- concepts;
+- claims;
+- questions;
+- hypotheses;
+- methods;
+- examples;
+- goals;
+- references;
+- semantic relations;
+- inquiry moves;
+- stance events;
+- question-state events;
+- source conversations/messages/anchors;
+- inquiry-specific invariants.
+
+Inquiry Graph should not grow another general semantic carrier.
+
+### OntoCanon
+
+Target owner of the domain-free governed semantic substrate:
+
+- generic semantic elements;
+- first-class typed n-ary relation instances;
+- optionally addressable RoleBindings where required;
+- typed reference/identity primitives;
+- source/evidence custody;
+- proposal/review/activation governance;
+- deterministic identity and fallible alignment separation;
+- retraction/supersession/recanonicalization;
+- profile-selected global validation;
+- bounded/loss-aware exports.
+
+Ontology packs carry domain semantics. Profiles configure policy.
+
+### Scientific Hypergraph
+
+Should be treated as:
+
+- scientific-domain semantics over the general substrate;
+- a proving consumer for richer relation/binding structures;
+- a donor of generic carrier features already worked out there.
+
+The generic features currently demonstrated in Scientific Hypergraph should be
+audited for absorption into OntoCanon rather than preserved as a parallel
+general-purpose kernel by default.
+
+## 2. Inquiry Graph carrier correspondence
+
+The current Inquiry Graph objects remain compatible with the general carrier
+shape that OntoCanon is now targeting.
+
+| Inquiry Graph object | General carrier representation | Notes |
 |---|---|---|
-| `Node` | `ModelElement` | `kind` becomes Inquiry-profile typing, not a kernel primitive |
-| `Relation` | `RelationInstance` | Existing role bindings map directly |
-| `Binding(role, ref)` | `RoleBinding` | Exact structural correspondence |
-| `Move` | `RelationInstance` | Actor/input/output/occurrence/after are roles |
-| `StanceEvent` | `RelationInstance` | Actor/target/stance/occurrence are roles or typed participants |
-| `QuestionEvent` | `RelationInstance` | Question/actor/status/answers/replacement/occurrence are roles |
-| `Conversation` | `ModelElement` | Source-domain object |
-| `Participant` | `ModelElement` | Actor identity remains source scoped unless reconciled |
-| `Message` | `ModelElement` | Ordered source occurrence |
-| `Anchor` | relation or addressable evidence object | Exact quote + offsets remain source-grounding data |
-| annotation `review_status` | qualification/governance state | Must not be confused with participant stance |
-| `inference_family` | Inquiry-profile classification | Not a kernel primitive |
+| `Node` | semantic element | `kind` is Inquiry-profile typing, not a kernel primitive |
+| `Relation` | relation instance | existing role bindings map directly |
+| `Relation.Binding` | role binding/incidence | exact structural correspondence |
+| `Move` | relation instance | actor/input/output/occurrence/after are roles |
+| `StanceEvent` | relation instance | actor/target/stance/occurrence |
+| `QuestionEvent` | relation instance | question/actor/status/answers/replacement/occurrence |
+| `Conversation` | semantic/source element | source-domain object |
+| `Participant` | semantic/source element | source-scoped identity unless reconciled |
+| `Message` | semantic/source element | ordered source occurrence |
+| `Anchor` | evidence/grounding relation or record | exact quote + offsets remain source evidence |
+| `review_status` | governance state | not participant stance |
+| `inference_family` | Inquiry-profile classification | not a kernel primitive |
 
-## 2. Relations targeting relations already fit
+No current Inquiry Graph object demonstrates a need for a second carrier outside
+the proposed OntoCanon target.
 
-Inquiry Graph deliberately allows a challenge or other relation to target a reified relation.
+## 3. Relations targeting relations
 
-For example:
+Inquiry Graph deliberately allows semantic relations to target other semantic
+relations.
+
+Example:
 
 ```text
-supports(premise=P, conclusion=C) = R
-challenges(challenger=X, target=R)
+R1 = supports(premise=P, conclusion=C)
+R2 = challenges(challenger=X, target=R1)
 ```
 
-The Hypergraph kernel represents this natively because `RelationInstance` is itself a `ModelElement` and may participate in another relation.
+This requires relation instances to be valid participants in other relations.
 
-No assertion-specific workaround is required.
+Scientific Hypergraph already demonstrates this directly.
 
-## 3. RoleBinding-as-participant is the stronger capability
+OntoCanon's target carrier therefore needs to support the same generic capability
+without coercing R1 into an entity-like surrogate or proposition-only special
+case.
 
-The kernel also allows an **individual role assignment** to be addressable:
+## 4. RoleBinding-as-participant
+
+The stronger higher-order capability is to target one role assignment:
 
 ```text
-R = supports(premise=P, conclusion=C)
+R1 = supports(premise=P, conclusion=C)
 
-B = binding(
-      relation=R,
-      role=premise,
-      participant=P
-    )
+B1 = binding(
+  relation=R1,
+  role=premise,
+  participant=P
+)
 
-challenges(
+R2 = challenges(
   challenger=X,
-  target=B
+  target=B1
 )
 ```
 
-This expresses a distinction Inquiry Graph currently handles only indirectly:
+This distinguishes:
 
-> challenge P itself  
-> versus challenge R as a whole  
-> versus challenge **P's use in the premise role of R**.
+- challenge P;
+- challenge R1;
+- challenge **P's use as premise in R1**.
 
-That is the clearest carrier capability worth importing into the inquiry model if real annotations require it.
+Scientific Hypergraph already has a concrete fixture for this pattern.
 
-It should remain optional. Anonymous bindings are appropriate when nothing needs to target or qualify a particular assignment.
+The proposed OntoCanon architecture treats this as an **optionally addressable
+kernel incidence**:
 
-## 4. Inquiry profile over the kernel
+- most bindings may remain anonymous;
+- a binding receives stable identity only when something needs to target,
+  qualify, evidence, align, supersede, or otherwise govern it.
 
-The following belong in an Inquiry profile, not in the carrier:
+The exact OntoCanon storage/identity path remains pending the local carrier audit.
 
-### Element/domain types
+## 5. Inquiry ontology pack
+
+The following belong in an Inquiry ontology pack rather than the carrier.
+
+### Semantic/object types
 
 - Concept
 - Claim
@@ -106,9 +183,9 @@ The following belong in an Inquiry profile, not in the carrier:
 - Participant
 - Message
 
-### Relation types
+### Semantic relation types
 
-Current Inquiry Graph semantic relations:
+Current Inquiry Graph relations:
 
 - supports
 - challenges
@@ -124,237 +201,197 @@ Current Inquiry Graph semantic relations:
 - related_to
 - supersedes
 
-Process/state schemas:
+### Process/state relation schemas
 
 - InquiryMove
 - StanceEvent
 - QuestionEvent
-- AnchoredTo / GroundedIn
+- GroundedIn / AnchoredTo
 
-The kernel need not know what any of these mean. It only needs to preserve their relation identity, roles, participants, typing and higher-order reference.
+The pack defines their roles, permitted participant kinds, cardinalities,
+directionality/algebra where relevant, and any domain-specific invariants.
 
-## 5. Source grounding remains separate from semantic truth
+## 6. Inquiry profile
 
-Inquiry Graph's strongest current contract is source grounding:
+The Inquiry profile should configure policy over the pack and shared OntoCanon
+mechanisms.
+
+Likely profile-controlled concerns include:
+
+- open/closed/mixed treatment of unknown Inquiry vocabulary;
+- allowed reference/filler kinds;
+- role ordering/cardinality;
+- review/activation policy;
+- alignment predicates permitted for cross-trajectory integration;
+- global invariant validators;
+- identity/canonicalization policy where inquiry objects have stable semantic
+  identity beyond source occurrences.
+
+The profile should configure shared mechanisms rather than implement a second
+governance or alignment stack.
+
+## 7. Source grounding remains separate from semantic truth
+
+Inquiry Graph's strongest existing contract remains:
 
 ```text
-annotation → exact message substring
+annotation -> exact source message substring
 ```
 
-A hypergraph projection must preserve:
+A governed OntoCanon representation must preserve:
 
-- message identity;
+- conversation/message identity;
 - actor;
-- conversation;
 - source order;
 - quote;
 - Unicode offsets;
 - annotation origin;
 - review state.
 
-Grounding proves the interpretation points to actual source text. It does not certify the interpretation as true or semantically correct.
+Grounding establishes what text supports an annotation. It does not certify the
+annotation as true.
 
-This maps naturally onto OntoCanon's evidence-custody principle.
+This maps naturally onto OntoCanon source/evidence custody.
 
-## 6. What OntoCanon already supplies
+## 8. What current OntoCanon already appears to supply
 
-Recent OntoCanon work already establishes most of the governance pattern needed here:
+Current OntoCanon evidence includes:
 
-- n-ary first-class semantic relations;
-- typed role/filler validation;
+- reified n-ary predicate/role structures;
+- role/cardinality/type validation;
 - source/evidence custody;
-- deterministic source-bound assertion identity;
+- source-bound occurrence identity;
 - source-independent content identity;
-- assertion-to-assertion references in the promoted graph;
-- richer typed content references in `gcontent2_`;
-- immutable records and additive supersession/recanonicalization;
-- separation of deterministic identity from fallible semantic alignment;
+- assertion-to-assertion references;
+- broader typed content-reference work;
+- additive supersession/recanonicalization;
+- deterministic identity separated from fallible semantic alignment;
 - evidence-bearing alignment proposals;
-- explicit `uncertain` outcomes;
-- review/governance before canonicalization;
-- reversible/additive projections rather than destructive merge.
+- review/proposal governance;
+- non-destructive canonical projections.
 
-These should be reused rather than recreated in Inquiry Graph.
+These are candidate reusable mechanisms, not automatically the optimal final
+implementation.
 
-## 7. What is not yet cleanly solved in OntoCanon
+The independent carrier audit decides how much is already genuinely generic.
 
-### 7.1 General relation-instance governance
+## 9. Current unresolved OntoCanon seams
 
-The implementation/public vocabulary is still centered on:
+### 9.1 Generic semantic object lifecycle
+
+Current product vocabulary remains:
 
 ```text
 SourceMeaning
-→ CandidateAssertion
-→ GovernedAssertion
+-> CandidateAssertion
+-> GovernedAssertion
 ```
 
-The carrier we need is broader: a QuestionEvent, InquiryMove, Membership or RoleBinding is not naturally an assertion in the ordinary sense.
+The unresolved question is whether this is:
 
-The first question for an OntoCanon integration should therefore be whether the current assertion lifecycle can govern a general typed relation instance **without semantic distortion**.
+- terminology/API debt over a generic substrate; or
+- a real semantic/type constraint.
 
-If not, the correct change is to generalize the governance contract while preserving assertion-specific compatibility.
+Inquiry objects such as QuestionEvent, InquiryMove and RoleBinding should not be
+forced into proposition semantics merely to reuse governance.
 
-### 7.2 First-class RoleBinding governance
+### 9.2 Addressable RoleBinding
 
-OntoCanon can govern assertion/content references, but the current crosswalk has not established a lossless public contract for:
+No current public OntoCanon contract has yet been established for a role binding
+as a durable semantic target.
+
+This remains the clearest potential kernel gap.
+
+### 9.3 Alignment as ordinary governed relation
+
+Current content alignment is pairwise and uses a narrow fixed relation enum.
+
+The target architecture is:
 
 ```text
-relation → particular role binding → participant
+candidate correspondence
+  -> adjudication proposal
+  -> ordinary governed semantic alignment relation
+  -> optional derived integrated projection
 ```
 
-where the binding itself has durable identity and can be:
+The mapping predicate belongs in pack/profile semantics.
 
-- a target of another semantic relation;
-- independently evidenced;
-- qualified;
-- aligned;
-- superseded;
-- governed.
+Candidate-generation and adjudication algorithms remain replaceable.
 
-This is the most concrete missing capability.
+## 10. Integration of the two inquiry trajectories
 
-### 7.3 Alignment relation profiles
-
-OntoCanon's current content alignment vocabulary is intentionally narrow:
-
-```text
-equivalent | compatible | contradicts | distinct | uncertain
-```
-
-Cross-inquiry integration requires domain relations such as:
-
-- refines
-- generalizes
-- reframes
-- continues
-- answers_same_question
-- same_strategy
-- independent_convergence
-- shared_ancestor
-
-These semantics should belong to the Inquiry profile while OntoCanon governs the mapping records and their evidence/review lifecycle.
-
-## 8. Two existing inquiry trajectories
-
-The repository now contains two independent source-grounded inquiry graphs:
+The repository contains two independently source-grounded inquiry graphs:
 
 1. `examples/seed/graph.json`
 2. `examples/formal-inquiry-2026-09-27/graph.json`
 
 They should remain independently immutable.
 
-The intended future integration is not:
-
-```text
-G1 + G2 → destructive merged graph
-```
-
-but:
+Integration should be:
 
 ```text
 G1 ─┐
-    ├─ governed alignment graph A ─→ derived integrated projection P(G1,G2,A)
+    ├─ governed alignment relations A ─→ derived integrated projection P(G1,G2,A)
 G2 ─┘
 ```
 
-This mirrors OntoCanon's accepted identity/alignment posture.
+not destructive graph union.
 
-## 9. Cross-graph alignment object
+Simple pairwise mappings may project to standards such as SSSOM.
 
-A first alignment record should preserve at least:
+Higher-order/n:m mappings remain ordinary governed n-ary relations internally
+and should not be flattened merely to fit an interchange standard.
 
-```text
-left_ref
-right_ref
-relation_type
-evidence_left
-evidence_right
-rationale
-confidence / calibrated support if applicable
-proposal provenance
-review decision
-supersession lineage
-profile/version
-```
+## 11. Cross-trajectory semantic prior art
 
-Absence of a mapping must remain distinguishable from:
+Do not invent a bespoke relation taxonomy where existing semantics fit.
 
-- examined and distinct;
-- rejected proposal;
-- unresolved;
-- uncertain;
-- accepted mapping.
+Relevant sources include:
 
-## 10. Cross-graph relation classes
+- SKOS / OWL / RDFS mapping predicates for applicable identity/breadth cases;
+- SSSOM for pairwise mapping interchange/provenance;
+- EDOAL for complex ontology-correspondence prior art;
+- inquisitive semantics for question refinement;
+- inferential erotetic logic for question-to-question inquiry progression;
+- AIF / abstract, bipolar and recursive argumentation for support/attack and
+  higher-order argument structure;
+- PROV-O for external provenance projection.
 
-Do not force all integration into equivalence.
+Inquiry-specific predicates should be introduced only for demonstrated semantic
+gaps.
 
-A useful initial factorization is:
+## 12. Stop rule
 
-### Identity-like
-- exact_identity
-- semantic_equivalence
+Do not add a new general semantic carrier to Inquiry Graph.
 
-### Directional abstraction/revision
-- refines
-- generalizes
-- reframes
-- supersedes
-- continues
+Do not preserve Scientific Hypergraph as a separate general carrier merely
+because generic semantics were first implemented there.
 
-### Shared function
-- answers_same_question
-- same_strategy
-- same_method_family
+If Inquiry Graph requires a genuinely domain-free carrier capability and
+OntoCanon lacks it, the default architectural question is whether that capability
+belongs in the OntoCanon kernel.
 
-### Epistemic relation
-- supports
-- challenges
-- contradicts
+If the capability is genuinely inquiry-specific, it belongs in the Inquiry pack
+or profile.
 
-### Historical/structural relation
-- independent_convergence
-- shared_ancestor
-- derived_from
+## 13. Current next step
 
-### Negative/epistemic status
-- distinct
-- uncertain
+Do not implement an Inquiry pack/profile against a carrier that is still being
+reconciled.
 
-Only explicitly declared relation types should receive transitive/symmetric semantics.
+The current dependency is the OntoCanon local carrier audit / proposed ADR-0042.
 
-## 11. Architectural stop rule
+Once that is resolved:
 
-Do **not** add a new general semantic carrier to Inquiry Graph.
+1. update this crosswalk to the accepted OntoCanon carrier contract;
+2. define the Inquiry ontology pack using existing Inquiry Graph semantics;
+3. define the Inquiry profile using shared OntoCanon policy/governance
+   mechanisms;
+4. preserve the two existing inquiry trajectories as independent source
+   instances;
+5. express cross-trajectory mappings as governed semantic relations;
+6. add interoperability projections only where justified.
 
-A new kernel primitive is justified only if an Inquiry Graph object cannot be represented losslessly as:
-
-```text
-ModelElement
-RelationInstance
-RoleBinding
-typing/meta-relations
-```
-
-with the source/provenance/governance layer supplied externally.
-
-Similarly, do not generalize OntoCanon merely because its terminology feels narrow. Generalize only where an executable Inquiry Graph integration demonstrates loss or semantic coercion.
-
-## 12. Next proof
-
-The next bounded proof should:
-
-1. define an Inquiry profile over the Hypergraph kernel;
-2. project both current Inquiry Graphs into that carrier;
-3. verify exact reconstruction of the original Inquiry Graph records;
-4. exercise relation-as-participant;
-5. add one fixture exercising RoleBinding-as-participant;
-6. pass the Hypergraph validator;
-7. test whether OntoCanon can govern the projected objects losslessly;
-8. record every mismatch as either:
-   - carrier gap,
-   - Inquiry-profile gap,
-   - OntoCanon-governance gap,
-   - projection-only issue.
-
-The proof should not merge the two inquiry trajectories.
+No benchmark or comparative empirical evaluation is authorized without explicit
+Brian approval.
