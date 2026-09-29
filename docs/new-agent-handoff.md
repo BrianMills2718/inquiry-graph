@@ -1,5 +1,8 @@
 # New Agent Handoff — Inquiry Graph + Formal Epistemic Reasoning Meta-Model
 
+> **Split, 2026-09-29.** The formal theory (support, defeat, ABA, warrant/license regimes and their certificates), its research docs, ADRs 007–018, the paper draft and `project-status.md` moved to [epistemic-warrant](https://github.com/BrianMills2718/epistemic-warrant) with full history. Theory items below (issues #17, #18, #34, #40, #46) are tracked there. This repository is the inquiry-graph tool: import, extraction, validation, query and render, plus the seed. Its product priorities are issue #38 (usefulness) and issue #3 (source reconciliation).
+
+
 > **Prepared:** 2026-09-29  
 > **Repository:** \`BrianMills2718/inquiry-graph\` (private)  
 > **Current main:** \`81f136fa73c843a97267e5d04a01c9be885beb8c\`  
