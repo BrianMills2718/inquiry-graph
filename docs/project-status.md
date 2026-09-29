@@ -4,21 +4,15 @@
 
 ## Current objective
 
-Build a source-grounded inquiry system whose research layer can represent:
+Keep three related projects explicit:
 
-\[
-\text{candidate generation}
-\to
-\text{support/evaluation}
-\to
-\text{defeasible warrant}
-\to
-\text{license}
-\to
-\text{epistemic action/update}
-\]
+1. **Formal Epistemic Reasoning Meta-Model** — foundational architecture for representation, generation, support, warrant, action and control.
+2. **Inquiry Representation Model** — source-grounded representation of actual inquiry histories.
+3. **Inquiry System** — future useful product built on the first two.
 
-without collapsing unlike notions into one confidence score or one universal inference taxonomy.
+For the meta-model, the current objective is no longer broad architecture discovery. The main open theoretical frontier is **acceptance licensing and warrant composition** (issue #34), while candidate generation and formal guarantee transport are now substantially mapped to mature prior work.
+
+For the inquiry representation/system, the main open work is source reconciliation, annotation review, and empirical usefulness testing.
 
 ## Stable architecture
 
@@ -40,21 +34,41 @@ Positive support is represented as finite antichains of minimal assumption envir
 
 ### Candidate generation
 
-Candidate generation is a constrained-search interface:
+Candidate generation is now modeled as a typed generative regime:
 
 \[
 \mathcal G_R=
-(\mathcal D_R,d_0,\mathcal O_R,\to_R)
+(
+\mathcal A_R,
+\mathcal L_R,
+\mathcal D_R,
+B_R,
+\mathcal O_R,
+\to_R,
+V_R
+)
 \]
 
-controlled by a strategy rather than one universal creativity operator.
+with concrete episodes:
+
+\[
+E_G=(R,\mathcal G_R,d_0),
+\]
+
+and generative-system transformations:
+
+\[
+\mu:\mathcal G_R\rightharpoonup\mathcal G'_R.
+\]
+
+CEGIS, Meta-Interpretive Learning, anti-unification, HR theory formation and conceptual blending have all been mapped into this interface. Cross-framework orchestration is aligned to blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, PRODIGY, Soar and reflection.
 
 ### Warrant
 
 The current warrant judgment is:
 
 \[
-\mathfrak W;A\vdash_\pi a:G.
+\mathfrak W;\Phi\vdash_\kappa a:G.
 \]
 
 Support, warrant, derived license and executed update remain separate.
@@ -143,16 +157,23 @@ The following separations are stable enough for integration testing:
 
 ## Immediate path
 
-The project now has executable warrant regimes for defeasible grounded acceptability, exact graded-support reporting, checked strict-Horn deduction, measurement-result recording with uncertainty/calibration provenance, testimony-posterior recording under an explicit reference-class-relative source model, finite-class statistical generalization bounds under explicit sampling assumptions, and strategy-selection warrants based on positive lower confidence bounds for paired normalized utility.
+The integrated verification gate is cleared and the broad architecture is frozen by default.
 
-The integrated verification gate is now cleared. The next milestone is benchmark-driven validation rather than ontology expansion:
+### Meta-model priority
 
-1. maintain and expand the benchmark only from concrete failures;
-2. run adversarial/failure analysis across the existing warrant regimes;
-3. reconcile the full conversation export and test source completeness;
-4. evaluate empirical usefulness for inquiry navigation/auditability;
-5. add any new formal layer only when a benchmark/use case requires it;
-6. candidate-generation framework mapping and cross-framework glue surveys are now complete. Existing blackboard systems, multistrategy learning, algorithm selection, hyper-heuristics, configuration, reflection, PRODIGY and Soar cover most orchestration needs. Formal adapter/guarantee transport has now been mapped to existing institution/DOL/Hets, MMT theory-morphism, abstract-interpretation and contract/refinement machinery. Further foundational work should be driven only by concrete failures in typed adapter metadata, preservation-certificate composition, or non-formal/empirical translation cases.
+1. **Acceptance licensing and warrant composition** — issue #34.
+2. Update the paper draft to match the current closeout: acceptance problem, hypothesis framing, and the completed candidate-generation/transport surveys.
+3. Audit the strategy-performance benchmark for multiple-comparison and optional-stopping conditions.
+4. Add new foundational machinery only when a concrete benchmark cannot be represented faithfully.
+
+### Inquiry representation / system priority
+
+1. Reconcile the full conversation export and review the 798 proposed annotations — issue #3.
+2. Define a concrete usefulness test for the inquiry representation.
+3. Build only the smallest view/workflow needed for that test.
+4. Evaluate whether the representation improves navigation/auditability compared with reading the transcript directly.
+
+Candidate-generation framework mapping, cross-framework orchestration, and formal adapter/guarantee transport are complete enough to freeze unless a concrete failure appears.
 
 ## Verification status
 
@@ -168,6 +189,7 @@ Eventually import the full conversation export and reconcile curated excerpts to
 
 ## Canonical entry points
 
+- [New-agent handoff](new-agent-handoff.md)
 - [Formal Epistemic Reasoning Meta-Model closeout](formal-epistemic-reasoning-metamodel.md)
 - [ArXiv-style paper draft](paper-formal-epistemic-reasoning-metamodel.md)
 - [Formalism](formalism.md)
