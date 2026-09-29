@@ -210,7 +210,7 @@ If foundational research continues, begin with issue #34: acceptance licensing a
 
 Do not reopen candidate generation, derivation DAGs, or full ABA+ unless a concrete case triggers their documented escalation conditions.
 
-### Track C — benchmark expansion and empirical evaluation
+### Track C — benchmark expansion and empirical evaluation — issue #38
 
 Turn the current examples into a maintained benchmark corpus and test:
 
@@ -220,7 +220,7 @@ Turn the current examples into a maintained benchmark corpus and test:
 - strategy episodes;
 - robustness to changed assumptions/defeaters/preferences.
 
-### Track D — source reconciliation/product usefulness
+### Track D — source reconciliation/product usefulness — issue #3
 
 Reconcile the full conversation export, then evaluate whether the inquiry graph materially helps users navigate open questions, provenance, revisions, and reasoning strategies.
 
