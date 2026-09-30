@@ -4308,6 +4308,408 @@
       {
         "quote": "I still feel like we're a long way from strategies for optimization."
       }
+    ],
+    [
+      "N",
+      [
+        "g-level1-onepage",
+        "goal",
+        "Brian authorizes a concise one-page Level-1 statement while keeping Inquiry Graph incrementally updated.",
+        "t49",
+        "Okay, let's do that, and as we go, let's make sure inquiry graph stays up to date."
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "g-post-level1-representation",
+        "goal",
+        "After Level 1, Brian wants to investigate the ecosystem for representing, cataloging, choosing, translating and composing heterogeneous representation systems before strategy optimization.",
+        "t49",
+        "once we've finished with the level one stuff, if I don't remind you, I think the next thing to think through is, like, looking at Representation Router and OntoCannon, and even, like, my DODAF repo"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "q-representation-registry",
+        "question",
+        "What mature megamodeling/model-management/ontology/database infrastructure already exists for cataloging representation systems, their profiles/interfaces, and mappings among them?",
+        "t49",
+        "it seems like there should be a place that stores all of these different representations for, like, mega-modeling"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "q-interchange-ir",
+        "question",
+        "What role, if any, should OntoCanon's intermediate representation play in transfer among heterogeneous representations without erasing their semantics or guarantees?",
+        "t49",
+        "the OntoCannon intermediate representation should be able to, like, transfer between them"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "q-transfer-limits",
+        "question",
+        "What have Knowledge Work/Semantic Hypergraph, database theory, and existing mapping theories already established about the limits of transferring and composing representations?",
+        "t49",
+        "should have already, like, showed the, like, limits of transferring this stuff, and then there's also database theory."
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "g-zero-novelty",
+        "goal",
+        "Brian explicitly prioritizes learning, reuse and useful integration over novelty; the desired outcome includes finding existing infrastructure rather than recreating it.",
+        "t49",
+        "I have zero interest in being novel. Just, like, I'm trying to learn and produce useful things."
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-composable-representations",
+        "hypothesis",
+        "Brian sees potential value in choosing among heterogeneous representational systems, transferring between them, composing them through interfaces, and mixing/matching them.",
+        "t49",
+        "this concept of all of these different representational systems and being able to choose and transfer between them and compose them through interfaces and mix and match all this stuff, I just think there's a lot of power here."
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-representation-router",
+        "reference",
+        "Repository to inspect after Level 1: brianmills-spec/representation-router (plus public mirror where useful).",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-ontocanon6",
+        "reference",
+        "Repository to inspect after Level 1: BrianMills2718/onto-canon6 and/or current authoritative OntoCanon owner.",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-dodaf",
+        "reference",
+        "Repository to inspect after Level 1: BrianMills2718/dodaf.",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-knowledgework",
+        "reference",
+        "Repository to inspect after Level 1: BrianMills2718/knowledgework; user associates this with prior semantic-hypergraph/transfer-limit work.",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-level1-onepage",
+        "reference",
+        "epistemic-warrant PR #15 now contains docs/level-1-one-page.md as the concise Level-1 statement.",
+        "t50c"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r101",
+        "motivates",
+        "g-level1-onepage",
+        "g-checkpoint",
+        "t49",
+        "as we go, let's make sure inquiry graph stays up to date"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r102",
+        "depends_on",
+        "g-post-level1-representation",
+        "g-level1-onepage",
+        "t49",
+        "once we've finished with the level one stuff"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r103",
+        "motivates",
+        "g-post-level1-representation",
+        "q-representation-registry",
+        "t49",
+        "there should be a place that stores all of these different representations"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r104",
+        "part_of",
+        "q-interchange-ir",
+        "q-representation-registry",
+        "t49"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r105",
+        "part_of",
+        "q-transfer-limits",
+        "q-representation-registry",
+        "t49"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r106",
+        "supports",
+        "g-zero-novelty",
+        "q-representation-registry",
+        "t49",
+        "this is really something I shouldn't have to recreate and hopefully already exists."
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r107",
+        "motivates",
+        "c-composable-representations",
+        "g-post-level1-representation",
+        "t49"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r108",
+        "candidate_for",
+        "r-representation-router",
+        "q-representation-registry",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r109",
+        "candidate_for",
+        "r-ontocanon6",
+        "q-interchange-ir",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r110",
+        "candidate_for",
+        "r-dodaf",
+        "q-representation-registry",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r111",
+        "candidate_for",
+        "r-knowledgework",
+        "q-transfer-limits",
+        "t50b"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r112",
+        "about",
+        "r-level1-onepage",
+        "g-level1-onepage",
+        "t50c"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m52",
+        "scope",
+        "t49",
+        [
+          "q-before-strategy",
+          "g-strategy-not-next"
+        ],
+        [
+          "g-level1-onepage",
+          "g-post-level1-representation",
+          "q-representation-registry",
+          "q-interchange-ir",
+          "q-transfer-limits",
+          "g-zero-novelty",
+          "c-composable-representations"
+        ],
+        "once we've finished with the level one stuff, if I don't remind you, I think the next thing to think through is, like, looking at Representation Router and OntoCannon",
+        [
+          "m51"
+        ]
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m53",
+        "connect",
+        "t50b",
+        [
+          "g-post-level1-representation"
+        ],
+        [
+          "r-representation-router",
+          "r-ontocanon6",
+          "r-dodaf",
+          "r-knowledgework"
+        ]
+      ],
+      {
+        "after": [
+          "m52"
+        ]
+      }
+    ],
+    [
+      "M",
+      [
+        "m54",
+        "summarize",
+        "t50c",
+        [
+          "g-level1-onepage"
+        ],
+        [
+          "r-level1-onepage"
+        ]
+      ],
+      {
+        "after": [
+          "m53"
+        ]
+      }
+    ],
+    [
+      "ST",
+      [
+        "s30",
+        "t49",
+        "g-level1-onepage",
+        "endorses",
+        "Okay, let's do that"
+      ],
+      {}
+    ],
+    [
+      "ST",
+      [
+        "s31",
+        "t49",
+        "g-post-level1-representation",
+        "endorses",
+        "once we've finished with the level one stuff, if I don't remind you, I think the next thing to think through is"
+      ],
+      {}
+    ],
+    [
+      "ST",
+      [
+        "s32",
+        "t49",
+        "g-zero-novelty",
+        "endorses",
+        "I have zero interest in being novel. Just, like, I'm trying to learn and produce useful things."
+      ],
+      {}
+    ],
+    [
+      "Q",
+      [
+        "e51",
+        "t49",
+        "q-representation-registry",
+        "deferred"
+      ],
+      {
+        "quote": "once we've finished with the level one stuff",
+        "basis": "Explicitly queued for after Level 1; should not displace current Level-1 work."
+      }
+    ],
+    [
+      "Q",
+      [
+        "e52",
+        "t49",
+        "q-interchange-ir",
+        "deferred"
+      ],
+      {
+        "quote": "the OntoCannon intermediate representation should be able to, like, transfer between them",
+        "basis": "Part of the post-Level-1 representation/interoperability track."
+      }
+    ],
+    [
+      "Q",
+      [
+        "e53",
+        "t49",
+        "q-transfer-limits",
+        "deferred"
+      ],
+      {
+        "quote": "there's also database theory",
+        "basis": "Part of the post-Level-1 adoption-first representation/interoperability track."
+      }
     ]
   ]
 }
