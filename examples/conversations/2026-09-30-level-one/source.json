@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 32 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 33 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -543,6 +543,12 @@
       "actor_id": "s30:assistant",
       "ordinal": 88,
       "text": "This pass also found something important in the repository itself: while we were talking, the merged primitive/substrate audit had already compressed the broad architecture to **configuration + action + warrant**. So I’m not creating a rival architecture; I’m narrowing the unresolved part **inside the action box**. The current result is a two-axis move descriptor—**where new content came from** × **what effect it had on epistemic state**."
+    },
+    {
+      "id": "s30:t33",
+      "actor_id": "s30:assistant",
+      "ordinal": 89,
+      "text": "One counterexample did force a small correction: **“suppose \\\\(H\\\\) for the sake of argument”** should not be mistaken for believing \\\\(H\\\\). So the state-effect axis needs to cover temporary epistemic **roles/context**, not just credence/acceptance. Likewise explicit availability can increase or decrease. This is a refinement of the axis, not a new inference family."
     }
   ]
 }
