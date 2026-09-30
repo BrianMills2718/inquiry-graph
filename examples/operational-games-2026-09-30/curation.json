@@ -32,7 +32,29 @@
     "agent-not-primitive": "dialogue-2026-09-30-operational-games:ex029",
     "literature-stack": "dialogue-2026-09-30-operational-games:ex030",
     "composition-space": "dialogue-2026-09-30-operational-games:ex031",
-    "graph-update-request": "dialogue-2026-09-30-operational-games:ex032"
+    "graph-update-request": "dialogue-2026-09-30-operational-games:ex032",
+    "universal-game-vacuity-user": "dialogue-2026-09-30-operational-games:ex033",
+    "anti-dichotomy-user": "dialogue-2026-09-30-operational-games:ex034",
+    "competence-all-way-down-user": "dialogue-2026-09-30-operational-games:ex035",
+    "ball-game-user": "dialogue-2026-09-30-operational-games:ex036",
+    "vacuity-concern-assistant": "dialogue-2026-09-30-operational-games:ex037",
+    "expand-game-theory-user": "dialogue-2026-09-30-operational-games:ex038",
+    "scientific-method-game-user": "dialogue-2026-09-30-operational-games:ex039",
+    "scale-down-user": "dialogue-2026-09-30-operational-games:ex040",
+    "process-degenerate-game-assistant": "dialogue-2026-09-30-operational-games:ex041",
+    "goal-self-model-user": "dialogue-2026-09-30-operational-games:ex042",
+    "self-goal-fallible-user": "dialogue-2026-09-30-operational-games:ex043",
+    "access-contract-assistant": "dialogue-2026-09-30-operational-games:ex044",
+    "goal-triad-assistant": "dialogue-2026-09-30-operational-games:ex045",
+    "reuse-collective-competence-assistant": "dialogue-2026-09-30-operational-games:ex046",
+    "approve-research-user": "dialogue-2026-09-30-operational-games:ex047",
+    "status-question-user": "dialogue-2026-09-30-operational-games:ex048",
+    "prior-art-merged-assistant": "dialogue-2026-09-30-operational-games:ex049",
+    "open-games-result-assistant": "dialogue-2026-09-30-operational-games:ex050",
+    "arena-selection-assistant": "dialogue-2026-09-30-operational-games:ex051",
+    "integration-gap-assistant": "dialogue-2026-09-30-operational-games:ex052",
+    "translation-contract-assistant": "dialogue-2026-09-30-operational-games:ex053",
+    "update-and-proceed-user": "dialogue-2026-09-30-operational-games:ex054"
   },
   "nodes": [
     [
@@ -262,6 +284,126 @@
       "goal",
       "Record this continuation as a source-grounded Inquiry Graph trajectory.",
       "graph-update-request"
+    ],
+    [
+      "universal-game-vacuity",
+      "hypothesis",
+      "Make the base notion of game deliberately broad enough to include essentially all lawful systems, while preserving meaning through typed enrichments.",
+      "universal-game-vacuity-user"
+    ],
+    [
+      "anti-binary-game-intelligence",
+      "hypothesis",
+      "Game/non-game and intelligence/non-intelligence may be misleading binary partitions; graded structure and competence are preferred.",
+      "anti-dichotomy-user"
+    ],
+    [
+      "competence-all-way-down",
+      "hypothesis",
+      "Competence may grade down to very simple or even physical systems rather than beginning at a sharp agency threshold.",
+      "competence-all-way-down-user"
+    ],
+    [
+      "ball-downhill-game",
+      "example",
+      "A ball rolling downhill is proposed as a degenerate competence/game case governed by physical dynamics rather than deliberation.",
+      "ball-game-user"
+    ],
+    [
+      "vacuity-concern",
+      "claim",
+      "If every lawful process is called a game, the term risks collapsing into a synonym for process.",
+      "vacuity-concern-assistant"
+    ],
+    [
+      "expanded-game-theory-goal",
+      "goal",
+      "Test whether game theory can be expanded downward from rich strategic cases to passive and scientific-interaction cases.",
+      "expand-game-theory-user"
+    ],
+    [
+      "scientific-method-game",
+      "example",
+      "Scientific inquiry can be modeled as interaction with a non-strategically-reactive system whose dynamics generate responses to observations/interventions.",
+      "scientific-method-game-user"
+    ],
+    [
+      "top-down-game-decomposition",
+      "method",
+      "Start from rich game theory and remove unnecessary assumptions rather than building upward from a minimal process formalism.",
+      "scale-down-user"
+    ],
+    [
+      "process-as-degenerate-game",
+      "hypothesis",
+      "Process/dynamics may be the least enriched case of a more general game object.",
+      "process-degenerate-game-assistant"
+    ],
+    [
+      "goal-self-model",
+      "hypothesis",
+      "A sufficiently rich system can model the external world, itself within that world, and a goal attributed to that modeled self.",
+      "goal-self-model-user"
+    ],
+    [
+      "self-attributed-goal-fallible",
+      "claim",
+      "A system's own represented goal is not automatically epistemically privileged over external observer or white-box descriptions.",
+      "self-goal-fallible-user"
+    ],
+    [
+      "access-contract-goals",
+      "claim",
+      "White-box and black-box distinguish analyst access rather than defining different kinds of systems or research arms.",
+      "access-contract-assistant"
+    ],
+    [
+      "goal-perspective-nonidentity",
+      "claim",
+      "White-box, observer-inferred, and self-attributed goal descriptions need not coincide.",
+      "goal-triad-assistant"
+    ],
+    [
+      "collective-competence-goal-authority",
+      "reference",
+      "Collective Competence ontology as the existing authority for goal criteria, access contracts, provenance, competence, boundary, and scale distinctions.",
+      "reuse-collective-competence-assistant"
+    ],
+    [
+      "universal-game-prior-art-result",
+      "claim",
+      "The approved prior-art pass found that open games already admit surprisingly degenerate cases, reducing the need for a homemade universal-game tuple.",
+      "open-games-result-assistant"
+    ],
+    [
+      "arena-selection-separation",
+      "concept",
+      "Open games with agency separate compositional arena/interaction structure from optional selection/evaluation semantics.",
+      "arena-selection-assistant"
+    ],
+    [
+      "universal-game-integration-gap",
+      "question",
+      "How can composition, perspectival goals/self-models, changing awareness, and resource-bounded computation be connected without losing their native semantics?",
+      "integration-gap-assistant"
+    ],
+    [
+      "translation-contract-next",
+      "goal",
+      "Construct a paper-level translation contract for a bounded self-model case plus a passive component before adding implementation.",
+      "translation-contract-assistant"
+    ],
+    [
+      "q-current-universal-game-status",
+      "question",
+      "What is the current status of the universal-game investigation after the approved prior-art pass?",
+      "status-question-user"
+    ],
+    [
+      "continue-after-graph-update",
+      "goal",
+      "Update Inquiry Graph with this continuation and then proceed to the translation-contract research step.",
+      "update-and-proceed-user"
     ]
   ],
   "relations": [
@@ -408,6 +550,108 @@
       "graph-update-goal",
       "space-of-games-goal",
       "graph-update-request"
+    ],
+    [
+      "supports",
+      "universal-game-vacuity",
+      "anti-binary-game-intelligence",
+      "anti-dichotomy-user"
+    ],
+    [
+      "exemplifies",
+      "ball-downhill-game",
+      "competence-all-way-down",
+      "ball-game-user"
+    ],
+    [
+      "challenges",
+      "universal-game-vacuity",
+      "vacuity-concern",
+      "universal-game-vacuity-user"
+    ],
+    [
+      "motivates",
+      "universal-game-vacuity",
+      "expanded-game-theory-goal",
+      "expand-game-theory-user"
+    ],
+    [
+      "exemplifies",
+      "scientific-method-game",
+      "expanded-game-theory-goal",
+      "scientific-method-game-user"
+    ],
+    [
+      "candidate_for",
+      "top-down-game-decomposition",
+      "space-of-games-goal",
+      "scale-down-user"
+    ],
+    [
+      "motivates",
+      "top-down-game-decomposition",
+      "process-as-degenerate-game",
+      "process-degenerate-game-assistant"
+    ],
+    [
+      "related_to",
+      "process-as-degenerate-game",
+      "compositional-space-hypothesis",
+      "process-degenerate-game-assistant"
+    ],
+    [
+      "supports",
+      "goal-self-model",
+      "self-attributed-goal-fallible",
+      "self-goal-fallible-user"
+    ],
+    [
+      "supports",
+      "access-contract-goals",
+      "goal-perspective-nonidentity",
+      "goal-triad-assistant"
+    ],
+    [
+      "related_to",
+      "collective-competence-goal-authority",
+      "goal-perspective-nonidentity",
+      "reuse-collective-competence-assistant"
+    ],
+    [
+      "answers",
+      "universal-game-prior-art-result",
+      "q-current-universal-game-status",
+      "prior-art-merged-assistant"
+    ],
+    [
+      "motivates",
+      "universal-game-prior-art-result",
+      "arena-selection-separation",
+      "arena-selection-assistant"
+    ],
+    [
+      "motivates",
+      "arena-selection-separation",
+      "translation-contract-next",
+      "translation-contract-assistant"
+    ],
+    [
+      "depends_on",
+      "translation-contract-next",
+      "universal-game-integration-gap",
+      "translation-contract-assistant"
+    ],
+    [
+      "related_to",
+      "universal-game-integration-gap",
+      "game-identification-uncertainty",
+      "integration-gap-assistant"
+    ],
+    [
+      "motivates",
+      "continue-after-graph-update",
+      "translation-contract-next",
+      "update-and-proceed-user"
     ]
   ],
   "moves": [
@@ -658,6 +902,193 @@
         "graph-update-goal"
       ],
       "graph-update-request"
+    ],
+    [
+      "hypothesize",
+      [
+        "compositional-space-hypothesis"
+      ],
+      [
+        "universal-game-vacuity"
+      ],
+      "universal-game-vacuity-user"
+    ],
+    [
+      "generalize",
+      [
+        "universal-game-vacuity"
+      ],
+      [
+        "anti-binary-game-intelligence"
+      ],
+      "anti-dichotomy-user"
+    ],
+    [
+      "generalize",
+      [
+        "universal-game-vacuity"
+      ],
+      [
+        "competence-all-way-down"
+      ],
+      "competence-all-way-down-user"
+    ],
+    [
+      "propose",
+      [
+        "competence-all-way-down"
+      ],
+      [
+        "ball-downhill-game"
+      ],
+      "ball-game-user"
+    ],
+    [
+      "challenge",
+      [
+        "vacuity-concern"
+      ],
+      [
+        "universal-game-vacuity"
+      ],
+      "universal-game-vacuity-user"
+    ],
+    [
+      "scope",
+      [
+        "universal-game-vacuity"
+      ],
+      [
+        "expanded-game-theory-goal"
+      ],
+      "expand-game-theory-user"
+    ],
+    [
+      "propose",
+      [
+        "expanded-game-theory-goal"
+      ],
+      [
+        "scientific-method-game"
+      ],
+      "scientific-method-game-user"
+    ],
+    [
+      "reframe",
+      [
+        "expanded-game-theory-goal"
+      ],
+      [
+        "top-down-game-decomposition"
+      ],
+      "scale-down-user"
+    ],
+    [
+      "hypothesize",
+      [
+        "top-down-game-decomposition"
+      ],
+      [
+        "process-as-degenerate-game"
+      ],
+      "process-degenerate-game-assistant"
+    ],
+    [
+      "hypothesize",
+      [],
+      [
+        "goal-self-model"
+      ],
+      "goal-self-model-user"
+    ],
+    [
+      "clarify",
+      [
+        "goal-self-model"
+      ],
+      [
+        "self-attributed-goal-fallible"
+      ],
+      "self-goal-fallible-user"
+    ],
+    [
+      "connect",
+      [
+        "goal-self-model"
+      ],
+      [
+        "access-contract-goals",
+        "goal-perspective-nonidentity"
+      ],
+      "access-contract-assistant"
+    ],
+    [
+      "connect",
+      [
+        "goal-perspective-nonidentity"
+      ],
+      [
+        "collective-competence-goal-authority"
+      ],
+      "reuse-collective-competence-assistant"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-current-universal-game-status"
+      ],
+      "status-question-user"
+    ],
+    [
+      "summarize",
+      [
+        "q-current-universal-game-status"
+      ],
+      [
+        "universal-game-prior-art-result"
+      ],
+      "prior-art-merged-assistant"
+    ],
+    [
+      "clarify",
+      [
+        "universal-game-prior-art-result"
+      ],
+      [
+        "arena-selection-separation"
+      ],
+      "arena-selection-assistant"
+    ],
+    [
+      "ask",
+      [
+        "arena-selection-separation"
+      ],
+      [
+        "universal-game-integration-gap"
+      ],
+      "integration-gap-assistant"
+    ],
+    [
+      "propose",
+      [
+        "universal-game-integration-gap"
+      ],
+      [
+        "translation-contract-next"
+      ],
+      "translation-contract-assistant"
+    ],
+    [
+      "scope",
+      [
+        "translation-contract-next"
+      ],
+      [
+        "continue-after-graph-update"
+      ],
+      "update-and-proceed-user"
     ]
   ],
   "stances": [
@@ -740,6 +1171,61 @@
       "graph-update-goal",
       "posits",
       "graph-update-request"
+    ],
+    [
+      "universal-game-vacuity",
+      "posits",
+      "universal-game-vacuity-user"
+    ],
+    [
+      "anti-binary-game-intelligence",
+      "posits",
+      "anti-dichotomy-user"
+    ],
+    [
+      "competence-all-way-down",
+      "posits",
+      "competence-all-way-down-user"
+    ],
+    [
+      "ball-downhill-game",
+      "posits",
+      "ball-game-user"
+    ],
+    [
+      "expanded-game-theory-goal",
+      "posits",
+      "expand-game-theory-user"
+    ],
+    [
+      "scientific-method-game",
+      "posits",
+      "scientific-method-game-user"
+    ],
+    [
+      "top-down-game-decomposition",
+      "posits",
+      "scale-down-user"
+    ],
+    [
+      "goal-self-model",
+      "posits",
+      "goal-self-model-user"
+    ],
+    [
+      "self-attributed-goal-fallible",
+      "posits",
+      "self-goal-fallible-user"
+    ],
+    [
+      "translation-contract-next",
+      "posits",
+      "translation-contract-assistant"
+    ],
+    [
+      "continue-after-graph-update",
+      "posits",
+      "update-and-proceed-user"
     ]
   ],
   "question_updates": [
@@ -783,6 +1269,17 @@
       [
         "cgt-relevance-claim",
         "compositional-game-theory"
+      ]
+    ],
+    [
+      "q-current-universal-game-status",
+      "answered",
+      "prior-art-merged-assistant",
+      [
+        "universal-game-prior-art-result",
+        "arena-selection-separation",
+        "universal-game-integration-gap",
+        "translation-contract-next"
       ]
     ]
   ]
