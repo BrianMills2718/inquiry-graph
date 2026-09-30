@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 121 excerpts from 62 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 126 excerpts from 67 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **158 content nodes, 135 relations, 64 inquiry moves, 34 stance events, 63 question-status events and 32 distinct questions**. All **454 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **166 content nodes, 142 relations, 68 inquiry moves, 35 stance events, 66 question-status events and 33 distinct questions**. All **477 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -161,3 +161,8 @@ The initial OntoCanon↔ISO crosswalk now answers `q-registry-crosswalk` provisi
 ### Mini-megamodel experiment
 
 The first concrete registry fixture now exists with 8 native representation/profile nodes and 5 mapping records. It distinguishes implemented mappings from design seams, records loss/preservation claims, and treats disconnectedness as valid. The bounded sandbox path checks passed: no design mapping is promoted to executable, no Scientific Hypergraph→Representation Router path is invented, and no current path automatically transports a guarantee. `q-mini-megamodel` is answered for this bounded case; `q-compositional-chain` is the next falsifier.
+
+
+### Certified multi-hop mapping result
+
+The first mature-formalism multi-hop falsifier uses CQL functorial pullback. For F:S→T and G:T→U, the fixture checks Δ_F(Δ_G(I)) = Δ_(G∘F)(I) on a concrete instance and separately checks that U-only `department` data is not preserved. This answers `q-compositional-chain` for one preservation family and opens `q-preservation-types`: the registry now needs typed preservation families rather than a single generic preservation flag.
