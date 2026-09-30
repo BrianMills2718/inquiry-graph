@@ -31,7 +31,7 @@ def _isolate_globals(monkeypatch, tmp_path):
     monkeypatch.setattr(scale, "DEFAULT_RUN", private / "scale_run")
     for name in (
         "RUN", "MODEL", "JUDGE", "CALL_OPTIONS", "MODEL_JUSTIFICATION",
-        "OBSERVABILITY_POLICY", "KEY_TRACE_PREFIX", "TRACE_PREFIX",
+        "OBSERVABILITY_POLICY_MODE", "KEY_TRACE_PREFIX", "TRACE_PREFIX",
     ):
         monkeypatch.setattr(scale, name, getattr(scale, name))
     return private
@@ -52,7 +52,7 @@ def test_codex_campaign_uses_isolated_directory_and_read_only_metadata_route(mon
     assert scale.CALL_OPTIONS["codex_transport"] == "cli"
     assert scale.CALL_OPTIONS["sandbox_mode"] == "read-only"
     assert scale.CALL_OPTIONS["approval_policy"] == "never"
-    assert scale.OBSERVABILITY_POLICY.mode == "metadata_only"
+    assert scale.OBSERVABILITY_POLICY_MODE == "metadata_only"
     manifest = json.loads((scale.RUN / "campaign.json").read_text(encoding="utf-8"))
     assert manifest["transport"] == "codex-cli"
     assert json.loads(legacy_key.read_text(encoding="utf-8")) == {"route": "openrouter"}
