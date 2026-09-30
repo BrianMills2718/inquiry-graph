@@ -1,6 +1,6 @@
 # New Agent Handoff — Inquiry Graph
 
-> **Prepared:** 2026-09-29  
+> **Prepared:** 2026-09-30  
 > **Repository:** `BrianMills2718/inquiry-graph` (private)  
 > **Current main:** verify live before making changes; do not rely on a frozen SHA in this handoff.  
 > **Purpose:** source-grounded inquiry representation and the future useful Inquiry System.
@@ -38,19 +38,19 @@ It is intentionally not a truth engine and does not infer private/user beliefs f
 
 ## 3. Current founding dataset
 
-Current curated seed:
+Current curated seed after the 2026-09-30 continuation:
 
-- 219 source excerpts/messages
-- 229 content nodes
+- 247 source excerpts/messages
+- 250 content nodes
 - 250 relations
-- 185 inquiry moves
-- 58 stance events
-- 76 question events
-- 54 distinct questions
-- 798 proposed annotations
+- 204 inquiry moves
+- 68 stance events
+- 86 question events
+- 59 distinct questions
+- 858 proposed annotations
 - 0 confirmed / 0 rejected
 
-This is a curated reconstruction, **not** a reconciled full ChatGPT export.
+This is a curated reconstruction, **not** a reconciled full ChatGPT export. The 247/250/204 continuation was structurally cross-reference checked in the GitHub update path but has not yet been reproduced by `examples/build_seed.py` and the full suite because the execution device was offline at that update.
 
 ## 4. Immediate product priority — issue #38
 
@@ -93,7 +93,7 @@ The useful-system target is therefore a pipeline: per-conversation attributed in
 When the full conversation export is available:
 
 1. import the active branch;
-2. reconcile the 219 curated excerpts against exact source message IDs/offsets;
+2. reconcile the 247 curated excerpts against exact source message IDs/offsets;
 3. preserve previous mappings/review history;
 4. identify omitted transitions/branches;
 5. adjudicate interpretation separately from quote validity;
@@ -110,9 +110,9 @@ Treat this as infrastructure debt, not an application failure.
 
 Current local post-split verification is green; see `docs/verification.md`.
 
-## 8. Fresh post-split verification
+## 8. Verification state
 
-Verified from a fresh native-Windows clone of current reviewed `main`:
+Last fully executed post-split native-Windows baseline:
 
 - Python 3.14.7
 - editable `.[dev]` install succeeded
@@ -122,7 +122,7 @@ Verified from a fresh native-Windows clone of current reviewed `main`:
 - graph validation: **0 errors / 0 warnings**
 - `pip check`: clean
 
-This is the authoritative verification for the current product-only repository after the theory split.
+The later 2026-09-30 curated-seed continuation now records 247 excerpts / 250 nodes / 204 moves, but that continuation has **not** yet had the build/artifact/test commands rerun. The first execution-capable agent should reproduce it before calling those new counts fully verified.
 
 ## 9. Open PRs that are separate trajectories
 
@@ -196,6 +196,14 @@ Switch to `epistemic-warrant`; do not continue theory in this repository.
 
 Historical theory documents were moved to `epistemic-warrant`.
 
-## 14. One-sentence handoff
+## 14. Final session audit — 2026-09-30
 
-**Inquiry Graph is the per-conversation, source-grounded producer for an AI-facing inquiry system: improve rationale/outcome capture, rerun issue #38 with an AI reader, then test multi-conversation histories beyond one context window; keep foundational theory in `epistemic-warrant` and cross-source canonicalization downstream.**
+The long founding session is now durably captured across this repository and `epistemic-warrant`. The late-session arc—meta-model closeout, prior-art/adoption stance, candidate-generation framework mappings, blackboard-style orchestration, certified guarantee transport, and handoff preparation—is included in the curated seed and in `docs/session-closeout-2026-09-29.md`.
+
+Plans were re-audited against live `main` before handoff. Product sequencing remains: **issue #38 usefulness first, issue #3 source reconciliation second, issue #2 hosted CI as maintenance**. The theory sequencing remains in `epistemic-warrant`: **issue #2 semantic correctness first, issue #1 acceptance/warrant composition second, issue #5 comparison/paper normalization independently**.
+
+The one immediate operational loose end in this repository is to rerun the seed build/artifact/test verification for the 2026-09-30 continuation when execution is available.
+
+## 15. One-sentence handoff
+
+**Inquiry Graph is the per-conversation, source-grounded producer for an AI-facing inquiry system: first reproduce the 2026-09-30 seed continuation, then improve rationale/outcome capture and rerun issue #38; keep foundational theory in `epistemic-warrant` and cross-source canonicalization downstream.**

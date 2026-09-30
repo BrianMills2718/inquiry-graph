@@ -32,7 +32,7 @@ Result:
 - graph validation: **0 errors / 0 warnings**
 - **no broken requirements**
 
-This is the authoritative product-repository verification after the theory split.
+This is the authoritative **executed** product-repository verification after the theory split. A later 2026-09-30 curated-seed continuation updates the checked-in dataset to 247 excerpts / 250 nodes / 204 moves / 68 stance events / 86 question events / 59 questions / 858 proposed annotations. That continuation was structurally cross-reference checked during the GitHub update but has not yet had the canonical build/artifact/test commands rerun because the execution device was unavailable.
 
 ## Scope
 
@@ -53,7 +53,7 @@ Do not treat pre-run hosted failures as application-test failures.
 - no live paid extraction run;
 - no independent human adjudication of the 798 proposed annotations;
 - no full conversation-export reconciliation;
-- no empirical evidence yet that the representation improves reasoning/navigation;
+- the first AI-reader usefulness pilot did **not** show improvement over the raw transcript on the single-conversation case (raw transcript 0.81 vs graph report 0.65 key-point coverage); multi-conversation usefulness remains untested;
 - no production deployment.
 
 These are product/research questions, not schema-validation guarantees.
