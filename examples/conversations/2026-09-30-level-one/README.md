@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 116 excerpts from 57 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 121 excerpts from 62 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **150 content nodes, 127 relations, 60 inquiry moves, 33 stance events, 60 question-status events and 31 distinct questions**. All **430 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **158 content nodes, 135 relations, 64 inquiry moves, 34 stance events, 63 question-status events and 32 distinct questions**. All **454 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -156,3 +156,8 @@ The current assistant hypothesis is **native authority + governed registry + fir
 
 
 The initial OntoCanon↔ISO crosswalk now answers `q-registry-crosswalk` provisionally: existing metadata already covers much identity/version/provenance/dependency/validation; remaining work looks like standards alignment for classification/definition, model↔metamodel links, mapping records and lifecycle rather than a new registry core.
+
+
+### Mini-megamodel experiment
+
+The first concrete registry fixture now exists with 8 native representation/profile nodes and 5 mapping records. It distinguishes implemented mappings from design seams, records loss/preservation claims, and treats disconnectedness as valid. The bounded sandbox path checks passed: no design mapping is promoted to executable, no Scientific Hypergraph→Representation Router path is invented, and no current path automatically transports a guarantee. `q-mini-megamodel` is answered for this bounded case; `q-compositional-chain` is the next falsifier.
