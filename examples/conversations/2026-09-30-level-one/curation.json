@@ -6754,6 +6754,56 @@
         "endorses"
       ],
       {}
+    ],
+    [
+      "N",
+      [
+        "g-update-inquiry-graph",
+        "goal",
+        "Brian asks that the Inquiry Graph repository capture for this conversation be updated if it already exists.",
+        "t84"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r169",
+        "supports",
+        "g-update-inquiry-graph",
+        "g-checkpoint",
+        "t84"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m79",
+        "scope",
+        "t84",
+        [
+          "g-checkpoint"
+        ],
+        [
+          "g-update-inquiry-graph"
+        ]
+      ],
+      {
+        "after": [
+          "m77"
+        ]
+      }
+    ],
+    [
+      "ST",
+      [
+        "s36",
+        "t84",
+        "g-update-inquiry-graph",
+        "endorses"
+      ],
+      {}
     ]
   ]
 }
