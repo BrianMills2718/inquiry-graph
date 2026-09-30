@@ -1,5 +1,5 @@
 {
-  "notice": "Curated first-pass annotation of selected visible excerpts. All semantic annotations remain proposed pending human review and full-export reconciliation.",
+  "notice": "Curated first-pass annotation of selected visible excerpts, extended through the replacement-first infrastructure and compositional-world continuation. All semantic annotations remain proposed pending human review and full-export reconciliation.",
   "source_keys": {
     "factorization-generalization": "dialogue-2026-09-30-operational-games:ex001",
     "factorization-name": "dialogue-2026-09-30-operational-games:ex002",
@@ -55,7 +55,23 @@
     "integration-gap-assistant": "dialogue-2026-09-30-operational-games:ex052",
     "translation-contract-assistant": "dialogue-2026-09-30-operational-games:ex053",
     "update-and-proceed-user": "dialogue-2026-09-30-operational-games:ex054",
-    "game-goal-model-coupling-user": "dialogue-2026-09-30-operational-games:ex055"
+    "game-goal-model-coupling-user": "dialogue-2026-09-30-operational-games:ex055",
+    "replacement-first-user": "dialogue-2026-09-30-operational-games:ex056",
+    "replacement-first-reframe": "dialogue-2026-09-30-operational-games:ex057",
+    "anti-bakeoff-user": "dialogue-2026-09-30-operational-games:ex058",
+    "first-principles-selection": "dialogue-2026-09-30-operational-games:ex059",
+    "retain-cgt-user": "dialogue-2026-09-30-operational-games:ex060",
+    "three-backend-distinction": "dialogue-2026-09-30-operational-games:ex061",
+    "mechanical-dependencies-user": "dialogue-2026-09-30-operational-games:ex062",
+    "truck-fuel-user": "dialogue-2026-09-30-operational-games:ex063",
+    "small-composable-units-user": "dialogue-2026-09-30-operational-games:ex064",
+    "composition-not-cgt-only": "dialogue-2026-09-30-operational-games:ex065",
+    "world-not-in-prompt": "dialogue-2026-09-30-operational-games:ex066",
+    "world-primary-agents-secondary": "dialogue-2026-09-30-operational-games:ex067",
+    "game-as-component": "dialogue-2026-09-30-operational-games:ex068",
+    "compositional-executable-world": "dialogue-2026-09-30-operational-games:ex069",
+    "cgt-strategic-component": "dialogue-2026-09-30-operational-games:ex070",
+    "graph-update-compositional-world": "dialogue-2026-09-30-operational-games:ex071"
   },
   "nodes": [
     [
@@ -423,6 +439,108 @@
       "hypothesis",
       "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer.",
       "game-goal-model-coupling-user"
+    ],
+    [
+      "replacement-first-goal",
+      "goal",
+      "Prefer mature off-the-shelf systems over novelty or bespoke infrastructure when they adequately satisfy the actual need.",
+      "replacement-first-user"
+    ],
+    [
+      "q-generalized-infrastructure-selection",
+      "question",
+      "Should generalized infrastructure be selected primarily by first-principles architecture and state-of-the-art evidence rather than by long multi-framework bake-offs?",
+      "anti-bakeoff-user"
+    ],
+    [
+      "first-principles-platform-selection",
+      "claim",
+      "Most generalized infrastructure choices can be settled from architecture, economics, and mature framework capabilities, reserving experiments for residual uncertainties.",
+      "first-principles-selection"
+    ],
+    [
+      "three-analysis-backends",
+      "claim",
+      "Behavioral simulation, feasibility/optimization, and strategic analysis are distinct concerns that can map to Concordia-like agents, optimization solvers, and compositional game theory respectively.",
+      "three-backend-distinction"
+    ],
+    [
+      "q-cgt-surviving-role",
+      "question",
+      "What role, if any, should compositional game theory retain in the generalized architecture?",
+      "retain-cgt-user"
+    ],
+    [
+      "mechanical-long-range-dependencies",
+      "hypothesis",
+      "Long-range dependencies and constraints should propagate through explicit world mechanics rather than being reconstructed inside each agent decision.",
+      "mechanical-dependencies-user"
+    ],
+    [
+      "truck-fuel-example",
+      "example",
+      "Truck fuel feasibility is a mechanically propagated constraint that should not depend on an agent remembering the entire logistics world in context.",
+      "truck-fuel-user"
+    ],
+    [
+      "small-composable-mechanics",
+      "hypothesis",
+      "Small composable units can encode local constraints and causal propagation and then be wired into larger interdependent worlds.",
+      "small-composable-units-user"
+    ],
+    [
+      "compositional-mechanics-broader-than-cgt",
+      "claim",
+      "The desired compositionality is primarily a compositional causal/mechanical world model; compositional game theory applies only to components with genuinely strategic semantics.",
+      "composition-not-cgt-only"
+    ],
+    [
+      "world-structure-outside-agent-context",
+      "claim",
+      "World causal structure should live in reusable executable components rather than in an agent prompt or model context.",
+      "world-not-in-prompt"
+    ],
+    [
+      "composed-world-primary",
+      "claim",
+      "The composed executable world is primary; agents are one class of participant or policy interacting with it rather than the substrate itself.",
+      "world-primary-agents-secondary"
+    ],
+    [
+      "heterogeneous-component-semantics",
+      "hypothesis",
+      "A compositional world may contain heterogeneous component semantics—deterministic mechanics, dynamical processes, optimization models, probabilistic mechanisms, open games, and agent policies—connected through explicit interfaces.",
+      "game-as-component"
+    ],
+    [
+      "game-component-not-world",
+      "claim",
+      "An open game should be one composable component type among others, not the formalism forced onto the whole world.",
+      "game-as-component"
+    ],
+    [
+      "compositional-executable-world-goal",
+      "goal",
+      "Build complex worlds compositionally from small explicit executable units so dependencies propagate structurally rather than through agent memory or inference.",
+      "compositional-executable-world"
+    ],
+    [
+      "cgt-strategic-substrate-role",
+      "claim",
+      "Compositional game theory remains valuable as the strategic semantics for components whose outcomes depend on incentives, beliefs, observations, and anticipated responses.",
+      "cgt-strategic-component"
+    ],
+    [
+      "q-common-composition-interface",
+      "question",
+      "What is the smallest common interface that lets mechanical, dynamical, strategic, optimization, probabilistic, and agentic components compose without erasing their native semantics?",
+      "compositional-executable-world"
+    ],
+    [
+      "graph-update-compositional-world-goal",
+      "goal",
+      "Extend the existing operational-games Inquiry Graph with the replacement-first and compositional-world continuation rather than creating a duplicate graph.",
+      "graph-update-compositional-world"
     ]
   ],
   "relations": [
@@ -695,6 +813,96 @@
       "game-goal-model-coupling",
       "game-as-hypothesis",
       "game-goal-model-coupling-user"
+    ],
+    [
+      "motivates",
+      "replacement-first-goal",
+      "q-generalized-infrastructure-selection",
+      "anti-bakeoff-user"
+    ],
+    [
+      "answers",
+      "first-principles-platform-selection",
+      "q-generalized-infrastructure-selection",
+      "first-principles-selection"
+    ],
+    [
+      "related_to",
+      "three-analysis-backends",
+      "cgt-relevance-claim",
+      "three-backend-distinction"
+    ],
+    [
+      "answers",
+      "cgt-strategic-substrate-role",
+      "q-cgt-surviving-role",
+      "cgt-strategic-component"
+    ],
+    [
+      "supports",
+      "mechanical-long-range-dependencies",
+      "small-composable-mechanics",
+      "small-composable-units-user"
+    ],
+    [
+      "exemplifies",
+      "truck-fuel-example",
+      "mechanical-long-range-dependencies",
+      "truck-fuel-user"
+    ],
+    [
+      "related_to",
+      "compositional-mechanics-broader-than-cgt",
+      "cgt-relevance-claim",
+      "composition-not-cgt-only"
+    ],
+    [
+      "supports",
+      "world-structure-outside-agent-context",
+      "composed-world-primary",
+      "world-primary-agents-secondary"
+    ],
+    [
+      "motivates",
+      "small-composable-mechanics",
+      "compositional-executable-world-goal",
+      "compositional-executable-world"
+    ],
+    [
+      "motivates",
+      "compositional-mechanics-broader-than-cgt",
+      "compositional-executable-world-goal",
+      "compositional-executable-world"
+    ],
+    [
+      "part_of",
+      "game-component-not-world",
+      "heterogeneous-component-semantics",
+      "game-as-component"
+    ],
+    [
+      "part_of",
+      "cgt-strategic-substrate-role",
+      "heterogeneous-component-semantics",
+      "cgt-strategic-component"
+    ],
+    [
+      "motivates",
+      "heterogeneous-component-semantics",
+      "q-common-composition-interface",
+      "compositional-executable-world"
+    ],
+    [
+      "related_to",
+      "q-common-composition-interface",
+      "universal-game-integration-gap",
+      "compositional-executable-world"
+    ],
+    [
+      "motivates",
+      "compositional-executable-world-goal",
+      "graph-update-compositional-world-goal",
+      "graph-update-compositional-world"
     ]
   ],
   "moves": [
@@ -1153,6 +1361,152 @@
         "reuse-decision-hypothesis-generation"
       ],
       "game-goal-model-coupling-user"
+    ],
+    [
+      "reframe",
+      [
+        "prior-art-first"
+      ],
+      [
+        "replacement-first-goal"
+      ],
+      "replacement-first-user"
+    ],
+    [
+      "ask",
+      [
+        "replacement-first-goal"
+      ],
+      [
+        "q-generalized-infrastructure-selection"
+      ],
+      "anti-bakeoff-user"
+    ],
+    [
+      "clarify",
+      [
+        "q-generalized-infrastructure-selection"
+      ],
+      [
+        "first-principles-platform-selection"
+      ],
+      "first-principles-selection"
+    ],
+    [
+      "ask",
+      [
+        "cgt-relevance-claim"
+      ],
+      [
+        "q-cgt-surviving-role"
+      ],
+      "retain-cgt-user"
+    ],
+    [
+      "distinguish",
+      [
+        "q-cgt-surviving-role"
+      ],
+      [
+        "three-analysis-backends"
+      ],
+      "three-backend-distinction"
+    ],
+    [
+      "hypothesize",
+      [
+        "white-box-simulation"
+      ],
+      [
+        "mechanical-long-range-dependencies"
+      ],
+      "mechanical-dependencies-user"
+    ],
+    [
+      "propose",
+      [
+        "mechanical-long-range-dependencies"
+      ],
+      [
+        "small-composable-mechanics",
+        "truck-fuel-example"
+      ],
+      "small-composable-units-user"
+    ],
+    [
+      "reframe",
+      [
+        "cgt-relevance-claim",
+        "small-composable-mechanics"
+      ],
+      [
+        "compositional-mechanics-broader-than-cgt"
+      ],
+      "composition-not-cgt-only"
+    ],
+    [
+      "clarify",
+      [
+        "compositional-mechanics-broader-than-cgt"
+      ],
+      [
+        "world-structure-outside-agent-context"
+      ],
+      "world-not-in-prompt"
+    ],
+    [
+      "generalize",
+      [
+        "world-structure-outside-agent-context"
+      ],
+      [
+        "composed-world-primary"
+      ],
+      "world-primary-agents-secondary"
+    ],
+    [
+      "generalize",
+      [
+        "composed-world-primary"
+      ],
+      [
+        "heterogeneous-component-semantics",
+        "game-component-not-world"
+      ],
+      "game-as-component"
+    ],
+    [
+      "propose",
+      [
+        "small-composable-mechanics",
+        "heterogeneous-component-semantics"
+      ],
+      [
+        "compositional-executable-world-goal",
+        "q-common-composition-interface"
+      ],
+      "compositional-executable-world"
+    ],
+    [
+      "clarify",
+      [
+        "q-cgt-surviving-role",
+        "game-component-not-world"
+      ],
+      [
+        "cgt-strategic-substrate-role"
+      ],
+      "cgt-strategic-component"
+    ],
+    [
+      "scope",
+      [
+        "compositional-executable-world-goal"
+      ],
+      [
+        "graph-update-compositional-world-goal"
+      ],
+      "graph-update-compositional-world"
     ]
   ],
   "stances": [
@@ -1305,6 +1659,76 @@
       "reuse-decision-hypothesis-generation",
       "posits",
       "game-goal-model-coupling-user"
+    ],
+    [
+      "replacement-first-goal",
+      "endorses",
+      "replacement-first-user"
+    ],
+    [
+      "q-generalized-infrastructure-selection",
+      "questions",
+      "anti-bakeoff-user"
+    ],
+    [
+      "first-principles-platform-selection",
+      "posits",
+      "first-principles-selection"
+    ],
+    [
+      "q-cgt-surviving-role",
+      "questions",
+      "retain-cgt-user"
+    ],
+    [
+      "mechanical-long-range-dependencies",
+      "posits",
+      "mechanical-dependencies-user"
+    ],
+    [
+      "small-composable-mechanics",
+      "posits",
+      "small-composable-units-user"
+    ],
+    [
+      "compositional-mechanics-broader-than-cgt",
+      "posits",
+      "composition-not-cgt-only"
+    ],
+    [
+      "world-structure-outside-agent-context",
+      "posits",
+      "world-not-in-prompt"
+    ],
+    [
+      "composed-world-primary",
+      "posits",
+      "world-primary-agents-secondary"
+    ],
+    [
+      "heterogeneous-component-semantics",
+      "posits",
+      "game-as-component"
+    ],
+    [
+      "compositional-executable-world-goal",
+      "posits",
+      "compositional-executable-world"
+    ],
+    [
+      "cgt-strategic-substrate-role",
+      "posits",
+      "cgt-strategic-component"
+    ],
+    [
+      "q-common-composition-interface",
+      "questions",
+      "compositional-executable-world"
+    ],
+    [
+      "graph-update-compositional-world-goal",
+      "posits",
+      "graph-update-compositional-world"
     ]
   ],
   "question_updates": [
@@ -1359,6 +1783,32 @@
         "arena-selection-separation",
         "universal-game-integration-gap",
         "translation-contract-next"
+      ]
+    ],
+    [
+      "q-generalized-infrastructure-selection",
+      "answered",
+      "first-principles-selection",
+      [
+        "first-principles-platform-selection"
+      ]
+    ],
+    [
+      "q-cgt-surviving-role",
+      "answered",
+      "cgt-strategic-component",
+      [
+        "cgt-strategic-substrate-role",
+        "compositional-mechanics-broader-than-cgt"
+      ]
+    ],
+    [
+      "q-compositional-games",
+      "reopened",
+      "retain-cgt-user",
+      [
+        "cgt-strategic-substrate-role",
+        "compositional-mechanics-broader-than-cgt"
       ]
     ]
   ]
