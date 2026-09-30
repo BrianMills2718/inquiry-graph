@@ -6524,6 +6524,123 @@
           "m75"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "g-pressure-test-residual",
+        "goal",
+        "Brian authorizes pressure-testing Factgraph's final opaque-transformation niche against generic property/model/metamorphic/differential testing.",
+        "t82"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-testing-stack-owns-loop",
+        "claim",
+        "Mature testing frameworks already own generic input generation, stateful/model-based test generation, shrinking, replay, metamorphic relations, differential testing and mutation testing.",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-semantic-oracle-residual",
+        "hypothesis",
+        "The minimal unavoidable local work is a semantic oracle/adapter specifying the source obligation, relevant example generation, lowering through the opaque mapping, and target observation predicate.",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-extract-or-archive",
+        "hypothesis",
+        "Factgraph should be reduced to semantic-oracle adapters/corpus if a named consumer exists, otherwise archived as a research prototype and donor.",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-factgraph-residual-audit",
+        "reference",
+        "factgraph-residual-niche-pressure-test.md: comparison against property-based, model-based, metamorphic and differential testing.",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r163",
+        "supports",
+        "g-external-first",
+        "c-testing-stack-owns-loop",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r164",
+        "supersedes",
+        "c-semantic-oracle-residual",
+        "c-factgraph-opaque-only",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r165",
+        "supports",
+        "c-semantic-oracle-residual",
+        "c-factgraph-extract-or-archive",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r166",
+        "about",
+        "r-factgraph-residual-audit",
+        "c-factgraph-extract-or-archive",
+        "t83"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m77",
+        "summarize",
+        "t83",
+        [
+          "g-pressure-test-residual",
+          "c-factgraph-opaque-only"
+        ],
+        [
+          "c-testing-stack-owns-loop",
+          "c-semantic-oracle-residual",
+          "c-factgraph-extract-or-archive",
+          "r-factgraph-residual-audit"
+        ]
+      ],
+      {
+        "after": [
+          "m76"
+        ]
+      }
     ]
   ]
 }
