@@ -186,3 +186,8 @@ LinkML's own current tooling can generate PostgreSQL validation SQL for range an
 ### Factgraph verification pressure test
 
 A mature-field comparison further narrows Factgraph. Model-transformation property preservation already has extensive formal verification/testing literature and tools (including contract verification, static analysis, model checking, counterexample generation and mutation testing). Factgraph therefore does not survive as unique preservation machinery. Its only plausible retained niche is black/gray-box semantic differential testing for opaque external transformations where no adequate formal certificate is available.
+
+
+### Factgraph residual-niche pressure test
+
+Generic property-based, model-based, metamorphic and differential testing further collapse Factgraph's remaining role. Generation, shrinking, execution and counterexample search are mature infrastructure. The only unavoidable local work is the semantic oracle/adapter for an opaque transformation: source obligation, relevant valid/invalid example semantics, mapping/lowering, and target observation predicate. Current external-first disposition: extract only those adapters/corpus for a named consumer; otherwise archive Factgraph as research/reference.
