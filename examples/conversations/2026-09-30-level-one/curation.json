@@ -6915,6 +6915,48 @@
       {
         "resolution_basis": "O→A repository inspection plus workflow provenance and megamodeling prior art."
       }
+    ],
+    [
+      "N",
+      [
+        "g-minimal-artifact-pipeline-test",
+        "goal",
+        "Before designing any generalized analytic-artifact metamodel, test one concrete representation-changing pipeline against mature workflow/provenance/catalog systems and add custom semantics only for demonstrated gaps.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-case-first-artifact-lineage",
+        "hypothesis",
+        "The Twitter table→graph→embedding→clusters→sentiment pipeline should be used as a falsifier for whether existing workflow provenance plus typed data/catalog systems already provide sufficient artifact/operator lineage.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r173",
+        "supports",
+        "g-external-first",
+        "g-minimal-artifact-pipeline-test",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r174",
+        "supports",
+        "c-workflow-megamodel-compose",
+        "c-case-first-artifact-lineage",
+        "t85"
+      ],
+      {}
     ]
   ]
 }
