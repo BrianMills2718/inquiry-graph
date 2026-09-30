@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 79 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 80 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -879,6 +879,12 @@
       "actor_id": "s30:assistant",
       "ordinal": 144,
       "text": "Current conclusion: no standalone Factgraph platform appears necessary. The capability is mostly mature external tooling plus thin domain-specific semantic-oracle adapters and governed mapping/evidence records. Next should be consolidation: close the representation-interoperability research branch, record what gets archived/retained, then return to the broader unresolved 'missing middle' between Level-1 epistemic operations and strategy optimization."
+    },
+    {
+      "id": "s30:t84",
+      "actor_id": "s30:brian",
+      "ordinal": 145,
+      "text": "I'm not sure if we've already started an inquiry graph repo graph of this conversation, but either start it or update it based on what we've been discussing."
     }
   ]
 }
