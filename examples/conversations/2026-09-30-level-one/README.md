@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 89 excerpts from 33 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 98 excerpts from 42 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **102 content nodes, 82 relations, 37 inquiry moves, 26 stance events, 38 question-status events and 21 distinct questions**. All **285 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **112 content nodes, 92 relations, 45 inquiry moves, 26 stance events, 45 question-status events and 24 distinct questions**. All **320 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -94,7 +94,7 @@ The capture also exposes task drift in the conversation: tool/architecture answe
 
 ## Verification
 
-**Native validation: 0 errors / 0 warnings. Focused tests: 15 passed.** Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
+The **last executed isolated-sandbox checkpoint** had native validation 0 errors / 0 warnings and 15 focused tests passing. The latest representation-change additions have **not yet been rerun** in that sandbox. Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
 
 Tests cover source anchors, 32 local turn groups, proposed review states, absent native IDs/timestamps, no adoption inferred from continuation, retained retractions/reopenings, deferred branches, rationale links, deterministic native JSON roundtrip, and invalid quote/actor mutations.
 
@@ -108,3 +108,8 @@ The first fixed-space falsification checkpoint is now also in `q-fixed-space`, `
 After Brian said `Proceed`, the graph was extended rather than rebuilt. It records the assistant's provisional collapse of Bayesian/AGM/defeasible change into standing-revision semantics, the Bayesian new-theory counterexample against collapsing candidate introduction into conditioning, the initial three-function proposal, and its immediate refinement into **source relation × state effect**. Brian's authorization to investigate is explicit; no endorsement of the resulting factorization is recorded. The broad `configuration + action + warrant` compression from merged epistemic-warrant PR #14 is recorded as context, not as a replacement for the local question.
 
 The first attempted counterexample—temporary supposition without belief—refined the effect axis rather than adding a new family: role/standing includes temporary contextual assumption, and explicit availability can increase or decrease. This refinement is in `c-role-standing-refinement` / `m37`.
+
+
+### Representation-change checkpoint
+
+The fixed-space result now distinguishes the **epistemic role of inferential output**—`consequence/readout` versus `candidate/proposal`, with `none` for pure state-role changes—from its **state effect**. This is explicitly not deterministic-versus-stochastic computation. Acquisition/observation is provisionally outside inference proper while remaining an epistemic event in the larger system. The next-layer bridge reuses the existing transition calculus but generalizes its total function `Φ: U → U'` to a typed alignment/correspondence with explicit preservation/loss properties. The stronger question `q-rep-falsifier` remains open.
