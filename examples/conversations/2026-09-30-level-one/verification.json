@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "3814d204b281c5d7adca31b7fd2b49fbb9db5387",
-  "curation_git_blob": "412d2d8d93921d34782049235db0ad07cf59115a",
+  "source_git_blob": "8da0959c5f79292d5bb12ad6d13fe046ae40baa3",
+  "curation_git_blob": "59b4e19d9352bfd073dbe7fc710ed887a9ce7af0",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -45,20 +45,20 @@
   ],
   "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
   "current_checkpoint": {
-    "source_messages": 138,
-    "nodes": 187,
-    "relations": 159,
-    "moves": 75,
+    "source_messages": 140,
+    "nodes": 191,
+    "relations": 162,
+    "moves": 76,
     "stance_events": 35,
     "question_events": 68,
     "questions": 34,
     "review": {
-      "proposed": 524,
+      "proposed": 532,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after LinkML Factgraph head-to-head checkpoint",
+  "current_checkpoint_execution": "not rerun after Factgraph verification pressure-test checkpoint",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
