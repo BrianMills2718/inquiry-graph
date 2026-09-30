@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 38 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 42 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -579,6 +579,30 @@
       "actor_id": "s30:assistant",
       "ordinal": 94,
       "text": "I’ve got a stable fixed-space result now, so I’m checkpointing it before moving on. The key correction is that **epistemic action is broader than inference**: observation/acquisition stays explicit in the larger system, but the original inference factorization no longer needs “received” as a third inference source."
+    },
+    {
+      "id": "s30:t39",
+      "actor_id": "s30:assistant",
+      "ordinal": 95,
+      "text": "The representation-change layer was already largely worked out in your repo, which is useful: I’m not inventing another taxonomy. The old transition calculus already has the right skeleton—an alignment map \\\\(\\\\Phi:U\\\\to U'\\\\), then additions/deletions/standing changes relative to that map—and the candidate-generation work already distinguishes ordinary search from changing the generative system itself. I’m reconciling the new fixed-space result with those two existing pieces."
+    },
+    {
+      "id": "s30:t40",
+      "actor_id": "s30:assistant",
+      "ordinal": 96,
+      "text": "One thing in the old representation-change calculus does look too strong: it writes the alignment as a **function** \\\\(\\\\Phi:U\\\\to U'\\\\). Split/merge concepts, lossy abstractions, partial correspondences, and ontology/schema alignments are often not naturally total functions. I’m checking whether the right primitive is instead a typed **alignment/morphism/correspondence** with explicit preservation and loss properties."
+    },
+    {
+      "id": "s30:t41",
+      "actor_id": "s30:assistant",
+      "ordinal": 97,
+      "text": "One last internal consistency check exposed a wording problem in my own result: **“computed” cannot mean “deterministically produced by an algorithm.”** A deterministic learner can compute a hypothesis that is still only a candidate. The real distinction has to be epistemic/semantic: **consequence/readout** versus **candidate/proposal**, regardless of how either was computed."
+    },
+    {
+      "id": "s30:t42",
+      "actor_id": "s30:assistant",
+      "ordinal": 98,
+      "text": "The representation-change check found a real correction to the old calculus: **a single total function \\\\(\\\\Phi:U\\\\to U'\\\\) is too restrictive as the generic alignment object.** Formal logic translations can be morphisms/functions, but ontology/schema changes can be one-to-many, many-to-one, many-to-many, partial, or deliberately lossy. The meta-level should store a typed alignment/correspondence plus whatever preservation guarantee actually holds."
     }
   ]
 }
