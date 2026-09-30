@@ -365,3 +365,61 @@ Before implementing registry machinery:
 5. add local concepts only where the standards/tooling cannot express a demonstrated requirement.
 
 This would test the architecture without committing OntoCanon to a universal IR.
+
+
+
+## 11. Initial OntoCanon ↔ ISO registry crosswalk
+
+OntoCanon's proposed imported pack/profile record already retains:
+
+- artifact identity/kind;
+- pack/profile identity and version;
+- source repository/revision/path;
+- content hash;
+- import time and importer/tool version;
+- declared dependencies;
+- resolved dependency closure and hashes;
+- validation result;
+- schema/contract version.
+
+That is already strong coverage of **identification, registration, version/provenance and dependency custody**.
+
+### Likely direct alignment
+
+| OntoCanon concept | ISO registry analogue |
+|---|---|
+| artifact / pack / profile identity | registry item identification |
+| version + immutable imported copy | registered item version/evolution/registration metadata |
+| source repository/revision/path/hash | provenance/administrative metadata extending the registered item |
+| validation result / contract version | registration/quality/governance metadata |
+| dependency closure | relationships among registered artifacts/models |
+| pack semantic vocabulary | registered model / concept-system content |
+| profile selecting policy/validation over a pack | local governed configuration/profile over registered artifacts |
+
+### Likely gaps or areas to formalize
+
+1. **Designation / definition / classification**
+   - ISO/IEC 11179-3 has explicit common facilities for names, definitions and classifications.
+   - OntoCanon has names/IDs and semantic pack contents, but the shared library contract does not yet clearly adopt a standard registry classification model.
+
+2. **Model ↔ metamodel registration**
+   - ISO/IEC 11179-35 explicitly registers models, metamodels and their relations.
+   - OntoCanon packs/profiles imply these relationships but should determine whether they are first-class registry links.
+
+3. **First-class mapping records**
+   - ISO/IEC 11179-3 includes mapping among registry items; 11179-35 uses those facilities for mappings among models/metamodels.
+   - OntoCanon currently has alignment semantics and adapters in several places, but the shared pack/profile library contract does not yet define one generic versioned mapping-artifact record.
+
+4. **Registration authority/lifecycle**
+   - OntoCanon already has strong authority boundaries and immutable imports.
+   - A crosswalk should check ISO registration status/authority concepts before inventing local lifecycle vocabulary.
+
+5. **Registry-of-registries / discovery**
+   - ISO/IEC 19763-6 is specifically aimed at registry summaries and discovery across distributed registries.
+   - This may matter if OntoCanon federates domain-owned registries rather than importing all metadata centrally.
+
+### Preliminary verdict
+
+This looks much more like **standards alignment and adapter work** than a missing registry architecture.
+
+Do not redesign the pack/profile library before completing the field-level crosswalk to ISO/IEC 11179-3, 11179-35 and the relevant MFI parts.
