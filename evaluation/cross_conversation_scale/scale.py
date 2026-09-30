@@ -26,24 +26,17 @@ from pydantic import BaseModel, Field
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "evaluation/cross_conversation"))
-import build_key  # noqa: E402
 from inquiry_graph.model import Conversation  # noqa: E402
-from llm_client import (  # noqa: E402
-    ObservabilityContentPolicy,
-    call_llm_structured,
-    get_model,
-)
 
 PRIV = ROOT / "private/xconv"
 DEFAULT_RUN = PRIV / "scale_run"
 RUN = DEFAULT_RUN
 FIRST5 = ["6ab8563b", "6ab96260", "69c07755", "6a988a7a", "6a171ac3"]
 READ_BUDGET = 600_000   # chars an agent may read per question in route A (~150k tokens)
-DEFAULT_MODEL, DEFAULT_JUDGE = get_model("synthesis"), get_model("judging")
-MODEL, JUDGE = DEFAULT_MODEL, DEFAULT_JUDGE
+MODEL = JUDGE = None
 CALL_OPTIONS = {}
 MODEL_JUSTIFICATION = None
-OBSERVABILITY_POLICY = None
+OBSERVABILITY_POLICY_MODE = None
 KEY_TRACE_PREFIX = "inquiry-graph/xconv-key"
 TRACE_PREFIX = "inquiry-graph/xconv-scale"
 CLI = str(ROOT / ".venv/bin/inquiry-graph")
@@ -154,6 +147,10 @@ MATERIAL:
 
 
 def call(prompt, trace, model=None, schema=AnswerSet, task="synthesis"):
+    # Keep the shared, private LLM adapter optional at module import time so
+    # offline tests can exercise campaign routing in hosted CI.
+    from llm_client import ObservabilityContentPolicy, call_llm_structured
+
     # Resolve the configured model at call time. configure_campaign() switches
     # MODEL after module import; a default argument would keep the import-time
     # OpenRouter route for answer calls even in a Codex subscription campaign.
@@ -169,8 +166,10 @@ def call(prompt, trace, model=None, schema=AnswerSet, task="synthesis"):
     }
     if MODEL_JUSTIFICATION:
         options["model_justification"] = MODEL_JUSTIFICATION
-    if OBSERVABILITY_POLICY is not None:
-        options["observability_content_policy"] = OBSERVABILITY_POLICY
+    if OBSERVABILITY_POLICY_MODE is not None:
+        options["observability_content_policy"] = ObservabilityContentPolicy(
+            mode=OBSERVABILITY_POLICY_MODE
+        )
     res, meta = call_llm_structured(model, [{"role": "user", "content": prompt}], response_model=schema,
                                     **options)
     return res, meta
@@ -198,7 +197,7 @@ def _inside_private(path: Path) -> Path:
 
 def configure_campaign(args):
     """Select a non-mixing campaign directory and provider route."""
-    global RUN, MODEL, JUDGE, CALL_OPTIONS, MODEL_JUSTIFICATION, OBSERVABILITY_POLICY
+    global RUN, MODEL, JUDGE, CALL_OPTIONS, MODEL_JUSTIFICATION, OBSERVABILITY_POLICY_MODE
     global KEY_TRACE_PREFIX, TRACE_PREFIX
 
     if args.codex_subscription:
@@ -214,15 +213,17 @@ def configure_campaign(args):
             "approval_policy": "never",
             "working_directory": str(ROOT),
         }
-        OBSERVABILITY_POLICY = ObservabilityContentPolicy(mode="metadata_only")
+        OBSERVABILITY_POLICY_MODE = "metadata_only"
         default_dir = PRIV / "scale_run_codex"
     else:
         if any((args.model, args.judge_model, args.model_justification, args.campaign_dir)):
             raise ValueError("custom models and campaign directories require --codex-subscription")
-        MODEL, JUDGE = DEFAULT_MODEL, DEFAULT_JUDGE
+        from llm_client import get_model
+
+        MODEL, JUDGE = get_model("synthesis"), get_model("judging")
         CALL_OPTIONS = {}
         MODEL_JUSTIFICATION = None
-        OBSERVABILITY_POLICY = None
+        OBSERVABILITY_POLICY_MODE = None
         default_dir = DEFAULT_RUN
 
     RUN = _inside_private(args.campaign_dir or default_dir)
@@ -297,17 +298,23 @@ def main(argv=None):
 
     key_dir = RUN / "key"
     key_dir.mkdir(exist_ok=True)
+    import build_key  # noqa: E402
+    from llm_client import ObservabilityContentPolicy  # noqa: E402
+
+    key_call_options = {
+        **CALL_OPTIONS,
+        **({"model_justification": MODEL_JUSTIFICATION} if MODEL_JUSTIFICATION else {}),
+    }
+    if OBSERVABILITY_POLICY_MODE is not None:
+        key_call_options["observability_content_policy"] = ObservabilityContentPolicy(
+            mode=OBSERVABILITY_POLICY_MODE
+        )
+
     per = [build_key.per_chat(cid, priv=d, out=key_dir, model=MODEL,
-                              call_options={**CALL_OPTIONS, **({"model_justification": MODEL_JUSTIFICATION}
-                                                               if MODEL_JUSTIFICATION else {}),
-                                            **({"observability_content_policy": OBSERVABILITY_POLICY}
-                                               if OBSERVABILITY_POLICY else {})},
+                              call_options=key_call_options,
                               trace_prefix=KEY_TRACE_PREFIX) for cid, d in chats]
     key = build_key.cross(per, out=key_dir, spec=SPEC, n_chats=len(chats), model=MODEL,
-                          call_options={**CALL_OPTIONS, **({"model_justification": MODEL_JUSTIFICATION}
-                                                           if MODEL_JUSTIFICATION else {}),
-                                        **({"observability_content_policy": OBSERVABILITY_POLICY}
-                                           if OBSERVABILITY_POLICY else {})},
+                          call_options=key_call_options,
                           trace_prefix=KEY_TRACE_PREFIX)
     items = key["kept"]
     print(f"key: {sum(len(p['kept']) for p in per)} verified positions; {len(items)} cross-chat questions", flush=True)

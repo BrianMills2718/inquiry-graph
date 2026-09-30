@@ -109,7 +109,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** 5 (record the bounded decision after independent signoff).
+- **Current increment:** 5 complete (30-chat comparison and bounded C5 decision).
 - **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
   continue at the current credit balance. The separate Codex CLI campaign under
   `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
@@ -147,6 +147,11 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   quote audit, passed a fresh Codex grader control, and privately checked four answer/grade/key/source
   rows (4/4 aligned). Limits and gate details are in
   `evaluation/cross_conversation_scale/signoff.md`.
+  The decision comment is published at
+  [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5911587587):
+  use archive-search-then-read as default for this measured answer workload, keep linker data for
+  the later topic-map phase, and defer productizing any route for the complete sourced-answer
+  contract.
   Of the 13 reference questions, 7 cite only chats outside the five used during linker prompt
   revisions; 11 include at least one such chat. Every question category has at least one
   new-chat-only case, though the held-out subset is small.
@@ -183,13 +188,13 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   use System One to classify/rank a candidate set and judge typed relations, while code preserves
   exact cited spans. It does not establish a drop-in replacement for open-ended position
   extraction, nor Laya quality on this task. No adoption decision is made.
-- **Resume event:** the corrected campaign, graders, report, router disposition, and fresh C5
-  signoff are complete. Record the bounded continue/replace/shelve disposition on issue #38. Keep
-  the failed OpenRouter answer/grade run excluded from C4; its outputs are preserved. The corrected
-  key and all 39 answers are cached. If the result artifacts need to be regenerated, run this
-  command from the same worktree; it will use the cached key and answers:
+- **C4 regeneration:** the corrected campaign, graders, report, router disposition, and fresh C5
+  signoff are complete. Keep the failed OpenRouter answer/grade run excluded from C4; its outputs
+  are preserved. The corrected key and all 39 answers are cached. If the result artifacts need to be
+  regenerated, run this command from the same worktree; it will use the cached key and answers:
   `LLM_CLIENT_DATA_ROOT="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data" LLM_CLIENT_DB_PATH="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data/llm_observability.db" python evaluation/cross_conversation_scale/scale.py --codex-subscription --campaign-dir private/xconv/scale_run_codex_rerun_20260930`.
-  Keep the first OpenRouter answer/grade set excluded from C4.
+- **Resume event:** C1–C5 are complete. Begin the later topic-map phase only as a separate
+  increment; this comparison does not evaluate a human-viewable map.
 
 ## Evaluator-Facing Objective
 
