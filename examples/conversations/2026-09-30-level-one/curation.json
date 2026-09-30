@@ -6641,6 +6641,69 @@
           "m76"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "c-no-factgraph-platform",
+        "hypothesis",
+        "No standalone Factgraph platform appears necessary for the desired capability; mature external tooling plus thin semantic-oracle adapters and governed mapping/evidence records suffice unless a concrete consumer proves otherwise.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "g-close-interoperability-track",
+        "goal",
+        "Next step is to consolidate and close the representation-interoperability research branch, including archive/retain dispositions, before returning to the broader missing-middle question.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r167",
+        "supports",
+        "c-factgraph-extract-or-archive",
+        "c-no-factgraph-platform",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r168",
+        "motivates",
+        "c-no-factgraph-platform",
+        "g-close-interoperability-track",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m78",
+        "summarize",
+        "t85",
+        [
+          "c-factgraph-extract-or-archive",
+          "q-before-strategy"
+        ],
+        [
+          "c-no-factgraph-platform",
+          "g-close-interoperability-track"
+        ]
+      ],
+      {
+        "after": [
+          "m77"
+        ]
+      }
     ]
   ]
 }
