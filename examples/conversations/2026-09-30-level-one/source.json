@@ -807,6 +807,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 132,
       "text": "The repo is relevant mainly as a donor and empirical proof artifact, not as a foundation to build forward from. Its own README marks it historical lineage and points to `factgraph` as the active successor for semantic-portability auditing."
+    },
+    {
+      "id": "s30:t74",
+      "actor_id": "s30:brian",
+      "ordinal": 133,
+      "text": "Okay, do that."
+    },
+    {
+      "id": "s30:t75",
+      "actor_id": "s30:assistant",
+      "ordinal": 134,
+      "text": "Factgraph is the active successor because it moved from multi-backend translation to semantic-portability auditing: source semantic obligation → explicit mapping trace → generated counterexample/witness → execution against a real target → evidence-backed preservation verdict. Hypergraph Schema IR remains useful mainly as historical lineage and a compact donor for loss-aware round-trip ideas."
     }
   ]
 }
