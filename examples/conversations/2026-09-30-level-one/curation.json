@@ -6157,6 +6157,78 @@
       {
         "resolution_basis": "Repo inspection plus successor inspection."
       }
+    ],
+    [
+      "N",
+      [
+        "g-compare-hsir-factgraph",
+        "goal",
+        "Brian authorizes a direct comparison of Hypergraph Schema IR and Factgraph for the semantic-portability role.",
+        "t74"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-role",
+        "claim",
+        "Factgraph is materially more relevant than Hypergraph Schema IR because it centers semantic-portability auditing: obligations, explicit mappings, discriminating witnesses, real-target execution and evidence-backed preservation verdicts.",
+        "t75"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-hsir-historical",
+        "claim",
+        "Hypergraph Schema IR should remain historical lineage/donor for bounded round-trip, loss-reporting and n-ary modeling ideas rather than active foundation.",
+        "t75"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r151",
+        "supports",
+        "c-hsir-donor",
+        "c-hsir-historical",
+        "t75"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r152",
+        "supports",
+        "r-factgraph-successor",
+        "c-factgraph-role",
+        "t75"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m73",
+        "summarize",
+        "t75",
+        [
+          "g-compare-hsir-factgraph"
+        ],
+        [
+          "c-factgraph-role",
+          "c-hsir-historical"
+        ]
+      ],
+      {
+        "after": [
+          "m72"
+        ]
+      }
     ]
   ]
 }
