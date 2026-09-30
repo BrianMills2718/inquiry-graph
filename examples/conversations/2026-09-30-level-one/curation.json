@@ -7094,6 +7094,112 @@
         "t85"
       ],
       {}
+    ],
+    [
+      "N",
+      [
+        "c-broader-than-representation-space",
+        "claim",
+        "Joint reading of Epistemic Warrant and Observation-to-Action shows Brian's target is broader than a registry of representations/transformations: it is a composable space of epistemically meaningful operations from observation through heterogeneous representation/analysis to warranted claims, beliefs, decisions and actions.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-representation-as-substrate",
+        "claim",
+        "Representation/artifact transformations are one substrate within the larger observation-to-action epistemic process, not the top-level object of interest.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-joins-central",
+        "hypothesis",
+        "The potentially important integration problem is the joins between mature subsystems—especially carrying typed entitlement/guarantees, assumptions, losses and claim reach across representation, analysis, warrant, belief and decision boundaries—rather than inventing the subsystems themselves.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "q-existing-epistemic-workflow",
+        "question",
+        "Is there already a mature framework that composes scientific/workflow provenance, heterogeneous analytical transformations, typed epistemic warrant/assurance, belief/update and decision/action lineage into the broader observation-to-action space, making even these joins mostly adoptable?",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r182",
+        "reframes",
+        "c-broader-than-representation-space",
+        "q-analytic-representation-pipeline",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r183",
+        "part_of",
+        "c-representation-as-substrate",
+        "c-broader-than-representation-space",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r184",
+        "motivates",
+        "c-joins-central",
+        "q-existing-epistemic-workflow",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m82",
+        "reframe",
+        "t85",
+        [
+          "c-typed-artifact-megamodel",
+          "c-artifact-pipeline-mostly-offtheshelf"
+        ],
+        [
+          "c-broader-than-representation-space",
+          "c-representation-as-substrate",
+          "c-joins-central",
+          "q-existing-epistemic-workflow"
+        ]
+      ],
+      {
+        "after": [
+          "m81"
+        ]
+      }
+    ],
+    [
+      "Q",
+      [
+        "e70",
+        "t85",
+        "q-existing-epistemic-workflow",
+        "open"
+      ],
+      {}
     ]
   ]
 }
