@@ -494,3 +494,50 @@ A strong next test would add one **real compositional chain** whose mapping theo
 - a CQL schema-mapping/data-migration chain.
 
 The test should ask whether a guarantee/property can be transported through the composed path **only because the mapping certificates compose**, not because graph reachability exists.
+
+
+## 13. Certified multi-hop falsifier — CQL pullback composition
+
+Artifacts:
+
+- `cql-compositional-chain.json`
+- `check_cql_compositional_chain.py`
+- `tests/test_cql_compositional_chain.py`
+
+### Mature theorem used
+
+For schema mappings $F:S\to T$ and $G:T\to U$, CQL pullback migration is precomposition: $\Delta_F(I)=I\circ F$. Therefore for any $U$-instance $I$:
+
+$$\boxed{\Delta_F(\Delta_G(I))=\Delta_{G\circ F}(I)}$$
+
+by associativity of composition. This is the functorial data-migration semantics underlying CQL, not a project-invented rule.
+
+### Concrete chain
+
+S: `Person(name)` → T: `Employee(full_name, salary)` → U: `Worker(label, annual_pay, department)`.
+
+Mappings: F maps `Person -> Employee`, `name -> full_name`; G maps `Employee -> Worker`, `full_name -> label`, `salary -> annual_pay`; the composite maps `Person -> Worker`, `name -> label`.
+
+The concrete U-instance has two rows: Ada / 120000 / R&D and Lin / 105000 / Ops. The executable finite check confirms that sequential pullback and direct composite pullback both yield the same S-instance: Ada and Lin with only the `name` field.
+
+### What transports
+
+The certified property is narrowly: sequential pullback equals pullback along the composed certified schema mapping. Valid mappings also preserve the schema equations/constraints required by the mapping semantics.
+
+### What does not transport
+
+The fixture explicitly checks that target-only `department` data is absent from the source view. It does not claim invertibility, round-trip equivalence, preservation of all target information, arbitrary epistemic/warrant guarantees, or that any graph path composes.
+
+### Result for the registry architecture
+
+$$\boxed{\text{path reachability}+\text{mapping certificates}+\text{composition theorem}\Rightarrow\text{typed transported property}}$$
+
+whereas path reachability alone does not imply guarantee transport.
+
+The generic registry does not need category theory internally. It needs to retain mapping formalism, exact mapping artifacts, certificate/validation status, the guarantee family being preserved, and the composition rule supplied by the mapping formalism. A CQL adapter can own the semantics of delta composition.
+
+### Falsifier outcome
+
+The mini-megamodel architecture survives this first certified multi-hop test. No universal IR and no universal mapping algebra were required.
+
+The next hard question is whether registry metadata can describe different preservation families—logical satisfaction, data-integrity/query preservation, abstraction soundness, lens round trips, and so on—without collapsing them into one generic `preserves` flag.
