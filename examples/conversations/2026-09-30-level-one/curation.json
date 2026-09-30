@@ -7020,6 +7020,80 @@
         "t85"
       ],
       {}
+    ],
+    [
+      "N",
+      [
+        "c-artifact-replay-no-new-metamodel",
+        "claim",
+        "A concrete replay over the real Email-Eu-core analysis artifact succeeded through metric table→standardized feature matrix→PCA embedding→KMeans clusters→cluster summaries using ordinary pandas/NumPy/scikit-learn plus PROV-style lineage, without requiring a new generalized artifact metamodel.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-sentiment-refused-by-input",
+        "claim",
+        "The sentiment stage is correctly non-executable for Email-Eu-core because the source dataset has no message text; existing provenance/loss metadata is sufficient to explain the refusal.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-artifact-replay",
+        "reference",
+        "analytical-artifact-pipeline-replay.md and analytical-artifact-pipeline-replay.prov.json: bounded empirical replay over the committed O→A Email-Eu-core result artifact.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r178",
+        "supports",
+        "c-artifact-pipeline-mostly-offtheshelf",
+        "c-artifact-replay-no-new-metamodel",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r179",
+        "supports",
+        "c-artifact-pipeline-residual-index",
+        "c-artifact-replay-no-new-metamodel",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r180",
+        "supports",
+        "c-sentiment-refused-by-input",
+        "c-workflow-megamodel-compose",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r181",
+        "about",
+        "r-artifact-replay",
+        "c-artifact-replay-no-new-metamodel",
+        "t85"
+      ],
+      {}
     ]
   ]
 }
