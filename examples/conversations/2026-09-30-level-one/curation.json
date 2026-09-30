@@ -6229,6 +6229,90 @@
           "m72"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "g-external-first",
+        "goal",
+        "Brian reiterates a default assumption that anything locally built likely has a better mature external counterpart and should be adopted rather than reinvented.",
+        "t76"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-thin-only",
+        "hypothesis",
+        "Factgraph should survive only as an optional evidence-oriented audit harness where it adds material evidence beyond mature external tools; all broader modeling/transformation/repository/migration ambitions remain frozen.",
+        "t77"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-factgraph-kbd",
+        "reference",
+        "factgraph-keep-borrow-delete.md: strict external-first disposition for Factgraph capabilities.",
+        "t77"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r153",
+        "supports",
+        "g-zero-novelty",
+        "g-external-first",
+        "t76"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r154",
+        "supports",
+        "g-external-first",
+        "c-factgraph-thin-only",
+        "t77"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r155",
+        "about",
+        "r-factgraph-kbd",
+        "c-factgraph-thin-only",
+        "t77"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m74",
+        "clarify",
+        "t77",
+        [
+          "g-external-first",
+          "c-factgraph-role"
+        ],
+        [
+          "c-factgraph-thin-only",
+          "r-factgraph-kbd"
+        ]
+      ],
+      {
+        "after": [
+          "m73"
+        ]
+      }
     ]
   ]
 }
