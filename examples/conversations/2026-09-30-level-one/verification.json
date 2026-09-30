@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "4ac832e3eba53948a819894e740b6ca941d02e58",
-  "curation_git_blob": "7df2664c0082280eb8f8ecfaa38e37590cad6340",
+  "source_git_blob": "34ebf6e71cfd751435100753ffe66fb0b0640a0d",
+  "curation_git_blob": "d0e15d51f630a40801de48397433f9788afd03e8",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "46 visible prose/research-update turns are represented by 102 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 337-annotation checkpoint was not rerun in the isolated sandbox after the final Level-1 collapse additions."
+    "48 visible prose/research-update turns are represented by 105 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 351-annotation checkpoint was not rerun in the isolated sandbox after the strategy-distance scope correction."
   ],
-  "test_git_blob": "95286ddd6dca097d74e2828a47e90b98218d1080",
+  "test_git_blob": "0cb73be6060bb09458caeb3a0e2f3079b1d12f66",
   "current_checkpoint": {
-    "source_messages": 102,
-    "nodes": 117,
-    "relations": 97,
-    "moves": 49,
-    "stance_events": 26,
-    "question_events": 48,
-    "questions": 25,
+    "source_messages": 105,
+    "nodes": 121,
+    "relations": 100,
+    "moves": 51,
+    "stance_events": 29,
+    "question_events": 50,
+    "questions": 26,
     "review": {
-      "proposed": 337,
+      "proposed": 351,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after final Level-1 collapse additions",
+  "current_checkpoint_execution": "not rerun after strategy-distance scope correction",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
