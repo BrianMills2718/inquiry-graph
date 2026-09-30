@@ -109,28 +109,66 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** 3 (independent reference key).
-- **C3 state (2026-09-29 21:02 UTC):** the original OpenRouter run still has 8/30 key files and
-  cannot continue at the current credit balance. A separate, manifest-pinned Codex CLI campaign
-  is running under `private/xconv/scale_run_codex/` with:
-  `python evaluation/cross_conversation_scale/scale.py --codex-subscription --keys-only`.
-  It has 11/30 per-chat keys so far: 212 kept positions, 18 dropped, and $0 recorded cost. An
-  independent code audit found all 212 `verified_quote` values as exact substrings of the cited
-  Brian-authored messages, with no wrong message indices or assistant-authored items. Seven model
-  quote strings differ from their source slices; cite `verified_quote` when a verbatim source span
-  is needed. No quote text is included in this report.
-- **C3 trace:** `inquiry-graph/xconv-key/codex/positions/6ab8563b` was inspected directly: one
-  successful `codex/gpt-5.6-luna` call, zero tool calls/errors, 318.6 seconds, 138,144 tokens,
-  and $0 API cost. The serial campaign process remained live at the status check above.
+- **Current increment:** 4 (three-route comparison and blind grading).
+- **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
+  continue at the current credit balance. The separate Codex CLI campaign under
+  `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
+  and 43 dropped, with $0 recorded per-chat API cost. Its cross-chat key retained 13 questions
+  covering all five required categories (3 agreement, 3 tension, 3 recurring open question, 2 change
+  over time, 2 position summary); two model candidates were dropped for invalid position IDs. An
+  independent source audit found all 581 kept quotes in the cited Brian-authored messages, with no
+  wrong chat IDs, message indices, source spans, or chat metadata. The full quote text remains private.
+- **C3 trace:** `inquiry-graph/xconv-key/codex/positions/6a1804b2` was inspected through the saved
+  Codex CLI rollout: it returned 19 positions with no tool calls. The LLM observability row reports
+  `codex/gpt-5.6-luna`, `subscription_included`, 74,407 total tokens, 217.0 seconds and $0 API cost;
+  observability content is metadata-only. The response is saved in the private per-chat key.
 - **C4 preflight:** the cached 30-chat B export is 437,686 characters with 620 positions and 233
   typed cross-chat links; the C export is 330,267 characters with the same 620 positions and no
-  links. The A/B/C answer and blind-grade outputs are still absent.
-- **Blocker:** the original OpenRouter route remains out of credits. The Codex-backed campaign is
-  active and has made progress; its full-run capacity is not established until it finishes.
-- **Resume event:** let the current `--keys-only` process finish. Then rerun
-  `python evaluation/cross_conversation_scale/scale.py --codex-subscription` without
-  `--keys-only` to continue from its isolated cache through the cross-key, answer routes, and
-  blind grades. Do not restart while the process remains live or mix its key with OpenRouter keys.
+  links. The first A/B/C answer sets exist, but telemetry shows all 15 answer calls used
+  metered OpenRouter (`openrouter/openai/gpt-5.6-luna`, provider-reported cost $0.49159). The
+  script's function default captured the import-time OpenRouter model before campaign configuration
+  selected Codex. The active run is blind-grading those outputs with the Codex subscription; neither
+  its grades nor those answers will be used for C4. `scale.py` now resolves the selected model at
+  call time. A separate corrected-route campaign has been prepared with the verified key copied;
+  start it only after the current process finishes, so it skips key generation and uses Codex for
+  answer routes and judging. The original output directory and its telemetry remain intact.
+- **Blockers:** OpenRouter still cannot afford the full-context reference-key call. The subscription
+  route has completed successful calls. The previous Windows process-start request was denied by
+  its approval gate; no remote command ran, and the local Codex route makes that route unnecessary.
+- **Jev/Laya prior art (verified 2026-09-30):** Jev-Mem is the closest whole-memory implementation:
+  [repository](https://github.com/libingzheren/Jev-Mem) and [paper](https://arxiv.org/abs/2609.23986).
+  It uses System One for memory typing and relation judgments over semantic, temporal, causal and
+  entity views, with System Two for answer synthesis. The repo added a local Laya backend on
+  2026-09-27, but explicitly says the published LoCoMo results used Jev and Laya has not been
+  benchmarked for that paper. Its relation model is related prior art, not the linker's
+  `same`/`agrees`/`extends`/`pulls_against`/`evolves` contract.
+  [Jev Reviewer](https://github.com/choxos/jev-reviewer) uses Jev to select and verify candidate
+  lines for fixed extraction questions, then copies exact source text and location in code;
+  [jev-mcp](https://github.com/jkudish/jev-mcp) similarly ranks regex-proposed candidates. These
+  preserve evidence well but do not provide open-ended position discovery by themselves.
+  Brian's separate Onto-Canon6 Jev spike tests exhaustive typed predicate decisions plus
+  deterministic source pointers. Its files are
+  `onto-canon6/worktrees/jev-extraction-spike-20260918/docs/experiments/jev_extraction_spike.md`
+  and `onto-canon6/worktrees/jev-extraction-spike-20260918/docs/experiments/jev_extraction_spike_results_20260920.md`.
+  A separate OntoCanon6 branch, `experiment/jev-ontology-adjudication-20260921`, has an observable
+  text-to-graph pilot: LangExtract discovers source meanings, Jev scores predicates, roles and
+  types, then OntoCanon validates candidate assertions. Its live run produced two candidates from
+  two short sentences; inputs over 254 tokens and entity resolution for pronouns are unsupported.
+  This is integration-mechanics evidence, not a 30-chat positions evaluation. See its
+  [usage report](https://github.com/BrianMills2718/onto-canon6/blob/experiment/jev-ontology-adjudication-20260921/docs/experiments/jev_text_to_graph_usage_20260922.md).
+  PR [#462](https://github.com/BrianMills2718/onto-canon6/pull/462) for the original extraction
+  spike remains open in draft state.
+  On its small fixture, 5,995 labels reached
+  recall@1 31.25%, recall@5 68.75%, and recall@16 93.75%; discovered role/span F1 was 0.62 versus
+  0.90 when roles were supplied. This supports a bounded hybrid:
+  use System One to classify/rank a candidate set and judge typed relations, while code preserves
+  exact cited spans. It does not establish a drop-in replacement for open-ended position
+  extraction, nor Laya quality on this task. No adoption decision is made.
+- **Resume event:** let the current grading process finish. Then run the corrected campaign from
+  this worktree; it uses a separate output directory with the verified Codex key already cached:
+  `LLM_CLIENT_DATA_ROOT="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data" LLM_CLIENT_DB_PATH="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data/llm_observability.db" python evaluation/cross_conversation_scale/scale.py --codex-subscription --campaign-dir private/xconv/scale_run_codex_rerun_20260930`.
+  This corrected run must generate all A/B/C answers and blind grades on Codex before C4. Do not
+  reuse the first run's answer cache or mix its model results into the corrected campaign.
 
 ## Evaluator-Facing Objective
 

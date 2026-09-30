@@ -153,7 +153,12 @@ MATERIAL:
 {material}"""
 
 
-def call(prompt, trace, model=MODEL, schema=AnswerSet, task="synthesis"):
+def call(prompt, trace, model=None, schema=AnswerSet, task="synthesis"):
+    # Resolve the configured model at call time. configure_campaign() switches
+    # MODEL after module import; a default argument would keep the import-time
+    # OpenRouter route for answer calls even in a Codex subscription campaign.
+    if model is None:
+        model = MODEL
     options = {
         "reasoning_effort": "medium",
         "model_policy": "enforce_allowlist",
