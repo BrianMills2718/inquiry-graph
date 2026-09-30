@@ -1,0 +1,28 @@
+{
+  "scope": "14 focused session tests and native V1 validator/projection probes in isolated Linux sandbox; not full repository suite, not native Windows execution, not independent semantic adjudication.",
+  "baseline": "1f75cf1fe02000d2a630f591ec0d6fb412940318",
+  "environment": {"python":"3.13.5","pydantic":"2.13.4","networkx":"3.6.1","pytest":"9.0.2"},
+  "source_git_blob": "05e8746593028dc49aefd3c593f95a8b48a4c85b",
+  "curation_git_blob": "f787159d075d6afc3b60ab2736dee820db391378",
+  "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
+  "native_modules": {
+    "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
+    "validate.py": "32cdcd1b04edd14bca4a150bc3928b351b7d74be",
+    "views.py": "62b2cc5822238c5c6626254a9c920e35d71be1d0",
+    "render.py": "a3e7cfc165fbfddd3c5f0d8afb71544af06388a9"
+  },
+  "tests": {"command":"python -m pytest -q tests/test_level_one_session.py","passed":14},
+  "validation": {"valid":true,"errors":[],"warnings":[]},
+  "stats": {"conversations":1,"source_messages":76,"nodes":93,"relations":75,"moves":31,"stance_events":25,"question_events":36,"questions":21,"review":{"proposed":260,"confirmed":0,"rejected":0}},
+  "probes": {
+    "event_targeting": {"accepted":false,"errors":[{"code":"dangling_reference","item":"s30:probe-event-reason","detail":"s30:e32"}]},
+    "rationale_projection": {"phrase":"stances and the persuadability axis","in_nonleading_move_anchor":true,"in_native_trace":true,"in_default_report":false}
+  },
+  "limitations": [
+    "Both Remote MCP devices were offline; no user-machine files changed.",
+    "Native modules were copied from GitHub and Git blob hashes matched before testing.",
+    "24 visible prose turns have excerpts, not complete token coverage or native-export reconciliation.",
+    "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
+    "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority."
+  ]
+}
