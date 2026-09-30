@@ -1,24 +1,18 @@
 # Level-1 inquiry continuation — 2026-09-30
 
-This is a separate, source-grounded conversation capture, not a replacement of the founding seed or a new research roadmap. It covers the visible dialogue from the pasted strategic handoff through Brian's request to capture this session and audit the substrate.
+Separate source-grounded capture from the pasted strategic handoff through Brian's request to record this session and audit the substrate. The founding seed and research schema are unchanged.
 
-## Stored graph and authority
+## Build and inspect the graph
 
-- `source.json`: a native V1 Conversation containing 76 excerpts from 24 visible prose turns.
-- `curation.json`: 260 hand-authored annotation instructions with stable IDs and exact source references. These are fixture authoring shorthand, not an extension to the graph ontology.
-- `build.py`: deterministically constructs the existing native V1 Graph and checks every source anchor and structural constraint.
-- `verification.json`: the bounded execution record and substrate-probe results.
-- `../../../tests/test_level_one_session.py` is not the test path; the repository-root path is `tests/test_level_one_session.py`.
-
-The durable graph is reproducible from source + curation + builder. The generated native `graph.json`, validation result and open-agenda projection are outputs, not a separately edited authority. The generated graph has **93 content nodes, 75 relations, 31 inquiry moves, 25 stance events, 36 question-status events and 21 distinct questions**. Every annotation is **proposed**; none is confirmed or rejected.
+`source.json` contains 76 excerpts from 24 visible prose turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
-# From the repository root, with the existing package installed:
+# From an installed repository checkout:
 python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one-session
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The output is the same Graph model used by the existing validator, trace and agenda tools. It is not a Markdown summary pretending to be a graph. To inspect directly in Python:
+The generated graph contains **93 content nodes, 75 relations, 31 inquiry moves, 25 stance events, 36 question-status events and 21 distinct questions**. All **260 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -30,86 +24,80 @@ print(trace(graph, 's30:m27'))
 print(open_questions(graph))
 ```
 
-The founding seed is untouched. Do not sum these counts into its documented counts without explicitly merging separate conversations. No cross-conversation identity equivalence is asserted merely because topics overlap.
+Do not add these counts to the founding-seed counts without explicitly merging separate conversations. Similar topics do not establish cross-conversation identity.
 
-## Source limitations
+## Source and review limits
 
-This is curated visible dialogue, **not a reconciled ChatGPT export**. All 24 prose turns have at least one excerpt. Substantive user turns are retained in full except the long opening quoted handoff; assistant turns have selected exact excerpts. This does not establish full token coverage or completeness of every subsidiary claim.
+This is **curated visible dialogue, not a reconciled ChatGPT export**. Every visible prose turn has at least one excerpt. Substantive user turns are retained in full except the long opening quoted handoff; assistant turns have selected exact excerpts. Turn coverage does not establish full token coverage or capture of every subsidiary claim.
 
-IDs such as `s30:t22` are local capture surrogates. Suffixes group excerpts of the same visible prose turn; excerpt ordinals do not imply independent within-turn events. Native message IDs and timestamps remain absent. The capture excludes hidden reasoning, system/developer instructions and location metadata. It does not reproduce the full tool transcript.
+IDs such as `s30:t22` are local surrogates. Suffixes group excerpts of one prose turn; their ordinals do not establish separate within-turn events. Native message IDs and timestamps remain absent. Hidden reasoning, system/developer instructions and location metadata are excluded. Full tool transcripts are not reproduced; reports of research and repository actions are retained as attributed content.
 
-The opening handoff is quoted prior-agent material; its presence in Brian's message does not make every assertion a new endorsement by Brian. Literature statements are preserved as assistant reports/proposals. Exact quotations establish what was said, not whether those statements about the literature were correct.
+The opening handoff is quoted prior-agent material, not automatic Brian endorsement of every assertion. Literature statements record what the assistant reported, not independent verification. Exact quote validation does not establish interpretive correctness. All annotations await review.
 
-## What changed in the inquiry
+## Changes and open threads
 
-| Arc | Preserved change and rationale | Graph entry points |
+All abbreviated IDs below have the `s30:` prefix.
+
+| Arc | What must survive resumption | Entry points |
 |---|---|---|
-| Initial audit | Assistant prioritized semantic repair, product usefulness and acceptance/composition. Brian challenged both the implied missing-work story and treating mature problems as new research mandates. | `q-audit`, `q-counts`, `q-pilot`, `m03`, `m05` |
-| Verification counts | Assistant clarified its reported chronology: 138, then 142, then split 60+82. The earlier confusing framing remains in history. This capture does not rerun those historical suites. | `c-counts-earlier`, `c-counts-reconciled`, `r06`, `s04` |
-| Scope correction | Assistant overcontracted the project toward only answering the traditional triad. Brian insisted that useful wider work remain and clarified that the target had shifted from MECE to canonical factorization. | `g-preserve`, `c-mece-to-factor`, `m07`, `r15` |
-| Product versus recursive use | Brian put broad product optimization after Level 1 but reported that self-application already helped preserve inquiry and find gaps. | `g-level-one`, `c-recursive-use`, `m-self-application`, `e13` |
-| Adoption-first comparisons | NARS, Carneades, Soar, Tweety, OpenCog/PLN, SACM/Assurance 2.0 and OPA/XACML were investigated or proposed. Permission to proceed is not adoption. | `q-prior-art`, `q-nars`, `m12`, `m14`, `g-proceed-one`, `g-proceed-two` |
-| Representation versus semantics | Assistant reported a conceptual assurance-case mapping. That does not establish executable preservation, correctness or a replacement implementation. | `c-assurance-fit`, `c-typed-guarantees` |
-| CommonKADS overreach | Assistant initially called CommonKADS/UPML a stronger answer, admitted no unique-minimal theorem, then narrowed the claim after Brian's objection and wider project context. | `c-commonkads-strong`, `c-no-canonicity-proof`, `c-commonkads-narrow`, `m22`, `r49`, `s17` |
-| Concrete typing | Brian objected to treating fuel, hypotheses and evidence as one undifferentiated input space. Assistant corrected its example toward typed inputs/outputs. | `q-object-roles`, `c-typed-roles`, `m20`, `m21` |
-| Related repositories | Scientific Hypergraph and Observation-to-Action were found relevant; their use does not settle a merged architecture or ownership scheme. | `r-science`, `r-o2a`, `q-science-repo`, `c-access` |
-| Program organization | Brian described repo sprawl and benefits of isolated subproblem work. The federated-polyrepo/program-map answer remains an assistant proposal. | `q-repos`, `g-local-research`, `c-federation-proposal` |
-| Latest scope correction | Brian wants the inference space first and situational strategy optimization later, including different scientific/adversarial settings and stance/persuadability. | `g-inference-first`, `g-strategy-later`, `c-game-relative`, `m27`, `e32` |
-| Proposed local next pass | Assistant proposed distinguishing operations in a fixed representation first, then relaxing that restriction. Bayesian updating versus hypothesis/model construction remains a live question. | `q-fixed-space`, `q-bayes`, `q-representation-change`, `m30` |
-| Recursive checkpoint | Brian requested this capture and a gap audit while doing it. | `g-checkpoint`, `q-graph-gaps`, `x-session`, `m31` |
+| Audit and test counts | Assistant's 60/82 versus 138 framing caused concern about lost work. Its later reported 138 → 142 → 60+82 explanation is retained alongside the earlier framing. No historical suite was rerun here. | `q-counts`, `r06`, `s04` |
+| Pilot interpretation | Omission, extraction, representation and projection were not isolated by the reported pilot. A graph failure or missing repository work was not established. | `q-pilot`, `c-pilot-qualified` |
+| Preserve useful work | Brian corrected the assistant's proposal to reduce the project to the original triad and clarified the earlier move from MECE to canonical factorization. | `g-preserve`, `c-mece-to-factor`, `m07`, `r15` |
+| Product versus self-application | Brian put broad product optimization after Level 1 while reporting useful recursive inquiry tracking. | `g-level-one`, `c-recursive-use`, `e13` |
+| Adoption-first literature route | NARS, Carneades, Soar, Tweety, OpenCog/PLN, SACM/Assurance 2.0 and OPA/XACML are investigated/proposed candidates. “Proceed” is not adoption. | `q-prior-art`, `q-nars`, `m12`, `m14` |
+| Conceptual mapping versus proof | The assistant's four-case assurance mapping does not establish executed semantic preservation or a replacement implementation. | `c-assurance-fit`, `c-typed-guarantees` |
+| CommonKADS correction | Assistant first presented it as a stronger answer, admitted no canonicity theorem, and later narrowed it to a process-composition comparator after Brian's objection and wider context. | `c-commonkads-strong`, `c-commonkads-narrow`, `m22`, `r49`, `s17` |
+| Typed objects and operations | Brian challenged the fuel/hypothesis example; assistant corrected it toward typed inputs and outputs. | `q-object-roles`, `c-typed-roles`, `m20` |
+| Related projects | Scientific Hypergraph and O2A are relevant; their relation does not settle a merged architecture or ownership arrangement. | `r-science`, `r-o2a`, `q-science-repo`, `c-access` |
+| Repository organization | Brian values independent subproblem research but raised integration/sprawl. Federation and a program map remain assistant proposals. | `q-repos`, `g-local-research`, `c-federation-proposal` |
+| Latest priority | Brian wants the inference space first, strategy optimization later and situation-relative, including scientific/adversarial settings and stance/persuadability. | `g-inference-first`, `g-strategy-later`, `c-game-relative`, `m27`, `e32` |
+| Proposed next local question | Assistant proposed fixed-representation operations first, then representation/model-class change. Bayesian updating versus hypothesis/model construction is still a live question. | `q-fixed-space`, `q-bayes`, `q-representation-change`, `m30` |
+| Recursive capture | This session is itself an example of using the inquiry representation to inspect the inquiry. | `g-checkpoint`, `q-graph-gaps`, `x-session` |
 
-All IDs in this table have the `s30:` prefix in the graph.
+**Canonical factorization remains open.** The eight-factor diagram, CommonKADS replacement, SACM adoption, federation and fixed-representation staging are not recorded as user-adopted solutions. Assistant answers do not close Brian's question. Derivation/subargument and full ABA+/hyperargumentation possibilities remain preserved in `c-escalations`.
 
-**The canonical-factorization question remains open.** Neither the eight-factor picture nor CommonKADS has been established as the unique/minimal answer. The graph records assistant answers as answers, not as Brian's resolution. The same applies to library adoption, the proposed federation and the fixed-representation staging choice.
+## Repository work referenced
 
-## Durable work referenced by the dialogue
+Historical reports point to [theory PR #11](https://github.com/BrianMills2718/epistemic-warrant/pull/11), [product PR #63](https://github.com/BrianMills2718/inquiry-graph/pull/63), and [theory comparison issue #5](https://github.com/BrianMills2718/epistemic-warrant/issues/5). Their current status is not inferred from those reports.
 
-The graph references [theory PR #11](https://github.com/BrianMills2718/epistemic-warrant/pull/11), [product PR #63](https://github.com/BrianMills2718/inquiry-graph/pull/63), and [theory comparison issue #5](https://github.com/BrianMills2718/epistemic-warrant/issues/5) as historical work reports. Their current status is not inferred from those reports.
+[Theory PR #13](https://github.com/BrianMills2718/epistemic-warrant/pull/13) was independently read during capture: **open/unmerged**, head `fad132651a2f36d743a5e29b70eb6a23fe2e0feb`, four documents. The comparison/sketches are not an accepted semantic replacement. This capture starts directly from Inquiry Graph `main` at `1f75cf1fe02000d2a630f591ec0d6fb412940318`, not another unmerged PR.
 
-[Theory PR #13](https://github.com/BrianMills2718/epistemic-warrant/pull/13) was independently read during this capture: **open and unmerged**, head `fad132651a2f36d743a5e29b70eb6a23fe2e0feb`, four documents. It contains comparison/sketch work, not an accepted semantic replacement. This capture branch starts from Inquiry Graph `main` at `1f75cf1fe02000d2a630f591ec0d6fb412940318`, not from that or another unmerged PR.
+## Substrate findings
 
-## Substrate audit
+### Direct event-targeted rationale: confirmed limitation, existing workaround
 
-### 1. Confirmed limitation: directly attaching rationale to a status/stance event
+V1 semantic relations can target nodes, relations and moves, but not stance/question-status events. The diagnostic tries `motivates(reason=c-game-relative, result=e32)`, where `e32` is Brian's strategy deferral. Validation returns `dangling_reference`, even though the event exists.
 
-The V1 semantic-reference registry contains nodes, relations and moves, but not stance events or question-status events. The probe tries to express:
+This capture instead links rationale to the corresponding scope/revision move, retains the actor-relative event and records its basis. Rationale is representable; direct targeting of the event is not. Consider event addressability only if that extra join becomes materially ambiguous. No schema change was made.
 
-`motivates(reason=c-game-relative, result=e32)`
+### Default report: confirmed projection loss
 
-where `e32` is Brian's strategy-deferral event. Native validation rejects the event reference with `dangling_reference`, although the event exists.
+The default report exposes a move's first anchor and raw input/output IDs, not all linked content, stance history or secondary anchors. The phrase **“stances and the persuadability axis”** is present in a secondary anchor of `m27` and in native `trace(m27)`, but absent from the default report.
 
-**Working representation:** attach the rationale to the corresponding `scope`/revision move, retain the actor-relative event, and keep the deferral basis. This capture does that. The graph can preserve the rationale; it cannot currently target that event directly with a semantic relation. Consider event addressability only if the extra join becomes materially ambiguous. No schema extension was made.
+That is a reproducible graph-to-report loss, not evidence that the ontology cannot represent the point. A rationale-aware trace/context projection is the smaller remedy. The probe records current behavior without forcing future versions to retain the gap.
 
-### 2. Confirmed projection gap: stored rationale need not appear in the report
+### Incremental capture: workflow gap
 
-The default report displays each move's first anchor and raw input/output IDs, but not all linked content, stance history or secondary anchors. In this session the phrase **“stances and the persuadability axis”** is present in a nonleading anchor of `m27` and in native `trace(m27)`, but absent from the default report.
+Research findings were entering theory documents/issues, but this conversation was not being incrementally captured as an inquiry graph. The capture process needs checkpoints, not necessarily more concepts.
 
-This is a reproducible graph-to-report loss, not proof that the underlying ontology cannot represent the point. The smallest remedy is a rationale-aware context/trace projection, not new inference primitives. The diagnostic records current behavior without requiring future implementations to retain the gap.
+For subsequent continuation, checkpoint after material scope corrections, decisions or comparison milestones: preserve source excerpts, append proposed annotations, retain earlier claims and expose open/deferred state. Do not regenerate reviewed history. Export reconciliation and completeness accounting remain separate. No background automation was configured.
 
-### 3. Workflow gap: no reliable automatic checkpoint was in use
+### External-work provenance: convention rather than native structure
 
-Research results were being put in theory documents/issues, but the present conversation was not being incrementally captured as an inquiry graph. This is not evidence that the native graph model lacks the necessary concepts. It is a capture/integration problem.
+A V1 reference node is text, not a typed repository URI/version/status/verification record. References, explicit claims and this ledger preserve the difference between reported work, conceptual fit, executed checks and unmerged proposals. Repeated automated cross-repo updates may warrant a stable provenance adapter, not a second canonicalization store.
 
-For this session, append checkpoints after material scope corrections, decisions or comparison milestones. Preserve source excerpts first, then add proposed annotations and a compact open/deferred-state view. Do not regenerate reviewed history or silently replace earlier claims. Full-export IDs and completeness accounting remain separate work. No background automation has been configured by this change.
+### What did not require an extension
 
-### 4. External-work and evidence-strength metadata remain conventions
+Actor-relative disagreement, conditional scope, deferral, supersession and self-application fit the existing model when carefully annotated. The tests explicitly prevent “proceed” from becoming adoption in this fixture; the structural validator alone cannot judge that interpretation.
 
-A V1 reference node is text, not a typed record of repository URI, version, commit/merge status or verification method. This capture uses reference nodes, explicit claims and this evidence ledger to distinguish reported work, conceptual fit, executed tests and unmerged proposals.
+The capture also exposes task drift in the conversation: tool/architecture answers repeatedly displaced the narrower inference-factorization question. Retaining the redirects prevents a later summary from presenting that drift as settled consensus.
 
-That is sufficient to preserve this session, but repeated automatic cross-repo updates would benefit from a stable external-artifact/provenance adapter rather than parsing prose or introducing a second canonicalization store.
+## Verification
 
-### What was not shown to require a new primitive
+**Native validation: 0 errors / 0 warnings. Focused tests: 14 passed.** Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
 
-Actor-relative disagreement, conditional scope, deferral, supersession, correction rationale and self-application all fit the current types when carefully annotated. The failure to retain them would often be a curation or retrieval failure. Structural validation still cannot decide that “proceed” semantically means adoption; the fixture adds explicit negative attribution checks for that danger.
+Tests cover source anchors, 24 local turn groups, proposed review states, absent native IDs/timestamps, no adoption inferred from continuation, retained retractions/reopenings, deferred branches, rationale links, deterministic native JSON roundtrip, and invalid quote/actor mutations.
 
-The inquiry itself also exposed task drift: architecture/tool-composition answers repeatedly displaced the narrower canonical-inference question. This is preserved in the history, not concealed by presenting the last answer as settled consensus.
+This is not the full repository suite, a native-Windows run, a repeated product pilot or independent semantic review. Both Remote MCP devices were offline; no user-machine worktree was touched. The founding-seed verification loose end remains unchanged.
 
-## Verification and next use
-
-The native validator returned **0 errors / 0 warnings**. **14 focused tests passed** in an isolated Linux sandbox, using byte-for-byte copies of the four native modules whose Git blob hashes are recorded in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
-
-The checks cover native schema/anchors, all 24 local turn groups, proposed review states, no invented timestamps/IDs, no adoption inferred from “proceed,” retained retractions/reopenings, preserved deferrals and rationale, deterministic native JSON roundtrip, and negative quote/actor cases.
-
-This is **not** a run of the full repository suite, a native-Windows run, a repeat of the product pilot, or independent semantic review. Both Remote MCP devices were offline; no user-machine worktree was touched. The unrelated founding-seed verification loose end remains unchanged.
-
-Use `q-canonical`, `m27` and `m30` to resume Level-1 research. Preserve the other open/deferred questions rather than allowing this capture task to become a new general product-engineering program.
+Resume Level-1 work from `q-canonical`, `m27` and `m30`. Preserve the other open/deferred threads without turning this checkpoint into a new product-engineering program.
