@@ -71,7 +71,11 @@
     "game-as-component": "dialogue-2026-09-30-operational-games:ex068",
     "compositional-executable-world": "dialogue-2026-09-30-operational-games:ex069",
     "cgt-strategic-component": "dialogue-2026-09-30-operational-games:ex070",
-    "graph-update-compositional-world": "dialogue-2026-09-30-operational-games:ex071"
+    "graph-update-compositional-world": "dialogue-2026-09-30-operational-games:ex071",
+    "game-coupled-decision-user": "dialogue-2026-09-30-operational-games:ex072",
+    "candidate-generation-prior-art-user": "dialogue-2026-09-30-operational-games:ex073",
+    "docs-coherence-user": "dialogue-2026-09-30-operational-games:ex074",
+    "stuck-status-user": "dialogue-2026-09-30-operational-games:ex075"
   },
   "nodes": [
     [
@@ -541,6 +545,30 @@
       "goal",
       "Extend the existing operational-games Inquiry Graph with the replacement-first and compositional-world continuation rather than creating a duplicate graph.",
       "graph-update-compositional-world"
+    ],
+    [
+      "game-choice-decision-coupling",
+      "hypothesis",
+      "Which game/model to entertain is coupled to the current objective and hypotheses about how actions lead to outcomes, rather than being an isolated game-selection primitive.",
+      "game-coupled-decision-user"
+    ],
+    [
+      "candidate-generation-mature-prior-art",
+      "claim",
+      "Candidate generation already has substantial mature prior art and should not be reopened as an undefined foundational gap.",
+      "candidate-generation-prior-art-user"
+    ],
+    [
+      "documentation-coherence-goal",
+      "goal",
+      "Bring the project documentation into a coherent, current, consistent, well-organized and compendious state, updating or archiving obsolete information.",
+      "docs-coherence-user"
+    ],
+    [
+      "q-execution-stuck",
+      "question",
+      "Has the documentation/update workflow become stuck?",
+      "stuck-status-user"
     ]
   ],
   "relations": [
@@ -903,6 +931,36 @@
       "compositional-executable-world-goal",
       "graph-update-compositional-world-goal",
       "graph-update-compositional-world"
+    ],
+    [
+      "related_to",
+      "game-choice-decision-coupling",
+      "game-as-hypothesis",
+      "game-coupled-decision-user"
+    ],
+    [
+      "related_to",
+      "game-choice-decision-coupling",
+      "space-of-games-goal",
+      "game-coupled-decision-user"
+    ],
+    [
+      "challenges",
+      "candidate-generation-mature-prior-art",
+      "universal-game-integration-gap",
+      "candidate-generation-prior-art-user"
+    ],
+    [
+      "motivates",
+      "candidate-generation-mature-prior-art",
+      "documentation-coherence-goal",
+      "docs-coherence-user"
+    ],
+    [
+      "about",
+      "documentation-coherence-goal",
+      "graph-update-goal",
+      "docs-coherence-user"
     ]
   ],
   "moves": [
@@ -1507,6 +1565,44 @@
         "graph-update-compositional-world-goal"
       ],
       "graph-update-compositional-world"
+    ],
+    [
+      "connect",
+      [
+        "game-as-hypothesis"
+      ],
+      [
+        "game-choice-decision-coupling"
+      ],
+      "game-coupled-decision-user"
+    ],
+    [
+      "challenge",
+      [],
+      [
+        "candidate-generation-mature-prior-art"
+      ],
+      "candidate-generation-prior-art-user"
+    ],
+    [
+      "scope",
+      [
+        "candidate-generation-mature-prior-art"
+      ],
+      [
+        "documentation-coherence-goal"
+      ],
+      "docs-coherence-user"
+    ],
+    [
+      "ask",
+      [
+        "documentation-coherence-goal"
+      ],
+      [
+        "q-execution-stuck"
+      ],
+      "stuck-status-user"
     ]
   ],
   "stances": [
@@ -1729,6 +1825,26 @@
       "graph-update-compositional-world-goal",
       "posits",
       "graph-update-compositional-world"
+    ],
+    [
+      "game-choice-decision-coupling",
+      "posits",
+      "game-coupled-decision-user"
+    ],
+    [
+      "candidate-generation-mature-prior-art",
+      "posits",
+      "candidate-generation-prior-art-user"
+    ],
+    [
+      "documentation-coherence-goal",
+      "posits",
+      "docs-coherence-user"
+    ],
+    [
+      "q-execution-stuck",
+      "questions",
+      "stuck-status-user"
     ]
   ],
   "question_updates": [

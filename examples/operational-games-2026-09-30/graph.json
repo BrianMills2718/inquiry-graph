@@ -1169,6 +1169,66 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Extend the existing operational-games Inquiry Graph with the replacement-first and compositional-world continuation rather than creating a duplicate graph."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex072",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Which game/model to entertain is coupled to the current objective and hypotheses about how actions lead to outcomes, rather than being an isolated game-selection primitive."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex073",
+          "start": 0,
+          "end": 116,
+          "quote": "Okay, but on candidate generation, I thought we'd already found a bunch of well-developed stuff on this that exists."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Candidate generation already has substantial mature prior art and should not be reopened as an undefined foundational gap."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex074",
+          "start": 0,
+          "end": 169,
+          "quote": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Bring the project documentation into a coherent, current, consistent, well-organized and compendious state, updating or archiving obsolete information."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:q-execution-stuck",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex075",
+          "start": 0,
+          "end": 36,
+          "quote": "You seem to be stuck. Are you stuck?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Has the documentation/update workflow become stuck?"
     }
   ],
   "relations": [
@@ -2609,6 +2669,126 @@
         {
           "role": "result",
           "ref": "dialogue-2026-09-30-operational-games:n:graph-update-compositional-world-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:061",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex072",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-as-hypothesis"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:062",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex072",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:space-of-games-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:063",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex073",
+          "start": 0,
+          "end": 116,
+          "quote": "Okay, but on candidate generation, I thought we'd already found a bunch of well-developed stuff on this that exists."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:universal-game-integration-gap"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:064",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex074",
+          "start": 0,
+          "end": 169,
+          "quote": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:065",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex074",
+          "start": 0,
+          "end": 169,
+          "quote": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "about",
+      "bindings": [
+        {
+          "role": "subject",
+          "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+        },
+        {
+          "role": "object",
+          "ref": "dialogue-2026-09-30-operational-games:n:graph-update-goal"
         }
       ]
     }
@@ -4191,6 +4371,108 @@
         "dialogue-2026-09-30-operational-games:m:060"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:062",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex072",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:game-as-hypothesis"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex072",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:061"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:063",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex073",
+          "start": 0,
+          "end": 116,
+          "quote": "Okay, but on candidate generation, I thought we'd already found a bunch of well-developed stuff on this that exists."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:brian",
+      "input_ids": [],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex073",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:062"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:064",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex074",
+          "start": 0,
+          "end": 169,
+          "quote": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex074",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:063"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:065",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex075",
+          "start": 0,
+          "end": 36,
+          "quote": "You seem to be stuck. Are you stuck?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:q-execution-stuck"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex075",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:064"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -4941,6 +5223,74 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:graph-update-compositional-world-goal",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex071"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:045",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex072",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex072"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:046",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex073",
+          "start": 0,
+          "end": 116,
+          "quote": "Okay, but on candidate generation, I thought we'd already found a bunch of well-developed stuff on this that exists."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex073"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:047",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex074",
+          "start": 0,
+          "end": 169,
+          "quote": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex074"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:048",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex075",
+          "start": 0,
+          "end": 36,
+          "quote": "You seem to be stuck. Are you stuck?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:q-execution-stuck",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex075"
     }
   ],
   "question_events": [
@@ -5160,6 +5510,26 @@
       "status": "open",
       "actor_id": "participant:assistant",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex069",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:qe:q-execution-stuck",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex075",
+          "start": 0,
+          "end": 36,
+          "quote": "You seem to be stuck. Are you stuck?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-30-operational-games:n:q-execution-stuck",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex075",
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
@@ -5958,6 +6328,38 @@
           "text": "Okay, can you document our conversation and the inquiry graph repo following its structure? I can't remember if we've already done this and this is just updating or whether it's going to be creating a new graph.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex072",
+          "actor_id": "participant:brian",
+          "ordinal": 72,
+          "text": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex073",
+          "actor_id": "participant:brian",
+          "ordinal": 73,
+          "text": "Okay, but on candidate generation, I thought we'd already found a bunch of well-developed stuff on this that exists.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex074",
+          "actor_id": "participant:brian",
+          "ordinal": 74,
+          "text": "Okay, update our documentation. Make sure it is coherent and up-to-date and consistent and well-organized and compendious and the old information is archived or updated.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex075",
+          "actor_id": "participant:brian",
+          "ordinal": 75,
+          "text": "You seem to be stuck. Are you stuck?",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -5969,7 +6371,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:1953f16f99be3b3f7482fe402c1275a5b9e0690893393f9c423689f1221e078a",
+        "source_sha256:fda517a0839178bd1fb430e61418ca83b65e4e49845548f56e84a7314c4559ad",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }
