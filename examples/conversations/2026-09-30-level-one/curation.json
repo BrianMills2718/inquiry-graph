@@ -6059,6 +6059,104 @@
           "m70"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "q-hypergraph-schema-ir",
+        "question",
+        "Is hypergraph-schema-ir still relevant to the representation-interoperability program, or mainly a donor superseded by mature off-the-shelf theory/tools?",
+        "t72"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-hsir-donor",
+        "claim",
+        "hypergraph-schema-ir is relevant mainly as historical donor/empirical proof: it demonstrates explicit n-ary intent, bounded target translation, loss reporting, and honest unevaluated states, but should not be revived as the foundation.",
+        "t73"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-factgraph-successor",
+        "reference",
+        "BrianMills2718/factgraph is the active design successor for semantic-portability auditing according to hypergraph-schema-ir's README.",
+        "t73"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r149",
+        "answers",
+        "c-hsir-donor",
+        "q-hypergraph-schema-ir",
+        "t73"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r150",
+        "supports",
+        "r-factgraph-successor",
+        "c-hsir-donor",
+        "t73"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m72",
+        "summarize",
+        "t73",
+        [
+          "q-hypergraph-schema-ir"
+        ],
+        [
+          "c-hsir-donor",
+          "r-factgraph-successor"
+        ]
+      ],
+      {
+        "after": [
+          "m71"
+        ]
+      }
+    ],
+    [
+      "Q",
+      [
+        "e67",
+        "t72",
+        "q-hypergraph-schema-ir",
+        "open"
+      ],
+      {}
+    ],
+    [
+      "Q",
+      [
+        "e68",
+        "t73",
+        "q-hypergraph-schema-ir",
+        "answered",
+        [
+          "c-hsir-donor",
+          "r-factgraph-successor"
+        ]
+      ],
+      {
+        "resolution_basis": "Repo inspection plus successor inspection."
+      }
     ]
   ]
 }
