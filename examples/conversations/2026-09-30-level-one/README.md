@@ -176,3 +176,8 @@ The new `representation-interoperability-adoption-matrix.md` maps each requireme
 ### Factgraph external-first boundary
 
 Brian reiterates the program rule that local work should be presumed replaceable by better mature prior art. `factgraph-keep-borrow-delete.md` therefore retains Factgraph only as a provisional evidence-oriented audit harness around mappings owned elsewhere. Broader modeling, transformation, repository, migration and universal-preservation ambitions are frozen unless a concrete comparison shows unique utility.
+
+
+### LinkML→PostgreSQL head-to-head
+
+LinkML's own current tooling can generate PostgreSQL validation SQL for range and other constraints, while Data Contract CLI/PostgreSQL already cover generic target validation. The comparison therefore narrows Factgraph's possible role to source-aware transformation-preservation auditing, not ordinary validation. It also records the target-boundary correction: DDL-level non-enforcement is not equivalent to semantic loss in a broader LinkML workflow that may include separate validation.
