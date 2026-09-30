@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "c2575ccae9cd41b569ed558deb32c13470c7b3bc",
-  "curation_git_blob": "b9077a04202f470b85566dbed6c1c724a88dadcd",
+  "source_git_blob": "7ef24d1a2cbb5006010703f79e6063d9162df90d",
+  "curation_git_blob": "9e22b84102559b3eefb7391b4128f0b1ba06a8b6",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "67 visible prose/research-update turns are represented by 126 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 477-annotation inquiry checkpoint was not rerun as a full graph suite after the certified CQL additions."
+    "71 visible prose/research-update turns are represented by 128 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 493-annotation inquiry checkpoint was not rerun as a full graph suite after the adoption-matrix additions."
   ],
   "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
   "current_checkpoint": {
-    "source_messages": 126,
-    "nodes": 166,
-    "relations": 142,
-    "moves": 68,
+    "source_messages": 130,
+    "nodes": 173,
+    "relations": 148,
+    "moves": 71,
     "stance_events": 35,
     "question_events": 66,
     "questions": 33,
     "review": {
-      "proposed": 477,
+      "proposed": 493,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "CQL finite composition fixture core logic checked in sandbox; full current inquiry-graph suite not rerun after latest annotations",
+  "current_checkpoint_execution": "not rerun after adoption-matrix verdict checkpoint",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
