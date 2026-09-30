@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "17dc074a9138abc1157ecfb041fd1e62f1b21e9e",
-  "curation_git_blob": "40371b0aa82ae8f99606b58207a5fe1b2ed17907",
+  "source_git_blob": "1ebedd3209f3aee75efbdb790400adade450968e",
+  "curation_git_blob": "3f403fa0e6a2b9fa71319145c168deaaa64345bf",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "57 visible prose/research-update turns are represented by 116 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 430-annotation checkpoint was not rerun in the isolated sandbox after the registry crosswalk addition."
+    "62 visible prose/research-update turns are represented by 121 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 454-annotation inquiry checkpoint was not rerun as a full graph suite after the mini-megamodel additions."
   ],
-  "test_git_blob": "c58a763dbb0b7796a5488640a682fcd6a680b75b",
+  "test_git_blob": "a7597dd44193d169bee1f8556dec12d47108b59e",
   "current_checkpoint": {
-    "source_messages": 116,
-    "nodes": 150,
-    "relations": 127,
-    "moves": 60,
-    "stance_events": 33,
-    "question_events": 60,
-    "questions": 31,
+    "source_messages": 121,
+    "nodes": 158,
+    "relations": 135,
+    "moves": 64,
+    "stance_events": 34,
+    "question_events": 63,
+    "questions": 32,
     "review": {
-      "proposed": 430,
+      "proposed": 454,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after OntoCanon ISO registry crosswalk finding",
+  "current_checkpoint_execution": "mini-megamodel structural expectations checked in sandbox; full inquiry-graph current head not rerun after latest annotations",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
@@ -72,5 +72,9 @@
     "status": "failing before tests",
     "observed_run": 36682172055,
     "failing_step": "Install package and optional adapter"
+  },
+  "mini_megamodel_execution": {
+    "status": "structural expectations passed in sandbox",
+    "scope": "fixture/path logic only; not full repository test suite"
   }
 }
