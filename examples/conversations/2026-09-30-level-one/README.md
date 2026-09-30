@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 98 excerpts from 42 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 102 excerpts from 46 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **112 content nodes, 92 relations, 45 inquiry moves, 26 stance events, 45 question-status events and 24 distinct questions**. All **320 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **117 content nodes, 97 relations, 49 inquiry moves, 26 stance events, 48 question-status events and 25 distinct questions**. All **337 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -94,7 +94,7 @@ The capture also exposes task drift in the conversation: tool/architecture answe
 
 ## Verification
 
-The **last executed isolated-sandbox checkpoint** had native validation 0 errors / 0 warnings and 15 focused tests passing. The latest representation-change additions have **not yet been rerun** in that sandbox. Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
+The **last executed isolated-sandbox checkpoint** had native validation 0 errors / 0 warnings and 15 focused tests passing. The latest representation-change and final-collapse additions have **not yet been rerun** in that sandbox. Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
 
 Tests cover source anchors, 32 local turn groups, proposed review states, absent native IDs/timestamps, no adoption inferred from continuation, retained retractions/reopenings, deferred branches, rationale links, deterministic native JSON roundtrip, and invalid quote/actor mutations.
 
@@ -113,3 +113,15 @@ The first attempted counterexample—temporary supposition without belief—refi
 ### Representation-change checkpoint
 
 The fixed-space result now distinguishes the **epistemic role of inferential output**—`consequence/readout` versus `candidate/proposal`, with `none` for pure state-role changes—from its **state effect**. This is explicitly not deterministic-versus-stochastic computation. Acquisition/observation is provisionally outside inference proper while remaining an epistemic event in the larger system. The next-layer bridge reuses the existing transition calculus but generalizes its total function `Φ: U → U'` to a typed alignment/correspondence with explicit preservation/loss properties. The stronger question `q-rep-falsifier` remains open.
+
+
+### Final Level-1 collapse checkpoint
+
+The latest assistant result is deliberately thinner than the earlier two-axis proposal. The graph now preserves that:
+
+- a generic alignment/correspondence is only an interoperability envelope; without a concrete mapping regime and preservation semantics it is too general to be a substantive theory;
+- an alignment itself may be uncertain or contested and therefore belongs inside the epistemic state as a candidate object with provenance/standing/warrant;
+- consequence/readout versus candidate/proposal remains a useful explanatory distinction, but the final primitive-status check demotes it to method/output-role/guarantee metadata rather than a foundational action coordinate;
+- the current Level-1 normal form therefore returns to **reasoning configuration + typed action/output/state effect + typed warrant/guarantee**, with acquisition, representation change and strategy treated as adjacent roles/layers rather than new inference species.
+
+This is recorded as assistant hypothesis, not Brian endorsement. The open representation-change falsifier and the broader canonical-factorization question remain available for review.
