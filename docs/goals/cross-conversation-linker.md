@@ -109,7 +109,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** 4 (three-route comparison and blind grading).
+- **Current increment:** 5 (record the bounded decision after independent signoff).
 - **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
   continue at the current credit balance. The separate Codex CLI campaign under
   `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
@@ -124,17 +124,36 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   observability content is metadata-only. The response is saved in the private per-chat key.
 - **C4 preflight:** the cached 30-chat B export is 437,686 characters with 620 positions and 233
   typed cross-chat links; the C export is 330,267 characters with the same 620 positions and no
-  links. The first A/B/C answer sets exist, but telemetry shows all 15 answer calls used
-  metered OpenRouter (`openrouter/openai/gpt-5.6-luna`, provider-reported cost $0.49159). The
-  script's function default captured the import-time OpenRouter model before campaign configuration
-  selected Codex. The active run is blind-grading those outputs with the Codex subscription; neither
-  its grades nor those answers will be used for C4. `scale.py` now resolves the selected model at
-  call time. A separate corrected-route campaign has been prepared with the verified key copied;
-  start it only after the current process finishes, so it skips key generation and uses Codex for
-  answer routes and judging. The original output directory and its telemetry remain intact.
-- **Blockers:** OpenRouter still cannot afford the full-context reference-key call. The subscription
-  route has completed successful calls. The previous Windows process-start request was denied by
-  its approval gate; no remote command ran, and the local Codex route makes that route unnecessary.
+  links. The first A/B/C answer sets used metered OpenRouter by mistake: Python captured the
+  import-time default model before campaign configuration selected Codex. Telemetry records 15
+  `openrouter/openai/gpt-5.6-luna` answer calls at $0.49159 provider-reported cost. Their 13 blind
+  grades finished and the process exited 0; both answers and grades are excluded from C4.
+  `scale.py` now resolves the model at call time (commit `ce7b8b7`). The corrected campaign in
+  `private/xconv/scale_run_codex_rerun_20260930/` reused the verified key and B/C exports. All 39
+  answers (13 per route) completed as `codex/gpt-5.6-luna`; all 13 blind grades completed as
+  `codex/gpt-5.6-sol`. Telemetry shows subscription-included billing, zero API cost and zero errors
+  for all 28 calls. The process exited 0 and wrote all 13 grade rows and `summary.json`.
+  Mean key-point coverage was A 0.67, B 0.63, C 0.61: B−C +0.02 and B−A −0.04. B and C each
+  fully answered 1/13 questions, versus 4/13 for A; each route contradicted the key on 5/13.
+  The per-question table, category means, failure counts, source-citation audit, source-heldout
+  subset, and blind-grader positive control are recorded in
+  `evaluation/cross_conversation_scale/results.md` and its adjacent JSON evidence. The seven
+  source-heldout cases tie B and C at 0.595 and put A at 0.702; this is a limited descriptive
+  subset, not an independent question-set or broad generalization test. The three routes have low
+  fully-right counts and none meets the complete citation-and-quote contract. The bounded retrieval
+  recommendation is archive search as default for this workload; typed links did not show a useful
+  answer-quality gain in this sample. Fresh independent C5 signoff returned `SIGNED-OFF` for this
+  bounded decision. The reviewer recomputed all 39 route/item scores, verified the 620/620 graph
+  quote audit, passed a fresh Codex grader control, and privately checked four answer/grade/key/source
+  rows (4/4 aligned). Limits and gate details are in
+  `evaluation/cross_conversation_scale/signoff.md`.
+  Of the 13 reference questions, 7 cite only chats outside the five used during linker prompt
+  revisions; 11 include at least one such chat. Every question category has at least one
+  new-chat-only case, though the held-out subset is small.
+- **Blockers:** None for the completed campaign. OpenRouter refused the earlier full-context key
+  call for insufficient credits; the independent Codex subscription route completed the key and
+  corrected comparison. The previous Windows process-start request was denied by its approval
+  gate; no remote command ran, and the local Codex route made that route unnecessary.
 - **Jev/Laya prior art (verified 2026-09-30):** Jev-Mem is the closest whole-memory implementation:
   [repository](https://github.com/libingzheren/Jev-Mem) and [paper](https://arxiv.org/abs/2609.23986).
   It uses System One for memory typing and relation judgments over semantic, temporal, causal and
@@ -164,11 +183,13 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   use System One to classify/rank a candidate set and judge typed relations, while code preserves
   exact cited spans. It does not establish a drop-in replacement for open-ended position
   extraction, nor Laya quality on this task. No adoption decision is made.
-- **Resume event:** let the current grading process finish. Then run the corrected campaign from
-  this worktree; it uses a separate output directory with the verified Codex key already cached:
+- **Resume event:** the corrected campaign, graders, report, router disposition, and fresh C5
+  signoff are complete. Record the bounded continue/replace/shelve disposition on issue #38. Keep
+  the failed OpenRouter answer/grade run excluded from C4; its outputs are preserved. The corrected
+  key and all 39 answers are cached. If the result artifacts need to be regenerated, run this
+  command from the same worktree; it will use the cached key and answers:
   `LLM_CLIENT_DATA_ROOT="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data" LLM_CLIENT_DB_PATH="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data/llm_observability.db" python evaluation/cross_conversation_scale/scale.py --codex-subscription --campaign-dir private/xconv/scale_run_codex_rerun_20260930`.
-  This corrected run must generate all A/B/C answers and blind grades on Codex before C4. Do not
-  reuse the first run's answer cache or mix its model results into the corrected campaign.
+  Keep the first OpenRouter answer/grade set excluded from C4.
 
 ## Evaluator-Facing Objective
 

@@ -1,0 +1,35 @@
+{
+  "method": "literal case-insensitive Unicode-normalized substring checks; not semantic citation adjudication",
+  "expected_source_set": "reference-key chats for each question",
+  "routes": {
+    "A": {
+      "answers": 13,
+      "questions_with_at_least_two_expected_titles": 7,
+      "questions_with_at_least_two_expected_title_date_pairs": 7,
+      "answers_with_double_quoted_spans": 13,
+      "double_quoted_spans": 33,
+      "spans_found_verbatim_in_expected_source_messages": 9
+    },
+    "B": {
+      "answers": 13,
+      "questions_with_at_least_two_expected_titles": 13,
+      "questions_with_at_least_two_expected_title_date_pairs": 4,
+      "answers_with_double_quoted_spans": 13,
+      "double_quoted_spans": 27,
+      "spans_found_verbatim_in_expected_source_messages": 0
+    },
+    "C": {
+      "answers": 13,
+      "questions_with_at_least_two_expected_titles": 11,
+      "questions_with_at_least_two_expected_title_date_pairs": 4,
+      "answers_with_double_quoted_spans": 13,
+      "double_quoted_spans": 28,
+      "spans_found_verbatim_in_expected_source_messages": 0
+    }
+  },
+  "graph_position_quotes": {
+    "positions": 620,
+    "nonempty_quotes": 620,
+    "exact_contiguous_source_spans": 620
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "definition": "questions whose reference-key chat set has no overlap with the five chats used for linker prompt revisions",
+  "n_questions": 7,
+  "q_ids": [
+    2,
+    3,
+    5,
+    8,
+    9,
+    11,
+    13
+  ],
+  "categories": {
+    "agreement_across_chats": 2,
+    "conflict_or_tension": 1,
+    "recurring_open_question": 2,
+    "change_over_time": 1,
+    "position_summary": 1
+  },
+  "routes": {
+    "A": {
+      "mean_key_point_coverage": 0.702381,
+      "fully_right": 2,
+      "contradicts_key": 2,
+      "attribution_error": 1,
+      "unsupported_claims": 7,
+      "cannot_answer": 0
+    },
+    "B": {
+      "mean_key_point_coverage": 0.595238,
+      "fully_right": 0,
+      "contradicts_key": 4,
+      "attribution_error": 2,
+      "unsupported_claims": 7,
+      "cannot_answer": 0
+    },
+    "C": {
+      "mean_key_point_coverage": 0.595238,
+      "fully_right": 1,
+      "contradicts_key": 4,
+      "attribution_error": 1,
+      "unsupported_claims": 7,
+      "cannot_answer": 0
+    }
+  },
+  "differences": {
+    "B_minus_C": 0.0,
+    "B_minus_A": -0.107143
+  }
+}

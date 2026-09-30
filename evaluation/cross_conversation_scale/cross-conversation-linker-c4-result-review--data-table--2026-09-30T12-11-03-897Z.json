@@ -1,0 +1,167 @@
+{
+  "version": "0.2",
+  "recordedAt": "2026-09-30T12:11:03.897Z",
+  "actor": "Codex",
+  "recommendationId": "cross-conversation-linker-c4-result-review--data-table",
+  "primaryPattern": "data-table",
+  "checklistSize": 39,
+  "acceptanceReferences": [],
+  "dispositions": {
+    "choice-justified:data-table": {
+      "status": "satisfied",
+      "why": "The report's main job is to compare A, B, and C on identical questions and measures so Brian can choose a retrieval direction; the per-question and category tables fit that comparison."
+    },
+    "assuming-generated-layout-is-acceptable-without-rendering": {
+      "status": "na",
+      "why": "The artifact is Markdown with native tables; it has no generated diagram layout or renderer."
+    },
+    "long-labels-with-no-review-pass": {
+      "status": "satisfied",
+      "why": "The Markdown title, headings, table labels, and source links were reviewed after the framing edit; no diagram labels are generated."
+    },
+    "no-clipped-labels": {
+      "status": "na",
+      "why": "There is no rendered diagram or label layout to clip."
+    },
+    "no-unreadable-generated-overlap": {
+      "status": "na",
+      "why": "There is no generated visual layout or overlapping marks."
+    },
+    "source-remains-reviewable": {
+      "status": "satisfied",
+      "why": "The report is plain Markdown; its recommendation, evidence audit, held-out aggregates, and positive-control aggregates remain available as adjacent source files."
+    },
+    "title-states-what-this-is-and-for-whom": {
+      "status": "satisfied",
+      "why": "The title names Brian, the question of whether linking helps cross-chat answers, and the 30-chat scope."
+    },
+    "whole-design-visible-on-one-screen-at-the-target-viewport": {
+      "status": "na",
+      "why": "This is a multi-section evaluation record with per-question and audit evidence; fitting it on one screen would hide the evidence rather than improve the comparison."
+    },
+    "cold-reader-gets-the-mechanism-in-sixty-seconds": {
+      "status": "skipped",
+      "why": "The opening states the decision and A/B/C routes, but no timed cold-reader check was run."
+    },
+    "form-matches-job-lists-scan-tables-compare-flows-transition-maps-connect": {
+      "status": "satisfied",
+      "why": "The task is a side-by-side route comparison, represented by aligned A/B/C columns and category summaries."
+    },
+    "relationships-drawn-not-implied-by-adjacency-or-links": {
+      "status": "na",
+      "why": "The artifact contains no relationship diagram; typed-link effects are compared as route results."
+    },
+    "same-object-same-mark-across-every-view": {
+      "status": "na",
+      "why": "There are no graphical objects or coordinated views."
+    },
+    "every-object-reveals-more-on-click-nothing-is-a-dead-end": {
+      "status": "na",
+      "why": "The report is a static Markdown artifact without interactive objects."
+    },
+    "reasonable-line-length": {
+      "status": "satisfied",
+      "why": "Prose source lines are wrapped for scanning, while tables use only the columns needed for the comparison."
+    },
+    "stable-generated-layout": {
+      "status": "na",
+      "why": "No generated layout is used."
+    },
+    "theme-contrast": {
+      "status": "na",
+      "why": "The artifact defines no colors or theme-dependent visual encoding; the Markdown host controls theme contrast."
+    },
+    "first-frame-legibility": {
+      "status": "na",
+      "why": "There is no interactive or rendered first frame; the report begins with its decision and limitation."
+    },
+    "one-primary-drawing-with-callouts-not-parallel-columns-of-text": {
+      "status": "na",
+      "why": "The chosen form is a comparison table and evidence record, not a drawing."
+    },
+    "white-space-separates-groups-and-carries-hierarchy": {
+      "status": "satisfied",
+      "why": "Markdown headings, blank lines, and separated tables group method, score, citation, and signoff evidence."
+    },
+    "size-and-weight-follow-importance": {
+      "status": "satisfied",
+      "why": "The title and opening decision precede the detailed tables and limitations; section headings preserve the evidence hierarchy."
+    },
+    "structure-earned-by-content-not-imposed-taxonomy": {
+      "status": "satisfied",
+      "why": "Sections follow the actual evaluation sequence: scope, results, limitations, source evidence, and signoff."
+    },
+    "space-and-time-shown-together-when-the-subject-changes-over-time": {
+      "status": "na",
+      "why": "This report compares retrieval routes in one dated campaign; it does not map position changes over time."
+    },
+    "page-carries-its-date-and-version": {
+      "status": "satisfied",
+      "why": "The opening identifies the campaign date and report version."
+    },
+    "a-person-would-pin-it-on-a-wall": {
+      "status": "na",
+      "why": "This is a detailed decision record for later audit, not a wall reference or poster."
+    },
+    "one-element-dominates-by-size-weight-or-contrast": {
+      "status": "na",
+      "why": "There are no graphical elements; the opening decision serves as the textual entry point."
+    },
+    "reading-order-is-obvious-without-instructions": {
+      "status": "satisfied",
+      "why": "The report proceeds from decision and method to per-question results, limitations, source audit, and signoff."
+    },
+    "gap-between-groups-larger-than-gap-within": {
+      "status": "satisfied",
+      "why": "Markdown section breaks separate evidence groups while rows stay grouped within each table."
+    },
+    "enclosure-nesting-at-most-two-levels": {
+      "status": "na",
+      "why": "There are no nested visual enclosures."
+    },
+    "elements-share-a-small-set-of-edges": {
+      "status": "na",
+      "why": "There are no positioned visual elements or alignment grid."
+    },
+    "same-role-same-treatment-everywhere": {
+      "status": "satisfied",
+      "why": "A, B, and C keep the same labels and column order across score and outcome tables."
+    },
+    "every-mark-carries-information": {
+      "status": "na",
+      "why": "There are no decorative or diagram marks; all table cells carry reported values or labels."
+    },
+    "context-quiet-subject-loud": {
+      "status": "satisfied",
+      "why": "The main retrieval conclusion appears first; method details and limitations follow as supporting context."
+    },
+    "comparisons-use-identical-small-frames": {
+      "status": "satisfied",
+      "why": "Every per-question and category comparison uses the same A/B/C columns and scoring scale."
+    },
+    "every-encoding-explained-on-the-same-screen": {
+      "status": "satisfied",
+      "why": "The opening scope defines the 0–1 key-point coverage scale before the tables use it; the tables have explicit route labels."
+    },
+    "one-highlighted-state-not-several": {
+      "status": "na",
+      "why": "The report has no interactive highlighted state."
+    },
+    "object-count-within-density-budget-or-aggregated": {
+      "status": "satisfied",
+      "why": "The 13 anonymous question rows are paired with category and error aggregates; no transcript content is reproduced."
+    },
+    "headline-and-picture-alone-convey-the-point-since-that-is-all-most-people-read": {
+      "status": "na",
+      "why": "The report contains no picture or poster-style summary; its opening headline and decision state the scope and bounded result."
+    },
+    "no-block-of-prose-longer-than-the-drawing-it-explains": {
+      "status": "na",
+      "why": "There is no drawing that prose needs to explain."
+    },
+    "reader-can-point-to-where-any-one-fact-lives": {
+      "status": "satisfied",
+      "why": "Facts are grouped under named headings and comparison tables, with adjacent source artifacts linked where applicable."
+    }
+  }
+}
