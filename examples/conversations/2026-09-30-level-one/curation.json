@@ -6429,6 +6429,101 @@
           "m74"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "g-pressure-test-factgraph",
+        "goal",
+        "Brian authorizes pressure-testing Factgraph's last niche against mature transformation-verification and testing tooling.",
+        "t80"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-not-unique",
+        "claim",
+        "Factgraph does not provide unique foundational transformation-preservation machinery; mature verification/testing ecosystems already own contracts, proofs, counterexamples, model checking, static analysis and mutation testing.",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-opaque-only",
+        "hypothesis",
+        "Factgraph's only plausible retained role is black/gray-box semantic differential testing for opaque external transformations lacking an adequate formal certificate.",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-factgraph-verification-audit",
+        "reference",
+        "factgraph-vs-transformation-verification.md: pressure test against mature transformation-verification/testing tooling.",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r160",
+        "supports",
+        "g-external-first",
+        "c-factgraph-not-unique",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r161",
+        "supersedes",
+        "c-factgraph-opaque-only",
+        "c-factgraph-narrow-value",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r162",
+        "about",
+        "r-factgraph-verification-audit",
+        "c-factgraph-not-unique",
+        "t81"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m76",
+        "summarize",
+        "t81",
+        [
+          "g-pressure-test-factgraph",
+          "c-factgraph-narrow-value"
+        ],
+        [
+          "c-factgraph-not-unique",
+          "c-factgraph-opaque-only",
+          "r-factgraph-verification-audit"
+        ]
+      ],
+      {
+        "after": [
+          "m75"
+        ]
+      }
     ]
   ]
 }
