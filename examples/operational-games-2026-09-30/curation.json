@@ -851,7 +851,7 @@
       "truck-fuel-user"
     ],
     [
-      "reframes",
+      "related_to",
       "compositional-mechanics-broader-than-cgt",
       "cgt-relevance-claim",
       "composition-not-cgt-only"
@@ -863,13 +863,13 @@
       "world-primary-agents-secondary"
     ],
     [
-      "supports",
+      "motivates",
       "small-composable-mechanics",
       "compositional-executable-world-goal",
       "compositional-executable-world"
     ],
     [
-      "supports",
+      "motivates",
       "compositional-mechanics-broader-than-cgt",
       "compositional-executable-world-goal",
       "compositional-executable-world"
