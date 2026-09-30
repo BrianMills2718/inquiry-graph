@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 102 excerpts from 46 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 105 excerpts from 48 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **117 content nodes, 97 relations, 49 inquiry moves, 26 stance events, 48 question-status events and 25 distinct questions**. All **337 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **121 content nodes, 100 relations, 51 inquiry moves, 29 stance events, 50 question-status events and 26 distinct questions**. All **351 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -125,3 +125,10 @@ The latest assistant result is deliberately thinner than the earlier two-axis pr
 - the current Level-1 normal form therefore returns to **reasoning configuration + typed action/output/state effect + typed warrant/guarantee**, with acquisition, representation change and strategy treated as adjacent roles/layers rather than new inference species.
 
 This is recorded as assistant hypothesis, not Brian endorsement. The open representation-change falsifier and the broader canonical-factorization question remain available for review.
+
+
+### Strategy-distance scope correction
+
+After the final Level-1 collapse, the assistant proposed strategy/control as the next intellectual layer. Brian explicitly corrected that sequencing: **“I still feel like we're a long way from strategies for optimization.”**
+
+The graph therefore keeps strategy optimization deferred and opens `q-before-strategy`: what conceptual or integration work remains between the current inference factorization and any later optimization program? This capture does **not** invent that intervening agenda. The correction reinforces the earlier `g-strategy-later` stance and supersedes any reading of the assistant's previous “next layer” language as the active roadmap.
