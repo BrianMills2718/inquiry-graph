@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 126 excerpts from 67 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 128 excerpts from 71 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **166 content nodes, 142 relations, 68 inquiry moves, 35 stance events, 66 question-status events and 33 distinct questions**. All **477 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **173 content nodes, 148 relations, 71 inquiry moves, 35 stance events, 66 question-status events and 33 distinct questions**. All **493 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -166,3 +166,8 @@ The first concrete registry fixture now exists with 8 native representation/prof
 ### Certified multi-hop mapping result
 
 The first mature-formalism multi-hop falsifier uses CQL functorial pullback. For F:S→T and G:T→U, the fixture checks Δ_F(Δ_G(I)) = Δ_(G∘F)(I) on a concrete instance and separately checks that U-only `department` data is not preserved. This answers `q-compositional-chain` for one preservation family and opens `q-preservation-types`: the registry now needs typed preservation families rather than a single generic preservation flag.
+
+
+### Representation interoperability adoption verdict
+
+The new `representation-interoperability-adoption-matrix.md` maps each requirement to a mature owner/standard/tool and marks adopt/integrate/keep-thin/don't-build. Current assistant hypothesis: close representation interoperability as foundational research unless a concrete case escapes ISO registry/MFI, DOL/Hets, model-management/MDE, database mapping, lenses or abstract interpretation. Retain only thin registry/dispatch/certificate glue.
