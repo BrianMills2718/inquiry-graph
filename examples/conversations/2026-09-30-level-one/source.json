@@ -795,6 +795,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 130,
       "text": "The adoption matrix says the foundational representation-interoperability problem is mostly mature prior art. The project-specific remainder is thin glue: standards crosswalk, first-class mapping records, dispatch to native engines, and typed preservation/loss evidence. Universal IR, universal mapping algebra, and custom transformation engines should not be built absent a concrete failure."
+    },
+    {
+      "id": "s30:t72",
+      "actor_id": "s30:brian",
+      "ordinal": 131,
+      "text": "Can you look at my Hypergraph Schema IR repo and tell me whether you think it's relevant? I assume it's like, there's much better stuff off the shelf that would just maybe as a donor for ideas."
+    },
+    {
+      "id": "s30:t73",
+      "actor_id": "s30:assistant",
+      "ordinal": 132,
+      "text": "The repo is relevant mainly as a donor and empirical proof artifact, not as a foundation to build forward from. Its own README marks it historical lineage and points to `factgraph` as the active successor for semantic-portability auditing."
     }
   ]
 }
