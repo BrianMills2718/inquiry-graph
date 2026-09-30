@@ -4,7 +4,9 @@ This is a **selected, source-grounded continuation** of the live inquiry about
 factorization, megamodeling, embedded observers, unknown game structure,
 unawareness, white-box simulation, computational opacity, prior-art reuse,
 compositional game theory, deliberate universalization of the game concept,
-perspectival/self-attributed goals, and the resulting translation-contract next step.
+perspectival/self-attributed goals, replacement-first infrastructure selection,
+and the later reframing toward compositional executable worlds in which CGT is
+one strategic component semantics rather than the universal world formalism.
 
 It is intentionally separate from `examples/seed/` rather than silently
 rewriting the founding fixture. The two trajectories can be reconciled or linked
@@ -17,7 +19,7 @@ Files:
 - `candidates.json` — generated semantic candidates;
 - `graph.json` — validated V1 Inquiry Graph.
 
-Current fixture: **54 selected excerpts, 58 nodes, 41 relations, 45 moves, 27 stance events, and 13 question events**.
+Current fixture: **71 selected excerpts, 78 nodes, 60 relations, 61 moves, 44 stance events, and 20 question events**.
 
 All semantic annotations are `proposed`. This is not a full transcript export,
 not a gold dataset, and not a record of hidden reasoning.
