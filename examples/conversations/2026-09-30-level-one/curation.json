@@ -3415,6 +3415,46 @@
       {
         "basis": "The assistant refines its own first-pass three-function list into a two-axis factorization; Brian has not yet reviewed the new result."
       }
+    ],
+    [
+      "N",
+      [
+        "c-role-standing-refinement",
+        "hypothesis",
+        "A temporary assumption such as 'suppose H for the sake of argument' is better represented as a contextual role/standing change rather than belief; explicit availability must also permit activation and deactivation.",
+        "t33"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r82",
+        "supports",
+        "c-role-standing-refinement",
+        "c-two-axis",
+        "t33"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m37",
+        "clarify",
+        "t33",
+        [
+          "c-two-axis"
+        ],
+        [
+          "c-role-standing-refinement"
+        ]
+      ],
+      {
+        "after": [
+          "m36"
+        ]
+      }
     ]
   ]
 }
