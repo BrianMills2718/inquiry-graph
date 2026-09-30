@@ -27,9 +27,9 @@ def test_native_v1_validation(graph):
 
 def test_each_visible_prose_turn_has_a_source(graph):
     turns = {int(m.id.split(":t")[1][:2]) for m in graph.conversations[0].messages}
-    assert turns == set(range(1, 47))
+    assert turns == set(range(1, 49))
     # Turn representation is not a claim of complete transcript/token coverage.
-    assert len(graph.conversations[0].messages) == 102
+    assert len(graph.conversations[0].messages) == 105
     assert graph.conversations[0].source_kind == "curated_excerpts"
     assert "neither a complete export" in graph.conversations[0].coverage_note
 
@@ -40,7 +40,7 @@ def test_sources_have_no_invented_native_ids_or_times(graph):
 
 
 def test_all_annotations_await_review(graph):
-    assert stats(graph)["review"] == {"proposed": 337, "confirmed": 0, "rejected": 0}
+    assert stats(graph)["review"] == {"proposed": 351, "confirmed": 0, "rejected": 0}
 
 
 def test_proceed_is_not_theory_adoption(graph):
@@ -54,6 +54,14 @@ def test_proceed_is_not_theory_adoption(graph):
     assert not any(e.actor_id == "s30:brian" and e.stance == "endorses"
                    and (e.target_id in forbidden or e.target_id.startswith("s30:r-"))
                    for e in graph.stance_events)
+
+
+def test_strategy_optimization_remains_deferred_after_scope_correction(graph):
+    events = [e for e in graph.question_events if e.question_id == "s30:q-strategy"]
+    assert any(e.actor_id == "s30:brian" and e.status == "deferred" and e.at_message_id == "s30:t48" for e in events)
+    assert any(e.actor_id == "s30:brian" and e.stance == "endorses" and e.target_id == "s30:g-strategy-not-next" for e in graph.stance_events)
+    assert any(e.actor_id == "s30:brian" and e.stance == "questions" and e.target_id == "s30:c-strategy-next-assistant" for e in graph.stance_events)
+    assert any(r["id"] == "s30:q-before-strategy" and r["status"] == "open" for r in open_questions(graph))
 
 
 def test_fixed_space_result_is_provisional_and_reopened(graph):
