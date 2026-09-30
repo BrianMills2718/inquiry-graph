@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 77 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 79 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -855,6 +855,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 140,
       "text": "Factgraph does not survive as unique transformation-preservation machinery. Mature formal verification/testing ecosystems already own property preservation, contracts, counterexample generation, model checking, static analysis, and mutation testing. The only plausible retained role is a black/gray-box semantic audit harness for opaque external transformations where formal verification is unavailable."
+    },
+    {
+      "id": "s30:t82",
+      "actor_id": "s30:brian",
+      "ordinal": 141,
+      "text": "Okay, if you're suggesting to pressure test the remaining yeast, then do that."
+    },
+    {
+      "id": "s30:t83",
+      "actor_id": "s30:assistant",
+      "ordinal": 142,
+      "text": "The residual Factgraph niche collapses again under generic testing prior art. Property-based/model-based/metamorphic/differential testing already owns generation, shrinking, execution and counterexample search. The only irreducible local input is a thin semantic oracle/adapter: specify the source obligation, how to generate relevant valid/invalid examples, how to lower them through the opaque mapping, and how to observe the target result."
     }
   ]
 }
