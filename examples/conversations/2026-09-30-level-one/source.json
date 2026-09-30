@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 57 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 62 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -711,6 +711,36 @@
       "actor_id": "s30:assistant",
       "ordinal": 116,
       "text": "The OntoCanon crosswalk is encouraging: most of its **identity/version/provenance/dependency/validation** metadata already matches the kind of registry information ISO expects. The likely gaps are not a new core—they’re standardized **classification/definition metadata, explicit model↔metamodel relations, and first-class mapping records**."
+    },
+    {
+      "id": "s30:t58",
+      "actor_id": "s30:brian",
+      "ordinal": 117,
+      "text": "Okay, do that."
+    },
+    {
+      "id": "s30:t59",
+      "actor_id": "s30:assistant",
+      "ordinal": 118,
+      "text": "I’m building the smallest useful megamodel, not a new platform: a handful of representations you already own, only mappings we can justify, and explicit “preserves / loses / unknown” fields. The test is whether that graph can answer “what can translate to what?” without routing everything through one IR."
+    },
+    {
+      "id": "s30:t60",
+      "actor_id": "s30:assistant",
+      "ordinal": 119,
+      "text": "A good sign from the experiment design itself: the graph does **not** need to be connected. “No justified path exists” is a useful answer. That prevents the registry from becoming a machine that invents translations just because two representations are cataloged."
+    },
+    {
+      "id": "s30:t61",
+      "actor_id": "s30:assistant",
+      "ordinal": 120,
+      "text": "The first query result is already informative: with **implemented mappings only**, the registry has three translation/custody edges and **zero automatically composable guarantee-transport paths**. Inquiry→OntoCanon is correctly visible as a design mapping but not executable; DoDAF→Representation Router is visible only as an architectural seam; Scientific Hypergraph→Representation Router has **no justified path at all**. That is exactly the refusal behavior we wanted."
+    },
+    {
+      "id": "s30:t62",
+      "actor_id": "s30:assistant",
+      "ordinal": 121,
+      "text": "The mini-megamodel passes its structural checks in the sandbox: it distinguishes implemented mappings from design-only seams, refuses unjustified cross-domain paths, and never promotes “there is a graph path” into “the guarantee transports.” I’m writing that result back into the audit and graph now."
     }
   ]
 }
