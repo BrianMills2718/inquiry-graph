@@ -891,6 +891,12 @@
       "actor_id": "s30:brian",
       "ordinal": 146,
       "text": "I'm not sure if we've already started an inquiry graph repo graph of this conversation, but either start it or update it based on what we've been discussing."
+    },
+    {
+      "id": "s30:t85",
+      "actor_id": "s30:brian",
+      "ordinal": 147,
+      "text": "Brian asks whether the megamodel idea can be generalized beyond models to analytic representation-changing pipelines such as table → social graph → vector embedding → clusters → sentiment/model analysis, referencing Evidence-to-Action and Observation-to-Action."
     }
   ]
 }
