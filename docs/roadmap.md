@@ -14,6 +14,20 @@
 - validation, merge, query and render workflows;
 - curated founding-dialogue seed.
 
+## Immediate operational check — reproduce 2026-09-30 seed continuation
+
+Before changing the seed or relying on the new 247-excerpt counts in an executable workflow, rerun:
+
+```bash
+python -m pytest -q
+python examples/build_seed.py
+python tools/build_artifacts.py --check
+python -m inquiry_graph validate examples/seed/graph.json
+python -m pip check
+```
+
+This is a verification catch-up, not a new product priority. Once reproduced, continue P0.
+
 ## P0 — Usefulness pilot
 
 Track: issue #38.
