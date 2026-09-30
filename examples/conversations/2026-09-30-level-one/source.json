@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 62 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 67 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -741,6 +741,36 @@
       "actor_id": "s30:assistant",
       "ordinal": 121,
       "text": "The mini-megamodel passes its structural checks in the sandbox: it distinguishes implemented mappings from design-only seams, refuses unjustified cross-domain paths, and never promotes “there is a graph path” into “the guarantee transports.” I’m writing that result back into the audit and graph now."
+    },
+    {
+      "id": "s30:t63",
+      "actor_id": "s30:brian",
+      "ordinal": 122,
+      "text": "Okay, do that."
+    },
+    {
+      "id": "s30:t64",
+      "actor_id": "s30:assistant",
+      "ordinal": 123,
+      "text": "I’ll use a **small real compositional chain from a mature mapping formalism**, not invent one. I’m going to prefer CQL if I can get a clean two-step schema mapping with explicit migration semantics; otherwise I’ll use DOL/Hets. The test is narrow: can we transport a specific property through two mappings **because the formal mappings compose**, and refuse when that proof is absent?"
+    },
+    {
+      "id": "s30:t65",
+      "actor_id": "s30:assistant",
+      "ordinal": 124,
+      "text": "CQL gives us a particularly clean theorem to test: for schema mappings \\\\(F:S\\\\to T\\\\) and \\\\(G:T\\\\to U\\\\), pullback migration is literally precomposition, so \\\\(\\\\Delta_F(\\\\Delta_G(I))=\\\\Delta_{G\\\\circ F}(I)\\\\). That is a genuine compositional preservation law, not something our registry invents. I’m using that as the first certified multi-hop chain."
+    },
+    {
+      "id": "s30:t66",
+      "actor_id": "s30:assistant",
+      "ordinal": 125,
+      "text": "I’ve encoded the CQL chain as a formal fixture. Now I’m making the key distinction executable: one test will verify that **sequential pullback equals pullback along the composed mapping**, and another will verify that an uncertified generic path is still refused even if its endpoints line up."
+    },
+    {
+      "id": "s30:t67",
+      "actor_id": "s30:assistant",
+      "ordinal": 126,
+      "text": "The positive test is clean: the two-step pullback and the composed pullback produce the same source instance, while target-only information (`department`) is explicitly *not* preserved. That gives us our first non-vacuous example of “this property transports because the mapping theorem says so, and this other property does not.”"
     }
   ]
 }
