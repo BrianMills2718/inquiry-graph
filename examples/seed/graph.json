@@ -3541,6 +3541,21 @@
       "text": "How much of the meta-model and its integration already exists in prior work?"
     },
     {
+      "id": "dialogue-2026-09-27:n:novelty-position",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex237",
+          "start": 0,
+          "end": 248,
+          "quote": "Most ingredients and much integration have strong precedents; the likely contribution is architectural factorization and interface synthesis rather than new mathematics, and even that should be treated as a hypothesis pending systematic comparison."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Most components and much integration have strong precedents; any novelty claim should be conservative and established only by systematic comparison."
+    },
+    {
       "id": "dialogue-2026-09-27:n:adoption-over-novelty",
       "anchors": [
         {
