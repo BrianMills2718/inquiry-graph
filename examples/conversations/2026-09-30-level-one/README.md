@@ -181,3 +181,8 @@ Brian reiterates the program rule that local work should be presumed replaceable
 ### LinkML→PostgreSQL head-to-head
 
 LinkML's own current tooling can generate PostgreSQL validation SQL for range and other constraints, while Data Contract CLI/PostgreSQL already cover generic target validation. The comparison therefore narrows Factgraph's possible role to source-aware transformation-preservation auditing, not ordinary validation. It also records the target-boundary correction: DDL-level non-enforcement is not equivalent to semantic loss in a broader LinkML workflow that may include separate validation.
+
+
+### Factgraph verification pressure test
+
+A mature-field comparison further narrows Factgraph. Model-transformation property preservation already has extensive formal verification/testing literature and tools (including contract verification, static analysis, model checking, counterexample generation and mutation testing). Factgraph therefore does not survive as unique preservation machinery. Its only plausible retained niche is black/gray-box semantic differential testing for opaque external transformations where no adequate formal certificate is available.
