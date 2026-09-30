@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "8da0959c5f79292d5bb12ad6d13fe046ae40baa3",
-  "curation_git_blob": "59b4e19d9352bfd073dbe7fc710ed887a9ce7af0",
+  "source_git_blob": "892054719a632c6cb5d955802906f988d49047ce",
+  "curation_git_blob": "11076caf51e45c536246fd6713773acfded54749",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -45,20 +45,20 @@
   ],
   "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
   "current_checkpoint": {
-    "source_messages": 140,
-    "nodes": 191,
-    "relations": 162,
-    "moves": 76,
+    "source_messages": 142,
+    "nodes": 196,
+    "relations": 166,
+    "moves": 77,
     "stance_events": 35,
     "question_events": 68,
     "questions": 34,
     "review": {
-      "proposed": 532,
+      "proposed": 542,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after Factgraph verification pressure-test checkpoint",
+  "current_checkpoint_execution": "not rerun after residual Factgraph pressure-test checkpoint",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
