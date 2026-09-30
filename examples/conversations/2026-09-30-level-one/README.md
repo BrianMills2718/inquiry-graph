@@ -191,3 +191,8 @@ A mature-field comparison further narrows Factgraph. Model-transformation proper
 ### Factgraph residual-niche pressure test
 
 Generic property-based, model-based, metamorphic and differential testing further collapse Factgraph's remaining role. Generation, shrinking, execution and counterexample search are mature infrastructure. The only unavoidable local work is the semantic oracle/adapter for an opaque transformation: source obligation, relevant valid/invalid example semantics, mapping/lowering, and target observation predicate. Current external-first disposition: extract only those adapters/corpus for a named consumer; otherwise archive Factgraph as research/reference.
+
+
+### Current capture maintenance
+
+Brian explicitly asked to ensure this conversation is represented in Inquiry Graph. This branch is the active capture; it has been updated incrementally through the Level-1 reasoning work, representation-interoperability adoption audit, mini-megamodel/CQL falsifier, Hypergraph Schema IR/Factgraph disposition, and the final Factgraph residual-niche pressure test.
