@@ -1663,6 +1663,12 @@
       "novelty-doubt"
     ],
     [
+      "novelty-position",
+      "claim",
+      "Most components and much integration have strong precedents; any novelty claim should be conservative and established only by systematic comparison.",
+      "novelty-position"
+    ],
+    [
       "adoption-over-novelty",
       "claim",
       "Novelty is not a project objective; mature off-the-shelf theory is preferable to reinventing machinery.",
