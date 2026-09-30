@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 51 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 56 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -669,6 +669,42 @@
       "actor_id": "s30:assistant",
       "ordinal": 109,
       "text": "The one-page Level-1 statement is now in `epistemic-warrant` PR #15. I’m adding your post-Level-1 direction to Inquiry Graph as a durable deferred branch, so it doesn’t depend on either of us remembering it from chat history."
+    },
+    {
+      "id": "s30:t51",
+      "actor_id": "s30:brian",
+      "ordinal": 110,
+      "text": "Okay, go research that."
+    },
+    {
+      "id": "s30:t52",
+      "actor_id": "s30:assistant",
+      "ordinal": 111,
+      "text": "I’m going to treat this as an **adoption/deletion audit**: first read the four relevant repos so we know what problem you already solved, then search mature megamodeling/model-management/database/ontology infrastructure for an existing “registry + mappings + composition + loss/preservation” stack. I’ll checkpoint the inquiry graph as the picture changes."
+    },
+    {
+      "id": "s30:t53",
+      "actor_id": "s30:assistant",
+      "ordinal": 112,
+      "text": "I found something much closer than I expected: **ISO/IEC 19763 is literally called the “Metamodel Framework for Interoperability” and defines registry metamodels for models, ontologies, services, processes, and related resources.** That is directly in the territory you were describing, so I’m treating it as a major adoption candidate rather than designing a registry ourselves."
+    },
+    {
+      "id": "s30:t54",
+      "actor_id": "s30:assistant",
+      "ordinal": 113,
+      "text": "The emerging answer is **“there is no one magic universal repository, but most of the architecture already exists in mature layers.”** The closest stack is surprisingly coherent: ISO MFI for registry metadata, DOL/Hets/Ontohub for heterogeneous formal models and mappings, OMG MOF/QVT + MDE megamodeling for model/transformation management, and CQL/database theory for schema/data migration. OntoCanon probably should integrate these ideas—not become a universal translator itself."
+    },
+    {
+      "id": "s30:t55",
+      "actor_id": "s30:assistant",
+      "ordinal": 114,
+      "text": "The strongest hit is even closer than ISO 19763: **ISO/IEC 11179-35:2023 is explicitly a metamodel for registering models and metamodels, including mappings between models, between metamodels, and between models and metamodels.** ISO/IEC 11179-3:2023 supplies generic registry items plus mapping among registry items. This is very close to the registry spine OntoCanon was starting to invent."
+    },
+    {
+      "id": "s30:t56",
+      "actor_id": "s30:assistant",
+      "ordinal": 115,
+      "text": "The current adoption audit suggests keeping native representations authoritative, using OntoCanon as a governed local registry/library plus mapping metadata, delegating transformations to native engines, and treating any intermediate IR as an explicit projection/interchange contract with recorded loss rather than a universal semantic normal form."
     }
   ]
 }
