@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 109 excerpts from 51 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 115 excerpts from 56 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **133 content nodes, 112 relations, 54 inquiry moves, 32 stance events, 53 question-status events and 29 distinct questions**. All **384 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **149 content nodes, 126 relations, 59 inquiry moves, 33 stance events, 59 question-status events and 31 distinct questions**. All **426 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -144,3 +144,12 @@ The deferred questions are:
 - what do existing database, ontology, schema-mapping, model-management and prior internal experiments already establish about unavoidable transfer loss?
 
 This is explicitly **before** strategy optimization in the current sequencing and carries Brian's reuse/no-novelty goal. The branch is recorded but not opened as an active research task yet.
+
+
+### Representation/interoperability adoption audit activated
+
+Brian explicitly activated the previously deferred track with “go research that.” The supporting note is `representation-interoperability-adoption-audit.md`.
+
+Initial result: no single universal maintained stack was found, but the architecture is heavily covered by mature layers. ISO/IEC 11179-3 + 11179-35 and ISO/IEC 19763 are the strongest registry-model prior art; DOL/Hets cover heterogeneous formal OMS mappings; MDE/QVT/ATL/Epsilon and generic model management cover model transformations; CQL/schema-mapping theory covers database-shaped migration; FAIRsharing and Aristotle provide live registry precedents.
+
+The current assistant hypothesis is **native authority + governed registry + first-class typed mappings + optional declared IR projections**, not universal translation through OntoCanon. Two concrete next questions remain open: crosswalk the current OntoCanon pack/profile contract against ISO registry standards, and test a small heterogeneous registry/mapping graph using existing project profiles without inventing a universal IR.
