@@ -1,0 +1,41 @@
+{
+  "schema_version": "inquiry-hypergraph-crosswalk-v1",
+  "status": "research",
+  "carrier": {
+    "repository": "BrianMills2718/scientific-hypergraph",
+    "model": "scientific-hypergraph-v2",
+    "kernel": "hypergraph-kernel-v2"
+  },
+  "source_domain": {
+    "repository": "BrianMills2718/inquiry-graph",
+    "executable_objects": {
+      "Node": "ModelElement",
+      "Relation": "RelationInstance",
+      "Relation.Binding": "RoleBinding",
+      "Move": "RelationInstance",
+      "StanceEvent": "RelationInstance",
+      "QuestionEvent": "RelationInstance",
+      "Conversation": "ModelElement",
+      "Participant": "ModelElement",
+      "Message": "ModelElement",
+      "Anchor": "GroundedIn relation/evidence object"
+    }
+  },
+  "governance": {
+    "repository": "BrianMills2718/onto-canon6",
+    "reuse": [
+      "source/evidence custody",
+      "review/governance lifecycle",
+      "identity and canonicalization",
+      "semantic alignment",
+      "supersession/recanonicalization",
+      "reversible governed projections"
+    ],
+    "unresolved": [
+      "generic non-assertion RelationInstance governance",
+      "first-class RoleBinding governance",
+      "Inquiry-profile alignment relation semantics"
+    ]
+  },
+  "stop_rule": "Do not introduce another general carrier unless the hypergraph kernel fails a lossless Inquiry Graph projection."
+}

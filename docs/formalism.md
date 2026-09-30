@@ -75,3 +75,42 @@ The graph supports asking which states and moves are associated with better outc
 The later dialogue develops a separate research proposal for factoring epistemic states, candidate generation, reasoning operators and strategy control. The state-delta stage is preserved in [epistemic-transition-calculus.md](epistemic-transition-calculus.md), the assumption-context stage in [assumption-context-meta-model.md](assumption-context-meta-model.md), the strategy/reflection stage in [metareasoning-strategy-reflection.md](metareasoning-strategy-reflection.md), and the current candidate-generation interface in [candidate-generation-interface.md](candidate-generation-interface.md). None should be confused with the executable inquiry-graph schema above. The graph records those proposals, objections and revisions; it does not enforce the research calculus as its own ontology.
 
 The current research endpoint separates a draft-generation system `(D,d0,O,->)`, search/control strategy, formal elaboration, typed evaluator feedback, and warrant. The founding dialogue includes one reconstructed canonical-factorization trace through repeated draft/test/diagnose/repair cycles. Reflection remains relational through `about`; richer candidate/search/strategy semantics remain research annotations. Draft-generation algebra, warrant/evaluation and strategy identification remain unresolved research layers, while the source-grounding and graph-validation rules in sections 1–7 are implemented contracts.
+
+
+## 10. Factorization, stance, and agenthood
+
+The current research formalism treats agent/environment boundaries, black-box versus white-box decomposition, stance choice, and agent attribution as query-relative modeling hypotheses rather than primitive ontology.
+
+See [factorization-stance-agenthood-hypotheses.md](factorization-stance-agenthood-hypotheses.md).
+
+The key commitment is:
+
+\[
+\text{agenthood}=\text{factorization hypothesis}+\text{stance hypothesis}+\text{policy/response hypothesis}
+\]
+
+evaluated under query-relative warrant. No executable Inquiry Graph primitive is added by this research result.
+
+
+## 11. Representation management is decomposed by prior art
+
+The project's earlier broad "representation change" question is now split across
+established disciplines rather than treated as one new primitive problem.
+
+See [representation-management-prior-art.md](representation-management-prior-art.md).
+
+The working decomposition is:
+
+```text
+global representation inventory/relations -> megamodeling / GMM
+generic model/mapping operations           -> model management
+formal truth-preserving translation        -> institutions / MMT
+instance/query-preserving translation      -> schema mappings / data exchange
+view synchronization                       -> bidirectional transformations / lenses
+sound abstraction/refinement               -> abstract interpretation
+query-relative selection/warrant           -> Inquiry layer
+```
+
+This means a future primitive-vs-derived audit should first ask which established
+discipline already owns the semantics of a proposed representation operation
+before introducing a new Inquiry or OntoCanon primitive.
