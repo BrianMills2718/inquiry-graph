@@ -4,7 +4,7 @@
 
 V1 turns normalized conversations or ChatGPT exports into a typed graph of content, questions, relations, inquiry moves, and actor-relative stance/status histories. It records a challenge, clarification, retraction, or reframing as its own object, with source anchors. Questions remain navigable even when the conversation moves elsewhere.
 
-The first-pass example now covers the original V1 arc, the epistemic-transition and assumption-context refinements, the strategy/reflection and candidate-generation passes, and the warrant/license refactoring: **229 content nodes, 250 relations, 185 moves, 58 stance events, and 76 question-status events over 219 curated excerpts**. It includes **54 distinct questions**. This is a proposed annotation, not an independently reviewed gold dataset or a complete transcript export.
+The curated founding example now extends through the late-session meta-model closeout and adoption/handoff work: **250 content nodes, 250 relations, 204 moves, 68 stance events, and 86 question-status events over 247 curated excerpts**. It includes **59 distinct questions** and 858 proposed annotations. This is a proposed annotation, not an independently reviewed gold dataset or a complete transcript export. The 2026-09-30 continuation has been structurally cross-reference checked but still needs the canonical build/artifact/test commands rerun when an execution environment is available.
 
 ## Start here
 
