@@ -869,6 +869,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Update Inquiry Graph with this continuation and then proceed to the translation-contract research step."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Is entertaining or selecting a game a distinct formal problem, or is it already covered by decision theory and hypothesis generation? "
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The game a system is effectively playing depends jointly on what it wants and on hypotheses about how its actions lead to outcomes."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer."
     }
   ],
   "relations": [
@@ -1853,6 +1898,102 @@
         {
           "role": "result",
           "ref": "dialogue-2026-09-30-operational-games:n:translation-contract-next"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:042",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:043",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation"
+        },
+        {
+          "role": "problem",
+          "ref": "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:044",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:goal-perspective-nonidentity"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:045",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:game-as-hypothesis"
         }
       ]
     }
@@ -3011,6 +3152,59 @@
         "dialogue-2026-09-30-operational-games:m:044"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:046",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:universal-game-integration-gap"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:045"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:047",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling",
+        "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:045"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -3472,6 +3666,57 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:continue-after-graph-update",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex054"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:028",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:029",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:030",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055"
     }
   ],
   "question_events": [
@@ -3611,6 +3856,26 @@
       "status": "open",
       "actor_id": "participant:brian",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex048",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:qe:q-game-entertainment-layer",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex055",
+          "start": 0,
+          "end": 422,
+          "quote": "Um, I guess if you're saying about, like, why entertain one game? To me that is, like, goes back to decision theory and hypothesis generation stuff that we've already covered, unless I'm missing something. But it's, like, the game you're playing is, like, seems to me, like... and this is all coupled. Like, you might play a game that's depending on what you want, but also the hypothesis about how to get it, for example."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-30-operational-games:n:q-game-entertainment-layer",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex055",
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
