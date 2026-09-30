@@ -14683,7 +14683,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "name",
+      "kind": "clarify",
       "actor_id": "participant:assistant",
       "input_ids": [
         "dialogue-2026-09-27:n:three-project-model"
@@ -14892,7 +14892,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "refine",
+      "kind": "reframe",
       "actor_id": "participant:assistant",
       "input_ids": [
         "dialogue-2026-09-27:n:candidate-generation-interface"
@@ -17357,6 +17357,106 @@
       "replacement_id": null
     },
     {
+      "id": "dialogue-2026-09-27:qe:q-prior-art-comparison",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex236",
+          "start": 0,
+          "end": 157,
+          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-prior-art-comparison",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex236",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-candidate-landscape",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex238",
+          "start": 0,
+          "end": 112,
+          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-landscape",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex238",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-cross-framework-glue",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex243",
+          "start": 0,
+          "end": 44,
+          "quote": "Ok and I assume that is well trodden as well"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-cross-framework-glue",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex243",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-guarantee-transport",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-guarantee-transport",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex245",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-handoff-readiness",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex248",
+          "start": 0,
+          "end": 184,
+          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-handoff-readiness",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex248",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
       "id": "dialogue-2026-09-27:qe:update:1",
       "anchors": [
         {
@@ -17836,106 +17936,6 @@
       "answer_ids": [
         "dialogue-2026-09-27:n:warrant-judgment"
       ],
-      "resolution_basis": null,
-      "replacement_id": null
-    },
-    {
-      "id": "dialogue-2026-09-27:qe:q-prior-art-comparison",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex236",
-          "start": 0,
-          "end": 157,
-          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "question_id": "dialogue-2026-09-27:n:q-prior-art-comparison",
-      "status": "open",
-      "actor_id": "participant:brian",
-      "at_message_id": "dialogue-2026-09-27:ex236",
-      "answer_ids": [],
-      "resolution_basis": null,
-      "replacement_id": null
-    },
-    {
-      "id": "dialogue-2026-09-27:qe:q-candidate-landscape",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex238",
-          "start": 0,
-          "end": 112,
-          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "question_id": "dialogue-2026-09-27:n:q-candidate-landscape",
-      "status": "open",
-      "actor_id": "participant:brian",
-      "at_message_id": "dialogue-2026-09-27:ex238",
-      "answer_ids": [],
-      "resolution_basis": null,
-      "replacement_id": null
-    },
-    {
-      "id": "dialogue-2026-09-27:qe:q-cross-framework-glue",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex243",
-          "start": 0,
-          "end": 44,
-          "quote": "Ok and I assume that is well trodden as well"
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "question_id": "dialogue-2026-09-27:n:q-cross-framework-glue",
-      "status": "open",
-      "actor_id": "participant:brian",
-      "at_message_id": "dialogue-2026-09-27:ex243",
-      "answer_ids": [],
-      "resolution_basis": null,
-      "replacement_id": null
-    },
-    {
-      "id": "dialogue-2026-09-27:qe:q-guarantee-transport",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex245",
-          "start": 0,
-          "end": 146,
-          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "question_id": "dialogue-2026-09-27:n:q-guarantee-transport",
-      "status": "open",
-      "actor_id": "participant:assistant",
-      "at_message_id": "dialogue-2026-09-27:ex245",
-      "answer_ids": [],
-      "resolution_basis": null,
-      "replacement_id": null
-    },
-    {
-      "id": "dialogue-2026-09-27:qe:q-handoff-readiness",
-      "anchors": [
-        {
-          "message_id": "dialogue-2026-09-27:ex248",
-          "start": 0,
-          "end": 184,
-          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
-        }
-      ],
-      "origin": "inferred",
-      "review_status": "proposed",
-      "question_id": "dialogue-2026-09-27:n:q-handoff-readiness",
-      "status": "open",
-      "actor_id": "participant:brian",
-      "at_message_id": "dialogue-2026-09-27:ex248",
-      "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
     },
@@ -20061,7 +20061,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:pending-regeneration-on-executable-environment",
+        "source_sha256:fae522016ae5473e5f6384632140bac1d6259b399e33ace7c05ded87483cd9d8",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }
@@ -20069,7 +20069,6 @@
   "notes": [
     "Assistant-curated first-pass interpretation; all annotations proposed, not independent gold or user-validated. No hidden reasoning inferred. Continuation ex222–ex249 was curated from the later visible conversation arc on 2026-09-30; user stances remain explicit-only and assistant proposals are not attributed to Brian.",
     "After-move links encode recorded excerpt order only, not causal succession.",
-    "Read docs/seed-review.md for analyst concerns about earlier philosophical overclaims.",
-    "Generated artifacts were updated structurally from curation on 2026-09-30 while the execution device was offline; rerun examples/build_seed.py before treating artifact hashes as reproduced."
+    "Read docs/seed-review.md for analyst concerns about earlier philosophical overclaims."
   ]
 }

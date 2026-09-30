@@ -1648,8 +1648,7 @@
         "dialogue-2026-09-30-operational-games:n:q-prior-art-games"
       ],
       "output_ids": [
-        "dialogue-2026-09-30-operational-games:n:games-unawareness-discovery",
-        "dialogue-2026-09-30-operational-games:n:literature-stack"
+        "dialogue-2026-09-30-operational-games:n:games-unawareness-discovery"
       ],
       "at_message_id": "dialogue-2026-09-30-operational-games:ex025",
       "after_move_ids": [

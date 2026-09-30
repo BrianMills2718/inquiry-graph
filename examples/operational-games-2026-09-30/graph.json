@@ -1648,8 +1648,7 @@
         "dialogue-2026-09-30-operational-games:n:q-prior-art-games"
       ],
       "output_ids": [
-        "dialogue-2026-09-30-operational-games:n:games-unawareness-discovery",
-        "dialogue-2026-09-30-operational-games:n:literature-stack"
+        "dialogue-2026-09-30-operational-games:n:games-unawareness-discovery"
       ],
       "at_message_id": "dialogue-2026-09-30-operational-games:ex025",
       "after_move_ids": [
@@ -2303,7 +2302,7 @@
     }
   ],
   "schema_version": "1.0.0",
-  "id": "dialogue-2026-09-30-operational-games:graph",
+  "id": "graph:dialogue-2026-09-30-operational-games",
   "conversations": [
     {
       "id": "dialogue-2026-09-30-operational-games",
@@ -2589,7 +2588,8 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "Selected visible excerpts only; no hidden reasoning."
+        "source_sha256:b2769f7aee88e3192665c1a8c7c43f8df6e77e2547fe01a19b66ffe8cd7093dc",
+        "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }
   ],

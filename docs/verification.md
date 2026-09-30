@@ -1,6 +1,50 @@
 # Verification Record — Inquiry Graph
 
-## Current post-split verification
+## 2026-09-30 conversation-continuation verification
+
+Verified on the native-Windows execution device against the
+`record-operational-games-conversation` working tree after rebuilding both
+source-grounded fixtures.
+
+Environment:
+
+- Python 3.14.7
+- editable install with `.[dev]`
+
+Executed:
+
+```powershell
+python examples/build_seed.py
+python tools/build_artifacts.py
+python examples/build_operational_games.py
+python -m pytest -q
+python -m inquiry_graph.cli validate examples/seed/graph.json
+python -m inquiry_graph.cli validate examples/operational-games-2026-09-30/graph.json
+python tools/build_artifacts.py --check
+python -m pip check
+```
+
+Result:
+
+- **62 tests passed**
+- founding seed rebuild: **250 nodes / 250 relations / 204 moves**
+- operational-games continuation rebuild: **38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events**
+- both graphs: **0 validation errors / 0 warnings**
+- generated founding artifacts: **8 checked**
+- **no broken requirements**
+
+The run also exposed two provisional continuation move labels in the founding
+curation that were outside the executable V1 move vocabulary. They were
+normalized without widening the ontology:
+
+- `name` -> `clarify`
+- `refine` -> `reframe`
+
+The operational-games trajectory remains selected excerpts with proposed
+annotations; structural validity is not semantic adjudication or full-export
+coverage.
+
+## Historical post-split verification
 
 Verified 2026-09-29 from a fresh native-Windows clone of reviewed `main` at:
 
