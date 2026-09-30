@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "83c9b5cfa47914eb65e9986cb6de0f2814d0ff53",
-  "curation_git_blob": "daf3ecd1c724b3da02f22ee89828c430cb57bdee",
+  "source_git_blob": "4ac832e3eba53948a819894e740b6ca941d02e58",
+  "curation_git_blob": "7df2664c0082280eb8f8ecfaa38e37590cad6340",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -39,26 +39,26 @@
     "Native modules were copied from GitHub and Git blob hashes matched before testing.",
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
-    "42 visible prose/research-update turns are represented by 98 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 320-annotation checkpoint was not rerun in the isolated sandbox after the latest representation-change additions.",
-    "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes."
+    "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
+    "46 visible prose/research-update turns are represented by 102 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 337-annotation checkpoint was not rerun in the isolated sandbox after the final Level-1 collapse additions."
   ],
-  "test_git_blob": "d54bb0818098eb146f0ca11cac7e4a6f8b5693e5",
+  "test_git_blob": "95286ddd6dca097d74e2828a47e90b98218d1080",
   "current_checkpoint": {
-    "source_messages": 98,
-    "nodes": 112,
-    "relations": 92,
-    "moves": 45,
+    "source_messages": 102,
+    "nodes": 117,
+    "relations": 97,
+    "moves": 49,
     "stance_events": 26,
-    "question_events": 45,
-    "questions": 24,
+    "question_events": 48,
+    "questions": 25,
     "review": {
-      "proposed": 320,
+      "proposed": 337,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after representation-change checkpoint",
+  "current_checkpoint_execution": "not rerun after final Level-1 collapse additions",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
