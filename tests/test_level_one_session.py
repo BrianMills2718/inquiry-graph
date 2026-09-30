@@ -40,7 +40,7 @@ def test_sources_have_no_invented_native_ids_or_times(graph):
 
 
 def test_all_annotations_await_review(graph):
-    assert stats(graph)["review"] == {"proposed": 336, "confirmed": 0, "rejected": 0}
+    assert stats(graph)["review"] == {"proposed": 337, "confirmed": 0, "rejected": 0}
 
 
 def test_proceed_is_not_theory_adoption(graph):
