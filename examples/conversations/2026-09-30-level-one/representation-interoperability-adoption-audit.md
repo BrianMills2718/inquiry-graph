@@ -423,3 +423,74 @@ That is already strong coverage of **identification, registration, version/prove
 This looks much more like **standards alignment and adapter work** than a missing registry architecture.
 
 Do not redesign the pack/profile library before completing the field-level crosswalk to ISO/IEC 11179-3, 11179-35 and the relevant MFI parts.
+
+
+## 12. Mini-megamodel experiment
+
+Artifacts:
+
+- `mini-megamodel.json`
+- `query_mini_megamodel.py`
+- `mini-megamodel-results.md`
+- repository test: `tests/test_mini_megamodel.py`
+
+The experiment registers eight native representation/profile artifacts and five evidence-backed mappings/seams.
+
+### Current inventory
+
+- 8 representation/profile nodes;
+- 5 mapping records;
+- 3 implemented/bounded/demo mappings;
+- 2 design/architectural mappings that are deliberately not executable;
+- 4 mappings with declared loss/limitations;
+- 0 mappings currently eligible for automatic guarantee transport.
+
+### Refusal behavior
+
+The registry correctly returns:
+
+- implemented Scientific Hypergraph → governed OntoCanon custody;
+- implemented but lossy Scientific Hypergraph → Foundation IR projection;
+- no implemented Inquiry Graph → OntoCanon path, while retaining the design mapping;
+- no implemented DoDAF → Representation Router adapter, while retaining the architectural seam;
+- no Scientific Hypergraph → Representation Router path even with declared seams enabled;
+- implemented-demo Knowledge Work logical model → PostgreSQL schema, without claiming universal semantics preservation.
+
+### What this means
+
+The mini-megamodel already answers useful questions without a universal IR:
+
+1. what representations exist?
+2. which exact versions/authorities own them?
+3. what mappings are implemented, merely designed, or absent?
+4. what does each mapping claim to preserve?
+5. what is known to be lost?
+6. can guarantees transport automatically?
+7. where is no justified path known?
+
+The disconnected graph is a feature.
+
+### Current architecture hypothesis strengthened
+
+The practical core can remain:
+
+```text
+native representations
++ governed registry/catalog
++ first-class versioned mapping records
++ explicit preservation/loss/verification
++ conservative path composition
+```
+
+No universal semantic normal form was needed for this experiment.
+
+### Next meaningful falsifier
+
+The current graph has no certified multi-hop semantic translation.
+
+A strong next test would add one **real compositional chain** whose mapping theory already provides preservation semantics, such as:
+
+- a small DOL/Hets chain across formal theories/logics; or
+- a CQL schema-mapping/data-migration chain.
+
+The test should ask whether a guarantee/property can be transported through the composed path **only because the mapping certificates compose**, not because graph reachability exists.
