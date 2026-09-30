@@ -6957,6 +6957,69 @@
         "t85"
       ],
       {}
+    ],
+    [
+      "N",
+      [
+        "c-artifact-pipeline-mostly-offtheshelf",
+        "claim",
+        "The generalized analytic-artifact pipeline mostly collapses into existing workflow/provenance/lineage infrastructure plus native artifact typing; no new universal IR or workflow engine is justified.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-artifact-pipeline-residual-index",
+        "hypothesis",
+        "If any local layer remains, it should be a thin catalog/view over provenance that indexes heterogeneous artifact profiles and method-specific assumption/loss claims, built only for demonstrated cross-tool query needs.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-artifact-pipeline-audit",
+        "reference",
+        "analytical-artifact-pipeline-adoption-audit.md: adoption matrix for the Twitter table→graph→embedding→clusters→sentiment pipeline.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r175",
+        "supports",
+        "g-minimal-artifact-pipeline-test",
+        "c-artifact-pipeline-mostly-offtheshelf",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r176",
+        "supports",
+        "c-case-first-artifact-lineage",
+        "c-artifact-pipeline-residual-index",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r177",
+        "about",
+        "r-artifact-pipeline-audit",
+        "c-artifact-pipeline-mostly-offtheshelf",
+        "t85"
+      ],
+      {}
     ]
   ]
 }
