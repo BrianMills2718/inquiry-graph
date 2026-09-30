@@ -136,3 +136,14 @@ The theory is no longer in broad architecture-discovery mode; it has a concrete 
 The product is no longer in schema-building mode; it has an empirical result showing exactly where the current representation underperforms the transcript and a concrete next experiment.
 
 The next agent should choose one track and work from the corresponding repository's handoff rather than reconstructing this conversation.
+
+
+## 2026-09-30 continuation
+
+The curated founding inquiry has now been extended beyond the earlier 219-excerpt boundary to capture the later session arc: project-level reframing into three related projects, the Formal Epistemic Reasoning Meta-Model closeout and paper, explicit preference for adopting mature prior art rather than novelty, the candidate-generation landscape and five-framework mapping, blackboard-style cross-framework orchestration, certified guarantee transport, and the final request to prepare for fresh-agent handoff.
+
+The updated seed contains **247 curated excerpts, 250 nodes, 250 relations, 204 moves, 68 stance events, 86 question events, and 59 questions**. User stance remains explicit-only; assistant proposals are represented as inquiry content but are not silently attributed to Brian.
+
+Because the authorized execution device was offline during this update, the source/curation and generated JSON payloads were updated and cross-reference checked, but the canonical build script and full artifact/test suite have **not yet been rerun** for this continuation. The next executable agent should rerun `examples/build_seed.py`, artifact checks, graph validation, and tests before declaring the new counts reproduced.
+
+The new graph also makes the late-session methodological outcome explicit: candidate generation and cross-framework integration are mostly adoption/integration problems over mature prior art; the remaining theory/product work should not reopen ontology construction by default.

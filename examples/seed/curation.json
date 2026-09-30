@@ -1,5 +1,5 @@
 {
-  "notice": "Assistant-curated first-pass interpretation; all annotations proposed, not independent gold or user-validated. No hidden reasoning inferred.",
+  "notice": "Assistant-curated first-pass interpretation; all annotations proposed, not independent gold or user-validated. No hidden reasoning inferred. Continuation ex222–ex249 was curated from the later visible conversation arc on 2026-09-30; user stances remain explicit-only and assistant proposals are not attributed to Brian.",
   "source_keys": {
     "taxonomy": "dialogue-2026-09-27:ex001",
     "imagination-offer": "dialogue-2026-09-27:ex002",
@@ -215,7 +215,35 @@
     "warrant-judgment": "dialogue-2026-09-27:ex218",
     "scope-folded": "dialogue-2026-09-27:ex219",
     "warrant-polymorphic-action": "dialogue-2026-09-27:ex220",
-    "defeasible-warrant": "dialogue-2026-09-27:ex221"
+    "defeasible-warrant": "dialogue-2026-09-27:ex221",
+    "project-manager": "dialogue-2026-09-27:ex222",
+    "forest-trees": "dialogue-2026-09-27:ex223",
+    "deferred-refactor": "dialogue-2026-09-27:ex224",
+    "repo-question": "dialogue-2026-09-27:ex225",
+    "warrant-license-return": "dialogue-2026-09-27:ex226",
+    "warrant-license-consolidated": "dialogue-2026-09-27:ex227",
+    "benchmark-expansion": "dialogue-2026-09-27:ex228",
+    "integrated-verification": "dialogue-2026-09-27:ex229",
+    "step-back": "dialogue-2026-09-27:ex230",
+    "three-projects": "dialogue-2026-09-27:ex231",
+    "three-projects-user": "dialogue-2026-09-27:ex232",
+    "metamodel-name-status": "dialogue-2026-09-27:ex233",
+    "closeout-paper-request": "dialogue-2026-09-27:ex234",
+    "closeout-paper": "dialogue-2026-09-27:ex235",
+    "novelty-doubt": "dialogue-2026-09-27:ex236",
+    "novelty-position": "dialogue-2026-09-27:ex237",
+    "candidate-landscape-request": "dialogue-2026-09-27:ex238",
+    "candidate-landscape": "dialogue-2026-09-27:ex239",
+    "novelty-not-goal": "dialogue-2026-09-27:ex240",
+    "typed-generative-system": "dialogue-2026-09-27:ex241",
+    "framework-mappings": "dialogue-2026-09-27:ex242",
+    "well-trodden-glue": "dialogue-2026-09-27:ex243",
+    "orchestration-prior-art": "dialogue-2026-09-27:ex244",
+    "blackboard-pattern": "dialogue-2026-09-27:ex245",
+    "guarantee-transport-prior-art": "dialogue-2026-09-27:ex246",
+    "certified-transport": "dialogue-2026-09-27:ex247",
+    "handoff-request": "dialogue-2026-09-27:ex248",
+    "graph-update-request": "dialogue-2026-09-27:ex249"
   },
   "nodes": [
     [
@@ -1591,6 +1619,132 @@
       "question",
       "How should multiple independent, conflicting or defeasible warrants combine?",
       "defeasible-warrant"
+    ],
+    [
+      "project-management-goal",
+      "goal",
+      "Keep the inquiry on its main path, document deferred extensions, and avoid losing the forest for the trees.",
+      "forest-trees"
+    ],
+    [
+      "three-project-model",
+      "claim",
+      "The work is best separated into a Formal Epistemic Reasoning Meta-Model, an Inquiry Representation Model, and a useful Inquiry System.",
+      "three-projects-user"
+    ],
+    [
+      "useful-system-priority",
+      "goal",
+      "The useful Inquiry System is the downstream project of greatest practical interest, while the formal meta-model and inquiry representation remain distinct supporting projects.",
+      "three-projects-user"
+    ],
+    [
+      "formal-epistemic-reasoning-metamodel",
+      "concept",
+      "Formal Epistemic Reasoning Meta-Model: the foundational project representing the structure of epistemic reasoning across heterogeneous regimes.",
+      "metamodel-name-status"
+    ],
+    [
+      "metamodel-provisionally-complete",
+      "claim",
+      "The Formal Epistemic Reasoning Meta-Model is provisionally architecturally complete but not theoretically closed.",
+      "metamodel-name-status"
+    ],
+    [
+      "closeout-paper-goal",
+      "goal",
+      "Preserve the long-session theory in a canonical closeout and an arXiv-style paper before continuing candidate-generation research.",
+      "closeout-paper-request"
+    ],
+    [
+      "q-prior-art-comparison",
+      "question",
+      "How much of the meta-model and its integration already exists in prior work?",
+      "novelty-doubt"
+    ],
+    [
+      "novelty-position",
+      "claim",
+      "Most components and much integration have strong precedents; any novelty claim should be conservative and established only by systematic comparison.",
+      "novelty-position"
+    ],
+    [
+      "adoption-over-novelty",
+      "claim",
+      "Novelty is not a project objective; mature off-the-shelf theory is preferable to reinventing machinery.",
+      "novelty-not-goal"
+    ],
+    [
+      "q-candidate-landscape",
+      "question",
+      "Which mature frameworks already cover candidate generation and its integration?",
+      "candidate-landscape-request"
+    ],
+    [
+      "candidate-landscape-result",
+      "claim",
+      "Candidate generation has mature precedents across creative systems, synthesis/CEGIS, ILP/MIL, anti-unification, abduction, automated theory formation, conceptual blending and Bayesian program learning.",
+      "candidate-landscape"
+    ],
+    [
+      "typed-generative-regime",
+      "hypothesis",
+      "A candidate-generation regime can be factored into artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, with strategy/control separate.",
+      "typed-generative-system"
+    ],
+    [
+      "generative-transformation",
+      "concept",
+      "A generative-system transformation changes the represented generative regime itself, such as its language, artifact ontology, bias, operators or evaluators.",
+      "typed-generative-system"
+    ],
+    [
+      "framework-mapping-result",
+      "claim",
+      "CEGIS, MIL, anti-unification, HR and conceptual blending fit the typed candidate-generation interface without another top-level coordinate.",
+      "framework-mappings"
+    ],
+    [
+      "q-cross-framework-glue",
+      "question",
+      "What existing architecture should coordinate heterogeneous candidate generators and evaluators?",
+      "well-trodden-glue"
+    ],
+    [
+      "typed-blackboard-orchestration",
+      "hypothesis",
+      "Use a typed blackboard, heterogeneous generator/evaluator portfolio, explicit controller, reflective transformations and warrant rather than a new universal orchestration calculus.",
+      "blackboard-pattern"
+    ],
+    [
+      "q-guarantee-transport",
+      "question",
+      "When a generator's artifact is translated into another representation, which guarantees survive the translation?",
+      "blackboard-pattern"
+    ],
+    [
+      "certified-guarantee-transport",
+      "claim",
+      "Artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise the target artifact must be re-warranted.",
+      "certified-transport"
+    ],
+    [
+      "guarantee-transport-prior-art",
+      "claim",
+      "Institutions/DOL/Hets, MMT theory morphisms, abstract interpretation and contract/refinement theory cover much of formal guarantee transport.",
+      "guarantee-transport-prior-art"
+    ],
+    [
+      "q-handoff-readiness",
+      "question",
+      "Is the long founding inquiry sufficiently documented and updated for a fresh-agent handoff?",
+      "handoff-request"
+    ],
+    [
+      "inquiry-graph-update-goal",
+      "goal",
+      "Update the inquiry graph with the later conversation arc before handing work to a fresh agent.",
+      "graph-update-request"
     ]
   ],
   "relations": [
@@ -4996,6 +5150,198 @@
         "q-warrant-composition"
       ],
       "defeasible-warrant"
+    ],
+    [
+      "scope",
+      [
+        "current-meta-model"
+      ],
+      [
+        "project-management-goal"
+      ],
+      "forest-trees"
+    ],
+    [
+      "distinguish",
+      [
+        "current-meta-model"
+      ],
+      [
+        "three-project-model",
+        "useful-system-priority"
+      ],
+      "three-projects-user"
+    ],
+    [
+      "name",
+      [
+        "three-project-model"
+      ],
+      [
+        "formal-epistemic-reasoning-metamodel"
+      ],
+      "metamodel-name-status"
+    ],
+    [
+      "summarize",
+      [
+        "formal-epistemic-reasoning-metamodel"
+      ],
+      [
+        "metamodel-provisionally-complete"
+      ],
+      "metamodel-name-status"
+    ],
+    [
+      "scope",
+      [
+        "metamodel-provisionally-complete"
+      ],
+      [
+        "closeout-paper-goal"
+      ],
+      "closeout-paper-request"
+    ],
+    [
+      "ask",
+      [
+        "formal-epistemic-reasoning-metamodel"
+      ],
+      [
+        "q-prior-art-comparison"
+      ],
+      "novelty-doubt"
+    ],
+    [
+      "clarify",
+      [
+        "q-prior-art-comparison"
+      ],
+      [
+        "novelty-position"
+      ],
+      "novelty-position"
+    ],
+    [
+      "reframe",
+      [
+        "q-prior-art-comparison"
+      ],
+      [
+        "adoption-over-novelty"
+      ],
+      "novelty-not-goal"
+    ],
+    [
+      "ask",
+      [
+        "candidate-generation-interface"
+      ],
+      [
+        "q-candidate-landscape"
+      ],
+      "candidate-landscape-request"
+    ],
+    [
+      "connect",
+      [
+        "q-candidate-landscape"
+      ],
+      [
+        "candidate-landscape-result"
+      ],
+      "candidate-landscape"
+    ],
+    [
+      "refine",
+      [
+        "candidate-generation-interface"
+      ],
+      [
+        "typed-generative-regime",
+        "generative-transformation"
+      ],
+      "typed-generative-system"
+    ],
+    [
+      "test",
+      [
+        "typed-generative-regime"
+      ],
+      [
+        "framework-mapping-result"
+      ],
+      "framework-mappings"
+    ],
+    [
+      "ask",
+      [
+        "framework-mapping-result"
+      ],
+      [
+        "q-cross-framework-glue"
+      ],
+      "well-trodden-glue"
+    ],
+    [
+      "connect",
+      [
+        "q-cross-framework-glue"
+      ],
+      [
+        "typed-blackboard-orchestration"
+      ],
+      "blackboard-pattern"
+    ],
+    [
+      "ask",
+      [
+        "typed-blackboard-orchestration"
+      ],
+      [
+        "q-guarantee-transport"
+      ],
+      "blackboard-pattern"
+    ],
+    [
+      "connect",
+      [
+        "q-guarantee-transport"
+      ],
+      [
+        "guarantee-transport-prior-art"
+      ],
+      "guarantee-transport-prior-art"
+    ],
+    [
+      "clarify",
+      [
+        "guarantee-transport-prior-art"
+      ],
+      [
+        "certified-guarantee-transport"
+      ],
+      "certified-transport"
+    ],
+    [
+      "ask",
+      [
+        "project-management-goal"
+      ],
+      [
+        "q-handoff-readiness"
+      ],
+      "handoff-request"
+    ],
+    [
+      "scope",
+      [
+        "q-handoff-readiness"
+      ],
+      [
+        "inquiry-graph-update-goal"
+      ],
+      "graph-update-request"
     ]
   ],
   "stances": [
@@ -5288,6 +5634,56 @@
       "warrant-target-collapse",
       "posits",
       "warrant-polymorphic-action"
+    ],
+    [
+      "project-management-goal",
+      "posits",
+      "forest-trees"
+    ],
+    [
+      "three-project-model",
+      "posits",
+      "three-projects-user"
+    ],
+    [
+      "useful-system-priority",
+      "posits",
+      "three-projects-user"
+    ],
+    [
+      "closeout-paper-goal",
+      "posits",
+      "closeout-paper-request"
+    ],
+    [
+      "q-prior-art-comparison",
+      "questions",
+      "novelty-doubt"
+    ],
+    [
+      "adoption-over-novelty",
+      "posits",
+      "novelty-not-goal"
+    ],
+    [
+      "q-candidate-landscape",
+      "questions",
+      "candidate-landscape-request"
+    ],
+    [
+      "q-cross-framework-glue",
+      "questions",
+      "well-trodden-glue"
+    ],
+    [
+      "q-handoff-readiness",
+      "questions",
+      "handoff-request"
+    ],
+    [
+      "inquiry-graph-update-goal",
+      "posits",
+      "graph-update-request"
     ]
   ],
   "question_updates": [
@@ -5464,6 +5860,50 @@
       "warrant-judgment",
       [
         "warrant-judgment"
+      ]
+    ],
+    [
+      "q-prior-art-comparison",
+      "answered",
+      "novelty-position",
+      [
+        "adoption-over-novelty"
+      ]
+    ],
+    [
+      "q-candidate-landscape",
+      "answered",
+      "framework-mappings",
+      [
+        "candidate-landscape-result",
+        "typed-generative-regime",
+        "framework-mapping-result"
+      ]
+    ],
+    [
+      "q-cross-framework-glue",
+      "answered",
+      "blackboard-pattern",
+      [
+        "typed-blackboard-orchestration"
+      ]
+    ],
+    [
+      "q-guarantee-transport",
+      "answered",
+      "certified-transport",
+      [
+        "certified-guarantee-transport",
+        "guarantee-transport-prior-art"
+      ]
+    ],
+    [
+      "q-candidate-generation-factorization",
+      "answered",
+      "framework-mappings",
+      [
+        "typed-generative-regime",
+        "framework-mapping-result"
       ]
     ]
   ]
