@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "1ebedd3209f3aee75efbdb790400adade450968e",
-  "curation_git_blob": "3f403fa0e6a2b9fa71319145c168deaaa64345bf",
+  "source_git_blob": "c2575ccae9cd41b569ed558deb32c13470c7b3bc",
+  "curation_git_blob": "b9077a04202f470b85566dbed6c1c724a88dadcd",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "62 visible prose/research-update turns are represented by 121 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 454-annotation inquiry checkpoint was not rerun as a full graph suite after the mini-megamodel additions."
+    "67 visible prose/research-update turns are represented by 126 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 477-annotation inquiry checkpoint was not rerun as a full graph suite after the certified CQL additions."
   ],
-  "test_git_blob": "a7597dd44193d169bee1f8556dec12d47108b59e",
+  "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
   "current_checkpoint": {
-    "source_messages": 121,
-    "nodes": 158,
-    "relations": 135,
-    "moves": 64,
-    "stance_events": 34,
-    "question_events": 63,
-    "questions": 32,
+    "source_messages": 126,
+    "nodes": 166,
+    "relations": 142,
+    "moves": 68,
+    "stance_events": 35,
+    "question_events": 66,
+    "questions": 33,
     "review": {
-      "proposed": 454,
+      "proposed": 477,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "mini-megamodel structural expectations checked in sandbox; full inquiry-graph current head not rerun after latest annotations",
+  "current_checkpoint_execution": "CQL finite composition fixture core logic checked in sandbox; full current inquiry-graph suite not rerun after latest annotations",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
@@ -76,5 +76,10 @@
   "mini_megamodel_execution": {
     "status": "structural expectations passed in sandbox",
     "scope": "fixture/path logic only; not full repository test suite"
+  },
+  "cql_chain_execution": {
+    "status": "passed finite check",
+    "claim": "sequential delta pullback equals composed delta pullback for concrete fixture; target-only department not preserved",
+    "scope": "Python mirror of CQL theorem, not execution by CQL IDE/JAR"
   }
 }
