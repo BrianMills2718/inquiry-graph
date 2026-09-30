@@ -1,0 +1,251 @@
+{
+  "schema_version": "mini-megamodel/v0",
+  "purpose": "Test whether a governed registry of native representations plus explicit mappings can answer translation/loss questions without a universal IR.",
+  "registry_owner_hypothesis": "OntoCanon-style governed library; not an authority transfer from source repositories.",
+  "representations": [
+    {
+      "id": "scientific-hypergraph-v2",
+      "kind": "scientific-semantic-model",
+      "authority": "BrianMills2718/scientific-hypergraph",
+      "revision": "248790c50475fe25b55465b92f032ebca39b8993",
+      "native_form": "Scientific Hypergraph v2 kernel + scientific profile",
+      "evidence": [
+        "wiki/reference/scientific-hypergraph-repository-map.md",
+        "wiki/reference/scientific-hypergraph-ontocanon-crosswalk.md"
+      ],
+      "notes": "Role-typed n-ary scientific semantics; native payload is richer than Foundation IR projections."
+    },
+    {
+      "id": "inquiry-graph-v1",
+      "kind": "inquiry-history-model",
+      "authority": "BrianMills2718/inquiry-graph",
+      "revision": "4897dfa69a28fae74de52744b1a290443d43f59f",
+      "native_form": "Inquiry Graph V1",
+      "evidence": [
+        "docs/formalism.md",
+        "docs/inquiry-ontology-pack-semantic-contract.md"
+      ],
+      "notes": "Source-grounded claims/questions/moves/stance/status history."
+    },
+    {
+      "id": "ontocanon-governed-carrier",
+      "kind": "governed-semantic-carrier-and-profile-system",
+      "authority": "BrianMills2718/onto-canon6",
+      "revision": "6d4952bc00a4d3224199667bd875e0833628073e",
+      "native_form": "ontology packs + profiles + governed semantic carrier",
+      "evidence": [
+        "docs/adr/0042-general-governed-semantic-carrier-and-alignment.md",
+        "docs/PACK_PROFILE_LIBRARY_OWNERSHIP_CONTRACT_2026-09-29.md"
+      ],
+      "notes": "Candidate local registry/custody layer; imported external semantics remain upstream-owned."
+    },
+    {
+      "id": "ontocanon-foundation-ir",
+      "kind": "interchange-projection",
+      "authority": "BrianMills2718/onto-canon6",
+      "revision": "6d4952bc00a4d3224199667bd875e0833628073e",
+      "native_form": "Foundation IR export family",
+      "evidence": [
+        "src/onto_canon6/exports/foundation_assertion_export.py",
+        "docs/adr/0041-govern-scientific-hypergraph-content-with-a-lossless-payload.md"
+      ],
+      "notes": "Interchange/governance envelope; some source structures require declared loss or payload retention."
+    },
+    {
+      "id": "dodaf-semantic-ir-v1",
+      "kind": "architecture-semantic-ir",
+      "authority": "BrianMills2718/dodaf",
+      "revision": "edd1f8fed969a0e927afbb4cc00e5a66c6d4d5ff",
+      "native_form": "dodaf.semantic-ir.v1",
+      "evidence": [
+        "semantic_authority/ir.py",
+        "docs/current/SEMANTIC_PATH_CONVERGENCE.md"
+      ],
+      "notes": "Canonical DoDAF-facing semantic IR with separate projection authority."
+    },
+    {
+      "id": "representation-router-viewspec",
+      "kind": "human-facing-view-specification",
+      "authority": "brianmills-spec/representation-router",
+      "revision": "b8b1b78a3d92a629fdfc2dcc3ad9e595893b7365",
+      "native_form": "ViewSpec / CollectionSpec / SurfaceSpec",
+      "evidence": [
+        "README.md",
+        "schemas/view-spec.schema.json"
+      ],
+      "notes": "Task-specific view over truth owned elsewhere; not semantic truth or translation authority."
+    },
+    {
+      "id": "knowledgework-logical-model",
+      "kind": "logical-data-model",
+      "authority": "BrianMills2718/knowledgework",
+      "revision": "6ceb5065dde40a93d2ae4427adb69542e39b1a20",
+      "native_form": "HKSC logical model",
+      "evidence": [
+        "README.md",
+        "hks_compiler1.py"
+      ],
+      "notes": "Demonstration source model used for multi-backend generation."
+    },
+    {
+      "id": "knowledgework-postgresql-schema",
+      "kind": "relational-schema",
+      "authority": "BrianMills2718/knowledgework",
+      "revision": "6ceb5065dde40a93d2ae4427adb69542e39b1a20",
+      "native_form": "generated PostgreSQL DDL",
+      "evidence": [
+        "README.md",
+        "2-multi-backend-translation/postgresql_generator.py"
+      ],
+      "notes": "Backend-specific relational realization."
+    }
+  ],
+  "mappings": [
+    {
+      "id": "sh-v2-to-ontocanon-governed-payload",
+      "source": "scientific-hypergraph-v2",
+      "target": "ontocanon-governed-carrier",
+      "status": "implemented-bounded",
+      "mapping_kind": "governed-payload-attachment",
+      "direction": "forward",
+      "evidence": [
+        "BrianMills2718/scientific-hypergraph@248790c50475fe25b55465b92f032ebca39b8993:wiki/reference/scientific-hypergraph-repository-map.md",
+        "BrianMills2718/onto-canon6@6d4952bc00a4d3224199667bd875e0833628073e:docs/adr/0041-govern-scientific-hypergraph-content-with-a-lossless-payload.md"
+      ],
+      "preserves": [
+        "exact native payload bytes/hash",
+        "source provenance",
+        "governed identity/envelope"
+      ],
+      "losses": [],
+      "guarantee_transport": "native semantics remain in retained payload; no blanket conversion guarantee",
+      "composition_policy": "manual-only",
+      "notes": "This is custody/attachment, not normalization into the carrier."
+    },
+    {
+      "id": "sh-v2-to-foundation-ir",
+      "source": "scientific-hypergraph-v2",
+      "target": "ontocanon-foundation-ir",
+      "status": "implemented-bounded",
+      "mapping_kind": "declared-lossy-projection",
+      "direction": "forward",
+      "evidence": [
+        "BrianMills2718/scientific-hypergraph@248790c50475fe25b55465b92f032ebca39b8993:wiki/reference/scientific-hypergraph-ontocanon-crosswalk.md",
+        "BrianMills2718/onto-canon6@6d4952bc00a4d3224199667bd875e0833628073e:docs/adr/0041-govern-scientific-hypergraph-content-with-a-lossless-payload.md"
+      ],
+      "preserves": [
+        "declared Foundation-compatible entity/value projection",
+        "link back to governed/native payload"
+      ],
+      "losses": [
+        "fixture/version-specific structure not expressible in selected Foundation IR version; exporter must emit/refuse via loss policy"
+      ],
+      "guarantee_transport": "none by default; preserved claims require explicit exporter/version-specific proof",
+      "composition_policy": "forbid-unless-certified",
+      "notes": "Foundation IR is explicitly not the sole semantic authority for Scientific Hypergraph."
+    },
+    {
+      "id": "inquiry-v1-to-ontocanon-pack-profile",
+      "source": "inquiry-graph-v1",
+      "target": "ontocanon-governed-carrier",
+      "status": "design-mapped-not-executable",
+      "mapping_kind": "pack-profile-translation",
+      "direction": "forward",
+      "evidence": [
+        "BrianMills2718/onto-canon6@6d4952bc00a4d3224199667bd875e0833628073e:docs/INQUIRY_PACK_PROFILE_TRANSLATION_DRAFT_2026-09-29.md"
+      ],
+      "preserves": [
+        "many relation signatures",
+        "role cardinalities",
+        "vocabulary shape",
+        "source-grounding intent"
+      ],
+      "losses": [
+        "first-class RoleBinding target not established",
+        "some heterogeneous participant kinds/global validators/profile alignment policy not yet represented cleanly"
+      ],
+      "guarantee_transport": "none until carrier/profile gaps are closed and validated",
+      "composition_policy": "forbid",
+      "notes": "Useful counterexample: cataloged mapping exists, but it is not executable and must not appear as a valid translation path."
+    },
+    {
+      "id": "dodaf-ir-to-fit-for-purpose-projections",
+      "source": "dodaf-semantic-ir-v1",
+      "target": "representation-router-viewspec",
+      "status": "architecturally-compatible-not-direct-adapter",
+      "mapping_kind": "semantic-projection-to-human-view",
+      "direction": "forward",
+      "evidence": [
+        "BrianMills2718/dodaf@edd1f8fed969a0e927afbb4cc00e5a66c6d4d5ff:docs/ROADMAP.md",
+        "brianmills-spec/representation-router@b8b1b78a3d92a629fdfc2dcc3ad9e595893b7365:README.md"
+      ],
+      "preserves": [
+        "stable semantic identity is required by both architectures",
+        "view must remain a projection over authoritative truth"
+      ],
+      "losses": [
+        "no verified direct adapter between these exact repositories is asserted"
+      ],
+      "guarantee_transport": "none",
+      "composition_policy": "forbid",
+      "notes": "Registered as an architectural seam, not as an implemented translator."
+    },
+    {
+      "id": "knowledgework-logical-to-postgresql",
+      "source": "knowledgework-logical-model",
+      "target": "knowledgework-postgresql-schema",
+      "status": "implemented-demo",
+      "mapping_kind": "backend-schema-generation",
+      "direction": "forward",
+      "evidence": [
+        "BrianMills2718/knowledgework@6ceb5065dde40a93d2ae4427adb69542e39b1a20:README.md",
+        "BrianMills2718/knowledgework@6ceb5065dde40a93d2ae4427adb69542e39b1a20:2-multi-backend-translation/postgresql_generator.py"
+      ],
+      "preserves": [
+        "logical entities/relationships as implemented by the demo generator",
+        "declared relational constraints emitted by generator"
+      ],
+      "losses": [
+        "native operations/semantics not meaningful in relational backend may require backend-specific encoding",
+        "no general round-trip equivalence theorem claimed"
+      ],
+      "guarantee_transport": "demo behavior only; no universal semantics-preservation theorem",
+      "composition_policy": "forbid-unless-certified",
+      "notes": "Evidence that useful translation is representation-pair-specific, not proof of a universal IR."
+    }
+  ],
+  "external_prior_art_profiles": [
+    {
+      "id": "iso-11179-35",
+      "role": "model/metamodel registry and mapping semantics",
+      "url": "https://www.iso.org/standard/81727.html"
+    },
+    {
+      "id": "iso-19763-mfi",
+      "role": "metamodel framework for interoperability / registry family",
+      "url": "https://www.iso.org/standard/84749.html"
+    },
+    {
+      "id": "omg-dol",
+      "role": "heterogeneous formal OMS and mappings",
+      "url": "https://www.omg.org/dol/"
+    },
+    {
+      "id": "hets",
+      "role": "heterogeneous logic/tool/mapping execution",
+      "url": "https://github.com/spechub/Hets"
+    },
+    {
+      "id": "cql",
+      "role": "schema/data migration for database-shaped representations",
+      "url": "https://categoricaldata.net/CQL/"
+    }
+  ],
+  "questions": [
+    "Which representations have implemented translation paths?",
+    "Which paths are only design mappings or architectural seams?",
+    "What is explicitly lost on each mapping?",
+    "Which mappings transport guarantees, and under what certificate?",
+    "Where is there no justified path?"
+  ]
+}
