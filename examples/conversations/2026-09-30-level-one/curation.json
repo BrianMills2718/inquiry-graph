@@ -5224,6 +5224,61 @@
         "open"
       ],
       {}
+    ],
+    [
+      "N",
+      [
+        "c-registry-crosswalk-result",
+        "hypothesis",
+        "Initial field-level crosswalk suggests OntoCanon already covers much registry identity/version/provenance/dependency/validation metadata; likely remaining alignment work is standardized designation/definition/classification, explicit model↔metamodel links, first-class mapping artifacts, and registry lifecycle/authority vocabulary.",
+        "t57"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r127",
+        "answers",
+        "c-registry-crosswalk-result",
+        "q-registry-crosswalk",
+        "t57"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m60",
+        "summarize",
+        "t57",
+        [
+          "q-registry-crosswalk"
+        ],
+        [
+          "c-registry-crosswalk-result"
+        ]
+      ],
+      {
+        "after": [
+          "m59"
+        ]
+      }
+    ],
+    [
+      "Q",
+      [
+        "e60",
+        "t57",
+        "q-registry-crosswalk",
+        "answered",
+        [
+          "c-registry-crosswalk-result"
+        ]
+      ],
+      {
+        "resolution_basis": "Initial crosswalk only; detailed standards-field mapping remains implementation/adoption work, not a new architecture problem."
+      }
     ]
   ]
 }
