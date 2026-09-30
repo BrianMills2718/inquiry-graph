@@ -196,3 +196,8 @@ Generic property-based, model-based, metamorphic and differential testing furthe
 ### Current capture maintenance
 
 Brian explicitly asked to ensure this conversation is represented in Inquiry Graph. This branch is the active capture; it has been updated incrementally through the Level-1 reasoning work, representation-interoperability adoption audit, mini-megamodel/CQL falsifier, Hypergraph Schema IR/Factgraph disposition, and the final Factgraph residual-niche pressure test.
+
+
+### Current capture maintenance
+
+Brian explicitly asked to ensure this conversation remains represented in Inquiry Graph. This existing branch is the active capture and has been updated through the Level-1 reasoning work, representation-interoperability adoption audit, mini-megamodel/CQL falsifier, Hypergraph Schema IR/Factgraph disposition, and Factgraph residual-niche pressure test.
