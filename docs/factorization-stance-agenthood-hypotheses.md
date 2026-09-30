@@ -214,6 +214,24 @@ If the query itself changes materially, q1 -> q2, represent that as an explicit 
 
 This is compatible with Inquiry Graph's existing reframes semantics.
 
+### Prior-art dispatch for representation comparison
+
+Do not use one local preservation relation for every case. The appropriate
+formal test depends on the representation problem:
+
+- logical-language/theory translation: institutions/MMT;
+- schema/data translation and query preservation: schema mappings/data exchange;
+- abstraction/refinement: abstract interpretation;
+- synchronized editable views: bidirectional transformations/lenses;
+- global inventory of models/mappings/transformations: megamodeling/global model
+  management.
+
+See [representation-management-prior-art.md](representation-management-prior-art.md).
+
+The Inquiry contribution is to record which representation/transformation is
+being proposed, which query it serves, and what warrants relying on the
+domain-appropriate preservation result.
+
 ## 9. When a representation change is problematic
 
 A representation change is potentially inquiry-distorting when it removes or conflates distinctions required by the query or warrant conditions.
