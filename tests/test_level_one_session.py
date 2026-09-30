@@ -27,9 +27,9 @@ def test_native_v1_validation(graph):
 
 def test_each_visible_prose_turn_has_a_source(graph):
     turns = {int(m.id.split(":t")[1][:2]) for m in graph.conversations[0].messages}
-    assert turns == set(range(1, 33))
+    assert turns == set(range(1, 34))
     # Turn representation is not a claim of complete transcript/token coverage.
-    assert len(graph.conversations[0].messages) == 88
+    assert len(graph.conversations[0].messages) == 89
     assert graph.conversations[0].source_kind == "curated_excerpts"
     assert "neither a complete export" in graph.conversations[0].coverage_note
 
@@ -40,7 +40,7 @@ def test_sources_have_no_invented_native_ids_or_times(graph):
 
 
 def test_all_annotations_await_review(graph):
-    assert stats(graph)["review"] == {"proposed": 282, "confirmed": 0, "rejected": 0}
+    assert stats(graph)["review"] == {"proposed": 285, "confirmed": 0, "rejected": 0}
 
 
 def test_proceed_is_not_theory_adoption(graph):
