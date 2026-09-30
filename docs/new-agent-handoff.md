@@ -1,8 +1,8 @@
 # New Agent Handoff — Inquiry Graph
 
-> **Prepared:** 2026-09-29  
+> **Prepared:** 2026-09-30  
 > **Repository:** `BrianMills2718/inquiry-graph` (private)  
-> **Current main at review:** `fd85714a77e807a7b064426978ca4c0d5dcec332`  
+> **Current main:** verify live before making changes; do not rely on a frozen SHA in this handoff.  
 > **Purpose:** source-grounded inquiry representation and the future useful Inquiry System.
 
 ## 1. Repository split
@@ -38,29 +38,29 @@ It is intentionally not a truth engine and does not infer private/user beliefs f
 
 ## 3. Current founding dataset
 
-Current curated seed:
+Current curated seed after the 2026-09-30 continuation:
 
-- 219 source excerpts/messages
-- 229 content nodes
+- 247 source excerpts/messages
+- 250 content nodes
 - 250 relations
-- 185 inquiry moves
-- 58 stance events
-- 76 question events
-- 54 distinct questions
-- 798 proposed annotations
+- 204 inquiry moves
+- 68 stance events
+- 86 question events
+- 59 distinct questions
+- 858 proposed annotations
 - 0 confirmed / 0 rejected
 
-This is a curated reconstruction, **not** a reconciled full ChatGPT export.
+This is a curated reconstruction, **not** a reconciled full ChatGPT export. The 247/250/204 continuation was structurally cross-reference checked in the GitHub update path but has not yet been reproduced by `examples/build_seed.py` and the full suite because the execution device was offline at that update.
 
 ## 4. Immediate product priority — issue #38
 
 The main product/scientific question is:
 
-> Does the representation actually help a person or model navigate, audit, resume, or improve an inquiry better than the transcript alone?
+> Does the representation help an AI recover Brian's attributed positions, rationale, open questions, dependencies and tensions when the relevant history cannot all fit in context?
 
 Issue #38 is the primary active product track.
 
-**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on reasons behind decisions and what happened to side lines. Next: record decision reasons/outcomes and deferred-branch rationale, rerun the AI-reader pilot, then test multi-conversation histories too large for one context window. **The intended reader is always AI; do not create a human-reader evaluation track.**
 
 Start with the smallest useful test, not a polished UI.
 
@@ -82,12 +82,18 @@ Prefer measurable outcomes:
 - false question closure;
 - time/steps to recover context.
 
-## 5. Source-integrity priority — issue #3
+## 5. Cross-conversation architecture boundary
+
+`inquiry-graph` is the per-conversation producer. Cross-source identity/alignment, governed assertions and tension/conflict detection belong in the separate `onto-canon6` direction already identified in project status. Do not turn inquiry-graph into a second cross-conversation canonical store.
+
+The useful-system target is therefore a pipeline: per-conversation attributed inquiry structure from inquiry-graph, then cross-conversation identity/tension integration downstream.
+
+## 6. Source-integrity priority — issue #3
 
 When the full conversation export is available:
 
 1. import the active branch;
-2. reconcile the 219 curated excerpts against exact source message IDs/offsets;
+2. reconcile the 247 curated excerpts against exact source message IDs/offsets;
 3. preserve previous mappings/review history;
 4. identify omitted transitions/branches;
 5. adjudicate interpretation separately from quote validity;
@@ -96,7 +102,7 @@ When the full conversation export is available:
 
 Do not fabricate original message IDs or timestamps.
 
-## 6. Hosted CI — issue #2
+## 7. Hosted CI — issue #2
 
 Hosted GitHub Actions still fails/cancels before runner steps/logs.
 
@@ -104,9 +110,9 @@ Treat this as infrastructure debt, not an application failure.
 
 Current local post-split verification is green; see `docs/verification.md`.
 
-## 7. Fresh post-split verification
+## 8. Verification state
 
-Verified from a fresh native-Windows clone of current reviewed `main`:
+Last fully executed post-split native-Windows baseline:
 
 - Python 3.14.7
 - editable `.[dev]` install succeeded
@@ -116,9 +122,9 @@ Verified from a fresh native-Windows clone of current reviewed `main`:
 - graph validation: **0 errors / 0 warnings**
 - `pip check`: clean
 
-This is the authoritative verification for the current product-only repository after the theory split.
+The later 2026-09-30 curated-seed continuation now records 247 excerpts / 250 nodes / 204 moves, but that continuation has **not** yet had the build/artifact/test commands rerun. The first execution-capable agent should reproduce it before calling those new counts fully verified.
 
-## 8. Open PRs that are separate trajectories
+## 9. Open PRs that are separate trajectories
 
 ### PR #8 — formal-inquiry-substrate
 
@@ -132,7 +138,7 @@ Stacked on #8; includes the Scientific Hypergraph / OntoCanon crosswalk.
 
 They predate the current main line and require a deliberate architecture/integration decision.
 
-## 9. Theory status
+## 10. Theory status
 
 The theory repository is `BrianMills2718/epistemic-warrant`.
 
@@ -142,7 +148,7 @@ If you are assigned theory work, switch repositories and follow that repository'
 
 Do not use the stale duplicated theory issues formerly present in this repository as the source of truth.
 
-## 10. Stop rules
+## 11. Stop rules
 
 Do not:
 
@@ -155,7 +161,7 @@ Do not:
 - merge PR #8/#15 casually;
 - claim hosted CI passed when no runner executed.
 
-## 11. Recommended next-agent tracks
+## 12. Recommended next-agent tracks
 
 Choose one:
 
@@ -165,8 +171,8 @@ Work issue #38. This is the default product recommendation.
 ### Track B — source reconciliation
 Work issue #3 when the full export is available.
 
-### Track C — product UI
-Only after a usefulness pilot identifies which views/workflows actually matter.
+### Track C — machine-consumable product workflow
+Only after the AI-reader usefulness pilot identifies which retrieval/representation workflows matter. Do not optimize for a human-facing UI.
 
 ### Track D — old formal/hypergraph trajectory
 Review PR #8 and stacked #15 only if explicitly requested.
@@ -174,21 +180,30 @@ Review PR #8 and stacked #15 only if explicitly requested.
 ### Track E — theory
 Switch to `epistemic-warrant`; do not continue theory in this repository.
 
-## 12. Canonical product documents
+## 13. Canonical product documents
 
 1. `docs/new-agent-handoff.md`
-2. `docs/project-status.md`
-3. `docs/roadmap.md`
-4. `docs/verification.md`
-5. `docs/formalism.md`
-6. `docs/requirements.md`
-7. `docs/annotation-guide.md`
-8. `docs/evaluation.md`
-9. `docs/architecture.md`
-10. `docs/decisions/index.md`
+2. `docs/session-closeout-2026-09-29.md`
+3. `docs/project-status.md`
+4. `docs/roadmap.md`
+5. `docs/verification.md`
+6. `docs/formalism.md`
+7. `docs/requirements.md`
+8. `docs/annotation-guide.md`
+9. `docs/evaluation.md`
+10. `docs/architecture.md`
+11. `docs/decisions/index.md`
 
 Historical theory documents were moved to `epistemic-warrant`.
 
-## 13. One-sentence handoff
+## 14. Final session audit — 2026-09-30
 
-**Inquiry Graph is now a product/inquiry-representation repository: test whether the representation is useful (issue #38), reconcile the source when available (issue #3), and keep foundational theory in `epistemic-warrant`.**
+The long founding session is now durably captured across this repository and `epistemic-warrant`. The late-session arc—meta-model closeout, prior-art/adoption stance, candidate-generation framework mappings, blackboard-style orchestration, certified guarantee transport, and handoff preparation—is included in the curated seed and in `docs/session-closeout-2026-09-29.md`.
+
+Plans were re-audited against live `main` before handoff. Product sequencing remains: **issue #38 usefulness first, issue #3 source reconciliation second, issue #2 hosted CI as maintenance**. The theory sequencing remains in `epistemic-warrant`: **issue #2 semantic correctness first, issue #1 acceptance/warrant composition second, issue #5 comparison/paper normalization independently**.
+
+The one immediate operational loose end in this repository is to rerun the seed build/artifact/test verification for the 2026-09-30 continuation when execution is available.
+
+## 15. One-sentence handoff
+
+**Inquiry Graph is the per-conversation, source-grounded producer for an AI-facing inquiry system: first reproduce the 2026-09-30 seed continuation, then improve rationale/outcome capture and rerun issue #38; keep foundational theory in `epistemic-warrant` and cross-source canonicalization downstream.**

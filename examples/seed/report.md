@@ -1,6 +1,6 @@
 # Inquiry graph — first-pass report
 
-{"conversations": 1, "source_messages": 219, "nodes": 229, "relations": 250, "moves": 185, "stance_events": 58, "question_events": 76, "questions": 54, "review": {"proposed": 798, "confirmed": 0, "rejected": 0}}
+{"conversations": 1, "source_messages": 247, "nodes": 250, "relations": 250, "moves": 204, "stance_events": 68, "question_events": 86, "questions": 59, "review": {"proposed": 858, "confirmed": 0, "rejected": 0}}
 
 Structural validity does not establish semantic correctness or truth. Annotations retain their review status.
 
@@ -8,7 +8,7 @@ Structural validity does not establish semantic correctness or truth. Annotation
 
 **From inference taxonomy to a persistent inquiry graph**
 
-Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace. Continuation excerpts ex210–ex221 capture the warrant/license clarification and the post-research refactoring of warrant around support, epistemic action, license, guarantee and defeasible defeat.
+Selected verbatim excerpts from the visible user/assistant dialogue, curated by the assistant on 2026-09-27. This is NOT the full conversation export, NOT an independently adjudicated gold dataset, and NOT a record of hidden reasoning. Excerpts omit repetitions, backchannels and unrelated voice transcription interruptions. Ordinal means curated excerpt order, not original message/turn index. Original message IDs and timestamps are unknown. Reconcile to the full export later using exact text matching and manual review. The philosophical assertions are recorded as expressed positions, not certified truths. Post-V1 continuation excerpts ex075–ex127 extend the curated reasoning trajectory through the epistemic-transition factorization; they remain selected snippets rather than a complete transcript. Continuation excerpts ex128–ex172 capture the self-application/candidate-generation discussion and the institution-theory plus ATMS assumption-context refinement. They remain selected visible-dialogue snippets, not a complete transcript. Continuation excerpts ex173–ex199 capture the candidate-type stress test, MMT representation-substrate result, canonical-factorization strategy discussion, and reflective/self-applicative conversation-analysis application. Continuation excerpts ex200–ex209 capture the constrained-search candidate-generation interface and approval to instantiate a worked canonical-factorization trace. Continuation excerpts ex210–ex221 capture the warrant/license clarification and the post-research refactoring of warrant around support, epistemic action, license, guarantee and defeasible defeat. Continuation excerpts ex222–ex249 capture the later warrant-regime benchmark expansion, project-level reframing, meta-model closeout/paper, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and final handoff/update request.
 
 ## Open agenda
 
@@ -30,6 +30,14 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 `dialogue-2026-09-27:n:q-candidate-generation-factorization` · answered · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
+### Which mature frameworks already cover candidate generation and its integration?
+`dialogue-2026-09-27:n:q-candidate-landscape` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Which mature frameworks already cover candidate generation and its integration?
+`dialogue-2026-09-27:n:q-candidate-landscape` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
 ### What is the minimal type system for generated epistemic candidates?
 `dialogue-2026-09-27:n:q-candidate-type-system` · open · proposed
 Actor: `participant:assistant` · context: `dialogue-2026-09-27`
@@ -48,6 +56,14 @@ Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### How can reusable strategies and meta-strategies be instantiated and identified in specific conversations?
 `dialogue-2026-09-27:n:q-conversation-strategy-identification` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### What existing architecture should coordinate heterogeneous candidate generators and evaluators?
+`dialogue-2026-09-27:n:q-cross-framework-glue` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### What existing architecture should coordinate heterogeneous candidate generators and evaluators?
+`dialogue-2026-09-27:n:q-cross-framework-glue` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What domain-independent structure, if any, constrains draft spaces, construction operators and generative transition relations?
@@ -96,6 +112,14 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What should be formalized next after separating state update from candidate generation?
 `dialogue-2026-09-27:n:q-generation-next` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### When a generator&#x27;s artifact is translated into another representation, which guarantees survive the translation?
+`dialogue-2026-09-27:n:q-guarantee-transport` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### Is the long founding inquiry sufficiently documented and updated for a fresh-agent handoff?
+`dialogue-2026-09-27:n:q-handoff-readiness` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### What general heuristics or formal scaffolding improve thinking across problems?
@@ -216,6 +240,14 @@ Actor: `participant:assistant` · context: `dialogue-2026-09-27`
 
 ### What established machinery should be checked before freezing the revised meta-model in documentation?
 `dialogue-2026-09-27:n:q-pre-update-research` · open · proposed
+Actor: `participant:brian` · context: `dialogue-2026-09-27`
+
+### How much of the meta-model and its integration already exists in prior work?
+`dialogue-2026-09-27:n:q-prior-art-comparison` · answered · proposed
+Actor: `participant:assistant` · context: `dialogue-2026-09-27`
+
+### How much of the meta-model and its integration already exists in prior work?
+`dialogue-2026-09-27:n:q-prior-art-comparison` · open · proposed
 Actor: `participant:brian` · context: `dialogue-2026-09-27`
 
 ### How should repeated self-application of the developing reasoning model be represented?
@@ -1405,3 +1437,117 @@ Inputs: dialogue-2026-09-27:n:warrant-judgment
 Outputs: dialogue-2026-09-27:n:defeasible-warrant-structure, dialogue-2026-09-27:n:q-epistemic-action-types, dialogue-2026-09-27:n:q-warrant-composition
 
 > Defeasible warrant requires explicit attack or defeat structure rather than assuming every certificate is monotonic.
+
+**scope** · `dialogue-2026-09-27:m:186` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:project-management-goal
+
+> Shouldn&#x27;t we just address that important boundary now? I&#x27;m just worried that we are losing the forest for the trees. But honestly, I haven&#x27;t been paying attention to what you&#x27;ve been doing, and I wouldn&#x27;t understand it in any case. So I&#x27;m relying on you as project manager
+
+**distinguish** · `dialogue-2026-09-27:m:187` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:current-meta-model
+Outputs: dialogue-2026-09-27:n:three-project-model, dialogue-2026-09-27:n:useful-system-priority
+
+> Actually, I um, there&#x27;s kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there&#x27;s kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I&#x27;m most interested in.
+
+**clarify** · `dialogue-2026-09-27:m:188` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:three-project-model
+Outputs: dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel
+
+> The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed.
+
+**summarize** · `dialogue-2026-09-27:m:189` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel
+Outputs: dialogue-2026-09-27:n:metamodel-provisionally-complete
+
+> The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed.
+
+**scope** · `dialogue-2026-09-27:m:190` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:metamodel-provisionally-complete
+Outputs: dialogue-2026-09-27:n:closeout-paper-goal
+
+> Okay, write the closeout document, but then I am gonna want to discuss the candidate generation to make sure all of these open issues are in the closeout, so it&#x27;s clear, like, where we might want to go next, and also compare what we&#x27;ve produced here to what already exists in other, like, that other people have done. And actually, before we do the candidate generation, along with the closeout, write up, like, a paper that might be submitted to something like ARXiv.
+
+**ask** · `dialogue-2026-09-27:m:191` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel
+Outputs: dialogue-2026-09-27:n:q-prior-art-comparison
+
+> Okay, how does our work compare to different work? I can&#x27;t imagine we really did much of anything new given that this is such a, you know, well-trodden field
+
+**clarify** · `dialogue-2026-09-27:m:192` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-prior-art-comparison
+Outputs: dialogue-2026-09-27:n:novelty-position
+
+> Most ingredients and much integration have strong precedents; the likely contribution is architectural factorization and interface synthesis rather than new mathematics, and even that should be treated as a hypothesis pending systematic comparison.
+
+**ask** · `dialogue-2026-09-27:m:194` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-interface
+Outputs: dialogue-2026-09-27:n:q-candidate-landscape
+
+> Okay, now let&#x27;s discuss candidate generation . And if you haven&#x27;t already done it, landscape survey, let me know
+
+**connect** · `dialogue-2026-09-27:m:195` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-candidate-landscape
+Outputs: dialogue-2026-09-27:n:candidate-landscape-result
+
+> The candidate-generation landscape includes Wiggins/Boden creative systems, program synthesis/CEGIS, ILP/MIL, anti-unification, abductive logic programming, HR theory formation, conceptual blending, and Bayesian program learning.
+
+**reframe** · `dialogue-2026-09-27:m:193` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-prior-art-comparison
+Outputs: dialogue-2026-09-27:n:adoption-over-novelty
+
+> Okay, I&#x27;m not gonna read all that, um, but just to be clear, I don&#x27;t care about novelty. And actually it&#x27;s unfortunate if what we&#x27;re doing has to be novel. I would prefer this just already existed off the shelf. But yes, I approve the path forward you recommended
+
+**reframe** · `dialogue-2026-09-27:m:196` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:candidate-generation-interface
+Outputs: dialogue-2026-09-27:n:typed-generative-regime, dialogue-2026-09-27:n:generative-transformation
+
+> Candidate generation was reframed as a typed generative system with artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, while transformational changes to the generative regime are represented separately.
+
+**test** · `dialogue-2026-09-27:m:197` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-generative-regime
+Outputs: dialogue-2026-09-27:n:framework-mapping-result
+
+> Mappings of CEGIS, Meta-Interpretive Learning, anti-unification, HR, and conceptual blending fit the revised candidate-generation interface without another top-level coordinate.
+
+**ask** · `dialogue-2026-09-27:m:198` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:framework-mapping-result
+Outputs: dialogue-2026-09-27:n:q-cross-framework-glue
+
+> Ok and I assume that is well trodden as well
+
+**connect** · `dialogue-2026-09-27:m:199` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-cross-framework-glue
+Outputs: dialogue-2026-09-27:n:typed-blackboard-orchestration
+
+> The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant.
+
+**ask** · `dialogue-2026-09-27:m:200` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:typed-blackboard-orchestration
+Outputs: dialogue-2026-09-27:n:q-guarantee-transport
+
+> The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant.
+
+**connect** · `dialogue-2026-09-27:m:201` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:q-guarantee-transport
+Outputs: dialogue-2026-09-27:n:guarantee-transport-prior-art
+
+> Guarantee transport across representations is also substantially covered by institutions/DOL/Hets, MMT theory morphisms, abstract interpretation, and contract/refinement theory.
+
+**clarify** · `dialogue-2026-09-27:m:202` · actor `participant:assistant` · proposed
+Inputs: dialogue-2026-09-27:n:guarantee-transport-prior-art
+Outputs: dialogue-2026-09-27:n:certified-guarantee-transport
+
+> The governing rule is that artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise target-side re-warrant is required.
+
+**ask** · `dialogue-2026-09-27:m:203` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:project-management-goal
+Outputs: dialogue-2026-09-27:n:q-handoff-readiness
+
+> Okay, let&#x27;s take a step back, review all the work we&#x27;ve done, make sure all our plans and documentation are updated, and then we&#x27;re going to pass off to a fresh agent once we&#x27;re ready.
+
+**scope** · `dialogue-2026-09-27:m:204` · actor `participant:brian` · proposed
+Inputs: dialogue-2026-09-27:n:q-handoff-readiness
+Outputs: dialogue-2026-09-27:n:inquiry-graph-update-goal
+
+> Okay, um, review the conversation we&#x27;ve had and update the inquiry graph.

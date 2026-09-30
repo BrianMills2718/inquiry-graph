@@ -400,3 +400,115 @@ The current warrant judgment is:
 This also repairs the earlier candidate/transition/strategy warrant list: those become instances of a common action-targeted schema rather than separate primitive warrant types. “License” is now an operational derived status, not a synonym for warrant.
 
 See [warrant-license-interface.md](https://github.com/BrianMills2718/epistemic-warrant/blob/main/docs/warrant-license-interface.md).
+
+
+## 25. Factorization generalized into a decision-sensitive reasoning strategy
+
+~~~mermaid
+flowchart LR
+ A[Canonical factorization seems broadly useful] --> B[Need activation heuristic]
+ B --> C[Probe split / merge / retype / boundary change]
+ C --> D{Could downstream decisions change?}
+ D -->|No| E[Keep current decomposition]
+ D -->|Yes| F[Run factorization analysis]
+ F --> G[Megamodeling appears as complementary prior art]
+~~~
+
+The continuation generalizes canonical factorization without turning it into a
+mandatory ceremony. The activation criterion is **decision-sensitive**: inspect
+the decomposition when a plausible alternative could materially change what the
+inquiry or plan requires, controls, assigns, sequences, or verifies. Megamodeling
+is separated from this strategy: factorization asks whether one representation
+is decomposed appropriately; megamodeling asks what representations/artifacts
+exist and how they relate.
+
+The source-grounded records for this continuation live in
+[examples/operational-games-2026-09-30](../examples/operational-games-2026-09-30/README.md).
+
+## 26. The target moved from optimal reasoning to the descriptive space of games
+
+~~~mermaid
+flowchart LR
+ A[Can warrant reduce to math/logic?] --> B[Conditional on the game/formalism]
+ B --> C[But the observer may not know the game]
+ C --> D[Game/formalism becomes a hypothesis]
+ D --> E[Do not optimize yet]
+ E --> F[Describe board / pieces / legal moves / information]
+ F --> G[Strategy is a later layer]
+~~~
+
+A major correction was to stop asking how an agent should optimally reason
+before the **game itself** had been characterized. The user explicitly separated
+“what is chess?” from “how do I beat Garry Kasparov?” Beliefs, metaphysical
+commitments, truth, warrant, and optimal policy therefore remain distinct
+objects/roles; the representation must be able to record a modeled participant's
+beliefs without endorsing them or declaring them strategically optimal.
+
+The game/formalism itself is now treated as a hypothesis available to an
+embedded observer rather than as a God-given input.
+
+## 27. Unknown games split into uncertainty, unawareness, and computational opacity
+
+~~~mermaid
+flowchart LR
+ A[Embedded black-box observer] --> B[Unknown state / rules]
+ A --> C[Unawareness of possible rules/actions]
+ A --> D[Known model but hard consequences]
+ B --> E[Games / learning with incomplete information]
+ C --> F[Games with unawareness and discovery]
+ D --> G[Computability / complexity / logical uncertainty]
+ H[White-box simulator] --> D
+ H --> I[Ground-truth rules/state available to experimenter]
+~~~
+
+The white-box/black-box distinction was refined again. A simulator designer may
+know the true rules and state while an embedded agent sees only a restricted
+interface. But even the simulator's God view does not guarantee a computational
+shortcut: exact rules can still have consequences that are expensive or
+irreducible to compute. This separates **epistemic access** from
+**computational access**.
+
+The prior-art direction also sharpened. Ordinary hidden-state uncertainty is not
+the same as uncertainty over known rule sets, and both differ from
+**unawareness**, where a relevant move/rule is not represented in the agent's
+current subjective game at all.
+
+## 28. Compositional game theory became a candidate structural foundation
+
+~~~mermaid
+flowchart LR
+ A[What is a game made of?] --> B[Open / compositional systems]
+ B --> C[Interfaces + sequential / parallel composition]
+ C --> D[Compositional / open games]
+ D --> E[Strategic semantics when agent structure is posited]
+ E --> F[Unawareness / discovery]
+ F --> G[Bounded reasoning]
+~~~
+
+Compositional game theory was identified as especially relevant to the
+**structure of games**, not merely equilibrium computation. The promising prior
+art stack is now approximately:
+
+[
+	ext{open/categorical systems}
+ightarrow
+	ext{compositional games}
+ightarrow
+	ext{unawareness/discovery}
+ightarrow
+	ext{resource-bounded reasoning}.
+]
+
+This preserves the earlier result that agenthood is not a primitive ontology:
+an open subsystem can first be represented compositionally and only later be
+given strategic/intentional semantics when that stance is useful.
+
+The current open question is therefore narrower than “invent generalized game
+theory”:
+
+> Which existing compositional/open-system formalism best represents the
+> descriptive space of games available to embedded, resource-limited observers,
+> including cases where their subjective game can itself expand through
+> discovery?
+
+No strategy-optimality criterion is adopted by this continuation.

@@ -6,6 +6,8 @@
 
 ## Current phase
 
+For the final cross-project checkpoint from the long founding session, see [session-closeout-2026-09-29.md](session-closeout-2026-09-29.md).
+
 The foundational theory has been split out.
 
 This repository should now answer: **does a source-grounded inquiry graph provide useful capabilities beyond the transcript itself?**
@@ -26,22 +28,26 @@ V1 supports conversation/export import, active-branch preservation, typed conten
 
 Current seed:
 
-- 219 source excerpts/messages;
-- 229 content nodes;
+- 247 curated source excerpts/messages;
+- 250 content nodes;
 - 250 relations;
-- 185 inquiry moves;
-- 58 stance events;
-- 76 question events;
-- 54 questions;
-- 798 proposed annotations.
+- 204 inquiry moves;
+- 68 stance events;
+- 86 question events;
+- 59 questions;
+- 858 proposed annotations.
+
+The founding seed's 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
+
+A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: 32 selected excerpts, 38 nodes, 24 relations, 26 moves, 16 stance events, and 10 question events. Its main open thread is the descriptive structure of games for embedded resource-limited observers, including uncertainty over game structure, unawareness, computational opacity, and compositional/open-system prior art.
 
 ## Priority 1 — empirical usefulness
 
 Track: issue #38.
 
-**Status 2026-09-29:** a first pilot with a model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons and outcomes in the graph and rerun the pilot, then test a human reader and a history too long for the context window.
+**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons/outcomes and deferred-branch rationale, rerun the AI-reader pilot, then move to multi-conversation histories that exceed any single model context. **Do not add a human-reader evaluation track; the intended reader is AI.**
 
-Build the smallest view/workflow needed to test whether the graph helps users or models recover:
+Build the smallest machine-consumable representation/workflow needed to test whether an AI can recover:
 
 - open questions;
 - revisions and rationale;
@@ -64,7 +70,7 @@ Until then, the seed is not source-complete.
 
 Track: issue #2.
 
-Hosted jobs fail before runner execution. Local verification is green, so this is lower-priority infrastructure debt.
+PR #67 confirms hosted CI now reaches runners and passes the base/test suite on Python 3.11 and 3.13 after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI.
 
 ## Separate open PR stack
 
@@ -80,16 +86,17 @@ If product experiments need them, depend on that package explicitly rather than 
 
 ## Verification
 
-Fresh post-split product verification on reviewed `main`:
+Latest executed product verification, on the 2026-09-30 conversation-continuation branch:
 
 - Python 3.14.7 / native Windows;
-- **60 tests passed**;
-- seed rebuild succeeded;
-- **8 artifacts** checked;
-- graph validation: 0 errors / 0 warnings;
+- **62 tests passed**;
+- founding seed rebuild: 250 nodes / 250 relations / 204 moves;
+- operational-games continuation rebuild: 38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events;
+- both graphs: 0 errors / 0 warnings;
+- **8 founding artifacts** checked;
 - dependency check clean.
 
-See `docs/verification.md`.
+See `docs/verification.md`. The run also repaired two invalid provisional move labels already present in the founding curation (`name` -> `clarify`, `refine` -> `reframe`) without widening the V1 move vocabulary.
 
 ## Stop rules
 
@@ -102,4 +109,4 @@ See `docs/verification.md`.
 
 ## One-line status
 
-**The next meaningful result should be empirical evidence that Inquiry Graph is useful, not another formal layer.**
+**The next meaningful result should be evidence that Inquiry Graph helps an AI recover Brian's attributed positions, rationale, open questions and cross-conversation tensions when the full history cannot fit in context.**

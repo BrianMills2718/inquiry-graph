@@ -1,0 +1,789 @@
+{
+  "notice": "Curated first-pass annotation of selected visible excerpts. All semantic annotations remain proposed pending human review and full-export reconciliation.",
+  "source_keys": {
+    "factorization-generalization": "dialogue-2026-09-30-operational-games:ex001",
+    "factorization-name": "dialogue-2026-09-30-operational-games:ex002",
+    "factorization-trigger-question": "dialogue-2026-09-30-operational-games:ex003",
+    "factorization-trigger-answer": "dialogue-2026-09-30-operational-games:ex004",
+    "megamodel-question": "dialogue-2026-09-30-operational-games:ex005",
+    "megamodel-role": "dialogue-2026-09-30-operational-games:ex006",
+    "factorization-role": "dialogue-2026-09-30-operational-games:ex007",
+    "game-relative-math": "dialogue-2026-09-30-operational-games:ex008",
+    "game-identification-uncertainty": "dialogue-2026-09-30-operational-games:ex009",
+    "game-as-hypothesis": "dialogue-2026-09-30-operational-games:ex010",
+    "epistemological-nihilism": "dialogue-2026-09-30-operational-games:ex011",
+    "metaphysical-certainty": "dialogue-2026-09-30-operational-games:ex012",
+    "optimization-boundary": "dialogue-2026-09-30-operational-games:ex013",
+    "belief-pluralism": "dialogue-2026-09-30-operational-games:ex014",
+    "space-of-games": "dialogue-2026-09-30-operational-games:ex015",
+    "separate-projects": "dialogue-2026-09-30-operational-games:ex016",
+    "logic-external": "dialogue-2026-09-30-operational-games:ex017",
+    "formal-empirical": "dialogue-2026-09-30-operational-games:ex018",
+    "unawareness-example": "dialogue-2026-09-30-operational-games:ex019",
+    "white-box-simulation": "dialogue-2026-09-30-operational-games:ex020",
+    "white-box-limit": "dialogue-2026-09-30-operational-games:ex021",
+    "irreducibility-god": "dialogue-2026-09-30-operational-games:ex022",
+    "known-rules-hard": "dialogue-2026-09-30-operational-games:ex023",
+    "prior-art-expectation": "dialogue-2026-09-30-operational-games:ex024",
+    "unawareness-prior-art": "dialogue-2026-09-30-operational-games:ex025",
+    "stop-inventing": "dialogue-2026-09-30-operational-games:ex026",
+    "cgt-question": "dialogue-2026-09-30-operational-games:ex027",
+    "cgt-relevance": "dialogue-2026-09-30-operational-games:ex028",
+    "agent-not-primitive": "dialogue-2026-09-30-operational-games:ex029",
+    "literature-stack": "dialogue-2026-09-30-operational-games:ex030",
+    "composition-space": "dialogue-2026-09-30-operational-games:ex031",
+    "graph-update-request": "dialogue-2026-09-30-operational-games:ex032"
+  },
+  "nodes": [
+    [
+      "factorization-analysis",
+      "method",
+      "Factorization analysis: iteratively test and repair a decomposition rather than assuming its categories are primitive.",
+      "factorization-name"
+    ],
+    [
+      "q-factorization-activation",
+      "question",
+      "When should factorization analysis be activated in planning or inquiry?",
+      "factorization-trigger-question"
+    ],
+    [
+      "decision-sensitive-activation",
+      "claim",
+      "Activate factorization analysis when an alternative decomposition could change a material downstream decision.",
+      "factorization-trigger-answer"
+    ],
+    [
+      "q-megamodeling",
+      "question",
+      "What is megamodeling, and is it relevant to the inquiry formalism?",
+      "megamodel-question"
+    ],
+    [
+      "megamodeling",
+      "reference",
+      "Megamodeling / Global Model Management as prior art for representing models/artifacts and their relationships.",
+      "megamodel-role"
+    ],
+    [
+      "megamodeling-role",
+      "claim",
+      "Megamodeling asks what representations/artifacts exist, what kinds they are, and how they relate.",
+      "megamodel-role"
+    ],
+    [
+      "factorization-role",
+      "claim",
+      "Factorization analysis asks whether a particular representation is decomposed appropriately for the active decision.",
+      "factorization-role"
+    ],
+    [
+      "game-relative-math",
+      "hypothesis",
+      "Reasoning may reduce to mathematics and logic conditional on the rules/conditions of the game being modeled.",
+      "game-relative-math"
+    ],
+    [
+      "q-game-identification",
+      "question",
+      "How can an embedded observer determine what kind of game or formalism it is in?",
+      "game-identification-uncertainty"
+    ],
+    [
+      "game-identification-uncertainty",
+      "hypothesis",
+      "An embedded observer cannot simply assume it knows which game it is playing.",
+      "game-identification-uncertainty"
+    ],
+    [
+      "game-as-hypothesis",
+      "claim",
+      "The game/formalism itself should be represented as a hypothesis.",
+      "game-as-hypothesis"
+    ],
+    [
+      "metaphysical-underdetermination",
+      "hypothesis",
+      "Global metaphysical certainty may remain unavailable while inquiry proceeds conditionally.",
+      "epistemological-nihilism"
+    ],
+    [
+      "operational-adequacy",
+      "claim",
+      "The practical target can be local, conditional, operational adequacy rather than global metaphysical certainty.",
+      "metaphysical-certainty"
+    ],
+    [
+      "optimization-boundary",
+      "claim",
+      "Defining the structure of the game should be separated from choosing an optimal strategy within it.",
+      "optimization-boundary"
+    ],
+    [
+      "belief-pluralism",
+      "hypothesis",
+      "A modeled agent can hold beliefs or philosophical commitments that differ from the analyst's truth or optimality judgments.",
+      "belief-pluralism"
+    ],
+    [
+      "space-of-games-goal",
+      "goal",
+      "Define the descriptive space of possible games before solving for optimal play.",
+      "space-of-games"
+    ],
+    [
+      "chess-structure-example",
+      "example",
+      "Chess illustrates the distinction between specifying board/pieces/legal moves and solving how to beat a strong opponent.",
+      "space-of-games"
+    ],
+    [
+      "game-description-strategy-distinction",
+      "claim",
+      "Game description and strategy/optimization are separate modeling problems.",
+      "separate-projects"
+    ],
+    [
+      "logic-external-duality",
+      "hypothesis",
+      "A game description has a formal/logical side and an external-reality side whose adequacy must be learned indirectly.",
+      "logic-external"
+    ],
+    [
+      "formal-empirical-boundary",
+      "claim",
+      "Formal consequence within a model does not by itself establish empirical adequacy of that model for external reality.",
+      "formal-empirical"
+    ],
+    [
+      "unknown-rules",
+      "concept",
+      "Uncertainty among known possible rule sets.",
+      "unawareness-example"
+    ],
+    [
+      "unawareness",
+      "concept",
+      "Failure to represent or conceive some possible rules/actions at all.",
+      "unawareness-example"
+    ],
+    [
+      "unknown-vs-unaware-example",
+      "example",
+      "Unknown rulebook versus discovering an unrepresented move such as castling.",
+      "unawareness-example"
+    ],
+    [
+      "white-box-simulation",
+      "method",
+      "Construct a white-box simulation and place embedded resource-limited agents inside it for controlled formal study.",
+      "white-box-simulation"
+    ],
+    [
+      "resource-limited-agent",
+      "concept",
+      "An embedded agent with bounded information, representation, and computation.",
+      "white-box-simulation"
+    ],
+    [
+      "white-box-computational-limit",
+      "claim",
+      "God-level simulator access can reveal the true rules/state without making all consequences computationally cheap.",
+      "white-box-limit"
+    ],
+    [
+      "computational-opacity",
+      "hypothesis",
+      "Even with a known white-box model, computational irreducibility or intractability can block efficient consequence prediction.",
+      "irreducibility-god"
+    ],
+    [
+      "known-rules-not-enough",
+      "claim",
+      "Knowing exact rules does not imply tractable access to the full game tree or consequences.",
+      "known-rules-hard"
+    ],
+    [
+      "q-prior-art-games",
+      "question",
+      "Which established formalisms already cover unknown, partially conceived, reactive, resource-bounded games?",
+      "prior-art-expectation"
+    ],
+    [
+      "games-unawareness-discovery",
+      "reference",
+      "Games with unawareness and discovery as prior art for agents whose subjective game can expand through interaction.",
+      "unawareness-prior-art"
+    ],
+    [
+      "prior-art-first",
+      "goal",
+      "Reuse established game, learning, unawareness, control, and systems formalisms before inventing a new generalized game tuple.",
+      "stop-inventing"
+    ],
+    [
+      "q-compositional-games",
+      "question",
+      "Is compositional game theory relevant to the structure of possible games?",
+      "cgt-question"
+    ],
+    [
+      "compositional-game-theory",
+      "reference",
+      "Compositional game theory / open games as prior art for composing game components through interfaces.",
+      "cgt-relevance"
+    ],
+    [
+      "cgt-relevance-claim",
+      "claim",
+      "Compositional game theory is especially relevant to the question of what a game is made of.",
+      "cgt-relevance"
+    ],
+    [
+      "agenthood-derived",
+      "claim",
+      "A subsystem need not intrinsically be an Agent; strategic semantics can be a modeling layer on an open component.",
+      "agent-not-primitive"
+    ],
+    [
+      "literature-stack",
+      "claim",
+      "Open/categorical systems, compositional games, unawareness/discovery, and bounded reasoning form a close prior-art stack for the problem.",
+      "literature-stack"
+    ],
+    [
+      "compositional-space-hypothesis",
+      "hypothesis",
+      "Compositionality may structure the space of games before strategy or optimality is introduced.",
+      "composition-space"
+    ],
+    [
+      "graph-update-goal",
+      "goal",
+      "Record this continuation as a source-grounded Inquiry Graph trajectory.",
+      "graph-update-request"
+    ]
+  ],
+  "relations": [
+    [
+      "answers",
+      "decision-sensitive-activation",
+      "q-factorization-activation",
+      "factorization-trigger-answer"
+    ],
+    [
+      "answers",
+      "megamodeling-role",
+      "q-megamodeling",
+      "megamodel-role"
+    ],
+    [
+      "distinguishes",
+      "factorization-role",
+      "megamodeling-role",
+      "factorization-role"
+    ],
+    [
+      "candidate_for",
+      "game-relative-math",
+      "q-game-identification",
+      "game-relative-math"
+    ],
+    [
+      "supports",
+      "game-identification-uncertainty",
+      "game-as-hypothesis",
+      "game-as-hypothesis"
+    ],
+    [
+      "motivates",
+      "metaphysical-underdetermination",
+      "operational-adequacy",
+      "metaphysical-certainty"
+    ],
+    [
+      "motivates",
+      "optimization-boundary",
+      "space-of-games-goal",
+      "space-of-games"
+    ],
+    [
+      "exemplifies",
+      "chess-structure-example",
+      "game-description-strategy-distinction",
+      "space-of-games"
+    ],
+    [
+      "related_to",
+      "belief-pluralism",
+      "game-description-strategy-distinction",
+      "belief-pluralism"
+    ],
+    [
+      "distinguishes",
+      "logic-external-duality",
+      "formal-empirical-boundary",
+      "formal-empirical"
+    ],
+    [
+      "distinguishes",
+      "unknown-rules",
+      "unawareness",
+      "unawareness-example"
+    ],
+    [
+      "exemplifies",
+      "unknown-vs-unaware-example",
+      "unawareness",
+      "unawareness-example"
+    ],
+    [
+      "candidate_for",
+      "white-box-simulation",
+      "space-of-games-goal",
+      "white-box-simulation"
+    ],
+    [
+      "related_to",
+      "resource-limited-agent",
+      "white-box-simulation",
+      "white-box-simulation"
+    ],
+    [
+      "supports",
+      "known-rules-not-enough",
+      "computational-opacity",
+      "known-rules-hard"
+    ],
+    [
+      "distinguishes",
+      "game-identification-uncertainty",
+      "computational-opacity",
+      "white-box-limit"
+    ],
+    [
+      "answers",
+      "literature-stack",
+      "q-prior-art-games",
+      "literature-stack"
+    ],
+    [
+      "motivates",
+      "literature-stack",
+      "prior-art-first",
+      "stop-inventing"
+    ],
+    [
+      "answers",
+      "cgt-relevance-claim",
+      "q-compositional-games",
+      "cgt-relevance"
+    ],
+    [
+      "related_to",
+      "compositional-game-theory",
+      "literature-stack",
+      "literature-stack"
+    ],
+    [
+      "supports",
+      "cgt-relevance-claim",
+      "compositional-space-hypothesis",
+      "composition-space"
+    ],
+    [
+      "related_to",
+      "agenthood-derived",
+      "compositional-space-hypothesis",
+      "agent-not-primitive"
+    ],
+    [
+      "motivates",
+      "compositional-space-hypothesis",
+      "space-of-games-goal",
+      "composition-space"
+    ],
+    [
+      "about",
+      "graph-update-goal",
+      "space-of-games-goal",
+      "graph-update-request"
+    ]
+  ],
+  "moves": [
+    [
+      "generalize",
+      [],
+      [
+        "factorization-analysis"
+      ],
+      "factorization-name"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-factorization-activation"
+      ],
+      "factorization-trigger-question"
+    ],
+    [
+      "clarify",
+      [
+        "q-factorization-activation"
+      ],
+      [
+        "decision-sensitive-activation"
+      ],
+      "factorization-trigger-answer"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-megamodeling"
+      ],
+      "megamodel-question"
+    ],
+    [
+      "distinguish",
+      [
+        "megamodeling-role",
+        "factorization-role"
+      ],
+      [
+        "megamodeling"
+      ],
+      "factorization-role"
+    ],
+    [
+      "hypothesize",
+      [],
+      [
+        "game-relative-math"
+      ],
+      "game-relative-math"
+    ],
+    [
+      "hypothesize",
+      [],
+      [
+        "game-identification-uncertainty"
+      ],
+      "game-identification-uncertainty"
+    ],
+    [
+      "clarify",
+      [
+        "game-identification-uncertainty"
+      ],
+      [
+        "game-as-hypothesis"
+      ],
+      "game-as-hypothesis"
+    ],
+    [
+      "hypothesize",
+      [],
+      [
+        "metaphysical-underdetermination"
+      ],
+      "epistemological-nihilism"
+    ],
+    [
+      "scope",
+      [
+        "optimization-boundary"
+      ],
+      [
+        "space-of-games-goal",
+        "chess-structure-example"
+      ],
+      "space-of-games"
+    ],
+    [
+      "distinguish",
+      [
+        "space-of-games-goal"
+      ],
+      [
+        "game-description-strategy-distinction"
+      ],
+      "separate-projects"
+    ],
+    [
+      "hypothesize",
+      [],
+      [
+        "logic-external-duality"
+      ],
+      "logic-external"
+    ],
+    [
+      "clarify",
+      [
+        "logic-external-duality"
+      ],
+      [
+        "formal-empirical-boundary"
+      ],
+      "formal-empirical"
+    ],
+    [
+      "distinguish",
+      [
+        "unknown-rules"
+      ],
+      [
+        "unawareness",
+        "unknown-vs-unaware-example"
+      ],
+      "unawareness-example"
+    ],
+    [
+      "propose",
+      [
+        "space-of-games-goal"
+      ],
+      [
+        "white-box-simulation",
+        "resource-limited-agent"
+      ],
+      "white-box-simulation"
+    ],
+    [
+      "distinguish",
+      [
+        "white-box-simulation"
+      ],
+      [
+        "white-box-computational-limit"
+      ],
+      "white-box-limit"
+    ],
+    [
+      "challenge",
+      [
+        "white-box-computational-limit"
+      ],
+      [
+        "computational-opacity"
+      ],
+      "irreducibility-god"
+    ],
+    [
+      "clarify",
+      [
+        "computational-opacity"
+      ],
+      [
+        "known-rules-not-enough"
+      ],
+      "known-rules-hard"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-prior-art-games"
+      ],
+      "prior-art-expectation"
+    ],
+    [
+      "connect",
+      [
+        "q-prior-art-games"
+      ],
+      [
+        "games-unawareness-discovery"
+      ],
+      "unawareness-prior-art"
+    ],
+    [
+      "scope",
+      [
+        "literature-stack"
+      ],
+      [
+        "prior-art-first"
+      ],
+      "stop-inventing"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-compositional-games"
+      ],
+      "cgt-question"
+    ],
+    [
+      "connect",
+      [
+        "q-compositional-games"
+      ],
+      [
+        "compositional-game-theory",
+        "cgt-relevance-claim"
+      ],
+      "cgt-relevance"
+    ],
+    [
+      "clarify",
+      [
+        "cgt-relevance-claim"
+      ],
+      [
+        "agenthood-derived"
+      ],
+      "agent-not-primitive"
+    ],
+    [
+      "generalize",
+      [
+        "literature-stack",
+        "cgt-relevance-claim"
+      ],
+      [
+        "compositional-space-hypothesis"
+      ],
+      "composition-space"
+    ],
+    [
+      "scope",
+      [
+        "space-of-games-goal"
+      ],
+      [
+        "graph-update-goal"
+      ],
+      "graph-update-request"
+    ]
+  ],
+  "stances": [
+    [
+      "factorization-analysis",
+      "posits",
+      "factorization-name"
+    ],
+    [
+      "q-factorization-activation",
+      "questions",
+      "factorization-trigger-question"
+    ],
+    [
+      "q-megamodeling",
+      "questions",
+      "megamodel-question"
+    ],
+    [
+      "game-relative-math",
+      "posits",
+      "game-relative-math"
+    ],
+    [
+      "game-identification-uncertainty",
+      "posits",
+      "game-identification-uncertainty"
+    ],
+    [
+      "metaphysical-underdetermination",
+      "posits",
+      "epistemological-nihilism"
+    ],
+    [
+      "optimization-boundary",
+      "posits",
+      "optimization-boundary"
+    ],
+    [
+      "belief-pluralism",
+      "posits",
+      "belief-pluralism"
+    ],
+    [
+      "space-of-games-goal",
+      "posits",
+      "space-of-games"
+    ],
+    [
+      "logic-external-duality",
+      "posits",
+      "logic-external"
+    ],
+    [
+      "white-box-simulation",
+      "posits",
+      "white-box-simulation"
+    ],
+    [
+      "computational-opacity",
+      "posits",
+      "irreducibility-god"
+    ],
+    [
+      "q-prior-art-games",
+      "questions",
+      "prior-art-expectation"
+    ],
+    [
+      "q-compositional-games",
+      "questions",
+      "cgt-question"
+    ],
+    [
+      "compositional-space-hypothesis",
+      "posits",
+      "composition-space"
+    ],
+    [
+      "graph-update-goal",
+      "posits",
+      "graph-update-request"
+    ]
+  ],
+  "question_updates": [
+    [
+      "q-factorization-activation",
+      "answered",
+      "factorization-trigger-answer",
+      [
+        "decision-sensitive-activation"
+      ]
+    ],
+    [
+      "q-megamodeling",
+      "answered",
+      "megamodel-role",
+      [
+        "megamodeling-role"
+      ]
+    ],
+    [
+      "q-game-identification",
+      "answered",
+      "game-as-hypothesis",
+      [
+        "game-as-hypothesis"
+      ]
+    ],
+    [
+      "q-prior-art-games",
+      "answered",
+      "literature-stack",
+      [
+        "literature-stack",
+        "games-unawareness-discovery"
+      ]
+    ],
+    [
+      "q-compositional-games",
+      "answered",
+      "cgt-relevance",
+      [
+        "cgt-relevance-claim",
+        "compositional-game-theory"
+      ]
+    ]
+  ]
+}

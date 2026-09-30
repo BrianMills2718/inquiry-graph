@@ -3434,6 +3434,321 @@
       "review_status": "proposed",
       "kind": "question",
       "text": "How should multiple independent, conflicting or defeasible warrants combine?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:project-management-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex223",
+          "start": 0,
+          "end": 272,
+          "quote": "Shouldn't we just address that important boundary now? I'm just worried that we are losing the forest for the trees. But honestly, I haven't been paying attention to what you've been doing, and I wouldn't understand it in any case. So I'm relying on you as project manager"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Keep the inquiry on its main path, document deferred extensions, and avoid losing the forest for the trees."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:three-project-model",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex232",
+          "start": 0,
+          "end": 494,
+          "quote": "Actually, I um, there's kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there's kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I'm most interested in."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The work is best separated into a Formal Epistemic Reasoning Meta-Model, an Inquiry Representation Model, and a useful Inquiry System."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:useful-system-priority",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex232",
+          "start": 0,
+          "end": 494,
+          "quote": "Actually, I um, there's kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there's kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I'm most interested in."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "The useful Inquiry System is the downstream project of greatest practical interest, while the formal meta-model and inquiry representation remain distinct supporting projects."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex233",
+          "start": 0,
+          "end": 151,
+          "quote": "The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Formal Epistemic Reasoning Meta-Model: the foundational project representing the structure of epistemic reasoning across heterogeneous regimes."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:metamodel-provisionally-complete",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex233",
+          "start": 0,
+          "end": 151,
+          "quote": "The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The Formal Epistemic Reasoning Meta-Model is provisionally architecturally complete but not theoretically closed."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:closeout-paper-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex234",
+          "start": 0,
+          "end": 468,
+          "quote": "Okay, write the closeout document, but then I am gonna want to discuss the candidate generation to make sure all of these open issues are in the closeout, so it's clear, like, where we might want to go next, and also compare what we've produced here to what already exists in other, like, that other people have done. And actually, before we do the candidate generation, along with the closeout, write up, like, a paper that might be submitted to something like ARXiv."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Preserve the long-session theory in a canonical closeout and an arXiv-style paper before continuing candidate-generation research."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-prior-art-comparison",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex236",
+          "start": 0,
+          "end": 157,
+          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How much of the meta-model and its integration already exists in prior work?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:novelty-position",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex237",
+          "start": 0,
+          "end": 248,
+          "quote": "Most ingredients and much integration have strong precedents; the likely contribution is architectural factorization and interface synthesis rather than new mathematics, and even that should be treated as a hypothesis pending systematic comparison."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Most components and much integration have strong precedents; any novelty claim should be conservative and established only by systematic comparison."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:adoption-over-novelty",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex240",
+          "start": 0,
+          "end": 263,
+          "quote": "Okay, I'm not gonna read all that, um, but just to be clear, I don't care about novelty. And actually it's unfortunate if what we're doing has to be novel. I would prefer this just already existed off the shelf. But yes, I approve the path forward you recommended"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Novelty is not a project objective; mature off-the-shelf theory is preferable to reinventing machinery."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-candidate-landscape",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex238",
+          "start": 0,
+          "end": 112,
+          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Which mature frameworks already cover candidate generation and its integration?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:candidate-landscape-result",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex239",
+          "start": 0,
+          "end": 229,
+          "quote": "The candidate-generation landscape includes Wiggins/Boden creative systems, program synthesis/CEGIS, ILP/MIL, anti-unification, abductive logic programming, HR theory formation, conceptual blending, and Bayesian program learning."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Candidate generation has mature precedents across creative systems, synthesis/CEGIS, ILP/MIL, anti-unification, abduction, automated theory formation, conceptual blending and Bayesian program learning."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:typed-generative-regime",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex241",
+          "start": 0,
+          "end": 249,
+          "quote": "Candidate generation was reframed as a typed generative system with artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, while transformational changes to the generative regime are represented separately."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A candidate-generation regime can be factored into artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, with strategy/control separate."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:generative-transformation",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex241",
+          "start": 0,
+          "end": 249,
+          "quote": "Candidate generation was reframed as a typed generative system with artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, while transformational changes to the generative regime are represented separately."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A generative-system transformation changes the represented generative regime itself, such as its language, artifact ontology, bias, operators or evaluators."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:framework-mapping-result",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex242",
+          "start": 0,
+          "end": 177,
+          "quote": "Mappings of CEGIS, Meta-Interpretive Learning, anti-unification, HR, and conceptual blending fit the revised candidate-generation interface without another top-level coordinate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "CEGIS, MIL, anti-unification, HR and conceptual blending fit the typed candidate-generation interface without another top-level coordinate."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-cross-framework-glue",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex243",
+          "start": 0,
+          "end": 44,
+          "quote": "Ok and I assume that is well trodden as well"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What existing architecture should coordinate heterogeneous candidate generators and evaluators?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:typed-blackboard-orchestration",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Use a typed blackboard, heterogeneous generator/evaluator portfolio, explicit controller, reflective transformations and warrant rather than a new universal orchestration calculus."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-guarantee-transport",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "When a generator's artifact is translated into another representation, which guarantees survive the translation?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:certified-guarantee-transport",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex247",
+          "start": 0,
+          "end": 205,
+          "quote": "The governing rule is that artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise target-side re-warrant is required."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise the target artifact must be re-warranted."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:guarantee-transport-prior-art",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex246",
+          "start": 0,
+          "end": 177,
+          "quote": "Guarantee transport across representations is also substantially covered by institutions/DOL/Hets, MMT theory morphisms, abstract interpretation, and contract/refinement theory."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Institutions/DOL/Hets, MMT theory morphisms, abstract interpretation and contract/refinement theory cover much of formal guarantee transport."
+    },
+    {
+      "id": "dialogue-2026-09-27:n:q-handoff-readiness",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex248",
+          "start": 0,
+          "end": 184,
+          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Is the long founding inquiry sufficiently documented and updated for a fresh-agent handoff?"
+    },
+    {
+      "id": "dialogue-2026-09-27:n:inquiry-graph-update-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex249",
+          "start": 0,
+          "end": 73,
+          "quote": "Okay, um, review the conversation we've had and update the inquiry graph."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Update the inquiry graph with the later conversation arc before handing work to a fresh agent."
     }
   ],
   "relations": [
@@ -14302,6 +14617,504 @@
         "dialogue-2026-09-27:m:184"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:186",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex223",
+          "start": 0,
+          "end": 272,
+          "quote": "Shouldn't we just address that important boundary now? I'm just worried that we are losing the forest for the trees. But honestly, I haven't been paying attention to what you've been doing, and I wouldn't understand it in any case. So I'm relying on you as project manager"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:project-management-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex223",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:185"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:187",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex232",
+          "start": 0,
+          "end": 494,
+          "quote": "Actually, I um, there's kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there's kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I'm most interested in."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:current-meta-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:three-project-model",
+        "dialogue-2026-09-27:n:useful-system-priority"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex232",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:186"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:188",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex233",
+          "start": 0,
+          "end": 151,
+          "quote": "The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:three-project-model"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex233",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:187"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:189",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex233",
+          "start": 0,
+          "end": 151,
+          "quote": "The foundational project is named the Formal Epistemic Reasoning Meta-Model and is provisionally architecturally complete but not theoretically closed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "summarize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:metamodel-provisionally-complete"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex233",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:187"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:190",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex234",
+          "start": 0,
+          "end": 468,
+          "quote": "Okay, write the closeout document, but then I am gonna want to discuss the candidate generation to make sure all of these open issues are in the closeout, so it's clear, like, where we might want to go next, and also compare what we've produced here to what already exists in other, like, that other people have done. And actually, before we do the candidate generation, along with the closeout, write up, like, a paper that might be submitted to something like ARXiv."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:metamodel-provisionally-complete"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:closeout-paper-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex234",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:188",
+        "dialogue-2026-09-27:m:189"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:191",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex236",
+          "start": 0,
+          "end": 157,
+          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:formal-epistemic-reasoning-metamodel"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-prior-art-comparison"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex236",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:190"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:192",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex237",
+          "start": 0,
+          "end": 248,
+          "quote": "Most ingredients and much integration have strong precedents; the likely contribution is architectural factorization and interface synthesis rather than new mathematics, and even that should be treated as a hypothesis pending systematic comparison."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-prior-art-comparison"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:novelty-position"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex237",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:191"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:194",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex238",
+          "start": 0,
+          "end": 112,
+          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-candidate-landscape"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex238",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:192"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:195",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex239",
+          "start": 0,
+          "end": 229,
+          "quote": "The candidate-generation landscape includes Wiggins/Boden creative systems, program synthesis/CEGIS, ILP/MIL, anti-unification, abductive logic programming, HR theory formation, conceptual blending, and Bayesian program learning."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-candidate-landscape"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:candidate-landscape-result"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex239",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:194"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:193",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex240",
+          "start": 0,
+          "end": 263,
+          "quote": "Okay, I'm not gonna read all that, um, but just to be clear, I don't care about novelty. And actually it's unfortunate if what we're doing has to be novel. I would prefer this just already existed off the shelf. But yes, I approve the path forward you recommended"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-prior-art-comparison"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:adoption-over-novelty"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex240",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:195"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:196",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex241",
+          "start": 0,
+          "end": 249,
+          "quote": "Candidate generation was reframed as a typed generative system with artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, while transformational changes to the generative regime are represented separately."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:typed-generative-regime",
+        "dialogue-2026-09-27:n:generative-transformation"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex241",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:193"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:197",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex242",
+          "start": 0,
+          "end": 177,
+          "quote": "Mappings of CEGIS, Meta-Interpretive Learning, anti-unification, HR, and conceptual blending fit the revised candidate-generation interface without another top-level coordinate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-generative-regime"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:framework-mapping-result"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex242",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:196"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:198",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex243",
+          "start": 0,
+          "end": 44,
+          "quote": "Ok and I assume that is well trodden as well"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:framework-mapping-result"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-cross-framework-glue"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex243",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:197"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:199",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-cross-framework-glue"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:typed-blackboard-orchestration"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex245",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:198"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:200",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:typed-blackboard-orchestration"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-guarantee-transport"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex245",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:198"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:201",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex246",
+          "start": 0,
+          "end": 177,
+          "quote": "Guarantee transport across representations is also substantially covered by institutions/DOL/Hets, MMT theory morphisms, abstract interpretation, and contract/refinement theory."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-guarantee-transport"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:guarantee-transport-prior-art"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex246",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:199",
+        "dialogue-2026-09-27:m:200"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:202",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex247",
+          "start": 0,
+          "end": 205,
+          "quote": "The governing rule is that artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise target-side re-warrant is required."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-27:n:guarantee-transport-prior-art"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:certified-guarantee-transport"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex247",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:201"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:203",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex248",
+          "start": 0,
+          "end": 184,
+          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:project-management-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:q-handoff-readiness"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex248",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:202"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-27:m:204",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex249",
+          "start": 0,
+          "end": 73,
+          "quote": "Okay, um, review the conversation we've had and update the inquiry graph."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-27:n:q-handoff-readiness"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-27:n:inquiry-graph-update-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-27:ex249",
+      "after_move_ids": [
+        "dialogue-2026-09-27:m:203"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -15290,6 +16103,176 @@
       "target_id": "dialogue-2026-09-27:n:warrant-target-collapse",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-27:ex220"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:059",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex223",
+          "start": 0,
+          "end": 272,
+          "quote": "Shouldn't we just address that important boundary now? I'm just worried that we are losing the forest for the trees. But honestly, I haven't been paying attention to what you've been doing, and I wouldn't understand it in any case. So I'm relying on you as project manager"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:project-management-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex223"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:060",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex232",
+          "start": 0,
+          "end": 494,
+          "quote": "Actually, I um, there's kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there's kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I'm most interested in."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:three-project-model",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex232"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:061",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex232",
+          "start": 0,
+          "end": 494,
+          "quote": "Actually, I um, there's kind of two things here. Um, I actually started out with wanting like a formal meta model of epistemology and inference, basically. But then as we got into this, we attached this other goal of representing inquiry, which there's kind of this meta relationship where we can apply each of these to the other in a sense And yeah, I actually see that your three distinct projects is probably even more accurate  But the useful system is probably what I'm most interested in."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:useful-system-priority",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex232"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:062",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex234",
+          "start": 0,
+          "end": 468,
+          "quote": "Okay, write the closeout document, but then I am gonna want to discuss the candidate generation to make sure all of these open issues are in the closeout, so it's clear, like, where we might want to go next, and also compare what we've produced here to what already exists in other, like, that other people have done. And actually, before we do the candidate generation, along with the closeout, write up, like, a paper that might be submitted to something like ARXiv."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:closeout-paper-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex234"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:063",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex236",
+          "start": 0,
+          "end": 157,
+          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-prior-art-comparison",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex236"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:064",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex240",
+          "start": 0,
+          "end": 263,
+          "quote": "Okay, I'm not gonna read all that, um, but just to be clear, I don't care about novelty. And actually it's unfortunate if what we're doing has to be novel. I would prefer this just already existed off the shelf. But yes, I approve the path forward you recommended"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:adoption-over-novelty",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex240"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:065",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex238",
+          "start": 0,
+          "end": 112,
+          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-candidate-landscape",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex238"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:066",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex243",
+          "start": 0,
+          "end": 44,
+          "quote": "Ok and I assume that is well trodden as well"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-cross-framework-glue",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex243"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:067",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex248",
+          "start": 0,
+          "end": 184,
+          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:q-handoff-readiness",
+      "stance": "questions",
+      "at_message_id": "dialogue-2026-09-27:ex248"
+    },
+    {
+      "id": "dialogue-2026-09-27:s:068",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex249",
+          "start": 0,
+          "end": 73,
+          "quote": "Okay, um, review the conversation we've had and update the inquiry graph."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-27:n:inquiry-graph-update-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-27:ex249"
     }
   ],
   "question_events": [
@@ -16374,6 +17357,106 @@
       "replacement_id": null
     },
     {
+      "id": "dialogue-2026-09-27:qe:q-prior-art-comparison",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex236",
+          "start": 0,
+          "end": 157,
+          "quote": "Okay, how does our work compare to different work? I can't imagine we really did much of anything new given that this is such a, you know, well-trodden field"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-prior-art-comparison",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex236",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-candidate-landscape",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex238",
+          "start": 0,
+          "end": 112,
+          "quote": "Okay, now let's discuss candidate generation . And if you haven't already done it, landscape survey, let me know"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-landscape",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex238",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-cross-framework-glue",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex243",
+          "start": 0,
+          "end": 44,
+          "quote": "Ok and I assume that is well trodden as well"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-cross-framework-glue",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex243",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-guarantee-transport",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-guarantee-transport",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex245",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:q-handoff-readiness",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex248",
+          "start": 0,
+          "end": 184,
+          "quote": "Okay, let's take a step back, review all the work we've done, make sure all our plans and documentation are updated, and then we're going to pass off to a fresh agent once we're ready."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-handoff-readiness",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "dialogue-2026-09-27:ex248",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
       "id": "dialogue-2026-09-27:qe:update:1",
       "anchors": [
         {
@@ -16852,6 +17935,120 @@
       "at_message_id": "dialogue-2026-09-27:ex218",
       "answer_ids": [
         "dialogue-2026-09-27:n:warrant-judgment"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:23",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex237",
+          "start": 0,
+          "end": 248,
+          "quote": "Most ingredients and much integration have strong precedents; the likely contribution is architectural factorization and interface synthesis rather than new mathematics, and even that should be treated as a hypothesis pending systematic comparison."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-prior-art-comparison",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex237",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:adoption-over-novelty"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:24",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex242",
+          "start": 0,
+          "end": 177,
+          "quote": "Mappings of CEGIS, Meta-Interpretive Learning, anti-unification, HR, and conceptual blending fit the revised candidate-generation interface without another top-level coordinate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-landscape",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex242",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:candidate-landscape-result",
+        "dialogue-2026-09-27:n:typed-generative-regime",
+        "dialogue-2026-09-27:n:framework-mapping-result"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:25",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex245",
+          "start": 0,
+          "end": 146,
+          "quote": "The adopted integration pattern is typed blackboard plus generator portfolio plus explicit controller plus reflective transformation plus warrant."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-cross-framework-glue",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex245",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:typed-blackboard-orchestration"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:26",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex247",
+          "start": 0,
+          "end": 205,
+          "quote": "The governing rule is that artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise target-side re-warrant is required."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-guarantee-transport",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex247",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:certified-guarantee-transport",
+        "dialogue-2026-09-27:n:guarantee-transport-prior-art"
+      ],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "dialogue-2026-09-27:qe:update:27",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-27:ex242",
+          "start": 0,
+          "end": 177,
+          "quote": "Mappings of CEGIS, Meta-Interpretive Learning, anti-unification, HR, and conceptual blending fit the revised candidate-generation interface without another top-level coordinate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "dialogue-2026-09-27:n:q-candidate-generation-factorization",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "dialogue-2026-09-27:ex242",
+      "answer_ids": [
+        "dialogue-2026-09-27:n:typed-generative-regime",
+        "dialogue-2026-09-27:n:framework-mapping-result"
       ],
       "resolution_basis": null,
       "replacement_id": null
