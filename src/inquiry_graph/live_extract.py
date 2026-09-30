@@ -238,6 +238,8 @@ def prune_to_valid(graph: Graph, drops: Counter, max_rounds: int = 10) -> Graph:
         if report["valid"]:
             return graph
         bad = {e["item"] for e in report["errors"]}
+        if any(e["code"] == "supersession_cycle" for e in report["errors"]):
+            bad |= _supersession_cycle_relations(graph)
         for e in report["errors"]:
             drops[f"invalid:{e['code']}"] += 1
         data = graph.model_dump()
@@ -245,6 +247,25 @@ def prune_to_valid(graph: Graph, drops: Counter, max_rounds: int = 10) -> Graph:
             data[field] = [x for x in data[field] if x["id"] not in bad]
         graph = Graph.model_validate(data)
     raise ValueError(f"graph still invalid after {max_rounds} pruning rounds: {validate(graph)['errors'][:5]}")
+
+
+def _supersession_cycle_relations(graph: Graph) -> set[str]:
+    """Ids of `supersedes` relations that lie on a cycle; the validator reports only the graph id."""
+    import networkx as nx
+    edges = nx.DiGraph()
+    for r in graph.relations:
+        if r.kind == "supersedes":
+            roles = {b.role: b.ref for b in r.bindings}
+            if "new" in roles and "old" in roles:
+                edges.add_edge(roles["new"], roles["old"], rid=r.id)
+    on_cycle = set()
+    for component in nx.strongly_connected_components(edges):
+        if len(component) > 1:
+            on_cycle |= {d["rid"] for u, v, d in edges.edges(data=True) if u in component and v in component}
+    for u, v, d in edges.edges(data=True):
+        if u == v:
+            on_cycle.add(d["rid"])
+    return on_cycle
 
 
 async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):

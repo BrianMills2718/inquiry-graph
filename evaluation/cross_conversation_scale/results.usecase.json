@@ -1,0 +1,68 @@
+{
+  "id": "cross-conversation-linker-c4-result-review",
+  "concern": "Decide whether typed links improve answers about Brian's views across 30 chats enough to continue the linker work.",
+  "stakeholder": "Brian, reviewing a one-off private evaluation",
+  "intent": ["compare", "decide", "inspect"],
+  "informationStructure": ["table", "matrix", "scalar", "list"],
+  "tasks": ["compare", "aggregate", "inspect"],
+  "entities": [
+    "reference question",
+    "question category",
+    "answer route",
+    "covered key points",
+    "contradictions and attribution errors",
+    "cannot-answer flag",
+    "recorded route cost",
+    "campaign trace"
+  ],
+  "relationships": [
+    "each reference question is answered by each route",
+    "each route score is compared with the same reference key",
+    "aggregate scores summarize questions within a category",
+    "each reported result is bound to one campaign and corpus revision"
+  ],
+  "focus": "Compare B (positions plus typed links) with C (positions only) and A (archive search then read), identify which categories and questions account for gains or failures, and inspect cost and evidence provenance.",
+  "explanatoryFocus": ["comparison", "uncertainty"],
+  "surfaceContext": {
+    "repeatedCollection": false,
+    "neighboringRepresentations": "heterogeneous",
+    "sharedInteractionGrammar": false,
+    "medium": "report"
+  },
+  "scale": {"items": 13, "density": "medium"},
+  "interaction": {"mode": "read-only", "dynamics": "static"},
+  "audience": {
+    "expertise": "novice",
+    "frequency": "one-off",
+    "domainFamiliarity": "expert",
+    "notationFamiliarity": "novice",
+    "visualizationLiteracy": "mixed"
+  },
+  "semanticLenses": [
+    {"id": "question-comparison", "label": "Per-question route comparison", "status": "source-derived"},
+    {"id": "category-summary", "label": "Category-level comparison", "status": "source-derived"},
+    {"id": "campaign-provenance", "label": "Corpus, model, billing, and trace evidence", "status": "canonical"},
+    {"id": "decision", "label": "Continue, replace, or shelve recommendation", "status": "interpretive"}
+  ],
+  "consequence": {"risk": "medium", "reversibility": "reversible"},
+  "constraints": {"mobile": false, "accessibility": "baseline", "realtime": false, "provenance": true, "allowAggregation": true},
+  "representationRole": "analytic",
+  "abstractionLevel": "overview",
+  "concernHierarchy": {
+    "primary": "whether typed links add answer value and whether graph retrieval beats archive search",
+    "secondary": ["category differences", "per-question failures", "cost", "held-out subset", "trace provenance"],
+    "assuranceRole": "secondary"
+  },
+  "semanticAvailability": {
+    "status": "available",
+    "present": ["13 reference questions", "three answer routes", "five categories", "per-question grading", "route billing metadata", "campaign traces"],
+    "missing": ["a large independent benchmark corpus", "user adoption or long-term usefulness"],
+    "note": "This is one bounded 30-chat evaluation; it supports a reversible next-step decision, not a broad quality claim."
+  },
+  "successCriteria": [
+    "Brian can tell whether B beats C and A and which categories drive the result.",
+    "He can inspect per-question scores without seeing private question wording, answers, transcripts, or quotes.",
+    "The report separates measured results from the recommendation and states the small held-out sample limitation.",
+    "Every decision-bearing claim can be traced to the exact campaign or code revision."
+  ]
+}

@@ -140,6 +140,21 @@ def test_live_prune_removes_invalid_and_counts(graph):
     assert drops['invalid:question_type']==1
 
 
+def test_live_prune_breaks_supersession_cycles(graph):
+    from collections import Counter
+    from inquiry_graph.live_extract import prune_to_valid
+    from inquiry_graph.model import Binding, Graph, Relation
+    g=Graph.model_validate(graph.model_dump())
+    a,b=[n for n in g.nodes if n.kind=='claim'][:2]
+    anc=a.anchors
+    g.relations+= [Relation(id='cyc:1',kind='supersedes',anchors=anc,bindings=[Binding(role='new',ref=a.id),Binding(role='old',ref=b.id)]),
+                   Relation(id='cyc:2',kind='supersedes',anchors=anc,bindings=[Binding(role='new',ref=b.id),Binding(role='old',ref=a.id)])]
+    drops=Counter()
+    pruned=prune_to_valid(g,drops)
+    assert not {'cyc:1','cyc:2'} & {r.id for r in pruned.relations}
+    assert drops['invalid:supersession_cycle']==1
+
+
 def test_bridge_transcript_keeps_only_visible_speech():
     from inquiry_graph.bridge import parse_bridge_markdown
     text=("# T\nconversation 6ab8563b-cbfc-83ea-81ed-a0acdea0ea9c · x\n\n"

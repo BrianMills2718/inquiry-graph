@@ -1,0 +1,39 @@
+{
+  "scope": "separate grader calibration call; excluded from scored campaign",
+  "trace_id": "inquiry-graph/xconv-scale-codex/grader-positive-control/q01",
+  "model": "codex/gpt-5.6-sol",
+  "billing_mode": "subscription_included",
+  "recorded_cost_usd": 0.0,
+  "call_errors": 0,
+  "known_correct": {
+    "points_covered": 4,
+    "key_points": 4,
+    "contradicts_key": false
+  },
+  "known_wrong": {
+    "points_covered": 0,
+    "key_points": 4,
+    "contradicts_key": true
+  },
+  "exit_status": 0,
+  "fresh_signoff_control": {
+    "trace_id": "inquiry-graph/c5-signoff/grader-positive-control",
+    "model": "codex/gpt-5.6-sol",
+    "transport": "codex-cli",
+    "billing_mode": "subscription_included",
+    "total_tokens": 25112,
+    "recorded_cost_usd": 0.0,
+    "call_errors": 0,
+    "known_correct": {
+      "points_covered": 4,
+      "key_points": 4,
+      "contradicts_key": false
+    },
+    "known_wrong": {
+      "points_covered": 0,
+      "key_points": 4,
+      "contradicts_key": true
+    },
+    "exit_status": 0
+  }
+}
