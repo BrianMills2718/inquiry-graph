@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 75 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 77 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -843,6 +843,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 138,
       "text": "Head-to-head on LinkML→PostgreSQL: LinkML already owns source semantics, DDL generation, compliance testing, and SQL validation queries for min/max and other constraints; Data Contract CLI/PostgreSQL already own generic target validation. Factgraph only potentially adds a narrower source-aware transformation-preservation audit: bind source obligation to exact generated artifact, generate discriminating negative/positive populations, execute them, and record a provenance-backed preservation verdict."
+    },
+    {
+      "id": "s30:t80",
+      "actor_id": "s30:brian",
+      "ordinal": 139,
+      "text": "Proceed."
+    },
+    {
+      "id": "s30:t81",
+      "actor_id": "s30:assistant",
+      "ordinal": 140,
+      "text": "Factgraph does not survive as unique transformation-preservation machinery. Mature formal verification/testing ecosystems already own property preservation, contracts, counterexample generation, model checking, static analysis, and mutation testing. The only plausible retained role is a black/gray-box semantic audit harness for opaque external transformations where formal verification is unavailable."
     }
   ]
 }
