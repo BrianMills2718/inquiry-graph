@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "7ef24d1a2cbb5006010703f79e6063d9162df90d",
-  "curation_git_blob": "9e22b84102559b3eefb7391b4128f0b1ba06a8b6",
+  "source_git_blob": "f990fff69191330acbd8b752c242ab55bd7c4aba",
+  "curation_git_blob": "bb26023e626778fce086a1437fc033d14bbb5523",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -45,20 +45,20 @@
   ],
   "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
   "current_checkpoint": {
-    "source_messages": 130,
-    "nodes": 173,
-    "relations": 148,
-    "moves": 71,
+    "source_messages": 136,
+    "nodes": 182,
+    "relations": 155,
+    "moves": 74,
     "stance_events": 35,
-    "question_events": 66,
-    "questions": 33,
+    "question_events": 68,
+    "questions": 34,
     "review": {
-      "proposed": 493,
+      "proposed": 514,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after adoption-matrix verdict checkpoint",
+  "current_checkpoint_execution": "not rerun after Factgraph external-first boundary checkpoint",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
