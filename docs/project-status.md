@@ -28,14 +28,16 @@ V1 supports conversation/export import, active-branch preservation, typed conten
 
 Current seed:
 
-- 219 source excerpts/messages;
-- 229 content nodes;
+- 247 curated source excerpts/messages;
+- 250 content nodes;
 - 250 relations;
-- 185 inquiry moves;
-- 58 stance events;
-- 76 question events;
-- 54 questions;
-- 798 proposed annotations.
+- 204 inquiry moves;
+- 68 stance events;
+- 86 question events;
+- 59 questions;
+- 858 proposed annotations.
+
+The 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
 
 ## Priority 1 — empirical usefulness
 
@@ -82,7 +84,7 @@ If product experiments need them, depend on that package explicitly rather than 
 
 ## Verification
 
-Fresh post-split product verification on reviewed `main`:
+Last fully executed post-split product verification on reviewed `main`:
 
 - Python 3.14.7 / native Windows;
 - **60 tests passed**;
@@ -91,7 +93,7 @@ Fresh post-split product verification on reviewed `main`:
 - graph validation: 0 errors / 0 warnings;
 - dependency check clean.
 
-See `docs/verification.md`.
+See `docs/verification.md`. The 2026-09-30 seed continuation was structurally cross-reference checked in the GitHub update path, but the execution device was offline, so `examples/build_seed.py`, artifact reproduction, and the full test suite still need to be rerun once an executable environment is available.
 
 ## Stop rules
 
