@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 33 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 38 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -549,6 +549,36 @@
       "actor_id": "s30:assistant",
       "ordinal": 89,
       "text": "One counterexample did force a small correction: **“suppose \\\\(H\\\\) for the sake of argument”** should not be mistaken for believing \\\\(H\\\\). So the state-effect axis needs to cover temporary epistemic **roles/context**, not just credence/acceptance. Likewise explicit availability can increase or decrease. This is a refinement of the axis, not a new inference family."
+    },
+    {
+      "id": "s30:t34",
+      "actor_id": "s30:assistant",
+      "ordinal": 90,
+      "text": "I’m going to try to break the fixed-space factorization with the cases most likely to blur its boundaries: analogy, IBE/explanation, theorem discovery, concept formation, counterfactual supposition, and nonmonotonic inference. I’ll treat any failure as a reason to revise the factorization, not to force the case into it."
+    },
+    {
+      "id": "s30:t35",
+      "actor_id": "s30:assistant",
+      "ordinal": 91,
+      "text": "The break tests are mostly reinforcing the factorization, but **concept formation creates the important boundary**: if a “new concept” is merely a previously unused definition expressible in the current language, it is proposal/materialization; if it extends the language or ontology itself, that is genuinely **representation change** and belongs to the next layer. That gives us a concrete criterion for when the fixed-space assumption stops applying."
+    },
+    {
+      "id": "s30:t36",
+      "actor_id": "s30:assistant",
+      "ordinal": 92,
+      "text": "A more interesting possible collapse is now exposed: **“received/acquired” may not be an inference mode at all.** It may be an input event at the boundary between world/source and reasoner. If that holds, inference proper inside a fixed representation might reduce further to only **derived vs proposed content**, crossed with state effects. I’m checking that boundary now rather than freezing “received” into the factorization."
+    },
+    {
+      "id": "s30:t37",
+      "actor_id": "s30:assistant",
+      "ordinal": 93,
+      "text": "The acquisition check favors a further simplification for the **original inference question**: observations/reports are better treated as **epistemic inputs/events**, not a third kind of inference. Dynamic epistemic logic can still model them as epistemic actions, but that is broader than “inference.” So the fixed-space inference factorization can tentatively drop “received” from the inference-source axis."
+    },
+    {
+      "id": "s30:t38",
+      "actor_id": "s30:assistant",
+      "ordinal": 94,
+      "text": "I’ve got a stable fixed-space result now, so I’m checkpointing it before moving on. The key correction is that **epistemic action is broader than inference**: observation/acquisition stays explicit in the larger system, but the original inference factorization no longer needs “received” as a third inference source."
     }
   ]
 }
