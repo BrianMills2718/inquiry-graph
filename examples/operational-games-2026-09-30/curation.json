@@ -1,5 +1,5 @@
 {
-  "notice": "Curated first-pass annotation of selected visible excerpts, extended through the replacement-first infrastructure and compositional-world continuation. All semantic annotations remain proposed pending human review and full-export reconciliation.",
+  "notice": "Curated first-pass annotation of the visible 2026-09-30 operational-games/compositional-world dialogue. The current fixture is intended to semantically cover every substantive inquiry turn available in the chat context, while remaining explicitly unverified against a full ChatGPT export. All semantic annotations remain proposed pending human review and full-export reconciliation.",
   "source_keys": {
     "factorization-generalization": "dialogue-2026-09-30-operational-games:ex001",
     "factorization-name": "dialogue-2026-09-30-operational-games:ex002",
@@ -75,7 +75,45 @@
     "game-coupled-decision-user": "dialogue-2026-09-30-operational-games:ex072",
     "candidate-generation-prior-art-user": "dialogue-2026-09-30-operational-games:ex073",
     "docs-coherence-user": "dialogue-2026-09-30-operational-games:ex074",
-    "stuck-status-user": "dialogue-2026-09-30-operational-games:ex075"
+    "stuck-status-user": "dialogue-2026-09-30-operational-games:ex075",
+    "project-purpose-doubt": "dialogue-2026-09-30-operational-games:ex072",
+    "already-exists-reframe": "dialogue-2026-09-30-operational-games:ex073",
+    "off-shelf-preference-full": "dialogue-2026-09-30-operational-games:ex074",
+    "replacement-not-differentiation": "dialogue-2026-09-30-operational-games:ex075",
+    "world-substrate-review-request": "dialogue-2026-09-30-operational-games:ex076",
+    "world-substrate-cvs-seam": "dialogue-2026-09-30-operational-games:ex077",
+    "world-runtime-solvers-backends": "dialogue-2026-09-30-operational-games:ex078",
+    "ci-review-request": "dialogue-2026-09-30-operational-games:ex079",
+    "ci-self-replacement": "dialogue-2026-09-30-operational-games:ex080",
+    "simudyne-primary-trial": "dialogue-2026-09-30-operational-games:ex081",
+    "trial-execution-request": "dialogue-2026-09-30-operational-games:ex082",
+    "simudyne-access-cost-boundary": "dialogue-2026-09-30-operational-games:ex083",
+    "simudyne-value-question": "dialogue-2026-09-30-operational-games:ex084",
+    "simudyne-integration-value": "dialogue-2026-09-30-operational-games:ex085",
+    "simudyne-cost-hiring-question": "dialogue-2026-09-30-operational-games:ex086",
+    "simudyne-cost-answer": "dialogue-2026-09-30-operational-games:ex087",
+    "budget-block-user": "dialogue-2026-09-30-operational-games:ex088",
+    "do-not-pay-simudyne": "dialogue-2026-09-30-operational-games:ex089",
+    "concordia-minimal-test": "dialogue-2026-09-30-operational-games:ex090",
+    "anti-bakeoff-full": "dialogue-2026-09-30-operational-games:ex091",
+    "anti-bakeoff-correction": "dialogue-2026-09-30-operational-games:ex092",
+    "cgt-value-reopen": "dialogue-2026-09-30-operational-games:ex093",
+    "cgt-strategic-role": "dialogue-2026-09-30-operational-games:ex094",
+    "truck-mechanical-example-full": "dialogue-2026-09-30-operational-games:ex095",
+    "composable-units-full": "dialogue-2026-09-30-operational-games:ex096",
+    "causal-world-reframe": "dialogue-2026-09-30-operational-games:ex097",
+    "world-primary-full": "dialogue-2026-09-30-operational-games:ex098",
+    "graph-update-request-full": "dialogue-2026-09-30-operational-games:ex099",
+    "graph-existing-answer": "dialogue-2026-09-30-operational-games:ex100",
+    "next-question-after-update": "dialogue-2026-09-30-operational-games:ex101",
+    "composition-layer-question": "dialogue-2026-09-30-operational-games:ex102",
+    "ugd-review-request": "dialogue-2026-09-30-operational-games:ex103",
+    "ugd-semantic-contract-role": "dialogue-2026-09-30-operational-games:ex104",
+    "next-after-ugd": "dialogue-2026-09-30-operational-games:ex105",
+    "minimum-runtime-question": "dialogue-2026-09-30-operational-games:ex106",
+    "approve-synthesis": "dialogue-2026-09-30-operational-games:ex107",
+    "wiring-contract-architecture": "dialogue-2026-09-30-operational-games:ex108",
+    "full-conversation-coverage-request": "dialogue-2026-09-30-operational-games:ex109"
   },
   "nodes": [
     [
@@ -569,6 +607,132 @@
       "question",
       "Has the documentation/update workflow become stuck?",
       "stuck-status-user"
+    ],
+    [
+      "q-project-purpose",
+      "question",
+      "Why continue these projects if much of the capability already exists elsewhere?",
+      "project-purpose-doubt"
+    ],
+    [
+      "replacement-first-principle",
+      "goal",
+      "Prefer adopting mature existing systems when they adequately satisfy the need; novelty is not an objective.",
+      "replacement-not-differentiation"
+    ],
+    [
+      "world-substrate-role",
+      "claim",
+      "World Substrate is best treated as a represented-world/runtime layer while analytical solvers remain replaceable backends.",
+      "world-runtime-solvers-backends"
+    ],
+    [
+      "world-substrate-cvs-import",
+      "reference",
+      "World Substrate already contains a bounded CVS Situation IR import seam, showing an existing analytical-to-world integration path.",
+      "world-substrate-cvs-seam"
+    ],
+    [
+      "ci-concordia-foundation",
+      "claim",
+      "Cybernetic Influence V3 already adopted an off-the-shelf simulation foundation rather than preserving a bespoke runtime by default.",
+      "ci-self-replacement"
+    ],
+    [
+      "simudyne-replacement-candidate",
+      "reference",
+      "Simudyne was identified as a strong integrated commercial replacement candidate for generalized simulation infrastructure.",
+      "simudyne-primary-trial"
+    ],
+    [
+      "q-simudyne-value",
+      "question",
+      "What does Simudyne add beyond open-source simulation frameworks, and is that difference worth paying for?",
+      "simudyne-value-question"
+    ],
+    [
+      "simudyne-integration-productization",
+      "claim",
+      "Simudyne's main advantage is integrated productization of simulation authoring, experiments, validation, recording, and deployment rather than a uniquely superior foundational abstraction.",
+      "simudyne-integration-value"
+    ],
+    [
+      "simudyne-budget-infeasible",
+      "claim",
+      "The published Simudyne price is outside the current project budget and should not be treated as a required dependency.",
+      "budget-block-user"
+    ],
+    [
+      "q-framework-selection-method",
+      "question",
+      "Should generalized infrastructure be chosen from first principles and state-of-the-art evidence instead of lengthy framework-by-framework bake-offs?",
+      "anti-bakeoff-full"
+    ],
+    [
+      "first-principles-over-bakeoff",
+      "claim",
+      "Framework selection should be decided mostly from architecture, economics, and mature capabilities; experiments should target only residual uncertainties.",
+      "anti-bakeoff-correction"
+    ],
+    [
+      "q-cgt-role-reopened",
+      "question",
+      "What value should compositional game theory retain once simulation and optimization infrastructure are treated as commodity layers?",
+      "cgt-value-reopen"
+    ],
+    [
+      "cgt-strategic-role-refined",
+      "claim",
+      "Compositional game theory is best retained for genuinely strategic structure rather than as the semantics of every world component.",
+      "cgt-strategic-role"
+    ],
+    [
+      "mechanical-world-dependency-problem",
+      "claim",
+      "Complex causal constraints such as truck fuel should propagate mechanically through world structure rather than depend on agent context or recollection.",
+      "truck-mechanical-example-full"
+    ],
+    [
+      "composable-causal-units",
+      "hypothesis",
+      "Small executable components can encode local constraints and causal propagation and compose into large interdependent worlds.",
+      "composable-units-full"
+    ],
+    [
+      "compositional-causal-world-model",
+      "claim",
+      "The broader target is a compositional causal/mechanical world model; strategic open games are one component type within it.",
+      "causal-world-reframe"
+    ],
+    [
+      "q-composition-layer",
+      "question",
+      "Which existing formalism should serve as the composition layer across deterministic mechanics, dynamics, optimization, strategic games, and agent policies?",
+      "composition-layer-question"
+    ],
+    [
+      "ugd-semantic-requirements-role",
+      "claim",
+      "Universal Game Decomposition is a semantic requirements/decomposition layer that constrains what an executable composition substrate must preserve, not itself the runtime.",
+      "ugd-semantic-contract-role"
+    ],
+    [
+      "q-minimum-executable-substrate",
+      "question",
+      "Given UGD's semantic constraints, what is the smallest executable composition substrate actually required?",
+      "minimum-runtime-question"
+    ],
+    [
+      "typed-wiring-contract-architecture",
+      "claim",
+      "The recommended architecture is a small common wiring syntax plus typed semantic contracts, backend-specific execution, and explicit preservation obligations.",
+      "wiring-contract-architecture"
+    ],
+    [
+      "full-thread-coverage-goal",
+      "goal",
+      "Ensure every substantive inquiry turn in the current conversation is represented in the operational-games graph, with explicit coverage limits where full-export verification is unavailable.",
+      "full-conversation-coverage-request"
     ]
   ],
   "relations": [
@@ -961,6 +1125,96 @@
       "documentation-coherence-goal",
       "graph-update-goal",
       "docs-coherence-user"
+    ],
+    [
+      "related_to",
+      "replacement-first-principle",
+      "q-project-purpose",
+      "replacement-not-differentiation"
+    ],
+    [
+      "related_to",
+      "world-substrate-cvs-import",
+      "world-substrate-role",
+      "world-substrate-cvs-seam"
+    ],
+    [
+      "related_to",
+      "ci-concordia-foundation",
+      "replacement-first-principle",
+      "ci-self-replacement"
+    ],
+    [
+      "candidate_for",
+      "simudyne-replacement-candidate",
+      "q-simudyne-value",
+      "simudyne-primary-trial"
+    ],
+    [
+      "answers",
+      "simudyne-integration-productization",
+      "q-simudyne-value",
+      "simudyne-integration-value"
+    ],
+    [
+      "motivates",
+      "simudyne-budget-infeasible",
+      "first-principles-over-bakeoff",
+      "budget-block-user"
+    ],
+    [
+      "answers",
+      "first-principles-over-bakeoff",
+      "q-framework-selection-method",
+      "anti-bakeoff-correction"
+    ],
+    [
+      "answers",
+      "cgt-strategic-role-refined",
+      "q-cgt-role-reopened",
+      "cgt-strategic-role"
+    ],
+    [
+      "supports",
+      "mechanical-world-dependency-problem",
+      "composable-causal-units",
+      "composable-units-full"
+    ],
+    [
+      "related_to",
+      "composable-causal-units",
+      "compositional-causal-world-model",
+      "causal-world-reframe"
+    ],
+    [
+      "motivates",
+      "compositional-causal-world-model",
+      "q-composition-layer",
+      "composition-layer-question"
+    ],
+    [
+      "related_to",
+      "ugd-semantic-requirements-role",
+      "q-composition-layer",
+      "ugd-semantic-contract-role"
+    ],
+    [
+      "motivates",
+      "ugd-semantic-requirements-role",
+      "q-minimum-executable-substrate",
+      "minimum-runtime-question"
+    ],
+    [
+      "answers",
+      "typed-wiring-contract-architecture",
+      "q-minimum-executable-substrate",
+      "wiring-contract-architecture"
+    ],
+    [
+      "motivates",
+      "typed-wiring-contract-architecture",
+      "full-thread-coverage-goal",
+      "full-conversation-coverage-request"
     ]
   ],
   "moves": [
@@ -1603,6 +1857,196 @@
         "q-execution-stuck"
       ],
       "stuck-status-user"
+    ],
+    [
+      "ask",
+      [],
+      [
+        "q-project-purpose"
+      ],
+      "project-purpose-doubt"
+    ],
+    [
+      "reframe",
+      [
+        "q-project-purpose"
+      ],
+      [
+        "replacement-first-principle"
+      ],
+      "replacement-not-differentiation"
+    ],
+    [
+      "connect",
+      [
+        "world-substrate-cvs-import"
+      ],
+      [
+        "world-substrate-role"
+      ],
+      "world-runtime-solvers-backends"
+    ],
+    [
+      "connect",
+      [
+        "replacement-first-principle"
+      ],
+      [
+        "ci-concordia-foundation"
+      ],
+      "ci-self-replacement"
+    ],
+    [
+      "propose",
+      [
+        "ci-concordia-foundation"
+      ],
+      [
+        "simudyne-replacement-candidate"
+      ],
+      "simudyne-primary-trial"
+    ],
+    [
+      "ask",
+      [
+        "simudyne-replacement-candidate"
+      ],
+      [
+        "q-simudyne-value"
+      ],
+      "simudyne-value-question"
+    ],
+    [
+      "clarify",
+      [
+        "q-simudyne-value"
+      ],
+      [
+        "simudyne-integration-productization"
+      ],
+      "simudyne-integration-value"
+    ],
+    [
+      "challenge",
+      [
+        "simudyne-replacement-candidate"
+      ],
+      [
+        "simudyne-budget-infeasible"
+      ],
+      "budget-block-user"
+    ],
+    [
+      "ask",
+      [
+        "replacement-first-principle"
+      ],
+      [
+        "q-framework-selection-method"
+      ],
+      "anti-bakeoff-full"
+    ],
+    [
+      "clarify",
+      [
+        "q-framework-selection-method"
+      ],
+      [
+        "first-principles-over-bakeoff"
+      ],
+      "anti-bakeoff-correction"
+    ],
+    [
+      "ask",
+      [
+        "cgt-relevance-claim"
+      ],
+      [
+        "q-cgt-role-reopened"
+      ],
+      "cgt-value-reopen"
+    ],
+    [
+      "clarify",
+      [
+        "q-cgt-role-reopened"
+      ],
+      [
+        "cgt-strategic-role-refined"
+      ],
+      "cgt-strategic-role"
+    ],
+    [
+      "hypothesize",
+      [
+        "white-box-simulation"
+      ],
+      [
+        "mechanical-world-dependency-problem",
+        "composable-causal-units"
+      ],
+      "composable-units-full"
+    ],
+    [
+      "reframe",
+      [
+        "cgt-strategic-role-refined",
+        "composable-causal-units"
+      ],
+      [
+        "compositional-causal-world-model"
+      ],
+      "causal-world-reframe"
+    ],
+    [
+      "ask",
+      [
+        "compositional-causal-world-model"
+      ],
+      [
+        "q-composition-layer"
+      ],
+      "composition-layer-question"
+    ],
+    [
+      "connect",
+      [
+        "q-composition-layer"
+      ],
+      [
+        "ugd-semantic-requirements-role"
+      ],
+      "ugd-semantic-contract-role"
+    ],
+    [
+      "ask",
+      [
+        "ugd-semantic-requirements-role"
+      ],
+      [
+        "q-minimum-executable-substrate"
+      ],
+      "minimum-runtime-question"
+    ],
+    [
+      "propose",
+      [
+        "q-minimum-executable-substrate"
+      ],
+      [
+        "typed-wiring-contract-architecture"
+      ],
+      "wiring-contract-architecture"
+    ],
+    [
+      "scope",
+      [
+        "typed-wiring-contract-architecture"
+      ],
+      [
+        "full-thread-coverage-goal"
+      ],
+      "full-conversation-coverage-request"
     ]
   ],
   "stances": [
@@ -1845,6 +2289,71 @@
       "q-execution-stuck",
       "questions",
       "stuck-status-user"
+    ],
+    [
+      "q-project-purpose",
+      "questions",
+      "project-purpose-doubt"
+    ],
+    [
+      "replacement-first-principle",
+      "endorses",
+      "off-shelf-preference-full"
+    ],
+    [
+      "q-simudyne-value",
+      "questions",
+      "simudyne-value-question"
+    ],
+    [
+      "simudyne-budget-infeasible",
+      "endorses",
+      "budget-block-user"
+    ],
+    [
+      "q-framework-selection-method",
+      "questions",
+      "anti-bakeoff-full"
+    ],
+    [
+      "q-cgt-role-reopened",
+      "questions",
+      "cgt-value-reopen"
+    ],
+    [
+      "mechanical-world-dependency-problem",
+      "posits",
+      "truck-mechanical-example-full"
+    ],
+    [
+      "composable-causal-units",
+      "posits",
+      "composable-units-full"
+    ],
+    [
+      "q-composition-layer",
+      "questions",
+      "composition-layer-question"
+    ],
+    [
+      "ugd-semantic-requirements-role",
+      "posits",
+      "ugd-semantic-contract-role"
+    ],
+    [
+      "q-minimum-executable-substrate",
+      "questions",
+      "minimum-runtime-question"
+    ],
+    [
+      "typed-wiring-contract-architecture",
+      "posits",
+      "wiring-contract-architecture"
+    ],
+    [
+      "full-thread-coverage-goal",
+      "posits",
+      "full-conversation-coverage-request"
     ]
   ],
   "question_updates": [
@@ -1925,6 +2434,56 @@
       [
         "cgt-strategic-substrate-role",
         "compositional-mechanics-broader-than-cgt"
+      ]
+    ],
+    [
+      "q-project-purpose",
+      "answered",
+      "replacement-not-differentiation",
+      [
+        "replacement-first-principle"
+      ]
+    ],
+    [
+      "q-simudyne-value",
+      "answered",
+      "simudyne-integration-value",
+      [
+        "simudyne-integration-productization"
+      ]
+    ],
+    [
+      "q-framework-selection-method",
+      "answered",
+      "anti-bakeoff-correction",
+      [
+        "first-principles-over-bakeoff"
+      ]
+    ],
+    [
+      "q-cgt-role-reopened",
+      "answered",
+      "cgt-strategic-role",
+      [
+        "cgt-strategic-role-refined",
+        "compositional-causal-world-model"
+      ]
+    ],
+    [
+      "q-composition-layer",
+      "answered",
+      "wiring-contract-architecture",
+      [
+        "ugd-semantic-requirements-role",
+        "typed-wiring-contract-architecture"
+      ]
+    ],
+    [
+      "q-minimum-executable-substrate",
+      "answered",
+      "wiring-contract-architecture",
+      [
+        "typed-wiring-contract-architecture"
       ]
     ]
   ]
