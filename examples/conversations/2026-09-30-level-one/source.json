@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 46 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 48 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -627,6 +627,24 @@
       "actor_id": "s30:assistant",
       "ordinal": 102,
       "text": "That collapse works. The **same artifact \\\\(h\\\\)** can be a conjecture in one method and a consequence in another; what differs is the method and the guarantee attached to its production, not the artifact or a universal “inference species.” So “candidate vs consequence” is useful explanatory metadata, but it is not surviving as a foundational coordinate."
+    },
+    {
+      "id": "s30:t47a",
+      "actor_id": "s30:assistant",
+      "ordinal": 103,
+      "text": "At this point, I would **stop adding Level-1 primitives** unless we find a concrete inference episode that this structure materially misrepresents."
+    },
+    {
+      "id": "s30:t47b",
+      "actor_id": "s30:assistant",
+      "ordinal": 104,
+      "text": "The next intellectual layer is the one you identified earlier: **strategies for choosing moves through this space under different games/goals**—but that should remain separate from the inference factorization itself."
+    },
+    {
+      "id": "s30:t48",
+      "actor_id": "s30:brian",
+      "ordinal": 105,
+      "text": "Okay, let's update the inquiry graph repo for where we've been in this conversation. I still feel like we're a long way from strategies for optimization."
     }
   ]
 }
