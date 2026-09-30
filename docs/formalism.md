@@ -90,3 +90,27 @@ The key commitment is:
 \]
 
 evaluated under query-relative warrant. No executable Inquiry Graph primitive is added by this research result.
+
+
+## 11. Representation management is decomposed by prior art
+
+The project's earlier broad "representation change" question is now split across
+established disciplines rather than treated as one new primitive problem.
+
+See [representation-management-prior-art.md](representation-management-prior-art.md).
+
+The working decomposition is:
+
+```text
+global representation inventory/relations -> megamodeling / GMM
+generic model/mapping operations           -> model management
+formal truth-preserving translation        -> institutions / MMT
+instance/query-preserving translation      -> schema mappings / data exchange
+view synchronization                       -> bidirectional transformations / lenses
+sound abstraction/refinement               -> abstract interpretation
+query-relative selection/warrant           -> Inquiry layer
+```
+
+This means a future primitive-vs-derived audit should first ask which established
+discipline already owns the semantics of a proposed representation operation
+before introducing a new Inquiry or OntoCanon primitive.
