@@ -39,7 +39,7 @@ Current seed:
 
 The founding seed's 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
 
-A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: 32 selected excerpts, 38 nodes, 24 relations, 26 moves, 16 stance events, and 10 question events. Its main open thread is the descriptive structure of games for embedded resource-limited observers, including uncertainty over game structure, unawareness, computational opacity, and compositional/open-system prior art.
+A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: 54 selected excerpts, 58 nodes, 41 relations, 45 moves, 27 stance events, and 13 question events. Its main open thread now includes the deliberate universalization of the game concept, top-down decomposition from rich game formalisms, perspectival/self-attributed goals, the open-game prior-art result, and the approved paper-level translation-contract step.
 
 ## Priority 1 — empirical usefulness
 
@@ -91,7 +91,7 @@ Latest executed product verification, on the 2026-09-30 conversation-continuatio
 - Python 3.14.7 / native Windows;
 - **62 tests passed**;
 - founding seed rebuild: 250 nodes / 250 relations / 204 moves;
-- operational-games continuation rebuild: 38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events;
+- operational-games continuation rebuild: 58 nodes / 41 relations / 45 moves / 27 stance events / 13 question events;
 - both graphs: 0 errors / 0 warnings;
 - **8 founding artifacts** checked;
 - dependency check clean.

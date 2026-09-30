@@ -28,7 +28,7 @@ Result:
 
 - **62 tests passed**
 - founding seed rebuild: **250 nodes / 250 relations / 204 moves**
-- operational-games continuation rebuild: **38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events**
+- operational-games continuation rebuild: **58 nodes / 41 relations / 45 moves / 27 stance events / 13 question events**
 - both graphs: **0 validation errors / 0 warnings**
 - generated founding artifacts: **8 checked**
 - **no broken requirements**
