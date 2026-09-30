@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 105 excerpts from 48 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 109 excerpts from 51 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **121 content nodes, 100 relations, 51 inquiry moves, 29 stance events, 50 question-status events and 26 distinct questions**. All **351 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **133 content nodes, 112 relations, 54 inquiry moves, 32 stance events, 53 question-status events and 29 distinct questions**. All **384 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -132,3 +132,15 @@ This is recorded as assistant hypothesis, not Brian endorsement. The open repres
 After the final Level-1 collapse, the assistant proposed strategy/control as the next intellectual layer. Brian explicitly corrected that sequencing: **“I still feel like we're a long way from strategies for optimization.”**
 
 The graph therefore keeps strategy optimization deferred and opens `q-before-strategy`: what conceptual or integration work remains between the current inference factorization and any later optimization program? This capture does **not** invent that intervening agenda. The correction reinforces the earlier `g-strategy-later` stance and supersedes any reading of the assistant's previous “next layer” language as the active roadmap.
+
+
+### Post-Level-1 representation/interoperability track
+
+Brian explicitly queued, **after Level 1**, an adoption-first investigation of heterogeneous representation systems and their composition/translation. The durable starting references are Representation Router, OntoCanon, DODAF and Knowledge Work, together with mature megamodeling/model-management and database-theory prior art.
+
+The deferred questions are:
+- is there an existing registry/catalog/profile system for representation formalisms and their interfaces/mappings?
+- what role, if any, should OntoCanon's intermediate representation play in translating among them?
+- what do existing database, ontology, schema-mapping, model-management and prior internal experiments already establish about unavoidable transfer loss?
+
+This is explicitly **before** strategy optimization in the current sequencing and carries Brian's reuse/no-novelty goal. The branch is recorded but not opened as an active research task yet.
