@@ -4131,6 +4131,183 @@
       {
         "resolution_basis": "Assistant's current collapse after representation-change stress tests; Brian has not yet reviewed or endorsed the result."
       }
+    ],
+    [
+      "N",
+      [
+        "c-stop-level1-assistant",
+        "hypothesis",
+        "Assistant proposed stopping further Level-1 primitive expansion absent a concrete counterexample.",
+        "t47a"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-strategy-next-assistant",
+        "hypothesis",
+        "Assistant proposed strategy selection/optimization as the next intellectual layer after the current Level-1 collapse.",
+        "t47b"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "g-strategy-not-next",
+        "goal",
+        "Brian reiterates that strategy optimization is still substantially downstream and should not become the next active research layer.",
+        "t48",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "q-before-strategy",
+        "question",
+        "What unresolved conceptual/integration work remains between the current inference factorization and any later strategy-optimization program?",
+        "t48",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r98",
+        "challenges",
+        "g-strategy-not-next",
+        "c-strategy-next-assistant",
+        "t48",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r99",
+        "supports",
+        "g-strategy-not-next",
+        "g-strategy-later",
+        "t48",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r100",
+        "motivates",
+        "g-strategy-not-next",
+        "q-before-strategy",
+        "t48",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m50",
+        "summarize",
+        "t47a",
+        [
+          "c-level1-normalform"
+        ],
+        [
+          "c-stop-level1-assistant",
+          "c-strategy-next-assistant"
+        ]
+      ],
+      {
+        "after": [
+          "m49"
+        ]
+      }
+    ],
+    [
+      "M",
+      [
+        "m51",
+        "challenge",
+        "t48",
+        [
+          "c-strategy-next-assistant",
+          "g-strategy-later"
+        ],
+        [
+          "g-strategy-not-next",
+          "q-before-strategy"
+        ],
+        "I still feel like we're a long way from strategies for optimization.",
+        [
+          "m50"
+        ]
+      ],
+      {}
+    ],
+    [
+      "ST",
+      [
+        "s27",
+        "t48",
+        "g-strategy-not-next",
+        "endorses",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "ST",
+      [
+        "s28",
+        "t48",
+        "g-strategy-later",
+        "endorses",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "ST",
+      [
+        "s29",
+        "t48",
+        "c-strategy-next-assistant",
+        "questions",
+        "I still feel like we're a long way from strategies for optimization."
+      ],
+      {}
+    ],
+    [
+      "Q",
+      [
+        "e49",
+        "t48",
+        "q-strategy",
+        "deferred"
+      ],
+      {
+        "quote": "I still feel like we're a long way from strategies for optimization.",
+        "basis": "Brian reiterates that strategy optimization is not the next active layer; preserve it as later work without inferring the intervening agenda."
+      }
+    ],
+    [
+      "Q",
+      [
+        "e50",
+        "t48",
+        "q-before-strategy",
+        "open"
+      ],
+      {
+        "quote": "I still feel like we're a long way from strategies for optimization."
+      }
     ]
   ]
 }
