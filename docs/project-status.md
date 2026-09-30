@@ -37,7 +37,9 @@ Current seed:
 - 59 questions;
 - 858 proposed annotations.
 
-The 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
+The founding seed's 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
+
+A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: 32 selected excerpts, 38 nodes, 24 relations, 26 moves, 16 stance events, and 10 question events. Its main open thread is the descriptive structure of games for embedded resource-limited observers, including uncertainty over game structure, unawareness, computational opacity, and compositional/open-system prior art.
 
 ## Priority 1 — empirical usefulness
 
@@ -68,7 +70,7 @@ Until then, the seed is not source-complete.
 
 Track: issue #2.
 
-Hosted jobs fail before runner execution. Local verification is green, so this is lower-priority infrastructure debt.
+PR #67 confirms hosted CI now reaches runners and passes the base/test suite on Python 3.11 and 3.13 after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI.
 
 ## Separate open PR stack
 
@@ -84,16 +86,17 @@ If product experiments need them, depend on that package explicitly rather than 
 
 ## Verification
 
-Last fully executed post-split product verification on reviewed `main`:
+Latest executed product verification, on the 2026-09-30 conversation-continuation branch:
 
 - Python 3.14.7 / native Windows;
-- **60 tests passed**;
-- seed rebuild succeeded;
-- **8 artifacts** checked;
-- graph validation: 0 errors / 0 warnings;
+- **62 tests passed**;
+- founding seed rebuild: 250 nodes / 250 relations / 204 moves;
+- operational-games continuation rebuild: 38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events;
+- both graphs: 0 errors / 0 warnings;
+- **8 founding artifacts** checked;
 - dependency check clean.
 
-See `docs/verification.md`. The 2026-09-30 seed continuation was structurally cross-reference checked in the GitHub update path, but the execution device was offline, so `examples/build_seed.py`, artifact reproduction, and the full test suite still need to be rerun once an executable environment is available.
+See `docs/verification.md`. The run also repaired two invalid provisional move labels already present in the founding curation (`name` -> `clarify`, `refine` -> `reframe`) without widening the V1 move vocabulary.
 
 ## Stop rules
 

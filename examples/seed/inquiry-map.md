@@ -189,6 +189,25 @@ flowchart TD
   n182["move: propose: A typed epistemic action is the normalized target of warrant, e.g. derive, retain, raise support, accept, retract, use a report, or select a strategy.; A warrant regime specifies the rules, semantics and acceptance standard under which support can warrant an epistemic action.; Core judgment: under warrant regime W and assumptions A, certificate pi warrants epistemic action a with guarantee G."]
   n183["move: decompose: Warrant scope is normally encoded in applicability assumptions and the quantified/type semantics of the guarantee rather than as a separate primitive coordinate.; Candidate, transition and strategy warrant need not be primitive warrant types; they are instances of one action-targeted warrant schema."]
   n184["move: connect: Defeasible warrant requires explicit attack/defeat relations and can lose license when new defeating information arrives.; What is the minimal type system for epistemic actions that can be targets of warrant?; How should multiple independent, conflicting or defeasible warrants combine?"]
+  n185["move: scope: Keep the inquiry on its main path, document deferred extensions, and avoid losing the forest for the trees."]
+  n186["move: distinguish: The work is best separated into a Formal Epistemic Reasoning Meta-Model, an Inquiry Representation Model, and a useful Inquiry System.; The useful Inquiry System is the downstream project of greatest practical interest, while the formal meta-model and inquiry representation remain distinct supporting projects."]
+  n187["move: clarify: Formal Epistemic Reasoning Meta-Model: the foundational project representing the structure of epistemic reasoning across heterogeneous regimes."]
+  n188["move: summarize: The Formal Epistemic Reasoning Meta-Model is provisionally architecturally complete but not theoretically closed."]
+  n189["move: scope: Preserve the long-session theory in a canonical closeout and an arXiv-style paper before continuing candidate-generation research."]
+  n190["move: ask: How much of the meta-model and its integration already exists in prior work?"]
+  n191["move: clarify: Most components and much integration have strong precedents; any novelty claim should be conservative and established only by systematic comparison."]
+  n192["move: reframe: Novelty is not a project objective; mature off-the-shelf theory is preferable to reinventing machinery."]
+  n193["move: ask: Which mature frameworks already cover candidate generation and its integration?"]
+  n194["move: connect: Candidate generation has mature precedents across creative systems, synthesis/CEGIS, ILP/MIL, anti-unification, abduction, automated theory formation, conceptual blending and Bayesian program learning."]
+  n195["move: reframe: A candidate-generation regime can be factored into artifact ontology, generative language, draft state, bias, operators, transitions and evaluators, with strategy/control separate.; A generative-system transformation changes the represented generative regime itself, such as its language, artifact ontology, bias, operators or evaluators."]
+  n196["move: test: CEGIS, MIL, anti-unification, HR and conceptual blending fit the typed candidate-generation interface without another top-level coordinate."]
+  n197["move: ask: What existing architecture should coordinate heterogeneous candidate generators and evaluators?"]
+  n198["move: connect: Use a typed blackboard, heterogeneous generator/evaluator portfolio, explicit controller, reflective transformations and warrant rather than a new universal orchestration calculus."]
+  n199["move: ask: When a generator's artifact is translated into another representation, which guarantees survive the translation?"]
+  n200["move: connect: Institutions/DOL/Hets, MMT theory morphisms, abstract interpretation and contract/refinement theory cover much of formal guarantee transport."]
+  n201["move: clarify: Artifact translation does not imply guarantee translation; guarantees transport only through typed certified preservation relations, otherwise the target artifact must be re-warranted."]
+  n202["move: ask: Is the long founding inquiry sufficiently documented and updated for a fresh-agent handoff?"]
+  n203["move: scope: Update the inquiry graph with the later conversation arc before handing work to a fresh agent."]
   n0 -->|then| n1
   n1 -->|then| n2
   n2 -->|then| n3
@@ -378,4 +397,25 @@ flowchart TD
   n181 -->|then| n182
   n182 -->|then| n183
   n183 -->|then| n184
+  n184 -->|then| n185
+  n185 -->|then| n186
+  n186 -->|then| n187
+  n186 -->|then| n188
+  n187 -->|then| n189
+  n188 -->|then| n189
+  n189 -->|then| n190
+  n190 -->|then| n191
+  n191 -->|then| n193
+  n192 -->|then| n195
+  n193 -->|then| n194
+  n194 -->|then| n192
+  n195 -->|then| n196
+  n196 -->|then| n197
+  n197 -->|then| n198
+  n197 -->|then| n199
+  n198 -->|then| n200
+  n199 -->|then| n200
+  n200 -->|then| n201
+  n201 -->|then| n202
+  n202 -->|then| n203
 ```
