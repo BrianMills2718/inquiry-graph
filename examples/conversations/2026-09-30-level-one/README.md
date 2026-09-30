@@ -171,3 +171,8 @@ The first mature-formalism multi-hop falsifier uses CQL functorial pullback. For
 ### Representation interoperability adoption verdict
 
 The new `representation-interoperability-adoption-matrix.md` maps each requirement to a mature owner/standard/tool and marks adopt/integrate/keep-thin/don't-build. Current assistant hypothesis: close representation interoperability as foundational research unless a concrete case escapes ISO registry/MFI, DOL/Hets, model-management/MDE, database mapping, lenses or abstract interpretation. Retain only thin registry/dispatch/certificate glue.
+
+
+### Factgraph external-first boundary
+
+Brian reiterates the program rule that local work should be presumed replaceable by better mature prior art. `factgraph-keep-borrow-delete.md` therefore retains Factgraph only as a provisional evidence-oriented audit harness around mappings owned elsewhere. Broader modeling, transformation, repository, migration and universal-preservation ambitions are frozen unless a concrete comparison shows unique utility.
