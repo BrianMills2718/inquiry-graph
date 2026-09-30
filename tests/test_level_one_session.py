@@ -27,9 +27,9 @@ def test_native_v1_validation(graph):
 
 def test_each_visible_prose_turn_has_a_source(graph):
     turns = {int(m.id.split(":t")[1][:2]) for m in graph.conversations[0].messages}
-    assert turns == set(range(1, 63))
+    assert turns == set(range(1, 68))
     # Turn representation is not a claim of complete transcript/token coverage.
-    assert len(graph.conversations[0].messages) == 121
+    assert len(graph.conversations[0].messages) == 126
     assert graph.conversations[0].source_kind == "curated_excerpts"
     assert "neither a complete export" in graph.conversations[0].coverage_note
 
@@ -40,7 +40,7 @@ def test_sources_have_no_invented_native_ids_or_times(graph):
 
 
 def test_all_annotations_await_review(graph):
-    assert stats(graph)["review"] == {"proposed": 454, "confirmed": 0, "rejected": 0}
+    assert stats(graph)["review"] == {"proposed": 477, "confirmed": 0, "rejected": 0}
 
 
 def test_proceed_is_not_theory_adoption(graph):
@@ -54,6 +54,12 @@ def test_proceed_is_not_theory_adoption(graph):
     assert not any(e.actor_id == "s30:brian" and e.stance == "endorses"
                    and (e.target_id in forbidden or e.target_id.startswith("s30:r-"))
                    for e in graph.stance_events)
+
+
+def test_certified_chain_is_answered_and_preservation_typing_is_open(graph):
+    assert any(e.question_id == "s30:q-compositional-chain" and e.status == "answered" and e.at_message_id == "s30:t67" for e in graph.question_events)
+    assert any(r["id"] == "s30:q-preservation-types" and r["status"] == "open" for r in open_questions(graph))
+    assert any(e.actor_id == "s30:brian" and e.stance == "endorses" and e.target_id == "s30:g-certified-chain" for e in graph.stance_events)
 
 
 def test_mini_megamodel_question_is_answered_and_composition_falsifier_open(graph):
