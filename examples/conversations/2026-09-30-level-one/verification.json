@@ -7,38 +7,14 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "3282c3e75dae6c5fc004fdcf510c7b5df13be485",
-  "curation_git_blob": "b331d1c6c4694cd4e0d0ba8571722b95ccf0bdcb",
+  "source_git_blob": "83c9b5cfa47914eb65e9986cb6de0f2814d0ff53",
+  "curation_git_blob": "daf3ecd1c724b3da02f22ee89828c430cb57bdee",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
     "validate.py": "32cdcd1b04edd14bca4a150bc3928b351b7d74be",
     "views.py": "62b2cc5822238c5c6626254a9c920e35d71be1d0",
     "render.py": "a3e7cfc165fbfddd3c5f0d8afb71544af06388a9"
-  },
-  "tests": {
-    "command": "PYTHONPATH=src python -m pytest -q tests/test_level_one_session.py",
-    "passed": 15
-  },
-  "validation": {
-    "valid": true,
-    "errors": [],
-    "warnings": []
-  },
-  "stats": {
-    "conversations": 1,
-    "source_messages": 89,
-    "nodes": 102,
-    "relations": 82,
-    "moves": 37,
-    "stance_events": 26,
-    "question_events": 38,
-    "questions": 21,
-    "review": {
-      "proposed": 285,
-      "confirmed": 0,
-      "rejected": 0
-    }
   },
   "probes": {
     "event_targeting": {
@@ -63,8 +39,38 @@
     "Native modules were copied from GitHub and Git blob hashes matched before testing.",
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
-    "Hosted CI run 36682172055 failed in the package-install step before repository tests; the 15-test result above is the isolated sandbox run.",
-    "33 visible prose/research-update turns are represented by 89 curated excerpts, not complete token coverage or native-export reconciliation."
+    "42 visible prose/research-update turns are represented by 98 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 320-annotation checkpoint was not rerun in the isolated sandbox after the latest representation-change additions.",
+    "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes."
   ],
-  "test_git_blob": "8d09a39fdc55b1ab90dc290c49b72182e52b2b1a"
+  "test_git_blob": "d54bb0818098eb146f0ca11cac7e4a6f8b5693e5",
+  "current_checkpoint": {
+    "source_messages": 98,
+    "nodes": 112,
+    "relations": 92,
+    "moves": 45,
+    "stance_events": 26,
+    "question_events": 45,
+    "questions": 24,
+    "review": {
+      "proposed": 320,
+      "confirmed": 0,
+      "rejected": 0
+    }
+  },
+  "current_checkpoint_execution": "not rerun after representation-change checkpoint",
+  "last_successful_focused_run": {
+    "tests_passed": 15,
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    "checkpoint": "before t34-t42 break-test/alignment additions"
+  },
+  "hosted_ci": {
+    "status": "failing before tests",
+    "observed_run": 36682172055,
+    "failing_step": "Install package and optional adapter"
+  }
 }
