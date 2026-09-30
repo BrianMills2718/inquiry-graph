@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 88 excerpts from 32 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 89 excerpts from 33 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **101 content nodes, 81 relations, 36 inquiry moves, 26 stance events, 38 question-status events and 21 distinct questions**. All **282 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **102 content nodes, 82 relations, 37 inquiry moves, 26 stance events, 38 question-status events and 21 distinct questions**. All **285 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -106,3 +106,5 @@ The first fixed-space falsification checkpoint is now also in `q-fixed-space`, `
 ### Incremental fixed-space checkpoint
 
 After Brian said `Proceed`, the graph was extended rather than rebuilt. It records the assistant's provisional collapse of Bayesian/AGM/defeasible change into standing-revision semantics, the Bayesian new-theory counterexample against collapsing candidate introduction into conditioning, the initial three-function proposal, and its immediate refinement into **source relation × state effect**. Brian's authorization to investigate is explicit; no endorsement of the resulting factorization is recorded. The broad `configuration + action + warrant` compression from merged epistemic-warrant PR #14 is recorded as context, not as a replacement for the local question.
+
+The first attempted counterexample—temporary supposition without belief—refined the effect axis rather than adding a new family: role/standing includes temporary contextual assumption, and explicit availability can increase or decrease. This refinement is in `c-role-standing-refinement` / `m37`.
