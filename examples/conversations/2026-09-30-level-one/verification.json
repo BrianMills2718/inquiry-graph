@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "3c7857593decf34bf0d3889d4d33a5af34b8e2dc",
-  "curation_git_blob": "dfc3ab3fed5bf14796af70beb7aae89c43472dba",
+  "source_git_blob": "51e9e5a0a5ba3548652b3e2cf005dce924da05e6",
+  "curation_git_blob": "1a50c2afd1364e68382db4ff7beaf91001b6b2d6",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "51 visible prose/research-update turns are represented by 109 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 384-annotation checkpoint was not rerun in the isolated sandbox after the latest sequencing additions."
+    "56 visible prose/research-update turns are represented by 115 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 426-annotation checkpoint was not rerun in the isolated sandbox after the representation-interoperability research additions."
   ],
-  "test_git_blob": "6b650d5d70b28ecb32d110323b429426bb68a294",
+  "test_git_blob": "73a896a357f18bd54f770a99773bf8a6fefd6528",
   "current_checkpoint": {
-    "source_messages": 109,
-    "nodes": 133,
-    "relations": 112,
-    "moves": 54,
-    "stance_events": 32,
-    "question_events": 53,
-    "questions": 29,
+    "source_messages": 115,
+    "nodes": 149,
+    "relations": 126,
+    "moves": 59,
+    "stance_events": 33,
+    "question_events": 59,
+    "questions": 31,
     "review": {
-      "proposed": 384,
+      "proposed": 426,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after Level-1 one-page / post-Level-1 representation track additions",
+  "current_checkpoint_execution": "not rerun after representation interoperability adoption audit",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
