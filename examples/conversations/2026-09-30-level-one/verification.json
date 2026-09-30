@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "51e9e5a0a5ba3548652b3e2cf005dce924da05e6",
-  "curation_git_blob": "1a50c2afd1364e68382db4ff7beaf91001b6b2d6",
+  "source_git_blob": "17dc074a9138abc1157ecfb041fd1e62f1b21e9e",
+  "curation_git_blob": "40371b0aa82ae8f99606b58207a5fe1b2ed17907",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -40,25 +40,25 @@
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
     "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
-    "56 visible prose/research-update turns are represented by 115 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "The current 426-annotation checkpoint was not rerun in the isolated sandbox after the representation-interoperability research additions."
+    "57 visible prose/research-update turns are represented by 116 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 430-annotation checkpoint was not rerun in the isolated sandbox after the registry crosswalk addition."
   ],
-  "test_git_blob": "73a896a357f18bd54f770a99773bf8a6fefd6528",
+  "test_git_blob": "c58a763dbb0b7796a5488640a682fcd6a680b75b",
   "current_checkpoint": {
-    "source_messages": 115,
-    "nodes": 149,
-    "relations": 126,
-    "moves": 59,
+    "source_messages": 116,
+    "nodes": 150,
+    "relations": 127,
+    "moves": 60,
     "stance_events": 33,
-    "question_events": 59,
+    "question_events": 60,
     "questions": 31,
     "review": {
-      "proposed": 426,
+      "proposed": 430,
       "confirmed": 0,
       "rejected": 0
     }
   },
-  "current_checkpoint_execution": "not rerun after representation interoperability adoption audit",
+  "current_checkpoint_execution": "not rerun after OntoCanon ISO registry crosswalk finding",
   "last_successful_focused_run": {
     "tests_passed": 15,
     "validation": {
