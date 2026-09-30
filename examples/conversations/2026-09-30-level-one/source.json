@@ -2,7 +2,7 @@
   "id": "s30:conversation",
   "title": "2026-09-30 Level-1 factorization, prior-art comparison, scope corrections and recursive capture",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated from all 56 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
+  "coverage_note": "Curated from all 57 visible user/assistant prose turns and research-update messages in this conversation, from the quoted handoff through the first fixed-representation falsification checkpoint. Multiple excerpts per assistant turn; substantive user turns are retained in full except the opening quoted handoff. Local ordinals/IDs are capture surrogates, not original ChatGPT IDs. No original timestamps, hidden reasoning, system instructions, or location metadata are included. Tool transcripts are not reproduced: repository references and reports of actions are retained, with live state separately checked in README. This is neither a complete export nor independent verification of literature claims. Full-export reconciliation and independent semantic review remain open.",
   "participants": [
     {
       "id": "s30:brian",
@@ -705,6 +705,12 @@
       "actor_id": "s30:assistant",
       "ordinal": 115,
       "text": "The current adoption audit suggests keeping native representations authoritative, using OntoCanon as a governed local registry/library plus mapping metadata, delegating transformations to native engines, and treating any intermediate IR as an explicit projection/interchange contract with recorded loss rather than a universal semantic normal form."
+    },
+    {
+      "id": "s30:t57",
+      "actor_id": "s30:assistant",
+      "ordinal": 116,
+      "text": "The OntoCanon crosswalk is encouraging: most of its **identity/version/provenance/dependency/validation** metadata already matches the kind of registry information ISO expects. The likely gaps are not a new core—they’re standardized **classification/definition metadata, explicit model↔metamodel relations, and first-class mapping records**."
     }
   ]
 }
