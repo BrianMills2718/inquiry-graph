@@ -6313,6 +6313,122 @@
           "m73"
         ]
       }
+    ],
+    [
+      "N",
+      [
+        "g-headtohead-linkml",
+        "goal",
+        "Brian authorizes a concrete head-to-head comparison of Factgraph with mature external tooling on the LinkML→PostgreSQL pipeline.",
+        "t78"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-redundant-validation",
+        "claim",
+        "For ordinary LinkML→PostgreSQL validation, Factgraph is redundant: LinkML owns source semantics/DDL/compliance/SQL validation and Data Contract CLI/PostgreSQL own generic target validation.",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-factgraph-narrow-value",
+        "hypothesis",
+        "Factgraph's only potentially distinct value in this case is source-aware transformation-preservation auditing with discriminating witnesses and provenance-bound verdicts.",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-target-contract-scope",
+        "claim",
+        "A DDL-level weakening does not imply the broader LinkML→PostgreSQL workflow loses the semantic rule, because LinkML can enforce/check constraints through separate SQL validation; audits must name the target contract boundary.",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-linkml-headtohead",
+        "reference",
+        "linkml-postgres-factgraph-head-to-head.md: comparison of Factgraph with LinkML, PostgreSQL and Data Contract CLI.",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r156",
+        "supports",
+        "g-external-first",
+        "c-factgraph-redundant-validation",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r157",
+        "supports",
+        "c-factgraph-thin-only",
+        "c-factgraph-narrow-value",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r158",
+        "distinguishes",
+        "c-target-contract-scope",
+        "c-factgraph-narrow-value",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r159",
+        "about",
+        "r-linkml-headtohead",
+        "g-headtohead-linkml",
+        "t79"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m75",
+        "summarize",
+        "t79",
+        [
+          "g-headtohead-linkml"
+        ],
+        [
+          "c-factgraph-redundant-validation",
+          "c-factgraph-narrow-value",
+          "c-target-contract-scope",
+          "r-linkml-headtohead"
+        ]
+      ],
+      {
+        "after": [
+          "m74"
+        ]
+      }
     ]
   ]
 }
