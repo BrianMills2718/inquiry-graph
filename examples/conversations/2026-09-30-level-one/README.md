@@ -4,7 +4,7 @@ Separate source-grounded capture from the pasted strategic handoff through Brian
 
 ## Build and inspect the graph
 
-`source.json` contains 76 excerpts from 24 visible prose turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
+`source.json` contains 88 excerpts from 32 visible prose/research-update turns. `curation.json` contains the proposed annotation instructions. `build.py` creates and validates the existing native V1 Graph; it is fixture authoring, not a new graph ontology or incremental updater. Source + curation + builder are the durable representation; native JSON and agenda files are deterministic outputs.
 
 ```bash
 # From an installed repository checkout:
@@ -12,7 +12,7 @@ python examples/conversations/2026-09-30-level-one/build.py --out /tmp/level-one
 python -m pytest -q tests/test_level_one_session.py
 ```
 
-The generated graph contains **93 content nodes, 75 relations, 31 inquiry moves, 25 stance events, 36 question-status events and 21 distinct questions**. All **260 annotations are proposed**; none are confirmed or rejected.
+The generated graph contains **101 content nodes, 81 relations, 36 inquiry moves, 26 stance events, 38 question-status events and 21 distinct questions**. All **282 annotations are proposed**; none are confirmed or rejected.
 
 ```python
 import runpy
@@ -28,7 +28,7 @@ Do not add these counts to the founding-seed counts without explicitly merging s
 
 ## Source and review limits
 
-This is **curated visible dialogue, not a reconciled ChatGPT export**. Every visible prose turn has at least one excerpt. Substantive user turns are retained in full except the long opening quoted handoff; assistant turns have selected exact excerpts. Turn coverage does not establish full token coverage or capture of every subsidiary claim.
+This is **curated visible dialogue, not a reconciled ChatGPT export**. Every captured visible prose/research-update turn has at least one excerpt. Substantive user turns are retained in full except the long opening quoted handoff; assistant turns have selected exact excerpts. Turn coverage does not establish full token coverage or capture of every subsidiary claim.
 
 IDs such as `s30:t22` are local surrogates. Suffixes group excerpts of one prose turn; their ordinals do not establish separate within-turn events. Native message IDs and timestamps remain absent. Hidden reasoning, system/developer instructions and location metadata are excluded. Full tool transcripts are not reproduced; reports of research and repository actions are retained as attributed content.
 
@@ -94,10 +94,15 @@ The capture also exposes task drift in the conversation: tool/architecture answe
 
 ## Verification
 
-**Native validation: 0 errors / 0 warnings. Focused tests: 14 passed.** Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
+**Native validation: 0 errors / 0 warnings. Focused tests: 15 passed.** Execution used an isolated Linux sandbox with byte-for-byte copies of the four native modules whose Git blob hashes are in `verification.json`. The committed source, curation and builder hashes were read back and matched the tested files.
 
-Tests cover source anchors, 24 local turn groups, proposed review states, absent native IDs/timestamps, no adoption inferred from continuation, retained retractions/reopenings, deferred branches, rationale links, deterministic native JSON roundtrip, and invalid quote/actor mutations.
+Tests cover source anchors, 32 local turn groups, proposed review states, absent native IDs/timestamps, no adoption inferred from continuation, retained retractions/reopenings, deferred branches, rationale links, deterministic native JSON roundtrip, and invalid quote/actor mutations.
 
 This is not the full repository suite, a native-Windows run, a repeated product pilot or independent semantic review. Both Remote MCP devices were offline; no user-machine worktree was touched. The founding-seed verification loose end remains unchanged.
 
-Resume Level-1 work from `q-canonical`, `m27` and `m30`. Preserve the other open/deferred threads without turning this checkpoint into a new product-engineering program.
+The first fixed-space falsification checkpoint is now also in `q-fixed-space`, `m34`–`m36`, and remains reopened for Brian review. Resume the broader Level-1 work from `q-canonical` and the narrower operation question from `q-fixed-space`. Preserve the other open/deferred threads without turning this checkpoint into a new product-engineering program.
+
+
+### Incremental fixed-space checkpoint
+
+After Brian said `Proceed`, the graph was extended rather than rebuilt. It records the assistant's provisional collapse of Bayesian/AGM/defeasible change into standing-revision semantics, the Bayesian new-theory counterexample against collapsing candidate introduction into conditioning, the initial three-function proposal, and its immediate refinement into **source relation × state effect**. Brian's authorization to investigate is explicit; no endorsement of the resulting factorization is recorded. The broad `configuration + action + warrant` compression from merged epistemic-warrant PR #14 is recorded as context, not as a replacement for the local question.
