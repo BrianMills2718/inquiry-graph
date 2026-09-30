@@ -54,7 +54,8 @@
     "arena-selection-assistant": "dialogue-2026-09-30-operational-games:ex051",
     "integration-gap-assistant": "dialogue-2026-09-30-operational-games:ex052",
     "translation-contract-assistant": "dialogue-2026-09-30-operational-games:ex053",
-    "update-and-proceed-user": "dialogue-2026-09-30-operational-games:ex054"
+    "update-and-proceed-user": "dialogue-2026-09-30-operational-games:ex054",
+    "game-goal-model-coupling-user": "dialogue-2026-09-30-operational-games:ex055"
   },
   "nodes": [
     [
@@ -404,6 +405,24 @@
       "goal",
       "Update Inquiry Graph with this continuation and then proceed to the translation-contract research step.",
       "update-and-proceed-user"
+    ],
+    [
+      "q-game-entertainment-layer",
+      "question",
+      "Is entertaining or selecting a game a distinct formal problem, or is it already covered by decision theory and hypothesis generation? ",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "game-goal-model-coupling",
+      "hypothesis",
+      "The game a system is effectively playing depends jointly on what it wants and on hypotheses about how its actions lead to outcomes.",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "reuse-decision-hypothesis-generation",
+      "hypothesis",
+      "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer.",
+      "game-goal-model-coupling-user"
     ]
   ],
   "relations": [
@@ -652,6 +671,30 @@
       "continue-after-graph-update",
       "translation-contract-next",
       "update-and-proceed-user"
+    ],
+    [
+      "supports",
+      "game-goal-model-coupling",
+      "reuse-decision-hypothesis-generation",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "candidate_for",
+      "reuse-decision-hypothesis-generation",
+      "q-game-entertainment-layer",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "related_to",
+      "game-goal-model-coupling",
+      "goal-perspective-nonidentity",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "related_to",
+      "game-goal-model-coupling",
+      "game-as-hypothesis",
+      "game-goal-model-coupling-user"
     ]
   ],
   "moves": [
@@ -1089,6 +1132,27 @@
         "continue-after-graph-update"
       ],
       "update-and-proceed-user"
+    ],
+    [
+      "ask",
+      [
+        "universal-game-integration-gap"
+      ],
+      [
+        "q-game-entertainment-layer"
+      ],
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "connect",
+      [
+        "q-game-entertainment-layer"
+      ],
+      [
+        "game-goal-model-coupling",
+        "reuse-decision-hypothesis-generation"
+      ],
+      "game-goal-model-coupling-user"
     ]
   ],
   "stances": [
@@ -1226,6 +1290,21 @@
       "continue-after-graph-update",
       "posits",
       "update-and-proceed-user"
+    ],
+    [
+      "q-game-entertainment-layer",
+      "questions",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "game-goal-model-coupling",
+      "posits",
+      "game-goal-model-coupling-user"
+    ],
+    [
+      "reuse-decision-hypothesis-generation",
+      "posits",
+      "game-goal-model-coupling-user"
     ]
   ],
   "question_updates": [
