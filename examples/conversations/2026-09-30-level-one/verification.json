@@ -7,8 +7,8 @@
     "networkx": "3.6.1",
     "pytest": "9.0.2"
   },
-  "source_git_blob": "166ca9bff534177ff576e59e41ea414764dceb7a",
-  "curation_git_blob": "64d39fc5c99c2dfc7b4548a61feede466cfb225b",
+  "source_git_blob": "3282c3e75dae6c5fc004fdcf510c7b5df13be485",
+  "curation_git_blob": "b331d1c6c4694cd4e0d0ba8571722b95ccf0bdcb",
   "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
   "native_modules": {
     "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
@@ -27,15 +27,15 @@
   },
   "stats": {
     "conversations": 1,
-    "source_messages": 88,
-    "nodes": 101,
-    "relations": 81,
-    "moves": 36,
+    "source_messages": 89,
+    "nodes": 102,
+    "relations": 82,
+    "moves": 37,
     "stance_events": 26,
     "question_events": 38,
     "questions": 21,
     "review": {
-      "proposed": 282,
+      "proposed": 285,
       "confirmed": 0,
       "rejected": 0
     }
@@ -63,8 +63,8 @@
     "Native modules were copied from GitHub and Git blob hashes matched before testing.",
     "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
     "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
-    "32 visible prose/research-update turns are represented by 88 curated excerpts, not complete token coverage or native-export reconciliation.",
-    "Hosted CI run 36682172055 failed in the package-install step before repository tests; the 15-test result above is the isolated sandbox run."
+    "Hosted CI run 36682172055 failed in the package-install step before repository tests; the 15-test result above is the isolated sandbox run.",
+    "33 visible prose/research-update turns are represented by 89 curated excerpts, not complete token coverage or native-export reconciliation."
   ],
-  "test_git_blob": "7caeae62d383cf5a165ee9059d39ed04a7901c11"
+  "test_git_blob": "8d09a39fdc55b1ab90dc290c49b72182e52b2b1a"
 }
