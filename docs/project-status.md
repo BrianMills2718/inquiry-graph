@@ -70,7 +70,7 @@ Until then, the seed is not source-complete.
 
 Track: issue #2.
 
-Hosted jobs fail before runner execution. Local verification is green, so this is lower-priority infrastructure debt.
+PR #67 confirms hosted CI now reaches runners and passes the base/test suite on Python 3.11 and 3.13 after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI.
 
 ## Separate open PR stack
 

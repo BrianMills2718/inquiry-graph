@@ -86,11 +86,9 @@ Those moved to `BrianMills2718/epistemic-warrant`, which has its own verificatio
 
 ## Hosted CI
 
-GitHub-hosted jobs have historically failed/cancelled before runner steps/logs.
+GitHub-hosted jobs had historically failed/cancelled before useful test execution. On PR #67, the ordinary workflow was corrected to install `.[dev]` rather than the private optional `llm_client` dependency; both Python 3.11 and 3.13 jobs then completed the rebuild, tests, both graph validations, artifact drift check, and dependency check successfully.
 
-Issue #2 tracks that infrastructure problem.
-
-Do not treat pre-run hosted failures as application-test failures.
+The optional live-LLM adapter remains outside hosted CI because it depends on a separately authorized private package/provider path.
 
 ## Explicitly not verified
 
