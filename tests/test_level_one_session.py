@@ -27,9 +27,9 @@ def test_native_v1_validation(graph):
 
 def test_each_visible_prose_turn_has_a_source(graph):
     turns = {int(m.id.split(":t")[1][:2]) for m in graph.conversations[0].messages}
-    assert turns == set(range(1, 51))
+    assert turns == set(range(1, 57))
     # Turn representation is not a claim of complete transcript/token coverage.
-    assert len(graph.conversations[0].messages) == 109
+    assert len(graph.conversations[0].messages) == 115
     assert graph.conversations[0].source_kind == "curated_excerpts"
     assert "neither a complete export" in graph.conversations[0].coverage_note
 
@@ -40,7 +40,7 @@ def test_sources_have_no_invented_native_ids_or_times(graph):
 
 
 def test_all_annotations_await_review(graph):
-    assert stats(graph)["review"] == {"proposed": 384, "confirmed": 0, "rejected": 0}
+    assert stats(graph)["review"] == {"proposed": 426, "confirmed": 0, "rejected": 0}
 
 
 def test_proceed_is_not_theory_adoption(graph):
@@ -56,9 +56,16 @@ def test_proceed_is_not_theory_adoption(graph):
                    for e in graph.stance_events)
 
 
+def test_representation_track_is_activated_and_followups_open(graph):
+    assert any(e.actor_id == "s30:brian" and e.stance == "endorses" and e.target_id == "s30:g-research-representation-stack" for e in graph.stance_events)
+    assert any(e.question_id == "s30:q-representation-registry" and e.status == "reopened" and e.at_message_id == "s30:t51" for e in graph.question_events)
+    assert any(r["id"] == "s30:q-registry-crosswalk" and r["status"] == "open" for r in open_questions(graph))
+    assert any(r["id"] == "s30:q-mini-megamodel" and r["status"] == "open" for r in open_questions(graph))
+
+
 def test_post_level1_representation_track_is_deferred(graph):
     for qid in ("s30:q-representation-registry", "s30:q-interchange-ir", "s30:q-transfer-limits"):
-        assert any(r["id"] == qid and r["status"] == "deferred" for r in open_questions(graph))
+        assert any(e.question_id == qid and e.status == "deferred" for e in graph.question_events)
     assert any(e.actor_id == "s30:brian" and e.stance == "endorses" and e.target_id == "s30:g-post-level1-representation" for e in graph.stance_events)
     assert not any(e.status == "resolved" and e.question_id in {
         "s30:q-representation-registry", "s30:q-interchange-ir", "s30:q-transfer-limits"
