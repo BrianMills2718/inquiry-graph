@@ -211,3 +211,8 @@ The semantic-preservation caveat, reflective mutation-policy hard-case remap, an
 ### NYC federated baseline and sealed-update revision
 
 WP2/WP4 compares the capable NYC baseline with the smallest mature-donor federation. The useful layer is thin: native artifacts, provenance/version links, explicit claim-standing/refusal edges, policy-criteria/authority references, and dependency links. It improves reconstruction and selective revision but not evidence or method validity. Revealing the sealed 2026-08-14 NYC Health air-quality evaluation correctly reopens environmental-health/equity reasoning while leaving unrelated baseline claims and the missing six-hearing QC result untouched. This earns further investigation of a revision-aware cross-artifact index, not a universal ontology.
+
+
+### Revision-aware dependency prior-art stop
+
+The NYC selective-revision result was pressure-tested against truth-maintenance systems, assurance/safety-case change-impact analysis, database provenance, incremental view maintenance, self-adjusting computation, build systems, Salsa/Adapton and belief revision. The residual capability is mature federation, not a new epistemic engine. A local owner screen finds DIGIMON already has explicit `invalidation_dependencies`, reverse bindings and lineage/dependency closure; OntoCanon owns immutable custody/history, Workbench owns selective reopen/decision presentation, and Inquiry Graph remains research history. Foundational research on a new revision engine is closed absent a concrete recurring gap.
