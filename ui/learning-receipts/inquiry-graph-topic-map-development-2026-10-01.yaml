@@ -1,0 +1,104 @@
+schema_version: ui-learning-receipt/v1
+receipt_id: inquiry-graph-topic-map-development-2026-10-01
+project_id: inquiry-graph
+surface_id: private-topic-map
+change_revision: d10da47275eada6312bdd004947474898c8cd5e5
+created_at: '2026-10-01T03:27:58Z'
+recorded_by: codex
+stage: development-checkpoint
+ui_families:
+  - graph-network
+  - research-evidence-workbench
+heuristic_catalog:
+  repository: BrianMills2718/ui-atlas
+  revision: e274fac51dae90a4630b72795485eb892e997ba0
+  path: heuristics/catalog.yaml
+  catalog_version: v0
+heuristics_considered:
+  - heuristic_id: H1
+    disposition: applied
+    rationale: The page names the cross-conversation position-map job and exposes topic and conversation entry actions.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H3
+    disposition: applied
+    rationale: The page labels topic groups as interpretive and cross-chat links as inferred, while the inspector opens source evidence.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H4
+    disposition: applied
+    rationale: Topic and relation structure supports exploration of recurrence; bounded detail views expose positions and source evidence.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H5
+    disposition: applied
+    rationale: The overview makes inferred links and aggregation explicit, hides pairs judged unrelated, and allows stepping down to detail evidence.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H6
+    disposition: applied
+    rationale: A 27-topic overview links to scrollable topic and conversation detail views with verified rendering bounds.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H11
+    disposition: applied
+    rationale: Counts and notices identify included positions, hidden unrelated pairs, and aggregated overview relations.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H13
+    disposition: applied
+    rationale: Source-derived, inferred, and interpretive items retain explicit epistemic labels in their graph views.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H14
+    disposition: applied
+    rationale: Topic and conversation views answer different questions and preserve a selected position when switching to its source conversation.
+    evidence_refs:
+      - map-browser
+evidence:
+  - evidence_id: map-source
+    kind: source-inspection
+    ref: docs/ui/topic-map/README.md
+    observed_at: '2026-10-01T03:27:58Z'
+    summary: Records the representation choice, inclusion semantics, limits, and private data boundary for the 30-chat candidate map.
+  - evidence_id: map-browser
+    kind: browser-observation
+    ref: private/xconv/scale_run/map/verified/evidence/browser-verification.json
+    observed_at: '2026-10-01T03:27:58Z'
+    summary: Twelve file-URL interaction assertions passed at 1440x1000; 0 page errors and 0 failed requests. Topic and 105-node conversation detail views scroll to their last node, and selection persists across views.
+  - evidence_id: map-screenshots
+    kind: browser-observation
+    ref: private/xconv/scale_run/map/verified/evidence/overview-file.png; private/xconv/scale_run/map/verified/evidence/topic-top.png; private/xconv/scale_run/map/verified/evidence/topic-bottom.png; private/xconv/scale_run/map/verified/evidence/conversation-dense-top.png; private/xconv/scale_run/map/verified/evidence/conversation-dense-bottom.png
+    observed_at: '2026-10-01T03:27:58Z'
+    summary: Private screenshots show the overview and top/bottom portions of the larger topic and conversation views without being committed.
+capability_dispositions:
+  - capability: provenance
+    disposition: preserved
+    reason: Extracted positions retain source-message evidence and quote metadata in the private graph view.
+  - capability: linked-views
+    disposition: preserved
+    reason: Topic overview, topic detail, and conversation graph are connected views.
+  - capability: persistent-selection
+    disposition: preserved
+    reason: Browser verification confirmed a selected position remains selected in its source conversation.
+  - capability: shared-filters
+    disposition: preserved
+    reason: Topic search and graph type/relation filters remain available.
+  - capability: details-on-demand
+    disposition: preserved
+    reason: Position and relation details open in the graph inspector.
+  - capability: evidence-inspector
+    disposition: preserved
+    reason: Selecting a position exposes its private source evidence.
+proposals: []
+human_review:
+  required: true
+  status: pending
+  notes: Brian has not reviewed the candidate surface or promoted any UI learning.
