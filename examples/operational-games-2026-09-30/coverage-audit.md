@@ -31,6 +31,7 @@ This audit checks whether each major inquiry arc visible in the 2026-09-30 conve
 | Minimum executable substrate question | covered | `minimum-runtime-question` |
 | UGD runtime synthesis result | covered | `wiring-contract-architecture` |
 | Request for complete conversation coverage | covered | `full-conversation-coverage-request` |
+| Truck logistics composition acceptance fixture | covered | `proceed-truck-fixture`, `truck-fixture-scope`, `truck-fixture-pass`, `truck-fixture-merged` |
 
 ## What "covered" means
 
