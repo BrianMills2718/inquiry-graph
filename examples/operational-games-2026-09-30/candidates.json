@@ -1589,6 +1589,21 @@
       "review_status": "proposed",
       "kind": "claim",
       "text": "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:finish-documentation-now",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex114",
+          "start": 0,
+          "end": 16,
+          "quote": "Okay, finish it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Complete the already-defined documentation coherence and update work now rather than leaving it partially executed."
     }
   ],
   "relations": [
@@ -3581,6 +3596,30 @@
         {
           "role": "target",
           "ref": "dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:084",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex114",
+          "start": 0,
+          "end": 16,
+          "quote": "Okay, finish it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "dialogue-2026-09-30-operational-games:n:finish-documentation-now"
+        },
+        {
+          "role": "whole",
+          "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
         }
       ]
     }
@@ -5839,6 +5878,32 @@
         "dialogue-2026-09-30-operational-games:m:086"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:088",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex114",
+          "start": 0,
+          "end": 16,
+          "quote": "Okay, finish it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:finish-documentation-now"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex114",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:087"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -6929,6 +6994,23 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex113"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:065",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex114",
+          "start": 0,
+          "end": 16,
+          "quote": "Okay, finish it."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:finish-documentation-now",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex114"
     }
   ],
   "question_events": [

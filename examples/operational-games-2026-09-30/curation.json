@@ -117,7 +117,8 @@
     "proceed-truck-fixture": "dialogue-2026-09-30-operational-games:ex110",
     "truck-fixture-scope": "dialogue-2026-09-30-operational-games:ex111",
     "truck-fixture-pass": "dialogue-2026-09-30-operational-games:ex112",
-    "truck-fixture-merged": "dialogue-2026-09-30-operational-games:ex113"
+    "truck-fixture-merged": "dialogue-2026-09-30-operational-games:ex113",
+    "finish-it-user": "dialogue-2026-09-30-operational-games:ex114"
   },
   "nodes": [
     [
@@ -755,6 +756,12 @@
       "claim",
       "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case.",
       "truck-fixture-merged"
+    ],
+    [
+      "finish-documentation-now",
+      "goal",
+      "Complete the already-defined documentation coherence and update work now rather than leaving it partially executed.",
+      "finish-it-user"
     ]
   ],
   "relations": [
@@ -1255,6 +1262,12 @@
       "truck-fixture-spec-pass",
       "typed-wiring-contract-architecture",
       "truck-fixture-pass"
+    ],
+    [
+      "part_of",
+      "finish-documentation-now",
+      "documentation-coherence-goal",
+      "finish-it-user"
     ]
   ],
   "moves": [
@@ -2117,6 +2130,16 @@
         "truck-fixture-merged-result"
       ],
       "truck-fixture-merged"
+    ],
+    [
+      "scope",
+      [
+        "documentation-coherence-goal"
+      ],
+      [
+        "finish-documentation-now"
+      ],
+      "finish-it-user"
     ]
   ],
   "stances": [
@@ -2439,6 +2462,11 @@
       "truck-fixture-merged-result",
       "posits",
       "truck-fixture-merged"
+    ],
+    [
+      "finish-documentation-now",
+      "posits",
+      "finish-it-user"
     ]
   ],
   "question_updates": [

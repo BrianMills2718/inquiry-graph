@@ -919,6 +919,14 @@
       "text": "The truck fixture is merged.",
       "original_id": null,
       "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex114",
+      "actor_id": "participant:brian",
+      "ordinal": 114,
+      "text": "Okay, finish it.",
+      "original_id": null,
+      "timestamp": null
     }
   ]
 }
