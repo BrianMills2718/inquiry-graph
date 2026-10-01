@@ -1,113 +1,69 @@
 # Roadmap and Scope Control — Inquiry Graph
 
-> **Split, 2026-09-29.** Formal epistemic theory moved to `BrianMills2718/epistemic-warrant`. This repository is now the inquiry-representation/product project.
+> Formal epistemic theory lives in `BrianMills2718/epistemic-warrant`.
+> This repository is the inquiry-representation/product project.
 
-## Delivered V1
+## Delivered
 
-- executable Pydantic ontology and generated schemas;
-- role-typed/reified relations and inquiry moves;
-- exact source grounding;
-- actor stance/question-state histories;
-- active-branch ChatGPT import;
-- deterministic offline candidate ingestion;
-- optional provider adapter;
-- validation, merge, query and render workflows;
-- curated founding-dialogue seed.
+V1 provides source-grounded content/questions, typed relations and inquiry
+moves, actor-relative stance/question history, active-branch import, validation,
+merge/query/render workflows, and curated example trajectories.
 
-## Immediate operational check — reproduce 2026-09-30 seed continuation
+Hosted CI is restored. The extended founding and operational-games fixtures have
+been rebuilt and validated; use [verification.md](verification.md) for evidence.
 
-Before changing the seed or relying on the new 247-excerpt counts in an executable workflow, rerun:
+## Product direction after the 30-chat result
 
-```bash
-python -m pytest -q
-python examples/build_seed.py
-python tools/build_artifacts.py --check
-python -m inquiry_graph validate examples/seed/graph.json
-python -m pip check
-```
+The measured retrieval campaign did **not** justify Inquiry Graph as a superior
+general answer-retrieval route. For that workload, archive-search-then-read is
+the default.
 
-This is a verification catch-up, not a new product priority. Once reproduced, continue P0.
+Continue the graph only for capabilities that are structurally distinct:
 
-## P0 — Usefulness pilot
+- topic/inquiry maps across conversations;
+- attributed positions and provenance;
+- open-question, rationale and revision traces;
+- resumable inquiry state;
+- downstream handoff into canonical identity/alignment systems.
 
-Track: issue #38.
+Do not schedule another benchmark without explicit approval.
 
-**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on decision rationale and side-line outcomes. Next: record those explicitly, rerun the AI-reader pilot, then test multi-conversation histories that exceed a single context window. Human-reader evaluation is out of scope.
+## Source reconciliation
 
-Goal: determine whether the graph earns its complexity.
+Track issue #3. The curated fixtures are substantive source-grounded
+reconstructions, not full-export reconciliations. When original message IDs are
+available, reconcile without fabricating IDs/timestamps and preserve review
+history.
 
-Compare transcript-only/context-limited vs graph-assisted AI performance on unresolved-question recovery, rationale/revision recovery, attribution, dependency recovery, branch recovery, cross-conversation conflict/tension recovery, and long-context resumption.
+## Operational-games / compositional-world continuation
 
-Do not build a polished UI first.
+The current conceptual record is
+[examples/operational-games-2026-09-30](../examples/operational-games-2026-09-30/README.md).
 
-## P1 — Source reconciliation
+Important current decisions:
 
-Track: issue #3.
+1. the base game concept may intentionally be broad;
+2. game/model choice is coupled to objectives and hypotheses, not a standalone
+   foundational selector;
+3. candidate generation already has mature prior-art coverage in
+   `epistemic-warrant`; reuse it rather than reopening the problem;
+4. UGD/open-game work is a semantic contract, not automatically the runtime;
+5. the executable composition direction is a small common wiring syntax, typed
+   semantic contracts, backend-specific execution, and explicit preservation
+   obligations.
 
-The live thread can now be read through the ChatGPT bridge, so this no longer waits on an export. The partial check on issue #3 matched 136 of 219 excerpts verbatim; about 50 voice-mode excerpts still need the export.
+## Downstream integration
 
-When the full export is available:
+Cross-source identity, alignment, governed assertions and tension/conflict
+handling belong in OntoCanon/downstream canonicalization, not a second store in
+Inquiry Graph.
 
-- reconcile curated excerpts to exact active-branch messages;
-- preserve source/review history;
-- audit actor attribution and question closure;
-- adjudicate proposed annotations.
+## Historical branch stack
 
-## P2 — Machine-consumable product workflow
-
-Only after P0 identifies useful retrieval/representation workflows for an AI reader.
-
-Likely capabilities:
-
-- open-question retrieval;
-- revision/rationale traces;
-- provenance/dependency retrieval;
-- actor/stance filtering;
-- strategy/reasoning-history retrieval;
-- compact cross-conversation context assembly.
-
-Do not optimize for human-facing UI. Choose storage/query technology only after measuring actual multi-conversation retrieval needs.
-
-## P3 — Downstream cross-conversation integration
-
-Cross-source identity, alignment, governed assertions and tension/conflict detection belong in the downstream `onto-canon6` direction, not in Inquiry Graph.
-
-Inquiry Graph should emit per-conversation, source-grounded attributed structure that can be consumed downstream. When the multi-conversation usefulness experiment reaches this stage:
-
-- test the handoff contract into the downstream canonicalization layer;
-- preserve speaker/stance, source provenance, question state, rationale and deferred-branch outcomes;
-- measure whether downstream integration recovers cross-conversation tensions without silent semantic merging;
-- keep any reviewed identity proposals, reasons and undo history in the downstream owner rather than creating a second canonical store here.
-
-Incremental/chunked processing for larger **individual conversations** may still be added here when evaluation requires it, with boundary provenance preserved.
-
-## Maintenance — hosted CI
-
-Track: issue #2.
-
-Restore hosted Python 3.11/3.13 execution when convenient, but do not block product research while local verification is green.
-
-## Separate old branch stack
-
-PR #8 and stacked PR #15 remain separate.
-
-Review/rebase only if that formal-inquiry/hypergraph trajectory is explicitly resumed.
-
-## Theory dependency
-
-If product experiments need formal warrant/support machinery, depend on `epistemic-warrant` as an external package and make the integration explicit.
-
-Do not copy its code into this repository.
-
-## Current verification baseline
-
-Post-split fresh native-Windows verification:
-
-- 60 tests passed;
-- 8 artifacts checked;
-- graph valid with 0 errors / 0 warnings;
-- dependency check clean.
+PRs #8 and #15 remain separate historical trajectories. Do not merge them
+casually.
 
 ## Stop rule
 
-A new schema/product layer should be justified by a concrete evaluation or user-workflow need.
+A new schema, runtime layer, candidate-generation theory, or evaluation campaign
+requires a concrete unmet need. Prefer reuse and first-principles analysis.
