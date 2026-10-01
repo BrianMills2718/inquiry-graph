@@ -206,12 +206,14 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   `evaluation/cross_conversation_scale/balanced_replay.py`. A's source answers remain under
   `private/xconv/scale_run_codex_rerun_20260930/`; the fresh B/C answers and grades are under
   `private/xconv/scale_run_codex_balanced_20260930/`.
-- **Resume event:** the C5 decision is posted, and the 30-chat private topic-map implementation
-  is merged in [PR #77](https://github.com/BrianMills2718/inquiry-graph/pull/77). Its standalone
-  viewer is `private/xconv/scale_run/map/verified/index.html`; see `docs/ui/topic-map/README.md`.
-  Continue with a stable exported relation-graph bundle and broader archive coverage. The bounded
-  Jev/Laya disposition is recorded above. The bounded evaluation does not establish full-archive
-  coverage, map usefulness across all chats, or general answer quality.
+- **Bounded goal terminal state (2026-10-01):** the C5 decision is posted, and the 30-chat
+  topic map is built with the merged shared viewer. The builder/source is in Inquiry Graph PR #77;
+  the shared contract is in shared_ui PR #11; the consumer refresh is in Inquiry Graph PR #80.
+  The current private page is `private/xconv/scale_run/map/verified/index.html`; see
+  `docs/ui/topic-map/README.md`. This bounded goal is complete. Full-archive position memory and
+  the combined map now continue under `docs/goals/cross-chat-position-memory.md`. The C5 result
+  still does not establish full-archive coverage, map usefulness across all chats, or general
+  answer quality. The bounded Jev/Laya disposition and its reopening condition remain above.
 
 ## Evaluator-Facing Objective
 
