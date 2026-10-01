@@ -2,7 +2,7 @@
   "id": "dialogue-2026-09-30-operational-games",
   "title": "From factorization analysis to compositional games for embedded observers",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, and the compositional-executable-world synthesis. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
+  "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
   "participants": [
     {
       "id": "participant:brian",
@@ -885,6 +885,38 @@
       "actor_id": "participant:brian",
       "ordinal": 109,
       "text": "can you make sure our full conversation is completely represented in the inquiry graph repo?",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex110",
+      "actor_id": "participant:brian",
+      "ordinal": 110,
+      "text": "Proceed.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex111",
+      "actor_id": "participant:assistant",
+      "ordinal": 111,
+      "text": "I’m proceeding with the **smallest concrete acceptance case**, not a new framework: a machine-readable truck/logistics wiring manifest plus a paper-level spec that assigns each component to an existing backend and states exactly what must be preserved across boundaries.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex112",
+      "actor_id": "participant:assistant",
+      "ordinal": 112,
+      "text": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex113",
+      "actor_id": "participant:assistant",
+      "ordinal": 113,
+      "text": "The truck fixture is merged.",
       "original_id": null,
       "timestamp": null
     }
