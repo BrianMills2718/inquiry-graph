@@ -3,6 +3,26 @@
 Written for a fresh agent. No transcripts or quotes here; private data stays under
 `~/code/inquiry-graph/private/xconv/` (never commit it).
 
+## Current status (2026-10-01)
+
+This note's original provider and viewer sections describe the state on 2026-09-29. The
+30-chat campaign has since completed through the Codex subscription route. The balanced replay
+and independent C5 signoff support keeping the linker as a bounded research/topic-map source;
+the decision is posted to [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
+No scale-superiority or product answer-route claim was made.
+
+The private topic map has a builder in `tools/topic_map.py`, a template in
+`tools/topic_map_template.html`, and a representation record in `docs/ui/topic-map/README.md`.
+The current standalone output is `private/xconv/scale_run/map/verified/index.html`: 30
+conversations, 620 positions, 27 interpretive topic groups, and 233 typed links; 750 pairs
+judged unrelated are hidden. The generated page embeds the graph bundle and quote-bearing data.
+Keep it and screenshots under gitignored `private/xconv/`; do not publish them.
+
+The shared `relation-graph-view/v1` component source is still active in the separate `shared_ui`
+worktree. Do not edit that worktree. The HTML already generated here remains viewable, while
+regenerating it requires an exported component bundle. This is a bounded 30-chat prototype;
+full-archive coverage and a Jev/Laya extraction adoption decision remain open.
+
 ## Long-term goal (Brian)
 An AI understands everything Brian is interested in and his positions across all his
 ChatGPT conversations, and finds gaps, open questions and conflicts. Brian does not read
@@ -86,38 +106,17 @@ positions and matched stance on 2 of 16. That probe has no durable trace, so tre
 exploratory and not replayable. Neither System 1 probe establishes a drop-in replacement for
 the reference-key generator. Do not infer extraction precision from these results.
 
-## Next steps
-1. Add a Codex CLI subscription route to the scale-run entrypoint, keep its output in a separate
-   campaign directory, and regenerate all 30 reference keys consistently. Check usage while
-   running; the one-call trace has no token counts. Then finish the scale evaluation, hand-check
-   >= 4 grades, write
-   `evaluation/cross_conversation_scale/results.md`, comment on issue #38, open the PR.
-   Report counts and exit status.
-2. Graph viewer (Brian: "every time i ask for a graph ... my coding agents try to recreate the
-   wheel"; typedb-style typed graphs, hierarchies, hyperedges). Do not build a new viewer.
-   A subagent found (unverified by me, verify first):
-   - best fit: Scientific Hypergraph viewer
-     `scientific-hypergraph/wiki/reference/metamodel/hypergraph-viewer.html` (zero-build,
-     typed n-ary diamonds with role spokes, layers, type hierarchy, inspector);
-   - best home/pattern: shared_ui WorkGraph (project-meta Plan #280; Pydantic -> JSON Schema
-     -> web component);
-   - others: O2A explorer, onto-canon6 GraphCanvas, OrgChart groups.
-   - root cause: the `ui` skill's graph guide points at a copy-paste React Flow template;
-     the capability index has no "render a graph" entry; the router catalog lists only
-     outside libraries.
-   Verify these claims, then: make one shared viewer (domain-free format, a plain graph =
-   a relation with two roles) in `shared_ui`, add one routing pointer in
-   `project-meta/wiki/tool_and_capability_index.md`, the `ui` skill graph guide and the router
-   catalog, retire the copy-paste default, and have inquiry-graph only export to its format.
-   Cross-project shared skill/index edits: claim per AGENTS.md; skills are authored only in
-   `~/projects/.agents/skills/`.
-3. Render the 30-chat map through that viewer (topics = Louvain communities over position
-   embeddings, k=6, floor 0.5; typed cross-chat links as edges). Design via representation-router;
-   reuse `topics()`/`name_topics()`/`chat_views()` logic from `tools/build_inquiry_map.py` as the
-   data producer only. Output contains quotes -> write under `private/`.
-4. Cleanup: router worktree `~/code/representation-router/worktrees/quality-fallback` (branch
-   merged as PR #44) can be removed via the sanctioned worktree-remove path. Memory
-   `reuse-shared-graph-viewer.md` still needs Codex parity once the shared viewer exists.
+## Next steps (current)
+1. Integrate the saved balanced C5 follow-up and private topic-map implementation through the
+   claimed Inquiry Graph branch and PR. Keep the quote-bearing output under `private/xconv/`.
+2. Once the shared UI relation-graph bundle is exported from its active work, regenerate the
+   page from the committed builder using that stable bundle. Do not edit the active shared_ui
+   worktree from this task.
+3. Brian can inspect `private/xconv/scale_run/map/verified/index.html` and give feedback on
+   whether the topic grouping and conversation switch answer the intended map use case.
+4. Full-archive position coverage and whether Jev or Laya should participate in extraction remain
+   separate open decisions. Existing local and online prior-art findings are recorded above; no
+   adoption decision follows from the small pilot evidence.
 
 ## Constraints in force
 Never commit transcripts/quote-bearing outputs. ChatGPT bridge is read/search only (no
