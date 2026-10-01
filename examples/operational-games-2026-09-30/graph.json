@@ -1544,6 +1544,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Ensure every substantive inquiry turn in the current conversation is represented in the operational-games graph, with explicit coverage limits where full-export verification is unavailable."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:truck-fixture-execution-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex111",
+          "start": 0,
+          "end": 270,
+          "quote": "I’m proceeding with the **smallest concrete acceptance case**, not a new framework: a machine-readable truck/logistics wiring manifest plus a paper-level spec that assigns each component to an existing backend and states exactly what must be preserved across boundaries."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Implement the smallest concrete truck/logistics acceptance fixture for the compositional executable-world architecture without creating a new general framework."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex112",
+          "start": 0,
+          "end": 228,
+          "quote": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The truck/logistics manifest passes bounded structural/mechanical/strategic checks: A and C are feasible, D is rejected before strategy, the strategic fixture has one pure Nash profile, and only departure/arrival mechanics can write material state."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex113",
+          "start": 0,
+          "end": 28,
+          "quote": "The truck fixture is merged."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case."
     }
   ],
   "relations": [
@@ -3464,6 +3509,78 @@
         {
           "role": "result",
           "ref": "dialogue-2026-09-30-operational-games:n:full-thread-coverage-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:081",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex112",
+          "start": 0,
+          "end": 228,
+          "quote": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-execution-goal"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:082",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex113",
+          "start": 0,
+          "end": 28,
+          "quote": "The truck fixture is merged."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+        },
+        {
+          "role": "conclusion",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:083",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex112",
+          "start": 0,
+          "end": 228,
+          "quote": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture"
         }
       ]
     }
@@ -5644,6 +5761,84 @@
         "dialogue-2026-09-30-operational-games:m:083"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:085",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex111",
+          "start": 0,
+          "end": 270,
+          "quote": "I’m proceeding with the **smallest concrete acceptance case**, not a new framework: a machine-readable truck/logistics wiring manifest plus a paper-level spec that assigns each component to an existing backend and states exactly what must be preserved across boundaries."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-execution-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex111",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:084"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:086",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex112",
+          "start": 0,
+          "end": 228,
+          "quote": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-execution-goal"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex112",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:085"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:087",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex113",
+          "start": 0,
+          "end": 28,
+          "quote": "The truck fixture is merged."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "summarize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex113",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:086"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -6683,6 +6878,57 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:full-thread-coverage-goal",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex109"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:062",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex111",
+          "start": 0,
+          "end": 270,
+          "quote": "I’m proceeding with the **smallest concrete acceptance case**, not a new framework: a machine-readable truck/logistics wiring manifest plus a paper-level spec that assigns each component to an existing backend and states exactly what must be preserved across boundaries."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-execution-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex111"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:063",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex112",
+          "start": 0,
+          "end": 228,
+          "quote": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex112"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:064",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex113",
+          "start": 0,
+          "end": 28,
+          "quote": "The truck fixture is merged."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:assistant",
+      "target_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex113"
     }
   ],
   "question_events": [
@@ -7393,7 +7639,7 @@
       "id": "dialogue-2026-09-30-operational-games",
       "title": "From factorization analysis to compositional games for embedded observers",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, and the compositional-executable-world synthesis. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
+      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
       "participants": [
         {
           "id": "participant:brian",
@@ -8278,6 +8524,38 @@
           "text": "can you make sure our full conversation is completely represented in the inquiry graph repo?",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex110",
+          "actor_id": "participant:brian",
+          "ordinal": 110,
+          "text": "Proceed.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex111",
+          "actor_id": "participant:assistant",
+          "ordinal": 111,
+          "text": "I’m proceeding with the **smallest concrete acceptance case**, not a new framework: a machine-readable truck/logistics wiring manifest plus a paper-level spec that assigns each component to an existing backend and states exactly what must be preserved across boundaries.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex112",
+          "actor_id": "participant:assistant",
+          "ordinal": 112,
+          "text": "The checker passes cleanly: A and C are mechanically feasible, D is rejected before the strategic layer, the strategic fixture has exactly one pure Nash profile, and only the departure/arrival mechanics can write material state.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex113",
+          "actor_id": "participant:assistant",
+          "ordinal": 113,
+          "text": "The truck fixture is merged.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -8289,7 +8567,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:9e8877533586302055095f89aa53e0b46dacd7e758a1443b8f81acf90f7f653c",
+        "source_sha256:68ccd9fa0f99d23725afab3cd030b8b3d3fd103fde1e9f8b9190724cb6c983bf",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }
