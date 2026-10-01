@@ -110,9 +110,10 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** C1–C5 are complete, including the balanced comparison, independent C5 signoff, and the decision comment on [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199). The later human-viewable topic map is a separate phase and is not evaluated here.
-- **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
-  continue at the current credit balance. The separate Codex CLI campaign under
+- **Current increment:** C1–C5 and the bounded decision are complete; the decision is posted to [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199). The private human-viewable topic map is a separate phase, documented in `docs/ui/topic-map/README.md`, and is not evaluated here.
+- **C3 (2026-09-30):** the original OpenRouter run ended incomplete at 8/30 key files because of
+  insufficient account credits; it is preserved as a failed attempt and excluded from the result.
+  The separate Codex CLI campaign under
   `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
   and 43 dropped, with $0 recorded per-chat API cost. Its cross-chat key retained 13 questions
   covering all five required categories (3 agreement, 3 tension, 3 recurring open question, 2 change
@@ -150,7 +151,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   safety value; two calls exceeded it and later completed. The key used the full corpus, so the
   evaluation does not establish that the graph route beats search at scale. The bounded decision
   is to keep the linker as a research/topic-map source and defer productizing an answer route. The
-  The signed-off bounded decision is recorded in this new [issue #38 comment](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199); it supersedes the earlier unbalanced route comparison for this decision.
+  bounded decision was posted to [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199). This is a one-corpus, 13-question result; it supports keeping the linker as a research/topic-map source, not a product answer route.
 - **Blockers:** none. OpenRouter credit exhaustion prevented the original key call, but the key and
   comparison were completed through the authorized Codex subscription route.
 - **Jev/Laya prior art (verified 2026-09-30):** Jev-Mem is the closest whole-memory implementation:
@@ -191,8 +192,9 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   `evaluation/cross_conversation_scale/balanced_replay.py`. A's source answers remain under
   `private/xconv/scale_run_codex_rerun_20260930/`; the fresh B/C answers and grades are under
   `private/xconv/scale_run_codex_balanced_20260930/`.
-- **Resume event:** begin the separate human-viewable topic-map phase. This evaluation does not
-  validate the map implementation or answer quality.
+- **Resume event:** the C5 decision has been posted and its balanced replay and independent signoff
+  are recorded. Continue the separate private topic-map phase from `docs/ui/topic-map/README.md`;
+  this evaluation does not validate map usefulness, full-archive coverage, or answer quality.
 
 ## Evaluator-Facing Objective
 

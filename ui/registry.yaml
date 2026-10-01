@@ -1,0 +1,20 @@
+schema_version: ui-registry/v1
+project_id: inquiry-graph
+ui_status: active
+learning_policy:
+  catalog_repository: BrianMills2718/ui-atlas
+  catalog_path: heuristics/catalog.yaml
+  receipts_path: ui/learning-receipts
+  enforcement: required
+surfaces:
+  - id: private-topic-map
+    lifecycle: candidate
+    source_path: tools/topic_map_template.html
+    purpose: Let Brian explore recurring positions across the bounded 30-chat corpus and inspect source evidence.
+    generator_path: tools/topic_map.py
+    run_path: private/xconv/scale_run/map/verified/index.html
+    data_boundary: Offline, gitignored HTML embeds positions and exact quotes; do not commit or publish it.
+    verification_command: npx --yes playwright screenshot --viewport-size '1440,1000' http://127.0.0.1:8765/index.html /tmp/inquiry-graph-map.png
+    serve_command: python3 -m http.server 8765 --bind 127.0.0.1 --directory private/xconv/scale_run/map/verified
+    browser_evidence: Twelve file-URL interaction assertions passed; zero page errors and zero failed requests at 1440x1000. See private/xconv/scale_run/map/verified/evidence/browser-verification.json.
+    path_exception: Builder/template stay in tools/ and generated quote-bearing HTML stays in private/xconv/; no duplicate UI source tree.

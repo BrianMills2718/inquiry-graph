@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <title>Your positions across conversations</title>
+    <style>
+      :root{font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:#172033;background:#f2f5f8;color-scheme:light}
+      *{box-sizing:border-box}body{margin:0;min-width:360px;height:100vh;overflow:hidden}
+      button,input,select{font:inherit}button{cursor:pointer}
+      .topbar{height:80px;padding:13px 22px;background:#14243a;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:18px}
+      .title h1{margin:0;font-size:21px;letter-spacing:-.02em}.title p{margin:3px 0 0;font-size:12px;color:#c8d5e4}
+      .stats{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.stat{min-width:75px}.stat strong{display:block;font-size:17px}.stat span{font-size:10px;color:#c8d5e4;text-transform:uppercase;letter-spacing:.07em}
+      .notice{padding:8px 22px;background:#fff8e8;border-bottom:1px solid #f0d9a9;color:#6b4f16;font-size:11px}
+      .layout{height:calc(100vh - 122px);display:grid;grid-template-columns:300px minmax(0,1fr);gap:12px;padding:12px}
+      .sidebar{min-height:0;display:grid;grid-template-rows:auto auto auto minmax(0,1fr);background:#fff;border:1px solid #d8e0e9;border-radius:12px;overflow:hidden}
+      .view-switch{display:grid;grid-template-columns:1fr 1fr;padding:8px;gap:6px;border-bottom:1px solid #e1e7ee}.view-switch button{height:34px;border:1px solid #d8e0e9;border-radius:7px;color:#43546a;background:#f8fafc;font-size:12px;font-weight:650}.view-switch button[aria-selected="true"]{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+      .side-heading{padding:13px 14px 8px}.side-heading h2{margin:0;font-size:14px}.side-heading p{margin:3px 0 0;color:#65748a;font-size:10px}
+      .search{padding:0 10px 9px}.search input{height:34px;width:100%;border:1px solid #cbd5e1;border-radius:7px;padding:0 9px;font-size:12px}
+      .topic-list{min-height:0;overflow:auto;padding:0 7px 8px}.topic-row{display:block;text-align:left;width:100%;padding:9px 9px;margin:0 0 5px;border:1px solid transparent;border-radius:8px;background:#fff;color:#172033}.topic-row:hover{background:#f5f8fc;border-color:#dbe5f0}.topic-row[aria-current="true"]{background:#edf4ff;border-color:#a9c7f9}.topic-name{display:block;font-size:12px;font-weight:700;line-height:1.3}.topic-meta{display:block;margin-top:3px;color:#64748b;font-size:10px}.topic-summary{display:block;margin-top:5px;color:#475569;font-size:10px;line-height:1.4}
+      .main{min-width:0;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr);gap:9px}.toolbar{min-height:48px;display:flex;align-items:center;gap:10px;padding:6px 10px;background:#fff;border:1px solid #d8e0e9;border-radius:10px}.toolbar .context{min-width:0;flex:1}.toolbar h2{margin:0;font-size:14px}.toolbar p{margin:2px 0 0;color:#64748b;font-size:10px}.toolbar button,.toolbar select{height:31px;padding:4px 9px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:#26364c;font-size:11px}.toolbar button:hover{background:#f3f7fb}.toolbar [hidden]{display:none!important}
+      relation-graph-view{display:block;min-width:0;min-height:0;height:100%}
+      .status{position:fixed;left:-10000px;width:1px;height:1px;overflow:hidden}
+      @media(max-width:850px){body{height:auto;min-height:100vh;overflow:auto}.topbar{height:auto;align-items:flex-start;flex-direction:column}.stats{gap:12px}.layout{height:auto;min-height:calc(100vh - 160px);grid-template-columns:1fr;grid-template-rows:minmax(210px,36vh) minmax(650px,1fr)}.sidebar{grid-template-rows:auto auto auto minmax(0,1fr)}.main{min-height:680px}}
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="title"><h1>Your positions across conversations</h1><p>Explore recurring topics, how they connect, and the exact words each item came from.</p></div>
+      <div class="stats" id="stats" aria-label="Map size"></div>
+    </header>
+    <div class="notice" id="notice"></div>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Map navigation">
+        <div class="view-switch" role="tablist" aria-label="Map view">
+          <button id="topics-tab" role="tab" aria-selected="true" type="button">Topics</button>
+          <button id="chats-tab" role="tab" aria-selected="false" type="button">Conversations</button>
+        </div>
+        <div class="side-heading"><h2 id="side-title">Topic groups</h2><p id="side-note">Names and group boundaries are interpretations.</p></div>
+        <div class="search"><input id="topic-search" type="search" aria-label="Find a topic" placeholder="Find a topic"></div>
+        <nav class="topic-list" id="topic-list" aria-label="Topics"></nav>
+      </aside>
+      <main class="main">
+        <div class="toolbar">
+          <div class="context"><h2 id="view-title">All topics</h2><p id="view-note">Each circle is a topic. Select one to inspect its positions and links.</p></div>
+          <button id="back-button" type="button" hidden>All topics</button>
+          <label id="chat-control" hidden><span class="status">Choose a conversation</span><select id="chat-select" aria-label="Choose a conversation"></select></label>
+        </div>
+        <relation-graph-view id="graph"></relation-graph-view>
+      </main>
+    </div>
+    <div class="status" id="live-status" aria-live="polite"></div>
+    <script type="module">
+      const DATA = /*__MAP_DATA__*/null;
+      const encoded = '__RELATION_GRAPH_BUNDLE_BASE64__';
+      const bytes = Uint8Array.from(atob(encoded), character => character.charCodeAt(0));
+      const componentUrl = URL.createObjectURL(new Blob([bytes], { type: 'text/javascript' }));
+      await import(componentUrl);
+      URL.revokeObjectURL(componentUrl);
+
+      const graph = document.querySelector('#graph');
+      const topicList = document.querySelector('#topic-list');
+      const topicSearch = document.querySelector('#topic-search');
+      const chatSelect = document.querySelector('#chat-select');
+      const backButton = document.querySelector('#back-button');
+      const topicsTab = document.querySelector('#topics-tab');
+      const chatsTab = document.querySelector('#chats-tab');
+      const topicsById = new Map(DATA.topic_list.map(topic => [topic.id, topic]));
+      let mode = 'overview';
+      let currentTopic = null;
+      let currentChatId = DATA.chat_list[0]?.id ?? null;
+      let selectedPositionId = null;
+
+      const addText = (parent, tag, className, value) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        node.textContent = value;
+        parent.append(node);
+        return node;
+      };
+      const number = value => new Intl.NumberFormat().format(value);
+
+      for (const [value, label] of [
+        [DATA.counts.chats, 'conversations'],
+        [DATA.counts.positions, 'positions'],
+        [DATA.counts.topic_count, 'topic groups'],
+        [DATA.counts.typed_links, 'typed links'],
+      ]) {
+        const item = document.createElement('div'); item.className = 'stat';
+        addText(item, 'strong', '', number(value)); addText(item, 'span', '', label);
+        document.querySelector('#stats').append(item);
+      }
+      document.querySelector('#notice').textContent =
+        `Topic groups and names are interpretive. Cross-conversation links are inferred. ` +
+        `${number(DATA.counts.unrelated_hidden)} pairs judged unrelated are hidden. Select an item to inspect its exact source quote.`;
+
+      function renderTopicList() {
+        const query = topicSearch.value.trim().toLocaleLowerCase();
+        topicList.replaceChildren();
+        for (const topic of DATA.topic_list) {
+          const haystack = `${topic.name} ${topic.summary} ${topic.chats.join(' ')}`.toLocaleLowerCase();
+          if (query && !haystack.includes(query)) continue;
+          const button = document.createElement('button');
+          button.type = 'button'; button.className = 'topic-row';
+          button.setAttribute('aria-current', String(mode === 'topic' && currentTopic === topic.id));
+          addText(button, 'span', 'topic-name', topic.name);
+          addText(button, 'span', 'topic-meta', `${number(topic.members.length)} positions · ${number(topic.chat_count)} conversations`);
+          addText(button, 'span', 'topic-summary', topic.summary);
+          button.addEventListener('click', () => openTopic(topic.id));
+          topicList.append(button);
+        }
+      }
+
+      function setModeTabs(which) {
+        topicsTab.setAttribute('aria-selected', String(which !== 'chat'));
+        chatsTab.setAttribute('aria-selected', String(which === 'chat'));
+        document.querySelector('#side-title').textContent = which === 'chat' ? 'Topic groups' : 'Topic groups';
+        document.querySelector('#side-note').textContent = which === 'chat'
+          ? 'Choose any topic or return to the topic overview.'
+          : 'Names and group boundaries are interpretations.';
+      }
+
+      function loadGraph(view, preserveId = null) {
+        const next = structuredClone(view);
+        if (preserveId && next.nodes.some(node => node.id === preserveId)) {
+          next.initial_state = { ...(next.initial_state ?? {}), selected_id: preserveId };
+        }
+        graph.data = next;
+      }
+
+      function showOverview() {
+        mode = 'overview'; currentTopic = null;
+        setModeTabs('overview');
+        document.querySelector('#view-title').textContent = 'All topics';
+        document.querySelector('#view-note').textContent =
+          `A topic overview of ${number(DATA.counts.positions)} positions. Select a topic to open its member positions.`;
+        backButton.hidden = true;
+        document.querySelector('#chat-control').hidden = true;
+        loadGraph(DATA.overview);
+        renderTopicList();
+      }
+
+      function openTopic(id) {
+        const topic = topicsById.get(id);
+        if (!topic) return;
+        mode = 'topic'; currentTopic = id;
+        setModeTabs('overview');
+        document.querySelector('#view-title').textContent = topic.name;
+        document.querySelector('#view-note').textContent =
+          `${number(topic.members.length)} extracted positions across ${number(topic.chat_count)} conversations. The group name is an interpretation.`;
+        backButton.hidden = false;
+        document.querySelector('#chat-control').hidden = true;
+        loadGraph(DATA.topics[String(id)], selectedPositionId);
+        renderTopicList();
+      }
+
+      function showConversation(chatId) {
+        if (!DATA.chats[chatId]) return;
+        mode = 'chat'; currentChatId = chatId;
+        setModeTabs('chat');
+        const chat = DATA.chat_list.find(item => item.id === chatId);
+        document.querySelector('#view-title').textContent = chat?.title ?? 'Conversation graph';
+        document.querySelector('#view-note').textContent =
+          `${chat?.date || 'Date unavailable'} · ${number(chat?.positions ?? 0)} of your extracted positions. Relations appear only when all role bindings are in this view.`;
+        backButton.hidden = true;
+        document.querySelector('#chat-control').hidden = false;
+        chatSelect.value = chatId;
+        loadGraph(DATA.chats[chatId], selectedPositionId);
+        renderTopicList();
+      }
+
+      for (const chat of DATA.chat_list) {
+        const option = document.createElement('option');
+        option.value = chat.id;
+        option.textContent = `${chat.date || 'Unknown date'} · ${chat.title}`;
+        chatSelect.append(option);
+      }
+      chatSelect.addEventListener('change', () => showConversation(chatSelect.value));
+      topicsTab.addEventListener('click', showOverview);
+      chatsTab.addEventListener('click', () => showConversation(currentChatId));
+      backButton.addEventListener('click', showOverview);
+      topicSearch.addEventListener('input', renderTopicList);
+      graph.addEventListener('relation-graph-selection-change', event => {
+        const selection = event.detail;
+        if (!selection.selected_id) return;
+        if (selection.selected_kind === 'node') {
+          if (mode === 'overview' && selection.selected_id.startsWith('topic:')) {
+            openTopic(Number(selection.selected_id.slice('topic:'.length)));
+            return;
+          }
+          const item = graph.data?.nodes.find(node => node.id === selection.selected_id);
+          if (item && DATA.topic_list.some(topic => topic.members.includes(item.id))) {
+            selectedPositionId = item.id;
+          }
+        }
+      });
+      renderTopicList();
+      showOverview();
+    </script>
+  </body>
+</html>
