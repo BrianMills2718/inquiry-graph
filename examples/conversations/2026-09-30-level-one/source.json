@@ -921,6 +921,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 151,
       "text": "Selected first end-to-end case: reuse the existing frozen NYC Congestion Relief Zone first-year corpus as the integration falsifier. Compare a capable baseline against a governed/integrated path using mature tools only; evaluate evidence fidelity, semantic continuity, method fidelity, warrant discipline, decision transparency, revision correctness, interoperability, reconstruction, automation usefulness and total burden. Introduce one sealed later primary-source update to test revision. Admit no new shared concept unless the case exposes a concrete failure that mature standards/tools cannot cover."
+    },
+    {
+      "id": "s30:t90",
+      "actor_id": "s30:brian",
+      "ordinal": 152,
+      "text": "Okay, proceed."
+    },
+    {
+      "id": "s30:t91",
+      "actor_id": "s30:assistant",
+      "ordinal": 153,
+      "text": "WP0/WP1 capable baseline completed on the frozen NYC CRZ corpus. The baseline preserves exact accepted source claims and descriptive arithmetic, explicitly refuses causal/prevalence/policy-choice overclaims, carries the unfinished six-hearing qualitative result as missing rather than fabricated, and pins a post-freeze NYC Health air-quality evaluation as a sealed WP4 revision update excluded from baseline use."
     }
   ]
 }
