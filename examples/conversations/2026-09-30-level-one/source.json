@@ -957,6 +957,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 157,
       "text": "Revision-aware dependency propagation prior-art and local-owner audit completed. The problem decomposes into mature truth-maintenance/assurance change-impact semantics, database provenance, and incremental/build-system propagation. DIGIMON already has explicit invalidation_dependencies and reverse-binding/lineage machinery; OntoCanon owns immutable custody/history; Workbench is the natural reopen/decision surface; Inquiry Graph should remain research representation. Foundational work on a new revision engine is closed unless a concrete consumer exposes a gap."
+    },
+    {
+      "id": "s30:t96",
+      "actor_id": "s30:brian",
+      "ordinal": 158,
+      "text": "Okay do that."
+    },
+    {
+      "id": "s30:t97",
+      "actor_id": "s30:assistant",
+      "ordinal": 159,
+      "text": "Recovered the authentic NYC-QC-1 six-hearing qualitative project rather than rerunning it. The retained project completed all relevant phases with 58,798 segments, 11,803 claims and 43 observed patterns, and has an independent claim-discipline review. That review marked 22 of 34 synthesis-level outputs as violating declared limits, so only bounded/reviewed formulations are retained. The earlier baseline's 'missing QC result' status is corrected: the method result exists; separate human acceptance and Workbench integration remain unverified."
     }
   ]
 }
