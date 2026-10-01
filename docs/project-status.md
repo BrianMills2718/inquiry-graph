@@ -39,7 +39,7 @@ Current seed:
 
 The founding seed's 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
 
-A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: **109 selected excerpts, 103 nodes, 80 relations, 84 moves, 61 stance events, and 33 question events**. It now covers the deliberate universalization of the game concept, top-down decomposition from rich game formalisms, perspectival/self-attributed goals, open-game reuse, the compositional-executable-world reframing, game/decision coupling, and the correction that candidate generation is already substantially mapped to mature prior art.
+A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: **115 selected excerpts, 108 nodes, 85 relations, 89 moves, 66 stance events, and 33 question events**. It now covers the deliberate universalization of the game concept, top-down decomposition from rich game formalisms, perspectival/self-attributed goals, open-game reuse, the compositional-executable-world reframing, game/decision coupling, and the correction that candidate generation is already substantially mapped to mature prior art.
 
 ## Priority 1 — empirical usefulness
 

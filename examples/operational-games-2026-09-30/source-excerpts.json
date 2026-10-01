@@ -2,7 +2,7 @@
   "id": "dialogue-2026-09-30-operational-games",
   "title": "From factorization analysis to compositional games for embedded observers",
   "source_kind": "curated_excerpts",
-  "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
+  "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage. Continuation through 2026-10-01 also records the owner's explicit reversible-work execution-cadence directive; it remains a curated visible excerpt rather than full-export reconciliation.",
   "participants": [
     {
       "id": "participant:brian",
@@ -925,6 +925,14 @@
       "actor_id": "participant:brian",
       "ordinal": 114,
       "text": "Okay, finish it.",
+      "original_id": null,
+      "timestamp": null
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:ex115",
+      "actor_id": "participant:brian",
+      "ordinal": 115,
+      "text": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff.",
       "original_id": null,
       "timestamp": null
     }
