@@ -1,0 +1,327 @@
+{
+  "version": "0.2",
+  "recordedAt": "2026-10-01T02:19:41.915Z",
+  "actor": "brian",
+  "recommendationId": "c5-balanced-replay-signoff--requirements-traceability-matrix",
+  "primaryPattern": "requirements-traceability-matrix",
+  "checklistSize": 79,
+  "acceptanceReferences": [],
+  "dispositions": {
+    "choice-justified:requirements-traceability-matrix": {
+      "status": "satisfied",
+      "why": "The route recommends a requirements traceability matrix. The artifact uses the recommended score-by-route/question matrix as a compact data table, with linked source references in text, because the deliverable is a static reviewer report and must expose all 39 values."
+    },
+    "guessing-text-widths": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "one-fixed-label-coordinate-per-mark": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "shrinking-required-text-to-fix-collisions": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "desktop-layout-scaled-blindly-to-mobile": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "mixing-source-derived-phrases-with-interpretive-glosses": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "putting-full-semantic-prose-inside-visual-marks": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "using-an-expert-explorer-as-the-default-onboarding-surface": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "calling-progressive-disclosure-a-lesson-without-an-instructional-sequence": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "lesson-deck-with-static-diagrams": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "interaction-bolted-on-after-the-explanation": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "replacing-the-primary-visual-object-at-every-step": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "free-form-practice-controls-that-permit-semantically-impossible-moves": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "revealing-the-destination-before-the-learner-predicts-it": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "correctness-only-feedback-with-no-semantic-explanation": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "calling-guided-task-completion-evidence-of-independent-understanding": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "assessment-that-repeats-the-exact-guided-example": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "assessment-choices-that-signal-the-answer-before-commitment": {
+      "status": "na",
+      "why": "No custom SVG explainer is being built; these layout-specific avoidances do not apply to this static Markdown report."
+    },
+    "no-critical-text-text-overlap": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "no-critical-text-node-overlap": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "no-clipped-required-labels": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "no-required-controls-offscreen": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "minimum-readable-font-size": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "title-states-what-this-is-and-for-whom": {
+      "status": "satisfied",
+      "why": "The dated title names the signoff; the primary per-question table directly supports route comparison."
+    },
+    "whole-design-visible-on-one-screen-at-the-target-viewport": {
+      "status": "skipped",
+      "why": "The artifact is static Markdown and was not rendered at a viewport; this visual/runtime check is not claimed."
+    },
+    "cold-reader-gets-the-mechanism-in-sixty-seconds": {
+      "status": "skipped",
+      "why": "No cold-reader or rendered-page assessment was performed; this is a dense evidence report, not an explanatory visual."
+    },
+    "form-matches-job-lists-scan-tables-compare-flows-transition-maps-connect": {
+      "status": "satisfied",
+      "why": "The dated title names the signoff; the primary per-question table directly supports route comparison."
+    },
+    "relationships-drawn-not-implied-by-adjacency-or-links": {
+      "status": "na",
+      "why": "The deliverable has no interactive map or linked visual views; source paths remain visible in the document."
+    },
+    "same-object-same-mark-across-every-view": {
+      "status": "na",
+      "why": "The deliverable has no interactive map or linked visual views; source paths remain visible in the document."
+    },
+    "every-object-reveals-more-on-click-nothing-is-a-dead-end": {
+      "status": "na",
+      "why": "The deliverable has no interactive map or linked visual views; source paths remain visible in the document."
+    },
+    "edge-label-clearance": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "arrowhead-clearance": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "balanced-whitespace": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "focal-hierarchy": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "stable-layout-across-steps": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "first-frame-legibility": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "narrative-visual-synchronization": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "persistent-object-continuity": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "manipulation-consequence-legibility": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "one-primary-drawing-with-callouts-not-parallel-columns-of-text": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "white-space-separates-groups-and-carries-hierarchy": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "size-and-weight-follow-importance": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "structure-earned-by-content-not-imposed-taxonomy": {
+      "status": "satisfied",
+      "why": "Sections follow the requested evidence gates; the per-question comparison uses matching A/B/C columns and headers; the dated title and labeled table make the facts identifiable."
+    },
+    "space-and-time-shown-together-when-the-subject-changes-over-time": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "page-carries-its-date-and-version": {
+      "status": "satisfied",
+      "why": "Sections follow the requested evidence gates; the per-question comparison uses matching A/B/C columns and headers; the dated title and labeled table make the facts identifiable."
+    },
+    "a-person-would-pin-it-on-a-wall": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "one-element-dominates-by-size-weight-or-contrast": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "reading-order-is-obvious-without-instructions": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "gap-between-groups-larger-than-gap-within": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "enclosure-nesting-at-most-two-levels": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "elements-share-a-small-set-of-edges": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "same-role-same-treatment-everywhere": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "every-mark-carries-information": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "context-quiet-subject-loud": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "comparisons-use-identical-small-frames": {
+      "status": "satisfied",
+      "why": "Sections follow the requested evidence gates; the per-question comparison uses matching A/B/C columns and headers; the dated title and labeled table make the facts identifiable."
+    },
+    "every-encoding-explained-on-the-same-screen": {
+      "status": "satisfied",
+      "why": "Sections follow the requested evidence gates; the per-question comparison uses matching A/B/C columns and headers; the dated title and labeled table make the facts identifiable."
+    },
+    "one-highlighted-state-not-several": {
+      "status": "na",
+      "why": "No rendered diagram, animation, or interactive surface is part of this one-off Markdown report."
+    },
+    "object-count-within-density-budget-or-aggregated": {
+      "status": "skipped",
+      "why": "No rendered page was inspected. The report is ordered verdict-first and uses labeled tables; the 54-item use case exceeds the router 40-object budget, so one-screen density is not claimed."
+    },
+    "first-run-does-not-require-expert-exploration": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "terms-are-defined-before-first-use": {
+      "status": "satisfied",
+      "why": "The score formula is stated before the table, metric caveats are explicit, and material figures cite their source artifacts/lines."
+    },
+    "one-new-semantic-distinction-per-instructional-step": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "likely-wrong-readings-are-explicitly-disambiguated": {
+      "status": "satisfied",
+      "why": "The score formula is stated before the table, metric caveats are explicit, and material figures cite their source artifacts/lines."
+    },
+    "novice-can-read-a-simple-example-before-seeing-the-full-model": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "expert-reference-mode-is-separate-from-guided-onboarding": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "observed-user-confusions-become-regression-cases": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "narrative-and-visual-state-remain-synchronized": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "persistent-visual-object-retains-identity-across-steps": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "direct-manipulation-produces-an-explanatory-consequence": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "abstraction-levels-remain-linked-to-the-same-semantic-object": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-constructive-practice-is-present-actions-come-from-semantic-model": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-prediction-is-used-state-does-not-change-before-commit": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-constructive-practice-is-present-feedback-explains-the-governing-rule": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-transfer-assessment-is-present-guidance-does-not-give-away-the-answer": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-transfer-assessment-is-present-at-least-one-task-uses-an-unseen-state-route-or-example": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-transfer-assessment-is-present-feedback-occurs-after-commitment": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "if-scaffolding-fade-is-present-core-accessibility-controls-remain-available": {
+      "status": "na",
+      "why": "This report is a read-only, one-off technical artifact, not a guided or interactive learning surface."
+    },
+    "headline-and-picture-alone-convey-the-point-since-that-is-all-most-people-read": {
+      "status": "skipped",
+      "why": "No cold-reader or rendered-page assessment was performed; this is a dense evidence report, not an explanatory visual."
+    },
+    "no-block-of-prose-longer-than-the-drawing-it-explains": {
+      "status": "skipped",
+      "why": "No cold-reader or rendered-page assessment was performed; this is a dense evidence report, not an explanatory visual."
+    },
+    "reader-can-point-to-where-any-one-fact-lives": {
+      "status": "satisfied",
+      "why": "The score formula is stated before the table, metric caveats are explicit, and material figures cite their source artifacts/lines."
+    }
+  }
+}

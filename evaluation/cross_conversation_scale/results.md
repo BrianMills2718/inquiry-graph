@@ -1,175 +1,185 @@
-# For Brian: does linking extracted positions improve cross-chat answers? (30-chat results)
+# Cross-chat linker: balanced 30-chat results
 
-**Run:** corrected Codex subscription campaign, 2026-09-30 · **Report:** v1.0
+> **C5 status: signed off for a bounded disposition (2026-10-01).** This
+> balanced replay fixes the earlier comparison's different question batching.
+> The independent review supports keeping the typed linker as a bounded
+> research/topic-map source, without a broad answer-route superiority claim.
+> See [`signoff-balanced-recheck-2026-10-01.md`](signoff-balanced-recheck-2026-10-01.md).
 
-**C5 decision (independently signed off 2026-09-30):** Use archive-search-then-read
-(A) as the default retrieval route for this measured workload. B scored 0.019
-above positions only (C) overall, tied C on the seven source-heldout questions,
-and scored 0.038 below A. Keep the linker data for the separate future topic-map
-phase. Defer productizing any answer route for the full sourced-answer contract
-until source citations and verbatim answer quotes pass direct checks. This is a
-bounded decision from one 30-chat corpus and 13 valid questions; it does not
-establish broad generalization or evaluate the future topic map.
+## What the replay shows
 
-The comparison measures key-point coverage, not the complete answer contract.
-The required source citations and verbatim quotes were not part of the blind
-judge's score. A separate literal-string audit below finds weak source evidence
-in all three routes, with no answer route meeting the citation/quote contract.
-The action is limited to retrieval direction; no route is ready for the complete
-sourced-answer contract.
+On the same 13 questions, average key-point coverage was **A 0.647, B 0.686,
+C 0.686**. B's coverage was 0.038 above archive search/read (A), but it tied
+positions alone (C). B had fewer key contradictions than either route, while
+having more attribution errors than A. All three routes flagged unsupported
+claims on 12/13 answers, and none met the requested sourced-answer contract on
+the literal evidence screen. The sample is too small and narrow to establish
+that B beats search at scale. It shows no coverage lift from adding typed links
+to this answer route.
+
+**Signed-off bounded disposition:** keep the linker as a research artifact for
+the later topic-map phase. B tied positions alone on key-point coverage and its
+small descriptive lead over search/read does not establish a scale advantage.
+Do not productize an answer route under the observed citation and quote
+performance.
 
 ## Scope and method
 
-The fixed corpus contains 30 chats and 4,229,221 visible characters. All 30
-extracted graphs validated. The independent reference key retained 581 quoted
-positions, dropped 43, and retained 13 cross-chat questions across the five
-required categories. A source audit verified all retained quotes against
-Brian-authored messages. Two proposed questions were dropped because their
-position IDs were invalid.
+This replay compares three ways to answer cross-chat questions from the same
+30-chat corpus:
 
-- **A:** archive search, then read the selected source chats within the measured
-  per-question read budget.
-- **B:** extracted positions with typed links, question status and chat dates.
-- **C:** the same positions without links.
+- **A — archive search/read:** use the saved per-question search results and
+  read the selected source chats.
+- **B — positions plus links:** give the answer model the full export of 620
+  extracted positions, 233 typed cross-chat links, question status, and dates.
+- **C — positions only:** give it the same 620 positions and metadata without
+  links.
 
-The B input contains 620 positions and 233 typed cross-chat links (437,686
-characters); C contains the same 620 positions without links (330,267
-characters). For A, archive search selected 2–7 chats per question and read
-580,835–598,750 characters. The corpus-wide estimate is about 1,057,305 tokens
-against the runner's 1,050,000-token single-call context setting, a narrow
-overrun based on the runner's character-to-token estimate.
+Each route answered one question per call, with the same answer model,
+instructions, schema, question wording, and subscription transport. A's 13
+previously saved one-question answers were reused; B and C each ran 13 fresh
+calls. A fresh blind grader scored all three answers against the independent
+reference key once per question. A positive/negative grader control ran before
+the answers.
 
-Answers were graded blind against the independent key on normalized key-point
-coverage from 0 to 1: **1.0 means every key point was covered; 0 means none
-were covered**. Fractional scores are the covered share. There were 13 graded
-questions in each route. The result rows below expose only anonymous question
-numbers, categories and scores; they contain no question wording, answer text,
-transcript text or quotes.
+The corpus has 30 validated graphs and 4,229,221 visible characters. The
+independent key retained 13 questions across agreement, conflict/tension,
+recurring open questions, change over time, and position summary; 2 invalid
+candidate questions were dropped. The key's 581 retained position quotes were
+verified against Brian-authored source messages. Seven questions cite only
+chats outside the five used in linker prompt revisions, but the questions were
+still generated from the full corpus, so this is not an independent
+question-set holdout.
 
-The corrected campaign used 15 answer-generation calls and 13 judge calls.
-Those calls produced 13 answers per route. Answer calls used
-`codex/gpt-5.6-luna`; judging used `codex/gpt-5.6-sol`. Telemetry records
-subscription-included billing, $0 API cost and zero errors for all 28 calls.
-Reported token totals were A 1,980,739, B 157,932, C 125,665, and judging
-335,531.
-The first answer/grade run used metered OpenRouter by mistake and is excluded.
-The runtime fix is commit `ce7b8b7`.
+The exact grade metric is `min(covered key points, key points) / key points`.
+It ranges from 0 to 1. Full correctness also requires no contradiction flag.
+The 13-question differences are descriptive; no significance or broad
+generalization claim is made.
 
 ## Per-question coverage
 
-| Q | Category | A: search/read | B: positions + links | C: positions |
-|---:|---|---:|---:|---:|
-| 1 | Agreement | 1.00 | 0.75 | 0.75 |
-| 2 | Agreement | 0.67 | 0.67 | 0.67 |
-| 3 | Agreement | 0.75 | 0.50 | 0.50 |
-| 4 | Conflict/tension | 1.00 | 0.75 | 0.75 |
-| 5 | Conflict/tension | 0.75 | 0.50 | 0.25 |
-| 6 | Conflict/tension | 0.75 | 0.50 | 0.50 |
-| 7 | Recurring open question | 0.25 | 0.25 | 0.25 |
-| 8 | Recurring open question | 0.50 | 0.75 | 0.75 |
-| 9 | Recurring open question | 0.25 | 0.50 | 0.50 |
-| 10 | Change over time | 0.50 | 0.75 | 0.75 |
-| 11 | Change over time | 1.00 | 0.50 | 0.50 |
-| 12 | Position summary | 0.25 | 1.00 | 0.75 |
-| 13 | Position summary | 1.00 | 0.75 | 1.00 |
-| **Mean** | **All 13** | **0.67** | **0.63** | **0.61** |
+| Q | Category | Key points | A: search/read | B: positions + links | C: positions |
+|---:|---|---:|---:|---:|---:|
+| 1 | Agreement | 4 | 1.000 | 1.000 | 1.000 |
+| 2 | Agreement | 3 | 0.667 | 0.667 | 0.667 |
+| 3 | Agreement | 4 | 0.750 | 0.750 | 0.750 |
+| 4 | Conflict/tension | 4 | 1.000 | 0.750 | 0.750 |
+| 5 | Conflict/tension | 4 | 0.750 | 0.500 | 0.500 |
+| 6 | Conflict/tension | 4 | 0.750 | 0.500 | 0.750 |
+| 7 | Recurring open question | 4 | 0.000 | 0.500 | 0.250 |
+| 8 | Recurring open question | 4 | 0.500 | 0.500 | 0.500 |
+| 9 | Recurring open question | 4 | 0.500 | 0.500 | 0.500 |
+| 10 | Change over time | 4 | 0.500 | 0.500 | 0.750 |
+| 11 | Change over time | 4 | 1.000 | 0.750 | 0.750 |
+| 12 | Position summary | 4 | 0.000 | 1.000 | 1.000 |
+| 13 | Position summary | 4 | 1.000 | 1.000 | 0.750 |
+| **Mean** | **All 13** | — | **0.647** | **0.686** | **0.686** |
 
-### Category means
+## Category means
 
 | Category | Questions | A | B | C |
 |---|---:|---:|---:|---:|
-| Agreement | 3 | 0.81 | 0.64 | 0.64 |
-| Conflict/tension | 3 | 0.83 | 0.58 | 0.50 |
-| Recurring open question | 3 | 0.33 | 0.50 | 0.50 |
-| Change over time | 2 | 0.75 | 0.62 | 0.62 |
-| Position summary | 2 | 0.62 | 0.88 | 0.88 |
+| Agreement | 3 | 0.806 | 0.806 | 0.806 |
+| Conflict/tension | 3 | 0.833 | 0.583 | 0.667 |
+| Recurring open question | 3 | 0.333 | 0.500 | 0.417 |
+| Change over time | 2 | 0.750 | 0.625 | 0.750 |
+| Position summary | 2 | 0.500 | 1.000 | 0.875 |
 
-## Error and completeness counts
+## Other outcomes
 
-| Judged outcome | A | B | C |
+| Blind-graded outcome | A | B | C |
 |---|---:|---:|---:|
-| Fully right | 4/13 | 1/13 | 1/13 |
-| Contradicts key | 5/13 | 5/13 | 5/13 |
-| Attribution errors | 3 | 4 | 3 |
-| Unsupported claims flagged | 13 | 11 | 11 |
-| Cannot answer | 0 | 0 | 0 |
-| Recorded API cost | $0 | $0 | $0 |
+| Full key coverage, no contradiction (narrow proxy) | 4/13 | 3/13 | 2/13 |
+| Contradicts the key | 5/13 | 3/13 | 5/13 |
+| Attribution error | 2/13 | 4/13 | 4/13 |
+| Unsupported claim flagged | 12/13 | 12/13 | 12/13 |
+| Cannot answer | 0/13 | 0/13 | 0/13 |
 
-## Held-out and limitations
+The narrow full-key-coverage row does not require clean attribution or the
+absence of unsupported-claim flags; it is not full sourced-answer correctness.
 
-Seven questions use only chats outside the five used during linker prompt
-revisions (Q2, Q3, Q5, Q8, Q9, Q11, Q13). They cover all five categories.
-On this source-held-out subset, mean coverage is A 0.702, B 0.595, C 0.595;
-B−C is 0 and B−A is −0.107. A is fully right on 2/7, B on 0/7, and C on
-1/7. The calculation is recorded in
-[`heldout_summary.json`](heldout_summary.json). This is a small source holdout,
-not an independently generated question set: the reference questions were
-generated using the full corpus, and the key and answer routes used the same
-model. It supports a limited check against the five-chat prompt-development
-source set, not broad generalization.
+The route inputs contained 22/33 key-question source-chat references for A and
+33/33 for both B and C. This is source-chat presence in the supplied material;
+it does not prove that the answer model used a particular position.
 
-## Source citation and quote audit
+## Citation and quote evidence
 
-The blind judge scored key-point agreement but did not score the answer
-instruction to name supporting chats/dates or the goal's verbatim-quote
-requirement. The content-free audit in
-[`answer_evidence_audit.json`](answer_evidence_audit.json) checks exact title
-and date strings from each question's reference chats, plus double-quoted answer
-spans against those source messages. It is a literal-string screen, not a
-semantic citation judgment.
+The blind grader scored key-point agreement, not the full requirement to cite
+source chats and dates or reproduce exact quotes. The following checks use
+literal title/date strings and Unicode-normalized quote substring matching.
+They are not semantic citation judgments.
 
-| Literal evidence check | A | B | C |
+| Literal check | A | B | C |
 |---|---:|---:|---:|
-| Questions with at least two expected chat titles | 7/13 | 13/13 | 11/13 |
-| Questions with at least two expected title/date pairs | 7/13 | 4/13 | 4/13 |
-| Double-quoted answer spans found verbatim in expected source chats | 9/33 | 0/27 | 0/28 |
+| Questions with at least two expected chat titles | 7/13 | 12/13 | 12/13 |
+| Questions with at least two expected title/date pairs | 7/13 | 3/13 | 2/13 |
+| Quoted answer spans found in expected source messages | 9/33 | 3/45 | 4/40 |
 
-The 620 position quotes in B's graph export were all nonempty and matched a
-contiguous span in their source message after Unicode and whitespace
-normalization (620/620). The answer routes' lower quote-match counts therefore
-point to answer-generation fidelity as a separate weakness; the blind score
-does not account for it.
+All 620 nonempty position quotes in the B export match contiguous spans in their
+source messages (620/620). This supports extraction provenance; it does not
+repair the answer routes' weak literal quote fidelity.
 
-The observed differences are small and descriptive. A's advantage is consistent
-with the archive-search route being the better default for this workload; B's
-0.02 overall gain over C does not establish useful typed-link value for answer
-quality. The three routes also share a low fully-right count, so the result does
-not imply that any route answers this task reliably.
+## Calls, token totals, and trace IDs
 
-## Trace and signoff record
+All calls finished without provider errors and recorded subscription-included
+billing with $0 separately billed API cost. The scored comparison used 39 answer
+calls and 13 judge calls. Two separate one-call grader controls are excluded
+from scores: the preregistered campaign control and the independent C5 signoff
+control.
 
-- Scored answer traces: 15 synthesis calls under
-  `inquiry-graph/xconv-scale-codex/answer-*`; judges:
-  `inquiry-graph/xconv-scale-codex/judge-q01` through `judge-q13`. The scored
-  database retains lifecycle metadata only, not their prompt/response bodies.
-- Supplemental full-trace reproduction:
-  `inquiry-graph/xconv-scale-codex/trace-inspection-C`. Its mapped Codex session
-  contains the route-C positions-only prompt and 13 structured answers; this
-  one-call replay is not part of the scored comparison.
-- Grader positive control: `inquiry-graph/xconv-scale-codex/grader-positive-control/q01`.
-  The known-correct answer received 4/4 key points and no contradiction; the
-  known-wrong answer received 0/4 and was marked contradictory. The call used
-  `codex/gpt-5.6-sol`, subscription-included, $0. This checks the grader's
-  ability to distinguish an obvious positive and negative, not the full rubric;
-  it is a separate calibration call and is not included in C4 scores or token
-  totals. Aggregate evidence is in
-  [`grader_positive_control.json`](grader_positive_control.json).
-- Fresh independent signoff control: `inquiry-graph/c5-signoff/grader-positive-control`.
-  The known-correct answer received 4/4; the known-wrong answer received 0/4
-  and was marked contradictory. It used `codex/gpt-5.6-sol` over the authenticated
-  Codex CLI, with subscription-included billing, 25,112 tokens, $0 cost, no call
-  error, and exit 0. It is excluded from C4 totals; aggregate evidence is in
-  [`grader_positive_control.json`](grader_positive_control.json).
-- Independent hand-check: four answer/grade/key/source rows across agreement,
-  conflict, recurring-question, and position-summary categories all aligned
-  (4/4). Only anonymous row IDs and counts were reported; no private content is
-  reproduced here.
-- Independent C5 disposition: **SIGNED-OFF**, with the seven-question subset
-  explicitly limited to source-heldout references rather than broad
-  generalization. The bounded decision is recorded on
-  [inquiry-graph issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38).
+| Group | Calls | Model | Total tokens | Recorded API cost | Trace IDs |
+|---|---:|---|---:|---:|---|
+| A answers (reused) | 13 | `codex/gpt-5.6-luna` | 1,980,739 | $0 | `inquiry-graph/xconv-scale-codex/answer-A/q01`–`q13` |
+| B answers | 13 | `codex/gpt-5.6-luna` | 2,031,408 | $0 | `inquiry-graph/xconv-scale-codex-balanced-20260930/answer-B/q01`–`q13` |
+| C answers | 13 | `codex/gpt-5.6-luna` | 1,612,072 | $0 | `inquiry-graph/xconv-scale-codex-balanced-20260930/answer-C/q01`–`q13` |
+| Blind graders | 13 | `codex/gpt-5.6-sol` | 337,150 | $0 | `inquiry-graph/xconv-scale-codex-balanced-20260930/judge-q01`–`q13` |
+| Positive/negative control | 1 | `codex/gpt-5.6-sol` | 25,019 | $0 | `inquiry-graph/xconv-scale-codex-balanced-20260930/grader-positive-control` |
+| Fresh independent C5 control | 1 | `codex/gpt-5.6-sol` | 25,228 | $0 | `inquiry-graph/c5-balanced-signoff-20261001/grader-positive-control` |
 
-The private inputs and outputs remain under
-`private/xconv/scale_run_codex_rerun_20260930/`. The first, metered OpenRouter
-answer and grade set remains preserved separately and excluded from all figures
-above.
+Both controls gave the known-correct answer 2/2 with no contradiction and the
+known-wrong answer 0/2 with a contradiction flag. The fresh signoff control
+used the same subscription route and completed with no recorded error. The
+trace database is metadata-only for these subscription calls.
+`balanced_replay_summary.json` records aggregate totals and
+`summarize_balanced_replay.py` recomputes them from the private per-question
+files and metadata database.
+
+The independent reviewer directly inspected the full Codex CLI trace for
+`inquiry-graph/xconv-scale-codex-balanced-20260930/answer-C/q13` in the local
+session store. Its input contains the matching q13 prompt and the full
+positions-only export; its final structured answer matches the saved q13
+answer, and it contains no tool calls. The raw trace stays in the local private
+session store; its observability database row stores metadata only.
+
+The runner supplied no explicit request timeout. Historical campaign lifecycle
+rows nevertheless record a 300-second runtime safety value. Two calls exceeded
+that value (305.031s and 996.640s), emitted `stalled` lifecycle events, and
+later completed with `stop` and no call error. No scored call was observably
+interrupted by that value; other transports' behavior at the ceiling was not
+tested.
+
+The summarizer's “fully right” count means full key-point coverage with no
+contradiction. It does not require clean attribution or no unsupported-claim
+flag, so it is not a measure of full sourced-answer correctness.
+
+## Limits and final signoff
+
+This replay uses one 30-chat corpus and 13 questions. The reference key was
+generated using the full corpus, the grader shares the answer model family,
+and the literal evidence audit cannot establish semantic source correctness.
+The earlier comparison, in which B and C received all questions in one call,
+is superseded for route choice because it confounded retrieval with batching;
+see [`signoff-recheck-2026-09-30.md`](signoff-recheck-2026-09-30.md).
+
+The independent C5 reviewer recomputed all 39 coverage scores and category
+means, revalidated all 30 graphs, reran a fresh positive/negative control, and
+hand-checked five grade/source cases across the five categories. Its bounded
+decision is that typed links add 0 key-point coverage over positions alone
+(B−C = 0.000) and the observed +0.038 B−A difference does not show that the
+graph route beats search at scale. The signed-off bounded decision is posted in
+this new [issue #38 comment](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
+The earlier issue comment records the superseded unbalanced comparison.
+
+Private transcripts, questions, answers, and quote-bearing outputs remain
+under `private/xconv/scale_run_codex_balanced_20260930/` and the earlier A
+source campaign. They are not reproduced in this report.

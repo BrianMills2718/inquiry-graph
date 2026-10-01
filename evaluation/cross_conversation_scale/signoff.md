@@ -1,5 +1,33 @@
 # C5 independent signoff
 
+## Current disposition: balanced replay (2026-10-01)
+
+**Verdict: SIGNED-OFF for a bounded decision.** Keep the typed linker as a
+bounded research/topic-map source. Do not claim that positions plus links beat
+search at scale or that links improve key-point coverage over positions alone.
+Do not productize an answer route under the observed source-citation and quote
+performance.
+
+The balanced means were A 0.647436, B 0.685897, C 0.685897: B tied C and was
+0.038462 above A on this one small question set. The independent reviewer
+recomputed all 39 scores, revalidated 30/30 graphs, passed a fresh grader
+control, and hand-checked five grade/source cases across all five categories.
+Two historical calls exceeded the recorded 300-second runtime safety value and
+later completed; none was observably interrupted. Only one full local call body
+was directly inspected, while the campaign observability database retained
+metadata only. These limits rule out a broad route-superiority claim.
+
+Full evidence: [`signoff-balanced-recheck-2026-10-01.md`](signoff-balanced-recheck-2026-10-01.md).
+
+---
+
+## Historical signoff: unbalanced comparison (superseded)
+
+> **Superseded 2026-09-30:** a fresh adversarial recheck rejected this signoff because the compared
+> routes used different question batching. Keep this record as the historical signoff of the old
+> report only; its retrieval recommendation is inactive until a balanced replay is signed off.
+> See [`signoff-recheck-2026-09-30.md`](signoff-recheck-2026-09-30.md).
+
 **Campaign:** `scale_run_codex_rerun_20260930`
 
 **Signoff date:** 2026-09-30
