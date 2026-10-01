@@ -118,7 +118,8 @@
     "truck-fixture-scope": "dialogue-2026-09-30-operational-games:ex111",
     "truck-fixture-pass": "dialogue-2026-09-30-operational-games:ex112",
     "truck-fixture-merged": "dialogue-2026-09-30-operational-games:ex113",
-    "finish-it-user": "dialogue-2026-09-30-operational-games:ex114"
+    "finish-it-user": "dialogue-2026-09-30-operational-games:ex114",
+    "reversible-speed-directive": "dialogue-2026-09-30-operational-games:ex115"
   },
   "nodes": [
     [
@@ -762,6 +763,12 @@
       "goal",
       "Complete the already-defined documentation coherence and update work now rather than leaving it partially executed.",
       "finish-it-user"
+    ],
+    [
+      "reversible-speed-directive",
+      "goal",
+      "Move reversible work forward quickly; treat CI/CD as non-blocking for low-risk reversible changes while preserving stronger review for irreversible or high-risk changes.",
+      "reversible-speed-directive"
     ]
   ],
   "relations": [
@@ -1268,6 +1275,12 @@
       "finish-documentation-now",
       "documentation-coherence-goal",
       "finish-it-user"
+    ],
+    [
+      "related_to",
+      "reversible-speed-directive",
+      "documentation-coherence-goal",
+      "reversible-speed-directive"
     ]
   ],
   "moves": [
@@ -2140,6 +2153,16 @@
         "finish-documentation-now"
       ],
       "finish-it-user"
+    ],
+    [
+      "scope",
+      [
+        "finish-documentation-now"
+      ],
+      [
+        "reversible-speed-directive"
+      ],
+      "reversible-speed-directive"
     ]
   ],
   "stances": [
@@ -2467,6 +2490,11 @@
       "finish-documentation-now",
       "posits",
       "finish-it-user"
+    ],
+    [
+      "reversible-speed-directive",
+      "posits",
+      "reversible-speed-directive"
     ]
   ],
   "question_updates": [

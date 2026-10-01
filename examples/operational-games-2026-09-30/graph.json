@@ -1604,6 +1604,21 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Complete the already-defined documentation coherence and update work now rather than leaving it partially executed."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Move reversible work forward quickly; treat CI/CD as non-blocking for low-risk reversible changes while preserving stronger review for irreversible or high-risk changes."
     }
   ],
   "relations": [
@@ -3619,6 +3634,30 @@
         },
         {
           "role": "whole",
+          "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:085",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive"
+        },
+        {
+          "role": "target",
           "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
         }
       ]
@@ -5904,6 +5943,32 @@
         "dialogue-2026-09-30-operational-games:m:087"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:089",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:finish-documentation-now"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:reversible-speed-directive"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex115",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:088"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -7011,6 +7076,23 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:finish-documentation-now",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex114"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:066",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex115"
     }
   ],
   "question_events": [
@@ -7721,7 +7803,7 @@
       "id": "dialogue-2026-09-30-operational-games",
       "title": "From factorization analysis to compositional games for embedded observers",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage.",
+      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage. Continuation through 2026-10-01 also records the owner's explicit reversible-work execution-cadence directive; it remains a curated visible excerpt rather than full-export reconciliation.",
       "participants": [
         {
           "id": "participant:brian",
@@ -8646,6 +8728,14 @@
           "text": "Okay, finish it.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex115",
+          "actor_id": "participant:brian",
+          "ordinal": 115,
+          "text": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -8657,7 +8747,7 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:04db9124cd1468100e2dab223a50360d07c7cc0a4d8ed82bd364522a70a7db6f",
+        "source_sha256:aeff9bf4fa5b76f61eb0959ca156e9d1bc55a49d323f4524cddd628789dd53cb",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }

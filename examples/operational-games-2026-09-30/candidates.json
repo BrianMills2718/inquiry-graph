@@ -1604,6 +1604,21 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Complete the already-defined documentation coherence and update work now rather than leaving it partially executed."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Move reversible work forward quickly; treat CI/CD as non-blocking for low-risk reversible changes while preserving stronger review for irreversible or high-risk changes."
     }
   ],
   "relations": [
@@ -3619,6 +3634,30 @@
         },
         {
           "role": "whole",
+          "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:085",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive"
+        },
+        {
+          "role": "target",
           "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
         }
       ]
@@ -5904,6 +5943,32 @@
         "dialogue-2026-09-30-operational-games:m:087"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:089",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:finish-documentation-now"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:reversible-speed-directive"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex115",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:088"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -7011,6 +7076,23 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:finish-documentation-now",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex114"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:066",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex115",
+          "start": 0,
+          "end": 137,
+          "quote": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:brian",
+      "target_id": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex115"
     }
   ],
   "question_events": [
