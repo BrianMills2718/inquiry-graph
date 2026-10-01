@@ -6,35 +6,41 @@ Written for a fresh agent. No transcripts or quotes here; private data stays und
 ## Current status (2026-10-01)
 
 This note's original provider and viewer sections describe the state on 2026-09-29. The
-30-chat campaign has since completed through the Codex subscription route. The balanced replay
-and independent C5 signoff support keeping the linker as a bounded research/topic-map source;
-the decision is posted to [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
+30-chat campaign completed through the Codex subscription route. The balanced replay and
+independent C5 signoff support keeping the linker as a bounded research/topic-map source; the
+decision is posted to [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
 No scale-superiority or product answer-route claim was made.
 
-The private topic map has a builder in `tools/topic_map.py`, a template in
-`tools/topic_map_template.html`, and a representation record in `docs/ui/topic-map/README.md`.
-The current standalone output is `private/xconv/scale_run/map/verified/index.html`: 30
-conversations, 620 positions, 27 interpretive topic groups, and 233 typed links; 750 pairs
-judged unrelated are hidden. The generated page embeds the graph bundle and quote-bearing data.
-Keep it and screenshots under gitignored `private/xconv/`; do not publish them.
+The private topic map uses the committed builder in `tools/topic_map.py`, template in
+`tools/topic_map_template.html`, and representation record in `docs/ui/topic-map/README.md`.
+The canonical output is `private/xconv/scale_run/map/verified/index.html`: 30 conversations,
+620 positions, 27 interpretive topic groups, 233 typed links, 750 unrelated pairs hidden, and
+48 aggregated cross-topic links. The prior generated page is preserved under
+`private/xconv/scale_run/map/verified/previous-shared-ui-2026-10-01/`. Keep both pages and all
+screenshots under gitignored `private/xconv/`; do not publish or commit them.
 
-The implementation is merged in [PR #77](https://github.com/BrianMills2718/inquiry-graph/pull/77).
-The saved page opens directly; regenerating it from the builder still depends on the stable
-relation-graph bundle being exported from the active `shared_ui` work.
+The shared `relation-graph-view/v1` bundle is merged in
+[shared_ui PR #11](https://github.com/BrianMills2718/shared_ui/pull/11). Its export manifest
+records source commit `3bd114e1f9cc61561d2ff98fd7177d37fc6984a5` and bundle SHA-256
+`9a2fabf95f1823f70a4f00fc8c9d8c89a922e3c8826536de6fec474f6cf152af`. The Inquiry Graph
+consumer refresh is merged in [PR #80](https://github.com/BrianMills2718/inquiry-graph/pull/80)
+(commit `4b9f0c14acb07f8712adddd23ad0bbe964d44dd3`). Regeneration from the committed builder
+uses the shared export; there is no active shared_ui worktree dependency.
 
-The shared `relation-graph-view/v1` component source is still active in the separate `shared_ui`
-worktree. Do not edit that worktree. The HTML already generated here remains viewable, while
-regenerating it requires an exported component bundle. This is a bounded 30-chat prototype;
-full-archive coverage remains open. The current bounded Jev/Laya disposition is to keep the
-structured-output extractor and not integrate either system as an open-ended position extractor;
-the evidence and condition for reopening are in `docs/goals/cross-conversation-linker.md`.
+The new page loaded and was visually captured at 1440×1000 and 390×844. These checks confirmed
+the map and responsive overview loaded; they did not verify page interactions or console errors.
+Regeneration reused matching topic and name caches and made no model call. The output remains a
+30-chat prototype, not evidence of full-archive coverage or map usefulness across all chats.
+The next goal authority is `docs/goals/cross-chat-position-memory.md`; its first step reconciles
+the local archive against a complete, dated snapshot. The bounded Jev/Laya disposition remains
+in `docs/goals/cross-conversation-linker.md`.
 
 ## Long-term goal (Brian)
-An AI understands everything Brian is interested in and his positions across all his
-ChatGPT conversations, and finds gaps, open questions and conflicts. Brian does not read
-the graphs; the AI does. He also wants to *see* a map: each inquiry alone and all together,
-clustered by topic. inquiry-graph = per-chat producer; onto-canon6 = cross-source kernel
-(read-only for these goals).
+“An AI that knows all your positions across your chats, plus a map you can look at.” It should
+find gaps, open questions, conflicts, and changes over time, and show each inquiry on its own
+and all inquiries together by topic. `inquiry-graph` is the per-chat producer; `onto-canon6`
+remains read-only for this goal. The active goal authority is
+`docs/goals/cross-chat-position-memory.md`.
 
 ## State at the original handoff (2026-09-29)
 - Merged: inquiry-graph PRs #44, #45, #49-#59 (goal 1 cross-chat positions proof done; goal 2
@@ -90,12 +96,21 @@ Larger-chat Jev probe: chat `6a988a7a`, 235 Brian-authored sentence candidates i
 Earlier one-chat Laya probe on `698975ae` labeled 4 of 16 quote-verified position controls as
 positions and matched stance on 2 of 16. That probe has no durable trace, so treat it as
 exploratory and not replayable. Neither System 1 probe establishes a drop-in replacement for
-the reference-key generator. Do not infer extraction precision from these results.
+the reference-key generator. Do not infer extraction precision from these results. This section
+is the historical 2026-09-29 check; the newer Jev-Mem review and current adoption condition are
+recorded in `docs/goals/cross-conversation-linker.md`.
 
 ## Next steps (current)
-1. When the active `shared_ui` work exports a stable relation-graph bundle, regenerate the page
-   from the committed builder and verify it. Do not edit that active worktree from this lane.
-2. Extend position coverage beyond this 30-chat prototype to the broader archive.
+1. Follow `docs/goals/cross-chat-position-memory.md`. The local inventory is internally reconciled:
+   1,728 catalog records match the embedded IDs in 1,728 valid transcript files, with one filename
+   whose basename differs from its embedded ID. All 30 map-corpus chats are in the catalog. The
+   account snapshot is still unresolved: the last successful paginated sync listed 1,246 unique
+   IDs, the catalog has 1,728, and the next sync attempt failed with HTTP 429. Compare against a
+   fresh complete dated account snapshot before calling the local catalog complete.
+2. Use the reconciled snapshot to extend position extraction and the map. Keep the structured-output
+   extractor; the Jev/Laya disposition changes only if its recorded reopening condition is met.
+
+The shared viewer is already merged and integrated. There is no remaining bundle wait.
 
 ## Constraints in force
 Never commit transcripts/quote-bearing outputs. ChatGPT bridge is read/search only (no

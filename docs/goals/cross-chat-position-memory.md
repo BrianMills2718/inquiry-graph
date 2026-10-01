@@ -1,0 +1,85 @@
+# Cross-chat Position Memory and Map
+
+## Goal
+
+**Mission:** Build a private AI that knows Brian's positions across a reconciled snapshot of his ChatGPT conversations, finds gaps, open questions, conflicts, and changes over time, and provides a map Brian can open by inquiry or across topics.
+
+**Execution profile:** `continuous-light`
+
+**Stage and investment boundary:** Private research prototype over one dated archive snapshot. The accessible local catalog currently has 1,728 threads, but its completeness and extraction cost have not yet been established. Estimate cost after validating corpus membership and a small representative extraction slice; do not infer it from the 30-chat run.
+
+**Canonical example:** Given the reconciled archive snapshot and the question, “Where have my views on X changed or pulled against each other, and which questions do I keep leaving open?”, the AI returns source-grounded positions with exact quotes, chat titles, and dates, notes supported changes/conflicts/open questions, and opens a map built from that same snapshot with individual inquiries and a combined topic view.
+
+**Forbidden substitutes:** Presenting the 30-chat sample or the 1,728-row local catalog as a complete account archive without reconciling it; treating assistant text as Brian's position; unsupported summaries without source quotes and chat/date; hand-authored positions or reference keys; a map that omits archive records silently; a component demo without the archive-backed map and answer example.
+
+**Repository / working scope:** `BrianMills2718/inquiry-graph` produces and validates per-chat graphs, the cross-chat position store, and the private map. The merged `shared_ui` relation viewer is a read-only dependency. `onto-canon6` and `epistemic-warrant` remain read-only.
+
+## Boundaries
+
+- **In scope:** Reconcile a dated archive snapshot; extract and validate source-grounded positions and open questions; build a combined map with per-inquiry views; deliver one real archive-grounded answer path for the canonical question; report source coverage, known gaps, and actual cost.
+- **Out of scope:** Continuous syncing of future chats, a production answer route, public release or hosted deployment, changing `onto-canon6`, and broad A/B/C benchmarking beyond a decision-changing uncertainty.
+- **Writes allowed:** Inquiry Graph branches and PRs; quote-bearing source data and generated pages only under gitignored `private/`.
+- **Read-only or externally owned:** ChatGPT bridge is read/search only. Do not send messages, rename, move, tag, reload, or reorganize chats. Use `shared_ui` exports as a dependency; do not modify that repository under this goal.
+- **Irreversible actions requiring authorization:** None expected. Never commit transcripts or quote-bearing outputs; never deploy or publish.
+
+## Acceptance Checks
+
+| ID | Criterion | Evidence to report |
+| --- | --- | --- |
+| C1 | Archive snapshot reconciled | A dated source inventory identifies every conversation as processed, no-position, failed, or explicitly excluded; totals reconcile with the authoritative snapshot count. Do not report full coverage from a retrieval sample or local catalog count alone. |
+| C2 | Position memory preserves evidence | Every surfaced position/question has Brian attribution, exact source quote, conversation identity, title, and date; graph validators pass; report completeness warnings and source checks on a sample spanning conversations and dates. |
+| C3 | Map covers the reconciled snapshot | Per-inquiry and combined-topic views derive from the same snapshot; membership and counts reconcile to C1; desktop and mobile browser renders load from the private generated page. |
+| C4 | The AI answers the canonical example | One authentic traced run answers from the position memory, cites the original conversations, and identifies only supported changes/conflicts/open questions; resolve every citation against source and hand-check the answer's material claims. Inspect the full trace directly. |
+| C5 | The completion report names limits | Report the exact snapshot, included/excluded/failed counts, costs, validators, browser evidence, and any unprocessed or uncertain source class. An unresolved archive discrepancy is a blocker, not full success. |
+
+For every LLM behavior claim, include the trace identifier and inspect at least one complete trace. Do not cap model output or use a different provider as a workaround for a billing/capacity error.
+
+## Increments
+
+1. **Reconcile the archive snapshot:** inspect the existing 1,728-thread catalog, raw transcript inventory, project coverage, completeness warnings, and sync state. Compare them to an authoritative export or exhaustive source count; resolve the one current catalog/file membership discrepancy. This retires the uncertainty about what “all chats” means for this run.
+2. **Validate extraction readiness:** choose a small source-diverse set from the reconciled archive, validate graph provenance and current extractor behavior, inspect the full LLM trace, and estimate actual full-run cost before scaling.
+3. **Extract the reconciled snapshot:** process all included conversations through the current structured-output extractor, preserving explicit empty/failure dispositions and quote provenance.
+4. **Generate the archive-wide map:** build the combined topic overview and per-inquiry views from the extracted snapshot using the merged relation viewer.
+5. **Deliver the AI answer example:** retrieve relevant positions, answer the canonical question, resolve citations, and inspect the complete trace.
+6. **Report disposition:** summarize coverage, remaining known gaps, costs, map location, and whether a new extraction or answer-route decision is justified.
+
+## Loop Bounds
+
+- **No-progress stop:** 3 attempts on the same reproduced archive-access, extraction, or validation blocker with no new evidence or safe next action.
+- **Finite bound:** 6 substantive increments; if the archive reconciliation or source format requires another phase, revalidate the outcome before adding it.
+- **Strategy revalidation:** after 3 substantive increments, roughly 4 hours, twice the stage estimate, or an outcome reset.
+- **Revalidation readout:** compare user-visible archive-backed answers/map coverage with enabling work and process work; recommend `retain`, `replace`, or `clear`.
+- **Exact blocked resume event:** reconcile the local catalog and transcript files with an authoritative archive snapshot; if Brian must download an export, state the exact steps in the session closeout.
+
+## Non-Gating Next Actions
+
+- Ingest conversations created after the dated snapshot or add continuous sync.
+- Publish or deploy the private viewer.
+- Adopt Jev or Laya as an open-ended extractor. The bounded disposition in `docs/goals/cross-conversation-linker.md` keeps the structured-output extractor; reopen only under its recorded same-input evidence condition.
+- Make a product answer-route or general superiority claim from the one-corpus C5 result.
+
+## Current State
+
+- **Demonstrated:** The 30-chat linker evaluation is complete; the private map is generated and visually loaded with the merged shared viewer. The page has 30 conversations, 620 positions, 27 interpretive topics, and 233 typed links; it is not an archive-wide result.
+- **Local archive inventory (2026-10-01):** The catalog at `chatgpt-conversation-manager-v0.2/data/metadata/catalog.json` records 1,728 threads and there are 1,728 valid raw transcript JSON files. The embedded `thread_id` values form an exact one-to-one match with catalog records; one filename differs from its embedded ID. All 30 map-corpus chat IDs are present in the catalog. It contains 153 project-associated threads and 22 completeness warnings (1,718 API captures and 10 DOM captures). This reconciles the local catalog to its transcript files, not to a complete account snapshot.
+- **Access and sync:** The live recent-chat tool returned 100 non-Project chats at its maximum. Project-inclusive listing failed twice with HTTP 422 from the Projects sidebar path. The connector repo has a paginated bulk-sync path for `/backend-api/conversations` (50 per page, deduplicated by thread ID). Its last successful run on 2026-09-29 listed 1,246 unique threads, while the current local catalog has 1,728; the next recorded attempt on 2026-09-30 failed with HTTP 429. Project inclusion and the 1,728-thread catalog have not been reconciled to a complete account snapshot.
+- **Technical execution status:** The map builder reused matching topic/name caches and made no model call. Visual checks covered desktop and mobile only; interaction and console checks were not run.
+- **Stakeholder observation status:** The page is locally available for Brian to inspect; no usefulness or comprehension claim is made.
+- **Outcome / enabling / process progress:** Outcome: 30-chat position map delivered. Enabling: stable viewer and builder are merged. Process: long-term goal is defined; archive coverage is the next unresolved increment.
+- **Current increment:** Compare the locally reconciled 1,728-thread inventory against a fresh, complete dated account snapshot; then resolve any missing or incomplete records before estimating the full extraction run.
+- **Blockers:** Full account membership and freshness are unverified. The bridge listing concern is tracked in Project Meta issue #2263; its last recorded sync attempt failed with HTTP 429. The local catalog and raw transcript files reconcile by embedded thread ID, but that does not explain why the last successful account listing had 1,246 IDs. No human action has yet been shown necessary.
+- **Resume event:** When the account list route is available without repeating the recent rate-limit failure, run the existing paginated archive sync and compare its exact thread-ID set with the local catalog; if no complete account snapshot can be obtained, name the specific export or access action Brian needs to take.
+
+## Evaluator-Facing Objective
+
+~~~text
+Goal: Build a private AI that knows Brian's positions across all of his ChatGPT conversations and gives him an inspectable topic map. Read and follow docs/goals/cross-chat-position-memory.md.
+Profile: continuous-light.
+Canonical example: A reconciled dated archive snapshot plus a cross-chat question about changed or conflicting views and open questions -> a source-grounded answer with exact quotes, titles, and dates, and a map with per-inquiry and combined-topic views from the same snapshot.
+Forbidden substitutes: Calling the 30-chat sample or an unreconciled local catalog the full archive; assistant text attributed to Brian; unsupported or uncited answers; hand-authored positions/keys; a map that silently omits conversations.
+Boundaries: Work in inquiry-graph and gitignored private/; ChatGPT bridge read/search only; onto-canon6 read-only; shared_ui export as a dependency; never commit transcripts or quote-bearing outputs; no deploy or publish.
+Done when: C1-C5 are evidenced for one reconciled archive snapshot, including per-conversation disposition, valid source-grounded positions, map coverage and desktop/mobile render, one authentic traced answer with resolved citations and hand-checked claims, and a report of costs and remaining limits.
+Stop as blocked only after 3 attempts on the same reproduced archive-access or processing blocker yield no new evidence or safe next action; report the owner and exact resume event. Do not call an accessible subset complete.
+Do not gate on: future chat sync, public deployment, Brian reading generated files, adopting Jev/Laya, or a broader benchmark not needed to decide the next route.
+Revalidate after: 3 increments, roughly 4 hours, twice the stage estimate, or an outcome reset; report outcome/enabling/process progress and recommend retain, replace, or clear. If misaligned, stop substantive work and report strategic misalignment rather than a technical blocker.
+~~~
