@@ -933,6 +933,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 153,
       "text": "WP0/WP1 capable baseline completed on the frozen NYC CRZ corpus. The baseline preserves exact accepted source claims and descriptive arithmetic, explicitly refuses causal/prevalence/policy-choice overclaims, carries the unfinished six-hearing qualitative result as missing rather than fabricated, and pins a post-freeze NYC Health air-quality evaluation as a sealed WP4 revision update excluded from baseline use."
+    },
+    {
+      "id": "s30:t92",
+      "actor_id": "s30:brian",
+      "ordinal": 154,
+      "text": "Okay, proceed."
+    },
+    {
+      "id": "s30:t93",
+      "actor_id": "s30:assistant",
+      "ordinal": 155,
+      "text": "NYC WP2/WP4 completed. The smallest useful federation uses native artifacts plus PROV-style lineage, assurance/SACM-style claim standing, explicit policy-appraisal criteria, and dependency links. Compared with the capable baseline it materially improves reconstruction, machine-visible refusal/warrant state, and revision readiness, but not evidence or method validity. Revealing the sealed 2026-08-14 NYC Health air-quality evaluation correctly reopens environmental-health/equity reasoning while leaving traffic arithmetic, medical-access concern, and the missing six-hearing qualitative strand unchanged."
     }
   ]
 }
