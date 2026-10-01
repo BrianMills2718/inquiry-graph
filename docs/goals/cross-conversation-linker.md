@@ -192,9 +192,13 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   `evaluation/cross_conversation_scale/balanced_replay.py`. A's source answers remain under
   `private/xconv/scale_run_codex_rerun_20260930/`; the fresh B/C answers and grades are under
   `private/xconv/scale_run_codex_balanced_20260930/`.
-- **Resume event:** the C5 decision has been posted and its balanced replay and independent signoff
-  are recorded. Continue the separate private topic-map phase from `docs/ui/topic-map/README.md`;
-  this evaluation does not validate map usefulness, full-archive coverage, or answer quality.
+- **Resume event:** the C5 decision is posted, and the 30-chat private topic-map implementation
+  is merged in [PR #77](https://github.com/BrianMills2718/inquiry-graph/pull/77). Its standalone
+  viewer is `private/xconv/scale_run/map/verified/index.html`; see `docs/ui/topic-map/README.md`.
+  Continue with a stable exported relation-graph bundle, broader archive coverage, and the open
+  decision about whether Jev or Laya should participate in extraction. The bounded evaluation
+  does not establish full-archive coverage, map usefulness across all chats, or general answer
+  quality.
 
 ## Evaluator-Facing Objective
 

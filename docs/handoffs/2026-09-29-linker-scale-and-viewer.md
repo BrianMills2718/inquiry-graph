@@ -18,6 +18,10 @@ conversations, 620 positions, 27 interpretive topic groups, and 233 typed links;
 judged unrelated are hidden. The generated page embeds the graph bundle and quote-bearing data.
 Keep it and screenshots under gitignored `private/xconv/`; do not publish them.
 
+The implementation is merged in [PR #77](https://github.com/BrianMills2718/inquiry-graph/pull/77).
+The saved page opens directly; regenerating it from the builder still depends on the stable
+relation-graph bundle being exported from the active `shared_ui` work.
+
 The shared `relation-graph-view/v1` component source is still active in the separate `shared_ui`
 worktree. Do not edit that worktree. The HTML already generated here remains viewable, while
 regenerating it requires an exported component bundle. This is a bounded 30-chat prototype;
@@ -30,43 +34,23 @@ the graphs; the AI does. He also wants to *see* a map: each inquiry alone and al
 clustered by topic. inquiry-graph = per-chat producer; onto-canon6 = cross-source kernel
 (read-only for these goals).
 
-## State
+## State at the original handoff (2026-09-29)
 - Merged: inquiry-graph PRs #44, #45, #49-#59 (goal 1 cross-chat positions proof done; goal 2
   step C1, the relation-typed linker v1.2, done, 10/11 hand-checked). Router PR #44 merged.
 - Worktree `~/code/inquiry-graph/worktrees/linker`, branch `goal/linker-scale`:
   - includes the parameterized `build_key`, the `live_extract` supersession-cycle fix + test,
     and `evaluation/cross_conversation_scale/scale.py`.
-  - UNTRACKED and to be deleted once a shared viewer exists: `tools/build_inquiry_map.py`,
-    `tools/inquiry_map_template.html` (hand-rolled D3; Brian rejected this approach).
-- Goal docs: `docs/goals/cross-conversation-linker.md` (C2-C5 remain).
+  - The hand-rolled D3 prototype was scratch work and was superseded by the shared-component
+    topic map. Its two scratch files are absent from this worktree.
+- Goal docs: `docs/goals/cross-conversation-linker.md` records C2-C5 evidence, the bounded
+  C5 disposition, and the remaining map, archive-coverage, and Jev/Laya questions.
 
-## Scale-run provider status (2026-09-29)
-The 30-chat scale run (`scale.py`) exited in the "key" stage: OpenRouter refused
-`build_key.per_chat` with "requires more credits ... can only afford 29639" tokens.
-Corpus (30 chats, ~4.2M chars, all graphs valid) and linker outputs are already cached under
-`private/xconv/scale_run/`. Do NOT cap max_tokens to dodge it (AGENTS.md rule).
-
-A bounded Codex-subscription probe succeeded on chat `6a7bd3db` through
-`codex/gpt-5.6-luna` using the installed Codex CLI and metadata-only observability. It returned
-20 positions; all 20 quotes matched Brian-authored messages. The client reported
-`billing_mode=subscription_included`, `$0`, and no token usage counts. Trace:
-`inquiry-graph/xconv-key/codex-subscription-probe/6a7bd3db-20260929-attempt2`.
-Codex `/status` showed Pro, 84% of the weekly limit and 48% of Luna Reserve remaining at the
-time checked. This proves the route works for one chat, not that the remaining 30-chat workload
-fits the available allowance. The scale run has not been resumed; its original OpenRouter cache
-is unchanged.
-
-For a consistent Codex reference-key set, use a separate run directory and regenerate all 30
-per-chat keys rather than mixing the eight existing OpenRouter keys with Codex output. The
-cross-key, route-answer and grading stages also remain outstanding. Do not buy OpenRouter credits
-or infer full-run capacity from the single probe.
-
-At this handoff, all 30 corpus IDs have valid graphs; 8 of 30 per-chat key JSONs exist, and
-their IDs all belong to the corpus. The other 22 key calls and the cross-key call are still
-needed in the original run. Linker exports exist; route answer files and `grades.json` do not,
-so completing the evaluation also needs route A (15 calls), B/C (one call each), and judging
-(15 calls). These counts come from the current cache and the stage loops in `scale.py`. Do not
-resume the original mixed-provider cache as a completed evaluation.
+## Original OpenRouter attempt (2026-09-29; historical)
+The first 30-chat scale run stopped during `build_key.per_chat`: OpenRouter refused a request
+because the account lacked enough credits. The corpus and linker output were cached under
+`private/xconv/scale_run/`. That mixed-provider attempt was not treated as a completed evaluation;
+the balanced replay and C5 decision were later completed through separate Codex-subscription
+runs, described above and in `docs/goals/cross-conversation-linker.md`.
 
 ## Jev/Laya extraction check (2026-09-29)
 
@@ -107,16 +91,12 @@ exploratory and not replayable. Neither System 1 probe establishes a drop-in rep
 the reference-key generator. Do not infer extraction precision from these results.
 
 ## Next steps (current)
-1. Integrate the saved balanced C5 follow-up and private topic-map implementation through the
-   claimed Inquiry Graph branch and PR. Keep the quote-bearing output under `private/xconv/`.
-2. Once the shared UI relation-graph bundle is exported from its active work, regenerate the
-   page from the committed builder using that stable bundle. Do not edit the active shared_ui
-   worktree from this task.
-3. Brian can inspect `private/xconv/scale_run/map/verified/index.html` and give feedback on
-   whether the topic grouping and conversation switch answer the intended map use case.
-4. Full-archive position coverage and whether Jev or Laya should participate in extraction remain
-   separate open decisions. Existing local and online prior-art findings are recorded above; no
-   adoption decision follows from the small pilot evidence.
+1. When the active `shared_ui` work exports a stable relation-graph bundle, regenerate the page
+   from the committed builder and verify it. Do not edit that active worktree from this lane.
+2. Extend position coverage beyond this 30-chat prototype to the broader archive.
+3. Decide whether Jev or Laya should participate in extraction. The local OntoCanon6 work and
+   verified online prior art are recorded above; the small pilots do not establish a drop-in
+   replacement or Laya quality on this task.
 
 ## Constraints in force
 Never commit transcripts/quote-bearing outputs. ChatGPT bridge is read/search only (no
