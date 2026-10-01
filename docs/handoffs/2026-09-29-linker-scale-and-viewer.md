@@ -25,7 +25,9 @@ relation-graph bundle being exported from the active `shared_ui` work.
 The shared `relation-graph-view/v1` component source is still active in the separate `shared_ui`
 worktree. Do not edit that worktree. The HTML already generated here remains viewable, while
 regenerating it requires an exported component bundle. This is a bounded 30-chat prototype;
-full-archive coverage and a Jev/Laya extraction adoption decision remain open.
+full-archive coverage remains open. The current bounded Jev/Laya disposition is to keep the
+structured-output extractor and not integrate either system as an open-ended position extractor;
+the evidence and condition for reopening are in `docs/goals/cross-conversation-linker.md`.
 
 ## Long-term goal (Brian)
 An AI understands everything Brian is interested in and his positions across all his
@@ -94,9 +96,6 @@ the reference-key generator. Do not infer extraction precision from these result
 1. When the active `shared_ui` work exports a stable relation-graph bundle, regenerate the page
    from the committed builder and verify it. Do not edit that active worktree from this lane.
 2. Extend position coverage beyond this 30-chat prototype to the broader archive.
-3. Decide whether Jev or Laya should participate in extraction. The local OntoCanon6 work and
-   verified online prior art are recorded above; the small pilots do not establish a drop-in
-   replacement or Laya quality on this task.
 
 ## Constraints in force
 Never commit transcripts/quote-bearing outputs. ChatGPT bridge is read/search only (no

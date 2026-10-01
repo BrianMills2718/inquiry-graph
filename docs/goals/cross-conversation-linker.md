@@ -185,7 +185,21 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   0.90 when roles were supplied. This supports a bounded hybrid:
   use System One to classify/rank a candidate set and judge typed relations, while code preserves
   exact cited spans. It does not establish a drop-in replacement for open-ended position
-  extraction, nor Laya quality on this task. No adoption decision is made.
+  extraction, nor Laya quality on this task.
+- **Current bounded disposition (2026-10-01):** Keep the current structured-output position
+  extractor. Do not adopt Jev or Laya as a complete open-ended position extractor. Jev remains a
+  plausible bounded complement for ranking/classifying source-grounded candidate spans or judging
+  typed relations, with code preserving exact evidence and applying the ADR-006 validator. Do not
+  integrate it yet: its larger-chat probe matched stance on only 6/15 covered excerpts, and its
+  classifier probe did not measure precision. Laya's exploratory probe found 4/16 position controls
+  and 2/16 stance matches, with no durable trace. The Jev calls still used OpenRouter, so they do not
+  remove that account dependency. These results do not justify replacing or rerouting the current
+  extractor.
+
+  Reopen this disposition if a replayable same-input comparison on the 30-chat corpus, using an
+  independent quote-verified key and spot checks, shows either route meeting or exceeding the
+  current extractor on position precision, recall, and stance agreement while reducing actual
+  extraction spend or resolving a provider limit for that workload.
 - **C4 reproduction:** `python evaluation/cross_conversation_scale/summarize_balanced_replay.py`
   recomputes the report from private checkpoints and metadata-only call databases. The run plan and
   resumable runner are `evaluation/cross_conversation_scale/balanced-replay-2026-09-30.md` and
@@ -195,10 +209,9 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **Resume event:** the C5 decision is posted, and the 30-chat private topic-map implementation
   is merged in [PR #77](https://github.com/BrianMills2718/inquiry-graph/pull/77). Its standalone
   viewer is `private/xconv/scale_run/map/verified/index.html`; see `docs/ui/topic-map/README.md`.
-  Continue with a stable exported relation-graph bundle, broader archive coverage, and the open
-  decision about whether Jev or Laya should participate in extraction. The bounded evaluation
-  does not establish full-archive coverage, map usefulness across all chats, or general answer
-  quality.
+  Continue with a stable exported relation-graph bundle and broader archive coverage. The bounded
+  Jev/Laya disposition is recorded above. The bounded evaluation does not establish full-archive
+  coverage, map usefulness across all chats, or general answer quality.
 
 ## Evaluator-Facing Objective
 
