@@ -19,7 +19,7 @@ Files:
 - `candidates.json` — generated semantic candidates;
 - `graph.json` — validated V1 Inquiry Graph.
 
-Current fixture: **109 selected excerpts, 103 nodes, 80 relations, 84 moves, 61 stance events, and 33 question events**.
+Current fixture: **113 selected excerpts, 106 nodes, 83 relations, 87 moves, 64 stance events, and 33 question events**.
 
 All semantic annotations are `proposed`. This is not a full transcript export,
 not a gold dataset, and not a record of hidden reasoning.

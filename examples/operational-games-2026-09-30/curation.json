@@ -113,7 +113,11 @@
     "minimum-runtime-question": "dialogue-2026-09-30-operational-games:ex106",
     "approve-synthesis": "dialogue-2026-09-30-operational-games:ex107",
     "wiring-contract-architecture": "dialogue-2026-09-30-operational-games:ex108",
-    "full-conversation-coverage-request": "dialogue-2026-09-30-operational-games:ex109"
+    "full-conversation-coverage-request": "dialogue-2026-09-30-operational-games:ex109",
+    "proceed-truck-fixture": "dialogue-2026-09-30-operational-games:ex110",
+    "truck-fixture-scope": "dialogue-2026-09-30-operational-games:ex111",
+    "truck-fixture-pass": "dialogue-2026-09-30-operational-games:ex112",
+    "truck-fixture-merged": "dialogue-2026-09-30-operational-games:ex113"
   },
   "nodes": [
     [
@@ -733,6 +737,24 @@
       "goal",
       "Ensure every substantive inquiry turn in the current conversation is represented in the operational-games graph, with explicit coverage limits where full-export verification is unavailable.",
       "full-conversation-coverage-request"
+    ],
+    [
+      "truck-fixture-execution-goal",
+      "goal",
+      "Implement the smallest concrete truck/logistics acceptance fixture for the compositional executable-world architecture without creating a new general framework.",
+      "truck-fixture-scope"
+    ],
+    [
+      "truck-fixture-spec-pass",
+      "claim",
+      "The truck/logistics manifest passes bounded structural/mechanical/strategic checks: A and C are feasible, D is rejected before strategy, the strategic fixture has one pure Nash profile, and only departure/arrival mechanics can write material state.",
+      "truck-fixture-pass"
+    ],
+    [
+      "truck-fixture-merged-result",
+      "claim",
+      "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case.",
+      "truck-fixture-merged"
     ]
   ],
   "relations": [
@@ -1215,6 +1237,24 @@
       "typed-wiring-contract-architecture",
       "full-thread-coverage-goal",
       "full-conversation-coverage-request"
+    ],
+    [
+      "motivates",
+      "truck-fixture-execution-goal",
+      "truck-fixture-spec-pass",
+      "truck-fixture-pass"
+    ],
+    [
+      "supports",
+      "truck-fixture-spec-pass",
+      "truck-fixture-merged-result",
+      "truck-fixture-merged"
+    ],
+    [
+      "related_to",
+      "truck-fixture-spec-pass",
+      "typed-wiring-contract-architecture",
+      "truck-fixture-pass"
     ]
   ],
   "moves": [
@@ -2047,6 +2087,36 @@
         "full-thread-coverage-goal"
       ],
       "full-conversation-coverage-request"
+    ],
+    [
+      "scope",
+      [
+        "typed-wiring-contract-architecture"
+      ],
+      [
+        "truck-fixture-execution-goal"
+      ],
+      "truck-fixture-scope"
+    ],
+    [
+      "test",
+      [
+        "truck-fixture-execution-goal"
+      ],
+      [
+        "truck-fixture-spec-pass"
+      ],
+      "truck-fixture-pass"
+    ],
+    [
+      "summarize",
+      [
+        "truck-fixture-spec-pass"
+      ],
+      [
+        "truck-fixture-merged-result"
+      ],
+      "truck-fixture-merged"
     ]
   ],
   "stances": [
@@ -2354,6 +2424,21 @@
       "full-thread-coverage-goal",
       "posits",
       "full-conversation-coverage-request"
+    ],
+    [
+      "truck-fixture-execution-goal",
+      "posits",
+      "truck-fixture-scope"
+    ],
+    [
+      "truck-fixture-spec-pass",
+      "posits",
+      "truck-fixture-pass"
+    ],
+    [
+      "truck-fixture-merged-result",
+      "posits",
+      "truck-fixture-merged"
     ]
   ],
   "question_updates": [
