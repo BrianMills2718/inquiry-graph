@@ -94,7 +94,8 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 
 - Brian's ChatGPT data export, for voice-mode messages (inquiry-graph issue #3).
 - onto-canon6 #505 (packaging): not needed here.
-- Scaling to the whole archive, only after C5 says continue.
+- Scaling the answer-route comparison to the whole archive remains deferred;
+  this C5 result does not establish general route superiority.
 - Hosted CI (#2).
 
 ## Current State
@@ -109,7 +110,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** 5 complete (30-chat comparison and bounded C5 decision).
+- **Current increment:** the balanced comparison and independent C5 signoff are complete. Increment 5 remains open only until its decision comment is posted to issue #38. The later human-viewable topic map is a separate phase and is not evaluated here.
 - **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
   continue at the current credit balance. The separate Codex CLI campaign under
   `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
@@ -122,54 +123,50 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   Codex CLI rollout: it returned 19 positions with no tool calls. The LLM observability row reports
   `codex/gpt-5.6-luna`, `subscription_included`, 74,407 total tokens, 217.0 seconds and $0 API cost;
   observability content is metadata-only. The response is saved in the private per-chat key.
-- **C4 preflight:** the cached 30-chat B export is 437,686 characters with 620 positions and 233
-  typed cross-chat links; the C export is 330,267 characters with the same 620 positions and no
-  links. The first A/B/C answer sets used metered OpenRouter by mistake: Python captured the
-  import-time default model before campaign configuration selected Codex. Telemetry records 15
-  `openrouter/openai/gpt-5.6-luna` answer calls at $0.49159 provider-reported cost. Their 13 blind
-  grades finished and the process exited 0; both answers and grades are excluded from C4.
-  `scale.py` now resolves the model at call time (commit `ce7b8b7`). The corrected campaign in
-  `private/xconv/scale_run_codex_rerun_20260930/` reused the verified key and B/C exports. All 39
-  answers (13 per route) completed as `codex/gpt-5.6-luna`; all 13 blind grades completed as
-  `codex/gpt-5.6-sol`. Telemetry shows subscription-included billing, zero API cost and zero errors
-  for all 28 calls. The process exited 0 and wrote all 13 grade rows and `summary.json`.
-  Mean key-point coverage was A 0.67, B 0.63, C 0.61: B−C +0.02 and B−A −0.04. B and C each
-  fully answered 1/13 questions, versus 4/13 for A; each route contradicted the key on 5/13.
-  The per-question table, category means, failure counts, source-citation audit, source-heldout
-  subset, and blind-grader positive control are recorded in
-  `evaluation/cross_conversation_scale/results.md` and its adjacent JSON evidence. The seven
-  source-heldout cases tie B and C at 0.595 and put A at 0.702; this is a limited descriptive
-  subset, not an independent question-set or broad generalization test. The three routes have low
-  fully-right counts and none meets the complete citation-and-quote contract. The bounded retrieval
-  recommendation is archive search as default for this workload; typed links did not show a useful
-  answer-quality gain in this sample. Fresh independent C5 signoff returned `SIGNED-OFF` for this
-  bounded decision. The reviewer recomputed all 39 route/item scores, verified the 620/620 graph
-  quote audit, passed a fresh Codex grader control, and privately checked four answer/grade/key/source
-  rows (4/4 aligned). Limits and gate details are in
-  `evaluation/cross_conversation_scale/signoff.md`.
-  The decision comment is published at
-  [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5911587587):
-  use archive-search-then-read as default for this measured answer workload, keep linker data for
-  the later topic-map phase, and defer productizing any route for the complete sourced-answer
-  contract.
-  Of the 13 reference questions, 7 cite only chats outside the five used during linker prompt
-  revisions; 11 include at least one such chat. Every question category has at least one
-  new-chat-only case, though the held-out subset is small.
-- **Blockers:** None for the completed campaign. OpenRouter refused the earlier full-context key
-  call for insufficient credits; the independent Codex subscription route completed the key and
-  corrected comparison. The previous Windows process-start request was denied by its approval
-  gate; no remote command ran, and the local Codex route made that route unnecessary.
+- **C4 (2026-09-30):** the preregistered balanced replay is complete. The first answer/grade campaign
+  used metered OpenRouter because `scale.py` captured the import-time default model; its results are
+  excluded. The corrected answers, key and exports were completed with the Codex subscription route.
+  A fresh balanced replay reused A's 13 one-question answers, generated B and C in 13 one-question
+  calls each, and blindly graded all three answers once per question. All 30 graphs validated; all
+  39 answers and 13 grades completed with zero recorded API cost and zero call errors. The B input
+  has 620 positions and 233 typed links (437,452 characters); C has the same positions without
+  links (330,083 characters). Mean coverage: A 0.647, B 0.686, C 0.686. Thus B is +0.038 over A
+  and tied with C on this key-point measure. B had 3/13 contradictions versus 5/13 for A and C,
+  but 4/13 attribution errors versus A's 2/13. All routes flagged unsupported claims on 12/13
+  answers. The literal quote audit matched 9/33 A, 3/45 B and 4/40 C quoted spans to expected
+  source messages; it is not a semantic citation judgment. The full table, category means,
+  availability audit, costs, token totals, and trace IDs are in
+  `evaluation/cross_conversation_scale/results.md` and
+  `evaluation/cross_conversation_scale/balanced_replay_summary.json`. The full private Codex CLI
+  trace for C q13 was directly inspected: the saved prompt contained that exact question and the
+  full positions-only export; the final structured answer matched the checkpoint, with no tool
+  calls. The database row itself is metadata-only.
+- **C5 (2026-10-01, independent signoff complete):** the reviewer signed off on the bounded
+  decision. Mean key-point coverage was A 0.647436, B 0.685897, C 0.685897: typed links added no
+  measured coverage over positions alone, while B's +0.038462 over A is descriptive only. The
+  reviewer revalidated all 30 graphs, recomputed all 39 scores and category means, passed a fresh
+  positive/negative grader control, and hand-checked five grade/source cases across all five
+  categories. It found no scored call observably interrupted by the historical 300-second runtime
+  safety value; two calls exceeded it and later completed. The key used the full corpus, so the
+  evaluation does not establish that the graph route beats search at scale. The bounded decision
+  is to keep the linker as a research/topic-map source and defer productizing an answer route. The
+  required issue #38 comment remains to be posted after these records are pushed.
+- **Blockers:** none. OpenRouter credit exhaustion prevented the original key call, but the key and
+  comparison were completed through the authorized Codex subscription route.
 - **Jev/Laya prior art (verified 2026-09-30):** Jev-Mem is the closest whole-memory implementation:
   [repository](https://github.com/libingzheren/Jev-Mem) and [paper](https://arxiv.org/abs/2609.23986).
   It uses System One for memory typing and relation judgments over semantic, temporal, causal and
   entity views, with System Two for answer synthesis. The repo added a local Laya backend on
   2026-09-27, but explicitly says the published LoCoMo results used Jev and Laya has not been
   benchmarked for that paper. Its relation model is related prior art, not the linker's
-  `same`/`agrees`/`extends`/`pulls_against`/`evolves` contract.
+  `same`/`agrees`/`extends`/`pulls_against`/`evolves` contract. Its LongMemEval runner ingests
+  each nonempty user/assistant message with role and session-date metadata; the documented
+  interface does not first emit an atomic, stance-labeled position per conversation.
   [Jev Reviewer](https://github.com/choxos/jev-reviewer) uses Jev to select and verify candidate
-  lines for fixed extraction questions, then copies exact source text and location in code;
-  [jev-mcp](https://github.com/jkudish/jev-mcp) similarly ranks regex-proposed candidates. These
-  preserve evidence well but do not provide open-ended position discovery by themselves.
+  lines for fixed extraction questions. [jev-mcp](https://github.com/jkudish/jev-mcp) and
+  [jev-cli](https://github.com/Nasrallah-AL/jev-cli) expose span extraction where regex proposes
+  candidate substrings, Jev selects the matching one, and code returns the exact source text.
+  These preserve evidence well but do not provide open-ended position discovery by themselves.
   Brian's separate Onto-Canon6 Jev spike tests exhaustive typed predicate decisions plus
   deterministic source pointers. Its files are
   `onto-canon6/worktrees/jev-extraction-spike-20260918/docs/experiments/jev_extraction_spike.md`
@@ -188,13 +185,15 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   use System One to classify/rank a candidate set and judge typed relations, while code preserves
   exact cited spans. It does not establish a drop-in replacement for open-ended position
   extraction, nor Laya quality on this task. No adoption decision is made.
-- **C4 regeneration:** the corrected campaign, graders, report, router disposition, and fresh C5
-  signoff are complete. Keep the failed OpenRouter answer/grade run excluded from C4; its outputs
-  are preserved. The corrected key and all 39 answers are cached. If the result artifacts need to be
-  regenerated, run this command from the same worktree; it will use the cached key and answers:
-  `LLM_CLIENT_DATA_ROOT="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data" LLM_CLIENT_DB_PATH="$PWD/private/xconv/scale_run_codex_rerun_20260930/llm-data/llm_observability.db" python evaluation/cross_conversation_scale/scale.py --codex-subscription --campaign-dir private/xconv/scale_run_codex_rerun_20260930`.
-- **Resume event:** C1–C5 are complete. Begin the later topic-map phase only as a separate
-  increment; this comparison does not evaluate a human-viewable map.
+- **C4 reproduction:** `python evaluation/cross_conversation_scale/summarize_balanced_replay.py`
+  recomputes the report from private checkpoints and metadata-only call databases. The run plan and
+  resumable runner are `evaluation/cross_conversation_scale/balanced-replay-2026-09-30.md` and
+  `evaluation/cross_conversation_scale/balanced_replay.py`. A's source answers remain under
+  `private/xconv/scale_run_codex_rerun_20260930/`; the fresh B/C answers and grades are under
+  `private/xconv/scale_run_codex_balanced_20260930/`.
+- **Resume event:** post the signed-off bounded decision to issue #38 after pushing the balanced
+  result and signoff records. The human-viewable topic map is a separate phase; this evaluation
+  does not validate its implementation or answer quality.
 
 ## Evaluator-Facing Objective
 

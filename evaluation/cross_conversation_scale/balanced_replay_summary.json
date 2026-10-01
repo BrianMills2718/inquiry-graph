@@ -1,0 +1,409 @@
+{
+  "status": "complete",
+  "campaign": "balanced-replay-2026-09-30",
+  "plan": "evaluation/cross_conversation_scale/balanced-replay-2026-09-30.md",
+  "question_count": 13,
+  "corpus_chats": 30,
+  "answers_per_route": {
+    "A": 13,
+    "B": 13,
+    "C": 13
+  },
+  "grades": 13,
+  "route_means": {
+    "A": {
+      "mean_key_point_coverage": 0.647436,
+      "fully_right": 4,
+      "contradicts_key": 5,
+      "attribution_error": 2,
+      "unsupported_claims": 12,
+      "cannot_answer": 0,
+      "answer_cost_usd": 0.0
+    },
+    "B": {
+      "mean_key_point_coverage": 0.685897,
+      "fully_right": 3,
+      "contradicts_key": 3,
+      "attribution_error": 4,
+      "unsupported_claims": 12,
+      "cannot_answer": 0,
+      "answer_cost_usd": 0.0
+    },
+    "C": {
+      "mean_key_point_coverage": 0.685897,
+      "fully_right": 2,
+      "contradicts_key": 5,
+      "attribution_error": 4,
+      "unsupported_claims": 12,
+      "cannot_answer": 0,
+      "answer_cost_usd": 0.0
+    }
+  },
+  "by_category": {
+    "agreement_across_chats": {
+      "A": 0.805556,
+      "B": 0.805556,
+      "C": 0.805556
+    },
+    "change_over_time": {
+      "A": 0.75,
+      "B": 0.625,
+      "C": 0.75
+    },
+    "conflict_or_tension": {
+      "A": 0.833333,
+      "B": 0.583333,
+      "C": 0.666667
+    },
+    "position_summary": {
+      "A": 0.5,
+      "B": 1.0,
+      "C": 0.875
+    },
+    "recurring_open_question": {
+      "A": 0.333333,
+      "B": 0.5,
+      "C": 0.416667
+    }
+  },
+  "per_question": [
+    {
+      "q": 1,
+      "category": "agreement_across_chats",
+      "key_points": 4,
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0
+    },
+    {
+      "q": 2,
+      "category": "agreement_across_chats",
+      "key_points": 3,
+      "A": 0.666667,
+      "B": 0.666667,
+      "C": 0.666667
+    },
+    {
+      "q": 3,
+      "category": "agreement_across_chats",
+      "key_points": 4,
+      "A": 0.75,
+      "B": 0.75,
+      "C": 0.75
+    },
+    {
+      "q": 4,
+      "category": "conflict_or_tension",
+      "key_points": 4,
+      "A": 1.0,
+      "B": 0.75,
+      "C": 0.75
+    },
+    {
+      "q": 5,
+      "category": "conflict_or_tension",
+      "key_points": 4,
+      "A": 0.75,
+      "B": 0.5,
+      "C": 0.5
+    },
+    {
+      "q": 6,
+      "category": "conflict_or_tension",
+      "key_points": 4,
+      "A": 0.75,
+      "B": 0.5,
+      "C": 0.75
+    },
+    {
+      "q": 7,
+      "category": "recurring_open_question",
+      "key_points": 4,
+      "A": 0.0,
+      "B": 0.5,
+      "C": 0.25
+    },
+    {
+      "q": 8,
+      "category": "recurring_open_question",
+      "key_points": 4,
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5
+    },
+    {
+      "q": 9,
+      "category": "recurring_open_question",
+      "key_points": 4,
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5
+    },
+    {
+      "q": 10,
+      "category": "change_over_time",
+      "key_points": 4,
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.75
+    },
+    {
+      "q": 11,
+      "category": "change_over_time",
+      "key_points": 4,
+      "A": 1.0,
+      "B": 0.75,
+      "C": 0.75
+    },
+    {
+      "q": 12,
+      "category": "position_summary",
+      "key_points": 4,
+      "A": 0.0,
+      "B": 1.0,
+      "C": 1.0
+    },
+    {
+      "q": 13,
+      "category": "position_summary",
+      "key_points": 4,
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.75
+    }
+  ],
+  "expected_source_chat_availability": {
+    "A": {
+      "expected_chat_recall": 0.666667,
+      "expected_chat_hits": 22,
+      "expected_chat_total": 33,
+      "questions_with_all_expected_chats": 6
+    },
+    "B": {
+      "expected_chat_recall": 1.0,
+      "expected_chat_hits": 33,
+      "expected_chat_total": 33,
+      "questions_with_all_expected_chats": 13
+    },
+    "C": {
+      "expected_chat_recall": 1.0,
+      "expected_chat_hits": 33,
+      "expected_chat_total": 33,
+      "questions_with_all_expected_chats": 13
+    }
+  },
+  "literal_evidence_audit": {
+    "method": "literal title/date and Unicode-normalized quote-substring checks; not semantic citation adjudication",
+    "routes": {
+      "A": {
+        "questions_with_at_least_two_expected_titles": 7,
+        "questions_with_at_least_two_expected_title_date_pairs": 7,
+        "double_quoted_spans": 33,
+        "spans_found_in_expected_source_messages": 9
+      },
+      "B": {
+        "questions_with_at_least_two_expected_titles": 12,
+        "questions_with_at_least_two_expected_title_date_pairs": 3,
+        "double_quoted_spans": 45,
+        "spans_found_in_expected_source_messages": 3
+      },
+      "C": {
+        "questions_with_at_least_two_expected_titles": 12,
+        "questions_with_at_least_two_expected_title_date_pairs": 2,
+        "double_quoted_spans": 40,
+        "spans_found_in_expected_source_messages": 4
+      }
+    },
+    "graph_position_quotes": {
+      "nonempty": 620,
+      "exact_contiguous_source_spans": 620
+    }
+  },
+  "calls": {
+    "A": {
+      "calls": 13,
+      "models": [
+        "codex/gpt-5.6-luna"
+      ],
+      "total_tokens": 1980739,
+      "cost_usd": 0.0,
+      "cost_sources": [
+        "subscription_included"
+      ],
+      "billing_modes": [
+        "subscription_included"
+      ],
+      "latency_seconds": 1986.843,
+      "errors": 0,
+      "finish_reasons": [
+        "stop"
+      ],
+      "trace_count": 13,
+      "trace_suffixes": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    "B": {
+      "calls": 13,
+      "models": [
+        "codex/gpt-5.6-luna"
+      ],
+      "total_tokens": 2031408,
+      "cost_usd": 0.0,
+      "cost_sources": [
+        "subscription_included"
+      ],
+      "billing_modes": [
+        "subscription_included"
+      ],
+      "latency_seconds": 3782.315,
+      "errors": 0,
+      "finish_reasons": [
+        "stop"
+      ],
+      "trace_count": 13,
+      "trace_suffixes": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    "C": {
+      "calls": 13,
+      "models": [
+        "codex/gpt-5.6-luna"
+      ],
+      "total_tokens": 1612072,
+      "cost_usd": 0.0,
+      "cost_sources": [
+        "subscription_included"
+      ],
+      "billing_modes": [
+        "subscription_included"
+      ],
+      "latency_seconds": 2517.938,
+      "errors": 0,
+      "finish_reasons": [
+        "stop"
+      ],
+      "trace_count": 13,
+      "trace_suffixes": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    "judge": {
+      "calls": 13,
+      "models": [
+        "codex/gpt-5.6-sol"
+      ],
+      "total_tokens": 337150,
+      "cost_usd": 0.0,
+      "cost_sources": [
+        "subscription_included"
+      ],
+      "billing_modes": [
+        "subscription_included"
+      ],
+      "latency_seconds": 2448.181,
+      "errors": 0,
+      "finish_reasons": [
+        "stop"
+      ],
+      "trace_count": 13,
+      "trace_suffixes": [
+        "judge-q01",
+        "judge-q02",
+        "judge-q03",
+        "judge-q04",
+        "judge-q05",
+        "judge-q06",
+        "judge-q07",
+        "judge-q08",
+        "judge-q09",
+        "judge-q10",
+        "judge-q11",
+        "judge-q12",
+        "judge-q13"
+      ]
+    },
+    "control": {
+      "calls": 1,
+      "models": [
+        "codex/gpt-5.6-sol"
+      ],
+      "total_tokens": 25019,
+      "cost_usd": 0.0,
+      "cost_sources": [
+        "subscription_included"
+      ],
+      "billing_modes": [
+        "subscription_included"
+      ],
+      "latency_seconds": 236.388,
+      "errors": 0,
+      "finish_reasons": [
+        "stop"
+      ],
+      "trace_count": 1,
+      "trace_suffixes": [
+        "grader-positive-control"
+      ]
+    }
+  },
+  "grader_control": {
+    "trace_id": "inquiry-graph/xconv-scale-codex-balanced-20260930/grader-positive-control",
+    "passed": true,
+    "known_correct_points": 2,
+    "known_wrong_points": 0,
+    "known_correct_contradiction": false,
+    "known_wrong_contradiction": true
+  },
+  "differences": {
+    "B_minus_C": 0.0,
+    "B_minus_A": 0.038461
+  },
+  "limitations": [
+    "13 questions from the same 30-chat corpus; key generation saw the full corpus",
+    "the seven source-heldout questions are not an independent question-set holdout",
+    "coverage scores do not measure semantic citation or quote correctness",
+    "the literal evidence audit checks only string presence"
+  ],
+  "trace_prefixes": {
+    "A": "inquiry-graph/xconv-scale-codex/answer-A",
+    "B_C_judges_control": "inquiry-graph/xconv-scale-codex-balanced-20260930"
+  }
+}
