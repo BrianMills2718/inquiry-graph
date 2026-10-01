@@ -201,3 +201,8 @@ Brian explicitly asked to ensure this conversation is represented in Inquiry Gra
 ### Current capture maintenance
 
 Brian explicitly asked to ensure this conversation remains represented in Inquiry Graph. This existing branch is the active capture and has been updated through the Level-1 reasoning work, representation-interoperability adoption audit, mini-megamodel/CQL falsifier, Hypergraph Schema IR/Factgraph disposition, and Factgraph residual-niche pressure test.
+
+
+### O2A deletion-test stopping point
+
+The semantic-preservation caveat, reflective mutation-policy hard-case remap, and residual 17-relation inventory now establish a stopping point for broad O2A ontology deletion tests. Two authentic fixtures preserve their declared observable contracts through mature donor frameworks without demonstrating a new universal O2A relation type. Remaining constructs are primarily seams, profiles, or agent/decision concepts with mature owners. O2A is provisionally best treated as research history, fixture/conformance corpus, and cross-standard integration map; useful distinctions should be salvaged individually through donor profiles rather than preserving relation types wholesale. Further semantic machinery should be earned by an end-to-end policy-analysis case.
