@@ -36,20 +36,20 @@ detail views.
 - The largest topic has 48 positions, within the shared component's 120-node and 400-relation
   rendering limits. Larger undirected views use four columns; sparse directed views switch to a
   compact role-preserving grid when Dagre would exceed the available width.
-- The renderer uses the shared `relation-graph-view/v1` contract and offline bundle from
-  `shared_ui`. The generated HTML embeds the component bundle and source data, so the private
-  page can be viewed without fetching a runtime dependency. The builder needs an exported bundle
-  when regenerating the page; the shared component work is active but is not yet a merged,
-  versioned dependency. The old D3 prototype files are absent from this checkout.
-- The exact generated page was opened both through localhost and directly as a `file://` page.
-  At 1440×1000 the overview showed all 27 topic groups and 48 aggregated links. The selected
-  48-position topic detail has 8 typed links in a vertically scrollable canvas; the last node was
-  visible after scrolling to the bottom. Selecting a source conversation opened its full
-  105-position, 40-relation graph, within the shared viewer's 120/400 bounds; the last node was
-  reachable by scrolling, and the selected position remained selected. Twelve interaction
-  assertions passed, including topic search, view switching, source selection, and evidence
-  inspection; the browser recorded zero page errors and zero failed requests. Screenshots and the
-  machine-readable check record are in the private `verified/evidence/` directory.
+- The renderer uses the merged `relation-graph-view/v1` contract and offline export from
+  [`shared_ui` PR #11](https://github.com/BrianMills2718/shared_ui/pull/11). The bundle embedded
+  in the regenerated page matches the export manifest: source commit
+  `3bd114e1f9cc61561d2ff98fd7177d37fc6984a5`, SHA-256
+  `9a2fabf95f1823f70a4f00fc8c9d8c89a922e3c8826536de6fec474f6cf152af`. The generated HTML embeds
+  both the component and source data, so it works offline without a runtime dependency.
+- Regeneration reused matching topic-group and topic-name caches; it made no model call. The
+  builder reported 30 conversations, 620 positions, 27 topics, 233 typed links, 750 hidden
+  unrelated pairs, and 48 aggregated cross-topic links.
+- The regenerated page rendered at 1440×1000 and 390×844. Playwright screenshots show the topic
+  overview, its counts, and the responsive one-column mobile graph. These are visual-render
+  checks only; this pass did not rerun page-level interaction or console-error assertions.
+  Screenshots and the machine-readable render record are in the private `verified/evidence/`
+  directory.
 - Topic names are generated with Brian's Codex subscription route and marked interpretive.
   Private positions, rationales, and exact quotes stay in `private/xconv/scale_run/map/`.
 - The balanced replay and fresh C5 signoff are complete. On one 30-chat corpus and 13 questions,
@@ -64,12 +64,12 @@ detail views.
 The quote-bearing standalone HTML is generated at
 `private/xconv/scale_run/map/verified/index.html`. It opens directly in a browser and works
 offline. Keep the HTML, its screenshots, and its source cache under the gitignored
-`private/xconv/` tree. To regenerate after obtaining the exported relation-graph-view bundle:
+`private/xconv/` tree. Regenerate it with the merged shared UI export:
 
 ```bash
 python tools/topic_map.py \
-  --component-bundle /path/to/relation-graph-view.v1.js \
-  --output private/xconv/scale_run/map/index.html
+  --component-bundle /path/to/shared_ui/exports/relation-graph-view.v1/relation-graph-view.js \
+  --output private/xconv/scale_run/map/verified/index.html
 ```
 
 ## Known limits
