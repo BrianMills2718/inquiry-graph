@@ -206,3 +206,8 @@ Brian explicitly asked to ensure this conversation remains represented in Inquir
 ### O2A deletion-test stopping point
 
 The semantic-preservation caveat, reflective mutation-policy hard-case remap, and residual 17-relation inventory now establish a stopping point for broad O2A ontology deletion tests. Two authentic fixtures preserve their declared observable contracts through mature donor frameworks without demonstrating a new universal O2A relation type. Remaining constructs are primarily seams, profiles, or agent/decision concepts with mature owners. O2A is provisionally best treated as research history, fixture/conformance corpus, and cross-standard integration map; useful distinctions should be salvaged individually through donor profiles rather than preserving relation types wholesale. Further semantic machinery should be earned by an end-to-end policy-analysis case.
+
+
+### NYC federated baseline and sealed-update revision
+
+WP2/WP4 compares the capable NYC baseline with the smallest mature-donor federation. The useful layer is thin: native artifacts, provenance/version links, explicit claim-standing/refusal edges, policy-criteria/authority references, and dependency links. It improves reconstruction and selective revision but not evidence or method validity. Revealing the sealed 2026-08-14 NYC Health air-quality evaluation correctly reopens environmental-health/equity reasoning while leaving unrelated baseline claims and the missing six-hearing QC result untouched. This earns further investigation of a revision-aware cross-artifact index, not a universal ontology.
