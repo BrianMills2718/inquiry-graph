@@ -7563,6 +7563,112 @@
       {
         "resolution_basis": "Hard reflective mutation-policy fixture remapped under a declared ten-item observable contract."
       }
+    ],
+    [
+      "N",
+      [
+        "c-o2a-inventory-stop",
+        "claim",
+        "Residual O2A inventory finds no justification for another broad fixture remap: the core case-earned record-side relations have been pressure-tested, while the untested remainder is mostly seams or declared agent/decision constructs with mature external owners.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-o2a-role-salvage",
+        "hypothesis",
+        "Useful O2A distinctions such as execution status, transformation loss, claim reach, unassessed status, precommitment, stakes, model correspondence and authority should be salvaged individually through donor profiles rather than preserving their containing local relation types.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "c-o2a-research-artifact",
+        "hypothesis",
+        "Observation-to-Action should currently be treated as research/provenance artifact, fixture/conformance corpus and cross-standard integration map rather than a new universal ontology.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "N",
+      [
+        "r-o2a-residual-inventory",
+        "reference",
+        "o2a-residual-relation-inventory.md: 17-relation inventory and stop decision after two donor-remap tests.",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r203",
+        "supports",
+        "c-o2a-burden-flipped",
+        "c-o2a-inventory-stop",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r204",
+        "supports",
+        "c-semantic-deletion-rule",
+        "c-o2a-role-salvage",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r205",
+        "supports",
+        "c-o2a-inventory-stop",
+        "c-o2a-research-artifact",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "R",
+      [
+        "r206",
+        "about",
+        "r-o2a-residual-inventory",
+        "c-o2a-inventory-stop",
+        "t85"
+      ],
+      {}
+    ],
+    [
+      "M",
+      [
+        "m86",
+        "summarize",
+        "t85",
+        [
+          "c-o2a-burden-flipped"
+        ],
+        [
+          "c-o2a-inventory-stop",
+          "c-o2a-role-salvage",
+          "c-o2a-research-artifact",
+          "r-o2a-residual-inventory"
+        ]
+      ],
+      {
+        "after": [
+          "m85"
+        ]
+      }
     ]
   ]
 }
