@@ -2,7 +2,7 @@
 
 **Verdict: SIGNED-OFF for the bounded disposition.** The balanced replay supports keeping the typed linker as a bounded research/topic-map source, while making no general-scale claim that B beats search or that links improve key-point coverage over positions alone. It does not support productizing an answer route under the observed source-citation and quote performance.
 
-This verdict is about the evidence-based disposition. The goal's separate C5 delivery criterion also calls for a comment on inquiry-graph issue #38 (`docs/goals/cross-conversation-linker.md:74`). Posting was outside this reviewer's assigned scope; parent-goal delivery remains pending.
+This verdict is about the evidence-based disposition. The goal's separate C5 delivery criterion also calls for a comment on inquiry-graph issue #38 (`docs/goals/cross-conversation-linker.md:74`). Posting was outside this reviewer's assigned scope. After this review was finalized, the parent-goal agent posted the bounded decision at [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
 
 ## Highest-impact findings
 
@@ -60,6 +60,6 @@ The reviewer use case is to decide whether the replay supports the bounded dispo
 
 ## Signoff limits
 
-This is one 13-question evaluation over a question set generated from the full corpus, and the five hand checks do not turn it into a representative sample. Source-chat presence and quote provenance do not prove model use or answer attribution. The balanced call database is metadata-only; the separate q13 local session proves direct body availability for one case only. No tests were used as a proxy for evaluation. The issue #38 comment remains outside this reviewer's assigned scope; parent-goal delivery is pending.
+This is one 13-question evaluation over a question set generated from the full corpus, and the five hand checks do not turn it into a representative sample. Source-chat presence and quote provenance do not prove model use or answer attribution. The balanced call database is metadata-only; the separate q13 local session proves direct body availability for one case only. No tests were used as a proxy for evaluation. The reviewer did not own issue #38 publication; the parent-goal agent posted the disposition after signoff (linked above).
 
 **Disposition:** continue the typed linker only as a bounded research/topic-map source. Do not claim B beats search at scale or that links improve key-point coverage over positions only. Do not productize an answer route under the current citation/quote performance.

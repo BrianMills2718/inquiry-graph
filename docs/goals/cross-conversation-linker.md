@@ -110,7 +110,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
 - **C2 (2026-09-29):** 30 chats are imported and all 30 extracted graphs validate. The corpus
   records 4,229,221 visible characters, per-chat dates and sizes, and extraction costs in
   `private/xconv/scale_run/corpus.json`.
-- **Current increment:** the balanced comparison and independent C5 signoff are complete. Increment 5 remains open only until its decision comment is posted to issue #38. The later human-viewable topic map is a separate phase and is not evaluated here.
+- **Current increment:** C1–C5 are complete, including the balanced comparison, independent C5 signoff, and the decision comment on [issue #38](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199). The later human-viewable topic map is a separate phase and is not evaluated here.
 - **C3 (2026-09-30 09:37 UTC):** the original OpenRouter run still has 8/30 key files and cannot
   continue at the current credit balance. The separate Codex CLI campaign under
   `private/xconv/scale_run_codex/` has a complete independent key: 30/30 chats, 581 kept positions
@@ -150,7 +150,7 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   safety value; two calls exceeded it and later completed. The key used the full corpus, so the
   evaluation does not establish that the graph route beats search at scale. The bounded decision
   is to keep the linker as a research/topic-map source and defer productizing an answer route. The
-  required issue #38 comment remains to be posted after these records are pushed.
+  The signed-off bounded decision is recorded in this new [issue #38 comment](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199); it supersedes the earlier unbalanced route comparison for this decision.
 - **Blockers:** none. OpenRouter credit exhaustion prevented the original key call, but the key and
   comparison were completed through the authorized Codex subscription route.
 - **Jev/Laya prior art (verified 2026-09-30):** Jev-Mem is the closest whole-memory implementation:
@@ -191,9 +191,8 @@ For every LLM behaviour claim, report trace ids and inspect at least one full tr
   `evaluation/cross_conversation_scale/balanced_replay.py`. A's source answers remain under
   `private/xconv/scale_run_codex_rerun_20260930/`; the fresh B/C answers and grades are under
   `private/xconv/scale_run_codex_balanced_20260930/`.
-- **Resume event:** post the signed-off bounded decision to issue #38 after pushing the balanced
-  result and signoff records. The human-viewable topic map is a separate phase; this evaluation
-  does not validate its implementation or answer quality.
+- **Resume event:** begin the separate human-viewable topic-map phase. This evaluation does not
+  validate the map implementation or answer quality.
 
 ## Evaluator-Facing Objective
 
