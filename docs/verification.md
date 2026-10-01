@@ -1,6 +1,41 @@
 # Verification Record — Inquiry Graph
 
-## 2026-09-30 conversation-continuation verification
+## 2026-09-30 current-main verification
+
+Verified on native Windows against current `main` after the latest operational-games continuation was merged.
+
+Environment:
+
+- Python 3.14.7
+- editable install with `.[dev]`
+
+Executed:
+
+```powershell
+python examples/build_seed.py
+python tools/build_artifacts.py
+python examples/build_operational_games.py
+python -m pytest -q
+python -m inquiry_graph.cli validate examples/seed/graph.json
+python -m inquiry_graph.cli validate examples/operational-games-2026-09-30/graph.json
+python tools/build_artifacts.py --check
+python -m pip check
+```
+
+Result:
+
+- **67 tests passed**
+- founding seed rebuild: **250 nodes / 250 relations / 204 moves**
+- operational-games continuation rebuild: **103 nodes / 80 relations / 84 moves / 61 stance events / 33 question events**
+- both graphs: **0 validation errors / 0 warnings**
+- generated founding artifacts: **8 checked**
+- **no broken requirements**
+
+The operational-games trajectory contains **109 selected visible excerpts**. It remains a curated, proposed annotation rather than a full-export reconciliation or semantic gold set.
+
+The 30-chat cross-conversation campaign is separately documented in `evaluation/cross_conversation_scale/`; its independent signoff supports only the bounded retrieval-direction decision stated there.
+
+## Earlier 2026-09-30 conversation-continuation verification
 
 Verified on the native-Windows execution device against the
 `record-operational-games-conversation` working tree after rebuilding both
@@ -28,7 +63,7 @@ Result:
 
 - **62 tests passed**
 - founding seed rebuild: **250 nodes / 250 relations / 204 moves**
-- operational-games continuation rebuild: **38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events**
+- operational-games continuation rebuild: **58 nodes / 41 relations / 45 moves / 27 stance events / 13 question events**
 - both graphs: **0 validation errors / 0 warnings**
 - generated founding artifacts: **8 checked**
 - **no broken requirements**
@@ -95,7 +130,8 @@ The optional live-LLM adapter remains outside hosted CI because it depends on a 
 - no live paid extraction run;
 - no independent human adjudication of the 798 proposed annotations;
 - no full conversation-export reconciliation;
-- the first AI-reader usefulness pilot did **not** show improvement over the raw transcript on the single-conversation case (raw transcript 0.81 vs graph report 0.65 key-point coverage); multi-conversation usefulness remains untested;
+- the first single-conversation pilot favored raw transcript over the graph report (0.81 vs 0.65 key-point coverage);
+- the later 30-chat campaign is now tested, but only for its measured retrieval workload: archive-search-then-read averaged 0.67 coverage versus 0.63 for positions + typed links and 0.61 for positions only; no route met the complete source-citation/verbatim-quote contract, and broad generalization was not evaluated;
 - no production deployment.
 
 These are product/research questions, not schema-validation guarantees.

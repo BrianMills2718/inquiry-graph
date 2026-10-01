@@ -39,13 +39,15 @@ Current seed:
 
 The founding seed's 2026-09-30 continuation adds the later meta-model closeout, prior-art/adoption stance, candidate-generation landscape and framework mappings, cross-framework orchestration, certified guarantee transport, and handoff/update requests. These remain curated excerpts rather than a full export.
 
-A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: 32 selected excerpts, 38 nodes, 24 relations, 26 moves, 16 stance events, and 10 question events. Its main open thread is the descriptive structure of games for embedded resource-limited observers, including uncertainty over game structure, unawareness, computational opacity, and compositional/open-system prior art.
+A separate [operational-games continuation](../examples/operational-games-2026-09-30/README.md) records the next visible research trajectory without silently folding it into the founding fixture: **109 selected excerpts, 103 nodes, 80 relations, 84 moves, 61 stance events, and 33 question events**. It now covers the deliberate universalization of the game concept, top-down decomposition from rich game formalisms, perspectival/self-attributed goals, open-game reuse, the compositional-executable-world reframing, game/decision coupling, and the correction that candidate generation is already substantially mapped to mature prior art.
 
 ## Priority 1 — empirical usefulness
 
 Track: issue #38.
 
-**Status 2026-09-29:** a first pilot with an AI model as the reader is done ([results](../evaluation/usefulness_pilot/results.md)). The raw transcript beat the graph report (0.81 vs 0.65 key points covered; the plain excerpts scored 0.59). The graph lost mainly on the reasons behind decisions and what happened to side lines. Next: record decision reasons/outcomes and deferred-branch rationale, rerun the AI-reader pilot, then move to multi-conversation histories that exceed any single model context. **Do not add a human-reader evaluation track; the intended reader is AI.**
+**Current status 2026-09-30:** the 30-chat scale campaign is complete and independently signed off for a bounded retrieval-direction decision. On 13 valid cross-chat questions, archive-search-then-read (A) averaged **0.67** key-point coverage, positions + typed links (B) **0.63**, and positions only (C) **0.61**. On the seven source-heldout-reference questions, A scored **0.702**, while B and C both scored **0.595**. Typed links therefore did not show a useful answer-quality gain over positions alone in this sample, and the graph route did not beat archive search. No route satisfied the full source-citation/verbatim-quote answer contract.
+
+The bounded decision is: **use archive-search-then-read as the default answer-retrieval route for this measured workload; retain the linker data for a separate future topic-map phase; do not productize the current graph answer route as superior retrieval.** This does not establish broad generalization beyond the measured 30-chat corpus. See [results](../evaluation/cross_conversation_scale/results.md) and [independent signoff](../evaluation/cross_conversation_scale/signoff.md). **Do not add a human-reader evaluation track; the intended reader is AI.**
 
 Build the smallest machine-consumable representation/workflow needed to test whether an AI can recover:
 
@@ -66,11 +68,11 @@ When the full export is available, reconcile the curated seed against exact mess
 
 Until then, the seed is not source-complete.
 
-## Priority 3 — hosted CI
+## Hosted CI — acceptance met, issue cleanup pending
 
 Track: issue #2.
 
-PR #67 confirms hosted CI now reaches runners and passes the base/test suite on Python 3.11 and 3.13 after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI.
+PR #67 restored ordinary hosted CI execution: Python 3.11 and 3.13 both reached runners and passed installation, fixture rebuild, tests, graph validation, artifact drift checks, and dependency checks after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI. Issue #2 should therefore be closed once its stale body is reconciled with this evidence.
 
 ## Separate open PR stack
 
@@ -86,12 +88,12 @@ If product experiments need them, depend on that package explicitly rather than 
 
 ## Verification
 
-Latest executed product verification, on the 2026-09-30 conversation-continuation branch:
+Latest executed product verification on current `main`:
 
 - Python 3.14.7 / native Windows;
-- **62 tests passed**;
+- **67 tests passed**;
 - founding seed rebuild: 250 nodes / 250 relations / 204 moves;
-- operational-games continuation rebuild: 38 nodes / 24 relations / 26 moves / 16 stance events / 10 question events;
+- operational-games continuation rebuild: 103 nodes / 80 relations / 84 moves / 61 stance events / 33 question events;
 - both graphs: 0 errors / 0 warnings;
 - **8 founding artifacts** checked;
 - dependency check clean.
@@ -109,4 +111,4 @@ See `docs/verification.md`. The run also repaired two invalid provisional move l
 
 ## One-line status
 
-**The next meaningful result should be evidence that Inquiry Graph helps an AI recover Brian's attributed positions, rationale, open questions and cross-conversation tensions when the full history cannot fit in context.**
+**The 30-chat result does not justify the graph as a better answer-retrieval route; archive-search-then-read is the current default for that workload. Continue Inquiry Graph only where it provides a distinct capability—such as structured topic/inquiry mapping, source-grounded provenance, or another task that earns the representation's added complexity.**

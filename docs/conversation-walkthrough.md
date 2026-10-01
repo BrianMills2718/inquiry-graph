@@ -512,3 +512,76 @@ theory”:
 > discovery?
 
 No strategy-optimality criterion is adopted by this continuation.
+
+## 29. “Game” was deliberately broadened instead of protected by a sharp boundary
+
+~~~mermaid
+flowchart LR
+ A[Concern: game may become vacuous] --> B[User: breadth is part of the goal]
+ B --> C[Reject game / non-game dichotomy]
+ C --> D[Competence may grade all the way down]
+ D --> E[Ball rolling downhill as degenerate game]
+ E --> F[Preserve meaning through enrichments]
+~~~
+
+The user explicitly rejected the idea that universality is automatically a
+defect. The intended analogy is Levin-style graded intelligence: the base
+category may include extremely simple systems, while the scientifically useful
+distinctions come from the additional structure and competence they exhibit.
+
+This reframes the research question from “what separates games from non-games?”
+to “which enrichments distinguish different kinds of games?”
+
+## 30. The investigation switched to a top-down decomposition of game theory
+
+~~~mermaid
+flowchart LR
+ A[Rich strategic game] --> B[Remove rationality / maximization assumptions]
+ B --> C[Allow non-strategic target dynamics]
+ C --> D[Scientific method as interaction game]
+ D --> E[Passive physical dynamics as degenerate case]
+~~~
+
+The preferred research direction is now to start from mature game-theoretic
+formalisms and remove assumptions that are not required for descriptive
+structure. Scientific inquiry is an important intermediate case: an
+experimenter interacts with a target whose responses follow its dynamics
+without requiring the target to be strategically adversarial.
+
+The resulting hypothesis is that ordinary process/dynamics may be the
+least-enriched case of a general game object, rather than something on top of
+which “game” must later be added.
+
+## 31. Goals became explicitly perspectival, and prior art narrowed the next step
+
+~~~mermaid
+flowchart LR
+ A[System models world and itself] --> B[System attributes a goal to modeled self]
+ B --> C[Self-attributed goal may be wrong]
+ D[External observer] --> E[Candidate goal]
+ F[White-box access] --> G[Implementation / authored structure]
+ C --> H[Do not force equality]
+ E --> H
+ G --> H
+ H --> I[Reuse Collective Competence ontology]
+ I --> J[Open games already admit degenerate cases]
+ J --> K[Arena / selection separation]
+ K --> L[Next: paper-level translation contract]
+~~~
+
+The Collective Competence ontology already supplies the relevant distinctions
+among analyst access, goal criterion, provenance, boundary, scale, and competence.
+The continuation therefore treats it as an authority to reuse rather than
+creating a parallel goal ontology.
+
+The subsequent prior-art pass in `epistemic-warrant` found that open games
+already admit non-maximizing and zero-player cases and that open games with
+agency explicitly separate compositional arena structure from selection
+semantics. The residual question is no longer whether passive dynamics can be
+put into the same formal universe. It is how to compose that structure while
+preserving perspectival goals/self-models, changing awareness, and bounded
+computation.
+
+The next approved research deliverable is a **paper-level translation contract**
+for a bounded self-model case composed with a passive component. This remains a
+theory/reuse exercise, not a benchmark or optimizer.

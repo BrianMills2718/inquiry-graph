@@ -176,9 +176,9 @@ means, revalidated all 30 graphs, reran a fresh positive/negative control, and
 hand-checked five grade/source cases across the five categories. Its bounded
 decision is that typed links add 0 key-point coverage over positions alone
 (B−C = 0.000) and the observed +0.038 B−A difference does not show that the
-graph route beats search at scale. The required issue #38 comment is the final
-C5 delivery step; the previous comment remains historical until the signed-off
-result is posted.
+graph route beats search at scale. The signed-off bounded decision is posted in
+this new [issue #38 comment](https://github.com/BrianMills2718/inquiry-graph/issues/38#issuecomment-5923619199).
+The earlier issue comment records the superseded unbalanced comparison.
 
 Private transcripts, questions, answers, and quote-bearing outputs remain
 under `private/xconv/scale_run_codex_balanced_20260930/` and the earlier A
