@@ -945,6 +945,18 @@
       "actor_id": "s30:assistant",
       "ordinal": 155,
       "text": "NYC WP2/WP4 completed. The smallest useful federation uses native artifacts plus PROV-style lineage, assurance/SACM-style claim standing, explicit policy-appraisal criteria, and dependency links. Compared with the capable baseline it materially improves reconstruction, machine-visible refusal/warrant state, and revision readiness, but not evidence or method validity. Revealing the sealed 2026-08-14 NYC Health air-quality evaluation correctly reopens environmental-health/equity reasoning while leaving traffic arithmetic, medical-access concern, and the missing six-hearing qualitative strand unchanged."
+    },
+    {
+      "id": "s30:t94",
+      "actor_id": "s30:brian",
+      "ordinal": 156,
+      "text": "Okay, proceed."
+    },
+    {
+      "id": "s30:t95",
+      "actor_id": "s30:assistant",
+      "ordinal": 157,
+      "text": "Revision-aware dependency propagation prior-art and local-owner audit completed. The problem decomposes into mature truth-maintenance/assurance change-impact semantics, database provenance, and incremental/build-system propagation. DIGIMON already has explicit invalidation_dependencies and reverse-binding/lineage machinery; OntoCanon owns immutable custody/history; Workbench is the natural reopen/decision surface; Inquiry Graph should remain research representation. Foundational work on a new revision engine is closed unless a concrete consumer exposes a gap."
     }
   ]
 }
