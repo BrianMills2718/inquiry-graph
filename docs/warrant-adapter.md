@@ -19,15 +19,15 @@ count). Set `REQUIRE_EPISTEMIC_WARRANT=1` to make a missing package a failure.
 
 ## Result on the committed operational-games graph
 
-62 propositional nodes: **61 accepted, 1 defeated**; **51 licensed** (since the
-2026-10-02 review, see below), **10 accepted but unlicensed**, **1 defeated and
+62 propositional nodes: **61 accepted, 1 defeated**; **58 licensed** (since the
+2026-10-02 review and addendum, see below), **3 accepted but unlicensed**, **1 defeated and
 unlicensed**. Full per-claim output with excerpt ids:
 `examples/operational-games-2026-09-30/warrant-judgments.json`.
 
-* The 10 accepted-but-unlicensed nodes are still `proposed`, so each carries the
+* The 3 accepted-but-unlicensed nodes are still `proposed`, so each carries the
   unmet assumption `annotation-confirmed:<id>`; no license rule was loosened.
 * The defeated node is `n:vacuity-concern` (source excerpt `ex037`), rebutted by
-  Brian's hypothesis `n:universal-game-vacuity`. It is confirmed (its wording matches
+  Brian's hypothesis `n:universal-game-vacuity` (now confirmed and licensed; the defeat is unchanged). It is confirmed (its wording matches
   its quote) but defeated, so it has nothing unmet and is still not licensed.
 
 "Accepted" means only "not defeated by any recorded challenge under grounded
@@ -37,13 +37,13 @@ endorsement (see the review note).
 
 ### Review basis for the confirmations (2026-10-02)
 
-52 of the 62 judged nodes were set to `review_status=confirmed` in one review commit.
+52 of the 62 judged nodes were set to `review_status=confirmed` in one review commit; a later addendum the same day reworded 7 held nodes to match their quotes and confirmed them (59 of 62).
 **Confirmed here means the node's text faithfully matches its quoted source span.** It
-does not mean Brian endorses the claim or that it is true: of the 52, 30 are the
+does not mean Brian endorses the claim or that it is true: of the 52 first confirmed, 30 are the
 assistant's words (including the confirmed-but-defeated `vacuity-concern`), 16 Brian's,
-5 his 2026-10-02 curation summary. The basis was an AI read-through of
+5 his 2026-10-02 curation summary; the 7 added by the addendum are 3 assistant, 4 Brian. The basis was an AI read-through of
 node wording against its quote, followed by Brian's bulk approval of that list; Brian did
-not read each node. Dated record and the 10 held nodes:
+not read each node. Dated record, the addendum and the 3 held nodes:
 `examples/operational-games-2026-09-30/review-2026-10-02.md`.
 
 ## Who said it (speaker attribution)

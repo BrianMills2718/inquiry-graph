@@ -165,13 +165,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:metaphysical-underdetermination",
       "kind": "hypothesis",
-      "text": "Global metaphysical certainty may remain unavailable while inquiry proceeds conditionally.",
+      "text": "Brian describes himself as basically an epistemological nihilist.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:metaphysical-underdetermination"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex011"
       ],
@@ -193,13 +191,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:operational-adequacy",
       "kind": "claim",
-      "text": "The practical target can be local, conditional, operational adequacy rather than global metaphysical certainty.",
+      "text": "Global metaphysical certainty is unavailable or irrelevant.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:operational-adequacy"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex012"
       ],
@@ -533,13 +529,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:universal-game-vacuity",
       "kind": "hypothesis",
-      "text": "Make the base notion of game deliberately broad enough to include essentially all lawful systems, while preserving meaning through typed enrichments.",
+      "text": "Making game theory almost vacuous is part of the goal, in the same sense that Michael Levin makes intelligence vacuous.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:universal-game-vacuity"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex033"
       ],
@@ -773,13 +767,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:universal-game-prior-art-result",
       "kind": "claim",
-      "text": "The approved prior-art pass found that open games already admit surprisingly degenerate cases, reducing the need for a homemade universal-game tuple.",
+      "text": "Open games already cover surprisingly degenerate cases.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:universal-game-prior-art-result"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex050"
       ],
@@ -1143,13 +1135,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art",
       "kind": "claim",
-      "text": "Candidate generation already has substantial mature prior art and should not be reopened as an undefined foundational gap.",
+      "text": "Brian recalls that well-developed work on candidate generation was already found.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex073"
       ],
@@ -1249,13 +1239,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:simudyne-budget-infeasible",
       "kind": "claim",
-      "text": "The published Simudyne price is outside the current project budget and should not be treated as a required dependency.",
+      "text": "Brian can't pay 1250 a month for usage-based pricing.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:simudyne-budget-infeasible"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex088"
       ],
@@ -1485,13 +1473,11 @@
     {
       "claim_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result",
       "kind": "claim",
-      "text": "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case.",
+      "text": "The truck fixture is merged.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex113"
       ],
