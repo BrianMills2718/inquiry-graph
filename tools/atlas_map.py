@@ -29,7 +29,7 @@ NOISE = {"brian", "steno", "filecite", "turn0file0", "turn0file1", "turn0file2",
 # Keywords are skipped for the label only; the chats themselves were already filtered.
 LABEL_AVOID = {"family", "income", "wife", "husband", "kids", "child", "children", "baby", "mom", "dad", "mother", "father",
                "health", "doctor", "medical", "pain", "mouth", "salary", "debt", "loan", "tax", "taxes", "rent", "mortgage",
-               "divorce", "dating", "sex", "drug", "drugs", "therapy", "anxiety", "depression"}
+               "divorce", "dating", "sex", "drug", "drugs", "therapy", "anxiety", "depression", "thomas"}
 CODE = re.compile(r"```.*?```", re.S)
 URL = re.compile(r"https?://\S+")
 PALETTE = ["#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#46f0f0", "#f032e6", "#bcf60c", "#fabebe",
@@ -73,6 +73,7 @@ def main():
     ap.add_argument("--public", action="store_true", help="write the interactive page with no titles, dates or search; hover shows only the community")
     ap.add_argument("--layers", default="", help="comma-separated HDBSCAN min cluster sizes, coarse to fine (e.g. 45,18,7): "
                     "BERTopic names each layer and DataMapPlot shows them as a zoomable topic tree")
+    ap.add_argument("--label-check", type=Path, help="JSON from label_check.py; labels with keep=false are shown as Unlabelled")
     ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
     a = ap.parse_args()
     agent = agent_threads(a.agent_log)
@@ -172,7 +173,9 @@ def main():
                               umap_model=_Identity())
                 topics, _ = tm.fit_transform([c["doc"] for c in chats], embeddings=um5)
                 label = {t: " / ".join([w for w, _ in tm.get_topic(t) if not (set(w.split()) & LABEL_AVOID)][:3]).title() for t in set(topics) if t != -1}
-                layer_arrays.append(np.array([label.get(t, "Unlabelled") for t in topics], dtype=object))
+                verdict = json.loads(a.label_check.read_text(encoding="utf-8")) if a.label_check else {}
+                layer_arrays.append(np.array([label.get(t, "Unlabelled") if verdict.get(label.get(t), {"keep": True})["keep"] else "Unlabelled"
+                                              for t in topics], dtype=object))
                 layer_titles = a.out_png.with_name(f"layer_{k}_members.json")
                 layer_titles.write_text(json.dumps({lab: [chats[i]["title"] for i, t in enumerate(topics) if label.get(t) == lab]
                                                     for lab in set(label.values())}, indent=1), encoding="utf-8")
