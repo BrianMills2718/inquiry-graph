@@ -22,6 +22,13 @@ Fields with no clean mapping are counted in the output under `unmapped`.
 Stance events that would change acceptance (`rejects`, `retracts`, `suspends`)
 are not representable; the adapter raises instead of silently ignoring them.
 
+Speaker attribution (metadata only; never changes status or licensing): each
+judgment lists `speakers` (participant id, label, declared role, derived `kind`,
+and the anchored `message_ids` each said) and a single `speaker_kind` in
+{user, assistant, curation-summary, mixed}. `curation-summary` is a participant
+whose id starts with `participant:curation-request` (a curator's summary, not an
+original dialogue turn); `mixed` means the node is anchored to more than one kind.
+
 epistemic-warrant is an external package (private repo; install with
 `pip install -e ../epistemic-warrant` or the pinned `warrant` extra).
 """
@@ -50,6 +57,35 @@ from inquiry_graph.validate import require_valid  # noqa: E402
 
 PROPOSITIONAL = {"claim", "hypothesis"}
 ACCEPTANCE_CHANGING_STANCES = {"rejects", "retracts", "suspends"}
+# A participant whose id starts with this is a curator's summary of a turn, not an
+# original dialogue turn (even though its declared role is "user"); it must never be
+# read as the user speaking in the dialogue.
+CURATION_PARTICIPANT_PREFIX = "participant:curation-request"
+
+
+def _speaker_kind(participant) -> str:
+    if participant.id.startswith(CURATION_PARTICIPANT_PREFIX):
+        return "curation-summary"
+    return participant.role
+
+
+def _speakers(anchors, actors) -> tuple[list[dict], str]:
+    """Who said the anchored messages. Metadata only: never feeds warrant evaluation."""
+    found: dict[str, dict] = {}
+    for a in sorted(anchors, key=lambda x: x.message_id):
+        message, participant = actors[a.message_id]
+        entry = found.setdefault(participant.id, {
+            "participant_id": participant.id,
+            "label": participant.label,
+            "role": participant.role,
+            "kind": _speaker_kind(participant),
+            "message_ids": [],
+        })
+        if message.id not in entry["message_ids"]:
+            entry["message_ids"].append(message.id)
+    speakers = sorted(found.values(), key=lambda e: e["participant_id"])
+    kinds = {e["kind"] for e in speakers}
+    return speakers, (kinds.pop() if len(kinds) == 1 else "mixed")
 
 
 def _support(node_id, nodes, anchors, premises, memo, active):
@@ -82,6 +118,11 @@ def adapt(graph: Graph) -> dict:
             )
 
     anchors = {i: n.anchors for i, n in nodes.items()}
+    actors = {}
+    for conv in graph.conversations:
+        people = {p.id: p for p in conv.participants}
+        for m in conv.messages:
+            actors[m.id] = (m, people[m.actor_id])
     premises: dict[str, list] = {}
     defeats, skipped = [], Counter()
     for r in graph.relations:
@@ -124,6 +165,7 @@ def adapt(graph: Graph) -> dict:
         )
         decision = regime.evaluate(judgment, framework)
         a = decision.assessment
+        speakers, speaker_kind = _speakers(n.anchors, actors)
         judgments.append({
             "claim_id": i,
             "kind": n.kind,
@@ -133,6 +175,8 @@ def adapt(graph: Graph) -> dict:
             "licensed": decision.licensed,
             "unmet_assumptions": sorted(decision.unmet_assumptions),
             "excerpt_ids": sorted({x.message_id for x in n.anchors}),
+            "speaker_kind": speaker_kind,
+            "speakers": speakers,
             "defeated_by": sorted(framework.attackers_of(i)),
             "reason": a.reason,
         })
