@@ -1,0 +1,85 @@
+{
+  "scope": "15 focused session tests plus native V1 builder/validator/projection probes in isolated Linux sandbox; not full repository suite, not native Windows execution, not independent semantic adjudication.",
+  "baseline": "1f75cf1fe02000d2a630f591ec0d6fb412940318",
+  "environment": {
+    "python": "3.13.5",
+    "pydantic": "2.13.4",
+    "networkx": "3.6.1",
+    "pytest": "9.0.2"
+  },
+  "source_git_blob": "892054719a632c6cb5d955802906f988d49047ce",
+  "curation_git_blob": "11076caf51e45c536246fd6713773acfded54749",
+  "builder_git_blob": "04fa4faf1a09583b377e68257a8311ad68e4f4ae",
+  "native_modules": {
+    "model.py": "45e5143e6c29c0194c6988e232f621e3228116e4",
+    "validate.py": "32cdcd1b04edd14bca4a150bc3928b351b7d74be",
+    "views.py": "62b2cc5822238c5c6626254a9c920e35d71be1d0",
+    "render.py": "a3e7cfc165fbfddd3c5f0d8afb71544af06388a9"
+  },
+  "probes": {
+    "event_targeting": {
+      "accepted": false,
+      "errors": [
+        {
+          "code": "dangling_reference",
+          "item": "s30:probe-event-reason",
+          "detail": "s30:e32"
+        }
+      ]
+    },
+    "rationale_projection": {
+      "phrase": "stances and the persuadability axis",
+      "in_nonleading_move_anchor": true,
+      "in_native_trace": true,
+      "in_default_report": false
+    }
+  },
+  "limitations": [
+    "Both Remote MCP devices were offline; no user-machine files changed.",
+    "Native modules were copied from GitHub and Git blob hashes matched before testing.",
+    "Every annotation is proposed; exact-quote validation does not establish interpretive correctness.",
+    "Source, curation and builder are committed; graph.json is deterministically generated, not a second hand-edited authority.",
+    "Hosted CI run 36682172055 failed in package installation before repository tests, so it is not evidence about graph semantics or focused test outcomes.",
+    "71 visible prose/research-update turns are represented by 128 curated excerpts, not complete token coverage or native-export reconciliation.",
+    "The current 493-annotation inquiry checkpoint was not rerun as a full graph suite after the adoption-matrix additions."
+  ],
+  "test_git_blob": "990a041883a66ce6964353c8dbb3fd36700b1d9b",
+  "current_checkpoint": {
+    "source_messages": 146,
+    "nodes": 200,
+    "relations": 170,
+    "moves": 80,
+    "stance_events": 37,
+    "question_events": 68,
+    "questions": 34,
+    "review": {
+      "proposed": 555,
+      "confirmed": 0,
+      "rejected": 0
+    }
+  },
+  "current_checkpoint_execution": "not rerun after latest inquiry-graph maintenance checkpoint",
+  "last_successful_focused_run": {
+    "tests_passed": 15,
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    "checkpoint": "before t34-t42 break-test/alignment additions"
+  },
+  "hosted_ci": {
+    "status": "failing before tests",
+    "observed_run": 36682172055,
+    "failing_step": "Install package and optional adapter"
+  },
+  "mini_megamodel_execution": {
+    "status": "structural expectations passed in sandbox",
+    "scope": "fixture/path logic only; not full repository test suite"
+  },
+  "cql_chain_execution": {
+    "status": "passed finite check",
+    "claim": "sequential delta pullback equals composed delta pullback for concrete fixture; target-only department not preserved",
+    "scope": "Python mirror of CQL theorem, not execution by CQL IDE/JAR"
+  }
+}
