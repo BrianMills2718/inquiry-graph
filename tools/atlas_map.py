@@ -25,6 +25,11 @@ from wizmap_archive import FILLER
 
 # ChatGPT citation markers and similar tokens that carry no topic.
 NOISE = {"brian", "steno", "filecite", "turn0file0", "turn0file1", "turn0file2", "turn1file0", "cite", "turn0search0", "l2-l2", "ac5", "rc2"}
+# Words that read as personal when shown alone on a public label, even if the chats are about research.
+# Keywords are skipped for the label only; the chats themselves were already filtered.
+LABEL_AVOID = {"family", "income", "wife", "husband", "kids", "child", "children", "baby", "mom", "dad", "mother", "father",
+               "health", "doctor", "medical", "pain", "mouth", "salary", "debt", "loan", "tax", "taxes", "rent", "mortgage",
+               "divorce", "dating", "sex", "drug", "drugs", "therapy", "anxiety", "depression"}
 CODE = re.compile(r"```.*?```", re.S)
 URL = re.compile(r"https?://\S+")
 PALETTE = ["#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#46f0f0", "#f032e6", "#bcf60c", "#fabebe",
@@ -166,7 +171,7 @@ def main():
                               vectorizer_model=CountVectorizer(stop_words=stop, ngram_range=(1, 2), min_df=2), top_n_words=4,
                               umap_model=_Identity())
                 topics, _ = tm.fit_transform([c["doc"] for c in chats], embeddings=um5)
-                label = {t: " / ".join(w for w, _ in tm.get_topic(t)[:3]).title() for t in set(topics) if t != -1}
+                label = {t: " / ".join([w for w, _ in tm.get_topic(t) if not (set(w.split()) & LABEL_AVOID)][:3]).title() for t in set(topics) if t != -1}
                 layer_arrays.append(np.array([label.get(t, "Unlabelled") for t in topics], dtype=object))
                 layer_titles = a.out_png.with_name(f"layer_{k}_members.json")
                 layer_titles.write_text(json.dumps({lab: [chats[i]["title"] for i, t in enumerate(topics) if label.get(t) == lab]
