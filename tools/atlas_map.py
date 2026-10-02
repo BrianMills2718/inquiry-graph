@@ -32,6 +32,16 @@ PALETTE = ["#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#4
            "#7fffd4", "#ffa500", "#adff2f", "#dda0dd", "#87ceeb"]
 
 
+class _Identity:
+    """BERTopic's UMAP slot: embeddings passed in are already reduced, so pass them through."""
+    def fit(self, X, y=None):
+        return self
+    def transform(self, X):
+        return X
+    def fit_transform(self, X, y=None):
+        return X
+
+
 def agent_threads(path):
     ids = set()
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
@@ -56,6 +66,8 @@ def main():
     ap.add_argument("--html", type=Path, help="also write an interactive DataMapPlot page (hover, search, time filter)")
     ap.add_argument("--include", type=Path, help="JSON list of {id, include}; keep only chats with include=true")
     ap.add_argument("--public", action="store_true", help="write the interactive page with no titles, dates or search; hover shows only the community")
+    ap.add_argument("--layers", default="", help="comma-separated HDBSCAN min cluster sizes, coarse to fine (e.g. 45,18,7): "
+                    "BERTopic names each layer and DataMapPlot shows them as a zoomable topic tree")
     ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
     a = ap.parse_args()
     agent = agent_threads(a.agent_log)
@@ -140,11 +152,31 @@ def main():
         names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
         hover = list(names) if a.public else [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
         dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
+        layer_arrays = []
+        if a.layers:
+            import umap as umap_mod
+            from bertopic import BERTopic
+            from hdbscan import HDBSCAN
+            from sklearn.feature_extraction.text import CountVectorizer
+            um5 = umap_mod.UMAP(n_components=5, metric="cosine", random_state=7, n_neighbors=15, min_dist=0.0).fit_transform(emb)
+            stop = sorted(ENGLISH_STOP_WORDS | FILLER | NOISE)
+            for k in [int(v) for v in a.layers.split(",")]:
+                tm = BERTopic(embedding_model=None,
+                              hdbscan_model=HDBSCAN(min_cluster_size=k, min_samples=2), calculate_probabilities=False,
+                              vectorizer_model=CountVectorizer(stop_words=stop, ngram_range=(1, 2), min_df=2), top_n_words=4,
+                              umap_model=_Identity())
+                topics, _ = tm.fit_transform([c["doc"] for c in chats], embeddings=um5)
+                label = {t: " / ".join(w for w, _ in tm.get_topic(t)[:3]).title() for t in set(topics) if t != -1}
+                layer_arrays.append(np.array([label.get(t, "Unlabelled") for t in topics], dtype=object))
+                layer_titles = a.out_png.with_name(f"layer_{k}_members.json")
+                layer_titles.write_text(json.dumps({lab: [chats[i]["title"] for i, t in enumerate(topics) if label.get(t) == lab]
+                                                    for lab in set(label.values())}, indent=1), encoding="utf-8")
+                print(f"layer min_cluster_size={k}: {len(label)} groups, {sum(1 for t in topics if t == -1)} unlabelled")
         plot = datamapplot.create_interactive_plot(
-            xy, names, hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
+            xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
             sub_title=(f"{n} chats about work and ideas. Personal chats are left out." if a.public else
                        f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars."),
-            darkmode=True, enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
+            darkmode=True, enable_topic_tree=bool(a.layers), enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
             point_radius_min_pixels=2, point_radius_max_pixels=14, edge_bundle=a.edges, inline_data=True,
             noise_label="Unlabelled", initial_zoom_fraction=0.9)
         a.html.parent.mkdir(parents=True, exist_ok=True)
