@@ -53,6 +53,8 @@ def main():
     ap.add_argument("--until", default="9999-12-31")
     ap.add_argument("--k", type=int, default=7)
     ap.add_argument("--legend-rows", type=int, default=24)
+    ap.add_argument("--html", type=Path, help="also write an interactive DataMapPlot page (hover, search, time filter)")
+    ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
     a = ap.parse_args()
     agent = agent_threads(a.agent_log)
     chats = []
@@ -126,6 +128,19 @@ def main():
         lx.text(0.04, y, f"{100 * len(c) / n:4.1f}", color="white", fontsize=12, va="center")
         lx.text(0.14, y, desc[ci], color="white", fontsize=12, va="center")
         y -= 0.033
+    if a.html:
+        import datamapplot
+        names = np.array([desc.get(comm_of[i], "Unlabelled") if comm_of[i] in desc else "Unlabelled" for i in range(n)], dtype=object)
+        names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
+        hover = [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
+        dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
+        plot = datamapplot.create_interactive_plot(
+            xy, names, hover_text=hover, title="Your ChatGPT chats", sub_title=f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars.",
+            darkmode=True, enable_search=True, histogram_data=dates, histogram_n_bins=24,
+            point_radius_min_pixels=2, point_radius_max_pixels=14, edge_bundle=a.edges, inline_data=True,
+            noise_label="Unlabelled", initial_zoom_fraction=0.9)
+        a.html.parent.mkdir(parents=True, exist_ok=True)
+        plot.save(str(a.html))
     a.out_png.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(a.out_png, dpi=110, facecolor="black")
     (a.out_png.with_suffix(".json")).write_text(json.dumps({"chats": n, "edges": G.number_of_edges(), "communities": len(comms),
