@@ -140,3 +140,33 @@ The next research step should generalize the lessons from PR #24 without overfit
 ## Inquiry Graph provenance
 
 See `examples/semantic-grounding-2026-10-01/source-excerpts.json` for the curated visible conversation excerpts underlying the earlier trajectory. The source-excerpt file ends before the external-data completion and is retained as a historical source layer rather than rewritten as if it were a full transcript.
+
+
+## Selected second grounding family — 2026-10-02
+
+The next gate is now concretely selected rather than left as a choice between contact/support and persistence/tracking.
+
+Use PhysioNet **Gait in Parkinson's Disease v1.0.0** (DOI `10.13026/C24H3N`, Open Data Commons Attribution License v1.0) as a public real-force source. The implementation will use only the 18 `GaCo*_01.txt` healthy-control normal-walk recordings.
+
+Published format:
+
+- 100 Hz sampling;
+- eight vertical ground-reaction-force sensors under each foot, in Newtons;
+- one total-force channel per foot;
+- total-force channels withheld from inference and used only as physical reference channels.
+
+Target factor:
+
+- `load_bearing_contact_evidence`
+- `no_load_bearing_contact_evidence`
+- `REFUSAL:transition_or_uncertain`
+
+The probe will not equate force, contact, and support. Its claim is limited to a measurable load-bearing-contact factor below `support`.
+
+Predeclared held-out subjects: `GaCo04`, `GaCo08`, `GaCo12`, `GaCo16`; the other 14 selected subjects are calibration-only.
+
+Required robustness checks include naturally occurring swing/no-load windows, stance/load windows, loading/unloading transition refusals, sensor-order permutation invariance, and separate synthetic single-sensor-dropout degradation.
+
+The detailed protocol is recorded in `docs/handoffs/2026-10-02-load-bearing-contact-next-gate.md`.
+
+A fresh Linguistic Core worktree was created from merged `main` on `research/load-bearing-contact-physionet`. PhysioNet's format file and SHA-256 manifest were retrieved, but the guarded WSL transport failed before the 18 data recordings were downloaded; the real download command was not launched. No outcomes have been observed and no thresholds have been tuned.
