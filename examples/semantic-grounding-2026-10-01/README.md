@@ -16,60 +16,92 @@ The curated excerpts cover the inquiry arc from:
 8. NSM semantic primes versus Longman Defining Vocabulary versus grounding primitives;
 9. the six-concept probe: `red`, `object`, `event`, `support`, `sit`, `chair`;
 10. the grounding-floor audit for contact, relative position, load response, body posture, and persistence;
-11. the executable measurement-to-factor pipeline;
-12. the current next gate: external/public or simulated non-hand-authored data.
+11. the executable hand-authored measurement-to-factor pipeline;
+12. the decision to test the seam against non-hand-authored data.
+
+The curated source excerpts themselves end at that point. The current handoff at
+`docs/handoffs/2026-10-01-semantic-grounding-current.md` records the subsequent
+external-data result.
 
 ## Durable implementation state
 
-The corresponding Linguistic Core work is currently in three independent open PRs, all based on `main` rather than on one another:
+The corresponding Linguistic Core grounding sequence has now been merged to
+`main`:
 
-- **Linguistic Core PR #21** — *Experimental six-concept semantic grounding probe*
-  - branch: `research/semantic-grounding-six-concepts`
-  - head: `db74c7d88c4edf964b9eaf159938da884a2a4a7d`
-- **Linguistic Core PR #22** — *Audit the grounding floor beneath support, posture, and persistence*
-  - branch: `research/grounding-floor-audit`
-  - head: `93a6cbfe0bf9871fd03f9a8a42e80dd9d5f2f7a7`
-- **Linguistic Core PR #23** — *Executable measurement-to-factor grounding specimen*
-  - branch: `research/measurement-to-factor-specimen`
-  - head: `e2ea293b7fa7256a8f219fafa7d61ce454a676d7`
+- **PR #21** — *Experimental six-concept semantic grounding probe*
+- **PR #22** — *Audit the grounding floor beneath support, posture, and persistence*
+- **PR #23** — *Executable measurement-to-factor grounding specimen*
+- **PR #24** — *External UCI posture grounding and rotation-invariance probe*
 
-PR #23 verified:
-
-- 12 focused tests passed;
-- 6/6 specimen episodes classified as expected;
-- full Linguistic Core suite: 201 passed, 4 skipped.
-
-## Current substantive state
-
-The inquiry has moved through three increasingly concrete levels:
+The progression is:
 
 ```text
 phenomenal / psychophysical grounding hypothesis
         ↓
 candidate semantic factorization
         ↓
-measurement-to-factor executable probe
+hand-authored executable measurement-to-factor probe
+        ↓
+real external inertial data + held-out evaluation
+        ↓
+explicit reference-frame / transformation robustness test
 ```
 
-The strongest current claim is deliberately limited:
+## Current substantive state
 
-> A machine-checkable boundary can keep raw observations, inferred perceptual factors, uncertainty, and semantic classification separate, and can refuse classifications when the evidence is insufficient.
+The strongest current claim remains deliberately bounded:
 
-This does not establish a general grounding theory, metaphysical object identity, or universal definitions.
+> A machine-checkable grounding boundary can keep raw observations, inferred
+> perceptual factors, calibration, uncertainty/refusal, and semantic evidence
+> classification separate, and that boundary can be exercised on held-out
+> non-hand-authored sensor data.
+
+The external UCI posture probe used the dataset's official train/test subject
+partition. On 365 held-out windows, the simple rotation-invariant factor path
+classified 338 (92.6% coverage) and was correct on all covered windows for its
+coarse stable-vs-non-static target; 27 windows remained explicit refusals.
+
+The same data falsified a previous low-level assumption: a `mean Z ~= +1 g`
+gate was inappropriate for the waist-mounted recording frame. Only 2/365
+held-out windows satisfied it. A minimal coordinate-rotation test showed that
+vector-magnitude factors remained invariant to floating-point precision across
+1,095 rotated comparisons.
+
+This supports a small methodological addition, not a new architecture:
+**proposed grounding factors should state and test the transformations they are
+expected to survive.**
 
 ## Current next question
 
-Do the candidate factorization and refusal rules survive **non-hand-authored data**?
+Does the same governed measurement-to-factor discipline survive a second,
+qualitatively different grounding family?
 
-Preferred next experiment:
+Preferred next candidates:
 
-- adapt the measurement-to-factor probe to a small public sensor / psychophysics dataset if a suitable one exists;
-- otherwise use a controlled physics simulation with explicit ground truth for gravity, contact, load, displacement, occlusion, replacement, and duplicate objects.
+- contact / load / support; or
+- object persistence / tracking.
 
-Do not expand the semantic vocabulary before that gate.
+Use external data where provenance and licensing permit; otherwise use a small
+controlled simulation with explicit ground truth. Keep calibration separate
+from held-out evaluation, preserve refusals, and report failures without tuning
+them away.
+
+Do not expand the broad semantic vocabulary merely because the first posture
+probe succeeded.
+
+## Licensing note
+
+The UCI dataset used in Linguistic Core PR #24 has conflicting source-level
+license statements: the current UCI catalog says CC BY 4.0, while the README
+inside the pinned archive says commercial use is prohibited. The Linguistic
+Core artifact therefore redistributes no raw archive bytes or extracted sensor
+rows.
 
 ## Provenance limitations
 
-`source-excerpts.json` contains curated verbatim excerpts from the visible conversation available in this chat context. It is not a complete export, does not preserve original ChatGPT message IDs or timestamps, and is not independently adjudicated gold data.
-
-The implementation-state claims above were rechecked against GitHub on 2026-10-01. External literature claims from the conversation are not promoted here as independently reviewed facts.
+`source-excerpts.json` contains curated verbatim excerpts from the visible
+conversation available when this source layer was created. It is not a complete
+ChatGPT export, does not preserve original message IDs or timestamps, and is
+not independently adjudicated gold data. It is retained as a historical source
+layer; later implementation state is summarized in the current handoff rather
+than retroactively inserted into the excerpt corpus.
