@@ -24,9 +24,9 @@ Files:
 
 Current fixture: **124 selected excerpts, 116 nodes, 91 relations, 93 moves, 74 stance events, and 33 question events**.
 
-Since the 2026-10-02 review, 52 claim/hypothesis nodes are `confirmed` (wording
+Since the 2026-10-02 review, 59 claim/hypothesis nodes are `confirmed` (wording
 matches the quoted source; not endorsement or truth) and every other annotation is
-still `proposed`; basis and the 10 held nodes: `review-2026-10-02.md`. This is not a
+still `proposed`; basis, the 7 reworded-then-confirmed nodes and the 3 still-held nodes: `review-2026-10-02.md`. This is not a
 full transcript export, not a gold dataset, and not a record of hidden reasoning.
 
 ## Authentic truck/logistics execution (recorded 2026-10-02)

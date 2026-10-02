@@ -56,21 +56,24 @@ def test_every_judgment_carries_real_source_excerpt_ids(result):
 
 
 HELD_PROPOSED = {P + "n:" + h for h in (
+    "goal-perspective-nonidentity", "heterogeneous-component-semantics",
+    "game-choice-decision-coupling")}
+
+# Reworded to say only what their quote says, then confirmed (review-2026-10-02.md addendum).
+REWORDED_CONFIRMED = {P + "n:" + h for h in (
     "metaphysical-underdetermination", "operational-adequacy", "universal-game-vacuity",
-    "goal-perspective-nonidentity", "universal-game-prior-art-result",
-    "heterogeneous-component-semantics", "game-choice-decision-coupling",
-    "candidate-generation-mature-prior-art", "simudyne-budget-infeasible",
-    "truck-fixture-merged-result")}
+    "universal-game-prior-art-result", "candidate-generation-mature-prior-art",
+    "simudyne-budget-infeasible", "truck-fixture-merged-result")}
 
 
 def test_license_split_after_2026_10_02_review(result):
-    """52 of 62 judged nodes were confirmed (basis: docs review note); 10 stay proposed."""
+    """59 of 62 judged nodes are confirmed (basis: review note + addendum); 3 stay proposed."""
     j = by_id(result)
     licensed = {k for k, v in j.items() if v["licensed"]}
-    assert len(licensed) == 51
+    assert len(licensed) == 58
     assert Counter((v["status"], v["licensed"]) for v in j.values()) == {
-        ("accepted", True): 51, ("accepted", False): 10, ("defeated", False): 1}
-    # The 10 held nodes are accepted but unlicensed, solely because still proposed.
+        ("accepted", True): 58, ("accepted", False): 3, ("defeated", False): 1}
+    # The 3 held nodes are accepted but unlicensed, solely because still proposed.
     assert {k for k, v in j.items() if v["status"] == "accepted" and not v["licensed"]} == HELD_PROPOSED
     for k in HELD_PROPOSED:
         assert j[k]["unmet_assumptions"] == ["annotation-confirmed:" + k]
@@ -80,16 +83,20 @@ def test_license_split_after_2026_10_02_review(result):
     # Licensed claims have no unmet assumptions; game-goal-model-coupling is confirmed and licensed.
     assert all(j[k]["unmet_assumptions"] == [] for k in licensed)
     assert P + "n:game-goal-model-coupling" in licensed
+    assert REWORDED_CONFIRMED <= licensed
+    # Confirming universal-game-vacuity changes its license, not the defeat it imposes.
+    assert j[P + "n:universal-game-vacuity"]["licensed"] is True
+    assert j[P + "n:vacuity-concern"]["defeated_by"] == [P + "n:universal-game-vacuity"]
     # Who said the licensed claims (not endorsement by Brian when speaker is assistant).
     assert Counter(j[k]["speaker_kind"] for k in licensed) == {
-        "assistant": 30, "user": 16, "curation-summary": 5}
+        "assistant": 33, "user": 20, "curation-summary": 5}
 
 
 def test_graph_confirmation_matches_judgments():
     graph = load(EX / "graph.json", Graph)
     judged = {x["claim_id"] for x in json.loads((EX / "warrant-judgments.json").read_text())["judgments"]}
     confirmed = {n.id for n in graph.nodes if n.review_status == "confirmed"}
-    assert confirmed == judged - HELD_PROPOSED and len(confirmed) == 52
+    assert confirmed == judged - HELD_PROPOSED and len(confirmed) == 59
     assert all(n.review_status == "proposed" for n in graph.nodes if n.id not in confirmed)
 
 

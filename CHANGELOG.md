@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-Operational-games example: 52 of 62 judged claim/hypothesis nodes set to `confirmed` (wording matches quoted source; not endorsement or truth; basis in `examples/operational-games-2026-09-30/review-2026-10-02.md`). The warrant adapter now reports 51 licensed, 10 accepted-but-unlicensed (still proposed), 1 defeated.
+Operational-games example (updated 2026-10-02 addendum: 7 held nodes reworded to match their quotes and confirmed, so 59 of 62 are confirmed and the adapter reports 58 licensed, 3 accepted-but-unlicensed, 1 defeated). Earlier: 52 of 62 judged claim/hypothesis nodes set to `confirmed` (wording matches quoted source; not endorsement or truth; basis in `examples/operational-games-2026-09-30/review-2026-10-02.md`). The warrant adapter now reported 51 licensed, 10 accepted-but-unlicensed (still proposed), 1 defeated.
 
 Split the formal theory into [epistemic-warrant](https://github.com/BrianMills2718/epistemic-warrant) with full history: the modules `aba`, `defeat`, `proof`, `reliability`, `statistical`, `strategy`, `support` and `warrant`, their tests, 20 research docs, ADRs 007–018, the paper draft and `project-status.md`. Links to moved docs now point there. The tool and the theory shared no imports.
 

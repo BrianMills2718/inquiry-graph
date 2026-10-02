@@ -178,7 +178,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "hypothesis",
-      "text": "Global metaphysical certainty may remain unavailable while inquiry proceeds conditionally."
+      "text": "Brian describes himself as basically an epistemological nihilist."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:operational-adequacy",
@@ -193,7 +193,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "claim",
-      "text": "The practical target can be local, conditional, operational adequacy rather than global metaphysical certainty."
+      "text": "Global metaphysical certainty is unavailable or irrelevant."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:optimization-boundary",
@@ -583,7 +583,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "hypothesis",
-      "text": "Make the base notion of game deliberately broad enough to include essentially all lawful systems, while preserving meaning through typed enrichments."
+      "text": "Making game theory almost vacuous is part of the goal, in the same sense that Michael Levin makes intelligence vacuous."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:anti-binary-game-intelligence",
@@ -793,7 +793,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "claim",
-      "text": "The approved prior-art pass found that open games already admit surprisingly degenerate cases, reducing the need for a homemade universal-game tuple."
+      "text": "Open games already cover surprisingly degenerate cases."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:arena-selection-separation",
@@ -1198,7 +1198,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "claim",
-      "text": "Candidate generation already has substantial mature prior art and should not be reopened as an undefined foundational gap."
+      "text": "Brian recalls that well-developed work on candidate generation was already found."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal",
@@ -1363,7 +1363,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "claim",
-      "text": "The published Simudyne price is outside the current project budget and should not be treated as a required dependency."
+      "text": "Brian can't pay 1250 a month for usage-based pricing."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:q-framework-selection-method",
@@ -1588,7 +1588,7 @@
       "origin": "inferred",
       "review_status": "proposed",
       "kind": "claim",
-      "text": "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case."
+      "text": "The truck fixture is merged."
     },
     {
       "id": "dialogue-2026-09-30-operational-games:n:finish-documentation-now",
