@@ -12,6 +12,7 @@ from pathlib import Path
 import numpy as np
 import umap
 import wizmap
+from label_words import FILLER
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from sentence_transformers import SentenceTransformer
 
@@ -19,10 +20,6 @@ MIN_CHARS = 20
 EMBED_CHARS = 1500
 SHOW_CHARS = 300
 # Conversational filler that otherwise dominates WizMap's keyword topic labels ("ok-proceed-plan-lets").
-FILLER = {"ok", "okay", "like", "just", "lets", "let", "yes", "yeah", "yep", "sure", "thanks", "thank", "please",
-          "want", "need", "make", "use", "get", "gonna", "think", "know", "really", "actually", "don", "doesn",
-          "didn", "isn", "ll", "ve", "re", "uh", "um", "hmm", "also", "would", "could", "one", "way", "good",
-          "right", "now", "proceed", "go", "ahead", "thing", "things", "something", "etc"}
 
 
 def collect(conv_dir: Path):

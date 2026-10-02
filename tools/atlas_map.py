@@ -4,7 +4,15 @@ by text similarity, laid out with ForceAtlas2, coloured by community, with a leg
 Chats in the exporter's agent-send log are excluded (their user turns are agent prompts). Text is the
 title plus the opening of the human and assistant turns, so the map reflects what the conversations were about.
 """
+import os
+
+# Keep the build light on a shared laptop: few threads, no tokenizer fork storms. Override by setting these first.
+for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "NUMBA_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+    os.environ.setdefault(_v, "4")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+
 import argparse
+import hashlib
 import collections
 import json
 import math
@@ -21,7 +29,7 @@ from matplotlib.collections import LineCollection
 from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 
-from wizmap_archive import FILLER
+from label_words import FILLER
 
 # ChatGPT citation markers and similar tokens that carry no topic.
 NOISE = {"brian", "steno", "filecite", "turn0file0", "turn0file1", "turn0file2", "turn1file0", "cite", "turn0search0", "l2-l2", "ac5", "rc2"}
@@ -45,6 +53,17 @@ class _Identity:
         return X
     def fit_transform(self, X, y=None):
         return X
+
+
+def cached(cache_dir, name, key, fn):
+    """Load <cache_dir>/<name>-<key>.npy if present, else compute with fn() and save. Heavy steps run once per input set."""
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    f = cache_dir / f"{name}-{key}.npy"
+    if f.exists():
+        return np.load(f)
+    val = np.asarray(fn())
+    np.save(f, val)
+    return val
 
 
 def agent_threads(path):
@@ -73,6 +92,7 @@ def main():
     ap.add_argument("--public", action="store_true", help="write the interactive page with no titles, dates or search; hover shows only the community")
     ap.add_argument("--layers", default="", help="comma-separated HDBSCAN min cluster sizes, coarse to fine (e.g. 45,18,7): "
                     "BERTopic names each layer and DataMapPlot shows them as a zoomable topic tree")
+    ap.add_argument("--names", type=Path, help="JSON {layer_size: {cluster_id: name}} from label_names.py; replaces keyword labels")
     ap.add_argument("--label-check", type=Path, help="JSON from label_check.py; labels with keep=false are shown as Unlabelled")
     ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
     a = ap.parse_args()
@@ -94,8 +114,10 @@ def main():
         if len(body) > 60:
             chats.append({"id": c["id"], "title": c["title"], "first": stamps[0], "n": len(c["messages"]), "doc": f"{c['title']}. {body}"[:3000]})
     n = len(chats)
-    emb = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu").encode(
-        [c["doc"] for c in chats], batch_size=64, normalize_embeddings=True, show_progress_bar=False)
+    cache_dir = a.out_png.parent / "cache"
+    key = hashlib.sha256("\n".join(c["id"] + c["doc"][:200] for c in chats).encode()).hexdigest()[:16]
+    emb = cached(cache_dir, "emb", key, lambda: SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu").encode(
+        [c["doc"] for c in chats], batch_size=16, normalize_embeddings=True, show_progress_bar=False))
     sim = emb @ emb.T
     np.fill_diagonal(sim, -1)
     G = nx.Graph()
@@ -106,9 +128,11 @@ def main():
                 G.add_edge(i, int(j), weight=float(sim[i, j]))
     comms = sorted(nx.community.louvain_communities(G, weight="weight", seed=7, resolution=1.0), key=len, reverse=True)
     comm_of = {i: ci for ci, c in enumerate(comms) for i in c}
-    pos = ForceAtlas2(outboundAttractionDistribution=True, scalingRatio=4.0, gravity=0.6, strongGravityMode=False,
-                      barnesHutOptimize=True, verbose=False).forceatlas2_networkx_layout(G, pos=None, iterations=1200)
-    xy = np.array([pos[i] for i in range(n)])
+    def layout():
+        pos = ForceAtlas2(outboundAttractionDistribution=True, scalingRatio=4.0, gravity=0.6, strongGravityMode=False,
+                          barnesHutOptimize=True, verbose=False).forceatlas2_networkx_layout(G, pos=None, iterations=600)
+        return np.array([pos[i] for i in range(n)])
+    xy = cached(cache_dir, f"layout-k{a.k}", key, layout)
     vec = TfidfVectorizer(stop_words=sorted(ENGLISH_STOP_WORDS | FILLER | NOISE), ngram_range=(1, 2), min_df=2, max_df=0.3, token_pattern=r"[A-Za-z][A-Za-z0-9_\-]{2,}")
     X = vec.fit_transform([c["doc"] for c in chats])
     vocab = np.array(vec.get_feature_names_out())
@@ -164,7 +188,7 @@ def main():
             from bertopic import BERTopic
             from hdbscan import HDBSCAN
             from sklearn.feature_extraction.text import CountVectorizer
-            um5 = umap_mod.UMAP(n_components=5, metric="cosine", random_state=7, n_neighbors=15, min_dist=0.0).fit_transform(emb)
+            um5 = cached(cache_dir, "umap5", key, lambda: umap_mod.UMAP(n_components=5, metric="cosine", random_state=7, n_neighbors=15, min_dist=0.0, low_memory=True).fit_transform(emb))
             stop = sorted(ENGLISH_STOP_WORDS | FILLER | NOISE)
             for k in [int(v) for v in a.layers.split(",")]:
                 tm = BERTopic(embedding_model=None,
@@ -173,6 +197,12 @@ def main():
                               umap_model=_Identity())
                 topics, _ = tm.fit_transform([c["doc"] for c in chats], embeddings=um5)
                 label = {t: " / ".join([w for w, _ in tm.get_topic(t) if not (set(w.split()) & LABEL_AVOID)][:3]).title() for t in set(topics) if t != -1}
+                clusters = a.out_png.with_name(f"layer_{k}_clusters.json")
+                clusters.write_text(json.dumps({str(t): {"keywords": label[t], "titles": [chats[i]["title"] for i, tt in enumerate(topics) if tt == t]}
+                                                for t in label}, indent=1), encoding="utf-8")
+                if a.names:  # plain-language names replace keyword tags; a cluster with no name shows as Unlabelled
+                    named = json.loads(a.names.read_text(encoding="utf-8")).get(str(k), {})
+                    label = {t: named[str(t)] for t in label if str(t) in named}
                 verdict = json.loads(a.label_check.read_text(encoding="utf-8")) if a.label_check else {}
                 layer_arrays.append(np.array([label.get(t, "Unlabelled") if verdict.get(label.get(t), {"keep": True})["keep"] else "Unlabelled"
                                               for t in topics], dtype=object))

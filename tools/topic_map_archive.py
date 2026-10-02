@@ -17,7 +17,7 @@ from hdbscan import HDBSCAN
 from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
 
-from wizmap_archive import FILLER
+from label_words import FILLER
 
 DOC_CHARS = 2000
 USER_MSGS = 8
