@@ -28,6 +28,25 @@ excerpt ids: `examples/operational-games-2026-09-30/warrant-judgments.json`.
 semantics". The hop is a plumbing proof, not evidence that claims are true: the
 graph holds very few challenges (one usable), and every annotation is `proposed`.
 
+## Who said it (speaker attribution)
+
+A judgment about a node says nothing about whether Brian or the assistant wrote the
+words, so each judgment also carries metadata derived from the anchored messages'
+`actor_id` (never used in warrant evaluation; status and license results are
+unchanged):
+
+* `speakers`: one entry per distinct participant anchored by the node, with
+  `participant_id`, `label`, declared `role`, derived `kind`, and the `message_ids`
+  that participant said.
+* `speaker_kind`: `user`, `assistant`, `curation-summary`, or `mixed` (anchored to
+  more than one kind; all speakers are listed in `speakers`).
+* `curation-summary` is a participant whose id starts with
+  `participant:curation-request`. Its declared role is `user`, but it is the owner's
+  summary of a continuation, not an original dialogue turn, so it is kept separate.
+
+On the committed graph: 36 assistant, 21 user (Brian), 5 curation-summary, 0 mixed.
+Confirming a node never means Brian endorsed it when `speaker_kind` is `assistant`.
+
 ## Field mapping
 
 | Inquiry Graph | epistemic-warrant | Note |
@@ -46,8 +65,8 @@ graph holds very few challenges (one usable), and every annotation is `proposed`
   The adapter assumes success and `rebut`.
 * **Challenges whose target is not a proposition** (here a `question` node, 1 of 2)
   have no argument to attack; reported under `unmapped`, not judged.
-* **Stance events** (`posits`, `endorses`, `questions`): who said what has no place in
-  the regime; acceptance is global, not per actor. `rejects`/`retracts`/`suspends`
+* **Stance events** (`posits`, `endorses`, `questions`): per-actor stance has no place in
+  the regime (speaker of the anchored text is carried as metadata, see above); acceptance is global, not per actor. `rejects`/`retracts`/`suspends`
   would change acceptance and make the adapter raise.
 * **Moves, question events, `answers`, `motivates`, `related_to`, `depends_on`, other
   node kinds** (question, goal, method, ...): not propositions or defeats; counted in `unmapped`.

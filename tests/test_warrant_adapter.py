@@ -3,6 +3,7 @@ import importlib.util
 import json
 import os
 import sys
+from collections import Counter
 from pathlib import Path
 
 import pytest
@@ -75,3 +76,33 @@ def test_acceptance_changing_stance_fails_loudly():
                                               "target_id": target.id, "stance": "retracts"}))
     with pytest.raises(NotImplementedError):
         warrant_adapter.adapt(graph)
+
+
+def test_speaker_attribution_on_real_graph(result):
+    j = by_id(result)
+    assert j[P + "n:universal-game-prior-art-result"]["speaker_kind"] == "assistant"
+    assert j[P + "n:universal-game-prior-art-result"]["speakers"][0]["participant_id"] == "participant:assistant"
+    assert j[P + "n:universal-game-vacuity"]["speaker_kind"] == "user"
+    assert j[P + "n:candidate-generation-mature-prior-art"]["speaker_kind"] == "user"
+    brian = j[P + "n:universal-game-vacuity"]["speakers"]
+    assert [(s["participant_id"], s["label"], s["role"]) for s in brian] == [("participant:brian", "Brian", "user")]
+    assert Counter(x["speaker_kind"] for x in result["judgments"]) == {
+        "assistant": 36, "user": 21, "curation-summary": 5}
+    assert all(x["speakers"] and x["speaker_kind"] for x in result["judgments"])
+    for x in result["judgments"]:
+        assert sorted(m for s in x["speakers"] for m in s["message_ids"]) == x["excerpt_ids"]
+        if x["speaker_kind"] == "curation-summary":
+            assert x["speakers"][0]["participant_id"].startswith("participant:curation-request")
+
+
+def test_speaker_is_metadata_only_and_mixed_is_reported():
+    graph = load(EX / "graph.json", Graph)
+    base = {x["claim_id"]: (x["status"], x["licensed"]) for x in warrant_adapter.adapt(graph)["judgments"]}
+    node = next(n for n in graph.nodes if n.id == P + "n:universal-game-vacuity")
+    other = next(a for a in graph.nodes if a.id == P + "n:universal-game-prior-art-result").anchors[0]
+    node.anchors = node.anchors + [other]
+    changed = warrant_adapter.adapt(graph)
+    j = {x["claim_id"]: x for x in changed["judgments"]}
+    assert j[node.id]["speaker_kind"] == "mixed"
+    assert {s["kind"] for s in j[node.id]["speakers"]} == {"user", "assistant"}
+    assert {k: (v["status"], v["licensed"]) for k, v in j.items()} == base

@@ -19,6 +19,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex004"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex004"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -34,6 +46,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex006"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex006"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -51,6 +75,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex007"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex007"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -66,6 +102,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex008"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex008"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -83,6 +131,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex009"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex009"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -98,6 +158,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex010"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex010"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -115,6 +187,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex011"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex011"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -130,6 +214,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex012"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex012"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -147,6 +243,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex013"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex013"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -162,6 +270,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex014"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex014"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -179,6 +299,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex016"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex016"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -194,6 +326,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex017"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex017"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -211,6 +355,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex018"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex018"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -226,6 +382,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex021"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex021"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -243,6 +411,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex022"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex022"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -258,6 +438,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex023"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex023"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -275,6 +467,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex028"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex028"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -290,6 +494,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex029"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex029"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -307,6 +523,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex030"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex030"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -322,6 +550,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex031"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex031"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -339,6 +579,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex033"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex033"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -354,6 +606,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex034"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex034"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -371,6 +635,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex035"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex035"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -386,6 +662,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex037"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex037"
+          ]
+        }
       ],
       "defeated_by": [
         "dialogue-2026-09-30-operational-games:n:universal-game-vacuity"
@@ -405,6 +693,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex041"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex041"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -420,6 +720,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex042"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex042"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -437,6 +749,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex043"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex043"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -452,6 +776,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex044"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex044"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -469,6 +805,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex045"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex045"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -484,6 +832,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex050"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex050"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -501,6 +861,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex055"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex055"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -516,6 +888,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex055"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex055"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -533,6 +917,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex059"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex059"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -548,6 +944,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex061"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex061"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -565,6 +973,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex062"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex062"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -580,6 +1000,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex064"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex064"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -597,6 +1029,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex065"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex065"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -612,6 +1056,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex066"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex066"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -629,6 +1085,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex067"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex067"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -644,6 +1112,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex068"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex068"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -661,6 +1141,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex068"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex068"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -676,6 +1168,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex070"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex070"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -693,6 +1197,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex072"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex072"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -708,6 +1224,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex073"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex073"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -725,6 +1253,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex078"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex078"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -740,6 +1280,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex080"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex080"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -757,6 +1309,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex085"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex085"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -772,6 +1336,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex088"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex088"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -789,6 +1365,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex092"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex092"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -804,6 +1392,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex094"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex094"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -821,6 +1421,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex095"
       ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex095"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -836,6 +1448,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex096"
+      ],
+      "speaker_kind": "user",
+      "speakers": [
+        {
+          "participant_id": "participant:brian",
+          "label": "Brian",
+          "role": "user",
+          "kind": "user",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex096"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -853,6 +1477,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex097"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex097"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -868,6 +1504,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex104"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex104"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -885,6 +1533,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex108"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex108"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -900,6 +1560,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex112"
+      ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex112"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -917,6 +1589,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex113"
       ],
+      "speaker_kind": "assistant",
+      "speakers": [
+        {
+          "participant_id": "participant:assistant",
+          "label": "Assistant",
+          "role": "assistant",
+          "kind": "assistant",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex113"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -932,6 +1616,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex117"
+      ],
+      "speaker_kind": "curation-summary",
+      "speakers": [
+        {
+          "participant_id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user",
+          "kind": "curation-summary",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex117"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -949,6 +1645,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex119"
       ],
+      "speaker_kind": "curation-summary",
+      "speakers": [
+        {
+          "participant_id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user",
+          "kind": "curation-summary",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex119"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -964,6 +1672,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex120"
+      ],
+      "speaker_kind": "curation-summary",
+      "speakers": [
+        {
+          "participant_id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user",
+          "kind": "curation-summary",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex120"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
@@ -981,6 +1701,18 @@
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex122"
       ],
+      "speaker_kind": "curation-summary",
+      "speakers": [
+        {
+          "participant_id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user",
+          "kind": "curation-summary",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex122"
+          ]
+        }
+      ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
     },
@@ -996,6 +1728,18 @@
       ],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex124"
+      ],
+      "speaker_kind": "curation-summary",
+      "speakers": [
+        {
+          "participant_id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user",
+          "kind": "curation-summary",
+          "message_ids": [
+            "dialogue-2026-09-30-operational-games:ex124"
+          ]
+        }
       ],
       "defeated_by": [],
       "reason": "typed certificate argument is grounded-in"
