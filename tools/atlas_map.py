@@ -66,6 +66,31 @@ def cached(cache_dir, name, key, fn):
     return val
 
 
+def fill_labels(layers, coords, radius_pct=90):
+    """Make every zoom level cover the space without inventing labels.
+
+    layers: label arrays ordered coarse -> fine. A dot with no label (outlier, or its cluster had no specific name)
+    first takes the nearest named cluster at that level when it lies within the usual spread of that cluster
+    (radius_pct-th percentile of member distances to the centroid), then falls back to its label one level coarser.
+    """
+    out = []
+    for i, arr in enumerate(layers):
+        arr = arr.copy()
+        names = sorted({x for x in arr if x != "Unlabelled"})
+        if names:
+            cent = np.array([coords[arr == nm].mean(axis=0) for nm in names])
+            rad = np.array([np.percentile(np.linalg.norm(coords[arr == nm] - cent[j], axis=1), radius_pct) for j, nm in enumerate(names)])
+            for d in np.where(arr == "Unlabelled")[0]:
+                dist = np.linalg.norm(cent - coords[d], axis=1)
+                j = int(dist.argmin())
+                if dist[j] <= rad[j]:
+                    arr[d] = names[j]
+        if i > 0:
+            arr = np.where(arr == "Unlabelled", out[i - 1], arr)
+        out.append(arr)
+    return out
+
+
 def agent_threads(path):
     ids = set()
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
@@ -92,6 +117,8 @@ def main():
     ap.add_argument("--public", action="store_true", help="write the interactive page with no titles, dates or search; hover shows only the community")
     ap.add_argument("--layers", default="", help="comma-separated HDBSCAN min cluster sizes, coarse to fine (e.g. 45,18,7): "
                     "BERTopic names each layer and DataMapPlot shows them as a zoomable topic tree")
+    ap.add_argument("--layout", choices=["umap", "fa2"], default="umap",
+                    help="2D layout for the interactive page: umap fills the canvas evenly, fa2 is the network layout used by the poster")
     ap.add_argument("--names", type=Path, help="JSON {layer_size: {cluster_id: name}} from label_names.py; replaces keyword labels")
     ap.add_argument("--label-check", type=Path, help="JSON from label_check.py; labels with keep=false are shown as Unlabelled")
     ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
@@ -182,6 +209,7 @@ def main():
         names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
         hover = list(names) if a.public else [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
         dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
+        import umap as umap_mod2
         layer_arrays = []
         if a.layers:
             import umap as umap_mod
@@ -210,11 +238,16 @@ def main():
                 layer_titles.write_text(json.dumps({lab: [chats[i]["title"] for i, t in enumerate(topics) if label.get(t) == lab]
                                                     for lab in set(label.values())}, indent=1), encoding="utf-8")
                 print(f"layer min_cluster_size={k}: {len(label)} groups, {sum(1 for t in topics if t == -1)} unlabelled")
+        if layer_arrays:
+            layer_arrays = fill_labels(layer_arrays, um5)
+        page_xy = xy if a.layout == "fa2" else cached(cache_dir, "umap2", key, lambda: umap_mod2.UMAP(
+            n_components=2, metric="cosine", random_state=7, n_neighbors=15, min_dist=0.05, low_memory=True).fit_transform(emb))
         plot = datamapplot.create_interactive_plot(
-            xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
+            page_xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
             sub_title=(f"{n} chats about work and ideas. Personal chats are left out." if a.public else
                        f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars."),
-            darkmode=True, cvd_safer=True, enable_topic_tree=bool(a.layers), enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
+            darkmode=True, cvd_safer=True, text_collision_size_scale=2, text_min_pixel_size=12, text_max_pixel_size=30,
+            hierarchical_collision_priority=True, enable_topic_tree=bool(a.layers), enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
             point_radius_min_pixels=2, point_radius_max_pixels=14, edge_bundle=a.edges, inline_data=True,
             noise_label="Unlabelled", initial_zoom_fraction=0.9)
         a.html.parent.mkdir(parents=True, exist_ok=True)
