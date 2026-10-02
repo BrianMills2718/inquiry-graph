@@ -32,6 +32,7 @@ This audit checks whether each major inquiry arc visible in the 2026-09-30 conve
 | UGD runtime synthesis result | covered | `wiring-contract-architecture` |
 | Request for complete conversation coverage | covered | `full-conversation-coverage-request` |
 | Truck logistics composition acceptance fixture | covered | `proceed-truck-fixture`, `truck-fixture-scope`, `truck-fixture-pass`, `truck-fixture-merged` |
+| Authentic truck/logistics execution (2026-10-02) | provenance-limited | `authentic-seams-request`, `actions-budget-unavailable`, `local-execution-selected`, `wsl-restored`, `cybercat-native-deps`, `nix-declared-choice`, `historical-nixpkgs-pin`, `authentic-build-step`, `authentic-observed-result` |
 
 ## What "covered" means
 
@@ -46,6 +47,8 @@ It does **not** mean:
 
 The current source is still `curated_excerpts`. The strongest justified claim is **substantive semantic coverage of the visible conversation available to the curator**.
 
+`provenance-limited` means the arc is represented in the graph, but its excerpts (ex116–ex124) are verbatim fragments of the owner's 2026-10-02 curation request that summarized the step, not quotes of the original dialogue turns, which were not available to the curator. They are attributed to `participant:curation-request-2026-10-02`. The execution result itself was independently re-verified on 2026-10-02 by reproducing the retained receipt exactly, re-running the authentic vertical, obtaining 95 passing Epistemic Warrant tests, and a clean pip check. See the [fixture README](README.md#authentic-trucklogistics-execution-recorded-2026-10-02).
+
 ## Remaining verification step
 
-For byte-for-byte turn completeness, import the full ChatGPT export / active branch and reconcile each excerpt to original message IDs using the repository's documented reconciliation process. Until then, do not relabel this fixture as verified full-export coverage.
+For byte-for-byte turn completeness, import the full ChatGPT export / active branch and reconcile each excerpt to original message IDs using the repository's documented reconciliation process. During that reconciliation, replace the provenance-limited excerpts ex116–ex124 with the verbatim dialogue turns. The recorded result has already been independently re-verified; only turn-level source reconciliation remains. Until then, do not relabel this fixture as verified full-export coverage.

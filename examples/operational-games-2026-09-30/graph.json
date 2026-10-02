@@ -1619,6 +1619,126 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Move reversible work forward quickly; treat CI/CD as non-blocking for low-risk reversible changes while preserving stronger review for irreversible or high-risk changes."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:authentic-seams-goal",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex116",
+          "start": 0,
+          "end": 28,
+          "quote": "Proceed with authentic seams"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Proceed with the truck/logistics continuation through authentic backend seams."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex117",
+          "start": 0,
+          "end": 37,
+          "quote": "GitHub Actions unavailable due budget"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "GitHub Actions was unavailable for the authentic run because of budget."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:local-execution",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex118",
+          "start": 0,
+          "end": 24,
+          "quote": "local execution selected"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Run the authentic truck/logistics execution locally."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:wsl-restored",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex119",
+          "start": 0,
+          "end": 12,
+          "quote": "WSL restored"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The local WSL environment was restored."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex120",
+          "start": 0,
+          "end": 39,
+          "quote": "CyberCat native dependencies discovered"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "CyberCat (open-games-hs) has native dependencies that local execution must supply."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex121",
+          "start": 0,
+          "end": 39,
+          "quote": "Nix chosen because CyberCat declares it"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Use Nix to build CyberCat because CyberCat itself declares Nix."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex122",
+          "start": 0,
+          "end": 31,
+          "quote": "historical Nixpkgs pin required"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The CyberCat Nix build requires a historical Nixpkgs pin."
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:n:authentic-truck-result",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex124",
+          "start": 0,
+          "end": 619,
+          "quote": "- CyberCat/open-games-hs pinned d3e933e0f1a39432e78f1eaea89799741268e85d genuinely executed all four request/yield profiles.\n- only request,yield was equilibrium.\n- CVS pinned d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved.\n- feasible shipment_a, shipment_c; shipment_d refused; selected shipment_a.\n- SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes.\n- bad-controller shipment_d attempt was refused atomically with canonical state unchanged.\n- retained receipt exactly reproduced in final rerun; pytest 95 passed; pip check clean."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Authentic truck/logistics run: CyberCat/open-games-hs pinned at d3e933e0f1a39432e78f1eaea89799741268e85d executed all four request/yield profiles, and only request,yield was an equilibrium; CVS pinned at d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved; shipment_a and shipment_c were feasible, shipment_d was refused, and shipment_a was selected; SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes; a bad-controller shipment_d attempt was refused atomically with canonical state unchanged; the retained receipt reproduced exactly in the final rerun (pytest 95 passed, pip check clean)."
     }
   ],
   "relations": [
@@ -3659,6 +3779,150 @@
         {
           "role": "target",
           "ref": "dialogue-2026-09-30-operational-games:n:documentation-coherence-goal"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:086",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex118",
+          "start": 0,
+          "end": 24,
+          "quote": "local execution selected"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-30-operational-games:n:local-execution"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:087",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex119",
+          "start": 0,
+          "end": 12,
+          "quote": "WSL restored"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-30-operational-games:n:local-execution"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-30-operational-games:n:wsl-restored"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:088",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex121",
+          "start": 0,
+          "end": 39,
+          "quote": "Nix chosen because CyberCat declares it"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:089",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex122",
+          "start": 0,
+          "end": 31,
+          "quote": "historical Nixpkgs pin required"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:090",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex124",
+          "start": 0,
+          "end": 619,
+          "quote": "- CyberCat/open-games-hs pinned d3e933e0f1a39432e78f1eaea89799741268e85d genuinely executed all four request/yield profiles.\n- only request,yield was equilibrium.\n- CVS pinned d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved.\n- feasible shipment_a, shipment_c; shipment_d refused; selected shipment_a.\n- SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes.\n- bad-controller shipment_d attempt was refused atomically with canonical state unchanged.\n- retained receipt exactly reproduced in final rerun; pytest 95 passed; pip check clean."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "dialogue-2026-09-30-operational-games:n:authentic-seams-goal"
+        },
+        {
+          "role": "result",
+          "ref": "dialogue-2026-09-30-operational-games:n:authentic-truck-result"
+        }
+      ]
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:r:091",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex124",
+          "start": 0,
+          "end": 619,
+          "quote": "- CyberCat/open-games-hs pinned d3e933e0f1a39432e78f1eaea89799741268e85d genuinely executed all four request/yield profiles.\n- only request,yield was equilibrium.\n- CVS pinned d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved.\n- feasible shipment_a, shipment_c; shipment_d refused; selected shipment_a.\n- SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes.\n- bad-controller shipment_d attempt was refused atomically with canonical state unchanged.\n- retained receipt exactly reproduced in final rerun; pytest 95 passed; pip check clean."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "dialogue-2026-09-30-operational-games:n:authentic-truck-result"
+        },
+        {
+          "role": "target",
+          "ref": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
         }
       ]
     }
@@ -5969,6 +6233,113 @@
         "dialogue-2026-09-30-operational-games:m:088"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:090",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex116",
+          "start": 0,
+          "end": 28,
+          "quote": "Proceed with authentic seams"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:authentic-seams-goal"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex116",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:089"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:091",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex118",
+          "start": 0,
+          "end": 24,
+          "quote": "local execution selected"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:local-execution"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex118",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:090"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:092",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex121",
+          "start": 0,
+          "end": 39,
+          "quote": "Nix chosen because CyberCat declares it"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex121",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:091"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:m:093",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex123",
+          "start": 0,
+          "end": 22,
+          "quote": "authentic build/result"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "input_ids": [
+        "dialogue-2026-09-30-operational-games:n:authentic-seams-goal",
+        "dialogue-2026-09-30-operational-games:n:local-execution",
+        "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment",
+        "dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin"
+      ],
+      "output_ids": [
+        "dialogue-2026-09-30-operational-games:n:authentic-truck-result"
+      ],
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex123",
+      "after_move_ids": [
+        "dialogue-2026-09-30-operational-games:m:092"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [
@@ -7093,6 +7464,142 @@
       "target_id": "dialogue-2026-09-30-operational-games:n:reversible-speed-directive",
       "stance": "posits",
       "at_message_id": "dialogue-2026-09-30-operational-games:ex115"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:067",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex116",
+          "start": 0,
+          "end": 28,
+          "quote": "Proceed with authentic seams"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:authentic-seams-goal",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex116"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:068",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex117",
+          "start": 0,
+          "end": 37,
+          "quote": "GitHub Actions unavailable due budget"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex117"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:069",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex118",
+          "start": 0,
+          "end": 24,
+          "quote": "local execution selected"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:local-execution",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex118"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:070",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex119",
+          "start": 0,
+          "end": 12,
+          "quote": "WSL restored"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:wsl-restored",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex119"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:071",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex120",
+          "start": 0,
+          "end": 39,
+          "quote": "CyberCat native dependencies discovered"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex120"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:072",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex121",
+          "start": 0,
+          "end": 39,
+          "quote": "Nix chosen because CyberCat declares it"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:nix-as-declared-environment",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex121"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:073",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex122",
+          "start": 0,
+          "end": 31,
+          "quote": "historical Nixpkgs pin required"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex122"
+    },
+    {
+      "id": "dialogue-2026-09-30-operational-games:s:074",
+      "anchors": [
+        {
+          "message_id": "dialogue-2026-09-30-operational-games:ex124",
+          "start": 0,
+          "end": 619,
+          "quote": "- CyberCat/open-games-hs pinned d3e933e0f1a39432e78f1eaea89799741268e85d genuinely executed all four request/yield profiles.\n- only request,yield was equilibrium.\n- CVS pinned d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved.\n- feasible shipment_a, shipment_c; shipment_d refused; selected shipment_a.\n- SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes.\n- bad-controller shipment_d attempt was refused atomically with canonical state unchanged.\n- retained receipt exactly reproduced in final rerun; pytest 95 passed; pip check clean."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "actor_id": "participant:curation-request-2026-10-02",
+      "target_id": "dialogue-2026-09-30-operational-games:n:authentic-truck-result",
+      "stance": "posits",
+      "at_message_id": "dialogue-2026-09-30-operational-games:ex124"
     }
   ],
   "question_events": [
@@ -7803,7 +8310,7 @@
       "id": "dialogue-2026-09-30-operational-games",
       "title": "From factorization analysis to compositional games for embedded observers",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage. Continuation through 2026-10-01 also records the owner's explicit reversible-work execution-cadence directive; it remains a curated visible excerpt rather than full-export reconciliation.",
+      "coverage_note": "Curated verbatim excerpts from the visible 2026-09-30 user/assistant dialogue. This fixture now has semantic coverage for every substantive inquiry turn in the current operational-games/compositional-world conversation available in this chat context, including the CVS replacement question, World Substrate and Cybernetic Influence reviews, Simudyne replacement/cost discussion, first-principles framework selection, compositional game theory, compositional causal mechanics, Inquiry Graph updates, Universal Game Decomposition, the compositional-executable-world synthesis, and the first truck/logistics composition acceptance fixture. It is still NOT a byte-for-byte full ChatGPT export, NOT verified against original message IDs/timestamps, NOT an independently adjudicated gold dataset, and NOT hidden reasoning. Excerpt IDs and ordinals are local surrogates. Reconcile against a full export later for exact turn-level coverage. Continuation through 2026-10-01 also records the owner's explicit reversible-work execution-cadence directive; it remains a curated visible excerpt rather than full-export reconciliation. PROVENANCE EXCEPTION for ex116–ex124 (authentic truck/logistics execution continuation, recorded 2026-10-02): the original dialogue turns for this continuation were not available to the curator, so these excerpts are verbatim fragments of the owner's 2026-10-02 curation request that summarized it (the ordered trajectory and the observed result), attributed to the separate participant participant:curation-request-2026-10-02. They are NOT quotes of the original dialogue turns. The execution facts were independently re-verified on 2026-10-02 by reproducing the retained authentic receipt byte-for-byte, re-running all four pinned CyberCat profiles through the authentic runner, obtaining 95 passing Epistemic Warrant tests, and a clean pip check. Replace these curation-request excerpts with verbatim dialogue excerpts during full-export reconciliation.",
       "participants": [
         {
           "id": "participant:brian",
@@ -7814,6 +8321,11 @@
           "id": "participant:assistant",
           "label": "Assistant",
           "role": "assistant"
+        },
+        {
+          "id": "participant:curation-request-2026-10-02",
+          "label": "Brian's 2026-10-02 curation request (summary of the continuation; not an original dialogue turn)",
+          "role": "user"
         }
       ],
       "messages": [
@@ -8736,6 +9248,78 @@
           "text": "Yeah, I want to move forward as quickly as possible. As long as it's reversible, I don't really care about, like, any of the CI/CD stuff.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex116",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 116,
+          "text": "Proceed with authentic seams",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex117",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 117,
+          "text": "GitHub Actions unavailable due budget",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex118",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 118,
+          "text": "local execution selected",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex119",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 119,
+          "text": "WSL restored",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex120",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 120,
+          "text": "CyberCat native dependencies discovered",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex121",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 121,
+          "text": "Nix chosen because CyberCat declares it",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex122",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 122,
+          "text": "historical Nixpkgs pin required",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex123",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 123,
+          "text": "authentic build/result",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "dialogue-2026-09-30-operational-games:ex124",
+          "actor_id": "participant:curation-request-2026-10-02",
+          "ordinal": 124,
+          "text": "- CyberCat/open-games-hs pinned d3e933e0f1a39432e78f1eaea89799741268e85d genuinely executed all four request/yield profiles.\n- only request,yield was equilibrium.\n- CVS pinned d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved.\n- feasible shipment_a, shipment_c; shipment_d refused; selected shipment_a.\n- SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes.\n- bad-controller shipment_d attempt was refused atomically with canonical state unchanged.\n- retained receipt exactly reproduced in final rerun; pytest 95 passed; pip check clean.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -8747,13 +9331,13 @@
       "model": null,
       "prompt_version": "1.0.0",
       "notes": [
-        "source_sha256:aeff9bf4fa5b76f61eb0959ca156e9d1bc55a49d323f4524cddd628789dd53cb",
+        "source_sha256:6cfa7fed916d882cffb60208ee26c524388337bbc194b1ff233819e28e39ebb3",
         "Candidate annotations require review; structural validation is not semantic verification."
       ]
     }
   ],
   "notes": [
-    "Curated first-pass annotation of the visible 2026-09-30 operational-games/compositional-world dialogue. The current fixture is intended to semantically cover every substantive inquiry turn available in the chat context, while remaining explicitly unverified against a full ChatGPT export. All semantic annotations remain proposed pending human review and full-export reconciliation.",
+    "Curated first-pass annotation of the visible 2026-09-30 operational-games/compositional-world dialogue. The current fixture is intended to semantically cover every substantive inquiry turn available in the chat context, while remaining explicitly unverified against a full ChatGPT export. All semantic annotations remain proposed pending human review and full-export reconciliation. Records anchored at ex116–ex124 (authentic truck/logistics execution continuation) are grounded only in verbatim fragments of the owner's 2026-10-02 curation request, not in original dialogue turns; their actor participant:curation-request-2026-10-02 means 'reported in that request', not 'performed by'. The execution facts were independently re-verified on 2026-10-02 against an exact reproduction of the retained receipt, with the authentic runner, 95 passing Epistemic Warrant tests, and a clean pip check.",
     "After-move links encode curated excerpt order only, not causal succession.",
     "This trajectory is intentionally separate from the founding seed and can be reconciled/linked later."
   ]

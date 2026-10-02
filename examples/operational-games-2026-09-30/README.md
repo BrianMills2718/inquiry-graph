@@ -19,10 +19,50 @@ Files:
 - `candidates.json` — generated semantic candidates;
 - `graph.json` — validated V1 Inquiry Graph.
 
-Current fixture: **115 selected excerpts, 108 nodes, 85 relations, 89 moves, 66 stance events, and 33 question events**.
+Current fixture: **124 selected excerpts, 116 nodes, 91 relations, 93 moves, 74 stance events, and 33 question events**.
 
 All semantic annotations are `proposed`. This is not a full transcript export,
 not a gold dataset, and not a record of hidden reasoning.
+
+## Authentic truck/logistics execution (recorded 2026-10-02)
+
+After the specification-level truck/logistics fixture was merged (ex113), the
+continuation executed it through authentic backend seams. Recorded trajectory,
+in order (ex116–ex124):
+
+1. proceed with authentic seams;
+2. GitHub Actions unavailable because of budget;
+3. local execution selected;
+4. WSL restored;
+5. CyberCat native dependencies discovered;
+6. Nix chosen because CyberCat declares it;
+7. historical Nixpkgs pin required;
+8. authentic build/result.
+
+Recorded result: CyberCat/open-games-hs pinned at `d3e933e0f1a39432e78f1eaea89799741268e85d`
+executed all four request/yield profiles, and only `request,yield` was an
+equilibrium. CVS pinned at `d3eb2d5f247a3686f5bd9982c813b0a26a8b0558` validated
+`FiniteStrategicSnapshotV1` and compiled `BidirectionalResolved`. `shipment_a` and
+`shipment_c` were feasible, `shipment_d` was refused, and `shipment_a` was
+selected. SimPy 4.1.2 scheduled arrival at 1.5h without canonical material
+writes. A bad-controller `shipment_d` attempt was refused atomically with
+canonical state unchanged. The retained receipt reproduced exactly in the final
+rerun (that run's pytest: 95 passed; pip check clean).
+
+**Closure state:** this execution step is closed with an authentic result. It is
+recorded as inquiry provenance only; it adds no ontology or candidate-generation
+theory. The single open item is source reconciliation, described below.
+
+**Provenance limitation (ex116–ex124 only).** The original dialogue turns for
+this step were not available to the curator. These nine excerpts are verbatim
+fragments of the owner's 2026-10-02 curation request that summarized the step,
+not quotes of the dialogue. They are attributed to the separate participant
+`participant:curation-request-2026-10-02`, so on these records "actor" means
+"reported in that request", not "performed by". The execution result itself was independently re-verified on 2026-10-02: the
+authentic runner reproduced the retained receipt byte-for-byte, all 95 Epistemic
+Warrant tests passed, and pip check was clean. When the full export is available,
+replace ex116–ex124 with the verbatim dialogue turns; the remaining limitation is
+source-turn reconciliation, not execution verification.
 
 Rebuild and validate:
 

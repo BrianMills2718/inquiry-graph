@@ -67,6 +67,14 @@ settled corrections are:
   direction is a small wiring syntax + typed contracts + backend-specific
   execution + explicit preservation obligations.
 
+The truck/logistics acceptance fixture has since been executed through
+authentic pinned backends (CyberCat/open-games-hs, CVS, SimPy), locally under
+Nix because GitHub Actions was unavailable for budget reasons. That step is
+closed with a recorded result. Its excerpts (ex116–ex124) quote the owner's
+2026-10-02 curation request, not the original dialogue; replace them during
+full-export reconciliation. See the fixture README's "Authentic truck/logistics
+execution" section.
+
 See the coverage audit for the exact source-grounded trajectory.
 
 ## Current next work

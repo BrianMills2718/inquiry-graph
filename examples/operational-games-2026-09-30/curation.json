@@ -1,5 +1,5 @@
 {
-  "notice": "Curated first-pass annotation of the visible 2026-09-30 operational-games/compositional-world dialogue. The current fixture is intended to semantically cover every substantive inquiry turn available in the chat context, while remaining explicitly unverified against a full ChatGPT export. All semantic annotations remain proposed pending human review and full-export reconciliation.",
+  "notice": "Curated first-pass annotation of the visible 2026-09-30 operational-games/compositional-world dialogue. The current fixture is intended to semantically cover every substantive inquiry turn available in the chat context, while remaining explicitly unverified against a full ChatGPT export. All semantic annotations remain proposed pending human review and full-export reconciliation. Records anchored at ex116–ex124 (authentic truck/logistics execution continuation) are grounded only in verbatim fragments of the owner's 2026-10-02 curation request, not in original dialogue turns; their actor participant:curation-request-2026-10-02 means 'reported in that request', not 'performed by'. The execution facts were independently re-verified on 2026-10-02 against an exact reproduction of the retained receipt, with the authentic runner, 95 passing Epistemic Warrant tests, and a clean pip check.",
   "source_keys": {
     "factorization-generalization": "dialogue-2026-09-30-operational-games:ex001",
     "factorization-name": "dialogue-2026-09-30-operational-games:ex002",
@@ -119,7 +119,16 @@
     "truck-fixture-pass": "dialogue-2026-09-30-operational-games:ex112",
     "truck-fixture-merged": "dialogue-2026-09-30-operational-games:ex113",
     "finish-it-user": "dialogue-2026-09-30-operational-games:ex114",
-    "reversible-speed-directive": "dialogue-2026-09-30-operational-games:ex115"
+    "reversible-speed-directive": "dialogue-2026-09-30-operational-games:ex115",
+    "authentic-seams-request": "dialogue-2026-09-30-operational-games:ex116",
+    "actions-budget-unavailable": "dialogue-2026-09-30-operational-games:ex117",
+    "local-execution-selected": "dialogue-2026-09-30-operational-games:ex118",
+    "wsl-restored": "dialogue-2026-09-30-operational-games:ex119",
+    "cybercat-native-deps": "dialogue-2026-09-30-operational-games:ex120",
+    "nix-declared-choice": "dialogue-2026-09-30-operational-games:ex121",
+    "historical-nixpkgs-pin": "dialogue-2026-09-30-operational-games:ex122",
+    "authentic-build-step": "dialogue-2026-09-30-operational-games:ex123",
+    "authentic-observed-result": "dialogue-2026-09-30-operational-games:ex124"
   },
   "nodes": [
     [
@@ -769,6 +778,54 @@
       "goal",
       "Move reversible work forward quickly; treat CI/CD as non-blocking for low-risk reversible changes while preserving stronger review for irreversible or high-risk changes.",
       "reversible-speed-directive"
+    ],
+    [
+      "authentic-seams-goal",
+      "goal",
+      "Proceed with the truck/logistics continuation through authentic backend seams.",
+      "authentic-seams-request"
+    ],
+    [
+      "github-actions-budget-unavailable",
+      "claim",
+      "GitHub Actions was unavailable for the authentic run because of budget.",
+      "actions-budget-unavailable"
+    ],
+    [
+      "local-execution",
+      "method",
+      "Run the authentic truck/logistics execution locally.",
+      "local-execution-selected"
+    ],
+    [
+      "wsl-restored",
+      "claim",
+      "The local WSL environment was restored.",
+      "wsl-restored"
+    ],
+    [
+      "cybercat-native-dependencies",
+      "claim",
+      "CyberCat (open-games-hs) has native dependencies that local execution must supply.",
+      "cybercat-native-deps"
+    ],
+    [
+      "nix-as-declared-environment",
+      "method",
+      "Use Nix to build CyberCat because CyberCat itself declares Nix.",
+      "nix-declared-choice"
+    ],
+    [
+      "historical-nixpkgs-pin",
+      "claim",
+      "The CyberCat Nix build requires a historical Nixpkgs pin.",
+      "historical-nixpkgs-pin"
+    ],
+    [
+      "authentic-truck-result",
+      "claim",
+      "Authentic truck/logistics run: CyberCat/open-games-hs pinned at d3e933e0f1a39432e78f1eaea89799741268e85d executed all four request/yield profiles, and only request,yield was an equilibrium; CVS pinned at d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved; shipment_a and shipment_c were feasible, shipment_d was refused, and shipment_a was selected; SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes; a bad-controller shipment_d attempt was refused atomically with canonical state unchanged; the retained receipt reproduced exactly in the final rerun (pytest 95 passed, pip check clean).",
+      "authentic-observed-result"
     ]
   ],
   "relations": [
@@ -1281,6 +1338,42 @@
       "reversible-speed-directive",
       "documentation-coherence-goal",
       "reversible-speed-directive"
+    ],
+    [
+      "motivates",
+      "github-actions-budget-unavailable",
+      "local-execution",
+      "local-execution-selected"
+    ],
+    [
+      "depends_on",
+      "local-execution",
+      "wsl-restored",
+      "wsl-restored"
+    ],
+    [
+      "motivates",
+      "cybercat-native-dependencies",
+      "nix-as-declared-environment",
+      "nix-declared-choice"
+    ],
+    [
+      "depends_on",
+      "nix-as-declared-environment",
+      "historical-nixpkgs-pin",
+      "historical-nixpkgs-pin"
+    ],
+    [
+      "motivates",
+      "authentic-seams-goal",
+      "authentic-truck-result",
+      "authentic-observed-result"
+    ],
+    [
+      "related_to",
+      "authentic-truck-result",
+      "truck-fixture-spec-pass",
+      "authentic-observed-result"
     ]
   ],
   "moves": [
@@ -2163,6 +2256,49 @@
         "reversible-speed-directive"
       ],
       "reversible-speed-directive"
+    ],
+    [
+      "scope",
+      [
+        "truck-fixture-merged-result"
+      ],
+      [
+        "authentic-seams-goal"
+      ],
+      "authentic-seams-request"
+    ],
+    [
+      "propose",
+      [
+        "github-actions-budget-unavailable"
+      ],
+      [
+        "local-execution"
+      ],
+      "local-execution-selected"
+    ],
+    [
+      "propose",
+      [
+        "cybercat-native-dependencies"
+      ],
+      [
+        "nix-as-declared-environment"
+      ],
+      "nix-declared-choice"
+    ],
+    [
+      "test",
+      [
+        "authentic-seams-goal",
+        "local-execution",
+        "nix-as-declared-environment",
+        "historical-nixpkgs-pin"
+      ],
+      [
+        "authentic-truck-result"
+      ],
+      "authentic-build-step"
     ]
   ],
   "stances": [
@@ -2495,6 +2631,46 @@
       "reversible-speed-directive",
       "posits",
       "reversible-speed-directive"
+    ],
+    [
+      "authentic-seams-goal",
+      "posits",
+      "authentic-seams-request"
+    ],
+    [
+      "github-actions-budget-unavailable",
+      "posits",
+      "actions-budget-unavailable"
+    ],
+    [
+      "local-execution",
+      "posits",
+      "local-execution-selected"
+    ],
+    [
+      "wsl-restored",
+      "posits",
+      "wsl-restored"
+    ],
+    [
+      "cybercat-native-dependencies",
+      "posits",
+      "cybercat-native-deps"
+    ],
+    [
+      "nix-as-declared-environment",
+      "posits",
+      "nix-declared-choice"
+    ],
+    [
+      "historical-nixpkgs-pin",
+      "posits",
+      "historical-nixpkgs-pin"
+    ],
+    [
+      "authentic-truck-result",
+      "posits",
+      "authentic-observed-result"
     ]
   ],
   "question_updates": [
