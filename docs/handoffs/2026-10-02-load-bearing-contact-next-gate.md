@@ -1,7 +1,7 @@
 # Semantic grounding next gate — load-bearing contact from public force data
 
 **Date:** 2026-10-02  
-**Status:** selected next experiment; implementation pending machine availability
+**Status:** preregistered in merged Linguistic Core PR #25; implementation pending machine availability
 
 ## Decision
 
@@ -155,8 +155,6 @@ A successful probe establishes only a real-data path for **load-bearing contact 
 
 ## Current execution state
 
-A fresh Linguistic Core worktree/branch was prepared from merged `main` as:
-
-`research/load-bearing-contact-physionet`
+The full v1 experiment plan was preregistered and merged to Linguistic Core `main` as **PR #25 — Preregister external load-bearing contact grounding probe**. The merge occurred before any selected force recordings were downloaded or inspected, making the selected-file hashes, held-out split, fixed 20/100 N thresholds, 200 ms windows, persistence rule, refusal rule, and robustness tests durable before outcomes.
 
 The PhysioNet format file and SHA-256 manifest were retrieved successfully. The guarded WSL transport failed immediately before downloading the 18 force recordings, and explicitly reported that the real download command was not launched. No dataset rows have therefore been analyzed yet.

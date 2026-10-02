@@ -169,4 +169,4 @@ Required robustness checks include naturally occurring swing/no-load windows, st
 
 The detailed protocol is recorded in `docs/handoffs/2026-10-02-load-bearing-contact-next-gate.md`.
 
-A fresh Linguistic Core worktree was created from merged `main` on `research/load-bearing-contact-physionet`. PhysioNet's format file and SHA-256 manifest were retrieved, but the guarded WSL transport failed before the 18 data recordings were downloaded; the real download command was not launched. No outcomes have been observed and no thresholds have been tuned.
+The experiment was preregistered and merged to Linguistic Core `main` as PR #25 before any selected force recordings were downloaded or inspected. PR #25 fixes the selected files and hashes, held-out subjects, 200 ms windowing, <=20 N no-load bound, >=100 N load-bearing bound, 80% persistence rule, refusal policy, and robustness checks. The guarded WSL transport then failed before the 18 selected recordings were downloaded; the real download command was not launched. No outcomes have been observed and no thresholds have been tuned.
