@@ -54,13 +54,19 @@ def main():
     ap.add_argument("--k", type=int, default=7)
     ap.add_argument("--legend-rows", type=int, default=24)
     ap.add_argument("--html", type=Path, help="also write an interactive DataMapPlot page (hover, search, time filter)")
+    ap.add_argument("--include", type=Path, help="JSON list of {id, include}; keep only chats with include=true")
+    ap.add_argument("--public", action="store_true", help="write the interactive page with no titles, dates or search; hover shows only the community")
     ap.add_argument("--edges", action="store_true", help="bundle edges in the interactive page")
     a = ap.parse_args()
     agent = agent_threads(a.agent_log)
+    allowed = None
+    if a.include:
+        rows = json.loads(a.include.read_text(encoding="utf-8"))
+        allowed = {r["id"] for r in rows if r["include"]}
     chats = []
     for f in sorted(a.conv_dir.glob("*.conv.json")):
         c = json.loads(f.read_text(encoding="utf-8"))
-        if c["id"].split(":", 1)[1] in agent:
+        if c["id"].split(":", 1)[1] in agent or (allowed is not None and c["id"] not in allowed):
             continue
         user = {p["id"] for p in c["participants"] if p["role"] == "user"}
         stamps = sorted(m["timestamp"][:10] for m in c["messages"] if m["actor_id"] in user and m.get("timestamp"))
@@ -132,11 +138,13 @@ def main():
         import datamapplot
         names = np.array([desc.get(comm_of[i], "Unlabelled") if comm_of[i] in desc else "Unlabelled" for i in range(n)], dtype=object)
         names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
-        hover = [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
+        hover = list(names) if a.public else [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
         dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
         plot = datamapplot.create_interactive_plot(
-            xy, names, hover_text=hover, title="Your ChatGPT chats", sub_title=f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars.",
-            darkmode=True, enable_search=True, histogram_data=dates, histogram_n_bins=24,
+            xy, names, hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
+            sub_title=(f"{n} chats about work and ideas. Personal chats are left out." if a.public else
+                       f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars."),
+            darkmode=True, enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
             point_radius_min_pixels=2, point_radius_max_pixels=14, edge_bundle=a.edges, inline_data=True,
             noise_label="Unlabelled", initial_zoom_fraction=0.9)
         a.html.parent.mkdir(parents=True, exist_ok=True)
