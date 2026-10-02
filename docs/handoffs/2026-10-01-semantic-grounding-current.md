@@ -1,8 +1,8 @@
-# Semantic grounding inquiry — current handoff (2026-10-01)
+# Semantic grounding inquiry — current handoff (updated 2026-10-02)
 
 ## Purpose
 
-This handoff supersedes the earlier partial semantic-grounding checkpoint in Inquiry Graph PR #86. It records the conversation through the completed executable measurement-to-factor probe.
+This handoff supersedes the earlier partial semantic-grounding checkpoint in Inquiry Graph PR #86. It records the trajectory through the first external-data measurement-to-factor probe.
 
 ## Research objective
 
@@ -21,7 +21,7 @@ phenomenal / psychophysical structure
   -> world / scientific models
 ```
 
-The mappings should carry provenance, uncertainty, preservation/loss, and explicit refusal rather than silently asserting equivalence.
+The mappings should carry provenance, uncertainty, preservation/loss, explicit reference-frame assumptions, and refusal rather than silently asserting equivalence.
 
 ## Key distinctions
 
@@ -30,12 +30,15 @@ The mappings should carry provenance, uncertainty, preservation/loss, and explic
 - A **grounding primitive** must have an explicit non-lexical derivation or measurement path.
 - Sensor evidence is not world truth.
 - A top-level ontology projection is not automatically an equivalence.
+- A grounding factor should state which transformations should preserve it and which should change or invalidate it.
 
-## Current artifacts
+## Merged Linguistic Core grounding sequence
 
-### Linguistic Core PR #21
+All four grounding PRs were independently based on `main` and are now merged:
 
-Six-concept Grounding IR probe for:
+### PR #21 — six-concept Grounding IR probe
+
+Concepts:
 
 - red
 - object
@@ -46,9 +49,9 @@ Six-concept Grounding IR probe for:
 
 Includes DOLCE/BFO/UFO loss-aware projections and NSM/Longman comparison.
 
-### Linguistic Core PR #22
+### PR #22 — grounding-floor audit
 
-Grounding-floor audit for:
+Factors:
 
 - contact
 - relative position
@@ -56,11 +59,9 @@ Grounding-floor audit for:
 - body posture
 - persistence
 
-Pushes those factors toward measurable tactile, proprioceptive, force/load, gravity-reference, displacement, and spatiotemporal correspondence evidence.
+Pushes those factors toward measurable tactile, proprioceptive, force/load, gravity-reference, displacement, and spatiotemporal correspondence evidence while retaining the remaining inferential gaps.
 
-### Linguistic Core PR #23
-
-Executable measurement-to-factor specimen.
+### PR #23 — executable measurement-to-factor specimen
 
 Pipeline:
 
@@ -68,41 +69,74 @@ Pipeline:
 raw observations
   -> inferred low-level factors
   -> confidence / uncertainty
-  -> semantic classification
+  -> semantic classification / refusal
 ```
 
-Cases:
+The specimen keeps raw evidence, inferred factors, uncertainty, and semantic conclusions mechanically separate. It uses hand-authored fixtures and is therefore a construction/negative-test probe, not external validation.
 
-- positive support;
-- visual obstruction;
-- transient contact / attachment;
-- posture + persistence;
-- occlusion / replacement identity ambiguity;
-- indistinguishable duplicate ambiguity.
+### PR #24 — external UCI posture grounding and rotation-invariance probe
 
-Verification:
+Uses UCI dataset 341, *Smartphone-Based Recognition of Human Activities and Postural Transitions*, against the dataset's official train/test subject partition.
 
-- 12/12 focused tests;
-- 6/6 fixture outcomes;
-- 201 full repository tests passed, 4 skipped.
+The semantic target is intentionally narrow:
+
+- `stable_posture_evidence`
+- `motion_or_transition_evidence`
+- `REFUSAL:uncertain`
+
+Activity labels are calibration/evaluation references only and are not passed into inference.
+
+Held-out result:
+
+- 365 test windows total
+- invariant-factor coverage: 338/365 = 92.6%
+- covered accuracy for the deliberately collapsed stable-vs-non-static target: 338/338
+- static: 91 stable, 17 uncertain, 0 motion
+- dynamic: 149 motion, 0 uncertain, 0 stable
+- transitions: 98 motion, 10 uncertain, 0 stable
+
+The earlier `mean Z ~= +1 g` reference-frame assumption failed on the real waist-mounted data: only 2/365 held-out windows satisfied that gate, and only 1/108 static windows was accepted as stable by the axis-dependent baseline.
+
+A minimal transformation test rotated each held-out synchronized accelerometer/gyroscope window 90 degrees around X, Y, and Z without recalibration. The vector-magnitude factors were invariant to floating-point roundoff and their predictions were stable in all 1,095 comparisons.
+
+This supports a narrow methodological conclusion: **grounding factors should declare and test the transformations they are expected to survive.** It does not justify adding a GNN, an equivariant neural architecture, or a new semantic layer.
+
+## Licensing boundary
+
+There is a source-level licensing discrepancy for the UCI dataset:
+
+- the current UCI catalog states CC BY 4.0;
+- the README bundled inside the pinned archive states that commercial use is prohibited.
+
+The Linguistic Core probe therefore commits no archive bytes and no extracted raw sensor rows. It retains code, aggregate results, and bounded source provenance only.
+
+## Current strongest result
+
+The project has now crossed the first non-hand-authored-data gate:
+
+```text
+real raw inertial measurements
+  -> train-only calibrated low-level factors
+  -> explicit uncertainty/refusal
+  -> held-out narrow semantic evidence classification
+  -> transformation robustness check
+```
+
+The result does **not** establish a complete grounding theory, universal posture semantics, metaphysical identity, or cognitive realism. It does show that the measurement-to-factor seam can be made explicit, externally exercised, loss-aware, and capable of refusing ambiguous cases.
 
 ## Current next gate
 
-Use data not authored specifically for the rules.
+Do not expand the vocabulary indiscriminately.
 
-Preferred order:
+The next research step should generalize the lessons from PR #24 without overfitting to inertial posture data:
 
-1. find a small public sensor / psychophysics dataset supporting pressure/contact/support, posture, or persistence;
-2. map raw rows into the existing observation layer without changing semantic labels to fit the data;
-3. keep calibration and evaluation separate if thresholds are fitted;
-4. include adversarial / negative cases;
-5. report refusals and failures;
-6. if no suitable public dataset exists, construct a small physics simulation with explicit ground truth.
-
-## Stop rule
-
-Do not expand to the proposed 20–25 word semantic-basis benchmark until the measurement-to-factor layer survives non-hand-authored data.
+1. record reference-frame / transformation expectations explicitly for proposed grounding factors;
+2. test a second qualitatively different grounding family, preferably contact/load/support or object persistence/tracking;
+3. prefer external data when licensing/provenance permit; otherwise use a controlled simulation with explicit ground truth;
+4. preserve train/calibration versus held-out evaluation separation;
+5. keep failure cases and refusals visible;
+6. only after a second grounding family survives should the project expand toward the broader semantic-basis benchmark.
 
 ## Inquiry Graph provenance
 
-See `examples/semantic-grounding-2026-10-01/source-excerpts.json` for the curated visible conversation excerpts underlying this handoff.
+See `examples/semantic-grounding-2026-10-01/source-excerpts.json` for the curated visible conversation excerpts underlying the earlier trajectory. The source-excerpt file ends before the external-data completion and is retained as a historical source layer rather than rewritten as if it were a full transcript.
