@@ -34,7 +34,7 @@ The mappings should carry provenance, uncertainty, preservation/loss, explicit r
 
 ## Merged Linguistic Core grounding sequence
 
-All four grounding PRs were independently based on `main` and are now merged:
+The first four grounding PRs were independently based on `main` and are now merged. The second-family PRs #25–#26 are recorded in the current-state section below:
 
 ### PR #21 — six-concept Grounding IR probe
 
