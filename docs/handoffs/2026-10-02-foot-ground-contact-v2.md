@@ -1,7 +1,7 @@
 # Semantic grounding next gate v2 — independent foot-ground contact reference
 
 **Date:** 2026-10-02  
-**Status:** preregistered in merged Linguistic Core PR #26; no v2 data downloaded yet
+**Status:** preregistered in merged Linguistic Core PR #26; exact acquisition manifest merged in PR #27; signal download currently blocked by Yareta anonymous per-file HTTP 500
 
 ## Why v1 was rejected
 
@@ -165,3 +165,23 @@ cross a plate, but may not define or tune the primary v2 labels.
 - Retain failed or low-coverage results.
 - Do not claim full support grounding from this contact factor.
 - Any material protocol change requires `experiment_plan_v3.json`.
+
+## Acquisition manifest checkpoint
+
+Linguistic Core PR #27 freezes the public metadata selection before signal
+inspection:
+
+- 126 paired walking trials;
+- 252 files;
+- 321,936,880 bytes;
+- exact Yareta file IDs, sizes, paths, and SHA-256s;
+- selection SHA-256:
+  `0cdcc0ca7774648cfd189a9f00c39c49edd6ba036dd39346766e7447fffbe594`.
+
+The discovery tool verifies the preregistered participant split and trial types
+and fails closed on missing CSV/C3D counterparts.
+
+Current blocker: Yareta's public archive can be listed and prepared, but
+anonymous selective file delivery returns HTTP 500 after the documented token
+flow. No signal rows or gait-event contents have been inspected, and the v2
+protocol has not been changed in response.

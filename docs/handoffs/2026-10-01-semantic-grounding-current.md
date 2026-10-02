@@ -235,3 +235,31 @@ held-out evaluation.
 Do not expand the vocabulary until this independent-reference contact probe has
 either succeeded or failed transparently.
 
+## Yareta v2 acquisition checkpoint
+
+Linguistic Core PR #27 is merged. It resolves the preregistered v2 scope against
+Yareta's public archive-data API without reading signal rows and freezes:
+
+- 126 paired walking trials;
+- 252 files (one synchronized CSV plus one raw C3D per trial);
+- 321,936,880 bytes total;
+- every Yareta public data-file ID, path, size, and SHA-256;
+- canonical selection SHA-256
+  `0cdcc0ca7774648cfd189a9f00c39c49edd6ba036dd39346766e7447fffbe594`.
+
+The selection contains only preregistered participants P02-P10 (excluding P01)
+and the `SlowGait`, `Gait`, and `FastGait` trial families. Every selected
+trial has a same-stem synchronized CSV and raw C3D.
+
+Focused manifest tests: 4 passed. Full Linguistic Core suite: 210 passed,
+5 skipped.
+
+Yareta's public metadata API and archive preparation flow are working. However,
+anonymous per-file delivery currently returns HTTP 500 even after the
+documented per-file download-token cookie flow, and the prepared DIP internals
+require authentication. No v2 signal rows have been downloaded or scored.
+
+This is an access-layer blocker only. The preregistered dataset, participant
+split, reference construction, threshold grid, and evaluation protocol remain
+unchanged.
+
