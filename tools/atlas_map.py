@@ -184,7 +184,7 @@ def main():
             xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
             sub_title=(f"{n} chats about work and ideas. Personal chats are left out." if a.public else
                        f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars."),
-            darkmode=True, enable_topic_tree=bool(a.layers), enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
+            darkmode=True, cvd_safer=True, enable_topic_tree=bool(a.layers), enable_search=not a.public, histogram_data=None if a.public else dates, histogram_n_bins=24,
             point_radius_min_pixels=2, point_radius_max_pixels=14, edge_bundle=a.edges, inline_data=True,
             noise_label="Unlabelled", initial_zoom_fraction=0.9)
         a.html.parent.mkdir(parents=True, exist_ok=True)
