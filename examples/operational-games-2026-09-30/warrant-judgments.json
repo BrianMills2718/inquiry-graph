@@ -1,0 +1,1040 @@
+{
+  "graph_id": "graph:dialogue-2026-09-30-operational-games",
+  "regime": "grounded-dialectical",
+  "counts": {
+    "accepted": 61,
+    "defeated": 1
+  },
+  "judgments": [
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:decision-sensitive-activation",
+      "kind": "claim",
+      "text": "Activate factorization analysis when an alternative decomposition could change a material downstream decision.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:decision-sensitive-activation"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex004"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:megamodeling-role",
+      "kind": "claim",
+      "text": "Megamodeling asks what representations/artifacts exist, what kinds they are, and how they relate.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:megamodeling-role"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex006"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:factorization-role",
+      "kind": "claim",
+      "text": "Factorization analysis asks whether a particular representation is decomposed appropriately for the active decision.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:factorization-role"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex007"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-relative-math",
+      "kind": "hypothesis",
+      "text": "Reasoning may reduce to mathematics and logic conditional on the rules/conditions of the game being modeled.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-relative-math"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex008"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-identification-uncertainty",
+      "kind": "hypothesis",
+      "text": "An embedded observer cannot simply assume it knows which game it is playing.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-identification-uncertainty"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex009"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-as-hypothesis",
+      "kind": "claim",
+      "text": "The game/formalism itself should be represented as a hypothesis.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-as-hypothesis"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex010"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:metaphysical-underdetermination",
+      "kind": "hypothesis",
+      "text": "Global metaphysical certainty may remain unavailable while inquiry proceeds conditionally.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:metaphysical-underdetermination"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex011"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:operational-adequacy",
+      "kind": "claim",
+      "text": "The practical target can be local, conditional, operational adequacy rather than global metaphysical certainty.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:operational-adequacy"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex012"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:optimization-boundary",
+      "kind": "claim",
+      "text": "Defining the structure of the game should be separated from choosing an optimal strategy within it.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:optimization-boundary"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex013"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:belief-pluralism",
+      "kind": "hypothesis",
+      "text": "A modeled agent can hold beliefs or philosophical commitments that differ from the analyst's truth or optimality judgments.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:belief-pluralism"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex014"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-description-strategy-distinction",
+      "kind": "claim",
+      "text": "Game description and strategy/optimization are separate modeling problems.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-description-strategy-distinction"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex016"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:logic-external-duality",
+      "kind": "hypothesis",
+      "text": "A game description has a formal/logical side and an external-reality side whose adequacy must be learned indirectly.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:logic-external-duality"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex017"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:formal-empirical-boundary",
+      "kind": "claim",
+      "text": "Formal consequence within a model does not by itself establish empirical adequacy of that model for external reality.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:formal-empirical-boundary"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex018"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:white-box-computational-limit",
+      "kind": "claim",
+      "text": "God-level simulator access can reveal the true rules/state without making all consequences computationally cheap.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:white-box-computational-limit"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex021"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:computational-opacity",
+      "kind": "hypothesis",
+      "text": "Even with a known white-box model, computational irreducibility or intractability can block efficient consequence prediction.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:computational-opacity"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex022"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:known-rules-not-enough",
+      "kind": "claim",
+      "text": "Knowing exact rules does not imply tractable access to the full game tree or consequences.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:known-rules-not-enough"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex023"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:cgt-relevance-claim",
+      "kind": "claim",
+      "text": "Compositional game theory is especially relevant to the question of what a game is made of.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-relevance-claim"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex028"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:agenthood-derived",
+      "kind": "claim",
+      "text": "A subsystem need not intrinsically be an Agent; strategic semantics can be a modeling layer on an open component.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:agenthood-derived"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex029"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:literature-stack",
+      "kind": "claim",
+      "text": "Open/categorical systems, compositional games, unawareness/discovery, and bounded reasoning form a close prior-art stack for the problem.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:literature-stack"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex030"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:compositional-space-hypothesis",
+      "kind": "hypothesis",
+      "text": "Compositionality may structure the space of games before strategy or optimality is introduced.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-space-hypothesis"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex031"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:universal-game-vacuity",
+      "kind": "hypothesis",
+      "text": "Make the base notion of game deliberately broad enough to include essentially all lawful systems, while preserving meaning through typed enrichments.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:universal-game-vacuity"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex033"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:anti-binary-game-intelligence",
+      "kind": "hypothesis",
+      "text": "Game/non-game and intelligence/non-intelligence may be misleading binary partitions; graded structure and competence are preferred.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:anti-binary-game-intelligence"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex034"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:competence-all-way-down",
+      "kind": "hypothesis",
+      "text": "Competence may grade down to very simple or even physical systems rather than beginning at a sharp agency threshold.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:competence-all-way-down"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex035"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:vacuity-concern",
+      "kind": "claim",
+      "text": "If every lawful process is called a game, the term risks collapsing into a synonym for process.",
+      "status": "defeated",
+      "grounded_status": "out",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:vacuity-concern"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex037"
+      ],
+      "defeated_by": [
+        "dialogue-2026-09-30-operational-games:n:universal-game-vacuity"
+      ],
+      "reason": "certificate argument is defeated under grounded semantics"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:process-as-degenerate-game",
+      "kind": "hypothesis",
+      "text": "Process/dynamics may be the least enriched case of a more general game object.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:process-as-degenerate-game"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex041"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:goal-self-model",
+      "kind": "hypothesis",
+      "text": "A sufficiently rich system can model the external world, itself within that world, and a goal attributed to that modeled self.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:goal-self-model"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex042"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:self-attributed-goal-fallible",
+      "kind": "claim",
+      "text": "A system's own represented goal is not automatically epistemically privileged over external observer or white-box descriptions.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:self-attributed-goal-fallible"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex043"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:access-contract-goals",
+      "kind": "claim",
+      "text": "White-box and black-box distinguish analyst access rather than defining different kinds of systems or research arms.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:access-contract-goals"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex044"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:goal-perspective-nonidentity",
+      "kind": "claim",
+      "text": "White-box, observer-inferred, and self-attributed goal descriptions need not coincide.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:goal-perspective-nonidentity"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex045"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:universal-game-prior-art-result",
+      "kind": "claim",
+      "text": "The approved prior-art pass found that open games already admit surprisingly degenerate cases, reducing the need for a homemade universal-game tuple.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:universal-game-prior-art-result"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex050"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-goal-model-coupling",
+      "kind": "hypothesis",
+      "text": "The game a system is effectively playing depends jointly on what it wants and on hypotheses about how its actions lead to outcomes.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-goal-model-coupling"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex055"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation",
+      "kind": "hypothesis",
+      "text": "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex055"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:first-principles-platform-selection",
+      "kind": "claim",
+      "text": "Most generalized infrastructure choices can be settled from architecture, economics, and mature framework capabilities, reserving experiments for residual uncertainties.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:first-principles-platform-selection"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex059"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:three-analysis-backends",
+      "kind": "claim",
+      "text": "Behavioral simulation, feasibility/optimization, and strategic analysis are distinct concerns that can map to Concordia-like agents, optimization solvers, and compositional game theory respectively.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:three-analysis-backends"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex061"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:mechanical-long-range-dependencies",
+      "kind": "hypothesis",
+      "text": "Long-range dependencies and constraints should propagate through explicit world mechanics rather than being reconstructed inside each agent decision.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:mechanical-long-range-dependencies"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex062"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:small-composable-mechanics",
+      "kind": "hypothesis",
+      "text": "Small composable units can encode local constraints and causal propagation and then be wired into larger interdependent worlds.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:small-composable-mechanics"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex064"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:compositional-mechanics-broader-than-cgt",
+      "kind": "claim",
+      "text": "The desired compositionality is primarily a compositional causal/mechanical world model; compositional game theory applies only to components with genuinely strategic semantics.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-mechanics-broader-than-cgt"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex065"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:world-structure-outside-agent-context",
+      "kind": "claim",
+      "text": "World causal structure should live in reusable executable components rather than in an agent prompt or model context.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:world-structure-outside-agent-context"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex066"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:composed-world-primary",
+      "kind": "claim",
+      "text": "The composed executable world is primary; agents are one class of participant or policy interacting with it rather than the substrate itself.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:composed-world-primary"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex067"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:heterogeneous-component-semantics",
+      "kind": "hypothesis",
+      "text": "A compositional world may contain heterogeneous component semantics—deterministic mechanics, dynamical processes, optimization models, probabilistic mechanisms, open games, and agent policies—connected through explicit interfaces.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:heterogeneous-component-semantics"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex068"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-component-not-world",
+      "kind": "claim",
+      "text": "An open game should be one composable component type among others, not the formalism forced onto the whole world.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-component-not-world"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex068"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:cgt-strategic-substrate-role",
+      "kind": "claim",
+      "text": "Compositional game theory remains valuable as the strategic semantics for components whose outcomes depend on incentives, beliefs, observations, and anticipated responses.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-strategic-substrate-role"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex070"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling",
+      "kind": "hypothesis",
+      "text": "Which game/model to entertain is coupled to the current objective and hypotheses about how actions lead to outcomes, rather than being an isolated game-selection primitive.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-choice-decision-coupling"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex072"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art",
+      "kind": "claim",
+      "text": "Candidate generation already has substantial mature prior art and should not be reopened as an undefined foundational gap.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:candidate-generation-mature-prior-art"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex073"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:world-substrate-role",
+      "kind": "claim",
+      "text": "World Substrate is best treated as a represented-world/runtime layer while analytical solvers remain replaceable backends.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:world-substrate-role"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex078"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:ci-concordia-foundation",
+      "kind": "claim",
+      "text": "Cybernetic Influence V3 already adopted an off-the-shelf simulation foundation rather than preserving a bespoke runtime by default.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:ci-concordia-foundation"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex080"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:simudyne-integration-productization",
+      "kind": "claim",
+      "text": "Simudyne's main advantage is integrated productization of simulation authoring, experiments, validation, recording, and deployment rather than a uniquely superior foundational abstraction.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:simudyne-integration-productization"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex085"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:simudyne-budget-infeasible",
+      "kind": "claim",
+      "text": "The published Simudyne price is outside the current project budget and should not be treated as a required dependency.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:simudyne-budget-infeasible"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex088"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:first-principles-over-bakeoff",
+      "kind": "claim",
+      "text": "Framework selection should be decided mostly from architecture, economics, and mature capabilities; experiments should target only residual uncertainties.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:first-principles-over-bakeoff"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex092"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:cgt-strategic-role-refined",
+      "kind": "claim",
+      "text": "Compositional game theory is best retained for genuinely strategic structure rather than as the semantics of every world component.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-strategic-role-refined"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex094"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:mechanical-world-dependency-problem",
+      "kind": "claim",
+      "text": "Complex causal constraints such as truck fuel should propagate mechanically through world structure rather than depend on agent context or recollection.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:mechanical-world-dependency-problem"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex095"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:composable-causal-units",
+      "kind": "hypothesis",
+      "text": "Small executable components can encode local constraints and causal propagation and compose into large interdependent worlds.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:composable-causal-units"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex096"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:compositional-causal-world-model",
+      "kind": "claim",
+      "text": "The broader target is a compositional causal/mechanical world model; strategic open games are one component type within it.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-causal-world-model"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex097"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:ugd-semantic-requirements-role",
+      "kind": "claim",
+      "text": "Universal Game Decomposition is a semantic requirements/decomposition layer that constrains what an executable composition substrate must preserve, not itself the runtime.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:ugd-semantic-requirements-role"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex104"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture",
+      "kind": "claim",
+      "text": "The recommended architecture is a small common wiring syntax plus typed semantic contracts, backend-specific execution, and explicit preservation obligations.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex108"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass",
+      "kind": "claim",
+      "text": "The truck/logistics manifest passes bounded structural/mechanical/strategic checks: A and C are feasible, D is rejected before strategy, the strategic fixture has one pure Nash profile, and only departure/arrival mechanics can write material state.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex112"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result",
+      "kind": "claim",
+      "text": "The truck/logistics composition acceptance fixture was merged as the first specification-level cross-backend architecture case.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:truck-fixture-merged-result"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex113"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable",
+      "kind": "claim",
+      "text": "GitHub Actions was unavailable for the authentic run because of budget.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex117"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:wsl-restored",
+      "kind": "claim",
+      "text": "The local WSL environment was restored.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:wsl-restored"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex119"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies",
+      "kind": "claim",
+      "text": "CyberCat (open-games-hs) has native dependencies that local execution must supply.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex120"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin",
+      "kind": "claim",
+      "text": "The CyberCat Nix build requires a historical Nixpkgs pin.",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex122"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    },
+    {
+      "claim_id": "dialogue-2026-09-30-operational-games:n:authentic-truck-result",
+      "kind": "claim",
+      "text": "Authentic truck/logistics run: CyberCat/open-games-hs pinned at d3e933e0f1a39432e78f1eaea89799741268e85d executed all four request/yield profiles, and only request,yield was an equilibrium; CVS pinned at d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved; shipment_a and shipment_c were feasible, shipment_d was refused, and shipment_a was selected; SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes; a bad-controller shipment_d attempt was refused atomically with canonical state unchanged; the retained receipt reproduced exactly in the final rerun (pytest 95 passed, pip check clean).",
+      "status": "accepted",
+      "grounded_status": "in",
+      "licensed": false,
+      "unmet_assumptions": [
+        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:authentic-truck-result"
+      ],
+      "excerpt_ids": [
+        "dialogue-2026-09-30-operational-games:ex124"
+      ],
+      "defeated_by": [],
+      "reason": "typed certificate argument is grounded-in"
+    }
+  ],
+  "unmapped": {
+    "challenges:non-propositional-endpoint": 1,
+    "move:ask": 16,
+    "move:challenge": 4,
+    "move:clarify": 13,
+    "move:connect": 9,
+    "move:distinguish": 5,
+    "move:generalize": 6,
+    "move:hypothesize": 9,
+    "move:propose": 10,
+    "move:reframe": 5,
+    "move:scope": 12,
+    "move:summarize": 2,
+    "move:test": 2,
+    "node:concept": 4,
+    "node:example": 5,
+    "node:goal": 16,
+    "node:method": 5,
+    "node:question": 18,
+    "node:reference": 6,
+    "question_event:answered": 14,
+    "question_event:open": 18,
+    "question_event:reopened": 1,
+    "relation:about": 2,
+    "relation:answers": 11,
+    "relation:candidate_for": 5,
+    "relation:depends_on": 3,
+    "relation:distinguishes": 4,
+    "relation:exemplifies": 5,
+    "relation:motivates": 23,
+    "relation:part_of": 3,
+    "relation:related_to": 22,
+    "stance_event:endorses": 3,
+    "stance_event:posits": 56,
+    "stance_event:questions": 15
+  }
+}

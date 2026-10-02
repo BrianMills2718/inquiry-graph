@@ -58,6 +58,10 @@ The validator checks schema, identity, reference resolution, exact quotes and Un
 
 It does **not** certify truth, detect every bad paraphrase, know a person's private beliefs, prove the deduction/induction/abduction taxonomy exhaustive, or select the best next thought. Structured output provides a contract; semantic fidelity still needs review. A valid graph may contain a false claim and its later rejection.
 
+## Trust judgments (optional)
+
+`tools/warrant_adapter.py` feeds a graph into the external `epistemic-warrant` package and returns an accepted/defeated judgment per claim with its source excerpt ids. See [docs/warrant-adapter.md](docs/warrant-adapter.md).
+
 ## Project documents
 
 [New-agent handoff](docs/new-agent-handoff.md) · [Project status](docs/project-status.md) · [Requirements](docs/requirements.md) · [Implementation brief](docs/implementation-brief.md) · [Formalism](docs/formalism.md) · [Ontology](docs/ontology.md) · [Architecture](docs/architecture.md) · [Annotation guide](docs/annotation-guide.md) · [Seed review](docs/seed-review.md) · [Conversation walkthrough](docs/conversation-walkthrough.md) · [Evaluation](docs/evaluation.md) · [Verification](docs/verification.md) · [Decisions](docs/decisions/index.md) · [Roadmap](docs/roadmap.md) · [Security](docs/security.md) · [References](docs/references.md)

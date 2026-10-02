@@ -67,3 +67,7 @@ casually.
 
 A new schema, runtime layer, candidate-generation theory, or evaluation campaign
 requires a concrete unmet need. Prefer reuse and first-principles analysis.
+
+## Theory dependency
+
+One hop is integrated: `tools/warrant_adapter.py` runs the committed operational-games graph through `epistemic-warrant`'s grounded-dialectical regime as an external package (never copied code); see [warrant-adapter.md](warrant-adapter.md) for the mapping and the unmapped fields.
