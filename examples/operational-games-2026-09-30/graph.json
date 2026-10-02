@@ -41,7 +41,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Activate factorization analysis when an alternative decomposition could change a material downstream decision."
     },
@@ -86,7 +86,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Megamodeling asks what representations/artifacts exist, what kinds they are, and how they relate."
     },
@@ -101,7 +101,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Factorization analysis asks whether a particular representation is decomposed appropriately for the active decision."
     },
@@ -116,7 +116,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Reasoning may reduce to mathematics and logic conditional on the rules/conditions of the game being modeled."
     },
@@ -146,7 +146,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "An embedded observer cannot simply assume it knows which game it is playing."
     },
@@ -161,7 +161,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The game/formalism itself should be represented as a hypothesis."
     },
@@ -206,7 +206,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Defining the structure of the game should be separated from choosing an optimal strategy within it."
     },
@@ -221,7 +221,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "A modeled agent can hold beliefs or philosophical commitments that differ from the analyst's truth or optimality judgments."
     },
@@ -266,7 +266,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Game description and strategy/optimization are separate modeling problems."
     },
@@ -281,7 +281,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "A game description has a formal/logical side and an external-reality side whose adequacy must be learned indirectly."
     },
@@ -296,7 +296,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Formal consequence within a model does not by itself establish empirical adequacy of that model for external reality."
     },
@@ -386,7 +386,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "God-level simulator access can reveal the true rules/state without making all consequences computationally cheap."
     },
@@ -401,7 +401,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Even with a known white-box model, computational irreducibility or intractability can block efficient consequence prediction."
     },
@@ -416,7 +416,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Knowing exact rules does not imply tractable access to the full game tree or consequences."
     },
@@ -506,7 +506,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Compositional game theory is especially relevant to the question of what a game is made of."
     },
@@ -521,7 +521,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "A subsystem need not intrinsically be an Agent; strategic semantics can be a modeling layer on an open component."
     },
@@ -536,7 +536,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Open/categorical systems, compositional games, unawareness/discovery, and bounded reasoning form a close prior-art stack for the problem."
     },
@@ -551,7 +551,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Compositionality may structure the space of games before strategy or optimality is introduced."
     },
@@ -596,7 +596,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Game/non-game and intelligence/non-intelligence may be misleading binary partitions; graded structure and competence are preferred."
     },
@@ -611,7 +611,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Competence may grade down to very simple or even physical systems rather than beginning at a sharp agency threshold."
     },
@@ -641,7 +641,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "If every lawful process is called a game, the term risks collapsing into a synonym for process."
     },
@@ -701,7 +701,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Process/dynamics may be the least enriched case of a more general game object."
     },
@@ -716,7 +716,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "A sufficiently rich system can model the external world, itself within that world, and a goal attributed to that modeled self."
     },
@@ -731,7 +731,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "A system's own represented goal is not automatically epistemically privileged over external observer or white-box descriptions."
     },
@@ -746,7 +746,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "White-box and black-box distinguish analyst access rather than defining different kinds of systems or research arms."
     },
@@ -896,7 +896,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "The game a system is effectively playing depends jointly on what it wants and on hypotheses about how its actions lead to outcomes."
     },
@@ -911,7 +911,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer."
     },
@@ -956,7 +956,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Most generalized infrastructure choices can be settled from architecture, economics, and mature framework capabilities, reserving experiments for residual uncertainties."
     },
@@ -971,7 +971,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Behavioral simulation, feasibility/optimization, and strategic analysis are distinct concerns that can map to Concordia-like agents, optimization solvers, and compositional game theory respectively."
     },
@@ -1001,7 +1001,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Long-range dependencies and constraints should propagate through explicit world mechanics rather than being reconstructed inside each agent decision."
     },
@@ -1031,7 +1031,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Small composable units can encode local constraints and causal propagation and then be wired into larger interdependent worlds."
     },
@@ -1046,7 +1046,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The desired compositionality is primarily a compositional causal/mechanical world model; compositional game theory applies only to components with genuinely strategic semantics."
     },
@@ -1061,7 +1061,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "World causal structure should live in reusable executable components rather than in an agent prompt or model context."
     },
@@ -1076,7 +1076,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The composed executable world is primary; agents are one class of participant or policy interacting with it rather than the substrate itself."
     },
@@ -1106,7 +1106,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "An open game should be one composable component type among others, not the formalism forced onto the whole world."
     },
@@ -1136,7 +1136,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Compositional game theory remains valuable as the strategic semantics for components whose outcomes depend on incentives, beliefs, observations, and anticipated responses."
     },
@@ -1271,7 +1271,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "World Substrate is best treated as a represented-world/runtime layer while analytical solvers remain replaceable backends."
     },
@@ -1301,7 +1301,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Cybernetic Influence V3 already adopted an off-the-shelf simulation foundation rather than preserving a bespoke runtime by default."
     },
@@ -1346,7 +1346,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Simudyne's main advantage is integrated productization of simulation authoring, experiments, validation, recording, and deployment rather than a uniquely superior foundational abstraction."
     },
@@ -1391,7 +1391,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Framework selection should be decided mostly from architecture, economics, and mature capabilities; experiments should target only residual uncertainties."
     },
@@ -1421,7 +1421,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Compositional game theory is best retained for genuinely strategic structure rather than as the semantics of every world component."
     },
@@ -1436,7 +1436,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Complex causal constraints such as truck fuel should propagate mechanically through world structure rather than depend on agent context or recollection."
     },
@@ -1451,7 +1451,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "hypothesis",
       "text": "Small executable components can encode local constraints and causal propagation and compose into large interdependent worlds."
     },
@@ -1466,7 +1466,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The broader target is a compositional causal/mechanical world model; strategic open games are one component type within it."
     },
@@ -1496,7 +1496,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Universal Game Decomposition is a semantic requirements/decomposition layer that constrains what an executable composition substrate must preserve, not itself the runtime."
     },
@@ -1526,7 +1526,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The recommended architecture is a small common wiring syntax plus typed semantic contracts, backend-specific execution, and explicit preservation obligations."
     },
@@ -1571,7 +1571,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The truck/logistics manifest passes bounded structural/mechanical/strategic checks: A and C are feasible, D is rejected before strategy, the strategic fixture has one pure Nash profile, and only departure/arrival mechanics can write material state."
     },
@@ -1646,7 +1646,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "GitHub Actions was unavailable for the authentic run because of budget."
     },
@@ -1676,7 +1676,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The local WSL environment was restored."
     },
@@ -1691,7 +1691,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "CyberCat (open-games-hs) has native dependencies that local execution must supply."
     },
@@ -1721,7 +1721,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "The CyberCat Nix build requires a historical Nixpkgs pin."
     },
@@ -1736,7 +1736,7 @@
         }
       ],
       "origin": "inferred",
-      "review_status": "proposed",
+      "review_status": "confirmed",
       "kind": "claim",
       "text": "Authentic truck/logistics run: CyberCat/open-games-hs pinned at d3e933e0f1a39432e78f1eaea89799741268e85d executed all four request/yield profiles, and only request,yield was an equilibrium; CVS pinned at d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved; shipment_a and shipment_c were feasible, shipment_d was refused, and shipment_a was selected; SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes; a bad-controller shipment_d attempt was refused atomically with canonical state unchanged; the retained receipt reproduced exactly in the final rerun (pytest 95 passed, pip check clean)."
     }
