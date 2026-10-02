@@ -33,3 +33,9 @@ def test_no_visible_text_fails_loudly():
 def test_missing_field_fails_loudly():
     with pytest.raises(ValueError):
         parse_exporter_json({"thread_id": "t"})
+
+
+def test_provider_for_names_the_route_actually_used():
+    from inquiry_graph.live_extract import provider_for
+    assert provider_for("codex/gpt-5.6-luna") == "codex"
+    assert provider_for("openrouter/google/gemini-2.5-flash") == "openrouter"

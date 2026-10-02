@@ -24,6 +24,16 @@ from .model import (Anchor, Binding, Candidates, Conversation, Graph, Extraction
 from .validate import validate
 
 PROMPT_VERSION = "live-2.2.0"
+# Codex-subscription calls run the CLI read-only and never ask for approval; same options as the scale campaign.
+CODEX_CALL_OPTIONS = {
+    "codex_transport": "cli", "sandbox_mode": "read-only", "approval_policy": "never",
+    "model_justification": "Brian chose his active Codex subscription for archive-wide extraction "
+                           "(2026-10-01) because the OpenRouter account ran out of credits.",
+}
+
+
+def provider_for(model: str) -> str:
+    return "codex" if model.startswith("codex/") else "openrouter"
 Speaker = Literal["user", "assistant"]
 
 
@@ -281,7 +291,8 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
         model, [{"role": "system", "content": system},
                 {"role": "user", "content": f"Conversation: {conv.title}\n\n{body}"}],
         response_model=LChunk, reasoning_effort="medium", model_policy="enforce_allowlist",
-        task="extraction", trace_id=f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}", max_budget=2.00)
+        task="extraction", trace_id=f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}", max_budget=2.00,
+        **({**CODEX_CALL_OPTIONS, "working_directory": str(cache_dir)} if provider_for(model) == "codex" else {}))
     cached.write_text(out.model_dump_json(indent=1), encoding="utf-8")
     return out, meta
 
@@ -307,7 +318,7 @@ async def extract_conversation(conv: Conversation, model: str, cache_dir: Path,
         for field in ("nodes", "relations", "stance_events", "question_events"):
             getattr(merged, field).extend(getattr(part, field))
     graph = Graph(id=f"{conv.id}:live", conversations=[conv], **merged.model_dump(),
-                  extractions=[Extraction(method="llm_client-structured-chunked", provider="openrouter",
+                  extractions=[Extraction(method="llm_client-structured-chunked", provider=provider_for(model),
                                           model=model, prompt_version=PROMPT_VERSION,
                                           notes=[f"{len(chunks)} chunks of <= {max_chars} chars"])])
     graph = prune_to_valid(graph, drops)
