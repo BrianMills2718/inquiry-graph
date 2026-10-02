@@ -19,14 +19,32 @@ count). Set `REQUIRE_EPISTEMIC_WARRANT=1` to make a missing package a failure.
 
 ## Result on the committed operational-games graph
 
-62 propositional nodes: **61 accepted, 1 defeated**; **0 licensed**.
-The single defeat is `n:vacuity-concern` (source excerpt `ex037`), rebutted by
-Brian's hypothesis `n:universal-game-vacuity`. Full per-claim output with
-excerpt ids: `examples/operational-games-2026-09-30/warrant-judgments.json`.
+62 propositional nodes: **61 accepted, 1 defeated**; **51 licensed** (since the
+2026-10-02 review, see below), **10 accepted but unlicensed**, **1 defeated and
+unlicensed**. Full per-claim output with excerpt ids:
+`examples/operational-games-2026-09-30/warrant-judgments.json`.
 
-"Accepted" here means only "not defeated by any recorded challenge under grounded
-semantics". The hop is a plumbing proof, not evidence that claims are true: the
-graph holds very few challenges (one usable), and every annotation is `proposed`.
+* The 10 accepted-but-unlicensed nodes are still `proposed`, so each carries the
+  unmet assumption `annotation-confirmed:<id>`; no license rule was loosened.
+* The defeated node is `n:vacuity-concern` (source excerpt `ex037`), rebutted by
+  Brian's hypothesis `n:universal-game-vacuity`. It is confirmed (its wording matches
+  its quote) but defeated, so it has nothing unmet and is still not licensed.
+
+"Accepted" means only "not defeated by any recorded challenge under grounded
+semantics". The graph holds very few challenges (one usable), so acceptance is weak
+evidence. "Licensed" means accepted plus reviewed wording; it is not truth and not
+endorsement (see the review note).
+
+### Review basis for the confirmations (2026-10-02)
+
+52 of the 62 judged nodes were set to `review_status=confirmed` in one review commit.
+**Confirmed here means the node's text faithfully matches its quoted source span.** It
+does not mean Brian endorses the claim or that it is true: of the 52, 30 are the
+assistant's words (including the confirmed-but-defeated `vacuity-concern`), 16 Brian's,
+5 his 2026-10-02 curation summary. The basis was an AI read-through of
+node wording against its quote, followed by Brian's bulk approval of that list; Brian did
+not read each node. Dated record and the 10 held nodes:
+`examples/operational-games-2026-09-30/review-2026-10-02.md`.
 
 ## Who said it (speaker attribution)
 
@@ -45,7 +63,8 @@ unchanged):
   summary of a continuation, not an original dialogue turn, so it is kept separate.
 
 On the committed graph: 36 assistant, 21 user (Brian), 5 curation-summary, 0 mixed.
-Confirming a node never means Brian endorsed it when `speaker_kind` is `assistant`.
+Confirming a node never means Brian endorsed it when `speaker_kind` is `assistant`; licensing
+an assistant-spoken claim says only that its wording was checked against its quote.
 
 ## Field mapping
 

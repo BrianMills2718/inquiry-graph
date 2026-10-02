@@ -12,10 +12,8 @@
       "text": "Activate factorization analysis when an alternative decomposition could change a material downstream decision.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:decision-sensitive-activation"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex004"
       ],
@@ -40,10 +38,8 @@
       "text": "Megamodeling asks what representations/artifacts exist, what kinds they are, and how they relate.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:megamodeling-role"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex006"
       ],
@@ -68,10 +64,8 @@
       "text": "Factorization analysis asks whether a particular representation is decomposed appropriately for the active decision.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:factorization-role"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex007"
       ],
@@ -96,10 +90,8 @@
       "text": "Reasoning may reduce to mathematics and logic conditional on the rules/conditions of the game being modeled.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-relative-math"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex008"
       ],
@@ -124,10 +116,8 @@
       "text": "An embedded observer cannot simply assume it knows which game it is playing.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-identification-uncertainty"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex009"
       ],
@@ -152,10 +142,8 @@
       "text": "The game/formalism itself should be represented as a hypothesis.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-as-hypothesis"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex010"
       ],
@@ -236,10 +224,8 @@
       "text": "Defining the structure of the game should be separated from choosing an optimal strategy within it.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:optimization-boundary"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex013"
       ],
@@ -264,10 +250,8 @@
       "text": "A modeled agent can hold beliefs or philosophical commitments that differ from the analyst's truth or optimality judgments.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:belief-pluralism"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex014"
       ],
@@ -292,10 +276,8 @@
       "text": "Game description and strategy/optimization are separate modeling problems.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-description-strategy-distinction"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex016"
       ],
@@ -320,10 +302,8 @@
       "text": "A game description has a formal/logical side and an external-reality side whose adequacy must be learned indirectly.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:logic-external-duality"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex017"
       ],
@@ -348,10 +328,8 @@
       "text": "Formal consequence within a model does not by itself establish empirical adequacy of that model for external reality.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:formal-empirical-boundary"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex018"
       ],
@@ -376,10 +354,8 @@
       "text": "God-level simulator access can reveal the true rules/state without making all consequences computationally cheap.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:white-box-computational-limit"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex021"
       ],
@@ -404,10 +380,8 @@
       "text": "Even with a known white-box model, computational irreducibility or intractability can block efficient consequence prediction.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:computational-opacity"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex022"
       ],
@@ -432,10 +406,8 @@
       "text": "Knowing exact rules does not imply tractable access to the full game tree or consequences.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:known-rules-not-enough"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex023"
       ],
@@ -460,10 +432,8 @@
       "text": "Compositional game theory is especially relevant to the question of what a game is made of.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-relevance-claim"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex028"
       ],
@@ -488,10 +458,8 @@
       "text": "A subsystem need not intrinsically be an Agent; strategic semantics can be a modeling layer on an open component.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:agenthood-derived"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex029"
       ],
@@ -516,10 +484,8 @@
       "text": "Open/categorical systems, compositional games, unawareness/discovery, and bounded reasoning form a close prior-art stack for the problem.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:literature-stack"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex030"
       ],
@@ -544,10 +510,8 @@
       "text": "Compositionality may structure the space of games before strategy or optimality is introduced.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-space-hypothesis"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex031"
       ],
@@ -600,10 +564,8 @@
       "text": "Game/non-game and intelligence/non-intelligence may be misleading binary partitions; graded structure and competence are preferred.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:anti-binary-game-intelligence"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex034"
       ],
@@ -628,10 +590,8 @@
       "text": "Competence may grade down to very simple or even physical systems rather than beginning at a sharp agency threshold.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:competence-all-way-down"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex035"
       ],
@@ -657,9 +617,7 @@
       "status": "defeated",
       "grounded_status": "out",
       "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:vacuity-concern"
-      ],
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex037"
       ],
@@ -686,10 +644,8 @@
       "text": "Process/dynamics may be the least enriched case of a more general game object.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:process-as-degenerate-game"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex041"
       ],
@@ -714,10 +670,8 @@
       "text": "A sufficiently rich system can model the external world, itself within that world, and a goal attributed to that modeled self.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:goal-self-model"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex042"
       ],
@@ -742,10 +696,8 @@
       "text": "A system's own represented goal is not automatically epistemically privileged over external observer or white-box descriptions.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:self-attributed-goal-fallible"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex043"
       ],
@@ -770,10 +722,8 @@
       "text": "White-box and black-box distinguish analyst access rather than defining different kinds of systems or research arms.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:access-contract-goals"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex044"
       ],
@@ -854,10 +804,8 @@
       "text": "The game a system is effectively playing depends jointly on what it wants and on hypotheses about how its actions lead to outcomes.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-goal-model-coupling"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex055"
       ],
@@ -882,10 +830,8 @@
       "text": "Game selection may be derived from existing decision-theoretic and hypothesis-generation machinery rather than requiring a new foundational layer.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:reuse-decision-hypothesis-generation"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex055"
       ],
@@ -910,10 +856,8 @@
       "text": "Most generalized infrastructure choices can be settled from architecture, economics, and mature framework capabilities, reserving experiments for residual uncertainties.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:first-principles-platform-selection"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex059"
       ],
@@ -938,10 +882,8 @@
       "text": "Behavioral simulation, feasibility/optimization, and strategic analysis are distinct concerns that can map to Concordia-like agents, optimization solvers, and compositional game theory respectively.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:three-analysis-backends"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex061"
       ],
@@ -966,10 +908,8 @@
       "text": "Long-range dependencies and constraints should propagate through explicit world mechanics rather than being reconstructed inside each agent decision.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:mechanical-long-range-dependencies"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex062"
       ],
@@ -994,10 +934,8 @@
       "text": "Small composable units can encode local constraints and causal propagation and then be wired into larger interdependent worlds.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:small-composable-mechanics"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex064"
       ],
@@ -1022,10 +960,8 @@
       "text": "The desired compositionality is primarily a compositional causal/mechanical world model; compositional game theory applies only to components with genuinely strategic semantics.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-mechanics-broader-than-cgt"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex065"
       ],
@@ -1050,10 +986,8 @@
       "text": "World causal structure should live in reusable executable components rather than in an agent prompt or model context.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:world-structure-outside-agent-context"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex066"
       ],
@@ -1078,10 +1012,8 @@
       "text": "The composed executable world is primary; agents are one class of participant or policy interacting with it rather than the substrate itself.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:composed-world-primary"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex067"
       ],
@@ -1134,10 +1066,8 @@
       "text": "An open game should be one composable component type among others, not the formalism forced onto the whole world.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:game-component-not-world"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex068"
       ],
@@ -1162,10 +1092,8 @@
       "text": "Compositional game theory remains valuable as the strategic semantics for components whose outcomes depend on incentives, beliefs, observations, and anticipated responses.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-strategic-substrate-role"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex070"
       ],
@@ -1246,10 +1174,8 @@
       "text": "World Substrate is best treated as a represented-world/runtime layer while analytical solvers remain replaceable backends.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:world-substrate-role"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex078"
       ],
@@ -1274,10 +1200,8 @@
       "text": "Cybernetic Influence V3 already adopted an off-the-shelf simulation foundation rather than preserving a bespoke runtime by default.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:ci-concordia-foundation"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex080"
       ],
@@ -1302,10 +1226,8 @@
       "text": "Simudyne's main advantage is integrated productization of simulation authoring, experiments, validation, recording, and deployment rather than a uniquely superior foundational abstraction.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:simudyne-integration-productization"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex085"
       ],
@@ -1358,10 +1280,8 @@
       "text": "Framework selection should be decided mostly from architecture, economics, and mature capabilities; experiments should target only residual uncertainties.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:first-principles-over-bakeoff"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex092"
       ],
@@ -1386,10 +1306,8 @@
       "text": "Compositional game theory is best retained for genuinely strategic structure rather than as the semantics of every world component.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cgt-strategic-role-refined"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex094"
       ],
@@ -1414,10 +1332,8 @@
       "text": "Complex causal constraints such as truck fuel should propagate mechanically through world structure rather than depend on agent context or recollection.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:mechanical-world-dependency-problem"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex095"
       ],
@@ -1442,10 +1358,8 @@
       "text": "Small executable components can encode local constraints and causal propagation and compose into large interdependent worlds.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:composable-causal-units"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex096"
       ],
@@ -1470,10 +1384,8 @@
       "text": "The broader target is a compositional causal/mechanical world model; strategic open games are one component type within it.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:compositional-causal-world-model"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex097"
       ],
@@ -1498,10 +1410,8 @@
       "text": "Universal Game Decomposition is a semantic requirements/decomposition layer that constrains what an executable composition substrate must preserve, not itself the runtime.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:ugd-semantic-requirements-role"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex104"
       ],
@@ -1526,10 +1436,8 @@
       "text": "The recommended architecture is a small common wiring syntax plus typed semantic contracts, backend-specific execution, and explicit preservation obligations.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:typed-wiring-contract-architecture"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex108"
       ],
@@ -1554,10 +1462,8 @@
       "text": "The truck/logistics manifest passes bounded structural/mechanical/strategic checks: A and C are feasible, D is rejected before strategy, the strategic fixture has one pure Nash profile, and only departure/arrival mechanics can write material state.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:truck-fixture-spec-pass"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex112"
       ],
@@ -1610,10 +1516,8 @@
       "text": "GitHub Actions was unavailable for the authentic run because of budget.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:github-actions-budget-unavailable"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex117"
       ],
@@ -1638,10 +1542,8 @@
       "text": "The local WSL environment was restored.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:wsl-restored"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex119"
       ],
@@ -1666,10 +1568,8 @@
       "text": "CyberCat (open-games-hs) has native dependencies that local execution must supply.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:cybercat-native-dependencies"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex120"
       ],
@@ -1694,10 +1594,8 @@
       "text": "The CyberCat Nix build requires a historical Nixpkgs pin.",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:historical-nixpkgs-pin"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex122"
       ],
@@ -1722,10 +1620,8 @@
       "text": "Authentic truck/logistics run: CyberCat/open-games-hs pinned at d3e933e0f1a39432e78f1eaea89799741268e85d executed all four request/yield profiles, and only request,yield was an equilibrium; CVS pinned at d3eb2d5f247a3686f5bd9982c813b0a26a8b0558 validated FiniteStrategicSnapshotV1 and compiled BidirectionalResolved; shipment_a and shipment_c were feasible, shipment_d was refused, and shipment_a was selected; SimPy 4.1.2 scheduled arrival at 1.5h without canonical material writes; a bad-controller shipment_d attempt was refused atomically with canonical state unchanged; the retained receipt reproduced exactly in the final rerun (pytest 95 passed, pip check clean).",
       "status": "accepted",
       "grounded_status": "in",
-      "licensed": false,
-      "unmet_assumptions": [
-        "annotation-confirmed:dialogue-2026-09-30-operational-games:n:authentic-truck-result"
-      ],
+      "licensed": true,
+      "unmet_assumptions": [],
       "excerpt_ids": [
         "dialogue-2026-09-30-operational-games:ex124"
       ],

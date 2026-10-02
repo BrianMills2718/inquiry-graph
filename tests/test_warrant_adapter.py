@@ -55,9 +55,51 @@ def test_every_judgment_carries_real_source_excerpt_ids(result):
         assert set(judgment["excerpt_ids"]) <= excerpt_ids
 
 
-def test_unreviewed_annotations_are_never_licensed(result):
-    assert not any(j["licensed"] for j in result["judgments"])
-    assert all(j["unmet_assumptions"] for j in result["judgments"])
+HELD_PROPOSED = {P + "n:" + h for h in (
+    "metaphysical-underdetermination", "operational-adequacy", "universal-game-vacuity",
+    "goal-perspective-nonidentity", "universal-game-prior-art-result",
+    "heterogeneous-component-semantics", "game-choice-decision-coupling",
+    "candidate-generation-mature-prior-art", "simudyne-budget-infeasible",
+    "truck-fixture-merged-result")}
+
+
+def test_license_split_after_2026_10_02_review(result):
+    """52 of 62 judged nodes were confirmed (basis: docs review note); 10 stay proposed."""
+    j = by_id(result)
+    licensed = {k for k, v in j.items() if v["licensed"]}
+    assert len(licensed) == 51
+    assert Counter((v["status"], v["licensed"]) for v in j.values()) == {
+        ("accepted", True): 51, ("accepted", False): 10, ("defeated", False): 1}
+    # The 10 held nodes are accepted but unlicensed, solely because still proposed.
+    assert {k for k, v in j.items() if v["status"] == "accepted" and not v["licensed"]} == HELD_PROPOSED
+    for k in HELD_PROPOSED:
+        assert j[k]["unmet_assumptions"] == ["annotation-confirmed:" + k]
+    # vacuity-concern is confirmed but defeated, so it is not licensed and has nothing unmet.
+    assert j[P + "n:vacuity-concern"]["licensed"] is False
+    assert j[P + "n:vacuity-concern"]["unmet_assumptions"] == []
+    # Licensed claims have no unmet assumptions; game-goal-model-coupling is confirmed and licensed.
+    assert all(j[k]["unmet_assumptions"] == [] for k in licensed)
+    assert P + "n:game-goal-model-coupling" in licensed
+    # Who said the licensed claims (not endorsement by Brian when speaker is assistant).
+    assert Counter(j[k]["speaker_kind"] for k in licensed) == {
+        "assistant": 30, "user": 16, "curation-summary": 5}
+
+
+def test_graph_confirmation_matches_judgments():
+    graph = load(EX / "graph.json", Graph)
+    judged = {x["claim_id"] for x in json.loads((EX / "warrant-judgments.json").read_text())["judgments"]}
+    confirmed = {n.id for n in graph.nodes if n.review_status == "confirmed"}
+    assert confirmed == judged - HELD_PROPOSED and len(confirmed) == 52
+    assert all(n.review_status == "proposed" for n in graph.nodes if n.id not in confirmed)
+
+
+def test_proposed_annotation_is_never_licensed():
+    graph = load(EX / "graph.json", Graph)
+    node = next(n for n in graph.nodes if n.id == P + "n:game-goal-model-coupling")
+    assert {x["claim_id"]: x for x in warrant_adapter.adapt(graph)["judgments"]}[node.id]["licensed"] is True
+    node.review_status = "proposed"
+    j = {x["claim_id"]: x for x in warrant_adapter.adapt(graph)["judgments"]}[node.id]
+    assert j["licensed"] is False and j["unmet_assumptions"] == ["annotation-confirmed:" + node.id]
 
 
 def test_question_targeted_challenge_is_reported_unmapped(result):
