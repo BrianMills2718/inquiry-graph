@@ -107,6 +107,13 @@ graph.notes = [
     "After-move links encode curated excerpt order only, not causal succession.",
     "This trajectory is intentionally separate from the founding seed and can be reconciled/linked later.",
 ]
+# Review overlay: generation starts every annotation as proposed; reviews.json re-applies reviewed state.
+reviews = json.loads((ROOT / "reviews.json").read_text(encoding="utf-8"))
+by_id = {n.id: n for n in graph.nodes}
+for node_id in reviews["confirmed_nodes"]:
+    if by_id[node_id].review_status != "proposed":
+        raise ValueError(f"{node_id} is not freshly proposed")
+    by_id[node_id].review_status = "confirmed"
 require_valid(graph)
 write_json(ROOT / "candidates.json", c, replace=True)
 write_json(ROOT / "graph.json", graph, replace=True)
