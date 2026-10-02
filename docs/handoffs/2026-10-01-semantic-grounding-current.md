@@ -141,32 +141,97 @@ The next research step should generalize the lessons from PR #24 without overfit
 
 See `examples/semantic-grounding-2026-10-01/source-excerpts.json` for the curated visible conversation excerpts underlying the earlier trajectory. The source-excerpt file ends before the external-data completion and is retained as a historical source layer rather than rewritten as if it were a full transcript.
 
+## Selected second grounding family — current state 2026-10-02
 
-## Selected second grounding family — 2026-10-02
+The second family remains **contact/load evidence beneath support**, but the
+first external design failed its reference-independence audit.
 
-The next gate is now concretely selected rather than left as a choice between contact/support and persistence/tracking.
+### PhysioNet v1 — invalid external reference
 
-Use PhysioNet **Gait in Parkinson's Disease v1.0.0** (DOI `10.13026/C24H3N`, Open Data Commons Attribution License v1.0) as a public real-force source. The implementation will use only the 18 `GaCo*_01.txt` healthy-control normal-walk recordings.
+Linguistic Core PR #25 preregistered a PhysioNet force experiment before data
+inspection. The 18 selected recordings were subsequently downloaded and
+hash-verified.
 
-Published format:
+Across 218,142 rows, the proposed per-foot total-force reference channel was
+numerically identical to the sum of the eight individual force-sensor inputs to
+floating-point roundoff:
 
-- 100 Hz sampling;
-- eight vertical ground-reaction-force sensors under each foot, in Newtons;
-- one total-force channel per foot;
-- total-force channels withheld from inference and used only as physical reference channels.
+- maximum absolute difference: `2.2737367544323206e-13 N`;
+- rows differing by more than `1e-9 N`: 0.
 
-Target factor:
+Because the v1 inference force was defined as that same sum, scoring it against
+the recorded total-force column would have been tautological. No grounding
+accuracy result is claimed.
 
-- `load_bearing_contact_evidence`
-- `no_load_bearing_contact_evidence`
-- `REFUSAL:transition_or_uncertain`
+Linguistic Core PR #26 preserves this failure and the original preregistration
+rather than rewriting the protocol after inspection.
 
-The probe will not equate force, contact, and support. Its claim is limited to a measurable load-bearing-contact factor below `support`.
+### Yareta v2 — preregistered independent reference
 
-Predeclared held-out subjects: `GaCo04`, `GaCo08`, `GaCo12`, `GaCo16`; the other 14 selected subjects are calibration-only.
+PR #26 also preregisters the replacement experiment before any Yareta data are
+downloaded.
 
-Required robustness checks include naturally occurring swing/no-load windows, stance/load windows, loading/unloading transition refusals, sensor-order permutation invariance, and separate synthetic single-sensor-dropout degradation.
+Source:
 
-The detailed protocol is recorded in `docs/handoffs/2026-10-02-load-bearing-contact-next-gate.md`.
+- University of Geneva / Yareta dataset *Human gait and other movements -
+  markers / inertial sensors / pressure insoles / force plates*;
+- DOI `10.26037/yareta:xkxgaw6ewjdhfntdhtj7upepxy`;
+- CC BY 4.0;
+- associated Scientific Data article `10.1038/s41597-023-02077-3`.
 
-The experiment was preregistered and merged to Linguistic Core `main` as PR #25 before any selected force recordings were downloaded or inspected. PR #25 fixes the selected files and hashes, held-out subjects, 200 ms windowing, <=20 N no-load bound, >=100 N load-bearing bound, 80% persistence rule, refusal policy, and robustness checks. The guarded WSL transport then failed before the 18 selected recordings were downloaded; the real download command was not launched. No outcomes have been observed and no thresholds have been tuned.
+Inference channel:
+
+- the 16 pressure sensors for one insole/foot only.
+
+Primary reference:
+
+- foot-strike and foot-off events derived from optoelectronic marker
+  trajectories and visually checked/corrected by the dataset authors.
+
+The authors explicitly report that force plates were not used for gait-event
+detection and that insole event detection was not used, giving the v2 design
+the independent evidence/reference separation missing from v1.
+
+Because the source reports approximately 0.1 s synchronization precision, v2
+uses a preregistered 150 ms exclusion margin around gait events and refuses
+windows near boundaries.
+
+Calibration participants:
+
+`P02, P04, P05, P07, P08, P10`
+
+Held-out evaluation participants:
+
+`P03, P06, P09`
+
+Participant P01 is excluded because no insole data were recorded.
+
+The exact normalization, threshold grid, refusal band, tie-breaking,
+robustness tests, and stop rules are frozen in Linguistic Core
+`evaluation/load_bearing_contact/experiment_plan_v2.json`.
+
+The active Inquiry Graph protocol is:
+
+`docs/handoffs/2026-10-02-foot-ground-contact-v2.md`
+
+## Updated process lesson
+
+The second-family attempt added a methodological requirement beyond
+train/test separation and transformation testing:
+
+> **Audit whether the proposed reference is genuinely independent of the
+> inference inputs before computing semantic accuracy.**
+
+A dataset can contain a separately named channel without that channel being
+independent evidence.
+
+## Current next action
+
+Download only the preregistered Yareta walking data needed for participants
+P02-P10, verify provenance/format, confirm event-to-synchronized-time mapping
+without heuristic shifting, then implement the frozen v2 calibration and
+held-out evaluation.
+
+Do not expand the vocabulary until this independent-reference contact probe has
+either succeeded or failed transparently.
+

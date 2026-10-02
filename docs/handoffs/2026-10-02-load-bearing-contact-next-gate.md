@@ -1,7 +1,17 @@
-# Semantic grounding next gate — load-bearing contact from public force data
+# Superseded v1 next gate — PhysioNet load-bearing-contact reference audit
 
 **Date:** 2026-10-02  
-**Status:** preregistered in merged Linguistic Core PR #25; implementation pending machine availability
+**Status:** superseded after reference-independence audit; retained as historical preregistration
+
+## Outcome after acquisition
+
+All 18 preregistered recordings were later downloaded and passed their published SHA-256 checks. Across 218,142 rows, each recorded per-foot total-force channel was equal to the sum of that foot's eight individual force sensors to floating-point roundoff (maximum absolute difference `2.2737367544323206e-13 N`; zero rows differed by more than `1e-9 N`).
+
+Because the v1 inference rule used the same eight-sensor sum, the proposed reference channel was not independent. The experiment was therefore marked **invalid for external grounding validation** rather than scored as a successful classifier.
+
+Linguistic Core PR #26 records the machine-readable audit and preregisters the independent-reference replacement. The active next-gate document is:
+
+`docs/handoffs/2026-10-02-foot-ground-contact-v2.md`
 
 ## Decision
 
