@@ -10,6 +10,7 @@ from .io import load, write_json, import_export, ingest, merge, quarantine
 from .validate import validate, require_valid
 from .extract import prepare
 from .bridge import parse_bridge_markdown
+from .exporter_json import parse_exporter_json
 from .views import stats, open_questions, trace, relations_of_kind
 from .render import mermaid, dot, report, html_view
 
@@ -46,6 +47,11 @@ def parser():
     s.add_argument("--quarantine-dir", default="private/quarantine")
     s.add_argument("--force", action="store_true")
     s = sub.add_parser("import-bridge", help="normalize a chatgpt-bridge read_chatgpt_chat transcript")
+    s.add_argument("input")
+    s.add_argument("output")
+    s.add_argument("--user-label", default="Brian")
+    s.add_argument("--force", action="store_true")
+    s = sub.add_parser("import-exporter", help="normalize a Conversation Manager per-thread JSON")
     s.add_argument("input")
     s.add_argument("output")
     s.add_argument("--user-label", default="Brian")
@@ -108,6 +114,11 @@ def run(args):
         return stats(graph)
     elif args.cmd == "import-bridge":
         conv, skipped = parse_bridge_markdown(Path(args.input).read_text(encoding="utf-8"), user_label=args.user_label)
+        require_valid(Graph(id="import-check", conversations=[conv]))
+        write_json(args.output, conv, args.force)
+        return {"conversation": conv.id, "messages": len(conv.messages), "skipped": skipped}
+    elif args.cmd == "import-exporter":
+        conv, skipped = parse_exporter_json(json.loads(Path(args.input).read_text(encoding="utf-8")), user_label=args.user_label)
         require_valid(Graph(id="import-check", conversations=[conv]))
         write_json(args.output, conv, args.force)
         return {"conversation": conv.id, "messages": len(conv.messages), "skipped": skipped}
