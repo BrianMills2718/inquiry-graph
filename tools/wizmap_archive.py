@@ -12,11 +12,17 @@ from pathlib import Path
 import numpy as np
 import umap
 import wizmap
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from sentence_transformers import SentenceTransformer
 
 MIN_CHARS = 20
 EMBED_CHARS = 1500
 SHOW_CHARS = 300
+# Conversational filler that otherwise dominates WizMap's keyword topic labels ("ok-proceed-plan-lets").
+FILLER = {"ok", "okay", "like", "just", "lets", "let", "yes", "yeah", "yep", "sure", "thanks", "thank", "please",
+          "want", "need", "make", "use", "get", "gonna", "think", "know", "really", "actually", "don", "doesn",
+          "didn", "isn", "ll", "ve", "re", "uh", "um", "hmm", "also", "would", "could", "one", "way", "good",
+          "right", "now", "proceed", "go", "ahead", "thing", "things", "something", "etc"}
 
 
 def collect(conv_dir: Path):
@@ -54,7 +60,8 @@ def main():
     times = [p["date"] or "2026-01-01" for p in pts]
     data = wizmap.generate_data_list(xs, ys, shown, times=times)
     grid = wizmap.generate_grid_dict(xs, ys, [p["text"][:EMBED_CHARS] for p in pts], "User messages across ChatGPT chats",
-                                     times=times, time_format="%Y-%m-%d")
+                                     times=times, time_format="%Y-%m-%d",
+                                     stop_words=sorted(ENGLISH_STOP_WORDS | FILLER))
     a.out_dir.mkdir(parents=True, exist_ok=True)
     wizmap.save_json_files(data, grid, str(a.out_dir))
     (a.out_dir / "points.json").write_text(json.dumps(
