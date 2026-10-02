@@ -24,7 +24,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from wizmap_archive import FILLER
 
 # ChatGPT citation markers and similar tokens that carry no topic.
-NOISE = {"filecite", "turn0file0", "turn0file1", "turn0file2", "turn1file0", "cite", "turn0search0", "l2-l2", "ac5", "rc2"}
+NOISE = {"brian", "steno", "filecite", "turn0file0", "turn0file1", "turn0file2", "turn1file0", "cite", "turn0search0", "l2-l2", "ac5", "rc2"}
 CODE = re.compile(r"```.*?```", re.S)
 URL = re.compile(r"https?://\S+")
 PALETTE = ["#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#46f0f0", "#f032e6", "#bcf60c", "#fabebe",
