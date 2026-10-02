@@ -43,8 +43,12 @@ def main():
     ap.add_argument("conv_dir", type=Path)
     ap.add_argument("out_dir", type=Path)
     ap.add_argument("--min-cluster", type=int, default=8)
+    ap.add_argument("--since", default="", help="keep chats whose first user message is on/after this YYYY-MM-DD")
+    ap.add_argument("--until", default="9999-12-31", help="keep chats whose first user message is on/before this YYYY-MM-DD")
     a = ap.parse_args()
-    cs = chats(a.conv_dir)
+    cs = [c for c in chats(a.conv_dir) if c["first"] and a.since <= c["first"] <= a.until]
+    if not cs:
+        raise SystemExit("no chats in the requested date range")
     docs = [c["doc"] for c in cs]
     emb = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu").encode(
         docs, batch_size=64, show_progress_bar=True, normalize_embeddings=True)
