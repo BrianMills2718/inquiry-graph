@@ -11,8 +11,10 @@ from pathlib import Path
 from llm_client import ChoiceQuestion, call_decisions
 
 CRITERIA = {
-    "INTEREST": "An intellectual, professional or technical topic: research, ideas, theory, history, politics, "
-                "technology, software, AI, data, writing, learning about how things work.",
+    "INTEREST": "A topic someone would choose to think or learn about: research, ideas, theory, science, history, "
+                "politics, philosophy, the design of software or AI systems, data analysis, writing, how things work.",
+    "ADMIN_OR_TOOL_CHORE": "Managing an account, subscription, billing, calendar, email, or logistics; or a routine "
+                           "tool chore with no idea behind it (install, update, fix a path, reformat text).",
     "EVERYDAY_LIFE": "An everyday-life errand or curiosity: food, recipes, restaurants, shopping, travel, places, "
                      "local logistics, entertainment trivia, hobbies, pets.",
     "SENSITIVE": "Alcohol, drugs, health, medical, body, mental health, money problems, relationships or "
