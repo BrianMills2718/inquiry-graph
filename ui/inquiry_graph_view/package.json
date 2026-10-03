@@ -1,0 +1,3 @@
+{ "name": "inquiry-graph-view", "private": true, "version": "0.1.0",
+  "description": "Per-chat Inquiry Graph view: ideas grouped by conversation part, packed with ELK, drawn with Cytoscape.js. Offline single-file output.",
+  "dependencies": { "cytoscape": "^3.30.0", "elkjs": "^0.9.3" }, "devDependencies": { "esbuild": "^0.24.0" } }
