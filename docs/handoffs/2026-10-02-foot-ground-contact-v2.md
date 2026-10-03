@@ -1,7 +1,7 @@
 # Semantic grounding next gate v2 — independent foot-ground contact reference
 
 **Date:** 2026-10-02  
-**Status:** preregistered in merged Linguistic Core PR #26; exact acquisition manifest merged in PR #27; download-route diagnostic merged in PR #28; final archive-level 1 KiB Range probe pending because the authorized machine went offline
+**Status:** completed negative result; retained in merged Linguistic Core PR #29
 
 ## Why v1 was rejected
 
@@ -166,7 +166,7 @@ cross a plate, but may not define or tune the primary v2 labels.
 - Do not claim full support grounding from this contact factor.
 - Any material protocol change requires `experiment_plan_v3.json`.
 
-## Acquisition manifest checkpoint
+## Historical acquisition manifest checkpoint
 
 Linguistic Core PR #27 freezes the public metadata selection before signal
 inspection:
@@ -226,3 +226,48 @@ Interpretation is frozen:
 
 The authorized machine went offline before this one request could be issued.
 No signal data have been read and the experiment protocol remains unchanged.
+
+
+## Completed v2 result
+
+The pending archive-range diagnostic later returned **HTTP 206 Partial
+Content** with `Accept-Ranges: bytes`. The archive is a standard ZIP, so only
+the 252 preregistered files were range-extracted and verified.
+
+All 126 trial pairs passed alignment after applying the C3D-defined frame
+origin where required.
+
+Reference support under the frozen 150 ms margin / 200 ms window rule:
+
+Calibration:
+- contact: 492
+- no-contact: 3
+- ambiguous: 2,337
+
+Held out:
+- contact: 271
+- no-contact: 9
+- ambiguous: 1,186
+
+Calibration selected center `0.45`.
+
+Held-out result:
+- coverage: 91.79%
+- balanced accuracy, refusals incorrect: 50.47%
+- accuracy on covered windows: 49.81%
+- false contact: 4
+- false no-contact: 125
+- refusals: 23
+
+Sensor-order permutation caused 0 prediction changes. Single-sensor dropout
+did not rescue the model.
+
+The v2 grounding claim is therefore **not supported**.
+
+No parameter in this document is changed in response to the result.
+
+See:
+`docs/handoffs/2026-10-03-foot-ground-contact-v2-result.md`
+
+Any redesign must be v3 or later and must use fresh confirmatory evaluation
+data rather than silently reusing P03/P06/P09 as untouched held-out subjects.

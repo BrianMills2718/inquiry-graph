@@ -36,6 +36,9 @@ The second grounding family is also governed in `main`:
 
 - **PR #25** — preregistered a PhysioNet load-bearing-contact experiment before data inspection;
 - **PR #26** — recorded that v1's proposed reference was not independent and preregistered an independent-reference v2.
+- **PR #27** — froze the exact Yareta v2 acquisition manifest.
+- **PR #28** — corrected the download-route diagnosis and froze the archive-level range diagnostic.
+- **PR #29** — retained the completed Yareta v2 negative result and selective range-acquisition/evaluation tooling.
 
 The progression is now:
 
@@ -55,6 +58,10 @@ second-family preregistration
 reference-independence audit catches a circular validation design
         ↓
 independent-reference contact v2 preregistered
+        ↓
+range-selective Yareta acquisition + independent event alignment
+        ↓
+v2 held-out negative result retained
 ```
 
 ## First external-data result
@@ -93,31 +100,38 @@ This added another methodological rule:
 
 A separately named data column is not necessarily an independent measurement.
 
-## Active next gate: independent foot-ground contact v2
+## Second-family v2 result: negative
 
-Linguistic Core PR #26 preregisters the replacement against the University of
-Geneva/Yareta multimodal gait dataset.
+The independent-reference Yareta v2 experiment is complete.
 
-Primary design:
+Inference used 16 pressure-insole sensors for one foot. Primary reference came
+from source-authored optoelectronic Foot Strike / Foot Off events.
 
-- inference: 16 pressure-insole sensors for one foot;
-- reference: optoelectronic foot-strike / foot-off events derived from marker
-  trajectories and visually checked/corrected by the source authors;
-- force plates and insole event detection are not used to construct the primary
-  reference;
-- 150 ms exclusion margin around gait-event boundaries because the source
-  reports approximately 0.1 s synchronization precision;
-- calibration: P02, P04, P05, P07, P08, P10;
-- held out: P03, P06, P09;
-- P01 excluded because no insole data were recorded;
-- no vocabulary expansion until this independent-reference contact probe has
-  either succeeded or failed transparently.
+The frozen 150 ms event margin plus 200 ms windows produced only 3 no-contact
+calibration windows versus 492 contact windows. The calibration-selected center
+was 0.45.
 
-The active protocol is:
-`docs/handoffs/2026-10-02-foot-ground-contact-v2.md`.
+Held-out P03/P06/P09:
 
-The superseded PhysioNet preregistration remains at:
-`docs/handoffs/2026-10-02-load-bearing-contact-next-gate.md`.
+- coverage: 91.79%
+- balanced accuracy with refusals counted incorrect: 50.47%
+- accuracy on covered windows: 49.81%
+- false contact: 4
+- false no-contact: 125
+- refusals: 23
+
+The result is negative and does not support robust pressure-to-contact
+grounding under the preregistered v2 protocol.
+
+Detailed result:
+`docs/handoffs/2026-10-03-foot-ground-contact-v2-result.md`
+
+Protocol history:
+- `docs/handoffs/2026-10-02-foot-ground-contact-v2.md`
+- `docs/handoffs/2026-10-02-load-bearing-contact-next-gate.md`
+
+Any v3 redesign requires fresh confirmatory evaluation data; the v2 held-out
+participants are no longer untouched.
 
 ## Licensing note
 
@@ -137,3 +151,19 @@ ChatGPT export, does not preserve original message IDs or timestamps, and is
 not independently adjudicated gold data. Later implementation state belongs in
 the current handoffs rather than being retroactively inserted into the excerpt
 corpus.
+
+
+## Current methodological state
+
+The grounding program now has three empirically earned safeguards:
+
+1. transformation invariance/equivariance must be stated and tested;
+2. scoring references must be independent of inference inputs;
+3. the frozen reference construction must provide enough examples of each
+   class to support the planned calibration objective.
+
+The third safeguard comes from the Yareta v2 failure and applies to future
+preregistrations. It does not authorize retuning v2.
+
+Vocabulary expansion remains deferred until a second grounding family survives
+a clean independent-reference evaluation.
