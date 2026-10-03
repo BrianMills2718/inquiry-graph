@@ -82,3 +82,11 @@ Set via `/goal` on 2026-10-03 (Brian). The launcher widens sources to Claude and
 - Private gated hosting is live: `https://maps.brianmills.dev/` (menu, interests map, per-chat Cytoscape+ELK view `inquiry-one-chat-elk.html`) and `https://browser.brianmills.dev/` (yFiles via Voila, 4 chats). The per-chat viewer code is merged (inquiry-graph PRs #110, #111).
 - Interests map (not positions): 2,900 normalized conversations; filter and meaningful cluster names built; Kept chats and ~99 new ChatGPT chats not yet merged in.
 - Next increment: 10-chat extraction test slice via Codex, then full-snapshot decision. Kept Markdown to Conversation converter, and Claude/Gemini scheduled export, remain open.
+
+## 2026-10-03 extraction test slice (increment 2 evidence)
+
+- 10 chats (2023-06 to 2026-09, spread by date, 4k-25k chars of Brian text), `codex/gpt-5.6-luna`, $0 (subscription), all 10 validate with no errors, 551 ideas, 2 to 61 relations each; per-chat runtime 3 to 19 minutes.
+- Independent check (not the extractor's own): all 551 node quotes and all 589 stance/question quotes appear verbatim in the source message, and every stance/question actor equals that message's speaker. 210 events are attributed to Brian with his own words. Nodes are often anchored in assistant text by design (the idea's origin); Brian's position is the stance/question event.
+- Private outputs: `private/extract_test_20261003/` (graphs, per-chat reports, run.sh); gated per-chat views at maps.brianmills.dev/chats/.
+- Kept: `tools/normalize_kept.py` (PR #113) turned 1,053 vault files into 833 new Conversations (724 gemini, 58 claude, 51 chatgpt) plus 220 duplicates of exporter chats; 0 failed.
+- Not yet done: C1 reconciliation across all sources, full extraction, combined map, answer route.
