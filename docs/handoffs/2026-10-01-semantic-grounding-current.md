@@ -263,3 +263,20 @@ This is an access-layer blocker only. The preregistered dataset, participant
 split, reference construction, threshold grid, and evaluation protocol remain
 unchanged.
 
+## Yareta download-route diagnostic correction
+
+Linguistic Core PR #28 corrected the access-layer interpretation before any
+signal download. The current DLCM 3.1.9 OpenAPI does not define per-file binary
+download under archive metadata. It defines per-file download under prepared
+DIP resources, while public anonymous dissemination is documented at the
+archive level.
+
+Therefore the earlier HTTP 500 from
+`/access/metadata/{archiveId}/data/{fileId}/download` is not evidence that the
+supported public download flow is broken; that path is absent from the current
+OpenAPI.
+
+The only pending diagnostic is a single 1 KiB Range GET to the documented
+archive-level download endpoint after obtaining its archive token. The
+authorized machine went offline before that request could be executed. No v2
+signal rows have been inspected.
