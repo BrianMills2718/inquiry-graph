@@ -2,7 +2,7 @@
 
 ## Goal
 
-**Mission:** Build a private AI that knows Brian's positions across a reconciled snapshot of his ChatGPT conversations, finds gaps, open questions, conflicts, and changes over time, and provides a map Brian can open by inquiry or across topics.
+**Mission:** Build a private AI that knows Brian's positions across a reconciled snapshot of his chat conversations (ChatGPT, plus Claude and Gemini via Kept or official exports), finds gaps, open questions, conflicts, and changes over time, and provides a map Brian can open by inquiry or across topics.
 
 **Execution profile:** `continuous-light`
 
@@ -17,10 +17,11 @@
 ## Boundaries
 
 - **In scope:** Reconcile a dated archive snapshot; extract and validate source-grounded positions and open questions; build a combined map with per-inquiry views; deliver one real archive-grounded answer path for the canonical question; report source coverage, known gaps, and actual cost.
-- **Out of scope:** Continuous syncing of future chats, a production answer route, public release or hosted deployment, changing `onto-canon6`, and broad A/B/C benchmarking beyond a decision-changing uncertainty.
+- **Out of scope:** Continuous syncing of future chats, a production answer route, public or ungated release, changing `onto-canon6`, and broad A/B/C benchmarking beyond a decision-changing uncertainty.
 - **Writes allowed:** Inquiry Graph branches and PRs; quote-bearing source data and generated pages only under gitignored `private/`.
 - **Read-only or externally owned:** ChatGPT bridge is read/search only. Do not send messages, rename, move, tag, reload, or reorganize chats. Use `shared_ui` exports as a dependency; do not modify that repository under this goal.
-- **Irreversible actions requiring authorization:** None expected. Never commit transcripts or quote-bearing outputs; never deploy or publish.
+- **Private hosting (added 2026-10-03, Brian):** quote-bearing pages may be served only from the single-password-gated hosts `maps.brianmills.dev` and `browser.brianmills.dev` (personal-vps repo, apps/maps and apps/jupyter). yFiles runs only inside JupyterLab or Voila (Voila is Brian's call; see personal-vps apps/jupyter/README.md).
+- **Irreversible actions requiring authorization:** None expected. Never commit transcripts or quote-bearing outputs; never publish ungated.
 
 ## Acceptance Checks
 
@@ -54,7 +55,7 @@ For every LLM behavior claim, include the trace identifier and inspect at least 
 ## Non-Gating Next Actions
 
 - Ingest conversations created after the dated snapshot or add continuous sync.
-- Publish or deploy the private viewer.
+- Asking yWorks to allow-list the domain.
 - Adopt Jev or Laya as an open-ended extractor. The bounded disposition in `docs/goals/cross-conversation-linker.md` keeps the structured-output extractor; reopen only under its recorded same-input evidence condition.
 - Make a product answer-route or general superiority claim from the one-corpus C5 result.
 
@@ -74,14 +75,10 @@ For every LLM behavior claim, include the trace identifier and inspect at least 
 
 ## Evaluator-Facing Objective
 
-~~~text
-Goal: Build a private AI that knows Brian's positions across all of his ChatGPT conversations and gives him an inspectable topic map. Read and follow docs/goals/cross-chat-position-memory.md.
-Profile: continuous-light.
-Canonical example: A reconciled dated archive snapshot plus a cross-chat question about changed or conflicting views and open questions -> a source-grounded answer with exact quotes, titles, and dates, and a map with per-inquiry and combined-topic views from the same snapshot.
-Forbidden substitutes: Calling the 30-chat sample or an unreconciled local catalog the full archive; assistant text attributed to Brian; unsupported or uncited answers; hand-authored positions/keys; a map that silently omits conversations.
-Boundaries: Work in inquiry-graph and gitignored private/; ChatGPT bridge read/search only; onto-canon6 read-only; shared_ui export as a dependency; never commit transcripts or quote-bearing outputs; no deploy or publish.
-Done when: C1-C5 are evidenced for one reconciled archive snapshot, including per-conversation disposition, valid source-grounded positions, map coverage and desktop/mobile render, one authentic traced answer with resolved citations and hand-checked claims, and a report of costs and remaining limits.
-Stop as blocked only after 3 attempts on the same reproduced archive-access or processing blocker yield no new evidence or safe next action; report the owner and exact resume event. Do not call an accessible subset complete.
-Do not gate on: future chat sync, public deployment, Brian reading generated files, adopting Jev/Laya, or a broader benchmark not needed to decide the next route.
-Revalidate after: 3 increments, roughly 4 hours, twice the stage estimate, or an outcome reset; report outcome/enabling/process progress and recommend retain, replace, or clear. If misaligned, stop substantive work and report strategic misalignment rather than a technical blocker.
-~~~
+Set via `/goal` on 2026-10-03 (Brian). The launcher widens sources to Claude and Gemini via Kept or official exports and requires the map to open at maps.brianmills.dev behind the single-password gate; Done-when is C1-C5 for one reconciled snapshot covering every conversation source. The full text lives in the session that set it; this document's Boundaries and Acceptance Checks are the authority.
+
+## 2026-10-03 state additions
+
+- Private gated hosting is live: `https://maps.brianmills.dev/` (menu, interests map, per-chat Cytoscape+ELK view `inquiry-one-chat-elk.html`) and `https://browser.brianmills.dev/` (yFiles via Voila, 4 chats). The per-chat viewer code is merged (inquiry-graph PRs #110, #111).
+- Interests map (not positions): 2,900 normalized conversations; filter and meaningful cluster names built; Kept chats and ~99 new ChatGPT chats not yet merged in.
+- Next increment: 10-chat extraction test slice via Codex, then full-snapshot decision. Kept Markdown to Conversation converter, and Claude/Gemini scheduled export, remain open.
