@@ -2,12 +2,13 @@
 
 Usage: extract_queue.py <queue.json> <workdir> [--workers N] [--model M]
 Each item {id, file, brian_chars}. Writes <workdir>/out/<id>.graph.json, rep/<id>.json, and appends one line per
-conversation to <workdir>/dispositions.jsonl (extracted | failed | skipped_done). Items with an existing graph are skipped,
+conversation to <workdir>/dispositions.jsonl (extracted | failed | skipped_done). Items with an existing graph are skipped, fast failures are retried (login-refresh race),
 so a stopped run resumes where it left off. Nothing is silently dropped: every queue item gets a disposition line.
 """
 import argparse
 import concurrent.futures as cf
 import json
+import random
 import subprocess
 import sys
 import time
@@ -20,12 +21,24 @@ def run_one(item, work, model):
     if out.exists():
         return {"id": item["id"], "status": "skipped_done"}
     t0 = time.time()
-    p = subprocess.run([sys.executable, "-m", "inquiry_graph", "extract", "--llm", "--model", model, "--cache-dir", str(work / "cache"),
-                        "--report", str(work / "rep" / f"{cid}.json"), "--quarantine-dir", str(work / "quarantine"), item["file"], str(out)],
-                       capture_output=True, text=True)
+    for attempt in range(3):
+        t1 = time.time()
+        p = _run(cid, item, work, model, out)
+        # A fast failure (< 30 s) with no output is almost always the shared Codex login being refreshed by several
+        # workers at once. Wait a staggered moment and retry instead of recording a false extraction failure; a failure
+        # after real work is recorded as failed immediately.
+        if out.exists() or time.time() - t1 >= 30:
+            break
+        time.sleep(45 + 15 * attempt + random.randint(0, 20))
     ok = out.exists()
     return {"id": item["id"], "status": "extracted" if ok else "failed", "seconds": round(time.time() - t0), "exit": p.returncode,
-            "detail": "" if ok else (p.stdout + p.stderr)[-300:]}
+            "attempts": attempt + 1, "detail": "" if ok else (p.stdout + p.stderr)[-300:]}
+
+
+def _run(cid, item, work, model, out):
+    return subprocess.run([sys.executable, "-m", "inquiry_graph", "extract", "--llm", "--model", model, "--cache-dir", str(work / "cache"),
+                           "--report", str(work / "rep" / f"{cid}.json"), "--quarantine-dir", str(work / "quarantine"), item["file"], str(out)],
+                          capture_output=True, text=True)
 
 
 def main():
