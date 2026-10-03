@@ -63,6 +63,7 @@ def main():
     nb.cells = [nbf.v4.new_markdown_cell(f"# Inquiry Graph: {a.graph_json.name}\nPrivate: contains exact quotes. Open locally only."),
                 nbf.v4.new_code_cell(LOADER.format(path=str(a.graph_json.resolve()))),
                 nbf.v4.new_code_cell(SHOW), nbf.v4.new_code_cell(LAYOUTS)]
+    nb.metadata["kernelspec"] = {"display_name": "Python 3", "language": "python", "name": "python3"}
     a.out_ipynb.parent.mkdir(parents=True, exist_ok=True)
     nbf.write(nb, a.out_ipynb)
     print(f"wrote {a.out_ipynb}")
