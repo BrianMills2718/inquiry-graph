@@ -1,7 +1,7 @@
 # Semantic grounding next gate v2 — independent foot-ground contact reference
 
 **Date:** 2026-10-02  
-**Status:** preregistered in merged Linguistic Core PR #26; exact acquisition manifest merged in PR #27; signal download currently blocked by Yareta anonymous per-file HTTP 500
+**Status:** preregistered in merged Linguistic Core PR #26; exact acquisition manifest merged in PR #27; download-route diagnostic merged in PR #28; final archive-level 1 KiB Range probe pending because the authorized machine went offline
 
 ## Why v1 was rejected
 
@@ -185,3 +185,44 @@ Current blocker: Yareta's public archive can be listed and prepared, but
 anonymous selective file delivery returns HTTP 500 after the documented token
 flow. No signal rows or gait-event contents have been inspected, and the v2
 protocol has not been changed in response.
+
+## Download-route diagnostic correction
+
+Linguistic Core PR #28 records a correction to the earlier access diagnosis.
+
+Current DLCM 3.1.9 Access OpenAPI defines:
+
+- public/archive binary download at
+  `GET /access/metadata/{dipName}/download`;
+- its token endpoint at
+  `GET /access/metadata/{dipName}/download-token`;
+- per-file binary download only inside a prepared dissemination package at
+  `GET /access/dip/{parentId}/data/{id}/download`;
+- the corresponding DIP file token endpoint at
+  `GET /access/dip/{parentId}/data/{id}/download-token`.
+
+The path previously used for an anonymous individual file,
+`/access/metadata/{archiveId}/data/{fileId}/download`, is **not present in the
+current OpenAPI specification**. Its HTTP 500 response therefore does not
+establish that supported anonymous Yareta download is broken; it establishes
+that an unsupported/legacy route failed.
+
+The remaining least-invasive diagnostic is one archive-level request to the
+documented public download endpoint with `Range: bytes=0-1023`, after obtaining
+the archive-level download-token cookie. The request must use streaming mode so
+that a server response of HTTP 200 (Range ignored) can be disposed immediately
+without downloading the archive.
+
+Interpretation is frozen:
+
+- HTTP 206: public archive delivery supports ranges; the earlier file route was
+  simply wrong;
+- HTTP 200: public archive delivery works but ignores ranges, implying
+  whole-archive delivery for anonymous users;
+- HTTP 500: the documented archive dissemination path itself is failing
+  server-side for this archive;
+- HTTP 401/403: a deployment/access-policy mismatch with the documented Public
+  archive-download role.
+
+The authorized machine went offline before this one request could be issued.
+No signal data have been read and the experiment protocol remains unchanged.
