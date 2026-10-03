@@ -49,8 +49,8 @@ def main():
     (a.out / "topics.json").write_text(json.dumps({"records": len(recs), "topics": topics, "unclustered": other,
                                                    "reconciles": sum(t["size"] for t in topics) + len(other) == len(recs)}, indent=1), encoding="utf-8")
     hover = [f'<b>{r["title"]}</b> · {r["date"]} · {r["kind"]}<br><i>“{r["quote"][:240]}”</i>' for r in recs]
-    plot = datamapplot.create_interactive_plot(xy, np.array([names[x] for x in lab]), hover_text=hover, title="Brian's positions and questions (private)",
-                                               sub_title=f"{len(recs)} quoted events from {len({r['chat'] for r in recs})} chats; hover for the exact quote",
+    plot = datamapplot.create_interactive_plot(xy, np.array([names[x] for x in lab]), hover_text=hover, title="Positions (private)",
+                                               sub_title=f"Preview: {len(recs)} events, {len({r['chat'] for r in recs})} chats so far. Hover for quotes.",
                                                enable_search=True, darkmode=False, font_family="Roboto")
     plot.save(str(a.out / "index.html"))
     print(json.dumps({"records": len(recs), "topics": len(topics), "unclustered": len(other), "reconciles": sum(t["size"] for t in topics) + len(other) == len(recs)}))

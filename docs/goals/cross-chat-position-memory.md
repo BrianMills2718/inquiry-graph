@@ -90,3 +90,10 @@ Set via `/goal` on 2026-10-03 (Brian). The launcher widens sources to Claude and
 - Private outputs: `private/extract_test_20261003/` (graphs, per-chat reports, run.sh); gated per-chat views at maps.brianmills.dev/chats/.
 - Kept: `tools/normalize_kept.py` (PR #113) turned 1,053 vault files into 833 new Conversations (724 gemini, 58 claude, 51 chatgpt) plus 220 duplicates of exporter chats; 0 failed.
 - Not yet done: C1 reconciliation across all sources, full extraction, combined map, answer route.
+
+## 2026-10-03 later state (C3/C4 tooling, preview only)
+
+- Tools merged: `tools/extract_queue.py` (resumable, dispositions), `tools/ask_positions.py` (cross-chat answer, code-checked citations), `tools/position_records.py` + `tools/position_topics.py` + `tools/name_topics.py` (combined map with generated topic names).
+- Full extraction running on Codex only (Brian: "keep using codex"): ChatGPT queue 743 chats, Kept queue 570 chats; at last check 61 and 13 done, all extracted, 0 failed. Dispositions: `private/extract_full_20261003/dispositions.jsonl` and `kept/dispositions.jsonl`; exclusions listed in `kept/skipped_too_short.json` and the interest-filter outputs.
+- Preview map (213 events, 21 chats, 11 named topics, membership reconciles) is at maps.brianmills.dev/positions/, rendered at desktop and phone width through the gate. It is a preview of a subset, not C3.
+- Remaining: finish extraction (C1), rebuild map and rerun the answer over everything (C3, C4), write the report (C5). Resume: `tools/extract_queue.py <queue.json> <workdir> --workers N` skips finished chats.
