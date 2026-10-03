@@ -225,7 +225,7 @@ train/test separation and transformation testing:
 A dataset can contain a separately named channel without that channel being
 independent evidence.
 
-## Current next action
+## Historical next action before v2 execution
 
 Download only the preregistered Yareta walking data needed for participants
 P02-P10, verify provenance/format, confirm event-to-synchronized-time mapping
@@ -280,3 +280,82 @@ The only pending diagnostic is a single 1 KiB Range GET to the documented
 archive-level download endpoint after obtaining its archive token. The
 authorized machine went offline before that request could be executed. No v2
 signal rows have been inspected.
+
+
+## Yareta v2 completed negative result — 2026-10-03
+
+Linguistic Core PR #29 is merged and retains the completed v2 result.
+
+The public Yareta archive download path proved healthy and range-capable:
+
+- HTTP 206 Partial Content;
+- standard ZIP archive;
+- 775 total entries;
+- only the preregistered 252 files were extracted;
+- 169,830,263 compressed bytes transferred instead of the 2.76 GB archive;
+- every selected file passed ZIP CRC and Yareta SHA-256 verification.
+
+All 126 synchronized CSV/C3D trial pairs aligned at 100 Hz. Three trials used
+nonzero C3D `first_frame` origins; their event times mapped unambiguously to
+CSV row zero using C3D metadata, with no heuristic shift.
+
+The frozen v2 reference construction produced:
+
+Calibration:
+- 492 contact windows;
+- 3 no-contact windows;
+- 2,337 boundary-ambiguous windows.
+
+Held out:
+- 271 contact windows;
+- 9 no-contact windows;
+- 1,186 boundary-ambiguous windows.
+
+The calibration grid selected center `0.45`.
+
+Held-out P03/P06/P09:
+
+- coverage: 91.79%;
+- balanced accuracy with refusals counted incorrect: 50.47%;
+- overall accuracy with refusals counted incorrect: 45.71%;
+- accuracy on covered windows: 49.81%;
+- false contact: 4;
+- false no-contact: 125;
+- refusals: 23.
+
+Sensor-order permutation behaved as expected: 0/280 prediction changes.
+Sixteen single-sensor-dropout runs did not rescue the result.
+
+The substantive conclusion is **negative**: v2 does not support a robust
+pressure-to-foot-ground-contact grounding claim across held-out participants.
+
+No v2 parameter was changed after seeing this result.
+
+Detailed result:
+`docs/handoffs/2026-10-03-foot-ground-contact-v2-result.md`
+
+## Updated grounding-method rules
+
+The project now has three externally learned safeguards:
+
+1. **Transformation audit** — identify transformations a factor should survive.
+2. **Reference-independence audit** — verify that the scoring reference is not
+   derived from the inference inputs.
+3. **Reference-support audit** — before calibration, verify that the frozen
+   reference construction supplies enough examples of every class to support
+   the intended objective.
+
+The third lesson comes from the v2 imbalance. It is a rule for future
+preregistrations, not permission to repair v2 after the fact.
+
+## Current next constraint
+
+Do not expand the vocabulary yet.
+
+Any v3 contact redesign requires a separately versioned plan and fresh
+confirmatory data. P03, P06, and P09 have already served as v2 held-out
+participants and may not be silently reused as untouched confirmation for a
+post-hoc pressure rule.
+
+The next strategic task is therefore to choose a fresh evaluation source or a
+genuinely untouched task family before defining v3.
