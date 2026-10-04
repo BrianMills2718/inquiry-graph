@@ -54,25 +54,25 @@ def main():
         if e.get("thread_id"):
             agent.add("chatgpt:" + e["thread_id"])
     flt = {}
-    for f in ["archive-inventory/public_filter/interest_v2_nolegal.json", "kept_normalized_20261003/interest.json", "extract_full_20261003/new108/interest.json"]:
+    for f in ["archive-inventory/public_filter/interest_v2_nolegal.json", "kept_normalized_20261003/interest.json", "extract_full_20261003/new108/interest.json", "claude_export_normalized_20261004/interest.json"]:
         for x in json.loads((R / f).read_text()):
             flt[x["id"]] = x
     short = set()
-    for f in ["extract_full_20261003/skipped_too_short.json", "extract_full_20261003/kept/skipped_too_short.json", "extract_full_20261003/new108/skipped_too_short.json"]:
+    for f in ["extract_full_20261003/skipped_too_short.json", "extract_full_20261003/kept/skipped_too_short.json", "extract_full_20261003/new108/skipped_too_short.json", "extract_full_20261003/claude_export/skipped_too_short.json"]:
         short |= {x["id"] for x in json.loads((R / f).read_text())} if (R / f).exists() else set()
     # the ChatGPT queue builder skipped short chats without writing a file: recompute from the queue
     queued = set()
-    for q in ["extract_full_20261003/queue.json", "extract_full_20261003/kept/queue.json", "extract_full_20261003/new108/queue.json", "extract_full_20261003/lowconf/queue.json"]:
+    for q in ["extract_full_20261003/queue.json", "extract_full_20261003/kept/queue.json", "extract_full_20261003/new108/queue.json", "extract_full_20261003/lowconf/queue.json", "extract_full_20261003/claude_export/queue.json"]:
         queued |= {x["id"] for x in json.loads((R / q).read_text())}
     graphs, events, failed_extract = set(), collections.Counter(), set()
-    gdirs = ["extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out", "extract_full_20261003/single/out", "extract_full_20261003/lowconf/out", "extract_test_20261003/out"]
+    gdirs = ["extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out", "extract_full_20261003/single/out", "extract_full_20261003/claude_export/out", "extract_full_20261003/lowconf/out", "extract_test_20261003/out"]
     for d in gdirs:
         for f in glob.glob(str(R / d / "*.graph.json")):
             g = json.loads(Path(f).read_text())
             cid = g["conversations"][0]["id"]
             graphs.add(cid)
             events[cid] = sum(1 for k in ("stance_events", "question_events") for e in g[k] if e["actor_id"] == "participant:brian")
-    for d in ["extract_full_20261003", "extract_full_20261003/kept", "extract_full_20261003/new108", "extract_full_20261003/single", "extract_full_20261003/lowconf"]:
+    for d in ["extract_full_20261003", "extract_full_20261003/kept", "extract_full_20261003/new108", "extract_full_20261003/single", "extract_full_20261003/lowconf", "extract_full_20261003/claude_export"]:
         failed_extract |= {r["id"] for r in jl(R / d / "dispositions.jsonl") if r["status"] == "failed"}
     rows = {}
     for k, v in norm.items():
@@ -93,11 +93,21 @@ def main():
             cid = v["id"]
             rows[cid] = classify(cid, failed=set(), agent=set(), flt=flt, short=short | ({cid} if (cid in flt and flt[cid]["include"] and cid not in queued and cid not in graphs) else set()),
                                  graphs=graphs, failed_extract=failed_extract, events=events)
+    cx = json.loads((R / "claude_export_normalized_20261004/dispositions.json").read_text())
+    for uid, v in cx.items():
+        key = "claude:" + uid
+        if v["status"] == "failed":
+            rows["claudeexport:" + uid] = "failed_no_visible_text"
+        elif key in rows:   # the Kept copy of this chat is already counted; its graph (if any) serves both
+            rows["claudeexport:" + uid] = "duplicate_of_kept"
+        else:
+            rows[key] = classify(key, failed=set(), agent=set(), flt=flt, short=short | ({key} if (key in flt and flt[key]["include"] and key not in queued and key not in graphs) else set()),
+                                 graphs=graphs, failed_extract=failed_extract, events=events)
     by = collections.Counter(rows.values())
-    sources = {"chatgpt_raw_files": len(norm), "kept_files": len(kept)}
-    ok = len(rows) == sources["chatgpt_raw_files"] + sources["kept_files"]
+    sources = {"chatgpt_raw_files": len(norm), "kept_files": len(kept), "claude_export_conversations": len(cx)}
+    ok = len(rows) == sum(sources.values())
     out = {"sources": sources, "conversations_with_disposition": len(rows), "reconciles": ok, "by_disposition": dict(by.most_common()), "dispositions": rows,
-           "note": "Claude/Gemini official exports: none ingested; Kept is the only Claude/Gemini source."}
+           "note": "Claude: official export ingested (819 normalized of 848). Gemini and ChatGPT official exports: not yet ingested."}
     a.out.write_text(json.dumps(out, indent=1))
     print(json.dumps({k: out[k] for k in ("sources", "conversations_with_disposition", "reconciles", "by_disposition")}, indent=1))
     sys.exit(0 if ok else 1)
