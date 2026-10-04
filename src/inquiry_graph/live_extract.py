@@ -32,6 +32,12 @@ CODEX_CALL_OPTIONS = {
 }
 
 
+OPENROUTER_CALL_OPTIONS = {
+    "model_justification": "Brian asked (2026-10-04) to test non-Codex models for archive-wide extraction on OpenRouter "
+                           "to finish faster; compared against the Codex-validated gpt-5.6-luna baseline on a fixed 10-chat slice.",
+}
+
+
 def provider_for(model: str) -> str:
     return "codex" if model.startswith("codex/") else "openrouter"
 Speaker = Literal["user", "assistant"]
@@ -292,7 +298,7 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
                 {"role": "user", "content": f"Conversation: {conv.title}\n\n{body}"}],
         response_model=LChunk, reasoning_effort="medium", model_policy="enforce_allowlist",
         task="extraction", trace_id=f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}", max_budget=2.00,
-        **({**CODEX_CALL_OPTIONS, "working_directory": str(cache_dir)} if provider_for(model) == "codex" else {}))
+        **({**CODEX_CALL_OPTIONS, "working_directory": str(cache_dir)} if provider_for(model) == "codex" else OPENROUTER_CALL_OPTIONS))
     cached.write_text(out.model_dump_json(indent=1), encoding="utf-8")
     return out, meta
 
