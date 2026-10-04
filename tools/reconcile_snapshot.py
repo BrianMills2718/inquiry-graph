@@ -65,14 +65,14 @@ def main():
     for q in ["extract_full_20261003/queue.json", "extract_full_20261003/kept/queue.json", "extract_full_20261003/new108/queue.json", "extract_full_20261003/lowconf/queue.json", "extract_full_20261003/claude_export/queue.json"]:
         queued |= {x["id"] for x in json.loads((R / q).read_text())}
     graphs, events, failed_extract = set(), collections.Counter(), set()
-    gdirs = ["extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out", "extract_full_20261003/single/out", "extract_full_20261003/claude_export/out", "extract_full_20261003/lowconf/out", "extract_test_20261003/out"]
+    gdirs = ["extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out", "extract_full_20261003/single/out", "extract_full_20261003/claude_export/out", "extract_full_20261003/or_run/out", "extract_full_20261003/lowconf/out", "extract_test_20261003/out"]
     for d in gdirs:
         for f in glob.glob(str(R / d / "*.graph.json")):
             g = json.loads(Path(f).read_text())
             cid = g["conversations"][0]["id"]
             graphs.add(cid)
             events[cid] = sum(1 for k in ("stance_events", "question_events") for e in g[k] if e["actor_id"] == "participant:brian")
-    for d in ["extract_full_20261003", "extract_full_20261003/kept", "extract_full_20261003/new108", "extract_full_20261003/single", "extract_full_20261003/lowconf", "extract_full_20261003/claude_export"]:
+    for d in ["extract_full_20261003", "extract_full_20261003/kept", "extract_full_20261003/new108", "extract_full_20261003/single", "extract_full_20261003/lowconf", "extract_full_20261003/claude_export", "extract_full_20261003/or_run"]:
         failed_extract |= {r["id"] for r in jl(R / d / "dispositions.jsonl") if r["status"] == "failed"}
     rows = {}
     for k, v in norm.items():
