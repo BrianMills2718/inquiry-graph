@@ -1,5 +1,5 @@
 #!/bin/bash
-# After the extraction services finish: retry failures once, reconcile, rebuild the combined map with generated names,
+# After the extraction services finish: retry anything unfinished once on OpenRouter, reconcile, rebuild the combined map with generated names,
 # publish it to the gated site, and run the cross-chat answer. Writes private/finish_report.txt. Hand-checking the answer
 # and writing the completion report (C4, C5) still need a person or a fresh agent session.
 # Usage (as a service, with the shell's PATH so the right codex is used):
@@ -10,11 +10,9 @@ R=private; W=$R/extract_full_20261003; LOG=$R/finish_report.txt
 say() { echo "$(date -u +%FT%TZ) $*" | tee -a "$LOG"; }
 say "waiting for extraction services"
 while systemctl --user is-active --quiet 'extract-*'; do sleep 120; done
-say "services finished; retrying failed chats once"
-for d in "" kept new108; do
-  dir="$W/${d}"; q=queue.json
-  [ -f "$dir/$q" ] && .venv/bin/python tools/extract_queue.py "$dir/$q" "$(realpath "$dir")" --workers 2 >> "$LOG" 2>&1
-done
+say "services finished; retrying anything unfinished once on OpenRouter (resumable, spend-capped)"
+OR=$W/or_run
+INQUIRY_REASONING_EFFORT=medium $HOME/.venvs/inquiry-or/bin/python tools/extract_queue.py "$OR/queue.json" "$OR" --workers 8 --model openrouter/openai/gpt-6-luna --budget 25 >> "$LOG" 2>&1
 .venv/bin/python tools/reconcile_snapshot.py $R/snapshot_reconciliation.json > $R/snapshot_summary.json 2>&1; say "reconcile exit $?"
 G=""; for d in extract_test_20261003/out extract_full_20261003/out extract_full_20261003/kept/out extract_full_20261003/new108/out extract_full_20261003/single/out extract_full_20261003/claude_export/out extract_full_20261003/or_run/out extract_full_20261003/lowconf/out; do [ -d "$R/$d" ] && G="$G $R/$d"; done
 .venv/bin/python tools/position_records.py $R/records_full.json $G | tee -a "$LOG"
