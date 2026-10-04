@@ -12,6 +12,7 @@ moves are not extracted here; positions and open questions do not need them.
 import asyncio
 import hashlib
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -296,7 +297,7 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
     out, meta = await acall_llm_structured(
         model, [{"role": "system", "content": system},
                 {"role": "user", "content": f"Conversation: {conv.title}\n\n{body}"}],
-        response_model=LChunk, reasoning_effort="medium", model_policy="enforce_allowlist",
+        response_model=LChunk, reasoning_effort=os.environ.get("INQUIRY_REASONING_EFFORT", "medium"), model_policy="enforce_allowlist",
         task="extraction", trace_id=f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}", max_budget=2.00,
         **({**CODEX_CALL_OPTIONS, "working_directory": str(cache_dir)} if provider_for(model) == "codex" else OPENROUTER_CALL_OPTIONS))
     cached.write_text(out.model_dump_json(indent=1), encoding="utf-8")
