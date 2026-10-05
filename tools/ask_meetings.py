@@ -3,7 +3,9 @@ Usage: ask_meetings.py "<question>" <graph.json> [<graph.json> ...] --out answer
 Every stance and question event whose quote is verbatim in a turn spoken by that event's actor becomes an evidence
 record {id, meeting, date, speaker, kind, idea, quote}. Meetings are small, so all records go to the model (no
 retrieval cut). The model answers in claims that cite record ids; code then checks each cite exists, that a change
-cites one speaker on two dates, and that talking past each other cites at least two speakers.
+cites one speaker on two dates, and that talking past each other cites at least two speakers. Because the records are
+extractions and miss turns (a reply that answers the question may not be a record), each claim is then re-read against
+the raw transcript around its cited turns and marked supported, partly or not_supported.
 """
 import argparse
 import asyncio
@@ -74,6 +76,49 @@ async def ask(question, recs, model):
         trace_id="inquiry-graph/ask-meetings", max_budget=2.00)
 
 
+class Verdict(BaseModel):
+    verdict: Literal["supported", "partly", "not_supported"]
+    reason: str = Field(description="One or two sentences quoting the turn that decides it.")
+
+
+def windows(graph_paths, pad=3, cap=40):
+    """Message id -> (meeting turns in order, names), for reading the transcript around cited turns."""
+    out = {}
+    for f in graph_paths:
+        g = json.loads(Path(f).read_text(encoding="utf-8"))
+        conv = g["conversations"][0]
+        names = {p["id"]: p["label"] for p in conv["participants"]}
+        for m in conv["messages"]:
+            out[m["id"]] = (conv["messages"], names)
+    return out
+
+
+def excerpt(ev, wins, pad=3, cap=40):
+    parts = []
+    for meeting in sorted({r["meeting"] for r in ev}):
+        ids = [r["message_id"] for r in ev if r["meeting"] == meeting]
+        msgs, names = wins[ids[0]]
+        pos = sorted(i for i, m in enumerate(msgs) if m["id"] in ids)
+        lo, hi = max(0, pos[0] - pad), min(len(msgs), min(pos[-1] + pad + 1, pos[0] + cap))
+        parts.append(f"--- {meeting} ---\n" + "\n".join(f'[{names.get(m["actor_id"], m["actor_id"])}] {m["text"]}' for m in msgs[lo:hi]))
+    return "\n".join(parts)
+
+
+async def verify(claims, wins, model):
+    from llm_client import acall_llm_structured
+    async def one(c):
+        if not c["evidence"]:
+            return {"verdict": "not_supported", "reason": "no resolvable citations"}
+        out, _ = await acall_llm_structured(
+            model, [{"role": "system", "content": "Check one claim about a meeting against the raw transcript excerpt. Judge only from the excerpt. "
+                     "If a turn in the excerpt answers a question the claim says went unanswered, or contradicts the claim, it is not_supported."},
+                    {"role": "user", "content": f"Claim ({c['kind']}): {c['statement']}\n\nTranscript:\n{excerpt(c['evidence'], wins)}"}],
+            response_model=Verdict, reasoning_effort="medium", model_policy="enforce_allowlist", task="meeting-claim-check",
+            trace_id="inquiry-graph/ask-meetings-verify", max_budget=1.00)
+        return out.model_dump()
+    return await asyncio.gather(*(one(c) for c in claims))
+
+
 def check(answer, recs):
     by = {r["id"]: r for r in recs}
     report = []
@@ -101,11 +146,14 @@ def main():
     recs = records(a.graphs)
     answer, meta = asyncio.run(ask(a.question, recs, a.model))
     report = check(answer, recs)
+    for c, v in zip(report, asyncio.run(verify(report, windows(a.graphs), a.model))):
+        c["transcript_check"] = v
     a.out.write_text(json.dumps({"question": a.question, "records_total": len(recs), "summary": answer.summary,
                                  "unsupported_or_unknown": answer.unsupported_or_unknown, "claims": report,
                                  "trace": str(meta)[:400]}, indent=1), encoding="utf-8")
     ok = sum(1 for r in report if r["cites_resolved"] and r["shape_ok"])
-    print(json.dumps({"records_total": len(recs), "claims": len(report), "claims_passing_code_checks": ok}))
+    print(json.dumps({"records_total": len(recs), "claims": len(report), "claims_passing_code_checks": ok,
+                      "transcript_check": {v: sum(1 for r in report if r["transcript_check"]["verdict"] == v) for v in ("supported", "partly", "not_supported")}}))
     return 0 if ok == len(report) else 1
 
 
