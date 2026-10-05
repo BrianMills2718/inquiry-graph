@@ -84,3 +84,34 @@ def test_meeting_positions_cli_shows_only_that_speaker(tmp_path):
     d = json.loads(r.stdout)
     assert d["speaker"] == "Bob Ray" and [x["quote"] for x in d["shown"]] == ["the existing orchestrator cannot handle approvals"]
     assert d["failed_check"] == []
+
+
+TALK = """**[00:01] Ann Lee:** So, like, they put agents in Minecraft and… skills over time, you know, and they learn.
+
+**[00:05] Bob Ray:** Sure.
+
+**[00:09] Ann Lee:** I see the whole problem as the waiting time.
+
+**[00:12] Bob Ray:** I think the reps hate the waiting time too.
+"""
+
+
+def test_meeting_quotes_tidied_or_misnumbered_are_grounded_verbatim():
+    conv = parse_zoom_transcript(TALK, "zoom:t2", "t", "2026-10-02T16:00:00Z")
+    out = MChunk.model_validate({
+        "nodes": [node("mc", 1, "they put agents in Minecraft and skills over time"),
+                  node("wait", 2, "I see the whole problem as the waiting time."),
+                  node("reps", 3, "the reps hate the waiting time too")],
+        "stances": [{"speaker": "ANN LEE", "target": "mc", "stance": "posits", "message": 1, "quote": "they put agents in Minecraft and skills over time"},
+                    {"speaker": "ANN LEE", "target": "wait", "stance": "posits", "message": 2, "quote": "I see the whole problem as the waiting time."},
+                    {"speaker": "ANN LEE", "target": "reps", "stance": "posits", "message": 3, "quote": "the reps hate the waiting time too"}]})
+    drops = Counter()
+    c = convert(conv, 0, out, drops)
+    got = {(s.target_id.rsplit(":", 1)[1], s.actor_id, s.anchors[0].quote) for s in c.stance_events}
+    assert ("mc", "participant:ann-lee", "they put agents in Minecraft and… skills over time") in got   # exact source span stored
+    assert ("wait", "participant:ann-lee", "I see the whole problem as the waiting time.") in got     # moved from turn 2 to turn 3
+    assert not any(t == "reps" for t, _, _ in got)                                                     # Bob's words, claimed for Ann: refused
+    assert drops["quote_message_corrected"] >= 1 and drops["quote_realigned_to_source"] >= 1 and drops["speaker_not_author"] >= 1
+    for s in c.stance_events:                                                                          # every stored quote is verbatim in its message
+        m = {mm.id: mm for mm in conv.messages}[s.anchors[0].message_id]
+        assert m.text[s.anchors[0].start:s.anchors[0].end] == s.anchors[0].quote and m.actor_id == s.actor_id
