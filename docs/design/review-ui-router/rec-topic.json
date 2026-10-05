@@ -1,0 +1,226 @@
+{
+  "availability": {
+    "status": "available",
+    "present": [],
+    "missing": [],
+    "note": null
+  },
+  "primary": null,
+  "alternatives": [],
+  "alternativesDetailed": [],
+  "avoid": [
+    {
+      "pattern": "requirements-traceability-matrix",
+      "reason": "missing required capability: details-on-demand; missing required capability: editing; missing required capability: undo; missing required capability: bulk-action"
+    },
+    {
+      "pattern": "node-link-graph",
+      "reason": "scale 1400 exceeds 300 items and candidate does not support aggregation; missing required capability: details-on-demand; missing required capability: editing; missing required capability: undo; missing required capability: bulk-action"
+    },
+    {
+      "pattern": "adjacency-matrix",
+      "reason": "missing required capability: details-on-demand; missing required capability: editing; missing required capability: undo; missing required capability: bulk-action"
+    },
+    {
+      "pattern": "hierarchy-tree",
+      "reason": "scale 1400 exceeds 1000 items and candidate does not support aggregation; missing required capability: details-on-demand; missing required capability: editing; missing required capability: undo; missing required capability: bulk-action"
+    },
+    {
+      "pattern": "sequence-diagram",
+      "reason": "scale 1400 exceeds 250 items and candidate does not support aggregation; missing required capability: details-on-demand; missing required capability: editing; missing required capability: undo; missing required capability: bulk-action"
+    }
+  ],
+  "rationale": [
+    "missing required capability: details-on-demand",
+    "missing required capability: editing",
+    "missing required capability: undo",
+    "missing required capability: bulk-action",
+    "scale 1400 exceeds 300 items and candidate does not support aggregation",
+    "scale 1400 exceeds 1000 items and candidate does not support aggregation",
+    "scale 1400 exceeds 250 items and candidate does not support aggregation",
+    "scale 1400 exceeds 200 items and candidate does not support aggregation",
+    "scale 1400 exceeds 500 items and candidate does not support aggregation",
+    "scale 1400 exceeds 400 items and candidate does not support aggregation",
+    "scale 1400 exceeds 150 items and candidate does not support aggregation"
+  ],
+  "assumptions": [],
+  "interfacePatterns": [
+    {
+      "id": "task-list-progress",
+      "title": "Task list with meaningful progress",
+      "family": "planning",
+      "score": 29,
+      "reason": "supports inspect, confirm, select; serves navigate, decide, monitor; fits list, hierarchy; fits application",
+      "apply": [
+        "Group tasks by outcome",
+        "Show prerequisite state",
+        "Use action labels rather than generic status",
+        "Keep completed tasks available but quiet"
+      ],
+      "avoid": [
+        "Treating activity count as progress",
+        "Presenting blocked tasks as actionable",
+        "Duplicating one task across views"
+      ],
+      "implementationHints": [
+        "task-list",
+        "dependency-state",
+        "progressive-disclosure"
+      ],
+      "sources": [
+        {
+          "name": "GOV.UK complete multiple tasks",
+          "url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/",
+          "role": "behavior-reference"
+        },
+        {
+          "name": "PatternFly dashboard",
+          "url": "https://www.patternfly.org/patterns/dashboard/design-guidelines/",
+          "role": "behavior-reference"
+        }
+      ]
+    },
+    {
+      "id": "dashboard-progressive-disclosure",
+      "title": "Overview first, evidence on demand",
+      "family": "dashboard-composition",
+      "score": 28,
+      "reason": "supports inspect, aggregate, select, filter; serves navigate, monitor; fits list, timeline",
+      "apply": [
+        "Reserve the first screen for status and decisions",
+        "Use parameters to reduce density",
+        "Make update time visible",
+        "Coordinate overview and detail selection"
+      ],
+      "avoid": [
+        "A wall of equally weighted cards",
+        "Decorative metrics",
+        "Requiring scrolling before the active decision is visible"
+      ],
+      "implementationHints": [
+        "overview-detail",
+        "filter",
+        "linked-highlighting",
+        "freshness-label"
+      ],
+      "sources": [
+        {
+          "name": "Dashboard Design Patterns",
+          "url": "https://dashboarddesignpatterns.github.io/patterns.html",
+          "role": "research-pattern-library"
+        },
+        {
+          "name": "The Component Gallery",
+          "url": "https://component.gallery/",
+          "role": "cross-system-example-index"
+        }
+      ]
+    },
+    {
+      "id": "primary-detail-inspector",
+      "title": "Stable overview with detail inspector",
+      "family": "progressive-disclosure",
+      "score": 25,
+      "reason": "supports inspect, select; serves navigate, inspect, decide; fits list, document; fits application",
+      "apply": [
+        "Persist selection",
+        "Lead with the decision-relevant summary",
+        "Step down to evidence and source",
+        "Keep close and keyboard navigation explicit"
+      ],
+      "avoid": [
+        "Opening a new page for every detail",
+        "Showing internal IDs before human-readable meaning",
+        "Relying on hover"
+      ],
+      "implementationHints": [
+        "details-on-demand",
+        "linked-highlighting",
+        "provenance-inspector"
+      ],
+      "sources": [
+        {
+          "name": "PatternFly primary-detail",
+          "url": "https://www.patternfly.org/patterns/primary-detail/design-guidelines/",
+          "role": "behavior-reference"
+        },
+        {
+          "name": "Carbon disclosure patterns",
+          "url": "https://carbondesignsystem.com/patterns/overview/",
+          "role": "behavior-reference"
+        }
+      ]
+    },
+    {
+      "id": "human-attention-queue",
+      "title": "Human attention queue",
+      "family": "attention",
+      "score": 23,
+      "reason": "supports inspect, confirm, select; serves decide, monitor; fits list; fits application",
+      "apply": [
+        "Name the requested decision",
+        "Show urgency and consequence",
+        "Group duplicate notifications",
+        "Remove the item when its underlying state resolves"
+      ],
+      "avoid": [
+        "Asking whether generic output was useful",
+        "Using notification count as importance",
+        "Interrupting for agent-resolvable work"
+      ],
+      "implementationHints": [
+        "priority-list",
+        "status-badge",
+        "source-linked-reason"
+      ],
+      "sources": [
+        {
+          "name": "Carbon dialogs and notifications",
+          "url": "https://carbondesignsystem.com/patterns/overview/",
+          "role": "behavior-reference"
+        },
+        {
+          "name": "GOV.UK notification banner",
+          "url": "https://design-system.service.gov.uk/components/notification-banner/",
+          "role": "behavior-reference"
+        }
+      ]
+    },
+    {
+      "id": "review-before-completion",
+      "title": "Review before completion",
+      "family": "review",
+      "score": 22,
+      "reason": "supports inspect, confirm; serves inspect, decide; fits list, document; fits application",
+      "apply": [
+        "Show what changed",
+        "Bind evidence to the exact revision",
+        "Separate pass evidence from limitations",
+        "Offer approve and request-changes dispositions"
+      ],
+      "avoid": [
+        "Equating green tests with human acceptance",
+        "Making the reviewer reconstruct the change from raw files",
+        "Hiding non-claims"
+      ],
+      "implementationHints": [
+        "diff-summary",
+        "evidence-links",
+        "disposition-controls",
+        "details-on-demand"
+      ],
+      "sources": [
+        {
+          "name": "GitHub pull request reviews",
+          "url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews",
+          "role": "interaction-model"
+        },
+        {
+          "name": "GOV.UK check answers",
+          "url": "https://design-system.service.gov.uk/patterns/check-answers/",
+          "role": "behavior-reference"
+        }
+      ]
+    }
+  ]
+}
