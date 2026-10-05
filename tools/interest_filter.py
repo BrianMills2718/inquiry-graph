@@ -11,21 +11,20 @@ from pathlib import Path
 from llm_client import ChoiceQuestion, call_decisions
 
 CRITERIA = {
-    "INTEREST": "A topic someone would choose to think or learn about: research, ideas, theory, science, history, "
-                "politics, philosophy, the design of software or AI systems, data analysis, writing, how things work.",
-    "ADMIN_OR_TOOL_CHORE": "Managing an account, subscription, billing, calendar, email, or logistics; or a routine "
-                           "tool chore with no idea behind it (install, update, fix a path, reformat text).",
-    "EVERYDAY_LIFE": "An everyday-life errand or curiosity: food, recipes, restaurants, shopping, travel, places, "
-                     "local logistics, entertainment trivia, hobbies, pets.",
-    "SENSITIVE": "Alcohol, drugs, health, medical, body, mental health, money problems, relationships or "
-                 "anything personal.",
-    "UNCLEAR": "The title does not say enough to tell.",
+    "INTEREST": "Sustained thinking about ideas: research questions, theory, science, history, politics, philosophy, the design or architecture of "
+                "software or AI systems, evaluating or critiquing plans and papers, understanding a concept in depth. Not a one-off how-to.",
+    "ADMIN_OR_TOOL_CHORE": "A one-off task or how-to with no idea behind it: fix or write this code, a pandas/HTML/shell/Git command, a config or install "
+                           "problem, reformat text, which setting or tool feature does X; or managing an account, subscription, billing, calendar, email, logistics.",
+    "EVERYDAY_LIFE": "Everyday curiosity, trivia or leisure: food, recipes, shopping, travel, places, entertainment, celebrities or gossip, games and poker, "
+                     "fashion, dreams, pets, hobbies, definitions of an acronym or a quick fact.",
+    "SENSITIVE": "Alcohol, drugs, health, medical, body, mental health, money problems, relationships, sexual or scandalous content, or anything personal.",
+    "UNCLEAR": "The title and opening do not say enough to tell.",
 }
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("titles_json", type=Path, help="list of {id, title}")
+    ap.add_argument("titles_json", type=Path, help="list of {id, title[, first]}; with `first` (opening user message) the judgement reads it too")
     ap.add_argument("out", type=Path)
     ap.add_argument("--batch", type=int, default=10)
     ap.add_argument("--threshold", type=float, default=0.5)
@@ -34,7 +33,11 @@ def main():
     out = []
     for b in range(0, len(items), a.batch):
         chunk = items[b:b + a.batch]
-        questions = {f"t{i}": ChoiceQuestion(f"What kind of chat has the title {it['title'][:120]!r}?", CRITERIA) for i, it in enumerate(chunk)}
+        def ask(it):   # second-stage items carry the opening message ("first"): judge title and opening together
+            if it.get("first"):
+                return f"What kind of chat has the title {it['title'][:120]!r} and opens with {it['first'][:350]!r}?"
+            return f"What kind of chat has the title {it['title'][:120]!r}?"
+        questions = {f"t{i}": ChoiceQuestion(ask(it), CRITERIA) for i, it in enumerate(chunk)}
         r = call_decisions("openrouter/typesafe/jev-1.13", state={"task": "classify chat titles"}, questions=questions,
                            task="interest-map-filter", trace_id=f"interest-filter/b{b // a.batch:03d}", max_budget=0.05)
         for i, it in enumerate(chunk):
