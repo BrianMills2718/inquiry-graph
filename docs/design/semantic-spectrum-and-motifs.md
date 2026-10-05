@@ -8,6 +8,8 @@ Thinking something through runs along one range of formality: from a rough list 
 
 This is the published **ontology spectrum** (also called the semantic spectrum). The ecosystem's own treatment is Axis 4 ("formalization") of `vision/wiki/synthesis/formalization-megamodel-and-selection.md` in the `vision` repository (page status: archived, authority: derived, as of 2026-10-05). Levels there, light to heavy: catalog, glossary, thesaurus, informal is-a, formal is-a, formal instances, frames with value restrictions, general logical constraints; past those, behavioural/simulated and verified. "Beyond" is not one direction: models can add dynamic, intentional (goals) and social (actors) aspects.
 
+Caution from the same page: formalization is one of **seven axes** (1 analytical purpose, 2 method family, 3 theory posture such as inductive, deductive or abductive, 4 formalization, 5 data form, 6 execution, 7 human view), and its parent page (`evidence-to-action-analytical-design-dimensions-2026-09-08.md`) records the owner's rule not to flatten them into one ladder. So the spectrum above is axis 4 only; "executable" is partly axis 6, and the induction/abduction/deduction thread is axis 3. The motif design in section 3 must keep these separate.
+
 ## 2. Where inquiry-graph sits
 
 Per-chat graphs reach typed relations over claims, questions and methods with verbatim anchors: roughly "frames", with no reasoner deriving new facts. The topic digests are closer to a catalog of concepts with evidence. Neither is executable.
