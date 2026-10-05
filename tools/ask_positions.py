@@ -34,7 +34,7 @@ def records(graph_dirs):
                         if not m or m["actor_id"] != "participant:brian" or a["quote"] not in m["text"]:
                             continue
                         tgt = nodes.get(e.get("target_id") or e.get("question_id"), {}).get("text", "")
-                        out.append({"id": f"E{len(out):05d}", "chat": conv["id"], "title": conv["title"], "date": (m.get("timestamp") or "")[:10],
+                        out.append({"id": f"E{len(out):05d}", "chat": conv["id"], "title": conv["title"].strip().replace("\n", " ")[:120], "date": (m.get("timestamp") or "")[:10],
                                     "kind": e.get("stance") or ("question:" + e.get("status", "")), "target": tgt, "quote": a["quote"],
                                     "message_id": a["message_id"]})
     return out
@@ -89,7 +89,7 @@ def main():
     ap.add_argument("graph_dirs", nargs="+", type=Path)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--top", type=int, default=60)
-    ap.add_argument("--model", default="codex/gpt-5.6-luna")
+    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
     a = ap.parse_args()
     recs = records(a.graph_dirs)
     answer, pick, meta = asyncio.run(ask(a.question, recs, a.top, a.model))

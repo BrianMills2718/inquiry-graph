@@ -48,7 +48,7 @@ def main():
     other = [recs[i]["id"] for i in range(len(recs)) if lab[i] == -1]
     (a.out / "topics.json").write_text(json.dumps({"records": len(recs), "topics": topics, "unclustered": other,
                                                    "reconciles": sum(t["size"] for t in topics) + len(other) == len(recs)}, indent=1), encoding="utf-8")
-    hover = [f'<b>{r["title"]}</b> · {r["date"]} · {r["kind"]}<br><i>“{r["quote"][:240]}”</i>' for r in recs]
+    hover = [f'<b>{r["title"][:120]}</b> · {r["date"]} · {r["kind"]}<br><i>“{r["quote"][:240]}”</i>' for r in recs]
     plot = datamapplot.create_interactive_plot(xy, np.array([names[x] for x in lab]), hover_text=hover, title="Positions (private)",
                                                sub_title=f"Preview: {len(recs)} events, {len({r['chat'] for r in recs})} chats so far. Hover for quotes.",
                                                enable_search=True, darkmode=False, font_family="Roboto")
