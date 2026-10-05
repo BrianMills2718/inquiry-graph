@@ -86,6 +86,35 @@ def locate(text: str, quote: str) -> list[str]:
     return found
 
 
+_WORD = re.compile(r"[\w']+")
+
+
+def locate_loose(text: str, quote: str, max_gap: int = 3) -> list[str]:
+    """Meeting transcripts only: the quote's words in order, allowing up to `max_gap` filler words
+    ("like", "you know", repeated words) between consecutive quote words. Returns the exact source
+    span, so the stored quote is what was said, never the model's tidied version."""
+    q = [w.translate(_FOLD).lower() for w in _WORD.findall(quote)]
+    if len(q) < 5:
+        return []
+    toks = [(m.group(0).translate(_FOLD).lower(), m.start(), m.end()) for m in _WORD.finditer(text)]
+    found = []
+    for i, (w, _, _) in enumerate(toks):
+        if w != q[0]:
+            continue
+        last, ok = i, True
+        for qw in q[1:]:
+            k = last + 1
+            while k < len(toks) and k - last - 1 <= max_gap and toks[k][0] != qw:
+                k += 1
+            if k >= len(toks) or toks[k][0] != qw:
+                ok = False
+                break
+            last = k
+        if ok and (last - i + 1) - len(q) <= max(2, len(q) // 2):
+            found.append(text[toks[i][1]:toks[last][2]])
+    return found
+
+
 class LNode(BaseModel):
     key: str = Field(description="short unique slug within this response, e.g. 'induction-only-route'")
     kind: NodeKind
@@ -228,11 +257,31 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
     c = Candidates()
     nodes = {}
 
+    def find_in_meeting(msg, quote):
+        """Meetings: exact match in the named turn, else the one nearby turn holding it, else a loose word match."""
+        spans = locate(msg.text, quote)
+        if spans:
+            return msg, spans
+        near = [by_ord[k] for k in range(msg.ordinal - 3, msg.ordinal + 4)
+                if k != msg.ordinal and k in by_ord and locate(by_ord[k].text, quote)]
+        if len(near) == 1:
+            drops["quote_message_corrected"] += 1
+            return near[0], locate(near[0].text, quote)
+        loose = locate_loose(msg.text, quote)
+        if loose:
+            drops["quote_realigned_to_source"] += 1
+        return msg, loose
+
     def ground(message_no, quote, need_speaker=None):
         msg = by_ord.get(message_no)
         if msg is None:
             drops["unknown_message"] += 1
             return None, None
+        if meeting:
+            msg, found = find_in_meeting(msg, quote)
+            if not found:
+                drops["quote_not_found"] += 1
+                return None, None
         if need_speaker:
             actor = actor_of(need_speaker)
             if actor is None:
@@ -244,7 +293,7 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
             if msg.actor_id != actor:
                 drops["speaker_not_author"] += 1
                 return None, None
-        spans = locate(msg.text, quote)
+        spans = found if meeting else locate(msg.text, quote)
         if not spans:
             drops["quote_not_found"] += 1
             return None, None
@@ -406,7 +455,7 @@ async def extract_conversation(conv: Conversation, model: str, cache_dir: Path,
     graph = prune_to_valid(graph, drops)
     cost = sum(m.cost for _, m in results if m is not None)
     trace_ids = [f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}" for i in range(len(chunks))]
-    kept_adjusted = ("quote_realigned_to_source", "ambiguous_quote_first_used")
+    kept_adjusted = ("quote_realigned_to_source", "ambiguous_quote_first_used", "quote_message_corrected")
     report = {"chunks": len(chunks), "model_output": dict(raw),
               "dropped": {k: v for k, v in drops.items() if k not in kept_adjusted},
               "kept_but_adjusted": {k: v for k, v in drops.items() if k in kept_adjusted},
