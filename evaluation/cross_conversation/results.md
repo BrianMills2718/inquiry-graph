@@ -66,6 +66,16 @@ The chats were chosen by a subagent through archive search, to overlap the found
   - chat dates.
 - **Packaging defect:** a GitHub install of onto-canon6 cannot find its own `profiles/`, `ontology_packs/` or `config/`. The export ran with `ONTO_CANON6_HOME` pointing at those folders extracted with `git archive` from the pinned commit.
 
+### C3/C4 update, 2026-10-05: re-run on onto-canon6 main `2a9c48f9f5f7266ca6d19880eb2f3399b26146e4`
+
+The record above is the 2026-09-29 run and stays as it was. On 2026-10-05 the exporter moved to current onto-canon6 main, which had retired the `onto_canon6.extensions.*` import paths: alignment and epistemic now live under `onto_canon6.assertions.alignment` and `onto_canon6.assertions.epistemic`. Nothing else in the exporter changed.
+
+- **Same inputs, both revisions, same day.** The same 5 graphs and the recorded judge verdicts were exported once at the old pin `6864aa16c` and once at `2a9c48f9f`, each with its own `uv sync --extra authoring` environment and `ONTO_CANON6_HOME` set to a detached checkout of that revision. Both runs exited 0.
+- **Counts, identical at both revisions:** 148 Brian stances, 146 propositions, 3 multi-member clusters (122 judged pairs, 3 same), 148 promoted, 0 rejected, 2 tensions (both stance-only), 0 opposed conflicts, 0 cross-chat propositions.
+- **Content, not only counts:** `export.json` from the new revision is identical, apart from its `source` label, to both the old-pin re-run and the original 2026-09-29 export. Every proposition group, member, quote and tension is the same.
+- **Dated record:** `data/loss_2026-10-05_oc6-2a9c48f.json`. Embedding trace for this run: `onto-canon6-alignment-embed-48613c0d`.
+- **Packaging defect, re-checked on `2a9c48f9f`: still present for this use.** A wheel built from that revision and installed into a clean environment (no checkout, no `ONTO_CANON6_HOME`) still finds no profiles at all (`ProfileLoadError ... not found in search roots: <venv>/lib/python3.13/profiles`). With the shipped core runtime bundle selected explicitly (`ONTO_CANON6_BUNDLE=<site-packages>/onto_canon6/resources/core_default/runtime_bundle_manifest.json` plus `ONTO_CANON6_STATE_ROOT`), the `default@1.0.0` profile loads, but `general_purpose_open@0.1.0`, which this export uses, is not in the bundle, and neither is `ontology_packs/`. So the exporter still needs a checkout of the pinned revision through `ONTO_CANON6_HOME`.
+
 ## C4 — cross-chat identity and conflict
 
 - **Alignment:** the alignment extension's embedding recall plus its typed restatement judge. 146 propositions produced 122 recalled pairs, of which the judge accepted 3.
@@ -109,7 +119,10 @@ inquiry-graph extract private/xconv/<id8>.conv.json private/xconv/<id8>.graph.js
 python evaluation/cross_conversation/build_key.py
 ONTO_CANON6_HOME=<git archive of pinned onto-canon6: config profiles ontology_packs> \
   <onto-canon6[authoring] env>/python evaluation/cross_conversation/export_oc6.py
+# since 2026-10-05 (pin in export_oc6.py PINNED_ONTO_CANON6):
+#   git -C <onto-canon6> worktree add --detach <dir> <PINNED_ONTO_CANON6>; (cd <dir> && uv sync --extra authoring)
+#   ONTO_CANON6_HOME=<dir> <dir>/.venv/bin/python evaluation/cross_conversation/export_oc6.py
 python evaluation/cross_conversation/compare.py
 ```
 
-`data/` holds the non-quoting outputs: `summary.json` (per-question scores) and `loss.json` (the export loss report and counts).
+`data/` holds the non-quoting outputs: `summary.json` (per-question scores), `loss.json` (the 2026-09-29 export loss report and counts) and `loss_2026-10-05_oc6-2a9c48f.json` (the same report from the re-run on onto-canon6 `2a9c48f9f`).

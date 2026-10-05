@@ -1,0 +1,33 @@
+{
+ "pinned_onto_canon6": "2a9c48f9f5f7266ca6d19880eb2f3399b26146e4",
+ "carried": [
+  "speaker (holder role, value 'brian')",
+  "stance (value role)",
+  "proposition identity (entity, alignment cluster id)",
+  "exact evidence span, verified by onto-canon6",
+  "source message text and id",
+  "chat title and stance id (source_metadata)"
+ ],
+ "not_carried_by_this_export": [
+  "question-status events (open/deferred/resolved)",
+  "relations between nodes",
+  "assistant stances",
+  "node kind outside source_metadata",
+  "within-chat ordering beyond message ids"
+ ],
+ "tension_semantics": "role-filler conflict: same predicate, shared entity anchor, differing fillers. Detects the same proposition held with different stances; cannot detect two different propositions that contradict each other.",
+ "counts": {
+  "brian_stances": 148,
+  "propositions": 146,
+  "multi_member_clusters": 3,
+  "promoted": 148,
+  "rejected": {},
+  "tensions_total": 2,
+  "stance_only_tensions": 2,
+  "opposed_stance_conflicts": 0,
+  "cross_chat_propositions": 0
+ },
+ "alignment_traces": [
+  "onto-canon6-alignment-embed-48613c0d"
+ ]
+}
