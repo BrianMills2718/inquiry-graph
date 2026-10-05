@@ -18,7 +18,7 @@ from rank_bm25 import BM25Okapi
 
 
 def records(graph_dirs):
-    out = []
+    out, seen = [], set()   # one chat can have graphs in several folders (different runs/models): count each quoted message once
     for d in graph_dirs:
         for f in sorted(Path(d).glob("*.graph.json")):
             g = json.loads(f.read_text(encoding="utf-8"))
@@ -33,6 +33,9 @@ def records(graph_dirs):
                         m = msgs.get(a["message_id"])
                         if not m or m["actor_id"] != "participant:brian" or a["quote"] not in m["text"]:
                             continue
+                        if (a["message_id"], a["quote"]) in seen:
+                            continue
+                        seen.add((a["message_id"], a["quote"]))
                         tgt = nodes.get(e.get("target_id") or e.get("question_id"), {}).get("text", "")
                         out.append({"id": f"E{len(out):05d}", "chat": conv["id"], "title": conv["title"].strip().replace("\n", " ")[:120], "date": (m.get("timestamp") or "")[:10],
                                     "kind": e.get("stance") or ("question:" + e.get("status", "")), "target": tgt, "quote": a["quote"],
