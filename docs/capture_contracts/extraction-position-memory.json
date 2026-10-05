@@ -1,0 +1,16 @@
+{
+ "run": {"description": "Position-memory extraction (live_extract.py, chunked structured extraction), full-archive pass. Cost basis: the 2026-10-05 OpenRouter run of 1,442 chats cost $7.69.",
+         "expected_cost_usd": 7.69, "redo_extra_cost_usd": 0.0},
+ "fields": {
+  "nodes": {"captured": true},
+  "relations": {"captured": true},
+  "stance_events": {"captured": true},
+  "question_events": {"captured": true},
+  "moves": {"captured": false,
+            "reason": "live_extract.py skips inquiry moves (commit 9c8d431, 2026-09-29: 'positions and open questions do not need them'). Decided by an agent session, never put to Brian.",
+            "blocks_later_uses": ["reasoning motifs / how Brian argues", "move-level analysis of the two reasoning chats", "any use of the 15 move kinds"],
+            "marginal_cost_fraction": null, "p_later_need": null,
+            "approved_by": null, "approved_at": null,
+            "note": "Estimates pending: measure the extra cost on a 30-chat pilot with moves enabled, then fill the ranges. Until then this contract fails and expensive extraction runs are refused."}
+ }
+}
