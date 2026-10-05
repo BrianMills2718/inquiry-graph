@@ -112,3 +112,7 @@ See `docs/verification.md`. The run also repaired two invalid provisional move l
 ## One-line status
 
 **The 30-chat result does not justify the graph as a better answer-retrieval route; archive-search-then-read is the current default for that workload. Continue Inquiry Graph only where it provides a distinct capability—such as structured topic/inquiry mapping, source-grounded provenance, or another task that earns the representation's added complexity.**
+
+## Known data gaps (schema census, 2026-10-05)
+
+`tools/schema_census.py` over all 2,176 graphs: every node kind, relation kind, stance and question status appears. **Moves: 0.** `live_extract.py` skips moves on purpose (written for the position-memory goal: "positions and open questions do not need them"), so only the hand-built 30-chat fixture has moves (204). Anything that needs moves (reasoning motifs, how Brian argues) needs a new extraction pass. Every node is `proposed` and `inferred`: nothing in the archive has been human-confirmed. Run the census after each pipeline run and before starting a new use of the data; list deliberate drops under "Not captured" in the goal doc.
