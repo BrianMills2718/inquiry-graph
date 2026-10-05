@@ -43,7 +43,7 @@ def main():
     ap.add_argument("records", type=Path)
     ap.add_argument("topics", type=Path)
     ap.add_argument("out", type=Path)
-    ap.add_argument("--model", default="codex/gpt-5.6-luna")
+    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
     asyncio.run(main_async(ap.parse_args()))
 
 
