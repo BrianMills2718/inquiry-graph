@@ -1,0 +1,21 @@
+{
+  "id": "position-review-by-topic",
+  "concern": "What is my stance on this topic, which of its claims have I confirmed, and can I confirm all the fine ones at once?",
+  "stakeholder": "Brian, browsing his ~100 topics on phone or desktop",
+  "intent": ["navigate", "inspect", "decide", "modify", "monitor"],
+  "informationStructure": ["list", "hierarchy", "document", "timeline"],
+  "tasks": ["locate", "inspect", "confirm", "edit", "aggregate", "select", "filter"],
+  "entities": ["topic", "stance summary", "claim", "label", "quote", "review decision", "progress count"],
+  "relationships": ["topic contains claims", "claim supported-by quote", "decision supersedes claim"],
+  "focus": "topic list with confirmed counts, then a topic page of claims each with dated quotes and the same card actions",
+  "explanatoryFocus": ["provenance", "state", "uncertainty"],
+  "surfaceContext": { "repeatedCollection": true, "neighboringRepresentations": "homogeneous", "sharedInteractionGrammar": true, "medium": "application" },
+  "scale": { "items": 1400, "density": "medium" },
+  "interaction": { "mode": "authoring", "dynamics": "interactive" },
+  "audience": { "expertise": "expert", "frequency": "high", "domainFamiliarity": "expert", "notationFamiliarity": "novice", "visualizationLiteracy": "mixed" },
+  "consequence": { "risk": "medium", "reversibility": "reversible" },
+  "constraints": { "mobile": true, "accessibility": "high", "realtime": false, "provenance": true, "allowAggregation": true },
+  "requiredCapabilities": ["details-on-demand", "editing", "provenance", "undo", "bulk-action"],
+  "representationRole": "audit",
+  "successCriteria": ["Brian sees how much of each topic is confirmed and what confirmed means", "confirm-all-that-are-fine never confirms a claim he has not had on screen"]
+}
