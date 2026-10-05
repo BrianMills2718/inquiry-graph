@@ -241,8 +241,18 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
         msg, a = ground(r.message, r.quote)
         if a is None:
             continue
-        first, second = list(SIGNATURES[r.kind])
-        c.relations.append(Relation(id=f"{prefix}:r:{i:03d}", kind=r.kind, anchors=[a],
+        kind = r.kind
+        first, second = list(SIGNATURES[kind])
+        # A relation whose idea types break its kind's rule (a "supports" premise that is a concept, say) used to be
+        # deleted by the validator, leaving the ideas unlinked. Keep the link as the type-free related_to instead.
+        for role, key in ((first, r.source), (second, r.target)):
+            allowed = SIGNATURES[kind][role]
+            if "*" not in allowed and nodes[key].kind not in allowed:
+                drops["downgraded_to_related_to"] += 1
+                kind = "related_to"
+                first, second = list(SIGNATURES[kind])
+                break
+        c.relations.append(Relation(id=f"{prefix}:r:{i:03d}", kind=kind, anchors=[a],
                                     bindings=[Binding(role=first, ref=nodes[r.source].id),
                                               Binding(role=second, ref=nodes[r.target].id)]))
     return c
@@ -292,6 +302,8 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
     cached = cache_dir / f"chunk{i:02d}-{key}.json"
     if cached.exists():
         return LChunk.model_validate_json(cached.read_text(encoding="utf-8")), None
+    if os.environ.get("INQUIRY_CACHE_ONLY"):   # rebuild mode: never spend a model call, fail loudly on a miss
+        raise RuntimeError(f"INQUIRY_CACHE_ONLY set and no cached response for chunk {i} of {conv.id}")
     system = INSTRUCTIONS.format(user=labels[next(p.id for p in conv.participants if p.role == "user")],
                                  signatures=json.dumps({k: list(v) for k, v in SIGNATURES.items()}))
     out, meta = await acall_llm_structured(
