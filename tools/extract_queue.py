@@ -63,7 +63,15 @@ def main():
     ap.add_argument("--workers", type=int, default=2)
     ap.add_argument("--model", default="codex/gpt-5.6-luna")
     ap.add_argument("--budget", type=float, default=None, help="stop starting new chats once this many USD of new calls were spent in this run")
+    ap.add_argument("--contract", type=Path, default=None, help="capture contract (tools/capture_contract.py); required when --budget is unset or >= 2 USD")
     a = ap.parse_args()
+    if a.budget is None or a.budget >= 2.0:   # an expensive run must say first which schema fields it will not capture (Brian, 2026-10-05)
+        import capture_contract
+        if a.contract is None:
+            sys.exit("extract_queue: runs with no --budget, or --budget >= 2 USD, need --contract (see tools/capture_contract.py and docs/design/capture-contract.md)")
+        problems, verdicts = capture_contract.check(json.loads(a.contract.read_text()))
+        if problems:
+            sys.exit("extract_queue: capture contract not OK, refusing to spend:\n  " + "\n  ".join(problems))
     queue = json.loads(a.queue.read_text())
     try:   # the cap counts everything this workdir already spent, so a restart cannot reset it
         _spent["usd"] = sum(json.loads(l).get("cost_usd", 0) for l in open(a.workdir / "dispositions.jsonl"))

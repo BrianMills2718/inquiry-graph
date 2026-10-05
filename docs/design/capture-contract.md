@@ -1,0 +1,22 @@
+# Capture contract: decide what an expensive run will not capture before it runs
+
+Status: adopted by Brian 2026-10-05 ("i approve your recommendation").
+
+## Why
+`moves` was left out of the live extractor for one goal (commit `9c8d431`, 2026-09-29; the only record was a code comment) and a later goal, how Brian reasons, needed it. A count after the run (`tools/schema_census.py`) found 0 of 2,176 graphs had any. Redoing costs real money (the full OpenRouter pass cost $7.69, plus earlier runs) and time. The check belongs before the run.
+
+## Rule
+Before any run with no `--budget` or `--budget >= 2` USD, write a contract (`tools/capture_contract.py init`, example `docs/capture_contracts/extraction-position-memory.json`) listing every schema collection as captured or not. For each field left out: the reason, the later uses the skip blocks, and two ranges: `f`, the extra cost of capturing it in the same pass as a fraction of the pass cost `C`; and `p`, the probability a later use needs it.
+
+Capture the field if `f*C < p*R`, where `R = C + redo_extra_cost_usd` (time and attention to redo, converted to USD). Money only: capture if `f < p`. With ranges, the verdict is `capture` if `f_hi*C < p_lo*R`, `skip` if `f_lo*C >= p_hi*R`, else `uncertain`. Leaving a field out needs a `skip` verdict or an `approved_by` naming who approved it. Missing estimates fail the check. `tools/extract_queue.py` refuses to start an expensive run without a passing contract. After the run, `tools/schema_census.py` confirms the contract was kept.
+
+Worked example (from the prior-art survey): `C = 7.69`, `p = 0.3` gives break-even extra cost `$2.31`; `f = 0.10` captures ($0.77), `f = 0.40` skips ($3.08), and ten minutes of attention valued at $10 flips the second to capture (`R = 17.69`, threshold `$5.31`).
+
+## Updating the estimates (not built yet)
+`p` and `f` are priors. Planned: one append-only decision/resolution ledger (JSONL per day) so that `p` updates by Beta counts of "needed / not needed" and `f` by the mean of log(actual/estimate), shrunk toward the prior; about ten resolved outcomes per kind of decision before an updated value beats the prior. Survey and sources in the session record; terminology home to be decided.
+
+## Wrong when
+This decision is wrong if (a) the contract step is skipped or rubber-stamped in more than one of the next five expensive runs, or (b) a field marked `skip` with a clear verdict is later needed in a run that costs more than its estimated `f*C` to redo. Check at the next five runs and when ten ledger outcomes exist.
+
+## Known limit
+The first contract fails on purpose: `moves` has no estimates yet. Expensive extraction runs, including the pipeline's retry step, are refused until a 30-chat pilot measures `f` and the ranges are filled or Brian approves skipping.
