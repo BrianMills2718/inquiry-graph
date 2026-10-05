@@ -103,6 +103,9 @@ def agent_threads(path):
     return ids
 
 
+PROVIDER = {"chatgpt": "ChatGPT", "claude": "Claude", "gemini": "Gemini"}   # hover tag, from the id prefix
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("conv_dir", type=Path)
@@ -207,7 +210,7 @@ def main():
         import datamapplot
         names = np.array([desc.get(comm_of[i], "Unlabelled") if comm_of[i] in desc else "Unlabelled" for i in range(n)], dtype=object)
         names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
-        hover = list(names) if a.public else [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
+        hover = list(names) if a.public else [f"[{PROVIDER.get(c['id'].split(':')[0], c['id'].split(':')[0])}] {c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
         dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
         import umap as umap_mod2
         layer_arrays = []
