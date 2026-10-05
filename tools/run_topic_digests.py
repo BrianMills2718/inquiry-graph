@@ -12,7 +12,7 @@ CHORES = {"Introductory Physics Problems", "Python Development and Execution", "
 ap = argparse.ArgumentParser(); ap.add_argument("--n", type=int, default=100); ap.add_argument("--jobs", type=int, default=6)
 ap.add_argument("--outdir", type=Path, default=Path("private/topic_digests")); a = ap.parse_args()
 R = Path("private"); graphs = [str(R / d) for d in ["extract_test_20261003/out", "extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out",
-  "extract_full_20261003/single/out", "extract_full_20261003/claude_export/out", "extract_full_20261003/or_run/out", "extract_full_20261003/lowconf/out"] if (R / d).is_dir()]
+  "extract_full_20261003/single/out", "extract_full_20261003/claude_export/out", "extract_full_20261003/or_run/out", "extract_full_20261003/lowconf/out", "extract_full_20261003/gemini_takeout/out"] if (R / d).is_dir()]
 topics = [t for t in json.load(open(R / "position_map_full/topics.json"))["topics"] if t["layer"] == 25 and t["name"] not in CHORES]
 topics = sorted(topics, key=lambda t: -t["size"])[:a.n]
 a.outdir.mkdir(parents=True, exist_ok=True)

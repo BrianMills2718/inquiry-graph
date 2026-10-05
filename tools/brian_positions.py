@@ -9,7 +9,7 @@ from rank_bm25 import BM25Okapi
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / "private"; INDEX = R / "positions_index.json"
 sys.path.insert(0, str(ROOT / "tools")); from ask_positions import records, tok
 DIRS = ["extract_test_20261003/out", "extract_full_20261003/out", "extract_full_20261003/kept/out", "extract_full_20261003/new108/out", "extract_full_20261003/single/out",
-        "extract_full_20261003/claude_export/out", "extract_full_20261003/or_run/out", "extract_full_20261003/lowconf/out"]
+        "extract_full_20261003/claude_export/out", "extract_full_20261003/or_run/out", "extract_full_20261003/lowconf/out", "extract_full_20261003/gemini_takeout/out"]
 def load(rebuild):
     if INDEX.exists() and not rebuild: return json.loads(INDEX.read_text())
     lab = json.loads((R / "authorship_full.json").read_text())
