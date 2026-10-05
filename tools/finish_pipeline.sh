@@ -17,9 +17,9 @@ INQUIRY_REASONING_EFFORT=medium $HOME/.venvs/inquiry-or/bin/python tools/extract
 G=""; for d in extract_test_20261003/out extract_full_20261003/out extract_full_20261003/kept/out extract_full_20261003/new108/out extract_full_20261003/single/out extract_full_20261003/claude_export/out extract_full_20261003/or_run/out extract_full_20261003/lowconf/out; do [ -d "$R/$d" ] && G="$G $R/$d"; done
 $HOME/.venvs/inquiry-or/bin/python tools/position_records.py $R/records_full.json $G | tee -a "$LOG"
 M=$R/position_map_full; mkdir -p $M
-nice ~/.venvs/inquiry-maps/bin/python tools/position_topics.py $R/records_full.json $M --min-cluster 12 2>&1 | tail -1 | tee -a "$LOG"
+nice ~/.venvs/inquiry-maps/bin/python tools/position_topics.py $R/records_full.json $M --layers 150,60,25 2>&1 | tail -1 | tee -a "$LOG"
 $HOME/.venvs/inquiry-or/bin/python tools/name_topics.py $R/records_full.json $M/topics.json $R/topic_names_full.json >> "$LOG" 2>&1
-nice ~/.venvs/inquiry-maps/bin/python tools/position_topics.py $R/records_full.json $M --min-cluster 12 --names $R/topic_names_full.json 2>&1 | tail -1 | tee -a "$LOG"
+nice ~/.venvs/inquiry-maps/bin/python tools/position_topics.py $R/records_full.json $M --layers 150,60,25 --names $R/topic_names_full.json 2>&1 | tail -1 | tee -a "$LOG"
 ssh -o BatchMode=yes personal-vps 'mkdir -p /srv/apps/chat-atlas/site/positions' && scp -q $M/index.html personal-vps:/srv/apps/chat-atlas/site/positions/index.html && say "published to maps.brianmills.dev/positions/"
 $HOME/.venvs/inquiry-or/bin/python tools/ask_positions.py "Where have my views changed or pulled against each other across topics, and which questions do I keep leaving open?" $G --out $R/answer_full.json --top 80 2>&1 | tail -1 | tee -a "$LOG"
 say "FINISH PIPELINE DONE: now hand-check private/answer_full.json and write the C5 report"
