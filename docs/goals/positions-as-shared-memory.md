@@ -104,4 +104,20 @@ non_gating_utility_review:
 
 ## Current state
 
-- 2026-10-05: goal set; no lane started.
+As of 2026-10-05 evening. Lanes A and B complete; lane C half complete, C2 blocked on a spend decision.
+
+**Lane A — complete.** Adopted the shared `brian-positions` skill another session built the same afternoon (agent-skills PR #438; command `tools/brian_positions.py`, inquiry-graph PR #153) instead of a second wrapper: it makes no model call, reuses `ask_positions.records` (quote verbatim in a message Brian sent, pasted text excluded), and returns nothing rather than inventing.
+- A1: answered query "reuse existing tools instead of building my own" → 6 dated quotes with chat ids from 15,291 own-words records, exit 0; unanswerable query → "0 of 15291 own-words records matched", nothing invented.
+- A2: real Claude Code plan-drafting session `8008a6f8-d5fc-4670-a2bd-b77b907417e1` (plan-code-wiki `make lifecycle-run --plan-only --skill`, PR #1 merged 140405d; trace kept in private/consumer_runs/plan-drafting-2026-10-05.json). The agent loaded the skill and searched the idea's words; lexical retrieval returned 15 matches, 14 unrelated by word overlap ("empty", "tiny") and one related question (2025-07-27, "hello {name of person}", chat gemini:c_8d7cc11abbb3902f). The draft rationale cites that chat, labels it a question not a decision, and marks empty-name handling an assumption for the approver. **Finding (accepted by the goal):** for this idea lexical retrieval returned no relevant position; the consumer behaved correctly (cited by id, did not invent).
+- A3: real Codex session, thread `01a10d84-d604-7393-80a9-1ec66f93c167`: read the skill from `~/.agents/skills`, ran it, reported three quotes; all three confirmed verbatim with matching chat ids in the verified records.
+- Open defect, owned by the brian-positions lane: an uncommitted change in this repository's main checkout makes `brian_positions.py` import `sentence_transformers`, which the skill's `~/.venvs/inquiry-or` environment lacks, so the skill's command crashes until that lane commits with a matching environment (Codex worked around it with `--keyword-only`).
+
+**Lane B — complete.**
+- B1: step 3 had been done earlier the same day by another lane (vision PRs #60, #61). This goal added the missing atlas link: `build_register.py atlas` joins each register row's records to the current atlas topic (vision PR #68, squash 16405eb). 31 of 31 register rows carry a conversation id and an atlas link (24 topic pages, 7 the map). `build_register.py check --records`: 818 of 818 conversation entries confirmed against the live records, PASS exit 0; `check_lineage_quotes.py`: 4229 of 4229, PASS exit 0.
+- B2: the plan's step-3 text (still "when the extraction finishes") updated with counts on `shaping/vision-coverage` (60ad743); the review page already said done.
+
+**Lane C — C1 complete; C2 blocked.**
+- C1: `tools/normalize_zoom_transcript.py` (PR #155, merged 016de8c) on the real 2026-10-02 transcript → 279 turns; Brian 68, Dagim 83, Jawad 84, Syed 32, shared audio 12 (not a person); 0 of 279 turns not verbatim. Output in private/meetings/.
+- C2 **blocked**: three attempts (ask route on OpenRouter, ask route on the Codex subscription, the real `inquiry-graph extract --llm` on the meeting) all refused by llm_client: "Project 'inquiry-graph' has spent $10.72 of its $10.00 monthly allowance. Further spend needs a human decision." Owner: Brian. Resume event: `LLM_CLIENT_PROJECT_MONTHLY_BUDGET` raised (or set to 0) for inquiry-graph; then run `inquiry-graph extract --llm` on private/meetings/zoom-18780f5b25bee542.conv.json and check per-speaker attribution (whether the extraction prompt handles four speakers is not yet known).
+
+**G1.** Merged: inquiry-graph #151 (goal), #155; vision #68; plan-code-wiki #1, #2 (#2 stops a test overwriting committed data); AES `shaping/vision-coverage` 60ad743. Residue: one tagged stash in plan-code-wiki (`pcw-simplejson-regen-*`, a regenerated test file; the safety net blocks dropping it).
