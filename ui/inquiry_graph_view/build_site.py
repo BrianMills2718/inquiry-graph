@@ -16,6 +16,14 @@ KIND = {"concept": "#4363d8", "claim": "#f58231", "hypothesis": "#911eb4", "ques
         "method": "#46f0f0", "example": "#a9a9a9", "reference": "#808000"}
 
 
+KEY_SHAPES = re.compile(r"\b(sk-[A-Za-z0-9_\-]{20,}|AIza[0-9A-Za-z_\-]{30,}|(?:ghp_|gho_|github_pat_)[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|xox[abprs]-[A-Za-z0-9\-]{10,})")
+
+
+def redact_keys(text):
+    """Pages are served from a shared host: never publish anything shaped like an API key, even one pasted into a chat."""
+    return KEY_SHAPES.sub("[redacted key]", text)
+
+
 def short(t, n=70):
     t = " ".join(t.split())
     return t if len(t) <= n else t[: n - 1] + "…"
@@ -75,7 +83,7 @@ def main():
         conv, els = elements(g, auth)
         cid = name.removesuffix(".graph.json")
         stamps = sorted(m["timestamp"][:10] for m in conv["messages"] if m.get("timestamp"))
-        (a.out / "data" / f"{cid}.json").write_text(json.dumps({"title": conv["title"][:200], "elements": els, "kinds": KIND}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        (a.out / "data" / f"{cid}.json").write_text(redact_keys(json.dumps({"title": conv["title"][:200], "elements": els, "kinds": KIND}, ensure_ascii=False, separators=(",", ":"))), encoding="utf-8")
         rows.append({"id": cid, "title": " ".join(conv["title"].split())[:110], "date": stamps[0] if stamps else "", "ideas": len(g["nodes"]), "links": nrel,
                      "source": conv["id"].split(":", 1)[0]})
         if a.limit and len(rows) >= a.limit:
