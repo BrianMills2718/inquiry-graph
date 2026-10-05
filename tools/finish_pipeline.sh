@@ -14,7 +14,7 @@ say "services finished; retrying anything unfinished once on OpenRouter (resumab
 OR=$W/or_run
 INQUIRY_REASONING_EFFORT=medium $HOME/.venvs/inquiry-or/bin/python tools/extract_queue.py "$OR/queue.json" "$OR" --workers 8 --model openrouter/openai/gpt-6-luna --budget 25 >> "$LOG" 2>&1
 .venv/bin/python tools/reconcile_snapshot.py $R/snapshot_reconciliation.json > $R/snapshot_summary.json 2>&1; say "reconcile exit $?"
-G=""; for d in extract_test_20261003/out extract_full_20261003/out extract_full_20261003/kept/out extract_full_20261003/new108/out extract_full_20261003/single/out extract_full_20261003/claude_export/out extract_full_20261003/or_run/out extract_full_20261003/lowconf/out; do [ -d "$R/$d" ] && G="$G $R/$d"; done
+G=""; for d in extract_test_20261003/out extract_full_20261003/out extract_full_20261003/kept/out extract_full_20261003/new108/out extract_full_20261003/single/out extract_full_20261003/claude_export/out extract_full_20261003/or_run/out extract_full_20261003/lowconf/out extract_full_20261003/gemini_takeout/out; do [ -d "$R/$d" ] && G="$G $R/$d"; done
 $HOME/.venvs/inquiry-or/bin/python tools/position_records.py $R/records_full.json $G | tee -a "$LOG"
 M=$R/position_map_full; mkdir -p $M
 nice ~/.venvs/inquiry-maps/bin/python tools/position_topics.py $R/records_full.json $M --layers 150,60,25 2>&1 | tail -1 | tee -a "$LOG"
