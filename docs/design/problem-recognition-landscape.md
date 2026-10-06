@@ -83,3 +83,26 @@ opportunity recognition / creation
 ```
 
 Let method-specific semantics remain with the mature method. Use Inquiry Graph to record the inquiry trajectory and let repeated representation failures determine whether a cross-regime abstraction is earned.
+
+
+## First pressure test: organizational / ill-structured case
+
+The first pressure test uses an earlier second-brain reasoning conversation. The case starts with weak progress / burnout-like symptoms but proceeds through alternative frames involving feedback and perceived control, problem definition and complexity, and identity conflict.
+
+Result: the simple `desired state - current state = problem` model is underfactored for this case. The same observed condition supports multiple candidate problem frames, and those frames change what evidence, interventions, and success criteria become relevant.
+
+Working refinement:
+
+```text
+observed condition
+  -> interpreted discrepancy / tension
+  -> candidate problem frames
+  -> candidate diagnoses / explanations
+  -> candidate interventions
+  -> test / action / feedback
+  -> reframe or revise
+```
+
+Inquiry Graph V1 can represent this with questions, hypotheses, moves, and existing relations, but a stable problem-frame object must currently be reconstructed. That is now a representation-gap candidate to test in the technical-diagnosis and entrepreneurial-opportunity cases; it is not yet a schema proposal.
+
+See `docs/evaluation/problem-recognition-organizational-pressure-test.md`.
