@@ -77,6 +77,6 @@
       "status": "accepted"
     }
   ],
-  "overall_assessment": "V1 can capture the main inquiry trajectory without a schema change. The material new need is a disciplined feedback loop around each conversation capture. The strongest semantic gap is the not-yet-factored relation among ideals/evaluation, problem recognition, candidate goals, tasks, methods, and actions; this remains a research question, not a schema proposal.",
-  "next_inquiry_question": "What is a problem or anomaly, how is it recognized relative to an ideal/evaluative frame, and which mature formalisms already factor problem recognition, diagnosis, framing, and solution search?"
+  "overall_assessment": "Three pressure tests now show that V1 can represent the main inquiry without adding universal Problem, Anomaly, Diagnosis, Opportunity, or Ideal node kinds. The stronger open question is whether a higher-order reasoning-episode view is needed to query initiating conditions, frames, candidate generation, selection, action, and revision consistently across regimes.",
+  "next_inquiry_question": "Can the current V1 graph answer the same reasoning-episode query set across organizational framing, technical diagnosis, and entrepreneurial opportunity without bespoke reconstruction?"
 }
