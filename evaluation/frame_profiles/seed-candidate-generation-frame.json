@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frame:seed-candidate-generation",
+  "label": "Candidate-generation interface frame",
+  "content": {
+    "refs": [
+      "dialogue-2026-09-27:n:candidate-generation-interface"
+    ],
+    "recovery": "direct",
+    "rationale": "Explicit hypothesis organizing candidate-generation inquiry."
+  },
+  "applies_to": {
+    "refs": [
+      "dialogue-2026-09-27:n:worked-factorization-trace"
+    ],
+    "recovery": "reconstructed",
+    "rationale": "The frame governs the worked candidate-generation/factorization trace."
+  },
+  "active_query": {
+    "refs": [
+      "dialogue-2026-09-27:n:q-candidate-generation-factorization"
+    ],
+    "recovery": "direct",
+    "rationale": "Explicit active question."
+  },
+  "model_hypothesis": {
+    "refs": [
+      "dialogue-2026-09-27:n:typed-generative-regime"
+    ],
+    "recovery": "direct"
+  },
+  "criterion": {
+    "refs": [
+      "dialogue-2026-09-27:n:universal-interface-not-operators"
+    ],
+    "recovery": "reconstructed",
+    "rationale": "Reuse/interface criterion constraining acceptable abstraction."
+  },
+  "note": "Real graph profile; optional UGD-like coordinates used only where supported."
+}
