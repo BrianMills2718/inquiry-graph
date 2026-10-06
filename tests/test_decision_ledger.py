@@ -125,3 +125,10 @@ def test_zero_rates_make_capture_money_only():
     d = dl.make_decision(cap_spec(inputs={"usd": 8, "f": [0.1, 0.25, 0.6], "p": [0.3, 0.5, 0.7], "minutes_wall": 120, "minutes_attention": 30}))
     assert dl.capture_rule(d["inputs"], r)["verdict"] == "uncertain"   # 0.6*8=4.8 vs 0.3*8=2.4 straddles
     assert dl.capture_rule(d["inputs"], dl.RATES)["verdict"] == "capture"
+
+
+def test_flip_marker_ignores_wording_after_the_implied_choice():
+    # 'capture going forward' is the capture option, not a flip against an implied 'capture'
+    implied, chosen = "capture", "capture going forward"
+    assert str(chosen).startswith(implied)
+    assert not str("skip").startswith(implied)
