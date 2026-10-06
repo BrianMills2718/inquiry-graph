@@ -11,7 +11,7 @@ minutes_wall / minutes_attention / redo_extra_usd = what REDOING later costs bey
 For every other type, `options` carry per-option inputs and `rule` is dominance -> irreversible -> expected USD cost.
 
 PLACEHOLDER EXCHANGE RATES (Brian's real dollars-per-hour is UNKNOWN; replace by editing RATES below or env LEDGER_USD_PER_HOUR_WALL / _ATTENTION):
-  wall-clock time $60/hour, Brian's attention $120/hour.
+  wall-clock waiting $10/hour, Brian's attention $25/hour (lowered 2026-10-06: Brian said his time is not worth $60/hour right now and money is the scarce resource; an earlier placeholder of $60/$120 was an agent guess). The monthly LLM allowance is a hard cap, a constraint, not a price: check it separately.
 
 Subcommands: add-decision | resolve | show | update | rule. Unresolved, overdue and unknown outcomes are always listed, never dropped.
 Quote-bearing content does not belong in a ledger record; note fields hold numbers and short paraphrase only.
@@ -29,7 +29,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import capture_contract  # noqa: E402  (verdict() is reused, not copied)
 
-RATES = {"usd_per_hour_wall": 60.0, "usd_per_hour_attention": 120.0, "is_placeholder": True}
+RATES = {"usd_per_hour_wall": 10.0, "usd_per_hour_attention": 25.0, "is_placeholder": True}
 PRIOR_BETA = (3, 7)          # Beta(3,7): prior mean p = 0.3
 PRIOR_WEIGHT_N0 = 3          # shrinkage of mean log(actual/estimate) toward 0
 MIN_RESOLVED_FOR_UPDATE = 10
@@ -357,7 +357,7 @@ def cmd_rule(a):
     out = apply_rule(d, r)
     print(f"rates: wall ${r['usd_per_hour_wall']:g}/h, attention ${r['usd_per_hour_attention']:g}/h" + (" (PLACEHOLDERS, not Brian's answer)" if r["is_placeholder"] else ""))
     print(json.dumps(out, indent=1))
-    print(f"rule says {out['implied_choice']}; recorded choice was {d['chosen']}" + ("  -> FLIPS" if out["implied_choice"] not in (d["chosen"], "uncertain") else ""))
+    print(f"rule says {out['implied_choice']}; recorded choice was {d['chosen']}" + ("  -> FLIPS" if out["implied_choice"] != "uncertain" and not str(d["chosen"]).startswith(out["implied_choice"]) else ""))
     return 0
 
 
