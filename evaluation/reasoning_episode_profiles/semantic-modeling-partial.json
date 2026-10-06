@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "id": "episode:semantic-modeling-partial",
+  "label": "Semantic-modeling goal feasibility and self-improvement episode",
+  "bindings": [
+    {
+      "role": "salient_condition",
+      "refs": [
+        "semantics-2026-10-05:n:q-achievable"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit question about achievable goals under uncertain, transformable feasibility."
+    },
+    {
+      "role": "frame",
+      "refs": [
+        "semantics-2026-10-05:n:c-generative"
+      ],
+      "recovery": "reconstructed",
+      "rationale": "The candidate-generation claim acts as the working frame, but the graph does not type it as such."
+    },
+    {
+      "role": "candidate",
+      "refs": [
+        "semantics-2026-10-05:n:q-problem",
+        "semantics-2026-10-05:n:q-motifs"
+      ],
+      "recovery": "reconstructed",
+      "rationale": "These follow-on questions instantiate candidate directions rather than explicit option objects."
+    },
+    {
+      "role": "commitment",
+      "refs": [
+        "semantics-2026-10-05:n:g-loop"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit goal for conversation-to-graph self-review."
+    },
+    {
+      "role": "action_or_test",
+      "refs": [
+        "semantics-2026-10-05:n:m-loop"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit method for the self-improvement loop."
+    }
+  ],
+  "note": "Real captured graph is intentionally incomplete: the curated fixture predates later action/results, so evaluation and update are not recoverable from this graph alone."
+}
