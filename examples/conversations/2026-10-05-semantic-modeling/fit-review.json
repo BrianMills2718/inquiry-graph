@@ -8,16 +8,16 @@
       "diagnosis": "representation_gap",
       "scope": "ontology",
       "severity": "material",
-      "description": "The frame role is now a material, repeated representational seam. Real-graph episode reconstruction repeatedly had to infer the active frame from ordinary claims/hypotheses, and the continuation makes frame identification, frame shifting, and frame-relative candidate generation central to the intended methodology. V1 can record reframe moves but does not directly represent what frame is active, its scope, or which questions/candidates it makes salient.",
+      "description": "The frame seam has now been pressure-tested with a thin derived FrameProfile over three real graphs. The repeated cross-case invariant is smaller than originally feared: frame content, inquiry scope/applies-to, and active query. Method-specific coordinates such as model hypothesis, criterion, boundary/access, resources, and perspective remain optional. Framing/reframing acts and frame-relative candidate/question consequences stay in existing graph structures.",
       "evidence_refs": [
         "semantics-2026-10-05:n:q-frame-shift",
         "semantics-2026-10-05:n:c-frame-generative",
         "semantics-2026-10-05:n:q-proactive-inquiry"
       ],
-      "current_workaround": "Represent frame content as ordinary claims/hypotheses/questions, record explicit reframe moves, and reconstruct active-frame scope in the reasoning-episode projection.",
-      "proposed_change": "Before extending core V1, define and test a narrow Frame profile that separates frame content, framing/reframing act, and frame scope. Evaluate whether this profile materially improves episode recovery, motif analysis, and candidate-generation queries.",
-      "promotion_gate": "Promote first-class frame semantics only after the Frame profile is tested on multiple real inquiries and shows a concrete query/usefulness gain over reconstruction. User priority makes this a high-priority test, but not automatic schema authority.",
-      "status": "open"
+      "current_workaround": "Use the derived FrameProfile sidecar. Frame content, applies-to scope, and active query are required profile roles; method-specific coordinates remain optional references to existing graph objects.",
+      "proposed_change": "Keep Frame as a projection/profile rather than a core V1 node kind. Next test inter-reviewer agreement on frame identity/scope/query bindings and measure whether the profile improves resumption, motif mining, or candidate-generation analysis.",
+      "promotion_gate": "Only promote first-class frame semantics if independent reviewers materially disagree on the thin profile or a named downstream use cannot be served reliably by the projection.",
+      "status": "accepted"
     },
     {
       "id": "fit-002",
@@ -98,16 +98,16 @@
       "diagnosis": "workflow_gap",
       "scope": "workflow",
       "severity": "material",
-      "description": "Reuse-first landscape search and creative generation are currently treated as sequential or ad hoc activities, but the continuation proposes running them in parallel: speculative frame/question generation can improve search terms while prior-art discovery constrains adoption and exposes the residual invention gap.",
+      "description": "The first parallel-inquiry pilot produced positive but weak process evidence. A reuse/discovery lane found an existing Epistemic Warrant participant-relative frame factorization that the earlier sequential frame discussion had not surfaced; an empirical frame/question lane independently identified only three repeated cross-case needs. Integrating the lanes reduced the proposed abstraction to a thin profile rather than expanding it.",
       "evidence_refs": [
         "semantics-2026-10-05:n:c-reuse-prior",
         "semantics-2026-10-05:n:c-parallel-search",
         "semantics-2026-10-05:n:m-reuse-invention-ladder"
       ],
-      "current_workaround": "Manually alternate between creative reasoning and repository/literature search.",
-      "proposed_change": "Test a parallel inquiry portfolio as workflow, not ontology: prior-art scout, frame/question explorer, integrator, residual-gap analyst, and evaluator/warrant functions can operate concurrently and feed a shared Inquiry Graph.",
-      "promotion_gate": "Demonstrate on a concrete inquiry that parallel generation+reuse search finds a materially better frame, existing owner framework, or smaller residual gap than a sequential baseline.",
-      "status": "open"
+      "current_workaround": "Use lane separation by source/task role inside one research session: empirical/problem-pressure lane plus reuse/prior-art lane, followed by residual-minimizing integration.",
+      "proposed_change": "Retain the parallel pattern as a workflow hypothesis and repeat it on at least one materially different inquiry with more controlled lane isolation/budget before promoting it as general agent orchestration doctrine.",
+      "promotion_gate": "Require a second materially different case and, where feasible, independent lane execution or fixed budgets showing improved prior-art recovery, smaller residual invention, or better downstream decisions.",
+      "status": "accepted"
     },
     {
       "id": "fit-008",
@@ -126,6 +126,6 @@
       "status": "accepted"
     }
   ],
-  "overall_assessment": "The landscape survey resolves the conceptual ownership question: proactive frame/question exploration is already distributed across mature fields. Inquiry Graph should remain an empirical/projection layer rather than owning a new frame-shifting theory. The next high-value step is a comparative workflow experiment: parallel reuse/discovery and frame/question exploration versus a sequential baseline.",
-  "next_inquiry_question": "Does a parallel reuse/discovery + frame/question-exploration workflow materially improve prior-art recovery, frame quality, residual-invention reduction, or downstream decisions compared with a sequential baseline?"
+  "overall_assessment": "The first comparative workflow pilot supports both current directions without earning new ontology. A thin FrameProfile over three real graphs needs only content, applies-to scope, and active query as cross-case invariants; optional coordinates reuse existing Epistemic Warrant distinctions. The parallel empirical + reuse/discovery workflow also found an internal prior-art owner missed by the earlier sequential discussion and materially reduced residual invention, but the evidence is one-session and not controlled.",
+  "next_inquiry_question": "Do independent reviewers agree on the thin FrameProfile bindings, and does the parallel empirical + reuse/discovery pattern reproduce its residual-invention reduction on a second materially different inquiry?"
 }
