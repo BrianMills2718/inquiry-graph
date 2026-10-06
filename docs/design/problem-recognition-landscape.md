@@ -2,4 +2,84 @@
 
 Status: working synthesis, 2026-10-05.
 
-This note surveys discrepancy detection, diagnosis, problem structuring, design framing, and opportunity recognition as distinct regimes relevant to the current inquiry.
+Current question: how does an ideal/evaluative frame plus an observed state become a recognized problem that motivates candidate generation and action?
+
+## Mature regimes
+
+### Control / self-regulation
+When the relevant variable and reference are already defined:
+
+reference or desired state + observed state -> comparator -> discrepancy -> corrective action -> feedback.
+
+This covers discrepancy reduction well, but assumes the frame is already given.
+
+### Model-based diagnosis
+Expected behavior is generated from a model and compared with observation. A mismatch motivates candidate diagnoses and discriminating tests. An anomaly is not itself a diagnosis.
+
+### Problem structuring / Soft OR
+For wicked or ill-structured situations, the problem is not pre-given. Problem Structuring Methods and Soft Systems approaches make stakeholder perspectives, boundaries, values, uncertainty, and alternative formulations part of the inquiry.
+
+### Design framing
+Schön/Dorst-style framing treats reframing as changing how an observed situation, an aspired value, and possible working principles are connected. Reframing can therefore change the candidate solution space.
+
+### Entrepreneurship
+Opportunity-recognition traditions treat some opportunities as discoverable; opportunity-creation/effectuation traditions emphasize acting under uncertainty in ways that can change what becomes feasible.
+
+## Working factorization
+
+```text
+ideal / value / reference
+        +
+observed or estimated state
+        ↓
+comparison / interpretation
+        ↓
+discrepancy, anomaly, tension, surprise, unmet value
+        ↓
+problem formulation
+        ↓
+explanation / diagnosis hypotheses
+        ↓
+candidate goals / strategies / experiments
+        ↓
+selection or reframing / generative-space transformation
+        ↓
+action
+        ↓
+feedback and revision
+```
+
+This is a workflow factorization, not a claim that every domain contains universal primitives with these names.
+
+## Inquiry Graph implication
+
+V1 already has questions, goals, hypotheses, methods, examples, challenges, reframes, tests, candidate_for, motivates, depends_on, and supersedes.
+
+Do not add universal core node kinds such as Problem, Anomaly, Ideal, Diagnosis, or Opportunity yet.
+
+Test the need across at least three different cases:
+1. technical diagnosis;
+2. contested organizational/wicked problem;
+3. entrepreneurial opportunity under uncertainty.
+
+Promote shared semantics only if the same missing distinction repeatedly changes a material query or downstream use.
+
+Useful evaluation queries:
+- Which observations or discrepancies motivated a problem formulation?
+- Which frames were considered and superseded?
+- Which diagnoses explain an anomaly and which tests discriminate them?
+- Which candidate goals appeared only after reframing?
+- Which actions changed the feasible/candidate space rather than moving within it?
+
+## Current recommendation
+
+Treat problem recognition as a family of related regimes:
+
+```text
+discrepancy detection
+diagnosis
+problem structuring / framing
+opportunity recognition / creation
+```
+
+Let method-specific semantics remain with the mature method. Use Inquiry Graph to record the inquiry trajectory and let repeated representation failures determine whether a cross-regime abstraction is earned.
