@@ -7,6 +7,7 @@ Stages (outputs under private/moves_pilot/, gitignored):
   evalset  seed messages + N random corpus messages (seed 17), each with the previous assistant text (<=600 chars)
   earlier  eval set of the earlier retrieval+judge run's top same_move calls per method (for comparison)
   label    two-stage Jev: gate (any reasoning move? + policy markers) then single-choice move on gate-yes only; stops at a spend cap
+  judge    second pass (LLM judge) on high-probability hits of candidate-filter labels
   corpus   same two stages over private/motifs_recur/corpus.json into private/moves_labels/
 Usage: label_moves.py evalset|label [--private DIR] [--n-random 130] [--cap 1.0]
 """
@@ -120,6 +121,47 @@ def _msg(r):
     return f"{ctx}Brian's message: {r['text']!r}\n"
 
 
+def second_pass(labels_file, out_file, kinds, model="openrouter/openai/gpt-5.6-luna", batch=10, cap=0.3, min_p=0.5):
+    """Second pass for 'candidate filter only' labels: an LLM judge reads each high-probability hit with the label's definition
+    and answers whether the message itself performs that move (quote must be verbatim). Cost is capped by sum of returned costs."""
+    import asyncio
+    from typing import Literal
+    from pydantic import BaseModel, Field
+    from llm_client import acall_llm_structured
+    rows = json.loads(Path(labels_file).read_text())
+    hits = [r for r in rows if r["move"] in kinds and (r.get("move_probs") or {}).get(r["move"], 0) >= min_p]
+
+    class Call(BaseModel):
+        id: int
+        performs_move: Literal["yes", "no"]
+        quote: str = Field(description="Verbatim excerpt under 120 chars showing the move; empty if no.")
+
+    class Calls(BaseModel):
+        calls: list[Call]
+
+    async def run():
+        res, spent = {}, 0.0
+        for kind in kinds:
+            ks = [r for r in hits if r["move"] == kind]
+            for b in range(0, len(ks), batch):
+                if spent >= cap: print("STOP cap"); return res
+                chunk = ks[b:b + batch]
+                body = "\n\n".join(f"[{i}] {r['text']}" for i, r in enumerate(chunk))
+                sys_p = (f"Move definition: {kind}: {MOVES[kind]}\nFor each message by Brian, answer yes only if the message ITSELF performs this reasoning move "
+                         "(not merely the same topic or vocabulary, and not a task order, pasted text or chore). Quote must be verbatim.")
+                o, meta = await acall_llm_structured(model, [{"role": "system", "content": sys_p}, {"role": "user", "content": body}], response_model=Calls, reasoning_effort="medium", model_policy="enforce_allowlist",
+                                                     task="move-second-pass", trace_id=f"inquiry-graph/label-moves-v2/second-pass/{kind}", max_budget=0.1)
+                spent += getattr(meta, "cost", 0) or 0
+                for c in o.calls:
+                    if 0 <= c.id < len(chunk):
+                        r = chunk[c.id]; ok = c.performs_move == "yes" and bool(c.quote) and c.quote in r["text"]
+                        res[r["id"]] = {"kind": kind, "second_pass": ok}
+            print(kind, sum(v["second_pass"] for v in res.values() if v["kind"] == kind), "of", len(ks), "pass", flush=True)
+        return res
+    res = asyncio.run(run())
+    Path(out_file).write_text(json.dumps(res, indent=1))
+
+
 def label_questions(chunk, stage):
     """Questions for one Jev call. stage 'gate': any reasoning move? + policy markers. stage 'move': single-choice move."""
     from llm_client import ChoiceQuestion, NoulQuestion
@@ -174,7 +216,7 @@ def label(out, cap, batch, name="", suffix="_v3", evalfile=None, outdir=None, sh
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("stage", choices=["evalset", "earlier", "label", "corpus"])
+    ap.add_argument("stage", choices=["evalset", "earlier", "label", "corpus", "judge"])
     ap.add_argument("--corpus-out", type=Path, default=Path.home() / "code/inquiry-graph/private/moves_labels")
     ap.add_argument("--name", default="", help="label stage: label evalset_<name>.json (e.g. earlier)")
     ap.add_argument("--private", type=Path, default=Path.home() / "code/inquiry-graph/private")
@@ -189,6 +231,8 @@ if __name__ == "__main__":
     if a.stage == "evalset": evalset(out, a.n_random, root)
     elif a.stage == "earlier": earlier(out, root)
     elif a.stage == "label": label(out, a.cap, a.batch, a.name)
+    elif a.stage == "judge":
+        second_pass(a.corpus_out / "labels_corpus_v3.json", a.corpus_out / "second_pass_v3.json", ["step_back", "factor_and_check", "define_by_role", "frame_as_hypothesis", "test"])
     else:  # whole corpus of short messages (private/motifs_recur/corpus.json), no previous-assistant context
         a.corpus_out.mkdir(parents=True, exist_ok=True)
         label(out, a.cap, max(a.batch, 10), "", "_corpus_v3", evalfile=a.private / "motifs_recur/corpus.json", outdir=a.corpus_out,
