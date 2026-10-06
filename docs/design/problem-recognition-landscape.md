@@ -83,3 +83,29 @@ opportunity recognition / creation
 ```
 
 Let method-specific semantics remain with the mature method. Use Inquiry Graph to record the inquiry trajectory and let repeated representation failures determine whether a cross-regime abstraction is earned.
+
+
+## Second pressure test: technical diagnosis
+
+The AutoCoder validation-failure case provides a contrasting regime in which the expected behavior is comparatively well specified. A real validator produced 0% validation success, and subsequent investigation identified candidate explanations including a mock-vs-real validator gap, stream-vs-RPC architecture mismatch, and wrong component abstractions.
+
+Result: here the anomaly is relatively stable before diagnosis begins.
+
+```text
+expected behavior + observation
+  -> anomaly / conflict
+  -> candidate diagnoses
+  -> locate failure level
+  -> candidate repair
+  -> test
+  -> revise
+```
+
+Inquiry Graph V1 represents this more comfortably than the organizational case. The semantics of anomaly detection and diagnosis appear naturally method-specific; no universal Anomaly or Diagnosis node kind is currently warranted.
+
+The cross-case distinction is now sharper:
+
+- organizational / ill-structured inquiry may need **candidate problem frames before diagnosis**;
+- technical diagnosis can often begin from a relatively stable anomaly and search over explanations.
+
+See `docs/evaluation/problem-recognition-technical-pressure-test.md`.
