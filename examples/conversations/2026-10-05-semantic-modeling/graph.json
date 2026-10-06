@@ -163,6 +163,22 @@
           "text": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u19",
+          "actor_id": "participant:brian",
+          "ordinal": 19,
+          "text": "Okay, proceed.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:a20",
+          "actor_id": "participant:assistant",
+          "ordinal": 20,
+          "text": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -572,6 +588,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Agentic Engineering System canonical should encode apparent novelty as a negative control/search-pressure signal so agents resist congratulatory novelty framing and search harder before bespoke implementation."
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-frame-landscape",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Mature prior art already covers complementary parts of frame/question-space exploration; no new universal frame-shifting theory is currently warranted."
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-three-control-modes",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Adaptive inquiry should distinguish exploit within a frame, repair/reframe after mismatch, and proactive exploration of alternative frames/questions before failure."
+    },
+    {
+      "id": "semantics-2026-10-05:n:m-parallel-inquiry-test",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Compare a parallel reuse/discovery lane and frame/question-exploration lane against a sequential baseline on prior art found, residual invention gap, useful frames/questions, cost, and downstream decision quality."
     }
   ],
   "relations": [
@@ -1126,6 +1187,78 @@
           "ref": "semantics-2026-10-05:n:g-aes-novelty-policy"
         }
       ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:landscape-answers-integrated",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "semantics-2026-10-05:n:c-frame-landscape"
+        },
+        {
+          "role": "question",
+          "ref": "semantics-2026-10-05:n:q-integrated-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:modes-support-proactive",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "supporter",
+          "ref": "semantics-2026-10-05:n:c-three-control-modes"
+        },
+        {
+          "role": "supported",
+          "ref": "semantics-2026-10-05:n:c-proactive-exploration"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:parallel-test-candidate",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "semantics-2026-10-05:n:m-parallel-inquiry-test"
+        },
+        {
+          "role": "problem",
+          "ref": "semantics-2026-10-05:n:q-integrated-inquiry"
+        }
+      ]
     }
   ],
   "moves": [
@@ -1606,6 +1739,35 @@
         "semantics-2026-10-05:m17"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m19",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:a20",
+          "start": 0,
+          "end": 410,
+          "quote": "The reuse-first landscape finds mature owners rather than a missing universal frame-shifting theory: Schön/reframing, Dorst/frame creation, Problem Structuring Methods, C-K theory, literature-based discovery, transformational creativity, and metareasoning/value of computation. The next step is to map these into existing repos and test a real parallel reuse/discovery plus frame/question-exploration workflow."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantics-2026-10-05:n:q-integrated-inquiry",
+        "semantics-2026-10-05:n:c-proactive-exploration"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:c-frame-landscape",
+        "semantics-2026-10-05:n:c-three-control-modes",
+        "semantics-2026-10-05:n:m-parallel-inquiry-test"
+      ],
+      "at_message_id": "semantics-2026-10-05:a20",
+      "after_move_ids": [
+        "semantics-2026-10-05:m18"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [],
@@ -1818,6 +1980,7 @@
     "Created to test the conversation-to-graph self-improvement loop.",
     "The sibling fit-review.json records representation/workflow shortcomings separately from inquiry content.",
     "2026-10-06 continuation added after frame/reasoning-episode pressure tests; this same graph remains the canonical conversation fixture.",
-    "2026-10-06 continuation clarifies that novelty should function as an escalating search-pressure/frustration signal rather than a positive achievement signal, and requests transfer of that policy into AES canonical."
+    "2026-10-06 continuation clarifies that novelty should function as an escalating search-pressure/frustration signal rather than a positive achievement signal, and requests transfer of that policy into AES canonical.",
+    "2026-10-06 reuse-first landscape mapped proactive framing/question exploration to mature owners and proposed a parallel workflow test."
   ]
 }
