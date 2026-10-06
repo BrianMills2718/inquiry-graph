@@ -6,7 +6,7 @@
       "id": "semantics-2026-10-05:conversation",
       "title": "Modeling, semantics, goals, candidate generation, and a self-improving Inquiry Graph",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated excerpts from the visible 2026-10-05/06 ChatGPT conversation. Compact inquiry map, not a byte-for-byte full export. The continuation adds the frame-shifting, proactive inquiry-space exploration, reuse-before-invention, and parallel creative/prior-art-search arc. All semantic annotations are proposed.",
+      "coverage_note": "Curated excerpts from the visible 2026-10-05/06 ChatGPT conversation. Compact inquiry map, not a byte-for-byte full export. The continuation now also records the stronger apparent-novelty-as-frustration/search-pressure policy and its requested transfer into Agentic Engineering System canonical. All semantic annotations are proposed.",
       "participants": [
         {
           "id": "participant:brian",
@@ -153,6 +153,14 @@
           "actor_id": "participant:brian",
           "ordinal": 17,
           "text": "Okay, let's update and query graph for this conversation.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u18",
+          "actor_id": "participant:brian",
+          "ordinal": 18,
+          "text": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea.",
           "original_id": null,
           "timestamp": null
         }
@@ -519,6 +527,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Update this conversation's Inquiry Graph and inspect the resulting graph for new representational or workflow gaps."
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-novelty-frustration",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Apparent novelty should be treated as an unmet reuse expectation: failure to find an existing solution should increase search pressure and suspicion that terminology, framing, sourcing, composition, or requirements are wrong before it increases willingness to invent."
+    },
+    {
+      "id": "semantics-2026-10-05:n:m-novelty-falsification",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Novelty-falsification search: when a needed construct appears novel, escalate search across synonyms, adjacent disciplines, structural analogues, compositions, failed attempts, and requirement/frame challenges; authorize only the smallest residual invention that survives."
+    },
+    {
+      "id": "semantics-2026-10-05:n:g-aes-novelty-policy",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Agentic Engineering System canonical should encode apparent novelty as a negative control/search-pressure signal so agents resist congratulatory novelty framing and search harder before bespoke implementation."
     }
   ],
   "relations": [
@@ -1001,6 +1054,78 @@
           "ref": "semantics-2026-10-05:n:q-integrated-inquiry"
         }
       ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:novelty-strengthens-reuse",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "supporter",
+          "ref": "semantics-2026-10-05:n:c-novelty-frustration"
+        },
+        {
+          "role": "supported",
+          "ref": "semantics-2026-10-05:n:c-reuse-prior"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:novelty-method-candidate",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "semantics-2026-10-05:n:m-novelty-falsification"
+        },
+        {
+          "role": "problem",
+          "ref": "semantics-2026-10-05:n:g-meta-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:aes-policy-motivated",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantics-2026-10-05:n:c-novelty-frustration"
+        },
+        {
+          "role": "result",
+          "ref": "semantics-2026-10-05:n:g-aes-novelty-policy"
+        }
+      ]
     }
   ],
   "moves": [
@@ -1452,6 +1577,35 @@
         "semantics-2026-10-05:m16"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m18",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u18",
+          "start": 0,
+          "end": 220,
+          "quote": "Yeah, I think you get what I mean now. It's update inquiry graph and then, um, can you? I'm not sure. Yeah, and then I think Agentic engineering system canonical my repo there. I want it to update with this kind of idea."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "clarify",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "semantics-2026-10-05:n:c-reuse-prior",
+        "semantics-2026-10-05:n:m-reuse-invention-ladder"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:c-novelty-frustration",
+        "semantics-2026-10-05:n:m-novelty-falsification",
+        "semantics-2026-10-05:n:g-aes-novelty-policy"
+      ],
+      "at_message_id": "semantics-2026-10-05:u18",
+      "after_move_ids": [
+        "semantics-2026-10-05:m17"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [],
@@ -1663,6 +1817,7 @@
   "notes": [
     "Created to test the conversation-to-graph self-improvement loop.",
     "The sibling fit-review.json records representation/workflow shortcomings separately from inquiry content.",
-    "2026-10-06 continuation added after frame/reasoning-episode pressure tests; this same graph remains the canonical conversation fixture."
+    "2026-10-06 continuation added after frame/reasoning-episode pressure tests; this same graph remains the canonical conversation fixture.",
+    "2026-10-06 continuation clarifies that novelty should function as an escalating search-pressure/frustration signal rather than a positive achievement signal, and requests transfer of that policy into AES canonical."
   ]
 }
