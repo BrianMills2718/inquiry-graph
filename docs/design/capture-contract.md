@@ -18,5 +18,7 @@ Worked example (from the prior-art survey): `C = 7.69`, `p = 0.3` gives break-ev
 ## Wrong when
 This decision is wrong if (a) the contract step is skipped or rubber-stamped in more than one of the next five expensive runs, or (b) a field marked `skip` with a clear verdict is later needed in a run that costs more than its estimated `f*C` to redo. Check at the next five runs and when ten ledger outcomes exist.
 
-## Known limit
-The first contract fails on purpose: `moves` has no estimates yet. Expensive extraction runs, including the pipeline's retry step, are refused until a 30-chat pilot measures `f` and the ranges are filled or Brian approves skipping.
+## First contract, resolved (2026-10-06)
+The first contract failed on purpose: `moves` had no estimates. A 34-chat pilot (PR #175, `INQUIRY_EXTRACT_MOVES=1`) measured the extra cost of capturing moves at f = 0.11 of the pass (bootstrap 95% interval 0.06 to 0.18). With p in [0.5, 0.9] the rule says capture, so the contract now marks `moves` captured and lists `requires_env: INQUIRY_EXTRACT_MOVES=1`, which the check verifies at run time (a contract cannot claim a field the run is not set up to capture). `tools/finish_pipeline.sh` sets it.
+
+Not done: the 2,176 existing graphs still have zero moves. Backfilling re-runs every chat (about $8.5 at today's cost) and is a separate decision. The move prompt also under-produces test, deduce, generalize and retract (ask is over a third of all moves); tune it before any backfill.

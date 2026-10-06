@@ -1,16 +1,40 @@
 {
- "run": {"description": "Position-memory extraction (live_extract.py, chunked structured extraction), full-archive pass. Cost basis: the 2026-10-05 OpenRouter run of 1,442 chats cost $7.69.",
-         "expected_cost_usd": 7.69, "redo_extra_cost_usd": 0.0},
+ "run": {
+  "description": "Position-memory extraction (live_extract.py, chunked structured extraction), full-archive pass. Cost basis: the 2026-10-05 OpenRouter run of 1,442 chats cost $7.69.",
+  "expected_cost_usd": 7.69,
+  "redo_extra_cost_usd": 0.0
+ },
  "fields": {
-  "nodes": {"captured": true},
-  "relations": {"captured": true},
-  "stance_events": {"captured": true},
-  "question_events": {"captured": true},
-  "moves": {"captured": false,
-            "reason": "live_extract.py skips inquiry moves (commit 9c8d431, 2026-09-29: 'positions and open questions do not need them'). Decided by an agent session, never put to Brian.",
-            "blocks_later_uses": ["reasoning motifs / how Brian argues", "move-level analysis of the two reasoning chats", "any use of the 15 move kinds"],
-            "marginal_cost_fraction": null, "p_later_need": null,
-            "approved_by": null, "approved_at": null,
-            "note": "Estimates pending: measure the extra cost on a 30-chat pilot with moves enabled, then fill the ranges. Until then this contract fails and expensive extraction runs are refused."}
+  "nodes": {
+   "captured": true
+  },
+  "relations": {
+   "captured": true
+  },
+  "stance_events": {
+   "captured": true
+  },
+  "question_events": {
+   "captured": true
+  },
+  "moves": {
+   "captured": true,
+   "requires_env": {
+    "INQUIRY_EXTRACT_MOVES": "1"
+   },
+   "reason": "Measured 2026-10-06 (lane A, 34-chat pilot, PR #175): capturing moves in the same pass costs f = 0.11 of the pass (bootstrap 95% interval 0.06 to 0.18 against a same-day rerun; widest defensible 0.03 to 0.18). Rule f*C < p*R: 0.18*7.69 = $1.38 < 0.5*7.69 = $3.85, so capture. p in [0.5, 0.9] is the coordinating agent's estimate: the need has already occurred once (the how-Brian-reasons goal) and reasoning methods are a standing aim.",
+   "marginal_cost_fraction": [
+    0.06,
+    0.18
+   ],
+   "p_later_need": [
+    0.5,
+    0.9
+   ],
+   "blocks_later_uses": [],
+   "approved_by": null,
+   "approved_at": null,
+   "note": "From now on extraction runs capture moves (finish_pipeline.sh sets INQUIRY_EXTRACT_MOVES=1; the check refuses a run that lacks it). The 2,176 existing graphs still have 0 moves: a backfill re-runs every chat (about C*(1+f) = $8.5 at today's cost) and needs Brian's decision. Prompt quality is uneven (test, deduce, generalize, retract nearly absent; ask is over a third of all moves)."
+  }
  }
 }

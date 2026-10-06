@@ -11,11 +11,12 @@ A field may be left out only when the verdict is 'skip' or `approved_by` is set;
 Usage: capture_contract.py init OUT.json --cost-usd C [--redo-extra-usd X]   (writes a skeleton from the schema)
        capture_contract.py check CONTRACT.json                               (exit 0 ok, 1 not ok; prints every problem and each field's verdict)
 Contract JSON: {"run": {"description", "expected_cost_usd", "redo_extra_cost_usd"},
- "fields": {"<collection>": {"captured": bool, "reason": str, "marginal_cost_fraction": [lo, hi], "p_later_need": [lo, hi],
+ "fields": {"<collection>": {"captured": bool, "requires_env": {VAR: value} (optional; checked at run time), "reason": str, "marginal_cost_fraction": [lo, hi], "p_later_need": [lo, hi],
                             "blocks_later_uses": [str], "approved_by": str|null, "approved_at": str|null}}}
 """
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -54,6 +55,9 @@ def check(contract):
             continue
         if f.get("captured") is True:
             verdicts[name] = "captured"
+            for var, want in (f.get("requires_env") or {}).items():   # a field is only captured if the run is actually set up to capture it
+                if os.environ.get(var) != want:
+                    problems.append(f"{name}: marked captured but the run needs {var}={want} (currently {os.environ.get(var)!r})")
             continue
         if not f.get("reason"):
             problems.append(f"{name}: not captured but no reason given")
