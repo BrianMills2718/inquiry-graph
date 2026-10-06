@@ -7,7 +7,8 @@ removed and counted by reason in the returned report; nothing is dropped
 silently and nothing ungrounded is kept.
 
 Scope: content nodes, stances, question status and binary relations. Inquiry
-moves are not extracted here; positions and open questions do not need them.
+moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off, so the
+default prompt, cache keys and output are unchanged); see `moves_enabled()`.
 """
 import asyncio
 import hashlib
@@ -21,10 +22,21 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 from .model import (Anchor, Binding, Candidates, Conversation, Graph, Extraction, Node, QuestionEvent,
-                    Relation, StanceEvent, SIGNATURES, NodeKind, RelationKind, anchor)
+                    Relation, StanceEvent, SIGNATURES, NodeKind, RelationKind, MoveKind, Move, anchor)
 from .validate import validate
 
 PROMPT_VERSION = "live-2.2.0"
+MOVES_PROMPT_VERSION = "live-2.3.0-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
+
+
+def moves_enabled() -> bool:
+    return os.environ.get("INQUIRY_EXTRACT_MOVES", "") == "1"
+
+
+def prompt_version() -> str:
+    return MOVES_PROMPT_VERSION if moves_enabled() else PROMPT_VERSION
+
+
 # Codex-subscription calls run the CLI read-only and never ask for approval; same options as the scale campaign.
 CODEX_CALL_OPTIONS = {
     "codex_transport": "cli", "sandbox_mode": "read-only", "approval_policy": "never",
@@ -157,6 +169,20 @@ class LChunk(BaseModel):
     relations: list[LRelation] = Field(default_factory=list)
 
 
+class LMove(BaseModel):
+    kind: MoveKind
+    speaker: Speaker = Field(description="who performs the move; must be the author of the quoted message")
+    inputs: list[str] = Field(default_factory=list, description="node keys the move works on")
+    outputs: list[str] = Field(default_factory=list, description="node keys the move produces or changes")
+    message: int
+    quote: str
+
+
+class LChunkM(LChunk):
+    """Response model when moves are on."""
+    moves: list[LMove] = Field(default_factory=list)
+
+
 class MStance(LStance):
     speaker: str = Field(description="the speaker's name exactly as shown in capitals before the quoted message")
 
@@ -169,6 +195,14 @@ class MChunk(LChunk):
     """Response model for multi-person meetings: speakers are named, not 'user'/'assistant'."""
     stances: list[MStance] = Field(default_factory=list)
     question_events: list[MQuestionEvent] = Field(default_factory=list)
+
+
+class MMove(LMove):
+    speaker: str = Field(description="the speaker's name exactly as shown in capitals before the quoted message")
+
+
+class MChunkM(MChunk):
+    moves: list[MMove] = Field(default_factory=list)
 
 
 def is_meeting(conv: Conversation) -> bool:
@@ -222,6 +256,20 @@ Rules:
   'endorses' stance only when the speaker endorses a substantive claim, and target that claim.
 - The target of a stance must be the thing the quote is about, not a nearby node.
 - Do not invent content that is not in the messages. Prefer fewer, well-grounded items.
+"""
+
+
+MOVES_INSTRUCTIONS = """
+Also record inquiry moves: the acts a speaker performs on the content, in their own message. Kinds:
+ask (poses a question), clarify (makes a vague idea precise), distinguish (separates two ideas),
+challenge (objects to a claim or its fit), retract (withdraws an earlier position), hypothesize (offers a
+tentative claim), generalize (moves from cases to a general claim), deduce (derives a conclusion from
+premises), test (checks an idea against a case or evidence), reframe (replaces a question or framing),
+decompose (splits a problem into parts), connect (links two ideas), scope (limits where a claim applies),
+summarize (condenses what has been said), propose (suggests a method, design or action).
+A move's speaker MUST be the author of the quoted message; inputs and outputs are node keys from this
+response (what the move works on, and what it produces or changes); give at least one of them. Quote
+exactly (5-30 words) the words that perform the move. Record one move per act and only clear ones.
 """
 
 
@@ -359,6 +407,19 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
         c.relations.append(Relation(id=f"{prefix}:r:{i:03d}", kind=kind, anchors=[a],
                                     bindings=[Binding(role=first, ref=nodes[r.source].id),
                                               Binding(role=second, ref=nodes[r.target].id)]))
+    for i, mv in enumerate(getattr(out, "moves", [])):
+        if any(k not in nodes for k in mv.inputs + mv.outputs):
+            drops["move_node_missing"] += 1
+            continue
+        if not (mv.inputs or mv.outputs):
+            drops["move_empty"] += 1
+            continue
+        msg, a = ground(mv.message, mv.quote, need_speaker=mv.speaker)
+        if a is None:
+            continue
+        c.moves.append(Move(id=f"{prefix}:m:{i:03d}", kind=mv.kind, actor_id=actor_of(mv.speaker),
+                            input_ids=[nodes[k].id for k in mv.inputs], output_ids=[nodes[k].id for k in mv.outputs],
+                            at_message_id=msg.id, anchors=[a]))
     return c
 
 
@@ -374,7 +435,7 @@ def prune_to_valid(graph: Graph, drops: Counter, max_rounds: int = 10) -> Graph:
         for e in report["errors"]:
             drops[f"invalid:{e['code']}"] += 1
         data = graph.model_dump()
-        for field in ("nodes", "relations", "stance_events", "question_events"):
+        for field in ("nodes", "relations", "moves", "stance_events", "question_events"):
             data[field] = [x for x in data[field] if x["id"] not in bad]
         graph = Graph.model_validate(data)
     raise ValueError(f"graph still invalid after {max_rounds} pruning rounds: {validate(graph)['errors'][:5]}")
@@ -403,8 +464,10 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
     from llm_client import acall_llm_structured
     body = render_chunk(conv, msgs, labels)
     meeting = is_meeting(conv)
-    resp_model = MChunk if meeting else LChunk
-    key = hashlib.sha256((f"{PROMPT_VERSION}|meeting|{model}|{body}" if meeting else f"{PROMPT_VERSION}|{model}|{body}").encode()).hexdigest()[:16]
+    with_moves = moves_enabled()
+    resp_model = (MChunkM if with_moves else MChunk) if meeting else (LChunkM if with_moves else LChunk)
+    pv = prompt_version()
+    key = hashlib.sha256((f"{pv}|meeting|{model}|{body}" if meeting else f"{pv}|{model}|{body}").encode()).hexdigest()[:16]
     cached = cache_dir / f"chunk{i:02d}-{key}.json"
     if cached.exists():
         return resp_model.model_validate_json(cached.read_text(encoding="utf-8")), None
@@ -418,6 +481,8 @@ async def _extract_chunk(conv, i, msgs, model, labels, cache_dir: Path):
         system = MEETING_INSTRUCTIONS.format(shared=note, signatures=sigs)
     else:
         system = INSTRUCTIONS.format(user=labels[next(p.id for p in conv.participants if p.role == "user")], signatures=sigs)
+    if with_moves:
+        system += MOVES_INSTRUCTIONS
     out, meta = await acall_llm_structured(
         model, [{"role": "system", "content": system},
                 {"role": "user", "content": f"Conversation: {conv.title}\n\n{body}"}],
@@ -445,12 +510,14 @@ async def extract_conversation(conv: Conversation, model: str, cache_dir: Path,
     for i, (out, _meta) in enumerate(results):
         raw.update(nodes=len(out.nodes), stances=len(out.stances),
                    question_events=len(out.question_events), relations=len(out.relations))
+        if moves_enabled():
+            raw.update(moves=len(out.moves))
         part = convert(conv, i, out, drops)
-        for field in ("nodes", "relations", "stance_events", "question_events"):
+        for field in ("nodes", "relations", "moves", "stance_events", "question_events"):
             getattr(merged, field).extend(getattr(part, field))
     graph = Graph(id=f"{conv.id}:live", conversations=[conv], **merged.model_dump(),
                   extractions=[Extraction(method="llm_client-structured-chunked", provider=provider_for(model),
-                                          model=model, prompt_version=PROMPT_VERSION,
+                                          model=model, prompt_version=prompt_version(),
                                           notes=[f"{len(chunks)} chunks of <= {max_chars} chars"])])
     graph = prune_to_valid(graph, drops)
     cost = sum(m.cost for _, m in results if m is not None)
@@ -459,6 +526,7 @@ async def extract_conversation(conv: Conversation, model: str, cache_dir: Path,
     report = {"chunks": len(chunks), "model_output": dict(raw),
               "dropped": {k: v for k, v in drops.items() if k not in kept_adjusted},
               "kept_but_adjusted": {k: v for k, v in drops.items() if k in kept_adjusted},
-              "kept": {f: len(getattr(graph, f)) for f in ("nodes", "stance_events", "question_events", "relations")},
+              "kept": {f: len(getattr(graph, f)) for f in ("nodes", "stance_events", "question_events", "relations")
+                       + (("moves",) if moves_enabled() else ())},
               "new_call_cost_usd": round(cost, 4), "trace_ids": trace_ids}
     return graph, report
