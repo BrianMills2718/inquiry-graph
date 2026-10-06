@@ -52,6 +52,25 @@ The importer follows each export's `current_node` parent chain: **only the activ
 
 Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `pip install -e '.[llm]'` (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
 
+## Let conversations improve Inquiry Graph
+
+For substantive conversations, capture the inquiry and then review how well the
+representation served its purpose. The proposed workflow is documented in
+[conversation-to-graph self-improvement loop](docs/design/conversation-self-improvement-loop.md).
+
+A conversation may carry a sibling `fit-review.json` that records
+representation, extraction, workflow, and factorization friction plus an
+explicit promotion gate. Validate it with:
+
+```bash
+python tools/check_fit_review.py examples/conversations/2026-10-05-semantic-modeling/fit-review.json
+```
+
+The fit review is **evidence about the model, not authority to mutate it**.
+Core semantic changes should be promoted only after the documented reuse,
+independent-case, approval, and regression gates. See the
+[2026-10-05 semantic-modeling fixture](examples/conversations/2026-10-05-semantic-modeling/README.md).
+
 ## What is guaranteed—and what is not
 
 The validator checks schema, identity, reference resolution, exact quotes and Unicode offsets, relation-role signatures, actor/source consistency, and restricted temporal ordering. Rejected interpretations remain in the audit trail. Conceptual cycles are allowed; dependency cycles are warnings.
