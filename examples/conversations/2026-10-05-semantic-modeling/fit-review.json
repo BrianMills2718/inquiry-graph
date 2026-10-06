@@ -8,14 +8,14 @@
       "diagnosis": "representation_gap",
       "scope": "ontology",
       "severity": "material",
-      "description": "The current relation set can connect ideal/value, perceived problem, goal, task, method, and action only with generic relations such as motivates, depends_on, related_to, or candidate_for. The conversation needs finer distinctions among evaluative comparison, problem recognition, goal selection, and task assignment, but one conversation does not yet justify adding those relations to V1.",
+      "description": "Three pressure tests and real-graph episode reconstruction no longer support adding universal Problem/Anomaly/Opportunity primitives. The repeated representational friction is now higher-order: the active frame must be reconstructed from ordinary graph objects, and a conversation captured before downstream execution can lack later evaluation/update roles.",
       "evidence_refs": [
         "semantics-2026-10-05:n:q-problem",
         "semantics-2026-10-05:n:q-achievable"
       ],
       "current_workaround": "Represent the concepts as ordinary nodes and preserve the unresolved relation semantics in question text and prose.",
-      "proposed_change": "Survey problem-framing, control/decision, goal-modeling, requirements, and entrepreneurship prior art; test whether existing V1 relations plus a profile are sufficient before adding core relations.",
-      "promotion_gate": "A second independent inquiry or concrete downstream query must require the same distinction, or a blocking use must demonstrate that the current workaround produces a materially wrong result; complete a reuse/prior-art check first.",
+      "proposed_change": "Keep the core ontology unchanged. Use the derived reasoning-episode profile, test reviewer agreement on frame and episode-boundary reconstruction, and add a lightweight continuation/update workflow if later actions/outcomes need to extend an existing inquiry.",
+      "promotion_gate": "Promote a core Frame/ReasoningEpisode construct only if independent reviewers materially disagree on the same real graphs or a named downstream use cannot be served reliably by the projection. Treat missing later outcomes as a workflow/capture issue unless evidence shows otherwise.",
       "status": "open"
     },
     {
@@ -77,6 +77,6 @@
       "status": "accepted"
     }
   ],
-  "overall_assessment": "Three pressure tests now show that V1 can represent the main inquiry without adding universal Problem, Anomaly, Diagnosis, Opportunity, or Ideal node kinds. The stronger open question is whether a higher-order reasoning-episode view is needed to query initiating conditions, frames, candidate generation, selection, action, and revision consistently across regimes.",
-  "next_inquiry_question": "Can the current V1 graph answer the same reasoning-episode query set across organizational framing, technical diagnosis, and entrepreneurial opportunity without bespoke reconstruction?"
+  "overall_assessment": "Real-graph evaluation supports the derived reasoning-episode view: two mature captured episodes recover all 7 roles, while the current semantic-modeling fixture recovers 5/7 because later evaluation and outcomes were not part of its original capture. The frame role is consistently reconstructed rather than directly typed. Current priority is reviewer agreement and continuation/update workflow, not ontology expansion.",
+  "next_inquiry_question": "Do independent annotators agree on episode boundaries, active frames, and role bindings when reconstructing the same real Inquiry Graphs?"
 }

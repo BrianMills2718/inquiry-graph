@@ -29,6 +29,8 @@ EpisodeRole = Literal[
 class EpisodeRoleBinding(EpisodeRecord):
     role: EpisodeRole
     refs: list[str] = Field(min_length=1)
+    recovery: Literal["direct", "reconstructed", "analyst"] = "direct"
+    rationale: str | None = None
 
 
 class ReasoningEpisodeProfile(EpisodeRecord):
@@ -80,10 +82,19 @@ def project_episode(graph: Graph, profile: ReasoningEpisodeProfile) -> dict:
             }
             for ref in binding.refs
         ]
+    recovery = {binding.role: binding.recovery for binding in profile.bindings}
+    coverage = {
+        "bound_roles": len(profile.bindings),
+        "direct": sum(binding.recovery == "direct" for binding in profile.bindings),
+        "reconstructed": sum(binding.recovery == "reconstructed" for binding in profile.bindings),
+        "analyst": sum(binding.recovery == "analyst" for binding in profile.bindings),
+    }
     return {
         "episode_id": profile.id,
         "label": profile.label,
         "roles": roles,
+        "recovery": recovery,
+        "coverage": coverage,
         "note": profile.note,
         "projection_only": True,
     }
