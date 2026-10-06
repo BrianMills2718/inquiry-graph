@@ -1,0 +1,14 @@
+{
+  "schema_id": "nyc_crz.sealed_update.v0.1",
+  "baseline_packet": "NYC-CRZ-MVP-v1",
+  "update_id": "nyc-crz-air-quality-evaluation-2026-08-14",
+  "source_authority": "New York City Department of Health and Mental Hygiene",
+  "title": "Air Quality Impacts of Congestion Relief Zone Tolling",
+  "published_date": "2026-08-14",
+  "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/congestion-pricing-report/",
+  "selected_as": "post-freeze primary-source update for WP4 revision test",
+  "baseline_use": "excluded",
+  "content_policy": "Do not use any substantive finding from this update in WP0/WP1. Reveal only in WP4 and then identify exactly which baseline claims/uncertainties reopen.",
+  "selection_reason": "Post-freeze primary-source evaluation on a decision-relevant outcome not established by the frozen baseline.",
+  "note": "Selection metadata is recorded now; substantive update content is intentionally outside the baseline analysis."
+}

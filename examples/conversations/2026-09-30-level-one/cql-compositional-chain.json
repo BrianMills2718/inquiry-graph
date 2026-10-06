@@ -1,0 +1,144 @@
+{
+  "schema_version": "certified-chain/v0",
+  "source_formalism": "Categorical Query Language / functorial data migration",
+  "theorem": {
+    "statement": "For schema mappings F:S→T and G:T→U, pullback migration satisfies Δ_F(Δ_G(I)) = Δ_(G∘F)(I) for every U-instance I.",
+    "basis": "Δ_F is precomposition with F; equality follows from associativity of composition.",
+    "source_refs": [
+      "https://categoricaldata.net/cql/lambdaconf.pdf",
+      "https://categoricaldata.net/cql/hai19.pdf",
+      "https://categoricaldata.net/examples/All_Syntax.html"
+    ]
+  },
+  "schemas": [
+    {
+      "id": "S",
+      "entities": [
+        "Person"
+      ],
+      "attributes": [
+        "name"
+      ],
+      "notes": "Small source view."
+    },
+    {
+      "id": "T",
+      "entities": [
+        "Employee"
+      ],
+      "attributes": [
+        "full_name",
+        "salary"
+      ],
+      "notes": "Intermediate employee schema."
+    },
+    {
+      "id": "U",
+      "entities": [
+        "Worker"
+      ],
+      "attributes": [
+        "label",
+        "annual_pay",
+        "department"
+      ],
+      "notes": "Richer target schema."
+    }
+  ],
+  "mappings": [
+    {
+      "id": "F",
+      "source": "S",
+      "target": "T",
+      "kind": "functor/schema-mapping",
+      "object_map": {
+        "Person": "Employee"
+      },
+      "attribute_map": {
+        "name": "full_name"
+      },
+      "certificate": "well-typed constraint-respecting mapping",
+      "preserves": [
+        "schema equations/constraints expressible through the functor",
+        "pullback instance validity"
+      ]
+    },
+    {
+      "id": "G",
+      "source": "T",
+      "target": "U",
+      "kind": "functor/schema-mapping",
+      "object_map": {
+        "Employee": "Worker"
+      },
+      "attribute_map": {
+        "full_name": "label",
+        "salary": "annual_pay"
+      },
+      "certificate": "well-typed constraint-respecting mapping",
+      "preserves": [
+        "schema equations/constraints expressible through the functor",
+        "pullback instance validity"
+      ]
+    },
+    {
+      "id": "GF",
+      "source": "S",
+      "target": "U",
+      "kind": "composite functor/schema-mapping",
+      "composition": [
+        "F",
+        "G"
+      ],
+      "object_map": {
+        "Person": "Worker"
+      },
+      "attribute_map": {
+        "name": "label"
+      },
+      "certificate": "categorical composition of certified mappings",
+      "preserves": [
+        "same pullback semantics as sequential Δ_G then Δ_F"
+      ]
+    }
+  ],
+  "instance_U": {
+    "Worker": [
+      {
+        "id": "w1",
+        "label": "Ada",
+        "annual_pay": 120000,
+        "department": "R&D"
+      },
+      {
+        "id": "w2",
+        "label": "Lin",
+        "annual_pay": 105000,
+        "department": "Ops"
+      }
+    ]
+  },
+  "expected_pullback_S": {
+    "Person": [
+      {
+        "id": "w1",
+        "name": "Ada"
+      },
+      {
+        "id": "w2",
+        "name": "Lin"
+      }
+    ]
+  },
+  "guarantee": {
+    "id": "pullback-composition",
+    "source_claim": "I is a valid U-instance",
+    "target_claim": "Sequential pullback and composite pullback produce the same S-instance (up to representation identity used by this fixture).",
+    "transport_basis": "functoriality/precomposition theorem",
+    "not_claimed": [
+      "invertibility",
+      "preservation of U-only attributes such as department",
+      "arbitrary guarantee transport unrelated to Δ pullback"
+    ]
+  }
+}

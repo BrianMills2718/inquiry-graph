@@ -1,0 +1,132 @@
+{
+  "prefix": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "o2a": "https://github.com/BrianMills2718/observation-to-action-metamodel/"
+  },
+  "entity": {
+    "o2a:email-eu-core-results": {
+      "prov:type": "o2a:GraphAnalysisResult",
+      "prov:label": "Committed Email-Eu-core bridge results.json"
+    },
+    "o2a:top20-metric-table": {
+      "prov:type": "o2a:TabularArtifact",
+      "prov:label": "Top-20 bridge candidate metrics"
+    },
+    "o2a:standardized-features": {
+      "prov:type": "o2a:NumericMatrix",
+      "prov:label": "Standardized 5-feature matrix"
+    },
+    "o2a:pca-embedding": {
+      "prov:type": "o2a:EmbeddingArtifact",
+      "prov:label": "2D PCA embedding",
+      "explained_variance_ratio": [
+        0.62659685,
+        0.19389603
+      ]
+    },
+    "o2a:kmeans-clusters": {
+      "prov:type": "o2a:ClusterAssignment",
+      "prov:label": "KMeans cluster labels",
+      "k": 3
+    },
+    "o2a:cluster-summary": {
+      "prov:type": "o2a:TabularArtifact",
+      "prov:label": "Cluster-level metric summary"
+    }
+  },
+  "activity": {
+    "o2a:extract-top20": {
+      "prov:type": "o2a:TableExtraction"
+    },
+    "o2a:standardize": {
+      "prov:type": "o2a:SklearnStandardScaler"
+    },
+    "o2a:pca": {
+      "prov:type": "o2a:SklearnPCA",
+      "parameters": {
+        "n_components": 2
+      }
+    },
+    "o2a:kmeans": {
+      "prov:type": "o2a:SklearnKMeans",
+      "parameters": {
+        "n_clusters": 3,
+        "random_state": 42,
+        "n_init": 20
+      }
+    },
+    "o2a:summarize": {
+      "prov:type": "o2a:TabularAggregation"
+    }
+  },
+  "used": {
+    "u1": {
+      "prov:activity": "o2a:extract-top20",
+      "prov:entity": "o2a:email-eu-core-results"
+    },
+    "u2": {
+      "prov:activity": "o2a:standardize",
+      "prov:entity": "o2a:top20-metric-table"
+    },
+    "u3": {
+      "prov:activity": "o2a:pca",
+      "prov:entity": "o2a:standardized-features"
+    },
+    "u4": {
+      "prov:activity": "o2a:kmeans",
+      "prov:entity": "o2a:pca-embedding"
+    },
+    "u5": {
+      "prov:activity": "o2a:summarize",
+      "prov:entity": "o2a:kmeans-clusters"
+    }
+  },
+  "wasGeneratedBy": {
+    "g1": {
+      "prov:entity": "o2a:top20-metric-table",
+      "prov:activity": "o2a:extract-top20"
+    },
+    "g2": {
+      "prov:entity": "o2a:standardized-features",
+      "prov:activity": "o2a:standardize"
+    },
+    "g3": {
+      "prov:entity": "o2a:pca-embedding",
+      "prov:activity": "o2a:pca"
+    },
+    "g4": {
+      "prov:entity": "o2a:kmeans-clusters",
+      "prov:activity": "o2a:kmeans"
+    },
+    "g5": {
+      "prov:entity": "o2a:cluster-summary",
+      "prov:activity": "o2a:summarize"
+    }
+  },
+  "wasDerivedFrom": {
+    "d1": {
+      "prov:generatedEntity": "o2a:top20-metric-table",
+      "prov:usedEntity": "o2a:email-eu-core-results"
+    },
+    "d2": {
+      "prov:generatedEntity": "o2a:standardized-features",
+      "prov:usedEntity": "o2a:top20-metric-table"
+    },
+    "d3": {
+      "prov:generatedEntity": "o2a:pca-embedding",
+      "prov:usedEntity": "o2a:standardized-features"
+    },
+    "d4": {
+      "prov:generatedEntity": "o2a:kmeans-clusters",
+      "prov:usedEntity": "o2a:pca-embedding"
+    },
+    "d5": {
+      "prov:generatedEntity": "o2a:cluster-summary",
+      "prov:usedEntity": "o2a:kmeans-clusters"
+    }
+  },
+  "notes": [
+    "This is a PROV-shaped replay record, not a claim that o2a:* artifact classes are standardized ontology terms.",
+    "Sentiment stage omitted because the source artifact contains no message text."
+  ]
+}
