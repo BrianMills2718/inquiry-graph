@@ -96,5 +96,5 @@ def test_default_off(monkeypatch):
     assert not le.moves_enabled() and le.prompt_version() == le.PROMPT_VERSION == "live-2.2.0"
     assert "moves" not in LChunk.model_json_schema()["properties"]
     monkeypatch.setenv("INQUIRY_EXTRACT_MOVES", "1")
-    assert le.moves_enabled() and le.prompt_version() == "live-2.3.1-moves"
+    assert le.moves_enabled() and le.prompt_version() == "live-2.3.2-moves"
     assert "moves" in LChunkM.model_json_schema()["properties"]

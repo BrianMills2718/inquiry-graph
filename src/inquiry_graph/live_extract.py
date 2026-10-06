@@ -26,7 +26,7 @@ from .model import (Anchor, Binding, Candidates, Conversation, Graph, Extraction
 from .validate import validate
 
 PROMPT_VERSION = "live-2.2.0"
-MOVES_PROMPT_VERSION = "live-2.3.1-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
+MOVES_PROMPT_VERSION = "live-2.3.2-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
 
 
 def moves_enabled() -> bool:
@@ -264,12 +264,14 @@ Also record inquiry moves: reasoning acts a speaker performs on the content, quo
 The reasoning moves are the valuable output. Look for them in every message and prefer them over routine acts.
 Reasoning moves, with the kind of words that perform each:
 - hypothesize: offers a tentative claim. "maybe these clusters are just entities that co-occur"
-- test: checks an idea against a case, data or an operational criterion, or tries a frame to see if it holds.
-  "can we check whether any top-level group has no children?", "how would we tell if this works?"
+- test: checks an idea against a case, data or a criterion, or tries a frame to see if it holds. It is an act
+  of checking a claim, not asking for information and not running code. "can we check whether any top-level group
+  has no children?", "how would we tell if this works?"
 - deduce: derives a conclusion from stated premises. "if edges carry roles, each edge type needs a domain and range"
 - generalize: moves from cases to a general claim. "so in every one of these the parts turn out to be the same"
-- decompose: splits a whole into parts, or asks what the primitives are and whether there are too many or too few.
-  "first the data model, then the views, then export"
+- decompose: splits an idea or problem into named parts, or asks what the primitives are and whether there are too
+  many or too few. "first the data model, then the views, then export". A list of requirements or features for a
+  task is not decompose.
 - scope: limits where a claim or task applies, or steps back to the overall goal to stop drift.
   "keep in mind my goal is X", "don't build the visual yet, understand the data first"
 - reframe: replaces a question or framing with another, including defining a thing by its role instead of its nature.
@@ -283,9 +285,13 @@ Routine acts, recorded only when they carry the inquiry:
 - ask: poses a question that opens or sharpens a problem, or asks for a concrete example to ground an abstraction.
 - propose: suggests a method, design or choice that shapes the work.
 These are NOT moves, so record nothing for them: routine how-to or factual questions, task orders and commands
-("run it", "fix this", "continue", "use X"), approvals, pasted errors, logs or code, greetings, and an assistant's
-ordinary answers or explanations. If a message both gives an order and performs a reasoning move (for example
-it limits scope), record only the reasoning move. A long message can hold several moves; record each clear one.
+("run it", "fix this", "continue", "use X", "critique this"), approvals and picks among offered options ("yes to
+all", "use the first"), reports of what ran or failed, greetings, and an assistant's ordinary answers,
+explanations or plans. If a message both gives an order and performs a reasoning move (for example
+it limits scope), record only the reasoning move. A long message can hold several moves; record each clear one. The user's moves matter most; record an assistant
+move only when it is itself a reasoning move.
+The quote must be words the speaker wrote to perform the move. Never quote pasted logs, error output, code,
+documents or text the speaker is quoting from elsewhere, even when they sit inside the speaker's message.
 A move's speaker MUST be the author of the quoted message. inputs are node keys from this response that the move
 works on, outputs are node keys it produces or changes; give at least one. Cite only keys you defined in this
 response. If the thing a move works on or produces has no node yet, add a node for it (same message, same quote
