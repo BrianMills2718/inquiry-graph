@@ -106,3 +106,29 @@ observed condition
 Inquiry Graph V1 can represent this with questions, hypotheses, moves, and existing relations, but a stable problem-frame object must currently be reconstructed. That is now a representation-gap candidate to test in the technical-diagnosis and entrepreneurial-opportunity cases; it is not yet a schema proposal.
 
 See `docs/evaluation/problem-recognition-organizational-pressure-test.md`.
+
+
+## Second pressure test: technical diagnosis
+
+The AutoCoder validation-failure case provides a contrasting regime in which expected behavior is comparatively well specified. A real validator produced 0% validation success, and the historical investigation recorded candidate explanations including a mock-versus-real validator gap, stream-versus-RPC architecture mismatch, and wrong component abstractions.
+
+Result: here the anomaly is relatively stable before diagnosis begins.
+
+```text
+expected behavior + observation
+  -> anomaly / conflict
+  -> candidate diagnoses
+  -> locate failure level
+  -> candidate repair
+  -> test
+  -> revise
+```
+
+Inquiry Graph V1 represents this more comfortably than the organizational case. The semantics of anomaly detection and diagnosis appear naturally method-specific; no universal Anomaly or Diagnosis node kind is currently warranted.
+
+The cross-case distinction is now sharper:
+
+- organizational / ill-structured inquiry may need **candidate problem frames before diagnosis**;
+- technical diagnosis can often begin from a relatively stable anomaly and search over explanations.
+
+See `docs/evaluation/problem-recognition-technical-pressure-test.md`.
