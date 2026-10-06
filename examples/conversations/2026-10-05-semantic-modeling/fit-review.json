@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "semantics-2026-10-05",
+  "purpose": "Preserve the conceptual trajectory of the conversation, make the current frontier explicit, and test whether Inquiry Graph can represent the distinctions needed to resume and improve this inquiry.",
+  "findings": [
+    {
+      "id": "fit-001",
+      "diagnosis": "representation_gap",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The current relation set can connect ideal/value, perceived problem, goal, task, method, and action only with generic relations such as motivates, depends_on, related_to, or candidate_for. The conversation needs finer distinctions among evaluative comparison, problem recognition, goal selection, and task assignment, but one conversation does not yet justify adding those relations to V1.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:q-problem",
+        "semantics-2026-10-05:n:q-achievable"
+      ],
+      "current_workaround": "Represent the concepts as ordinary nodes and preserve the unresolved relation semantics in question text and prose.",
+      "proposed_change": "Survey problem-framing, control/decision, goal-modeling, requirements, and entrepreneurship prior art; test whether existing V1 relations plus a profile are sufficient before adding core relations.",
+      "promotion_gate": "A second independent inquiry or concrete downstream query must require the same distinction, or a blocking use must demonstrate that the current workaround produces a materially wrong result; complete a reuse/prior-art check first.",
+      "status": "open"
+    },
+    {
+      "id": "fit-002",
+      "diagnosis": "representation_gap",
+      "scope": "ontology",
+      "severity": "note",
+      "description": "Recurring strategies or reasoning motifs are not first-class records. Current guidance represents a strategy as a method node and an occurrence as an example linked by part_of/exemplifies. This conversation makes motif analysis important, but does not yet show that the workaround loses a necessary query.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:q-motifs",
+        "semantics-2026-10-05:n:m-factor"
+      ],
+      "current_workaround": "Use method nodes for reusable strategies and example/part_of/exemplifies for grounded episodes.",
+      "proposed_change": "Evaluate motif queries over multiple conversations before considering StrategyEpisode or another core construct.",
+      "promotion_gate": "Show at least one material motif-analysis query that cannot be answered faithfully with method + example + part_of/exemplifies, and reproduce the failure across more than one conversation.",
+      "status": "open"
+    },
+    {
+      "id": "fit-003",
+      "diagnosis": "capture_gap",
+      "scope": "extraction",
+      "severity": "material",
+      "description": "This fixture is a curated excerpt map rather than a reconciled native transcript. That is adequate for the conceptual thread but weak for exhaustive move/motif mining and actor-level stance analysis.",
+      "evidence_refs": [
+        "semantics-2026-10-05:conversation"
+      ],
+      "current_workaround": "The conversation coverage note explicitly declares the limitation and no unobserved turns are inferred.",
+      "proposed_change": "When available, add a repeatable path from native conversation export to graph extraction and compare it with this curated fixture.",
+      "promotion_gate": "Obtain a stable native export/input path and show that the additional source fidelity changes or improves a concrete downstream use enough to justify the extraction cost.",
+      "status": "open"
+    },
+    {
+      "id": "fit-004",
+      "diagnosis": "workflow_gap",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "Inquiry Graph previously captured conversations without requiring a structured review of how well the representation served the inquiry. That loses evidence about recurring schema, extraction, and workflow friction.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:g-loop",
+        "semantics-2026-10-05:n:m-loop"
+      ],
+      "current_workaround": "Ad hoc notes and conversation discussion.",
+      "proposed_change": "Adopt the sibling fit-review sidecar and documented conversation-to-graph self-improvement loop.",
+      "promotion_gate": "Merge this workflow only after the sidecar parses, the example graph validates, and the process explicitly prevents a single conversation from silently changing shared semantics.",
+      "status": "accepted"
+    },
+    {
+      "id": "fit-005",
+      "diagnosis": "wrong_level",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "A self-improvement loop can conflate evidence of representational friction with authority to change the ontology. The conversation explicitly asks for improvement over time, but the repository must keep diagnosis, proposal, and semantic promotion separate.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:g-loop"
+      ],
+      "current_workaround": "Human review and ordinary pull-request discipline.",
+      "proposed_change": "Make promotion gates mandatory in fit-review findings and state the rule 'self-improving, not self-authorizing' in the workflow.",
+      "promotion_gate": "Require every shared semantic change to cite its fit-review evidence, prior-art/reuse check, and regression evidence; no automatic schema mutation from fit-review output.",
+      "status": "accepted"
+    }
+  ],
+  "overall_assessment": "V1 can capture the main inquiry trajectory without a schema change. The material new need is a disciplined feedback loop around each conversation capture. The strongest semantic gap is the not-yet-factored relation among ideals/evaluation, problem recognition, candidate goals, tasks, methods, and actions; this remains a research question, not a schema proposal.",
+  "next_inquiry_question": "What is a problem or anomaly, how is it recognized relative to an ideal/evaluative frame, and which mature formalisms already factor problem recognition, diagnosis, framing, and solution search?"
+}
