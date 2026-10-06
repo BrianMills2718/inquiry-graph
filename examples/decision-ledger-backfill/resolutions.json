@@ -1,0 +1,49 @@
+[
+ {
+  "decision_id": "d-moves-skip",
+  "outcome": "yes",
+  "actual": {},
+  "note": "Moves were needed by the later reasoning-moves goal; a census found 0 of 2,176 graphs with any. The redo pass is not yet run (a moves extraction pilot started 2026-10-05 20:09 with no results), so actual redo usd and minutes are unknown, not zero."
+ },
+ {
+  "decision_id": "d-or-extract",
+  "outcome": "yes",
+  "actual": {
+   "usd": 7.686,
+   "minutes_wall": 107
+  },
+  "note": "usd = sum of cost_usd over or_run dispositions (1,429 chats, 30% under the $11 point). wall = 14.3 h summed per-chat seconds / 8 workers (assumed). Mean 36 s per chat vs 222-246 s on Codex (about 6x). 'yes' = the spend proved worth it."
+ },
+ {
+  "decision_id": "d-authorship",
+  "outcome": "yes",
+  "llm_query": {
+   "project": "inquiry-graph",
+   "task": "authorship-check",
+   "since": "2026-10-01"
+  },
+  "actual": {},
+  "note": "4,296 of 19,587 events (22%) were pasted or quoted text, not Brian's words; skipping would have attributed them to him. Query is all authorship-check spend since 2026-10-01, includes the later Gemini rerun."
+ },
+ {
+  "decision_id": "d-topic-digests",
+  "outcome": "yes",
+  "actual": {
+   "usd": 0.32
+  },
+  "note": "usd from the goal doc ($0.32 for 100 digests plus 5 earlier asks; trace prefix is shared with other asks so not queryable alone). Estimate was about 3x too high. The broad question was honest but weak, so narrow was needed."
+ },
+ {
+  "decision_id": "d-method-recurrence",
+  "outcome": "unknown",
+  "llm_query": {
+   "project": "inquiry-graph",
+   "task": "method-recurrence",
+   "since": "2026-10-01"
+  },
+  "actual": {
+   "minutes_wall": 24
+  },
+  "note": "wall = compute window from output file times (18:04 to 18:28), build time not captured. Jev pilot cost $0.0126 (task move-labelling). No recorded verdict on which route answered the question, so outcome unknown."
+ }
+]

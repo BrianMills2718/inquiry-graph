@@ -12,8 +12,8 @@ Capture the field if `f*C < p*R`, where `R = C + redo_extra_cost_usd` (time and 
 
 Worked example (from the prior-art survey): `C = 7.69`, `p = 0.3` gives break-even extra cost `$2.31`; `f = 0.10` captures ($0.77), `f = 0.40` skips ($3.08), and ten minutes of attention valued at $10 flips the second to capture (`R = 17.69`, threshold `$5.31`).
 
-## Updating the estimates (not built yet)
-`p` and `f` are priors. Planned: one append-only decision/resolution ledger (JSONL per day) so that `p` updates by Beta counts of "needed / not needed" and `f` by the mean of log(actual/estimate), shrunk toward the prior; about ten resolved outcomes per kind of decision before an updated value beats the prior. Survey and sources in the session record; terminology home to be decided.
+## Updating the estimates
+`tools/decision_ledger.py` (built 2026-10-05): one append-only ledger, JSONL per day (`private/ledger/decisions-YYYY-MM-DD.jsonl`, gitignored), with `decision` and `resolution` events. `update` gives `p` a Beta(3,7) prior updated by resolved needed yes/no outcomes, and `f` and cost estimates a mean of log(actual/estimate) shrunk toward 0 with prior weight 3; `rule` applies this contract's verdict (it imports `capture_contract.verdict`). About ten decisive outcomes per decision type are needed before an updated value beats the prior; until then `update` says so. Exchange rates for time and attention are placeholders ($60 and $120 per hour) until Brian gives his. Backfill of five past decisions (hindsight estimates, real outcomes): `examples/decision-ledger-backfill/`.
 
 ## Wrong when
 This decision is wrong if (a) the contract step is skipped or rubber-stamped in more than one of the next five expensive runs, or (b) a field marked `skip` with a clear verdict is later needed in a run that costs more than its estimated `f*C` to redo. Check at the next five runs and when ten ledger outcomes exist.
