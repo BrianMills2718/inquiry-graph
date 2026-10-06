@@ -132,3 +132,29 @@ The cross-case distinction is now sharper:
 - technical diagnosis can often begin from a relatively stable anomaly and search over explanations.
 
 See `docs/evaluation/problem-recognition-technical-pressure-test.md`.
+
+
+## Third pressure test: entrepreneurial opportunity
+
+The archived paid-engagement capability loop supplies a case that can begin without a failure signal. Its natural starting point is an aspiration plus available means under uncertainty; bounded engagements both deliver value and generate evidence that can change future capability and feasibility.
+
+Result: this case falsifies **Problem as the mandatory root of goal-directed inquiry**.
+
+A more general cross-case entry role is a salient condition: problem, anomaly, question, aspiration, opportunity, surprise, or similar trigger. That role is not proposed as a new ontology primitive.
+
+Across all three cases, the stronger candidate abstraction is a higher-order reasoning episode that connects:
+
+```text
+salient condition
+  -> framing
+  -> candidate generation
+  -> evaluation / selection
+  -> action / experiment
+  -> feedback / revision
+```
+
+Whether that deserves a core record, a profile, or merely a projection remains an empirical/query question.
+
+See:
+- `docs/evaluation/problem-recognition-entrepreneurial-pressure-test.md`
+- `docs/design/problem-recognition-three-case-synthesis.md`
