@@ -44,8 +44,9 @@ MOVES = {
     "step_back": "Returns to the overall goal or polices scope: are we drifting, what are we actually trying to do, is this the main thing.",
     "none_of_these": "No reasoning move: a task order or instruction, chore or tool request (find sources, fix this, write the code, give me the full code, continue), pasted error, traceback, log, data or code, a greeting or thanks, or a one-word reply.",
 }
-GATE = ("Does Brian's message make any reasoning move about ideas (asks about meaning or reasons, objects, defines, distinguishes, "
-        "hypothesizes, proposes his own design, tests, steps back)? Answer NO if it is a task order or instruction, a chore, a request "
+GATE = ("Does Brian's message make any reasoning move about ideas? YES if it asks what something means, why, or how it works; asks for a "
+        "concrete example or an explanation of an idea; objects, doubts or says it already exists or is well-trodden; defines or distinguishes terms; "
+        "hypothesizes; proposes his own design; tests; steps back or limits scope. Answer NO if it is a task order or instruction, a chore, a request "
         "to find, fetch, write, run or fix something, a pasted error, traceback, log, data or code, a greeting, thanks, or a bare reply.")
 GATE_CUTOFF = 0.5       # stage 2 runs only when P(gate=yes) >= this
 POLICY_CUTOFF = 0.9     # pilot: p>0.5 over-fired on chores; 0.8-0.9 kept the true cases (hand check, PR #170)
@@ -133,21 +134,22 @@ def label_questions(chunk, stage):
     return qs
 
 
-def label(out, cap, batch, name="", suffix="_v2", evalfile=None, outdir=None):
+def label(out, cap, batch, name="", suffix="_v3", evalfile=None, outdir=None, shard=None):
     """Two-stage labelling. Resumable; labels<suffix>.json holds one record per message."""
     from llm_client import call_decisions
     from llm_client.observability.query import get_cost
     sfx = f"_{name}" if name else ""
     outdir = outdir or out
     rows = json.loads((evalfile or out / f"evalset{sfx}.json").read_text())
-    lf = outdir / f"labels{sfx}{suffix}.json"
+    lf = outdir / f"labels{sfx}{suffix}{f'_s{shard[0]}of{shard[1]}' if shard else ''}.json"
     done = {r["id"]: r for r in json.loads(lf.read_text())} if lf.exists() else {}
     start = (outdir / f"start{suffix}.txt").read_text() if (outdir / f"start{suffix}.txt").exists() else datetime.now(timezone.utc).isoformat()
     (outdir / f"start{suffix}.txt").write_text(start)
     rows = [{**r, "id": r.get("id", r.get("mid")), "prev": r.get("prev", "")} for r in rows]
+    if shard: rows = rows[shard[0]::shard[1]]  # run shards as parallel processes, each with its own labels file
     todo = [r for r in rows if r["id"] not in done]
     for b in range(0, len(todo), batch):
-        spent = get_cost(project="inquiry-graph", since=start)
+        spent = sum(r["batch_cost"] for r in done.values())  # own spend: get_cost() is project-wide and counts parallel agents
         if spent >= cap: print(f"STOP: spend {spent} >= cap {cap}"); break
         chunk = todo[b:b + batch]
         tid = f"inquiry-graph/label-moves-v2/{name or 'main'}/b{b // batch:04d}"
@@ -167,7 +169,7 @@ def label(out, cap, batch, name="", suffix="_v2", evalfile=None, outdir=None):
         done.update(rec)
         lf.write_text(json.dumps(list(done.values()), indent=1))
         print(f"batch {b // batch}: {len(done)}/{len(rows)} labelled", flush=True)
-    print("spent", get_cost(project="inquiry-graph", since=start))
+    print("own spend", round(sum(r["batch_cost"] for r in done.values()), 4), "| project-wide since start (all agents)", get_cost(project="inquiry-graph", since=start))
 
 
 if __name__ == "__main__":
@@ -177,6 +179,7 @@ if __name__ == "__main__":
     ap.add_argument("--name", default="", help="label stage: label evalset_<name>.json (e.g. earlier)")
     ap.add_argument("--private", type=Path, default=Path.home() / "code/inquiry-graph/private")
     ap.add_argument("--n-random", type=int, default=130)
+    ap.add_argument("--shard", default="", help="corpus stage: i/n slice, e.g. 0/4")
     ap.add_argument("--cap", type=float, default=1.0)
     ap.add_argument("--batch", type=int, default=5)
     a = ap.parse_args()
@@ -188,4 +191,5 @@ if __name__ == "__main__":
     elif a.stage == "label": label(out, a.cap, a.batch, a.name)
     else:  # whole corpus of short messages (private/motifs_recur/corpus.json), no previous-assistant context
         a.corpus_out.mkdir(parents=True, exist_ok=True)
-        label(out, a.cap, max(a.batch, 10), "", "_corpus", evalfile=a.private / "motifs_recur/corpus.json", outdir=a.corpus_out)
+        label(out, a.cap, max(a.batch, 10), "", "_corpus_v3", evalfile=a.private / "motifs_recur/corpus.json", outdir=a.corpus_out,
+              shard=tuple(map(int, a.shard.split("/"))) if a.shard else None)

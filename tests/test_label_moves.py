@@ -31,7 +31,7 @@ def test_definitions_exclude_task_orders_and_define_by_role_is_distinct():
 
 
 def test_policy_cutoff_is_stricter_than_the_pilot_default():
-    assert lm.POLICY_CUTOFF >= 0.9 and 0 < lm.GATE_CUTOFF < 1 and "NO if it is a task order" in lm.GATE
+    assert lm.POLICY_CUTOFF >= 0.9 and 0 < lm.GATE_CUTOFF < 1 and "Answer NO if it is a task order" in lm.GATE and "concrete example" in lm.GATE
 
 
 def test_label_questions_are_typed_per_stage_without_network():
