@@ -102,8 +102,8 @@ def test_update_beta_and_shrinkage(tmp_path):
     assert (s["beta"]["yes"], s["beta"]["no"], s["beta"]["unknown_outcome"]) == (2, 1, 1)
     assert (s["beta"]["alpha"], s["beta"]["beta"]) == (5, 8) and s["decisive_outcomes"] == 3 and not s["enough_to_beat_prior"]
     assert s["resolved"] == 4 and s["unresolved"] == 0
-    # 4 ratios of e -> mean log 1 -> shrunk 4*1/(4+3)
-    assert s["log_ratio_usd"]["n"] == 4 and s["log_ratio_usd"]["shrunk_mean"] == pytest.approx(4 / 7)
+    # estimate is f*C = 0.4*7.69; actual 7.69*e -> each log ratio = 1 - log(0.4)
+    assert s["log_ratio_usd"]["n"] == 4 and s["log_ratio_usd"]["shrunk_mean"] == pytest.approx(4 * (1 - math.log(0.4)) / 7)
     for t in dl.DECISION_TYPES:      # every type is reported even with zero data
         assert t in dl.update_summary(decs, ress, "2026-10-05")
 
@@ -111,3 +111,17 @@ def test_update_beta_and_shrinkage(tmp_path):
 def test_malformed_line_is_reported_not_dropped(tmp_path):
     (tmp_path / "decisions-2026-10-01.jsonl").write_text("{not json\n")
     assert dl.load_events(tmp_path)[2] and dl.main(["--dir", str(tmp_path), "show"]) == 1
+
+
+def test_capture_extra_log_ratio_compares_extra_cost_not_pass_cost(tmp_path):
+    dl.append(tmp_path, dl.make_decision(cap_spec(id="x", inputs={"usd": 10, "f": 0.1, "p": 0.3})), "2026-10-01")   # extra expected = 1.0
+    dl.main(["--dir", str(tmp_path), "resolve", "x", "--outcome", "yes", "--usd", "2.0"])
+    decs, ress, _ = dl.load_events(tmp_path)
+    assert dl.update_summary(decs, ress, "2026-10-05")["capture_extra"]["log_ratio_usd"]["raw_mean"] == pytest.approx(math.log(2.0))
+
+
+def test_zero_rates_make_capture_money_only():
+    r = {"usd_per_hour_wall": 0.0, "usd_per_hour_attention": 0.0}
+    d = dl.make_decision(cap_spec(inputs={"usd": 8, "f": [0.1, 0.25, 0.6], "p": [0.3, 0.5, 0.7], "minutes_wall": 120, "minutes_attention": 30}))
+    assert dl.capture_rule(d["inputs"], r)["verdict"] == "uncertain"   # 0.6*8=4.8 vs 0.3*8=2.4 straddles
+    assert dl.capture_rule(d["inputs"], dl.RATES)["verdict"] == "capture"

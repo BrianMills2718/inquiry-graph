@@ -237,6 +237,8 @@ def log_ratios(decs, key):
         if not d["res"]:
             continue
         e = d["dec"]["inputs"].get(key, {}).get("point")
+        if key == "usd" and d["dec"]["decision_type"] == "capture_extra" and e and "f" in d["dec"]["inputs"]:
+            e = e * d["dec"]["inputs"]["f"]["point"]   # inputs.usd is the pass cost C; the thing actually paid is the extra, f*C
         a = d["res"]["actual"].get(key)
         if e and a and e > 0 and a > 0:
             out.append(math.log(a / e))
