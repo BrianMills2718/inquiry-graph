@@ -6,7 +6,7 @@
       "id": "semantics-2026-10-05:conversation",
       "title": "Modeling, semantics, goals, candidate generation, and a self-improving Inquiry Graph",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated excerpts from the visible 2026-10-05 ChatGPT conversation. Compact inquiry map, not a byte-for-byte full export. All semantic annotations are proposed.",
+      "coverage_note": "Curated excerpts from the visible 2026-10-05/06 ChatGPT conversation. Compact inquiry map, not a byte-for-byte full export. The continuation adds the frame-shifting, proactive inquiry-space exploration, reuse-before-invention, and parallel creative/prior-art-search arc. All semantic annotations are proposed.",
       "participants": [
         {
           "id": "participant:brian",
@@ -121,6 +121,38 @@
           "actor_id": "participant:brian",
           "ordinal": 13,
           "text": "Every time I engage in these kind of conversations, we create the inquiry graph for it, but then it should also search for ways that the inquiry graph repo is suboptimal in achieving its purposes based on the conversations we have, so it improves over time.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u14",
+          "actor_id": "participant:brian",
+          "ordinal": 14,
+          "text": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u15",
+          "actor_id": "participant:brian",
+          "ordinal": 15,
+          "text": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u16",
+          "actor_id": "participant:brian",
+          "ordinal": 16,
+          "text": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantics-2026-10-05:u17",
+          "actor_id": "participant:brian",
+          "ordinal": 17,
+          "text": "Okay, let's update and query graph for this conversation.",
           "original_id": null,
           "timestamp": null
         }
@@ -337,6 +369,156 @@
       "review_status": "proposed",
       "kind": "method",
       "text": "Conversation-to-graph self-review loop: capture the inquiry, inspect representation fit, record gaps and workarounds, and promote repository changes only when evidence warrants them."
+    },
+    {
+      "id": "semantics-2026-10-05:n:q-frame-shift",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How should AI identify, generate, evaluate, and use relevant frame shifts, and connect them to candidate generation, reasoning motifs, warrant, and the wider knowledge-work architecture?"
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-frame-generative",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Frames shape which questions, distinctions, candidates, evidence, methods, and success criteria become salient; frame shifting can therefore transform the effective generative space of inquiry."
+    },
+    {
+      "id": "semantics-2026-10-05:n:q-proactive-inquiry",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How can inquiry proactively search for important questions and frames that have not yet been considered, rather than reframing only after an observed failure?"
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-proactive-exploration",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "A capable inquiry process should explore unasked questions and alternative frames proactively, not only react to failure within a current frame."
+    },
+    {
+      "id": "semantics-2026-10-05:n:g-meta-inquiry",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Inquiry Graph should support not only object-level reasoning, but metareasoning about how to reason and inquiry-space reasoning about what is not currently being considered."
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-reuse-prior",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Knowledge work should begin with a strong prior that relevant prior art already exists, preferring off-the-shelf reuse, then adaptation/composition/integration, and treating genuine invention as a rare residual."
+    },
+    {
+      "id": "semantics-2026-10-05:n:c-parallel-search",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Agentic inquiry can run creative generation and prior-art/reuse search in parallel, allowing speculative frames and questions to be checked against existing frameworks while avoiding premature reinvention."
+    },
+    {
+      "id": "semantics-2026-10-05:n:m-reuse-invention-ladder",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Reuse-before-invention ladder: search mature work first; reuse when adequate; adapt or compose when needed; invent only the residual gap after serious search and integration attempts."
+    },
+    {
+      "id": "semantics-2026-10-05:n:q-integrated-inquiry",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "How should proactive frame/question exploration, reasoning motifs, candidate generation, landscape surveying, evidence/warrant, and reuse-before-invention interact as one adaptive inquiry methodology?"
+    },
+    {
+      "id": "semantics-2026-10-05:n:g-update-current-graph",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u17",
+          "start": 0,
+          "end": 57,
+          "quote": "Okay, let's update and query graph for this conversation."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Update this conversation's Inquiry Graph and inspect the resulting graph for new representational or workflow gaps."
     }
   ],
   "relations": [
@@ -577,6 +759,246 @@
         {
           "role": "object",
           "ref": "semantics-2026-10-05:n:m-factor"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:frame-connects-generation",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantics-2026-10-05:n:c-frame-generative"
+        },
+        {
+          "role": "target",
+          "ref": "semantics-2026-10-05:n:c-generative"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:frame-motivates-question",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantics-2026-10-05:n:c-frame-generative"
+        },
+        {
+          "role": "result",
+          "ref": "semantics-2026-10-05:n:q-frame-shift"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:proactive-reframes-frame-question",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframes",
+      "bindings": [
+        {
+          "role": "original",
+          "ref": "semantics-2026-10-05:n:q-frame-shift"
+        },
+        {
+          "role": "replacement",
+          "ref": "semantics-2026-10-05:n:q-proactive-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:proactive-answers",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "answers",
+      "bindings": [
+        {
+          "role": "answer",
+          "ref": "semantics-2026-10-05:n:c-proactive-exploration"
+        },
+        {
+          "role": "question",
+          "ref": "semantics-2026-10-05:n:q-proactive-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:meta-inquiry-motivated",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantics-2026-10-05:n:c-proactive-exploration"
+        },
+        {
+          "role": "result",
+          "ref": "semantics-2026-10-05:n:g-meta-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:reuse-method-candidate",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "candidate_for",
+      "bindings": [
+        {
+          "role": "candidate",
+          "ref": "semantics-2026-10-05:n:m-reuse-invention-ladder"
+        },
+        {
+          "role": "problem",
+          "ref": "semantics-2026-10-05:n:g-meta-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:parallel-related-proactive",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantics-2026-10-05:n:c-parallel-search"
+        },
+        {
+          "role": "target",
+          "ref": "semantics-2026-10-05:n:c-proactive-exploration"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:reuse-related-parallel",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantics-2026-10-05:n:c-reuse-prior"
+        },
+        {
+          "role": "target",
+          "ref": "semantics-2026-10-05:n:c-parallel-search"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:integrated-question-motivated",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantics-2026-10-05:n:g-meta-inquiry"
+        },
+        {
+          "role": "result",
+          "ref": "semantics-2026-10-05:n:q-integrated-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantics-2026-10-05:r:update-goal-about",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u17",
+          "start": 0,
+          "end": 57,
+          "quote": "Okay, let's update and query graph for this conversation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "about",
+      "bindings": [
+        {
+          "role": "subject",
+          "ref": "semantics-2026-10-05:n:g-update-current-graph"
+        },
+        {
+          "role": "object",
+          "ref": "semantics-2026-10-05:n:q-integrated-inquiry"
         }
       ]
     }
@@ -918,6 +1340,118 @@
         "semantics-2026-10-05:m12"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m14",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "semantics-2026-10-05:n:c-generative",
+        "semantics-2026-10-05:n:q-motifs"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:q-frame-shift",
+        "semantics-2026-10-05:n:c-frame-generative"
+      ],
+      "at_message_id": "semantics-2026-10-05:u14",
+      "after_move_ids": [
+        "semantics-2026-10-05:m13"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m15",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "semantics-2026-10-05:n:q-frame-shift"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:q-proactive-inquiry",
+        "semantics-2026-10-05:n:c-proactive-exploration"
+      ],
+      "at_message_id": "semantics-2026-10-05:u15",
+      "after_move_ids": [
+        "semantics-2026-10-05:m14"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m16",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "semantics-2026-10-05:n:q-proactive-inquiry",
+        "semantics-2026-10-05:n:c-proactive-exploration"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:g-meta-inquiry",
+        "semantics-2026-10-05:n:c-reuse-prior",
+        "semantics-2026-10-05:n:c-parallel-search",
+        "semantics-2026-10-05:n:m-reuse-invention-ladder",
+        "semantics-2026-10-05:n:q-integrated-inquiry"
+      ],
+      "at_message_id": "semantics-2026-10-05:u16",
+      "after_move_ids": [
+        "semantics-2026-10-05:m15"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantics-2026-10-05:m17",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u17",
+          "start": 0,
+          "end": 57,
+          "quote": "Okay, let's update and query graph for this conversation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:brian",
+      "input_ids": [
+        "semantics-2026-10-05:n:q-integrated-inquiry"
+      ],
+      "output_ids": [
+        "semantics-2026-10-05:n:g-update-current-graph"
+      ],
+      "at_message_id": "semantics-2026-10-05:u17",
+      "after_move_ids": [
+        "semantics-2026-10-05:m16"
+      ],
+      "inference_family": "unspecified"
     }
   ],
   "stance_events": [],
@@ -1041,6 +1575,66 @@
       "answer_ids": [],
       "resolution_basis": null,
       "replacement_id": null
+    },
+    {
+      "id": "semantics-2026-10-05:qe:7",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u14",
+          "start": 0,
+          "end": 651,
+          "quote": "Okay, this seems to be related, yeah, to maybe canbit generation and the epistemic war and or evidence stack and my other general vision repos. But yeah, this is kind of frames, and the ability to be able to frame shift is, like, incredibly important, I think. And there is an aspect, like, this is if we can get a methodology for AI to be able to identify relevant frame shifts and frame shifts well, then it's like we, and then attach these, like, all the framing to the reasoning methodologies and motifs and have feedback loops between all this, and then connect that to the rest of the vision stuff. I think we've got a very powerful methodology."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "question_id": "semantics-2026-10-05:n:q-frame-shift",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "semantics-2026-10-05:u14",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "semantics-2026-10-05:qe:8",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u15",
+          "start": 0,
+          "end": 806,
+          "quote": "I guess this gets to our kind of entrepreneurship question before and this idea of, like, and I'm kind of mixing metaphors here, but, like, the unknown unknowns, but, like, this idea of questioning what you haven't questioned yet. And this, like, I think there's something powerful here that I haven't quite conceptualized. And it seems like, in what you said, asking about the failure level is maybe too downstream, where, like, that seems to kind of be relying on a system where you are just kind of, like, only doing, like, trying to think outside the box once you've identified a failure mode. But, or, like, but kind of the thing with the entrepreneurship and what I've been saying is trying to always be thinking about the questions you haven't thought about and the frames you haven't thought about."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "question_id": "semantics-2026-10-05:n:q-proactive-inquiry",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "semantics-2026-10-05:u15",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "semantics-2026-10-05:qe:9",
+      "anchors": [
+        {
+          "message_id": "semantics-2026-10-05:u16",
+          "start": 0,
+          "end": 1227,
+          "quote": "Yeah, and I think this kind of relates to the project of inquiry graph, maybe even at a meta level, where it's not just how to reason; it's like how to reason about how to reason, and also, or how to reason about what you're not reasoning about, and then also kind of the landscape surveying, because really nothing should be novel. And so there should always be this kind of assumption of whatever you're doing, somebody's already worked on it, and you should never be recreating the wheel. And it's like modern knowledge work should generally be an integration thing, and there is like a 1% where new thought is needed, and it's almost like the assumption should be on either taking existing frameworks or integrating, and then like as a very last step, like there's this probability decrease. Like most cases, you should just be able to use something off the shelf, and in a rare case you should be integrating, and in an extremely rare case you should be needing to invent new stuff. But also that kind of contradicts, in some sense, this kind of creative loop. And the nice part about agents is they can do both of these in parallel, is trying, like, to think creatively on their own while also exploiting existing things."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "question_id": "semantics-2026-10-05:n:q-integrated-inquiry",
+      "status": "open",
+      "actor_id": "participant:brian",
+      "at_message_id": "semantics-2026-10-05:u16",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
     }
   ],
   "extractions": [
@@ -1054,10 +1648,21 @@
         "Captures the main conceptual trajectory and current frontier rather than every turn.",
         "All annotations are proposed pending review."
       ]
+    },
+    {
+      "method": "assistant-curated-visible-continuation",
+      "provider": "OpenAI",
+      "model": null,
+      "prompt_version": "1.0.0",
+      "notes": [
+        "Continuation covers visible user messages on frame shifting, proactive inquiry-space exploration, reuse-before-invention, and parallel creative/prior-art search.",
+        "No hidden reasoning inferred; higher-order claims are proposed interpretations anchored to visible user text."
+      ]
     }
   ],
   "notes": [
     "Created to test the conversation-to-graph self-improvement loop.",
-    "The sibling fit-review.json records representation/workflow shortcomings separately from inquiry content."
+    "The sibling fit-review.json records representation/workflow shortcomings separately from inquiry content.",
+    "2026-10-06 continuation added after frame/reasoning-episode pressure tests; this same graph remains the canonical conversation fixture."
   ]
 }
