@@ -82,16 +82,16 @@
       "diagnosis": "representation_gap",
       "scope": "ontology",
       "severity": "material",
-      "description": "The graph represents questions that became explicit, but it does not directly represent the deliberate meta-inquiry process of searching for important questions, assumptions, perspectives, or frames that are not yet in the active inquiry space. The continuation treats this proactive inquiry-space exploration as distinct from reactive reframing after failure.",
+      "description": "The reuse-first landscape maps proactive question/frame exploration to mature owners: frame creation/reframing, Problem Structuring Methods, C-K concept/knowledge co-expansion, literature-based discovery, transformational creativity, and metareasoning. The gap is now integration and empirical usefulness, not absence of theory.",
       "evidence_refs": [
         "semantics-2026-10-05:n:q-proactive-inquiry",
         "semantics-2026-10-05:n:c-proactive-exploration",
         "semantics-2026-10-05:n:g-meta-inquiry"
       ],
-      "current_workaround": "Represent explicit newly generated questions and reframes after they appear; preserve the search strategy itself as a method/goal in prose or a method node.",
-      "proposed_change": "Landscape-survey problem finding, question generation, literature-based discovery, design-by-analogy, discovery science, transformational creativity, and metareasoning before defining any new Inquiry Graph primitive. Test whether 'inquiry-space exploration' is best a strategy/motif, a generative-system transformation, or a higher-order episode role.",
-      "promotion_gate": "Require mapping against mature prior art and at least two real episodes where proactive question/frame exploration changes downstream candidates or actions.",
-      "status": "open"
+      "current_workaround": "Use method nodes and the existing generative-system transformation interface to represent concrete framing/question-exploration methods while keeping active frame/scope as a derived profile.",
+      "proposed_change": "Do not add a universal unknown-unknown or frame-shift primitive. Run a real parallel workflow test combining reuse/discovery search with frame/question exploration and measure whether it finds better prior art, shrinks residual invention, or improves downstream decisions.",
+      "promotion_gate": "Only promote new shared semantics if the parallel workflow reveals a repeated representational failure that mature method-specific owners plus the existing Frame profile/generative-regime interface cannot express.",
+      "status": "accepted"
     },
     {
       "id": "fit-007",
@@ -126,6 +126,6 @@
       "status": "accepted"
     }
   ],
-  "overall_assessment": "The conversation now distinguishes reuse preference from a stronger novelty-control policy: apparent novelty is an unmet reuse expectation that should increase search pressure rather than positive excitement. Inquiry Graph can represent the policy as a method/goal without schema change. The immediate value is transferring this control discipline into agent engineering workflow while continuing the frame/inquiry-space work.",
-  "next_inquiry_question": "How should novelty-falsification pressure interact with proactive frame/question exploration so agents remain creatively generative while treating claims of genuine novelty as a last-resort residual that must survive aggressive prior-art search?"
+  "overall_assessment": "The landscape survey resolves the conceptual ownership question: proactive frame/question exploration is already distributed across mature fields. Inquiry Graph should remain an empirical/projection layer rather than owning a new frame-shifting theory. The next high-value step is a comparative workflow experiment: parallel reuse/discovery and frame/question exploration versus a sequential baseline.",
+  "next_inquiry_question": "Does a parallel reuse/discovery + frame/question-exploration workflow materially improve prior-art recovery, frame quality, residual-invention reduction, or downstream decisions compared with a sequential baseline?"
 }
