@@ -108,8 +108,24 @@
       "proposed_change": "Test a parallel inquiry portfolio as workflow, not ontology: prior-art scout, frame/question explorer, integrator, residual-gap analyst, and evaluator/warrant functions can operate concurrently and feed a shared Inquiry Graph.",
       "promotion_gate": "Demonstrate on a concrete inquiry that parallel generation+reuse search finds a materially better frame, existing owner framework, or smaller residual gap than a sequential baseline.",
       "status": "open"
+    },
+    {
+      "id": "fit-008",
+      "diagnosis": "workflow_gap",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "The conversation sharpens reuse-before-invention into an asymmetric control policy: apparent novelty itself should increase search pressure and trigger attempts to falsify novelty before bespoke invention is authorized. Inquiry Graph can record this as a method/goal, but the broader agent workflow does not yet carry an explicit novelty-escalation discipline.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:c-novelty-frustration",
+        "semantics-2026-10-05:n:m-novelty-falsification",
+        "semantics-2026-10-05:n:g-aes-novelty-policy"
+      ],
+      "current_workaround": "Rely on general reuse-first guidance and human correction when agents positively frame apparent novelty.",
+      "proposed_change": "Adopt an explicit novelty-falsification/search-escalation policy in agent engineering guidance: apparent novelty raises the burden of search, terminology translation, adjacent-domain review, composition attempts, failed-attempt review, and requirement/frame challenge before residual invention.",
+      "promotion_gate": "Operationalize first as workflow/planning guidance and test on concrete engineering plans. Do not turn it into a semantic primitive unless repeated cross-domain use requires one.",
+      "status": "accepted"
     }
   ],
-  "overall_assessment": "The updated conversation strengthens the case that frame is a central role in adaptive inquiry and adds two higher-order requirements: proactive search over unasked questions/frames, and parallel creative generation plus reuse-first landscape search. The graph can record the resulting questions, claims, methods, and reframes, but active-frame scope and inquiry-space exploration remain reconstructed. The next work should test a narrow Frame profile and survey mature prior art for proactive inquiry-space expansion before changing the core ontology.",
-  "next_inquiry_question": "What minimal Frame profile (frame content, framing/reframing act, scope, assumptions, salient questions/candidate space) is sufficient to improve real Inquiry Graph queries, and which mature frameworks already formalize proactive frame/question-space exploration?"
+  "overall_assessment": "The conversation now distinguishes reuse preference from a stronger novelty-control policy: apparent novelty is an unmet reuse expectation that should increase search pressure rather than positive excitement. Inquiry Graph can represent the policy as a method/goal without schema change. The immediate value is transferring this control discipline into agent engineering workflow while continuing the frame/inquiry-space work.",
+  "next_inquiry_question": "How should novelty-falsification pressure interact with proactive frame/question exploration so agents remain creatively generative while treating claims of genuine novelty as a last-resort residual that must survive aggressive prior-art search?"
 }
