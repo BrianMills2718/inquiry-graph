@@ -45,3 +45,11 @@ def test_init_writes_a_contract_that_lists_every_collection(tmp_path):
     cc.init(out, 5.0, 0.0)
     import json
     assert set(json.loads(out.read_text())["fields"]) == set(cc.COLLECTIONS)
+
+
+def test_captured_field_with_requires_env_fails_unless_run_is_set_up(monkeypatch):
+    c = _contract({"captured": True, "requires_env": {"INQUIRY_EXTRACT_MOVES": "1"}})
+    monkeypatch.delenv("INQUIRY_EXTRACT_MOVES", raising=False)
+    assert any("INQUIRY_EXTRACT_MOVES" in p for p in cc.check(c)[0])
+    monkeypatch.setenv("INQUIRY_EXTRACT_MOVES", "1")
+    assert cc.check(c)[0] == []
