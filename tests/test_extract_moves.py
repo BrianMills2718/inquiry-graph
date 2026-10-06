@@ -4,7 +4,7 @@ from collections import Counter
 
 from inquiry_graph import live_extract as le
 from inquiry_graph.live_extract import LChunk, LChunkM, convert, prune_to_valid
-from inquiry_graph.model import Graph
+from inquiry_graph.model import Graph, MoveKind
 from inquiry_graph.validate import validate
 
 
@@ -54,11 +54,28 @@ def test_move_with_bad_grounding_is_dropped_and_counted(graph):
 
 def test_move_referencing_missing_node_is_dropped(graph):
     conv, user, asst = _pieces(graph)
-    out = _out(user, asst, [{"kind": "ask", "speaker": "user", "inputs": ["ghost"], "outputs": ["a"],
+    out = _out(user, asst, [{"kind": "ask", "speaker": "user", "inputs": ["ghost"], "outputs": [],
                              "message": user.ordinal, "quote": user.text[:20]}])
     drops = Counter()
     assert convert(conv, 0, out, drops).moves == []
     assert drops["move_node_missing"] == 1
+
+
+def test_move_keeps_surviving_nodes_when_one_cited_node_is_missing(graph):
+    conv, user, asst = _pieces(graph)
+    out = _out(user, asst, [{"kind": "test", "speaker": "user", "inputs": ["ghost"], "outputs": ["a"],
+                             "message": user.ordinal, "quote": user.text[:20]}])
+    drops = Counter()
+    c = convert(conv, 0, out, drops)
+    assert len(c.moves) == 1 and c.moves[0].input_ids == [] and len(c.moves[0].output_ids) == 1
+    assert drops["move_refs_trimmed"] == 1 and drops["move_node_missing"] == 0
+
+
+def test_moves_prompt_defines_every_kind_and_excludes_routine_acts():
+    from typing import get_args
+    for kind in get_args(MoveKind):
+        assert f"{kind}:" in le.MOVES_INSTRUCTIONS or f"{kind}: " in le.MOVES_INSTRUCTIONS, kind
+    assert "NOT moves" in le.MOVES_INSTRUCTIONS and "instead of skipping the move" in le.MOVES_INSTRUCTIONS
 
 
 def test_prune_removes_move_whose_node_was_pruned(graph):
@@ -79,5 +96,5 @@ def test_default_off(monkeypatch):
     assert not le.moves_enabled() and le.prompt_version() == le.PROMPT_VERSION == "live-2.2.0"
     assert "moves" not in LChunk.model_json_schema()["properties"]
     monkeypatch.setenv("INQUIRY_EXTRACT_MOVES", "1")
-    assert le.moves_enabled() and le.prompt_version() == "live-2.3.0-moves"
+    assert le.moves_enabled() and le.prompt_version() == "live-2.3.1-moves"
     assert "moves" in LChunkM.model_json_schema()["properties"]

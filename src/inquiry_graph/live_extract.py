@@ -26,7 +26,7 @@ from .model import (Anchor, Binding, Candidates, Conversation, Graph, Extraction
 from .validate import validate
 
 PROMPT_VERSION = "live-2.2.0"
-MOVES_PROMPT_VERSION = "live-2.3.0-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
+MOVES_PROMPT_VERSION = "live-2.3.1-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
 
 
 def moves_enabled() -> bool:
@@ -260,16 +260,36 @@ Rules:
 
 
 MOVES_INSTRUCTIONS = """
-Also record inquiry moves: the acts a speaker performs on the content, in their own message. Kinds:
-ask (poses a question), clarify (makes a vague idea precise), distinguish (separates two ideas),
-challenge (objects to a claim or its fit), retract (withdraws an earlier position), hypothesize (offers a
-tentative claim), generalize (moves from cases to a general claim), deduce (derives a conclusion from
-premises), test (checks an idea against a case or evidence), reframe (replaces a question or framing),
-decompose (splits a problem into parts), connect (links two ideas), scope (limits where a claim applies),
-summarize (condenses what has been said), propose (suggests a method, design or action).
-A move's speaker MUST be the author of the quoted message; inputs and outputs are node keys from this
-response (what the move works on, and what it produces or changes); give at least one of them. Quote
-exactly (5-30 words) the words that perform the move. Record one move per act and only clear ones.
+Also record inquiry moves: reasoning acts a speaker performs on the content, quoted from their own message.
+The reasoning moves are the valuable output. Look for them in every message and prefer them over routine acts.
+Reasoning moves, with the kind of words that perform each:
+- hypothesize: offers a tentative claim. "maybe these clusters are just entities that co-occur"
+- test: checks an idea against a case, data or an operational criterion, or tries a frame to see if it holds.
+  "can we check whether any top-level group has no children?", "how would we tell if this works?"
+- deduce: derives a conclusion from stated premises. "if edges carry roles, each edge type needs a domain and range"
+- generalize: moves from cases to a general claim. "so in every one of these the parts turn out to be the same"
+- decompose: splits a whole into parts, or asks what the primitives are and whether there are too many or too few.
+  "first the data model, then the views, then export"
+- scope: limits where a claim or task applies, or steps back to the overall goal to stop drift.
+  "keep in mind my goal is X", "don't build the visual yet, understand the data first"
+- reframe: replaces a question or framing with another, including defining a thing by its role instead of its nature.
+  "this is the opposite of a knowledge graph: the relations are the nodes"
+- distinguish: separates two ideas. "that is describing it, not playing it well"
+- challenge: objects to a claim or its fit. "that does not follow, the second case breaks it"
+- retract: withdraws an earlier position. "scrap that, I was wrong about the order"
+- clarify: makes a vague idea precise. "by 'level' I mean the depth in the hierarchy"
+- connect: links two ideas. summarize: condenses what has been said.
+Routine acts, recorded only when they carry the inquiry:
+- ask: poses a question that opens or sharpens a problem, or asks for a concrete example to ground an abstraction.
+- propose: suggests a method, design or choice that shapes the work.
+These are NOT moves, so record nothing for them: routine how-to or factual questions, task orders and commands
+("run it", "fix this", "continue", "use X"), approvals, pasted errors, logs or code, greetings, and an assistant's
+ordinary answers or explanations. If a message both gives an order and performs a reasoning move (for example
+it limits scope), record only the reasoning move. A long message can hold several moves; record each clear one.
+A move's speaker MUST be the author of the quoted message. inputs are node keys from this response that the move
+works on, outputs are node keys it produces or changes; give at least one. Cite only keys you defined in this
+response. If the thing a move works on or produces has no node yet, add a node for it (same message, same quote
+rules) instead of skipping the move. Quote exactly (5-30 words) the words that perform the move.
 """
 
 
@@ -408,17 +428,22 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
                                     bindings=[Binding(role=first, ref=nodes[r.source].id),
                                               Binding(role=second, ref=nodes[r.target].id)]))
     for i, mv in enumerate(getattr(out, "moves", [])):
-        if any(k not in nodes for k in mv.inputs + mv.outputs):
-            drops["move_node_missing"] += 1
-            continue
         if not (mv.inputs or mv.outputs):
             drops["move_empty"] += 1
             continue
+        # A node the move cites may itself have been dropped (its quote was not found). Keep the move on the nodes
+        # that survived; drop it only when none did.
+        ins, outs = [k for k in mv.inputs if k in nodes], [k for k in mv.outputs if k in nodes]
+        if not (ins or outs):
+            drops["move_node_missing"] += 1
+            continue
+        if len(ins) + len(outs) < len(mv.inputs) + len(mv.outputs):
+            drops["move_refs_trimmed"] += 1
         msg, a = ground(mv.message, mv.quote, need_speaker=mv.speaker)
         if a is None:
             continue
         c.moves.append(Move(id=f"{prefix}:m:{i:03d}", kind=mv.kind, actor_id=actor_of(mv.speaker),
-                            input_ids=[nodes[k].id for k in mv.inputs], output_ids=[nodes[k].id for k in mv.outputs],
+                            input_ids=[nodes[k].id for k in ins], output_ids=[nodes[k].id for k in outs],
                             at_message_id=msg.id, anchors=[a]))
     return c
 
@@ -522,7 +547,7 @@ async def extract_conversation(conv: Conversation, model: str, cache_dir: Path,
     graph = prune_to_valid(graph, drops)
     cost = sum(m.cost for _, m in results if m is not None)
     trace_ids = [f"inquiry-graph/live-extract/{conv.id}/chunk{i:02d}" for i in range(len(chunks))]
-    kept_adjusted = ("quote_realigned_to_source", "ambiguous_quote_first_used", "quote_message_corrected")
+    kept_adjusted = ("quote_realigned_to_source", "ambiguous_quote_first_used", "quote_message_corrected", "move_refs_trimmed")
     report = {"chunks": len(chunks), "model_output": dict(raw),
               "dropped": {k: v for k, v in drops.items() if k not in kept_adjusted},
               "kept_but_adjusted": {k: v for k, v in drops.items() if k in kept_adjusted},
