@@ -8,14 +8,15 @@
       "diagnosis": "representation_gap",
       "scope": "ontology",
       "severity": "material",
-      "description": "Three pressure tests and real-graph episode reconstruction no longer support adding universal Problem/Anomaly/Opportunity primitives. The repeated representational friction is now higher-order: the active frame must be reconstructed from ordinary graph objects, and a conversation captured before downstream execution can lack later evaluation/update roles.",
+      "description": "The frame role is now a material, repeated representational seam. Real-graph episode reconstruction repeatedly had to infer the active frame from ordinary claims/hypotheses, and the continuation makes frame identification, frame shifting, and frame-relative candidate generation central to the intended methodology. V1 can record reframe moves but does not directly represent what frame is active, its scope, or which questions/candidates it makes salient.",
       "evidence_refs": [
-        "semantics-2026-10-05:n:q-problem",
-        "semantics-2026-10-05:n:q-achievable"
+        "semantics-2026-10-05:n:q-frame-shift",
+        "semantics-2026-10-05:n:c-frame-generative",
+        "semantics-2026-10-05:n:q-proactive-inquiry"
       ],
-      "current_workaround": "Represent the concepts as ordinary nodes and preserve the unresolved relation semantics in question text and prose.",
-      "proposed_change": "Keep the core ontology unchanged. Use the derived reasoning-episode profile, test reviewer agreement on frame and episode-boundary reconstruction, and add a lightweight continuation/update workflow if later actions/outcomes need to extend an existing inquiry.",
-      "promotion_gate": "Promote a core Frame/ReasoningEpisode construct only if independent reviewers materially disagree on the same real graphs or a named downstream use cannot be served reliably by the projection. Treat missing later outcomes as a workflow/capture issue unless evidence shows otherwise.",
+      "current_workaround": "Represent frame content as ordinary claims/hypotheses/questions, record explicit reframe moves, and reconstruct active-frame scope in the reasoning-episode projection.",
+      "proposed_change": "Before extending core V1, define and test a narrow Frame profile that separates frame content, framing/reframing act, and frame scope. Evaluate whether this profile materially improves episode recovery, motif analysis, and candidate-generation queries.",
+      "promotion_gate": "Promote first-class frame semantics only after the Frame profile is tested on multiple real inquiries and shows a concrete query/usefulness gain over reconstruction. User priority makes this a high-priority test, but not automatic schema authority.",
       "status": "open"
     },
     {
@@ -75,8 +76,40 @@
       "proposed_change": "Make promotion gates mandatory in fit-review findings and state the rule 'self-improving, not self-authorizing' in the workflow.",
       "promotion_gate": "Require every shared semantic change to cite its fit-review evidence, prior-art/reuse check, and regression evidence; no automatic schema mutation from fit-review output.",
       "status": "accepted"
+    },
+    {
+      "id": "fit-006",
+      "diagnosis": "representation_gap",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The graph represents questions that became explicit, but it does not directly represent the deliberate meta-inquiry process of searching for important questions, assumptions, perspectives, or frames that are not yet in the active inquiry space. The continuation treats this proactive inquiry-space exploration as distinct from reactive reframing after failure.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:q-proactive-inquiry",
+        "semantics-2026-10-05:n:c-proactive-exploration",
+        "semantics-2026-10-05:n:g-meta-inquiry"
+      ],
+      "current_workaround": "Represent explicit newly generated questions and reframes after they appear; preserve the search strategy itself as a method/goal in prose or a method node.",
+      "proposed_change": "Landscape-survey problem finding, question generation, literature-based discovery, design-by-analogy, discovery science, transformational creativity, and metareasoning before defining any new Inquiry Graph primitive. Test whether 'inquiry-space exploration' is best a strategy/motif, a generative-system transformation, or a higher-order episode role.",
+      "promotion_gate": "Require mapping against mature prior art and at least two real episodes where proactive question/frame exploration changes downstream candidates or actions.",
+      "status": "open"
+    },
+    {
+      "id": "fit-007",
+      "diagnosis": "workflow_gap",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "Reuse-first landscape search and creative generation are currently treated as sequential or ad hoc activities, but the continuation proposes running them in parallel: speculative frame/question generation can improve search terms while prior-art discovery constrains adoption and exposes the residual invention gap.",
+      "evidence_refs": [
+        "semantics-2026-10-05:n:c-reuse-prior",
+        "semantics-2026-10-05:n:c-parallel-search",
+        "semantics-2026-10-05:n:m-reuse-invention-ladder"
+      ],
+      "current_workaround": "Manually alternate between creative reasoning and repository/literature search.",
+      "proposed_change": "Test a parallel inquiry portfolio as workflow, not ontology: prior-art scout, frame/question explorer, integrator, residual-gap analyst, and evaluator/warrant functions can operate concurrently and feed a shared Inquiry Graph.",
+      "promotion_gate": "Demonstrate on a concrete inquiry that parallel generation+reuse search finds a materially better frame, existing owner framework, or smaller residual gap than a sequential baseline.",
+      "status": "open"
     }
   ],
-  "overall_assessment": "Real-graph evaluation supports the derived reasoning-episode view: two mature captured episodes recover all 7 roles, while the current semantic-modeling fixture recovers 5/7 because later evaluation and outcomes were not part of its original capture. The frame role is consistently reconstructed rather than directly typed. Current priority is reviewer agreement and continuation/update workflow, not ontology expansion.",
-  "next_inquiry_question": "Do independent annotators agree on episode boundaries, active frames, and role bindings when reconstructing the same real Inquiry Graphs?"
+  "overall_assessment": "The updated conversation strengthens the case that frame is a central role in adaptive inquiry and adds two higher-order requirements: proactive search over unasked questions/frames, and parallel creative generation plus reuse-first landscape search. The graph can record the resulting questions, claims, methods, and reframes, but active-frame scope and inquiry-space exploration remain reconstructed. The next work should test a narrow Frame profile and survey mature prior art for proactive inquiry-space expansion before changing the core ontology.",
+  "next_inquiry_question": "What minimal Frame profile (frame content, framing/reframing act, scope, assumptions, salient questions/candidate space) is sufficient to improve real Inquiry Graph queries, and which mature frameworks already formalize proactive frame/question-space exploration?"
 }
