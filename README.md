@@ -19,10 +19,10 @@ The [offline linked-record inspector](examples/seed/inspector.html) works by ope
 Requires Python 3.11 or later. From the repository root:
 
 ```bash
-python -m venv .venv
+uv venv .venv
 . .venv/bin/activate                 # PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -e '.[dev]'
-python -m pytest -q
+uv pip install -e '.[dev]'
+python -m pytest -ra
 inquiry-graph validate examples/seed/graph.json
 inquiry-graph query examples/seed/graph.json open
 inquiry-graph query examples/seed/graph.json trace \
@@ -50,7 +50,7 @@ inquiry-graph import /path/to/conversations.json private/imported --conversation
 
 The importer follows each export's `current_node` parent chain: **only the active branch**, not an accidental mixture of alternative replies. Without `--conversation-id`, all conversations are imported into distinct hash-named JSON files. Only visible user/assistant text is imported; skipped parts are counted. This is an export adapter, not access to all your ChatGPT conversations. Review exports before sharing them.
 
-Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `pip install -e '.[llm]'` (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
+Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `uv pip install -e '.[llm]'` in the activated environment (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
 
 ## Let conversations improve Inquiry Graph
 

@@ -3,14 +3,20 @@ set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 export PYTHONUTF8=1
 git diff --cached --check
+COMMON_GIT_DIR=$(git rev-parse --path-format=absolute --git-common-dir)
+COMMON_REPO_ROOT=$(dirname "$COMMON_GIT_DIR")
 if [ -f .venv/Scripts/python.exe ]; then
   PY=.venv/Scripts/python.exe
 elif [ -x .venv/bin/python ]; then
   PY=.venv/bin/python
+elif [ -f "$COMMON_REPO_ROOT/.venv/Scripts/python.exe" ]; then
+  PY="$COMMON_REPO_ROOT/.venv/Scripts/python.exe"
+elif [ -x "$COMMON_REPO_ROOT/.venv/bin/python" ]; then
+  PY="$COMMON_REPO_ROOT/.venv/bin/python"
 else
-  echo 'Project virtual environment is required; install .[dev] before committing.' >&2
+  echo 'Project virtual environment is required; use uv venv and uv pip install -e ".[dev]" before committing.' >&2
   exit 1
 fi
-"$PY" -m pytest -q
+"$PY" -m pytest -ra
 "$PY" tools/build_artifacts.py --check
 "$PY" -m inquiry_graph validate examples/seed/graph.json
