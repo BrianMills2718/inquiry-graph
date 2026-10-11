@@ -1,6 +1,12 @@
+---
+description: Decision to require exact source anchors and keep every extracted record proposed until reviewed
+---
+
 # ADR-004: Exact grounding and a review boundary
 
 **Status:** accepted for V1.
+
+Governs: RULE-EXACT-ANCHOR, RULE-ACTIVE-BRANCH, RULE-REVIEW-RESET, RULE-VERBATIM-POSITIONS
 
 **Context.** Well-formed JSON can contain invented citations, wrong source offsets, false endorsements and plausible but unsupported logical relations.
 

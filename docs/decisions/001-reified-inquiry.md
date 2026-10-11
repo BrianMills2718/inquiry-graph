@@ -1,6 +1,12 @@
+---
+description: Decision to model relations and inquiry moves as id-bearing records with typed roles
+---
+
 # ADR-001: Reified relations and inquiry moves
 
 **Status:** accepted for V1.
+
+Governs: RULE-ROLE-SIGNATURE
 
 **Context.** A concept graph loses the difference between “X supports Y” and “we challenged the inference from X to Y, then reformulated the question.” Linked premises, multi-output distinctions and provenance require more than unlabeled binary edges.
 

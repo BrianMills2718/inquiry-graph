@@ -1,0 +1,149 @@
+# Checked trace for Inquiry Graph's system model (prose: ARCHITECTURE.md beside this file).
+# Each rule names one owner file that enforces it, the tests that prove it can fail, and the
+# decision records that say why. Requirements (REQ-xx) are in docs/requirements.md.
+# Checked by company-planning plugins/company-planning/scripts/durable_docs_check.py.
+scope: >-
+  The installed package src/inquiry_graph (import, prepare, extract, validate, merge, query, render)
+  and the cross-chat positions answer path tools/ask_positions.py. The other research tools under
+  tools/ (topic maps, motif mining, decision ledger, label tools) and ui/ are not modelled here.
+entities:
+  - {id: ENT-CONVERSATION, what: "a normalized source conversation: participants and ordered messages (model.py Conversation)"}
+  - {id: ENT-GRAPH, what: "canonical graph JSON: conversations, nodes, relations, moves, stance and question events, extractions (model.py Graph)"}
+  - {id: ENT-CANDIDATES, what: "an extraction response before source injection and validation (model.py Candidates)"}
+  - {id: ENT-QUARANTINE, what: "private failed-<uuid>.json holding a rejected extraction's error and raw response"}
+  - {id: ENT-POSITION-RECORD, what: "a Brian-attributed stance or question event whose quote is verbatim in its message (ask_positions.py records)"}
+records:
+  - {id: REC-GRAPH-FILE, what: canonical graph JSON written by extract or merge, writer: "src/inquiry_graph/io.py write_json"}
+  - {id: REC-QUARANTINE-FILE, what: failed extraction diagnostics, writer: "src/inquiry_graph/io.py quarantine"}
+  - {id: REC-EXTRACT-REPORT, what: "live extraction report: chunks, drops, kept counts, cost, trace ids", writer: "src/inquiry_graph/live_extract.py extract_conversation"}
+views:
+  - {id: VIEW-AGENDA, what: "query open: actor-scoped open questions", projection: "src/inquiry_graph/views.py open_questions"}
+  - {id: VIEW-TRACE, what: "query trace: one record's relations, moves and events", projection: "src/inquiry_graph/views.py trace"}
+  - {id: VIEW-RENDER, what: "Mermaid, DOT, Markdown report, offline HTML", projection: "src/inquiry_graph/render.py"}
+  - {id: VIEW-POSITIONS-ANSWER, what: "ask_positions answer JSON with claims citing verified evidence records", projection: "tools/ask_positions.py main"}
+processes:
+  - id: PROC-IMPORT
+    what: "`inquiry-graph import` / `import-bridge` / `import-exporter` normalize visible text into a Conversation"
+    enforces: [RULE-ACTIVE-BRANCH, RULE-EXCLUSIVE-WRITE]
+  - id: PROC-EXTRACT
+    what: "`inquiry-graph extract` turns a Conversation plus a response file or live llm_client calls into a validated graph"
+    enforces: [RULE-LIVE-GROUNDING, RULE-REVIEW-RESET, RULE-EXACT-ANCHOR, RULE-ROLE-SIGNATURE, RULE-QUARANTINE, RULE-SOURCE-NOT-OVERWRITTEN, RULE-EXCLUSIVE-WRITE]
+  - id: PROC-MERGE
+    what: "`inquiry-graph merge` unions graphs by exact id"
+    enforces: [RULE-EXACT-MERGE, RULE-EXCLUSIVE-WRITE]
+  - id: PROC-QUERY
+    what: "`inquiry-graph query` / `render` project a validated graph into views"
+    enforces: [RULE-STANCE-SEPARATE]
+  - id: PROC-ASK-POSITIONS
+    what: "`tools/ask_positions.py` answers a cross-chat question from Brian's attributed positions"
+    enforces: [RULE-VERBATIM-POSITIONS]
+  - id: PROC-BUILD-ARTIFACTS
+    what: "`tools/build_artifacts.py` regenerates schemas and review views; `--check` reports drift"
+    enforces: [RULE-SCHEMA-REPRODUCIBLE]
+rules:
+  - id: RULE-ACTIVE-BRANCH
+    statement: >-
+      A ChatGPT export imports only the current_node ancestor branch and only visible user/assistant text;
+      hidden, tool and non-text parts are skipped and counted (REQ-01).
+    owner: src/inquiry_graph/io.py
+    checks:
+      - tests/test_pipeline.py::test_active_branch_import
+      - tests/test_pipeline.py::test_hidden_export_messages_are_skipped
+      - tests/test_pipeline.py::test_no_analysis_or_nontext_extraction
+    decisions: [docs/decisions/004-grounding-and-review.md]
+  - id: RULE-EXACT-ANCHOR
+    statement: >-
+      Every semantic record's anchor quote equals the source message text at its Unicode offsets, and every
+      event is anchored at its occurrence by its speaker; otherwise validation errors (REQ-02, REQ-06).
+    owner: src/inquiry_graph/validate.py
+    checks:
+      - tests/test_validation.py::test_unicode_anchor
+      - tests/test_validation.py::test_negative_invariants
+    decisions: [docs/decisions/004-grounding-and-review.md]
+  - id: RULE-ROLE-SIGNATURE
+    statement: >-
+      Relations are id-bearing records whose role bindings obey the kind's signature (cardinality and target
+      type); a relation may itself be targeted (REQ-03).
+    owner: src/inquiry_graph/validate.py
+    checks:
+      - tests/test_validation.py::test_relation_can_be_challenged
+      - tests/test_validation.py::test_negative_invariants
+    decisions: [docs/decisions/001-reified-inquiry.md]
+  - id: RULE-REVIEW-RESET
+    statement: >-
+      Ingestion sets every candidate's review_status to proposed; an extraction cannot claim confirmation (REQ-08).
+    owner: src/inquiry_graph/io.py
+    checks:
+      - tests/test_pipeline.py::test_confirmation_cannot_be_claimed_by_llm
+    decisions: [docs/decisions/004-grounding-and-review.md]
+  - id: RULE-LIVE-GROUNDING
+    statement: >-
+      Live model output returns quotes, not offsets; each quote is located in the source and anchored to the exact
+      text, wrong-speaker and ungroundable items are dropped and counted, and the graph is pruned until valid (REQ-08).
+    owner: src/inquiry_graph/live_extract.py
+    checks:
+      - tests/test_pipeline.py::test_live_convert_grounds_quotes_and_enforces_speaker
+      - tests/test_pipeline.py::test_live_prune_removes_invalid_and_counts
+      - tests/test_pipeline.py::test_live_prune_breaks_supersession_cycles
+    decisions: [docs/decisions/006-extraction-adapter.md]
+  - id: RULE-QUARANTINE
+    statement: >-
+      Any extraction failure (parse, grounding, validation or transport) writes a private quarantine file and
+      raises; no partial graph is written to the output path (REQ-07, REQ-09).
+    owner: src/inquiry_graph/cli.py
+    checks:
+      - tests/test_pipeline.py::test_offline_e2e_and_quarantine
+      - tests/test_pipeline.py::test_transport_error_quarantined
+    decisions: [docs/decisions/006-extraction-adapter.md]
+  - id: RULE-SOURCE-NOT-OVERWRITTEN
+    statement: >-
+      An output path may never be an input or source snapshot, even with --force (REQ-09).
+    owner: src/inquiry_graph/cli.py
+    checks:
+      - tests/test_pipeline.py::test_source_cannot_be_overwritten_even_with_force
+    decisions: [docs/decisions/006-extraction-adapter.md]
+  - id: RULE-EXCLUSIVE-WRITE
+    statement: >-
+      Canonical JSON is written to a temporary file, fsynced, then linked into place exclusively; an existing file
+      is replaced only with --force (REQ-09).
+    owner: src/inquiry_graph/io.py
+    checks:
+      - tests/test_pipeline.py::test_atomic_no_overwrite
+    decisions: [docs/decisions/006-extraction-adapter.md]
+  - id: RULE-EXACT-MERGE
+    statement: >-
+      Merge is an idempotent, order-independent union by id; two different records with one id raise an identity
+      conflict instead of being merged (REQ-10).
+    owner: src/inquiry_graph/io.py
+    checks:
+      - tests/test_pipeline.py::test_union_idempotent_and_order_independent
+      - tests/test_pipeline.py::test_union_conflict
+    decisions: [docs/decisions/005-identity-and-history.md]
+  - id: RULE-STANCE-SEPARATE
+    statement: >-
+      The open-question agenda is scoped per actor and context; an assistant answer or another actor's resolution
+      does not close a user's question, and rejected events are not applied (REQ-04, REQ-05).
+    owner: src/inquiry_graph/views.py
+    checks:
+      - tests/test_pipeline.py::test_answer_does_not_close_user_question
+      - tests/test_pipeline.py::test_actor_specific_question_status
+      - tests/test_pipeline.py::test_confirmed_resolution_closes_only_its_scope
+      - tests/test_pipeline.py::test_rejected_event_not_applied
+    decisions: [docs/decisions/002-state-and-attribution.md]
+  - id: RULE-VERBATIM-POSITIONS
+    statement: >-
+      A position record is kept only when its event's actor is Brian, the anchored message's speaker is Brian, and
+      the quote is verbatim in that message (REQ-15).
+    owner: tools/ask_positions.py
+    checks:
+      - tests/test_ask_positions.py::test_keeps_verbatim_brian_event
+      - tests/test_ask_positions.py::test_drops_non_verbatim_quote
+      - tests/test_ask_positions.py::test_drops_event_whose_actor_is_not_brian
+    decisions: [docs/decisions/002-state-and-attribution.md, docs/decisions/004-grounding-and-review.md]
+  - id: RULE-SCHEMA-REPRODUCIBLE
+    statement: >-
+      The JSON schemas in schemas/ are generated from the Pydantic model and must round-trip (REQ-14).
+    owner: tools/build_artifacts.py
+    checks:
+      - tests/test_pipeline.py::test_schema_roundtrip
+    decisions: [docs/decisions/003-json-and-libraries.md]
