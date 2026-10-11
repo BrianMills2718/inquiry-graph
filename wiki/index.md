@@ -22,4 +22,5 @@ has said, asked and revised across many chats ([README](../README.md)).
 - [Project status](../docs/project-status.md): current state and evidence.
 - [Roadmap](../docs/roadmap.md): what comes next and why.
 - [Goals](../docs/goals/positions-as-shared-memory.md): positions as shared memory for agents.
+- [Plan: report reasons as text](../docs/plans/report-relations-rescore.md) and its [goal](../docs/plans/report-relations-rescore.goal.md): render relations with node text and re-score the usefulness pilot.
 - [New agent handoff](../docs/new-agent-handoff.md): how to pick up the work.

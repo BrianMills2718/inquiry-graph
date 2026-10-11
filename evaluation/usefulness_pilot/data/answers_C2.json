@@ -1,0 +1,65 @@
+{
+ "cost": 0.0,
+ "answers": [
+  {
+   "question_number": 1,
+   "answer": "The minimal, non-overlapping type system for primitive epistemic actions remained unresolved. The transcript had normalized warrant targets such as derive, retain, and raise support, but did not establish an exhaustive primitive action basis.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 2,
+   "answer": "No final combination rule was established. Graded support ρ was to be handled by an explicit policy for combining support, while conflicting or defeasible warrants required explicit attack/defeat relations that could remove a license.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 3,
+   "answer": "Bronstein’s framework was removed because it supplied useful geometric-learning priors but did not address the foundational question directly. It was not to remain in the foundational spine merely because it had been suggested earlier.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 4,
+   "answer": "“Reframe” was removed because it was a dialogue-level macro hiding several distinct operations: changing the query, extending or changing the language, changing theory/support, and changing context. It was therefore decomposed into more precise construction and transformation operators.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 5,
+   "answer": "The uniqueness claim depended on an explicit representation contract and semantic alignment. Canonical factorization was not absolute: for a fixed representation of the semantic universe and state, changes could be separated into representation-space changes, additions, deletions, and support changes.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 6,
+   "answer": "Brian supplied the correction, saying that constraints should be treated as “assumed” rather than “known.” The assistant adopted it by describing derivations as operating under temporary assumption contexts, distinct from durable epistemic commitments.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 7,
+   "answer": "The assistant proposed placing canonical factorization in a strategy/control layer above primitive reasoning operators. Brian responded by asking where that reusable strategy belonged in the system, then connected it to his own recursive self-application and interest in instantiating strategies in concrete conversations.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 8,
+   "answer": "Hoel’s causal-emergence, coarse-graining, and entropy work was merely raised as related work. The material records no developed synthesis or foundational adoption of that line.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 9,
+   "answer": "Theory graphs remained relevant for modular theory networks but were not added as another foundational layer. The architecture instead combined institution-style semantics with ATMS-like support and assumption management, using MMT as the concrete representation substrate.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 10,
+   "answer": "The model moved from a flat hypothesis set to K=(U,H,μ), then separated candidate generation, warrant/evaluation, and state update. It replaced vague primitives with institution-style signatures/sentences/models, added ATMS assumptions and labels, moved the active context into a reasoning episode R=(KΣ,Γ,Q), and finally used MMT for concrete syntax, modules, and morphisms while retaining ATMS for support.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 11,
+   "answer": "The immediate next step was to define the minimal typed epistemic-action system and test whether actions such as derive, retain, or raise support formed a clear, nonredundant basis. The transcript did not complete that formalization.",
+   "cannot_answer": false
+  },
+  {
+   "question_number": 12,
+   "answer": "The next step was to formalize support aggregation and explicit conflict handling: specify how graded support ρ combines and add attack/defeat relations for conflicting or defeasible warrants. This remained an open problem at the transcript’s end.",
+   "cannot_answer": false
+  }
+ ]
+}
