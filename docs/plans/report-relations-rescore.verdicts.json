@@ -4,17 +4,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly identifies the empirical uncertainty: whether model readers use added relation sentences to answer \u201cwhy\u201d questions. It explains why first principles cannot settle it, why the pilot\u2019s existing evidence is insufficient because it measured only the old renderer, and why prior art is inconclusive because it points both ways.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
-    "verdict": "pass"
-  },
-  "080c4d00dd7dee6d455ac5fb5a1e79d38bdf1a5872c9000e9435bf9cce31bc6c": {
-    "item_id": "OV-PROTO-VERTICAL-RESET",
-    "materiality": "non_material",
-    "missing": null,
-    "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly names the minimal vertical result (\u201crenderer change, its test, regenerated seed report, one re-score run, results recorded\u201d), the reset boundary (git revert restores the old report while cached private JSON remains untouched), and the non-goal of adding coordinated work units.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-PROTO-VERTICAL-RESET",
+    "rationale": "The evidence explicitly identifies the empirical uncertainty\u2014whether model readers use added relation sentences to answer \u201cwhy\u201d questions\u2014and explains why first principles, the pilot evidence, and prior art cannot decide it. It states that the pilot measured only the old renderer and that prior art points in both directions.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
     "verdict": "pass"
   },
   "0bc1c628a6837809ae5cb699c8a0a3b0265138b9e86eb7ac7d926ab0f32fe693": {
@@ -22,8 +13,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly names the provider as \u201cCodex CLI on Brian's subscription\u201d and the spend authority as Brian's instruction, with \u201cno money spend.\u201d It also states an authentic traced followup condition: C2 must exceed old C under the same judge, with every miss read and classified, before promotion.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-LLM-AUTHORITY-PROMOTION",
+    "rationale": "The evidence explicitly names the provider as \u201cCodex CLI on Brian's subscription,\u201d states the spend authority and that there is \u201cno money spend,\u201d and gives an authentic-run promotion condition: one authentic traced followup run showing C2 above old C under the same judge, with every miss read and classified.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-LLM-AUTHORITY-PROMOTION",
     "verdict": "pass"
   },
   "19e97cc8f83f173ab1027670306c9f9bc904e7852814eafed76f51e23349f223": {
@@ -31,8 +22,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence provides a requirements list covering asked-for and implied claims (R1\u2013R7). Every requirement names a check and has an explicit status of planned, with no deferred requirements requiring carry-forward.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-REQUIREMENTS-TRACED",
+    "rationale": "The evidence contains a requirements list with seven explicit requirements, including both asked-for and implied claims. Every requirement names a check and has an explicit status of planned; no omitted named standard, schema, contract, or relied-upon property is evident in the quoted plan.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-REQUIREMENTS-TRACED",
     "verdict": "pass"
   },
   "2994c3c88628891ddf62ca875dfa08021c5cb88ad5360826e215d8a35d039ea1": {
@@ -40,8 +31,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly identifies Brian as the authority and lists concrete non-goals, including no new questions, no schema change, no extraction changes, and no unsupported performance or publication claims.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-AUTHORITY-NONGOALS",
+    "rationale": "The evidence explicitly identifies authority (\u201cBrian approved this task\u201d and the repository owner) and lists explicit non-goals, including no new questions, no schema change, no extraction change, and no unsupported performance or publication claims.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-AUTHORITY-NONGOALS",
     "verdict": "pass"
   },
   "2bbe8a63fb805acadc3e753461486a3a0bda5107e807758b7c485d4c8319630c": {
@@ -49,8 +40,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly states there is no irreversible action or money spend, defines the consumption boundary (about 25 calls and no paid API), identifies Brian as authorizer, and specifies containment if the route fails twice, with no fallback.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-IRREVERSIBLE-SPEND",
+    "rationale": "The evidence explicitly states that there is no irreversible action or money spend, and for the subscription usage it names the boundary (about 25 calls and no paid API), authorizer (Brian), and containment (stop after two identical failures and do not fall back to OpenRouter).",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-IRREVERSIBLE-SPEND",
     "verdict": "pass"
   },
   "2cb64c35e9cfb95f190dc33286db7fa50fe5c391954b871a451807cc3a0c6146": {
@@ -58,8 +49,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly lists three material uncertainties (U1\u2013U3), states how each will be resolved, and assigns an owner: \u201cthis session.\u201d",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-UNCERTAINTIES",
+    "rationale": "The evidence explicitly lists three uncertainties (U1\u2013U3), identifies resolution evidence for each, and assigns an owner: \u201cthis session.\u201d",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-UNCERTAINTIES",
     "verdict": "pass"
   },
   "328de8b98d60a25e6d5bdf65089a5634deaecf09813ef7cc945d930c934ead13": {
@@ -67,17 +58,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly names the decision\u2014whether the relation-sentence renderer becomes the default and whether to keep the \u201ckeep reasons\u201d fix\u2014and specifies different actions for each result: keep C2 and record the remaining gap if it wins, or revert to the old layout/keep only decisions and attribute the gap to extraction if it does not.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-DECISION",
-    "verdict": "pass"
-  },
-  "46a65b1fd7182034c43b2c04ada586a77edbdc16a22bf672234f039d823127a5": {
-    "item_id": "CORE-SYSTEM-MODEL",
-    "materiality": "non_material",
-    "missing": null,
-    "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence links the model and trace files from `wiki/index.md`, names the changed and relied-on elements with required examined-run evidence, identifies views and material omissions, gives concrete freshness checks, and specifies same-change reconciliation for the model, view coverage, and verification evidence.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-SYSTEM-MODEL",
+    "rationale": "The evidence names the specific decision: whether `report()` with relation sentences becomes the default and whether \u201ckeep reasons\u201d is the pilot fix. It explicitly states the action if C2 wins and the alternative action if it does not.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-DECISION",
     "verdict": "pass"
   },
   "525169b1dd1c408589f2c7ad42dc61ddf3a50e7daa2d0eca167b0b79b102da0f": {
@@ -85,26 +67,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly describes the call graph, gives structured Pydantic result boundaries for both answer and judge calls, and states that each call has a trace_id and is logged in llm_client\u2019s daily call log.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-LLM-CALL-BOUNDARY",
-    "verdict": "pass"
-  },
-  "6884a533ca557279f3586a8db5f19cb33347384fbc14c99e1b69a80ff5da281d": {
-    "item_id": "OV-DURABLE-DOCS-DECLARED",
-    "materiality": "non_material",
-    "missing": null,
-    "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence states the repository declares durable documents in `.agentic/repo.yaml`, provides `Durable documents: none -- no declared durable role changes` with a specific explanation, and identifies the completion command with its revision range and required exit 0.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-DURABLE-DOCS-DECLARED",
-    "verdict": "pass"
-  },
-  "6c2a85383e598b1d99fb38b72f3230efbc9a299b4630c802398f1c433b2b4941": {
-    "item_id": "CORE-ACTIVATION-FACTS",
-    "materiality": "non_material",
-    "missing": null,
-    "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence declares empirical_comparison_proposed and llm_central true, matching the proposed old-versus-new pilot comparison and centrally LLM-dependent scoring. It explicitly limits the work to a repo-local renderer, states no irreversible action or money spend, and presents no external standard or AES-governed target claim, so the declared false facts are not contradicted.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-ACTIVATION-FACTS",
+    "rationale": "The evidence explicitly gives the call graph (one answer call and 24 judge calls), the structured result boundary for each via AnswerSet and GradeSet fields, and tracing through trace_id plus llm_client\u2019s daily call log.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-LLM-CALL-BOUNDARY",
     "verdict": "pass"
   },
   "6e896604c66eeaa8d1e303d5040963e09d658f4c4dc7cc1de3c158dcbb4d2438": {
@@ -112,8 +76,17 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly compares the costs: the run costs zero money and about an hour, while choosing now would leave a stale 0.65 figure that could steer agents and still require the same measurement later. It concludes that measurement is the cheaper path.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-COST",
+    "rationale": "The evidence explicitly compares the costs: the run costs zero money and about an hour, while choosing without measuring would leave a stale headline number, steer agents incorrectly, and still require the same measurement later. It directly concludes that measurement is the cheaper path.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-COST",
+    "verdict": "pass"
+  },
+  "6f8c0a27c4e47cd5d9014b3ecb7d7fdf96b3c8176b2e37e2e3bbdadfd12b40ab": {
+    "item_id": "OV-DURABLE-DOCS-DECLARED",
+    "materiality": "non_material",
+    "missing": null,
+    "model": "codex/gpt-5.6-luna",
+    "rationale": "The evidence explicitly provides a `Durable documents: none` line with a reason covering unchanged goal, requirements, system model, and decisions, identifies the repository\u2019s declared durable roles, and requires `durable_docs_check.py` over the adoption revision range to exit 0.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-DURABLE-DOCS-DECLARED",
     "verdict": "pass"
   },
   "749d781cb04a4e397aa226da10e9986faec0d69239c9593dac427d19497e2728": {
@@ -121,8 +94,17 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence names the execution and trace locations, including llm_client logs, cached JSON, and the saved check file. It specifies what must be examined beyond final scores or pass/fail counts: individual answers and grades, report evidence, assertion messages, regenerated output, and drift checks.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-TRACE-REVIEW",
+    "rationale": "The evidence names the run, trace locations, and the specific evidence required beyond final scores or pass/fail counts. It also specifies full answer/judge traces, failure assertions, regenerated output, and build-check results for the stated criteria.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-TRACE-REVIEW",
+    "verdict": "pass"
+  },
+  "8072c7b634b0322dfe097b0c38001c7ff48e711ab5c4d53c4233d376a446f5fb": {
+    "item_id": "CORE-ACTIVATION-FACTS",
+    "materiality": "non_material",
+    "missing": null,
+    "model": "codex/gpt-5.6-luna",
+    "rationale": "The plan declares empirical_comparison_proposed=true and llm_central=true, matching its old-vs-new pilot comparison and LLM-dependent scoring. It declares shared_mechanism=false and irreversible_or_spend_action=false while explicitly describing a repo-local renderer, no irreversible action, and no money spend; no triggered external-standard or AES-target fact is improperly declared false.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-ACTIVATION-FACTS",
     "verdict": "pass"
   },
   "8538493022184d683b15d66755003d84e4cbad648011773412848d967a40cd87": {
@@ -130,8 +112,17 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly defines direct success checks: reading report output for each relation\u2019s reason/result and comparing C2 with old C using the same judge route. It also gives concrete disproof conditions\u2014C2 failing to exceed old C or \u201cwhy\u201d questions still missing required reasons\u2014and specifies trace evidence beyond scores.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-SUCCESS-DISPROOF",
+    "rationale": "The evidence explicitly defines direct success checks\u2014reading report output for each reason/result relation and like-for-like C2 versus old-C scoring\u2014and concrete disproof conditions. It also names trace locations and specifies what the trace must show beyond counts or final scores.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-SUCCESS-DISPROOF",
+    "verdict": "pass"
+  },
+  "a808f019035f702fd17922faab684aa85ffefcf8bb4007557eb70faf67c8b0e4": {
+    "item_id": "CORE-SYSTEM-MODEL",
+    "materiality": "non_material",
+    "missing": null,
+    "model": "codex/gpt-5.6-luna",
+    "rationale": "The evidence links the model and documentation entry point, names the changed and relied-on elements, and specifies what the examined run must show for each. It also identifies applicable views, explains why no diagram update is needed, names concrete freshness checks, and states same-change reconciliation for the model, view coverage, and verification evidence.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-SYSTEM-MODEL",
     "verdict": "pass"
   },
   "c4469e58b2f916412a0d53dfffc6e441c0013c6523efcdf76835f432e0e69453": {
@@ -139,8 +130,17 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly names the actors (\u201can AI agent\u201d and \u201cBrian\u201d), the desired result (\u201cthe report carries reasons and replacements as readable sentences\u201d), and a stable, concrete user-visible example: report lines containing \u201cbecause\u201d for 26 motivates relations, with the stated observable count change from 0 to 26.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-ACTOR-RESULT-EXAMPLE",
+    "rationale": "The evidence explicitly names the actors (\u201can AI agent\u201d and \u201cBrian\u201d), states the desired result (\u201creasons and replacements as readable sentences\u201d), and gives a stable, concrete user-visible example: the report format with \u201cbecause\u201d lines and the expected count of 26.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-ACTOR-RESULT-EXAMPLE",
+    "verdict": "pass"
+  },
+  "cca580941ace6d343c67c0b03450d6edbffe74263b6e4d2f1a8b9631bc34b7b8": {
+    "item_id": "OV-PROTO-VERTICAL-RESET",
+    "materiality": "non_material",
+    "missing": null,
+    "model": "codex/gpt-5.6-luna",
+    "rationale": "The evidence explicitly names the minimal vertical result (\u201crenderer change, its test, regenerated seed report, one re-score run, results recorded\u201d), the reset boundary (\u201cgit revert of the branch restores the old report; cached private JSON is untouched\u201d), and the non-goals, including \u201cno coordinated work units.\u201d",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-PROTO-VERTICAL-RESET",
     "verdict": "pass"
   },
   "d26fbcb28330cc4839c35cf97fbcd4218f956931daed82fe8a558dcd7b2ed59c": {
@@ -148,8 +148,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly states \u201cNo catalogue entry fits, because\u201d and explains that the work needs report linearization or model calls, which none of the named entries provides.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-CAPABILITY-REUSE",
+    "rationale": "The evidence states \u201cNo catalogue entry fits, because\u201d and identifies the work\u2019s needs\u2014report linearization and model calls\u2014that no listed entry provides. It also names entries from both catalogue files, satisfying the required catalogue-grounded explanation.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-CAPABILITY-REUSE",
     "verdict": "pass"
   },
   "d421ff2f221643cae11e6d2546508d4fdc66467b4914ff783b27bca80cc64348": {
@@ -157,8 +157,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly states \u201cMinimum capabilities every compared candidate must meet\u201d and lists four required parity conditions: same graph, no truncation, all 12 answers in the same schema, and grading in the same blind judge run.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-PARITY",
+    "rationale": "The evidence explicitly states the minimum capabilities every candidate must meet before comparison counts: same graph with only renderer differing, fits context without truncation, answers all 12 questions in the same schema, and grading in the same blind judge run. It also states that candidates missing any requirement are reported but not compared.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-PARITY",
     "verdict": "pass"
   },
   "e4482581cd8c5de532024fcc1111096c21f729d72f16ad92af37516d1a1c2853": {
@@ -166,8 +166,8 @@
     "materiality": "non_material",
     "missing": null,
     "model": "codex/gpt-5.6-luna",
-    "rationale": "The evidence explicitly defines a separate failure/surprise procedure and covers every required element: preserving the failed run and trace ID, reading the complete trace, citing and classifying divergence, restricting unresolved diagnoses to investigation, targeting repairs, linking a new traced run, retaining the original failure, and reporting review completeness separately from the score.",
-    "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-TRACE-DEBUGGING",
+    "rationale": "The evidence explicitly defines a separate procedure for failures and surprises, distinct from anticipated failure modes. It covers preserving the failed output and trace ID, reading complete inputs, prompts, tool calls, intermediate stages, and final output, citing and classifying divergences, restricting unresolved diagnoses to investigation, linking targeted repairs to new traced runs while retaining the original, and reporting review completeness separately from the score.",
+    "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-TRACE-DEBUGGING",
     "verdict": "pass"
   }
 }

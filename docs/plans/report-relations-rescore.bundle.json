@@ -7,13 +7,13 @@
     "schema_version": "checklist-definition.v1",
     "record_type": "checklist_definition",
     "checklist_id": "method-conformance.bounded-design",
-    "revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
+    "revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
     "title": "bounded-design method conformance for report-relations-rescore",
     "purpose": "Route-bound evidence that the selected Company Planning method was applied before adoption.",
     "subject_ref": {
       "kind": "planning_review",
       "id": "report-relations-rescore",
-      "revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+      "revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
     },
     "items": [
       {
@@ -385,8 +385,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-ACTOR-RESULT-EXAMPLE",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-ACTOR-RESULT-EXAMPLE",
       "evidence_types": [
         "plan_section"
@@ -399,9 +399,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#actor-and-result",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:32:46Z",
+        "observed_at": "2026-10-11T20:19:57Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -411,8 +411,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-ROUTE",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-ROUTE",
       "evidence_types": [
         "path_decision_record"
@@ -425,9 +425,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.path-decision.json",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:32:58Z",
+        "observed_at": "2026-10-11T20:20:02Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -437,8 +437,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-REQUIREMENTS-TRACED",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-REQUIREMENTS-TRACED",
       "evidence_types": [
         "plan_document"
@@ -451,9 +451,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#requirements",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:10Z",
+        "observed_at": "2026-10-11T20:20:11Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -463,8 +463,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-SUCCESS-DISPROOF",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-SUCCESS-DISPROOF",
       "evidence_types": [
         "plan_section"
@@ -477,9 +477,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#success-and-disproof",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:18Z",
+        "observed_at": "2026-10-11T20:20:16Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -489,8 +489,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-TRACE-REVIEW",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-TRACE-REVIEW",
       "evidence_types": [
         "plan_section"
@@ -503,9 +503,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#success-and-disproof",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:24Z",
+        "observed_at": "2026-10-11T20:20:22Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -515,8 +515,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-TRACE-DEBUGGING",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-TRACE-DEBUGGING",
       "evidence_types": [
         "plan_section"
@@ -529,9 +529,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#when-a-run-fails-or-surprises-us",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:31Z",
+        "observed_at": "2026-10-11T20:20:30Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -541,8 +541,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-SYSTEM-MODEL",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-SYSTEM-MODEL",
       "evidence_types": [
         "plan_document"
@@ -555,9 +555,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#system-model",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:36Z",
+        "observed_at": "2026-10-11T20:20:46Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -567,8 +567,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-CAPABILITY-REUSE",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-CAPABILITY-REUSE",
       "evidence_types": [
         "plan_document"
@@ -581,9 +581,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#capability-reuse",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:41Z",
+        "observed_at": "2026-10-11T20:20:58Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -593,8 +593,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-AUTHORITY-NONGOALS",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-AUTHORITY-NONGOALS",
       "evidence_types": [
         "plan_section"
@@ -607,9 +607,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#authority-and-non-goals",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:46Z",
+        "observed_at": "2026-10-11T20:21:05Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -619,8 +619,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-IRREVERSIBLE-SPEND",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-IRREVERSIBLE-SPEND",
       "evidence_types": [
         "plan_section"
@@ -633,9 +633,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#irreversible-actions-and-spend",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:51Z",
+        "observed_at": "2026-10-11T20:21:15Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -645,8 +645,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-UNCERTAINTIES",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-UNCERTAINTIES",
       "evidence_types": [
         "plan_section"
@@ -659,9 +659,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#uncertainties",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:33:57Z",
+        "observed_at": "2026-10-11T20:21:27Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -671,8 +671,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-CORE-ACTIVATION-FACTS",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "CORE-ACTIVATION-FACTS",
       "evidence_types": [
         "plan_document",
@@ -686,9 +686,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#activation-facts",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:08Z",
+        "observed_at": "2026-10-11T20:21:37Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -698,8 +698,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-EVAL-DECISION",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-EVAL-DECISION",
       "evidence_types": [
         "plan_section"
@@ -712,9 +712,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#evaluation-design",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:16Z",
+        "observed_at": "2026-10-11T20:21:42Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -724,8 +724,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
       "evidence_types": [
         "plan_section"
@@ -738,9 +738,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#evaluation-design",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:25Z",
+        "observed_at": "2026-10-11T20:21:46Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -750,8 +750,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-EVAL-PARITY",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-EVAL-PARITY",
       "evidence_types": [
         "plan_section"
@@ -764,9 +764,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#evaluation-design",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:32Z",
+        "observed_at": "2026-10-11T20:21:50Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -776,8 +776,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-EVAL-COST",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-EVAL-COST",
       "evidence_types": [
         "plan_section"
@@ -790,9 +790,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#evaluation-design",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:45Z",
+        "observed_at": "2026-10-11T20:21:57Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -802,8 +802,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-LLM-CALL-BOUNDARY",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-LLM-CALL-BOUNDARY",
       "evidence_types": [
         "plan_section"
@@ -816,9 +816,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#llm-call-boundary",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:34:54Z",
+        "observed_at": "2026-10-11T20:22:01Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -828,8 +828,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-LLM-AUTHORITY-PROMOTION",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-LLM-AUTHORITY-PROMOTION",
       "evidence_types": [
         "plan_section"
@@ -842,9 +842,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#llm-call-boundary",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:35:03Z",
+        "observed_at": "2026-10-11T20:22:06Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -854,8 +854,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-PROTO-VERTICAL-RESET",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-PROTO-VERTICAL-RESET",
       "evidence_types": [
         "plan_section"
@@ -868,9 +868,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#vertical-and-reset",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:35:12Z",
+        "observed_at": "2026-10-11T20:22:10Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null
@@ -880,8 +880,8 @@
       "record_type": "checklist_item_observation",
       "observation_id": "OBS-OV-DURABLE-DOCS-DECLARED",
       "checklist_id": "method-conformance.bounded-design",
-      "checklist_revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-      "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+      "checklist_revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+      "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
       "item_id": "OV-DURABLE-DOCS-DECLARED",
       "evidence_types": [
         "plan_document"
@@ -894,9 +894,9 @@
         "status": "pass",
         "evidence_ref": "docs/plans/report-relations-rescore.md#durable-documents",
         "scope": "plan:docs/plans/report-relations-rescore.md",
-        "observed_at": "2026-10-11T19:35:22Z",
+        "observed_at": "2026-10-11T20:22:15Z",
         "producer": "agent",
-        "source_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+        "source_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
         "limitations": []
       },
       "annotation": null

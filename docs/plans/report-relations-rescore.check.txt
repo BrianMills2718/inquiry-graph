@@ -1,0 +1,44 @@
+# Checks for plan report-relations-rescore (2026-10-11T20:27:38Z, worktree HEAD 6a4fac5 plus plan re-adoption edits)
+
+## pytest -ra
+
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_warrant_adapter.py:14: epistemic_warrant not installed (private package; see docs/warrant-adapter.md)
+======================= 136 passed, 1 skipped in 19.61s ========================
+exit=0
+
+## tools/build_artifacts.py --check
+Checked 8 artifacts
+exit=0
+
+## validate examples/seed/graph.json
+{"valid":true,"errors":[],"warnings":[]}
+exit=0
+
+## new-renderer report content
+Decisions and reasons headings: 1; because lines: 26
+
+### Old renderer (scratch copy of 3dc0437 src) running the new tests
+E       StopIteration
+E       assert False
+E        +  where False = any(<generator object test_supersedes_reads_old_replaced_by_new.<locals>.<genexpr> at 0x7696b6941d50>)
+E       AssertionError: assert 'Outputs: di...n:q-taxonomy' not in '# Inquiry g...iry graph.\n'
+E
+E         'Outputs: dialogue-...-09-27:n:q-taxonomy' is contained here:
+E           s: (none)
+E           Outputs: dialogue-2026-09-27:n:q-taxonomy
+E
+E           > Is it fair to say that um the only way that you can learn something that goes beyond the observation itself is through induction, deduction, or abduction
+E           ...
+E
+E         ...Full output truncated (1217 lines hidden), use '-vv' to show
+FAILED tests/test_report_relations.py::test_motivates_reason_and_result_text_appear_together
+FAILED tests/test_report_relations.py::test_supersedes_reads_old_replaced_by_new
+FAILED tests/test_report_relations.py::test_move_inputs_and_outputs_show_node_text_not_ids
+============================== 3 failed in 0.21s ===============================
+exit=1
+(test 1 fails with StopIteration from next() finding no 'because' line: the assertion target, not an import or collection error)
+
+## durable_docs_check
+durable-docs: mode=plan repo=/home/brian/code/inquiry-graph/worktrees/report-relations findings=0 (none), exit 0
+exit=0

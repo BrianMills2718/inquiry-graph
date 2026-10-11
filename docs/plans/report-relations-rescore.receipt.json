@@ -1,10 +1,10 @@
 {
   "schema_version": "planning-method-conformance-receipt.v1",
   "record_type": "planning_method_conformance_receipt",
-  "receipt_id": "RECEIPT-report-relations-rescore-911f524de6fb",
+  "receipt_id": "RECEIPT-report-relations-rescore-5f5e2dccdc67",
   "plan": {
     "plan_ref": "docs/plans/report-relations-rescore.md",
-    "plan_sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+    "plan_sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
   },
   "path_decision": {
     "ref": "docs/plans/report-relations-rescore.path-decision.json",
@@ -26,7 +26,7 @@
   },
   "activation": {
     "facts_ref": "docs/plans/report-relations-rescore.facts.json",
-    "facts_sha256": "2207df39f85d7f8c71abdb1a39fbb968b38e6f087eced6e5b9beef47ded4d92d",
+    "facts_sha256": "3f13d0c7594c700fa6b90150f8a2122cc0c216a11f4ac61f78a326a84829781b",
     "facts": {
       "shared_mechanism": false,
       "empirical_comparison_proposed": true,
@@ -126,10 +126,10 @@
   },
   "checklist": {
     "checklist_id": "method-conformance.bounded-design",
-    "revision": "sha256:0d71ab2eb562dd1d3cfbe96c9ffded2bef39ea535599fa5a842aecbd4e2f6195",
-    "definition_sha256": "95e548ba12e3350222e2f1728033d4080e7b7bcde8f2c0865af44ab5f0a2bedb",
+    "revision": "sha256:f690f2416ec7aaf1c5caf4db42cd325f7aee0537688167b886b4616bb8c24db9",
+    "definition_sha256": "c4d92d7180a34c63080718de5c529f8a26667486d08ae8e39dd970c84698ae18",
     "bundle_ref": "docs/plans/report-relations-rescore.bundle.json",
-    "bundle_sha256": "66c0774801f78e736ed8f507d0f0a374106b15b1a8613094a74459597b8402c1",
+    "bundle_sha256": "b0ba5f1ed254ef4db91160d2a1a1bc31ffc64209b1a78b2bfb3b6a3574471737",
     "coverage": "complete",
     "definition_matches_recompilation": true
   },
@@ -147,16 +147,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#actor-and-result",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-ACTOR-RESULT-EXAMPLE",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-ACTOR-RESULT-EXAMPLE",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly names the actors (“an AI agent” and “Brian”), the desired result (“the report carries reasons and replacements as readable sentences”), and a stable, concrete user-visible example: report lines containing “because” for 26 motivates relations, with the stated observable count change from 0 to 26.",
+        "rationale": "The evidence explicitly names the actors (“an AI agent” and “Brian”), states the desired result (“reasons and replacements as readable sentences”), and gives a stable, concrete user-visible example: the report format with “because” lines and the expected count of 26.",
         "reused": false
       },
       "suggested_action": null
@@ -193,16 +193,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#requirements",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-REQUIREMENTS-TRACED",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-REQUIREMENTS-TRACED",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence provides a requirements list covering asked-for and implied claims (R1–R7). Every requirement names a check and has an explicit status of planned, with no deferred requirements requiring carry-forward.",
+        "rationale": "The evidence contains a requirements list with seven explicit requirements, including both asked-for and implied claims. Every requirement names a check and has an explicit status of planned; no omitted named standard, schema, contract, or relied-upon property is evident in the quoted plan.",
         "reused": false
       },
       "suggested_action": null
@@ -220,16 +220,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#success-and-disproof",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-SUCCESS-DISPROOF",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-SUCCESS-DISPROOF",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly defines direct success checks: reading report output for each relation’s reason/result and comparing C2 with old C using the same judge route. It also gives concrete disproof conditions—C2 failing to exceed old C or “why” questions still missing required reasons—and specifies trace evidence beyond scores.",
+        "rationale": "The evidence explicitly defines direct success checks—reading report output for each reason/result relation and like-for-like C2 versus old-C scoring—and concrete disproof conditions. It also names trace locations and specifies what the trace must show beyond counts or final scores.",
         "reused": false
       },
       "suggested_action": null
@@ -247,16 +247,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#success-and-disproof",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-TRACE-REVIEW",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-TRACE-REVIEW",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence names the execution and trace locations, including llm_client logs, cached JSON, and the saved check file. It specifies what must be examined beyond final scores or pass/fail counts: individual answers and grades, report evidence, assertion messages, regenerated output, and drift checks.",
+        "rationale": "The evidence names the run, trace locations, and the specific evidence required beyond final scores or pass/fail counts. It also specifies full answer/judge traces, failure assertions, regenerated output, and build-check results for the stated criteria.",
         "reused": false
       },
       "suggested_action": null
@@ -274,16 +274,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#when-a-run-fails-or-surprises-us",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-TRACE-DEBUGGING",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-TRACE-DEBUGGING",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly defines a separate failure/surprise procedure and covers every required element: preserving the failed run and trace ID, reading the complete trace, citing and classifying divergence, restricting unresolved diagnoses to investigation, targeting repairs, linking a new traced run, retaining the original failure, and reporting review completeness separately from the score.",
+        "rationale": "The evidence explicitly defines a separate procedure for failures and surprises, distinct from anticipated failure modes. It covers preserving the failed output and trace ID, reading complete inputs, prompts, tool calls, intermediate stages, and final output, citing and classifying divergences, restricting unresolved diagnoses to investigation, linking targeted repairs to new traced runs while retaining the original, and reporting review completeness separately from the score.",
         "reused": false
       },
       "suggested_action": null
@@ -301,16 +301,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#system-model",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-SYSTEM-MODEL",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-SYSTEM-MODEL",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence links the model and trace files from `wiki/index.md`, names the changed and relied-on elements with required examined-run evidence, identifies views and material omissions, gives concrete freshness checks, and specifies same-change reconciliation for the model, view coverage, and verification evidence.",
+        "rationale": "The evidence links the model and documentation entry point, names the changed and relied-on elements, and specifies what the examined run must show for each. It also identifies applicable views, explains why no diagram update is needed, names concrete freshness checks, and states same-change reconciliation for the model, view coverage, and verification evidence.",
         "reused": false
       },
       "suggested_action": null
@@ -328,16 +328,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#capability-reuse",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-CAPABILITY-REUSE",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-CAPABILITY-REUSE",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly states “No catalogue entry fits, because” and explains that the work needs report linearization or model calls, which none of the named entries provides.",
+        "rationale": "The evidence states “No catalogue entry fits, because” and identifies the work’s needs—report linearization and model calls—that no listed entry provides. It also names entries from both catalogue files, satisfying the required catalogue-grounded explanation.",
         "reused": false
       },
       "suggested_action": null
@@ -355,16 +355,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#authority-and-non-goals",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-AUTHORITY-NONGOALS",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-AUTHORITY-NONGOALS",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly identifies Brian as the authority and lists concrete non-goals, including no new questions, no schema change, no extraction changes, and no unsupported performance or publication claims.",
+        "rationale": "The evidence explicitly identifies authority (“Brian approved this task” and the repository owner) and lists explicit non-goals, including no new questions, no schema change, no extraction change, and no unsupported performance or publication claims.",
         "reused": false
       },
       "suggested_action": null
@@ -382,16 +382,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#irreversible-actions-and-spend",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-IRREVERSIBLE-SPEND",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-IRREVERSIBLE-SPEND",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly states there is no irreversible action or money spend, defines the consumption boundary (about 25 calls and no paid API), identifies Brian as authorizer, and specifies containment if the route fails twice, with no fallback.",
+        "rationale": "The evidence explicitly states that there is no irreversible action or money spend, and for the subscription usage it names the boundary (about 25 calls and no paid API), authorizer (Brian), and containment (stop after two identical failures and do not fall back to OpenRouter).",
         "reused": false
       },
       "suggested_action": null
@@ -409,16 +409,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#uncertainties",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-UNCERTAINTIES",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-UNCERTAINTIES",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly lists three material uncertainties (U1–U3), states how each will be resolved, and assigns an owner: “this session.”",
+        "rationale": "The evidence explicitly lists three uncertainties (U1–U3), identifies resolution evidence for each, and assigns an owner: “this session.”",
         "reused": false
       },
       "suggested_action": null
@@ -436,16 +436,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#activation-facts",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/CORE-ACTIVATION-FACTS",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/CORE-ACTIVATION-FACTS",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence declares empirical_comparison_proposed and llm_central true, matching the proposed old-versus-new pilot comparison and centrally LLM-dependent scoring. It explicitly limits the work to a repo-local renderer, states no irreversible action or money spend, and presents no external standard or AES-governed target claim, so the declared false facts are not contradicted.",
+        "rationale": "The plan declares empirical_comparison_proposed=true and llm_central=true, matching its old-vs-new pilot comparison and LLM-dependent scoring. It declares shared_mechanism=false and irreversible_or_spend_action=false while explicitly describing a repo-local renderer, no irreversible action, and no money spend; no triggered external-standard or AES-target fact is improperly declared false.",
         "reused": false
       },
       "suggested_action": null
@@ -463,16 +463,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#evaluation-design",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-DECISION",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-DECISION",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly names the decision—whether the relation-sentence renderer becomes the default and whether to keep the “keep reasons” fix—and specifies different actions for each result: keep C2 and record the remaining gap if it wins, or revert to the old layout/keep only decisions and attribute the gap to extraction if it does not.",
+        "rationale": "The evidence names the specific decision: whether `report()` with relation sentences becomes the default and whether “keep reasons” is the pilot fix. It explicitly states the action if C2 wins and the alternative action if it does not.",
         "reused": false
       },
       "suggested_action": null
@@ -490,16 +490,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#evaluation-design",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-IRREDUCIBLE-UNCERTAINTY",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly identifies the empirical uncertainty: whether model readers use added relation sentences to answer “why” questions. It explains why first principles cannot settle it, why the pilot’s existing evidence is insufficient because it measured only the old renderer, and why prior art is inconclusive because it points both ways.",
+        "rationale": "The evidence explicitly identifies the empirical uncertainty—whether model readers use added relation sentences to answer “why” questions—and explains why first principles, the pilot evidence, and prior art cannot decide it. It states that the pilot measured only the old renderer and that prior art points in both directions.",
         "reused": false
       },
       "suggested_action": null
@@ -517,16 +517,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#evaluation-design",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-PARITY",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-PARITY",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly states “Minimum capabilities every compared candidate must meet” and lists four required parity conditions: same graph, no truncation, all 12 answers in the same schema, and grading in the same blind judge run.",
+        "rationale": "The evidence explicitly states the minimum capabilities every candidate must meet before comparison counts: same graph with only renderer differing, fits context without truncation, answers all 12 questions in the same schema, and grading in the same blind judge run. It also states that candidates missing any requirement are reported but not compared.",
         "reused": false
       },
       "suggested_action": null
@@ -544,16 +544,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#evaluation-design",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-EVAL-COST",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-EVAL-COST",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly compares the costs: the run costs zero money and about an hour, while choosing now would leave a stale 0.65 figure that could steer agents and still require the same measurement later. It concludes that measurement is the cheaper path.",
+        "rationale": "The evidence explicitly compares the costs: the run costs zero money and about an hour, while choosing without measuring would leave a stale headline number, steer agents incorrectly, and still require the same measurement later. It directly concludes that measurement is the cheaper path.",
         "reused": false
       },
       "suggested_action": null
@@ -571,16 +571,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#llm-call-boundary",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-LLM-CALL-BOUNDARY",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-LLM-CALL-BOUNDARY",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly describes the call graph, gives structured Pydantic result boundaries for both answer and judge calls, and states that each call has a trace_id and is logged in llm_client’s daily call log.",
+        "rationale": "The evidence explicitly gives the call graph (one answer call and 24 judge calls), the structured result boundary for each via AnswerSet and GradeSet fields, and tracing through trace_id plus llm_client’s daily call log.",
         "reused": false
       },
       "suggested_action": null
@@ -598,16 +598,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#llm-call-boundary",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-LLM-AUTHORITY-PROMOTION",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-LLM-AUTHORITY-PROMOTION",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly names the provider as “Codex CLI on Brian's subscription” and the spend authority as Brian's instruction, with “no money spend.” It also states an authentic traced followup condition: C2 must exceed old C under the same judge, with every miss read and classified, before promotion.",
+        "rationale": "The evidence explicitly names the provider as “Codex CLI on Brian's subscription,” states the spend authority and that there is “no money spend,” and gives an authentic-run promotion condition: one authentic traced followup run showing C2 above old C under the same judge, with every miss read and classified.",
         "reused": false
       },
       "suggested_action": null
@@ -625,16 +625,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#vertical-and-reset",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-PROTO-VERTICAL-RESET",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-PROTO-VERTICAL-RESET",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence explicitly names the minimal vertical result (“renderer change, its test, regenerated seed report, one re-score run, results recorded”), the reset boundary (git revert restores the old report while cached private JSON remains untouched), and the non-goal of adding coordinated work units.",
+        "rationale": "The evidence explicitly names the minimal vertical result (“renderer change, its test, regenerated seed report, one re-score run, results recorded”), the reset boundary (“git revert of the branch restores the old report; cached private JSON is untouched”), and the non-goals, including “no coordinated work units.”",
         "reused": false
       },
       "suggested_action": null
@@ -652,16 +652,16 @@
       "evidence": [
         {
           "ref": "docs/plans/report-relations-rescore.md#durable-documents",
-          "sha256": "911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7"
+          "sha256": "5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390"
         }
       ],
       "semantic": {
-        "trace_id": "company-planning/method-conformance/report-relations-rescore/55f1d9823e12/OV-DURABLE-DOCS-DECLARED",
+        "trace_id": "company-planning/method-conformance/report-relations-rescore/2fb784bc8619/OV-DURABLE-DOCS-DECLARED",
         "model": "codex/gpt-5.6-luna",
         "verdict": "pass",
         "materiality": "non_material",
         "missing": null,
-        "rationale": "The evidence states the repository declares durable documents in `.agentic/repo.yaml`, provides `Durable documents: none -- no declared durable role changes` with a specific explanation, and identifies the completion command with its revision range and required exit 0.",
+        "rationale": "The evidence explicitly provides a `Durable documents: none` line with a reason covering unchanged goal, requirements, system model, and decisions, identifies the repository’s declared durable roles, and requires `durable_docs_check.py` over the adoption revision range to exit 0.",
         "reused": false
       },
       "suggested_action": null
@@ -684,11 +684,11 @@
   "conformance_report": {
     "schema_version": "1.0",
     "record_type": "planning_conformance_report",
-    "report_id": "REPORT-report-relations-rescore-911f524de6fb",
+    "report_id": "REPORT-report-relations-rescore-5f5e2dccdc67",
     "snapshot_ref": "SNAPSHOT-report-relations-rescore",
-    "snapshot_revision": "sha256:66c0774801f78e736ed8f507d0f0a374106b15b1a8613094a74459597b8402c1",
+    "snapshot_revision": "sha256:b0ba5f1ed254ef4db91160d2a1a1bc31ffc64209b1a78b2bfb3b6a3574471737",
     "packet_ref": "docs/plans/report-relations-rescore.md",
-    "packet_revision": "sha256:911f524de6fbc51499795c7270feec2e5a3978b88f8ac3edc89b264d19564ea7",
+    "packet_revision": "sha256:5f5e2dccdc6741ec646d3fe98527c94d082f49b529d61eca2feba79adac8f390",
     "structural_status": "pass",
     "semantic_review_status": "complete",
     "diagnostics": [],
@@ -711,7 +711,7 @@
     "client": "claude-code",
     "session": "6ea32b95-8b07-4c59-b846-6fa64709c368"
   },
-  "started_at": "2026-10-11T19:35:27Z",
-  "completed_at": "2026-10-11T19:40:50Z",
-  "duration_ms": 297083
+  "started_at": "2026-10-11T20:22:20Z",
+  "completed_at": "2026-10-11T20:27:27Z",
+  "duration_ms": 278049
 }
