@@ -1,0 +1,25 @@
+---
+description: Start page for Inquiry Graph; routes to the goal, requirements, system model, decisions and current status
+---
+
+# Inquiry Graph wiki
+
+Inquiry Graph turns conversation exports into a source-grounded graph of content,
+questions, relations, moves and actor-relative stance, so agents can recover what Brian
+has said, asked and revised across many chats ([README](../README.md)).
+
+## What it is for and how it works
+
+- [Goal and thesis](../docs/architecture/GOAL.md): north star, the bet, what would disprove it, lineage.
+- [Requirements](../docs/requirements.md): REQ-01 to REQ-15, each with success and disproof lines.
+- [Architecture](../docs/model/ARCHITECTURE.md): context, building blocks, runtime with file:line, quality checks.
+- [Checked trace](../docs/model/trace.yaml): each rule's owner file, tests and decision.
+- [Decisions](../docs/decisions/index.md): ADR-001 to ADR-006.
+- [Ontology](../docs/ontology.md): the vocabulary of nodes, relations, moves and events.
+
+## What is in progress
+
+- [Project status](../docs/project-status.md): current state and evidence.
+- [Roadmap](../docs/roadmap.md): what comes next and why.
+- [Goals](../docs/goals/positions-as-shared-memory.md): positions as shared memory for agents.
+- [New agent handoff](../docs/new-agent-handoff.md): how to pick up the work.

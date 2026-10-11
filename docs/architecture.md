@@ -1,5 +1,7 @@
 # Architecture
 
+> Older V1 boundary notes. The current system model is [docs/model/ARCHITECTURE.md](model/ARCHITECTURE.md); the module and scaling notes below predate chunked live extraction through `llm_client`.
+
 ```text
 Visible export / normalized source
   → deterministic active-branch importer

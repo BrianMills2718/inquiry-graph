@@ -1,6 +1,12 @@
+---
+description: Decision to merge only by exact identity and keep revisions recoverable instead of fuzzy merging
+---
+
 # ADR-005: Conservative identity and recoverable history
 
 **Status:** accepted for V1.
+
+Governs: RULE-EXACT-MERGE
 
 **Context.** Similar formulations may conceal different scopes or commitments. Silent fuzzy merging is particularly damaging in a personal worldview graph.
 

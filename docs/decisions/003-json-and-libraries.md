@@ -1,6 +1,12 @@
+---
+description: Decision to build a small local Pydantic and NetworkX toolkit over canonical JSON, not a database
+---
+
 # ADR-003: Small local toolkit, not a database project
 
 **Status:** accepted for V1.
+
+Governs: RULE-SCHEMA-REPRODUCIBLE
 
 **Context.** The primary risk is semantic coherence and attribution, not database throughput. The user specifically requested an off-the-shelf structured-output project with little custom infrastructure.
 
