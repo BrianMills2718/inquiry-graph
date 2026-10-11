@@ -1,0 +1,177 @@
+{
+ "schema_version": "1.0",
+ "record_type": "trace_review",
+ "review_id": "report-relations-rescore-C2",
+ "reviewer": "claude-opus-5-5 (subagent, session 01UWLqVtwEQ9x6YTEvprgzje)",
+ "goal_ref": "goal:report-relations-rescore",
+ "criterion_ids": [
+  "outcome"
+ ],
+ "evidence_revision": "58e1395",
+ "run_id": "usefulness-followup-C2-2026-10-11",
+ "run_outcome": "pass",
+ "source": {
+  "path": "evaluation/usefulness_pilot/data/trace_followup_C2.json",
+  "sha256": "0eb1cd3dba3464af8653f3493647af4b69f361b092a71ca4e31da6f42bc392a9",
+  "format": "execution_trace"
+ },
+ "reviewed_entries": [
+  {
+   "pointer": "/events/0",
+   "sha256": "53e6af7535fe66611d784ea31892f5ae7ca1990c08c49b90f1a1d9d1773cbe6f",
+   "observation": "q1: answer covered 2/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/1",
+   "sha256": "88b375f4648e7707a123385b7c3167121d03b875c1f259a7a70b3898cf7d0c0e",
+   "observation": "q2: answer covered 1/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/2",
+   "sha256": "63e47d294af4d4f19457b6223c7c4698b48dca2f59f61be569d3bd2049faea46",
+   "observation": "q3: answer covered 0/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/3",
+   "sha256": "a9fc20df655c8dbe71c54eff3a6258b2757f860922c2d1007513a6ac7ff8604f",
+   "observation": "q4: answer covered 2/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/4",
+   "sha256": "9510ebb66b0edda76805504ec7d9811c132d8bd4ee847c5b252ddb06cdba7fce",
+   "observation": "q5: answer covered 3/4 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/5",
+   "sha256": "e1b6d640aafb617ff97b3ca672458e4624b18c41d7f5a35fc6e0c8640d94a083",
+   "observation": "q6: answer covered 2/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/6",
+   "sha256": "80fd20769846600c7036ac73da21d723cd7bccacc6e48afc1ad041dcd3dfcf52",
+   "observation": "q7: answer covered 2/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/7",
+   "sha256": "23387896edbdcd5ccced4e16c0822c15bf64a168565c4683522938b138f063d2",
+   "observation": "q8: answer covered 1/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/8",
+   "sha256": "46143e0c28c69a1c6934c8aef0097cf2370fa7cab54c33c84a6229a93a2cdfe0",
+   "observation": "q9: answer covered 3/3 key points (fully right); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/9",
+   "sha256": "3224238f765fa9f1ae67a46520bfa57ad34b302180d30c5988e846674762efb1",
+   "observation": "q10: answer covered 4/4 key points (fully right); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/10",
+   "sha256": "853db78320b2ea6869d311ddd9d65705bfe95aadb90d4746fbecb2b1e0dd3972",
+   "observation": "q11: answer covered 1/3 key points (miss); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/events/11",
+   "sha256": "24c0088374df4ed438a9cc404882652fbb87c2ef29a22404b3950b8acfbdeee6",
+   "observation": "q12: answer covered 3/3 key points (fully right); read question, key points, answer and grade"
+  },
+  {
+   "pointer": "/outcome",
+   "sha256": "fedce8e8af485c2586f54c43a9b656dc70b41eb9be8c64b69c98391847dd4baf",
+   "observation": "run completed; every question answered and graded"
+  }
+ ],
+ "findings": [
+  {
+   "classification": "evidence_unused",
+   "description": "q1: the warrant/license question is in the report, but the answer did not tie the open issue to that refactor.",
+   "citations": [
+    {
+     "pointer": "/events/0/output/answer",
+     "quote": "The minimal, non-overlapping type system for primitive epistemic actions remaine"
+    }
+   ]
+  },
+  {
+   "classification": "evidence_unused",
+   "description": "q2: the open-agenda question is in the report; the answer did not tie it to graded rho as old C's answer did.",
+   "citations": [
+    {
+     "pointer": "/events/1/output/answer",
+     "quote": "No final combination rule was established. Graded support ρ was to be handled by"
+    }
+   ]
+  },
+  {
+   "classification": "evidence_absent",
+   "description": "q3 Bronstein: the report lacks 'assumes known geometric structure' and the Pattern Theory comparison; the answer used what the report had.",
+   "citations": [
+    {
+     "pointer": "/events/2/output/answer",
+     "quote": "Bronstein’s framework was removed because it supplied useful geometric-learning "
+    }
+   ]
+  },
+  {
+   "classification": "expectation_wrong",
+   "description": "q4: the answer says 'dialogue-level macro ... decomposed', matching the key's third point; the judge did not credit it.",
+   "citations": [
+    {
+     "pointer": "/events/3/output/answer",
+     "quote": "“Reframe” was removed because it was a dialogue-level macro hiding several disti"
+    }
+   ]
+  },
+  {
+   "classification": "expectation_wrong",
+   "description": "q5: 'not absolute ... for a fixed representation' paraphrases 'not representation-independent'.",
+   "citations": [
+    {
+     "pointer": "/events/4/output/answer",
+     "quote": "The uniqueness claim depended on an explicit representation contract and semanti"
+    }
+   ]
+  },
+  {
+   "classification": "evidence_absent",
+   "description": "q6 assumed vs known: the report has the correction but not its use in the white-box/black-box formalization.",
+   "citations": [
+    {
+     "pointer": "/events/5/output/answer",
+     "quote": "Brian supplied the correction, saying that constraints should be treated as “ass"
+    }
+   ]
+  },
+  {
+   "classification": "expectation_wrong",
+   "description": "q7: the answer covers the proposal, its layer and the recursive-modeling response; the grade looks low.",
+   "citations": [
+    {
+     "pointer": "/events/6/output/answer",
+     "quote": "The assistant proposed placing canonical factorization in a strategy/control lay"
+    }
+   ]
+  },
+  {
+   "classification": "evidence_absent",
+   "description": "q8 Hoel: the report says only 'raised as related work'; the deferral was never extracted.",
+   "citations": [
+    {
+     "pointer": "/events/7/output/answer",
+     "quote": "Hoel’s causal-emergence, coarse-graining, and entropy work was merely raised as "
+    }
+   ]
+  },
+  {
+   "classification": "evidence_absent",
+   "description": "q11 next step: the report has no candidate action list (accept, select strategy).",
+   "citations": [
+    {
+     "pointer": "/events/10/output/answer",
+     "quote": "The immediate next step was to define the minimal typed epistemic-action system "
+    }
+   ]
+  }
+ ]
+}
