@@ -154,6 +154,8 @@ rules:
   - id: RULE-SESSION-FIELDS
     statement: >-
       A coding-session graph keeps only Brian's typed text, per-turn assistant text and work lines from tool records;
+      prompts in a headless launch (Claude Code entrypoint sdk-*, Codex codex_exec/codex_sdk_ts, Codex subagents) are
+      attributed to an automated participant, never to Brian, so search over his session words skips them;
       a task's status is the fixed closure word an agent wrote, an item absent from the last listing without one is
       reported as unknown, never open, and a request counts as answered only as a proposed event at Brian's next
       message (REQ-16).
@@ -163,4 +165,6 @@ rules:
       - tests/test_coding_session.py::test_reply_fields_give_grounded_tasks_closures_and_requests
       - tests/test_coding_session.py::test_item_missing_from_last_listing_is_unknown_not_open
       - tests/test_coding_session.py::test_codex_record
+      - tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians
+      - tests/test_coding_session.py::test_position_search_reads_only_brians_typed_session_prompts
     decisions: [docs/decisions/002-state-and-attribution.md, docs/decisions/004-grounding-and-review.md]
