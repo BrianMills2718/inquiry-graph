@@ -1,7 +1,8 @@
 """Combined topic map of Brian's positions and questions: one point per attributed event.
 
 Usage (needs the inquiry-maps env: sentence-transformers, umap, hdbscan, datamapplot):
-  position_topics.py RECORDS.json OUT_DIR [--min-cluster 12]
+  position_topics.py RECORDS.json OUT_DIR [--layers 150,60,25] [--sessions [DIR ...]]
+--sessions adds what Brian typed in imported coding sessions (default private/coding-sessions), one point per prompt, kind "session prompt".
 Embeds 'idea + Brian's quote' locally, clusters with HDBSCAN, writes OUT_DIR/index.html (interactive, hover shows chat title,
 date, kind and the exact quote) and OUT_DIR/topics.json (every cluster with its members' ids, so membership reconciles to records.json).
 Quote-bearing: keep OUT_DIR under private/. Topic names default to keywords; name_topics.py can replace them.
@@ -18,6 +19,18 @@ import umap
 from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def session_records(dirs):
+    from brian_positions import session_records as load   # same loader as the positions search, so both read one definition of "Brian's prompt"
+    return load(dirs)
+
+
+def with_ids(sessions):
+    """Session prompts carry a message id but no record id; topics.json lists members by record id."""
+    return [{**r, "id": f"session:{r['message_id']}"} for r in sessions]
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
@@ -25,8 +38,11 @@ def main():
     ap.add_argument("out", type=Path)
     ap.add_argument("--layers", default="150,60,25", help="HDBSCAN min cluster sizes, coarse to fine")
     ap.add_argument("--names", type=Path, help="JSON {topic_id: name} from name_topics.py; replaces keyword names")
+    ap.add_argument("--sessions", nargs="*", metavar="DIR", help="also cluster Brian's coding-session prompts (default private/coding-sessions)")
     a = ap.parse_args()
     recs = json.loads(a.records.read_text(encoding="utf-8"))["records"]
+    if a.sessions is not None:
+        recs = recs + with_ids(session_records(a.sessions or [ROOT / "private" / "coding-sessions"]))
     a.out.mkdir(parents=True, exist_ok=True)
     docs = [f'{r["target"]} {r["quote"]}' for r in recs]
     emb = SentenceTransformer("all-MiniLM-L6-v2").encode(docs, batch_size=64, show_progress_bar=False, normalize_embeddings=True)
