@@ -25,6 +25,12 @@ from pathlib import Path
 from .model import Binding, Candidates, Conversation, Message, Node, Participant, QuestionEvent, Relation, anchor
 
 USER, ASSISTANT, TOOL = "participant:brian", "participant:assistant", "participant:tool"
+AUTOMATION = "participant:automation"
+# Launches where a program, not Brian, typed the prompts: Claude Code `entrypoint` and Codex `originator`
+# values for SDK and headless runs (claude -p, codex exec), plus Codex subagent threads. Anything else,
+# including a record with no launch field, is read as Brian typing.
+HEADLESS_CLAUDE = frozenset({"sdk-cli", "sdk-py", "sdk-ts"})
+HEADLESS_CODEX = frozenset({"codex_exec", "codex_sdk_ts"})
 
 # Closure words agents write in `Done` ("Closed: <item> (<word>)") and the question status each means.
 CLOSURE_WORDS = {"done": "resolved", "answered": "answered", "put off": "deferred", "reopened": "reopened",
@@ -109,6 +115,13 @@ def parse_session(path) -> Conversation:
     sid = meta.get("id") or first.get("sessionId") or path.stem
     cwd = meta.get("cwd") or first.get("cwd") or "?"
     cid = f"{'codex' if codex else 'claude-code'}:{sid}"
+    if codex:
+        launch = meta.get("originator") or "?"
+        headless = launch in HEADLESS_CODEX or (isinstance(meta.get("source"), dict) and "subagent" in meta["source"])
+    else:
+        launch = next((rec["entrypoint"] for rec in lines if rec.get("entrypoint")), "?")
+        headless = launch in HEADLESS_CLAUDE
+    prompter = AUTOMATION if headless else USER
     messages, turn, seen_tools = [], [], set()
     pending_tools = []
 
@@ -133,17 +146,19 @@ def parse_session(path) -> Conversation:
                 pending_tools.append((text, ts))
         else:
             flush()
-            add(USER, text, ts)
+            add(prompter, text, ts)
     flush()
     if not messages:
         raise ValueError(f"{cid}: no visible messages")
     return Conversation(
         id=cid, title=f"{Path(cwd).name} session {sid[:8]}", source_kind="normalized",
-        coverage_note=(f"{'Codex' if codex else 'Claude Code'} session record {path.name}, cwd {cwd}. Brian's typed "
-                       "messages, assistant text per turn, and pull-request/commit lines from tool records; hooks, "
+        coverage_note=(f"{'Codex' if codex else 'Claude Code'} session record {path.name}, cwd {cwd}, launched by "
+                       f"{launch}{' (headless: prompts typed by a program, not Brian)' if headless else ''}. Prompts, "
+                       "assistant text per turn, and pull-request/commit lines from tool records; hooks, "
                        "tool calls, other tool output, thinking and subagents omitted."
                        + (f" {broken} unreadable record line(s) skipped." if broken else "")),
-        participants=[Participant(id=USER, label="Brian", role="user"),
+        participants=[Participant(id=AUTOMATION, label="Automated prompt", role="other") if headless
+                      else Participant(id=USER, label="Brian", role="user"),
                       Participant(id=ASSISTANT, label="Assistant", role="assistant"),
                       Participant(id=TOOL, label="Tool record", role="other")],
         messages=messages)

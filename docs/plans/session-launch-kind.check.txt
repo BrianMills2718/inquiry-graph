@@ -1,0 +1,49 @@
+== disproof run: tests/test_coding_session.py (this change's test file + tools/brian_positions.py) on parent d269011 code (clean git archive in ~/code/.scratch/session-graphs/disproof)
+PASSED tests/test_coding_session.py::test_claude_record_keeps_typed_text_turns_and_work_only
+PASSED tests/test_coding_session.py::test_reply_fields_give_grounded_tasks_closures_and_requests
+PASSED tests/test_coding_session.py::test_item_missing_from_last_listing_is_unknown_not_open
+PASSED tests/test_coding_session.py::test_codex_record
+PASSED tests/test_coding_session.py::test_status_events_still_refuse_non_question_non_task_targets
+PASSED tests/test_coding_session.py::test_empty_record_fails_loudly
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-cli-False]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-None-False]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch4-False]
+FAILED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-sdk-cli-True]
+FAILED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-sdk-py-True]
+FAILED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch5-True]
+FAILED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch6-True]
+FAILED tests/test_coding_session.py::test_position_search_reads_only_brians_typed_session_prompts
+========================= 5 failed, 9 passed in 0.32s ==========================
+exit=1
+
+== success run: python -m pytest tests/test_coding_session.py -rA on this change
+PASSED tests/test_coding_session.py::test_claude_record_keeps_typed_text_turns_and_work_only
+PASSED tests/test_coding_session.py::test_reply_fields_give_grounded_tasks_closures_and_requests
+PASSED tests/test_coding_session.py::test_item_missing_from_last_listing_is_unknown_not_open
+PASSED tests/test_coding_session.py::test_codex_record
+PASSED tests/test_coding_session.py::test_status_events_still_refuse_non_question_non_task_targets
+PASSED tests/test_coding_session.py::test_empty_record_fails_loudly
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-cli-False]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-sdk-cli-True]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-sdk-py-True]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[claude-None-False]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch4-False]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch5-True]
+PASSED tests/test_coding_session.py::test_prompts_from_headless_launches_are_not_brians[codex-launch6-True]
+PASSED tests/test_coding_session.py::test_position_search_reads_only_brians_typed_session_prompts
+============================== 14 passed in 0.33s ==============================
+exit=0
+
+== live: re-import of 493 private session records with this change: 493 imported, 0 failed; 443 sessions labelled automated (425 automated prompts), 1558 Brian prompts of 25+ characters remain
+== live: ~/.venvs/inquiry-maps/bin/python tools/brian_positions.py '<query about AI commit review reading session transcripts>' --sessions --top 6
+(quotes withheld: Brian's private records stay in private/)
+records searched: 16909 (15386 chat records + 1523 session prompts after collapsing sessions imported into two folders); returned rows (date, kind): 2025-07-09 posits; 2025-07-16 posits; 2026-07-31 posits; 2026-10-13 session prompt; 2026-10-13 session prompt; 2026-10-13 session prompt
+session prompt rows all come from interactive session e86f4df8 (launched by cli); none is an automated prompt.
+exit=0
+
+== no model call: git diff --cached | grep -c -E 'llm_client|call_llm|openai|anthropic|litellm'
+0
+
+== durable docs
+durable-docs: mode=plan repo=/home/brian/code/inquiry-graph/worktrees/session-launch-kind findings=0 (none), exit 0
+exit=0

@@ -113,3 +113,52 @@ def test_empty_record_fails_loudly(tmp_path):
     p.write_text(json.dumps({"type": "user", "message": {"content": "<command-name>/x</command-name>"}}), encoding="utf-8")
     with pytest.raises(ValueError):
         parse_session(p)
+
+
+@pytest.mark.parametrize("client,launch,automated", [
+    ("claude", "cli", False), ("claude", "sdk-cli", True), ("claude", "sdk-py", True), ("claude", None, False),
+    ("codex", {"originator": "codex-tui", "source": "vscode"}, False),
+    ("codex", {"originator": "codex_exec", "source": "exec"}, True),
+    ("codex", {"originator": "codex-tui", "source": {"subagent": {"thread_spawn": {}}}}, True)])
+def test_prompts_from_headless_launches_are_not_brians(tmp_path, client, launch, automated):
+    if client == "claude":
+        rows = [{"type": "user", "sessionId": "s1", "cwd": "/w", "timestamp": "t1",
+                 **({"entrypoint": launch} if launch else {}), "message": {"content": "grade this requirement"}},
+                {"type": "assistant", "timestamp": "t2", "message": {"content": [{"type": "text", "text": REPLY1}]}}]
+    else:
+        rows = [{"type": "session_meta", "timestamp": "t0", "payload": {"id": "c1", "cwd": "/w", **launch}},
+                {"type": "response_item", "timestamp": "t1", "payload": {"type": "message", "role": "user", "content": [
+                    {"type": "input_text", "text": "grade this requirement"}]}},
+                {"type": "response_item", "timestamp": "t2", "payload": {"type": "message", "role": "assistant",
+                                                                         "content": [{"type": "output_text", "text": REPLY1}]}}]
+    p = tmp_path / "r.jsonl"
+    p.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+    g = graph_for(p)
+    conv = g.conversations[0]
+    prompt = conv.messages[0]
+    assert prompt.text == "grade this requirement" and validate(g)["valid"]
+    assert prompt.actor_id == ("participant:automation" if automated else "participant:brian")
+    assert [x.id for x in conv.participants][0] == prompt.actor_id
+    assert ("headless" in conv.coverage_note) == automated
+
+
+def test_position_search_reads_only_brians_typed_session_prompts(tmp_path):
+    import importlib.util
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location("brian_positions", Path(__file__).parent.parent / "tools" / "brian_positions.py")
+    bp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bp)
+    said, graded = "I think the system model should live in the README", "Grade this requirement against the evidence quotes"
+    for name, launch, prompt in (("typed", "cli", said), ("headless", "sdk-cli", graded)):
+        rows = [{"type": "user", "sessionId": name, "cwd": "/w", "entrypoint": launch, "timestamp": "2026-10-13T01:00:00Z",
+                 "message": {"content": prompt}},
+                {"type": "user", "timestamp": "t2", "message": {"content": "continue"}},
+                {"type": "assistant", "timestamp": "t3", "message": {"content": [{"type": "text", "text": "ok"}]}}]
+        (tmp_path / f"{name}.jsonl").write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+        (tmp_path / "out").mkdir(exist_ok=True)
+        (tmp_path / "out" / f"{name}.conversation.json").write_text(parse_session(tmp_path / f"{name}.jsonl").model_dump_json())
+    (tmp_path / "again").mkdir()
+    (tmp_path / "again" / "typed.conversation.json").write_text((tmp_path / "out" / "typed.conversation.json").read_text())
+    recs = bp.session_records([tmp_path / "out", tmp_path / "again"])     # same session imported twice counts once
+    assert [(r["quote"], r["chat"], r["date"], r["kind"]) for r in recs] == [
+        (said, "claude-code:typed", "2026-10-13", "session prompt")]    # headless prompt and one-word reply left out

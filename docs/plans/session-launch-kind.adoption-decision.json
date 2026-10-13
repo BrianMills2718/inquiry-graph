@@ -1,0 +1,16 @@
+{
+  "schema_version": "method-adoption-decision.v1",
+  "record_type": "method_adoption_decision",
+  "decision": "adopted",
+  "plan_ref": "docs/plans/session-launch-kind.md",
+  "plan_sha256": "9e94f22e9a8a6b22e23db2e9a6acac4549107c344186ef1f2b1f6b2f2e5e09a0",
+  "receipt_ref": "docs/plans/session-launch-kind.receipt.json",
+  "receipt_sha256": "7489ce0f528e828292439ec57f36f38af0bb5773533e12f3db8f418c5af96011",
+  "receipt_result": "pass",
+  "reason_codes": [],
+  "summary": [
+    "pass: 12 items evidenced, 1 confirmed not applicable, 0 advisory deviation(s)",
+    "warn CORE-SYSTEM-MODEL: MODEL-NO-ELEMENT-IDS, MODEL-NO-UNKNOWNS -> MODEL-NO-ELEMENT-IDS: docs/model/ARCHITECTURE.md has no element lines; write each as `- ID (decided|guessed): what it is`; MODEL-NO-UNKNOWNS: docs/model/ARCHITECTURE.md has no unknowns table (header `| Unknown | What would decide it |`)"
+  ],
+  "decided_at": "2026-10-13T21:46:36Z"
+}
