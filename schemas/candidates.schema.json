@@ -204,7 +204,9 @@
             "method",
             "example",
             "goal",
-            "reference"
+            "reference",
+            "task",
+            "work"
           ],
           "title": "Kind",
           "type": "string"
@@ -270,7 +272,8 @@
             "resolved",
             "deferred",
             "superseded",
-            "reopened"
+            "reopened",
+            "dropped"
           ],
           "title": "Status",
           "type": "string"

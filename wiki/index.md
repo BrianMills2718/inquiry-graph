@@ -23,4 +23,5 @@ has said, asked and revised across many chats ([README](../README.md)).
 - [Roadmap](../docs/roadmap.md): what comes next and why.
 - [Goals](../docs/goals/positions-as-shared-memory.md): positions as shared memory for agents.
 - [Plan: report reasons as text](../docs/plans/report-relations-rescore.md) and its [goal](../docs/plans/report-relations-rescore.goal.md): render relations with node text and re-score the usefulness pilot.
+- [Plan: coding-agent sessions](../docs/plans/coding-sessions.md) and its [goal](../docs/plans/coding-sessions.goal.md): `import-session` and `sessions` turn Claude Code and Codex session records into resumable graphs (REQ-16).
 - [New agent handoff](../docs/new-agent-handoff.md): how to pick up the work.

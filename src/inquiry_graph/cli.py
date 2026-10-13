@@ -11,6 +11,7 @@ from .validate import validate, require_valid
 from .extract import prepare
 from .bridge import parse_bridge_markdown
 from .exporter_json import parse_exporter_json
+from .coding_session import parse_session, reply_field_candidates, session_digest
 from .views import stats, open_questions, trace, relations_of_kind
 from .render import mermaid, dot, report, html_view
 
@@ -56,6 +57,12 @@ def parser():
     s.add_argument("output")
     s.add_argument("--user-label", default="Brian")
     s.add_argument("--force", action="store_true")
+    s = sub.add_parser("import-session", help="normalize a Claude Code or Codex session .jsonl and read its end-of-reply fields")
+    s.add_argument("input")
+    s.add_argument("output_dir")
+    s.add_argument("--force", action="store_true")
+    s = sub.add_parser("sessions", help="resume digest per graph: goals, open, unknown-status and closed items, work, requests")
+    s.add_argument("inputs", nargs="+")
     s = sub.add_parser("merge")
     s.add_argument("inputs", nargs="+")
     s.add_argument("--output", required=True)
@@ -122,6 +129,18 @@ def run(args):
         require_valid(Graph(id="import-check", conversations=[conv]))
         write_json(args.output, conv, args.force)
         return {"conversation": conv.id, "messages": len(conv.messages), "skipped": skipped}
+    elif args.cmd == "import-session":
+        conv = parse_session(args.input)
+        require_valid(Graph(id="import-check", conversations=[conv]))
+        name = hashlib.sha256(conv.id.encode()).hexdigest()[:24]
+        out = Path(args.output_dir)
+        write_json(out / f"{name}.conversation.json", conv, args.force)
+        graph = ingest(conv, reply_field_candidates(conv), method="reply-fields")
+        write_json(out / f"{name}.graph.json", graph, args.force)
+        return {"conversation": conv.id, "files": [str(out / f"{name}.conversation.json"), str(out / f"{name}.graph.json")],
+                **stats(graph)}
+    elif args.cmd == "sessions":
+        return [session_digest(load(path, Graph)) for path in args.inputs]
     elif args.cmd == "merge":
         graph = merge([load(path,Graph) for path in args.inputs])
         write_json(args.output,graph,args.force)

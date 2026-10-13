@@ -19,12 +19,16 @@ records:
 views:
   - {id: VIEW-AGENDA, what: "query open: actor-scoped open questions", projection: "src/inquiry_graph/views.py open_questions"}
   - {id: VIEW-TRACE, what: "query trace: one record's relations, moves and events", projection: "src/inquiry_graph/views.py trace"}
+  - {id: VIEW-SESSION-DIGEST, what: "sessions: goals, open, unknown-status and closed items, work, open requests per session", projection: "src/inquiry_graph/coding_session.py session_digest"}
   - {id: VIEW-RENDER, what: "Mermaid, DOT, Markdown report, offline HTML", projection: "src/inquiry_graph/render.py"}
   - {id: VIEW-POSITIONS-ANSWER, what: "ask_positions answer JSON with claims citing verified evidence records", projection: "tools/ask_positions.py main"}
 processes:
   - id: PROC-IMPORT
     what: "`inquiry-graph import` / `import-bridge` / `import-exporter` normalize visible text into a Conversation"
     enforces: [RULE-ACTIVE-BRANCH, RULE-EXCLUSIVE-WRITE]
+  - id: PROC-IMPORT-SESSION
+    what: "`inquiry-graph import-session` normalizes a Claude Code or Codex session record and reads its end-of-reply fields into a validated graph; `sessions` projects the resume digest"
+    enforces: [RULE-SESSION-FIELDS, RULE-EXACT-ANCHOR, RULE-EXCLUSIVE-WRITE]
   - id: PROC-EXTRACT
     what: "`inquiry-graph extract` turns a Conversation plus a response file or live llm_client calls into a validated graph"
     enforces: [RULE-LIVE-GROUNDING, RULE-REVIEW-RESET, RULE-EXACT-ANCHOR, RULE-ROLE-SIGNATURE, RULE-QUARANTINE, RULE-SOURCE-NOT-OVERWRITTEN, RULE-EXCLUSIVE-WRITE]
@@ -147,3 +151,16 @@ rules:
     checks:
       - tests/test_pipeline.py::test_schema_roundtrip
     decisions: [docs/decisions/003-json-and-libraries.md]
+  - id: RULE-SESSION-FIELDS
+    statement: >-
+      A coding-session graph keeps only Brian's typed text, per-turn assistant text and work lines from tool records;
+      a task's status is the fixed closure word an agent wrote, an item absent from the last listing without one is
+      reported as unknown, never open, and a request counts as answered only as a proposed event at Brian's next
+      message (REQ-16).
+    owner: src/inquiry_graph/coding_session.py
+    checks:
+      - tests/test_coding_session.py::test_claude_record_keeps_typed_text_turns_and_work_only
+      - tests/test_coding_session.py::test_reply_fields_give_grounded_tasks_closures_and_requests
+      - tests/test_coding_session.py::test_item_missing_from_last_listing_is_unknown_not_open
+      - tests/test_coding_session.py::test_codex_record
+    decisions: [docs/decisions/002-state-and-attribution.md, docs/decisions/004-grounding-and-review.md]

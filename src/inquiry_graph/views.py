@@ -32,13 +32,13 @@ def open_questions(graph):
     result = []
     for (qid, actor, cid), e in sorted(latest.items()):
         # Proposed resolutions/deferments do not close the agenda without review.
-        if e.status in ("resolved", "deferred", "superseded") and e.review_status == "confirmed":
+        if e.status in ("resolved", "deferred", "superseded", "dropped") and e.review_status == "confirmed":
             continue
         result.append({"id": qid, "text": nodes[qid].text, "actor_id": actor,
                        "conversation_id": cid, "status": e.status, "review_status": e.review_status,
                        "event_id": e.id, "anchors": [a.model_dump() for a in e.anchors]})
     for n in nodes.values():
-        if n.kind == "question" and n.id not in touched:
+        if n.kind in ("question", "task") and n.id not in touched:
             result.append({"id": n.id, "text": n.text, "actor_id": None, "conversation_id": None,
                            "status": "unclassified", "review_status": n.review_status,
                            "event_id": None, "anchors": [a.model_dump() for a in n.anchors]})
