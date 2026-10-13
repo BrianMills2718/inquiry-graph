@@ -89,6 +89,13 @@ Disproof: a schema in `schemas/` differs from the one the Pydantic model generat
 Success: `tools/ask_positions.py` keeps only stance and question events whose actor is Brian and whose quote is verbatim in that message; `test_keeps_verbatim_brian_event`, `test_drops_non_verbatim_quote` and `test_drops_event_whose_actor_is_not_brian` pass.
 Disproof: an answer cites a record whose quote is not in its source message, or attributes an assistant's words to Brian.
 
+## REQ-16 Coding-agent sessions become resumable graphs
+
+Asked by Brian 2026-10-13: "i want somethign similar for my coding agent sessions", "largely theis is a way to help agents remind me of what we ahve been working on, and to pick up unifshed worka, and to have agents more easily find stuff i am lookign for".
+
+Success: `inquiry-graph import-session` turns a Claude Code or Codex session record into a Conversation and a validated graph whose goal, task, question and work nodes come from the end-of-reply fields and tool records, each anchored verbatim; `inquiry-graph sessions` lists, per session, items still open at the last listing, items that left the list with no closure word (status unknown), closed items with their status, work products and requests to Brian with no later reply. `tests/test_coding_session.py` passes.
+Disproof: an item an agent closed with a closure word is reported open; an item missing from the last listing is reported open rather than unknown; a node or event has a quote that is not in its message; injected hook text or subagent text appears as Brian's or the assistant's words.
+
 ## Core user journeys
 
 **Resume inquiry.** Open the agenda, find a foundational question, inspect its source, then follow related reasoning moves and dependencies. V1 does not rank the agenda as an optimum.

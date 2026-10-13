@@ -103,8 +103,8 @@ def validate(graph: Graph) -> dict:
     status_keys = set()
     for e in graph.question_events:
         refs(e, [e.question_id], content)
-        if e.question_id in content and content[e.question_id].kind != "question":
-            error("question_type", e.id, "status target must be a question")
+        if e.question_id in content and content[e.question_id].kind not in ("question", "task"):
+            error("question_type", e.id, "status target must be a question or a task")
         refs(e, e.answer_ids, content)
         if e.status == "resolved" and not (e.answer_ids or e.resolution_basis):
             error("unsupported_resolution", e.id, "resolution needs answer or explicit basis")
@@ -112,8 +112,10 @@ def validate(graph: Graph) -> dict:
             error("missing_replacement", e.id, "superseded question needs replacement")
         if e.replacement_id:
             refs(e, [e.replacement_id], content)
-            if e.replacement_id == e.question_id or (e.replacement_id in content and content[e.replacement_id].kind != "question"):
-                error("replacement_type", e.id, "replacement must be a different question")
+            same_kind = (e.question_id not in content or e.replacement_id not in content
+                         or content[e.replacement_id].kind == content[e.question_id].kind)
+            if e.replacement_id == e.question_id or (e.replacement_id in content and not same_kind):
+                error("replacement_type", e.id, "replacement must be a different item of the same kind")
         key = (e.actor_id, e.question_id, e.at_message_id)
         if key in status_keys:
             error("ambiguous_status", e.id, "multiple status events for actor/question at same occurrence")

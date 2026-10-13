@@ -76,6 +76,7 @@ C4Container
 | `src/inquiry_graph/validate.py` | Semantic validation beyond JSON shape | RULE-EXACT-ANCHOR, RULE-ROLE-SIGNATURE |
 | `src/inquiry_graph/live_extract.py` | Live extraction through `llm_client` | RULE-LIVE-GROUNDING |
 | `src/inquiry_graph/views.py` | Actor-scoped agenda and trace views | RULE-STANCE-SEPARATE |
+| `src/inquiry_graph/coding_session.py` | Claude Code and Codex session import, end-of-reply fields, resume digest | RULE-SESSION-FIELDS |
 | `tools/ask_positions.py` | Cross-chat positions answer path | RULE-VERBATIM-POSITIONS |
 | `tools/build_artifacts.py` | Generated schemas and review artifacts | RULE-SCHEMA-REPRODUCIBLE |
 

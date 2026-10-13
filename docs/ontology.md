@@ -7,13 +7,15 @@ The executable contract is [`src/inquiry_graph/model.py`](../src/inquiry_graph/m
 | Layer | Records | Distinction preserved |
 |---|---|---|
 | Source | Conversation, Participant, Message, Anchor | What is actually in the record versus the analyst's interpretation |
-| Content | Node | Concept, claim, question, hypothesis, method, example, goal or reference |
+| Content | Node | Concept, claim, question, hypothesis, method, example, goal, reference, task or work |
 | Argument/semantic | Relation, Binding | Role-typed connection, including an inference that can itself be challenged |
 | Inquiry process | Move | Who asked, clarified, reframed, challenged or retracted, using what inputs and outputs |
 | State history | StanceEvent, QuestionEvent | Actor-relative position and open-question status, separately |
 | Extraction/review | Extraction; grounded-record metadata | How graph annotations were produced and whether reviewed |
 
 A content node is not identical to an utterance: repeated utterances may express the same claim, and one utterance can express multiple claims. V1 demands explicit identity decisions rather than automatically merging repeated paraphrases.
+
+A task is a unit of work an agent lists as open in a coding session; a work node is a delivered product (a pull request, a commit) seen in a tool record. Tasks carry the same status events as questions, plus `dropped` (abandoned on purpose), which questions can also take. Agents close a task by writing "Closed: <item> (<word>)" with one word from a fixed list: done → resolved, answered, put off → deferred, replaced by X → superseded, reopened, dropped.
 
 A question is a node kind. “Unresolved” is a state recorded by events, not a node kind. “Hypothesis” does not mean endorsed. “Rejected extraction” does not mean false proposition. These separations correct conflations present in our initial conversational sketches.
 

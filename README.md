@@ -52,6 +52,16 @@ The importer follows each export's `current_node` parent chain: **only the activ
 
 Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `uv pip install -e '.[llm]'` in the activated environment (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
 
+## Coding-agent sessions
+
+```bash
+inquiry-graph import-session ~/.claude/projects/<project>/<session>.jsonl private/coding-sessions
+inquiry-graph sessions private/coding-sessions/*.graph.json      # what is open, unknown, closed, shipped, waiting on Brian
+inquiry-graph extract private/coding-sessions/<id>.conversation.json private/coding-sessions/<id>.concepts.json --llm
+```
+
+`import-session` reads a Claude Code or Codex session record: Brian's typed messages, each turn's assistant text, and pull-request and commit lines from tool records. It reads the end-of-reply fields (Session goal, Active subgoals, Done, Need anything from human) into goal, task, question and work nodes without an LLM. Concepts come from the ordinary `extract --llm` run on the same conversation; `merge` combines the two. Output holds private material, so keep it under `private/`.
+
 ## Let conversations improve Inquiry Graph
 
 For substantive conversations, capture the inquiry and then review how well the
