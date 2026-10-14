@@ -24,3 +24,14 @@ def test_every_branch_has_a_disposition():
     assert c("a", failed_extract={"a"}) == "extraction_failed"
     assert c("a") == "pending"
     assert c("unfiltered") == "pending"
+
+
+def test_a_later_extraction_wins_over_the_first_filter_verdict():
+    # the low-confidence rerun extracted chats the filter had first excluded; they must count as extracted
+    assert c("b", graphs={"b"}, events={"b": 1}) == "extracted_with_events"
+
+
+def test_included_but_never_queued_is_not_called_too_short():
+    assert c("a", queued=set()) == "included_not_queued"
+    assert c("a", queued={"a"}) == "pending"
+    assert c("a", queued=set(), short={"a"}) == "skipped_too_short"
