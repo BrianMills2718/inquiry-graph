@@ -1,6 +1,7 @@
 """Nightly: import coding sessions changed since yesterday, rebuild the private positions map, write the open-work reminder.
 
 Usage: nightly_sessions.py [--since-hours 30] [--recent-days 3] [--skip-map]
+       nightly_sessions.py --reminder-only --recent-days 7 --out FILE   (commit review: no import, no map, no concern)
 Steps, each timed in the log (one file per day under private/logs/):
   1. import-session every Claude Code / Codex session file modified in the window into private/coding-sessions/rolling/
      (a malformed file is counted and skipped, not fatal);
@@ -81,13 +82,15 @@ def rebuild_map():
     run("map build with names", [*build, "--names", NAMES])
 
 
-def recent_reminder(days):
-    cut = time.time() - days * 86400
-    graphs = sorted((p for p in (P / "coding-sessions").rglob("*.graph.json") if p.stat().st_mtime >= cut),
-                    key=lambda p: p.stat().st_mtime, reverse=True)
+def recent_reminder(days, out=None):
+    # the window is each session's own last message, not file time: a bulk re-import touches every file
+    cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).isoformat()
+    graphs = list((P / "coding-sessions").rglob("*.graph.json"))
     digests = json.loads(run("digest", [IG, "sessions", *graphs])) if graphs else []
+    digests = sorted((d for d in digests if str(d["conversations"][0]["to"] or "") >= cut),
+                     key=lambda d: str(d["conversations"][0]["to"] or ""), reverse=True)
     lines = [f"# Coding sessions active in the last {days} days", "",
-             f"Built {dt.datetime.now():%Y-%m-%d %H:%M} by tools/nightly_sessions.py from {len(graphs)} imported sessions. "
+             f"Built {dt.datetime.now():%Y-%m-%d %H:%M} by tools/nightly_sessions.py from {len(digests)} sessions active in the window. "
              "Items come from each reply's closing fields; \"status unknown\" means an item dropped off the list with no closing word.", ""]
     seen = set()
     for d in digests:
@@ -103,8 +106,8 @@ def recent_reminder(days):
             lines.append(f"- Status unknown ({len(d['unknown_status'])}), latest: " + "; ".join(d["unknown_status"][-3:]))
         lines += [f"- Waiting on Brian: {x}" for x in d["requests_open"]]
         lines.append("")
-    (P / "coding-sessions" / "recent.md").write_text("\n".join(lines), encoding="utf-8")
-    log(f"reminder: {len(seen)} sessions with open items, from {len(graphs)} recent")
+    (out or P / "coding-sessions" / "recent.md").write_text("\n".join(lines), encoding="utf-8")
+    log(f"reminder: {len(seen)} sessions with open items, from {len(digests)} active in the window")
 
 
 def main():
@@ -112,12 +115,17 @@ def main():
     ap.add_argument("--since-hours", type=float, default=30)
     ap.add_argument("--recent-days", type=float, default=3)
     ap.add_argument("--skip-map", action="store_true", help="import and reminder only")
+    ap.add_argument("--reminder-only", action="store_true", help="only write the reminder from already-imported sessions")
+    ap.add_argument("--out", type=Path, help="reminder file (default: private/coding-sessions/recent.md)")
     ap.add_argument("--data-root", type=Path, help="checkout holding private/ and .venv (default: this script's checkout)")
     a = ap.parse_args()
     if a.data_root:
         global P, IG, PY, MAP, NAMES
         P, IG, PY = a.data_root / "private", a.data_root / ".venv/bin/inquiry-graph", a.data_root / ".venv/bin/python"
         MAP, NAMES = P / "xconv" / "positions_map", P / "xconv" / "positions_names.json"
+    if a.reminder_only:
+        recent_reminder(a.recent_days, a.out)
+        return
     step = "import"
     try:
         import_sessions(a.since_hours)
@@ -125,7 +133,7 @@ def main():
             step = "map"
             rebuild_map()
         step = "reminder"
-        recent_reminder(a.recent_days)
+        recent_reminder(a.recent_days, a.out)
         log("nightly: done")
     except Exception as e:
         log(f"nightly: FAILED at {step}: {e}")
