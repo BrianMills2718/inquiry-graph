@@ -33,3 +33,25 @@ def test_window_uses_session_time_not_file_time(tmp_path, monkeypatch):
     assert "## recent" in text and "still open" in text
     assert "## old" not in text and "## undated" not in text
     assert not (sessions / "recent.md").exists()   # --out leaves the nightly reminder alone
+
+
+def test_headless_sessions_are_left_out(tmp_path, monkeypatch):
+    """Nightly topic naming runs hundreds of codex exec calls; each imports as a session with no prompt from Brian."""
+    now = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=1)).isoformat().replace("+00:00", "Z")
+    sessions = tmp_path / "private" / "coding-sessions"
+    sessions.mkdir(parents=True)
+    for name, actor in (("mine", "participant:brian"), ("headless", "participant:automation")):
+        (sessions / f"{name}.graph.json").write_text("{}")
+        (sessions / f"{name}.conversation.json").write_text(json.dumps({"messages": [{"actor_id": actor}, {"actor_id": "participant:assistant"}]}))
+    seen = []
+
+    def run(step, cmd):
+        seen.extend(Path(c).name for c in cmd[2:])
+        return json.dumps([digest(Path(c).name.split(".")[0], now, ["open item"]) for c in cmd[2:]])
+
+    monkeypatch.setattr(nightly_sessions, "P", tmp_path / "private")
+    monkeypatch.setattr(nightly_sessions, "run", run)
+    out = tmp_path / "review.md"
+    nightly_sessions.recent_reminder(3, out)
+    assert seen == ["mine.graph.json"]
+    assert "## mine" in out.read_text() and "## headless" not in out.read_text()

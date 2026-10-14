@@ -80,12 +80,23 @@ def rebuild_map():
     failed = [l for l in out.splitlines() if l.startswith("FAILED")]
     log(f"topic names: {out.strip().splitlines()[-1] if out.strip() else '?'}; {len(failed)} failed (they keep keyword names)")
     run("map build with names", [*build, "--names", NAMES])
+    if len(failed) > 20:   # a few misses keep keyword names; hundreds mean the naming route is broken (2026-10-14: spend cap)
+        raise RuntimeError(f"topic names: {len(failed)} failed, e.g. {failed[0][:240]}")
+
+
+def typed_by_brian(graph):
+    """False for a session with no prompt from Brian: headless runs (codex exec, claude -p) such as the topic-naming
+    calls themselves, which import with only participant:automation. A session without its conversation file is kept."""
+    conv = graph.with_name(graph.name.replace(".graph.json", ".conversation.json"))
+    if not conv.exists():
+        return True
+    return any(m.get("actor_id") == "participant:brian" for m in json.loads(conv.read_text(encoding="utf-8")).get("messages", []))
 
 
 def recent_reminder(days, out=None):
     # the window is each session's own last message, not file time: a bulk re-import touches every file
     cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).isoformat()
-    graphs = list((P / "coding-sessions").rglob("*.graph.json"))
+    graphs = [g for g in (P / "coding-sessions").rglob("*.graph.json") if typed_by_brian(g)]
     digests = json.loads(run("digest", [IG, "sessions", *graphs])) if graphs else []
     digests = sorted((d for d in digests if str(d["conversations"][0]["to"] or "") >= cut),
                      key=lambda d: str(d["conversations"][0]["to"] or ""), reverse=True)
