@@ -1,0 +1,10 @@
+[Unit]
+Description=Import new coding sessions, rebuild the private positions map, write the open-work reminder (inquiry-graph)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/code/inquiry-graph
+# Until the .venv holds llm_client >= bb882d5 (pinned in pyproject; install blocked by the uv cache budget on 2026-10-13),
+# load it from the canonical checkout, which canonical-sync keeps on main. Remove this line after `uv sync --extra llm`.
+Environment=PYTHONPATH=%h/code/llm_client
+ExecStart=/bin/bash -c 'mkdir -p private/logs && exec %h/code/inquiry-graph/.venv/bin/python tools/nightly_sessions.py >> private/logs/nightly-$(date +%%F).log 2>&1'
