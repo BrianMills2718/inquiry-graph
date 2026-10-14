@@ -6,7 +6,7 @@ Usage: ~/.venvs/inquiry-maps/bin/python brian_positions.py "<topic or question>"
 prompts from headless launches (claude -p, codex exec, subagents) are labelled automated at import and never count as his words.
 Retrieval is hybrid: BM25 keyword rank fused (reciprocal rank) with MiniLM embedding similarity, so synonyms and paraphrases match. Embeddings cached in private/positions_emb.npy.
 Private data: reads ~/code/inquiry-graph/private (gitignored). Quote-bearing output stays in the session; do not publish it."""
-import argparse, datetime as dt, json, re, sys
+import argparse, datetime as dt, json, os, re, sys
 import numpy as np
 from pathlib import Path
 from rank_bm25 import BM25Okapi
@@ -30,6 +30,8 @@ def history_records(files, seen=()):
     """Brian's typed prompts from the Claude Code and Codex prompt histories, minus any already read from imported sessions.
     These files keep only interactive prompts (never headless launches), and outlive the session files they came from."""
     out, seen = [], set(seen)
+    # the history files grow while Brian works; a build that runs twice (names, then named map) must see one fixed set
+    until = float(os.environ.get("INQUIRY_GRAPH_HISTORY_UNTIL") or "inf")
     for f in map(Path, files):
         if not f.exists():
             continue
@@ -42,7 +44,7 @@ def history_records(files, seen=()):
             t = str(d.get("text" if codex else "display") or "").strip()
             sid = d.get("session_id" if codex else "sessionId")
             ts = d.get("ts" if codex else "timestamp")
-            if not sid or not isinstance(ts, (int, float)) or len(t) < 25:
+            if not sid or not isinstance(ts, (int, float)) or len(t) < 25 or (ts if codex else ts / 1000) > until:
                 continue
             chat = f"{'codex' if codex else 'claude-code'}:{sid}"
             if _key(chat, t) in seen:

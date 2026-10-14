@@ -14,6 +14,7 @@ The concern names only the step and exit status; private quotes never leave priv
 import argparse
 import datetime as dt
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -68,6 +69,8 @@ def import_sessions(hours):
 
 
 def rebuild_map():
+    # both builds below must read the same prompts, or the second re-clusters and the names land on other topics
+    os.environ.setdefault("INQUIRY_GRAPH_HISTORY_UNTIL", str(time.time()))
     prev_topics, prev_names = MAP / "topics.prev.json", NAMES.with_suffix(".prev.json")
     if (MAP / "topics.json").exists() and NAMES.exists():
         shutil.copy(MAP / "topics.json", prev_topics)

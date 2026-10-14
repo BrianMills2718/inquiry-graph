@@ -190,3 +190,20 @@ def test_prompt_history_adds_prompts_whose_session_files_are_gone(tmp_path):
         ("codex:cx1", "Rebuild the positions map with every typed prompt", "codex session cx1")]
     assert recs[1]["date"] == recs[2]["date"] == "2026-06-13"
     assert len({r["message_id"] for r in recs}) == 3
+
+
+def test_prompt_history_stops_at_the_build_cutoff(tmp_path, monkeypatch):
+    """The nightly builds twice (names, then the named map); prompts typed in between must not change the record set."""
+    import importlib.util
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location("bp_cut", Path(__file__).resolve().parents[1] / "tools" / "brian_positions.py")
+    bp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bp)
+    codex = tmp_path / ".codex"
+    codex.mkdir()
+    (codex / "history.jsonl").write_text("\n".join(json.dumps({"session_id": "cx", "text": f"Prompt number {i} about the positions map", "ts": ts})
+                                                   for i, ts in enumerate([1000, 2000])), encoding="utf-8")
+    monkeypatch.setenv("INQUIRY_GRAPH_HISTORY_UNTIL", "1500")
+    assert [r["quote"] for r in bp.history_records([codex / "history.jsonl"])] == ["Prompt number 0 about the positions map"]
+    monkeypatch.delenv("INQUIRY_GRAPH_HISTORY_UNTIL")
+    assert len(bp.history_records([codex / "history.jsonl"])) == 2
