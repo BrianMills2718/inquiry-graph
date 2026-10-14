@@ -6,7 +6,7 @@ Usage: ~/.venvs/inquiry-maps/bin/python brian_positions.py "<topic or question>"
 prompts from headless launches (claude -p, codex exec, subagents) are labelled automated at import and never count as his words.
 Retrieval is hybrid: BM25 keyword rank fused (reciprocal rank) with MiniLM embedding similarity, so synonyms and paraphrases match. Embeddings cached in private/positions_emb.npy.
 Private data: reads ~/code/inquiry-graph/private (gitignored). Quote-bearing output stays in the session; do not publish it."""
-import argparse, json, re, sys
+import argparse, datetime as dt, json, re, sys
 import numpy as np
 from pathlib import Path
 from rank_bm25 import BM25Okapi
@@ -20,18 +20,54 @@ def load(rebuild):
     skip = frozenset((r["message_id"], r["quote"]) for r in json.loads((R / "records_full.json").read_text())["records"] if lab.get(r["id"], {}).get("label") == "pasted_or_quoted")
     recs = records([R / d for d in DIRS if (R / d).is_dir()], skip); INDEX.write_text(json.dumps(recs)); return recs
 SESS_EMB = R / "sessions_emb.npy"; SESS_IDS = R / "sessions_emb_ids.json"
-def session_records(dirs):
-    """Brian's own typed messages from imported session conversations; one-word replies ("continue", "yes") carry no position."""
+HISTORY = [Path.home() / ".claude" / "history.jsonl", Path.home() / ".codex" / "history.jsonl"]   # every prompt Brian typed, kept after session files are gone
+
+
+def _key(chat, text): return chat, " ".join(text.split())[:200]
+
+
+def history_records(files, seen=()):
+    """Brian's typed prompts from the Claude Code and Codex prompt histories, minus any already read from imported sessions.
+    These files keep only interactive prompts (never headless launches), and outlive the session files they came from."""
+    out, seen = [], set(seen)
+    for f in map(Path, files):
+        if not f.exists():
+            continue
+        codex = f.parent.name == ".codex"
+        for line in f.open(encoding="utf-8"):
+            try:
+                d = json.loads(line)
+            except ValueError:
+                continue
+            t = str(d.get("text" if codex else "display") or "").strip()
+            sid = d.get("session_id" if codex else "sessionId")
+            ts = d.get("ts" if codex else "timestamp")
+            if not sid or not isinstance(ts, (int, float)) or len(t) < 25:
+                continue
+            chat = f"{'codex' if codex else 'claude-code'}:{sid}"
+            if _key(chat, t) in seen:
+                continue
+            seen.add(_key(chat, t))
+            when = dt.datetime.fromtimestamp(ts if codex else ts / 1000, dt.timezone.utc)
+            where = "codex" if codex else Path(d.get("project") or "code").name
+            out.append({"target": "", "quote": t[:600], "title": f"{where} session {sid[:8]}", "date": when.date().isoformat(),
+                        "kind": "session prompt", "chat": chat, "message_id": f"{chat}:h{int(ts)}"})
+    return out
+
+
+def session_records(dirs, history=()):
+    """Brian's own typed messages from imported session conversations, plus (with history files) every typed prompt
+    the sessions no longer on disk held; one-word replies ("continue", "yes") carry no position."""
     out, seen = [], set()   # one session can be imported into several folders (a week and a month)
     for f in sorted(p for d in dirs for p in Path(d).rglob("*.conversation.json")):
         c = json.loads(f.read_text())
         for m in c["messages"]:
             t = m["text"].strip()
-            if m["actor_id"] == "participant:brian" and len(t) >= 25 and (c["id"], t) not in seen:
-                seen.add((c["id"], t))
+            if m["actor_id"] == "participant:brian" and len(t) >= 25 and _key(c["id"], t) not in seen:
+                seen.add(_key(c["id"], t))
                 out.append({"target": "", "quote": t[:600], "title": c["title"], "date": (m.get("timestamp") or "")[:10],
                             "kind": "session prompt", "chat": c["id"], "message_id": m["id"]})
-    return out
+    return out + history_records(history, seen)
 def doc(r): return (r["target"] or r["quote"])[:300]
 def embeddings(recs, rebuild, sessions=()):
     from sentence_transformers import SentenceTransformer
@@ -50,7 +86,7 @@ def embeddings(recs, rebuild, sessions=()):
 def main():
     ap = argparse.ArgumentParser(description=__doc__); ap.add_argument("query"); ap.add_argument("--top", type=int, default=15); ap.add_argument("--json", action="store_true"); ap.add_argument("--rebuild", action="store_true"); ap.add_argument("--keyword-only", action="store_true"); ap.add_argument("--sessions", nargs="*", metavar="DIR")
     a = ap.parse_args(); recs = load(a.rebuild); n_chat = len(recs)
-    sess = session_records(a.sessions or [R / "coding-sessions"]) if a.sessions is not None else []; recs = recs + sess
+    sess = session_records(a.sessions or [R / "coding-sessions"], HISTORY) if a.sessions is not None else []; recs = recs + sess
     sc = BM25Okapi([tok(r["target"] + " " + r["quote"] + " " + r["title"]) for r in recs]).get_scores(tok(a.query))
     order = [i for i in np.argsort(-sc)[:200] if sc[i] > 0]; fused = {i: 1 / (60 + k) for k, i in enumerate(order)}
     if not a.keyword_only:
