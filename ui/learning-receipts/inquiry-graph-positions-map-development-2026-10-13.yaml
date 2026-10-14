@@ -2,7 +2,7 @@ schema_version: ui-learning-receipt/v1
 receipt_id: inquiry-graph-positions-map-development-2026-10-13
 project_id: inquiry-graph
 surface_id: private-positions-map
-change_revision: PENDING
+change_revision: 2f5303afff2090bf53b8aba905af529bf73037b1
 created_at: '2026-10-14T01:00:00Z'
 recorded_by: claude-code
 stage: development-checkpoint
