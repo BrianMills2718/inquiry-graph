@@ -1,5 +1,5 @@
 // Side panel and tooltips for the positions map (tools/position_topics.py).
-// IG = {names: [topic name], layerSizes: [topics per level, broad to narrow], recs: [[title, date, app, kind, quote, conversation id, [topic name index, broad to narrow]]]}.
+// IG = {names: [topic name], layerSizes: [topics per level, broad to narrow], recs: [[title, date, app, kind, quote, conversation id, [topic name index, broad to narrow; negative = nearest topic, not placed by the clusterer]]]}.
 (function () {
   const byChat = new Map();
   IG.recs.forEach((r, i) => { if (!byChat.has(r[5])) byChat.set(r[5], []); byChat.get(r[5]).push(i); });
@@ -9,7 +9,7 @@
   window.igShow = function (i) {
     const r = IG.recs[i];
     if (!r) return;
-    const path = r[6].map(n => IG.names[n]).filter((n, k, a) => n !== a[k - 1]).map(n => `<li>${esc(n)}</li>`).join("") || "<li>No topic (not clustered)</li>";
+    const path = r[6].map(n => IG.names[Math.abs(n)] + (n < 0 ? " (nearest topic)" : "")).filter((n, k, a) => n !== a[k - 1]).map(n => `<li>${esc(n)}</li>`).join("") || "<li>No topic (not clustered)</li>";
     const others = (byChat.get(r[5]) || []).filter(j => j !== i).sort((a, b) => IG.recs[a][1].localeCompare(IG.recs[b][1]));
     const list = others.slice(0, 40).map(j => `<li><button class="ig-link" data-i="${j}" data-tip="Open this statement in the panel">` +
       `${esc(IG.recs[j][1])} · ${esc(IG.recs[j][3])}: ${esc(IG.recs[j][4].slice(0, 140))}</button></li>`).join("");
@@ -33,7 +33,7 @@
   // Tooltips: a styled bubble on hover or keyboard focus, and on tap for touch screens.
   // [data-tip] wins; datamapplot's own controls get their text from TIPS by selector.
   const TIPS = [
-    ["#text-search", "Search the quotes: points without your words fade out"],
+    ["#search-container", "Search the quotes: points without your words fade out"],
     ["#colormap-selector-container, .color-map-dropdown, #colorMapOptions", "Colour the points by topic level, by coding session or chat, by app, or by kind of statement"],
     [".legend-item", "Click a coloured square to show only that group; click more squares to add groups, click again to remove"],
     ["#d3histogram-container, .d3histogram-container", "Points over time. Drag across the bars to show only that date range; click outside the selection to clear it"],
@@ -77,11 +77,17 @@
     show(anchor, text); clearTimeout(timer); timer = setTimeout(hide, 2500);
   }, { passive: true });
 
-  // datamapplot names its topic-level colourings "Top/Upper-mid/... Clusters" (Top = broadest); say what they are.
-  const LEVELS = { 4: ["Top", "Upper-mid", "Lower-mid", "Bottom"], 3: ["Upper", "Mid", "Lower"], 2: ["Upper", "Lower"] }[IG.layerSizes.length] || [];
-  const WORDS = ["broadest", "broad", "narrow", "narrowest"].slice(-LEVELS.length);
+  // datamapplot names its topic-level colourings "<descriptor> Clusters", broadest first; the table mirrors
+  // CLUSTER_LAYER_DESCRIPTORS in datamapplot/interactive_helpers.py. Say what each level is instead.
+  const n = IG.layerSizes.length;
+  const LEVELS = { 9: ["Top", "Upper", "Upper-mid", "Upper-central", "Mid", "Lower-central", "Lower-mid", "Lower", "Bottom"],
+    8: ["Top", "Upper", "Upper-mid", "Upper-central", "Lower-central", "Lower-mid", "Lower", "Bottom"],
+    7: ["Top", "Upper", "Upper-mid", "Mid", "Lower-mid", "Lower", "Bottom"], 6: ["Top", "Upper", "Upper-mid", "Lower-mid", "Lower", "Bottom"],
+    5: ["Top", "Upper", "Mid", "Lower", "Bottom"], 4: ["Top", "Upper-mid", "Lower-mid", "Bottom"], 3: ["Upper", "Mid", "Lower"],
+    2: ["Upper", "Lower"], 1: ["Primary"] }[n] || IG.layerSizes.map((_, i) => `Layer-${i}`);
+  const level = i => i === 0 ? "broadest" : i === n - 1 ? "narrowest" : `level ${i + 1} of ${n}`;
   const RENAME = { "Clusters": "Topics (default colours)" };
-  LEVELS.forEach((d, i) => { RENAME[d + " Clusters"] = `Topics: ${IG.layerSizes[i]} ${i === 0 ? "broadest" : i === LEVELS.length - 1 ? "narrowest" : WORDS[i]}`; });
+  LEVELS.forEach((d, i) => { RENAME[d + " Clusters"] = `Topics: ${IG.layerSizes[i]}, ${level(i)}`; });
   const relabel = () => document.querySelectorAll(".color-map-text").forEach(el => { const t = RENAME[el.textContent.trim()]; if (t) el.textContent = t; });
   new MutationObserver(relabel).observe(document.body, { childList: true, subtree: true, characterData: true });
   relabel();

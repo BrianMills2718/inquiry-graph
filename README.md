@@ -62,6 +62,8 @@ inquiry-graph extract private/coding-sessions/<id>.conversation.json private/cod
 
 `import-session` reads a Claude Code or Codex session record: Brian's typed messages, each turn's assistant text, and pull-request and commit lines from tool records. It reads the end-of-reply fields (Session goal, Active subgoals, Done, Need anything from human) into goal, task, question and work nodes without an LLM. Concepts come from the ordinary `extract --llm` run on the same conversation; `merge` combines the two. Output holds private material, so keep it under `private/`.
 
+Every night at 02:40 `tools/nightly_sessions.py` (systemd user timer, units in `tools/systemd/`; install with `cp tools/systemd/* ~/.config/systemd/user/ && systemctl --user enable --now inquiry-graph-nightly.timer`) imports every session file changed in the last 30 hours into `private/coding-sessions/rolling/`, rebuilds the private positions map (topic names carry over from the last build; only new topics are sent to the model), and writes `private/coding-sessions/recent.md`, the open items and requests from the last three days that the `start` and `where-are-we` routines read. Its log is `private/logs/nightly-<date>.log`; a failed step opens the `inquiry-graph-nightly-sessions` concern.
+
 ## Let conversations improve Inquiry Graph
 
 For substantive conversations, capture the inquiry and then review how well the

@@ -1,0 +1,9 @@
+[Unit]
+Description=Nightly coding-session import and positions-map rebuild (inquiry-graph)
+
+[Timer]
+OnCalendar=*-*-* 02:40
+Persistent=true
+
+[Install]
+WantedBy=timers.target
