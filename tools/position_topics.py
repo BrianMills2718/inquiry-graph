@@ -66,15 +66,25 @@ MIN_PROMPT_WORDS = 4   # shorter coding-session prompts ("ok", "yes do it") carr
 
 
 def embed(docs, cache):
-    """Embeddings and 2-D layout, cached by the exact documents so a re-run that only changes the page skips the slow part."""
+    """Embeddings and 2-D layout. Embeddings are cached per document, so new documents embed only themselves;
+    the layout is cached by the exact document list, so a re-run that only changes the page skips it too."""
     key = hashlib.sha256("\x1f".join(docs).encode()).hexdigest()
+    ids = np.array([hashlib.sha256(d.encode()).hexdigest()[:24] for d in docs])
+    known = {}
     if cache.exists():
         z = np.load(cache, allow_pickle=False)
         if str(z["key"]) == key:
             return z["emb"], z["xy"]
-    emb = SentenceTransformer("all-MiniLM-L6-v2").encode(docs, batch_size=64, show_progress_bar=False, normalize_embeddings=True)
+        if "ids" in z:
+            known = dict(zip(z["ids"].tolist(), z["emb"]))
+    todo = [i for i, d in enumerate(ids) if d not in known]
+    print(f"embedding {len(todo)} new of {len(docs)} documents", file=sys.stderr, flush=True)
+    if todo:
+        new = SentenceTransformer("all-MiniLM-L6-v2").encode([docs[i] for i in todo], batch_size=64, show_progress_bar=False, normalize_embeddings=True)
+        known.update(zip(ids[todo].tolist(), new))
+    emb = np.stack([known[d] for d in ids])
     xy = umap.UMAP(n_neighbors=30, min_dist=0.15, metric="cosine", random_state=7, low_memory=True).fit_transform(emb)
-    np.savez(cache, key=key, emb=emb, xy=xy)
+    np.savez(cache, key=key, ids=ids, emb=emb, xy=xy)
     return emb, xy
 
 
