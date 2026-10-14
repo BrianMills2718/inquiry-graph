@@ -18,3 +18,13 @@ surfaces:
     serve_command: python3 -m http.server 8765 --bind 127.0.0.1 --directory private/xconv/scale_run/map/verified
     browser_evidence: Twelve file-URL interaction assertions passed; zero page errors and zero failed requests at 1440x1000. See private/xconv/scale_run/map/verified/evidence/browser-verification.json.
     path_exception: Builder/template stay in tools/ and generated quote-bearing HTML stays in private/xconv/; no duplicate UI source tree.
+  - id: private-positions-map
+    lifecycle: candidate
+    source_path: tools/position_topics_page.js
+    purpose: Let Brian explore all his positions and coding-session prompts as a zoomable topic map, filter by source, app, kind and date, and open any point's quote and conversation in a side panel.
+    generator_path: tools/position_topics.py
+    run_path: private/xconv/positions_map/index.html
+    data_boundary: Offline, gitignored HTML embeds positions, prompts and exact quotes; do not commit or publish it.
+    verification_command: Playwright MCP browser session against the serve_command URL (npx installs are blocked by the storage gate).
+    serve_command: python3 -m http.server 8797 --bind 127.0.0.1 --directory private/xconv/positions_map
+    path_exception: Builder, page script and css stay in tools/; generated quote-bearing HTML stays in private/xconv/.

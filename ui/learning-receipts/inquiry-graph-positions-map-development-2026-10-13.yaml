@@ -1,0 +1,79 @@
+schema_version: ui-learning-receipt/v1
+receipt_id: inquiry-graph-positions-map-development-2026-10-13
+project_id: inquiry-graph
+surface_id: private-positions-map
+change_revision: 2f5303afff2090bf53b8aba905af529bf73037b1
+created_at: '2026-10-14T01:00:00Z'
+recorded_by: claude-code
+stage: development-checkpoint
+ui_families:
+  - visual-analysis
+  - research-evidence-workbench
+heuristic_catalog:
+  repository: BrianMills2718/ui-atlas
+  revision: c3b215a064013f4f236b8ad4a3a1b00bbec382a2
+  path: heuristics/catalog.yaml
+  catalog_version: v0
+heuristics_considered:
+  - heuristic_id: H1
+    disposition: applied
+    rationale: The subtitle names the job and the first action (click a point to read it); every control carries a styled tooltip.
+    evidence_refs:
+      - map-browser
+  - heuristic_id: H3
+    disposition: applied
+    rationale: The side panel shows the exact quote, its source app, date and kind of statement before any topic interpretation.
+    evidence_refs:
+      - map-browser
+  - heuristic_id: H4
+    disposition: applied
+    rationale: No node-link graph is drawn; a 2-D semantic map with a nested topic list answers "what have I talked about and where" better than edges would.
+    evidence_refs:
+      - map-source
+  - heuristic_id: H8
+    disposition: applied
+    rationale: The map pairs with search, legend filters, a date-range filter and a per-point side panel listing the rest of that conversation.
+    evidence_refs:
+      - map-browser
+  - heuristic_id: H11
+    disposition: applied
+    rationale: Points that fit no topic stay visible in grey, labelled Unlabelled, and the subtitle says so; nothing is dropped from the map except records without a usable embedding.
+    evidence_refs:
+      - map-source
+      - map-browser
+  - heuristic_id: H13
+    disposition: applied
+    rationale: The subtitle states that topic names are the topics' top keywords, not summaries.
+    evidence_refs:
+      - map-source
+  - heuristic_id: H14
+    disposition: applied
+    rationale: The colouring menu switches between topic level, coding session or chat, app, and kind of statement without changing positions or the open selection.
+    evidence_refs:
+      - map-browser
+evidence:
+  - evidence_id: map-source
+    kind: source-inspection
+    ref: tools/position_topics.py; tools/position_topics_page.js
+    observed_at: '2026-10-14T01:00:00Z'
+    summary: Builder clusters with EVoC (four nested layers), embeds a side panel, tooltips, date filter and three extra colourings into a private datamapplot page.
+  - evidence_id: map-browser
+    kind: browser-observation
+    ref: ~/code/.scratch/session-graphs/map-v2-*.png (private, not committed)
+    observed_at: '2026-10-14T01:00:00Z'
+    summary: Playwright session at 1920x910 on 127.0.0.1:8797 - real mouse clicks on points open the side panel, Esc closes it, and hovering every visible control shows a styled tooltip.
+capability_dispositions:
+  - capability: provenance
+    disposition: preserved
+    reason: Each point opens its exact quote, source app and date.
+  - capability: shared-filters
+    disposition: preserved
+    reason: Search, legend filters and date range all filter the same map.
+  - capability: details-on-demand
+    disposition: preserved
+    reason: Hover shows a short preview; click opens the full side panel.
+proposals: []
+human_review:
+  required: true
+  status: pending
+  notes: Brian has not reviewed this map or promoted any UI learning.
