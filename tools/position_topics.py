@@ -116,9 +116,10 @@ def nearest_topic(emb, lab, k=10):
     return shown
 
 
-def page_js(recs, names, paths, kinds, apps, layer_sizes):
+def page_js(recs, names, paths, kinds, apps, layer_sizes, plotted):
     """Data for the side panel, plus the panel, filter-hint and tooltip code from position_topics_page.js."""
-    data = {"names": names, "layerSizes": layer_sizes, "recs": [[r["title"][:160], r["date"], apps[i], kinds[i], r["quote"], r["chat"], paths[i]] for i, r in enumerate(recs)]}
+    data = {"names": names, "layerSizes": layer_sizes, "recs": [[r["title"][:160], r["date"], apps[i], kinds[i], r["quote"], r["chat"], paths[i]] for i, r in enumerate(recs)],
+            "plotted": [int(i) for i in plotted]}   # map point number -> record number, for the time player
     return "const IG = " + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + ";\n" + PAGE.read_text(encoding="utf-8")
 
 
@@ -191,8 +192,12 @@ def main():
                            cat("app", "Which app", app[sel], {k: SOURCE_COLOURS[k] for k in APPS + ["Other"]}),
                            cat("kind", "Kind of statement", kind[sel], KIND_COLOURS)],
         custom_css=PAGE.with_suffix(".css").read_text(encoding="utf-8"),
-        custom_html='<aside id="ig-panel" hidden><button id="ig-close" data-tip="Close this panel">×</button><div id="ig-body"></div></aside><div id="ig-tip" role="tooltip"></div>',
-        custom_js=page_js(recs, names, paths, kind, app, [int(len(set(l.tolist()) - {-1})) for l in reversed(labs)]))
+        custom_html='<aside id="ig-panel" hidden><button id="ig-close" data-tip="Close this panel">×</button><div id="ig-body"></div></aside><div id="ig-tip" role="tooltip"></div>'
+                    '<div id="ig-play"><button id="ig-play-btn" data-tip="Play the map through time: points appear month by month">▶ Play</button>'
+                    '<button id="ig-play-mode" data-tip="Switch between building up (everything so far) and one month at a time">Building up</button>'
+                    '<span id="ig-play-label" data-tip="The month the map is showing">All dates</span>'
+                    '<button id="ig-play-reset" data-tip="Stop playing and show every date again">Show all</button></div>',
+        custom_js=page_js(recs, names, paths, kind, app, [int(len(set(l.tolist()) - {-1})) for l in reversed(labs)], sel))
     plot.save(str(a.out / "index.html"))
     n_lab = [int((l != "Unlabelled").sum()) for l in layers]
     print(json.dumps({"records": len(recs), "plotted": int(keep.sum()), "layers": layer_ids, "events_labelled_per_layer": n_lab, "topics": len(topics)}))
