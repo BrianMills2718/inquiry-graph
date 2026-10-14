@@ -27,6 +27,19 @@ def session_records(dirs):
     return load(dirs)
 
 
+APP_BY_PREFIX = {"claude-code": "Claude Code", "codex": "Codex", "chatgpt": "ChatGPT", "gemini": "Gemini", "claude": "Claude chat"}
+APPS = list(APP_BY_PREFIX.values())
+CODING = {"Claude Code", "Codex"}
+# Okabe-Ito colours (colour-blind safe; no red against green): coding sessions warm, chats cool
+SOURCE_COLOURS = {"Coding session": "#E69F00", "Chat": "#0072B2", "Claude Code": "#E69F00", "Codex": "#D55E00",
+                  "ChatGPT": "#0072B2", "Gemini": "#56B4E9", "Claude chat": "#CC79A7", "Other": "#999999"}
+
+
+def source(r):
+    """The app a record came from, read from its conversation id prefix (e.g. 'codex:...', 'chatgpt:...')."""
+    return APP_BY_PREFIX.get(r["chat"].split(":", 1)[0], "Other")
+
+
 def with_ids(sessions):
     """Session prompts carry a message id but no record id; topics.json lists members by record id."""
     return [{**r, "id": f"session:{r['message_id']}"} for r in sessions]
@@ -72,9 +85,17 @@ def main():
     (a.out / "topics.json").write_text(json.dumps({"records": len(recs), "layers": sizes, "topics": topics}, indent=1), encoding="utf-8")
     hover = [f'<b>{r["title"][:120]}</b> · {r["date"]} · {r["kind"]}<br><i>“{r["quote"][:240]}”</i>' for r in recs]
     sel = np.where(keep)[0]
-    plot = datamapplot.create_interactive_plot(xy[sel], *[l[sel] for l in layers], hover_text=[hover[i] for i in sel], title="Positions (private)",
-                                               sub_title=f"{len(recs)} quoted events from {len({r['chat'] for r in recs})} chats. Zoom for detail; hover for the quote.",
-                                               enable_search=True, darkmode=False, font_family="Roboto", noise_label="Unlabelled")
+    app = np.array([source(r) for r in recs], dtype=object)
+    where = np.array(["Coding session" if a in CODING else "Chat" for a in app], dtype=object)
+    plot = datamapplot.create_interactive_plot(xy[sel], *[l[sel] for l in layers], hover_text=[hover[i] + f" · {app[i]}" for i in sel], title="Positions (private)",
+                                               sub_title=f"{len(recs)} quoted events from {len({r['chat'] for r in recs})} chats and sessions. Zoom for detail; hover for the quote; "
+                                                         "pick a colouring at the bottom left, then click a coloured square in the legend to show only that source.",
+                                               enable_search=True, darkmode=False, font_family="Roboto", noise_label="Unlabelled",
+                                               colormap_rawdata=[where[sel], app[sel]],
+                                               colormap_metadata=[{"field": "where", "description": "Coding session or chat", "cmap": "tab10", "kind": "categorical",
+                                                                   "color_mapping": {k: SOURCE_COLOURS[k] for k in ("Coding session", "Chat")}, "show_legend": True},
+                                                                  {"field": "app", "description": "Which app", "cmap": "tab10", "kind": "categorical",
+                                                                   "color_mapping": {k: SOURCE_COLOURS[k] for k in APPS + ["Other"]}, "show_legend": True}])
     plot.save(str(a.out / "index.html"))
     n_lab = [int((l != "Unlabelled").sum()) for l in layers]
     print(json.dumps({"records": len(recs), "plotted": int(keep.sum()), "layers": sizes, "events_labelled_per_layer": n_lab, "topics": len(topics)}))
