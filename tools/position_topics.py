@@ -32,8 +32,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def session_records(dirs):
-    from brian_positions import session_records as load   # same loader as the positions search, so both read one definition of "Brian's prompt"
-    return load(dirs)
+    from brian_positions import HISTORY, session_records as load   # same loader as the positions search, so both read one definition of "Brian's prompt"
+    return load(dirs, HISTORY)
 
 
 APP_BY_PREFIX = {"claude-code": "Claude Code", "codex": "Codex", "chatgpt": "ChatGPT", "gemini": "Gemini", "claude": "Claude chat"}

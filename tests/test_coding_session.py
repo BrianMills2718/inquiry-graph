@@ -162,3 +162,31 @@ def test_position_search_reads_only_brians_typed_session_prompts(tmp_path):
     recs = bp.session_records([tmp_path / "out", tmp_path / "again"])     # same session imported twice counts once
     assert [(r["quote"], r["chat"], r["date"], r["kind"]) for r in recs] == [
         (said, "claude-code:typed", "2026-10-13", "session prompt")]    # headless prompt and one-word reply left out
+
+
+def test_prompt_history_adds_prompts_whose_session_files_are_gone(tmp_path):
+    import importlib.util
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location("bp_hist", Path(__file__).resolve().parents[1] / "tools" / "brian_positions.py")
+    bp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bp)
+    said = "I think the system model should live in the README"
+    lost = "Keep the map private but make the nightly reminder short"
+    (tmp_path / "s.jsonl").write_text(json.dumps({"type": "user", "sessionId": "typed", "cwd": "/w", "entrypoint": "cli",
+                                                  "timestamp": "2026-10-13T01:00:00Z", "message": {"content": said}}), encoding="utf-8")
+    (tmp_path / "out").mkdir()
+    (tmp_path / "out" / "s.conversation.json").write_text(parse_session(tmp_path / "s.jsonl").model_dump_json())
+    claude, codex = tmp_path / ".claude", tmp_path / ".codex"
+    claude.mkdir(); codex.mkdir()
+    (claude / "history.jsonl").write_text("\n".join(json.dumps(d) for d in [
+        {"display": said, "project": "/home/x/inquiry-graph", "sessionId": "typed", "timestamp": 1781310000000},   # already imported
+        {"display": lost, "project": "/home/x/inquiry-graph", "sessionId": "gone", "timestamp": 1781310000000},
+        {"display": "yes do it", "project": "/home/x/w", "sessionId": "gone", "timestamp": 1781310000001}]), encoding="utf-8")
+    (codex / "history.jsonl").write_text(json.dumps({"session_id": "cx1", "text": "Rebuild the positions map with every typed prompt", "ts": 1781310000}) + "\nnot json\n", encoding="utf-8")
+    recs = bp.session_records([tmp_path / "out"], [claude / "history.jsonl", codex / "history.jsonl", tmp_path / "missing.jsonl"])
+    assert [(r["chat"], r["quote"], r["title"]) for r in recs] == [
+        ("claude-code:typed", said, recs[0]["title"]),
+        ("claude-code:gone", lost, "inquiry-graph session gone"),
+        ("codex:cx1", "Rebuild the positions map with every typed prompt", "codex session cx1")]
+    assert recs[1]["date"] == recs[2]["date"] == "2026-06-13"
+    assert len({r["message_id"] for r in recs}) == 3
