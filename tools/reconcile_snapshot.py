@@ -4,7 +4,7 @@ Usage: reconcile_snapshot.py OUT.json   (paths below are the private inventory l
 Sources: ChatGPT exporter raw files, Kept vault files. Dispositions:
   failed_no_visible_text | excluded_agent_sent (thread id in the bridge agent-send log: the "user" turns are agents) |
   excluded_interest_filter:<category> | skipped_too_short (<200 chars of Brian text) | extracted_with_events |
-  extracted_no_brian_events | extraction_failed | pending | duplicate_of_exporter (Kept copy of a ChatGPT chat already counted).
+  extracted_no_brian_events | extraction_failed | included_not_queued (passed the filter, never queued, no recorded reason) | pending | duplicate_of_exporter (Kept copy of a ChatGPT chat already counted).
 Quote-free: only ids, titles' absence, counts. Exit status 1 if any conversation lacks a disposition or totals do not reconcile.
 """
 import argparse
@@ -17,21 +17,23 @@ from pathlib import Path
 R = Path(__file__).resolve().parents[1] / "private"
 
 
-def classify(cid, *, failed, agent, flt, short, graphs, failed_extract, events):
+def classify(cid, *, failed, agent, flt, short, graphs, failed_extract, events, queued=None):
     if cid in failed:
         return "failed_no_visible_text"
     if cid in agent:
         return "excluded_agent_sent"
+    if cid in graphs:   # extracted later (e.g. the low-confidence rerun) even if the filter first excluded it
+        return "extracted_with_events" if events.get(cid, 0) else "extracted_no_brian_events"
     if cid in flt and not flt[cid]["include"]:
         return "excluded_interest_filter:" + flt[cid]["category"]
     if cid not in flt:
         return "pending"   # not yet filtered (e.g. synced after the last filter run)
     if cid in short:
         return "skipped_too_short"
-    if cid in graphs:
-        return "extracted_with_events" if events.get(cid, 0) else "extracted_no_brian_events"
     if cid in failed_extract:
         return "extraction_failed"
+    if queued is not None and cid not in queued:
+        return "included_not_queued"   # no recorded reason: not proof it was too short
     return "pending"
 
 
@@ -80,7 +82,7 @@ def main():
         if v["status"] == "failed":
             cid = "chatgpt:" + k
         rows[cid] = classify(cid, failed={"chatgpt:" + k for k, v in norm.items() if v["status"] == "failed"}, agent=agent, flt=flt,
-                             short=short | ({cid} if (cid in flt and flt[cid]["include"] and cid not in queued and cid not in graphs) else set()),
+                             short=short, queued=queued,
                              graphs=graphs, failed_extract=failed_extract, events=events)
     for k, v in kept.items():
         if v["status"] == "duplicate_of_exporter":
@@ -91,7 +93,7 @@ def main():
             rows["kept:" + k] = "duplicate_of_exporter"
         else:
             cid = v["id"]
-            rows[cid] = classify(cid, failed=set(), agent=set(), flt=flt, short=short | ({cid} if (cid in flt and flt[cid]["include"] and cid not in queued and cid not in graphs) else set()),
+            rows[cid] = classify(cid, failed=set(), agent=set(), flt=flt, short=short, queued=queued,
                                  graphs=graphs, failed_extract=failed_extract, events=events)
     cx = json.loads((R / "claude_export_normalized_20261004/dispositions.json").read_text())
     for uid, v in cx.items():
@@ -101,7 +103,7 @@ def main():
         elif key in rows:   # the Kept copy of this chat is already counted; its graph (if any) serves both
             rows["claudeexport:" + uid] = "duplicate_of_kept"
         else:
-            rows[key] = classify(key, failed=set(), agent=set(), flt=flt, short=short | ({key} if (key in flt and flt[key]["include"] and key not in queued and key not in graphs) else set()),
+            rows[key] = classify(key, failed=set(), agent=set(), flt=flt, short=short, queued=queued,
                                  graphs=graphs, failed_extract=failed_extract, events=events)
     by = collections.Counter(rows.values())
     sources = {"chatgpt_raw_files": len(norm), "kept_files": len(kept), "claude_export_conversations": len(cx)}
