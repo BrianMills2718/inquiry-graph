@@ -1,0 +1,18 @@
+/* Side panel and tooltips for the positions map (tools/position_topics.py). */
+#ig-panel { position: fixed; top: 0; right: 0; width: min(440px, 94vw); height: 100vh; overflow-y: auto; z-index: 1000;
+  background: #fff; color: #1b1b1b; box-shadow: -4px 0 18px rgba(0,0,0,.18); padding: 18px 18px 40px; box-sizing: border-box;
+  font: 15px/1.5 Roboto, system-ui, sans-serif; }
+#ig-panel[hidden] { display: none; }
+#ig-close { position: sticky; top: 0; float: right; font-size: 22px; line-height: 1; border: 0; background: #eee; border-radius: 6px;
+  width: 34px; height: 34px; cursor: pointer; }
+#ig-panel h2 { font-size: 1.1rem; margin: 0 40px 4px 0; }
+#ig-panel h3 { font-size: .95rem; margin: 18px 0 6px; color: #333; }
+.ig-meta { color: #555; margin: 0 0 10px; font-size: .9rem; }
+#ig-panel blockquote { margin: 0; padding: 8px 12px; border-left: 4px solid #E69F00; background: #faf7f0; white-space: pre-wrap; }
+.ig-path { margin: 0; padding-left: 20px; }
+.ig-others { list-style: none; margin: 0; padding: 0; }
+.ig-link { display: block; width: 100%; text-align: left; border: 0; border-bottom: 1px solid #eee; background: none; padding: 6px 2px;
+  font: inherit; font-size: .88rem; color: #0b5cad; cursor: pointer; }
+.ig-link:hover, .ig-link:focus { background: #eef4fb; }
+#ig-tip { position: fixed; display: none; z-index: 2000; max-width: 280px; padding: 6px 9px; border-radius: 6px; background: #222; color: #fff;
+  font: 13px/1.4 Roboto, system-ui, sans-serif; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
