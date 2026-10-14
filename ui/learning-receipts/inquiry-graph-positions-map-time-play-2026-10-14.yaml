@@ -1,0 +1,55 @@
+schema_version: ui-learning-receipt/v1
+receipt_id: inquiry-graph-positions-map-time-play-2026-10-14
+project_id: inquiry-graph
+surface_id: private-positions-map
+change_revision: c490447a9e1b5b4d1ae8093299a38f03f2c96968
+created_at: '2026-10-14T05:00:00Z'
+recorded_by: claude-code
+stage: development-checkpoint
+ui_families:
+  - visual-analysis
+  - research-evidence-workbench
+heuristic_catalog:
+  repository: BrianMills2718/ui-atlas
+  revision: c3b215a064013f4f236b8ad4a3a1b00bbec382a2
+  path: heuristics/catalog.yaml
+  catalog_version: v0
+heuristics_considered:
+  - heuristic_id: H1
+    disposition: applied
+    rationale: The play bar says what it shows (the month and the point count) and every button carries a styled tooltip.
+    evidence_refs:
+      - play-browser
+  - heuristic_id: H8
+    disposition: applied
+    rationale: Playback filters through datamapplot's own selection call under its own name, so it combines with search, legend filters and the date histogram instead of replacing them.
+    evidence_refs:
+      - play-source
+  - heuristic_id: H14
+    disposition: applied
+    rationale: One toggle switches between building up (everything so far) and one month at a time without moving points or losing the current month.
+    evidence_refs:
+      - play-browser
+evidence:
+  - evidence_id: play-source
+    kind: source-inspection
+    ref: tools/position_topics_page.js; tools/position_topics.py
+    observed_at: '2026-10-14T05:00:00Z'
+    summary: "Play steps month by month every 0.9 s and calls datamap.addSelection(points, 'ig-time'); IG.plotted maps each map point to its record; Show all calls removeSelection('ig-time')."
+  - evidence_id: play-browser
+    kind: browser-observation
+    ref: ~/code/.scratch/session-graphs/map-time-play.png (private, not committed)
+    observed_at: '2026-10-14T05:00:00Z'
+    summary: "Headless Chromium 1400x900 on a 21,326-statement build: all four play-bar controls showed a styled tooltip on hover; paused at 'Up to May 2024 · 747' the map selected 747 points; 'One month' showed 'May 2024 · 1' with 1 point; Show all reset to 'All dates' with no selection. Only page error: a font load timeout."
+capability_dispositions:
+  - capability: shared-filters
+    disposition: preserved
+    reason: Search, legend filters and the date histogram still work; playback adds its own selection.
+  - capability: details-on-demand
+    disposition: preserved
+    reason: Clicking a point still opens the side panel during or after playback.
+proposals: []
+human_review:
+  required: true
+  status: pending
+  notes: Brian saw the play bar on 2026-10-14 ("kind of cool") and noted data is missing; no UI learning promoted.

@@ -1,5 +1,5 @@
 // Side panel and tooltips for the positions map (tools/position_topics.py).
-// IG = {names: [topic name], layerSizes: [topics per level, broad to narrow], recs: [[title, date, app, kind, quote, conversation id, [topic name index, broad to narrow; negative = nearest topic, not placed by the clusterer]]]}.
+// IG = {plotted: [record number of each map point], names: [topic name], layerSizes: [topics per level, broad to narrow], recs: [[title, date, app, kind, quote, conversation id, [topic name index, broad to narrow; negative = nearest topic, not placed by the clusterer]]]}.
 (function () {
   const byChat = new Map();
   IG.recs.forEach((r, i) => { if (!byChat.has(r[5])) byChat.set(r[5], []); byChat.get(r[5]).push(i); });
@@ -91,4 +91,38 @@
   const relabel = () => document.querySelectorAll(".color-map-text").forEach(el => { const t = RENAME[el.textContent.trim()]; if (t) el.textContent = t; });
   new MutationObserver(relabel).observe(document.body, { childList: true, subtree: true, characterData: true });
   relabel();
+
+  // Play through time: step month by month, showing either everything up to that month or that month alone.
+  // Uses the same selection call datamapplot's date histogram makes, under its own name so the two combine.
+  const months = [...new Set(IG.plotted.map(i => String(IG.recs[i][1] || "").slice(0, 7)).filter(m => /^\d{4}-\d{2}$/.test(m)))].sort();
+  const byMonth = new Map(months.map(m => [m, []]));
+  IG.plotted.forEach((rec, point) => { const m = String(IG.recs[rec][1] || "").slice(0, 7); if (byMonth.has(m)) byMonth.get(m).push(point); });
+  const monthName = m => new Date(m + "-15").toLocaleDateString(undefined, { year: "numeric", month: "long" });
+  let step = -1, playing = null, buildUp = true;
+  const el = id => document.getElementById(id);
+  const showStep = () => {
+    const upTo = months.slice(buildUp ? 0 : step, step + 1);
+    const points = upTo.flatMap(m => byMonth.get(m));
+    window.datamap.addSelection(points, "ig-time");
+    el("ig-play-label").textContent = (buildUp ? "Up to " : "") + monthName(months[step]) + ` · ${points.length}`;
+  };
+  const stop = () => { clearInterval(playing); playing = null; el("ig-play-btn").textContent = "▶ Play"; };
+  window.igPlay = function () {
+    if (playing) { stop(); return; }
+    if (!months.length || !window.datamap) return;
+    if (step >= months.length - 1) step = -1;
+    el("ig-play-btn").textContent = "⏸ Pause";
+    const tick = () => { step += 1; showStep(); if (step >= months.length - 1) stop(); };
+    tick();
+    if (playing === null && step < months.length - 1) playing = setInterval(tick, 900);
+  };
+  document.addEventListener("click", e => {
+    if (e.target.closest("#ig-play-btn")) igPlay();
+    else if (e.target.closest("#ig-play-mode")) {
+      buildUp = !buildUp; e.target.closest("#ig-play-mode").textContent = buildUp ? "Building up" : "One month";
+      if (step >= 0) showStep();
+    } else if (e.target.closest("#ig-play-reset")) {
+      stop(); step = -1; window.datamap.removeSelection("ig-time"); el("ig-play-label").textContent = "All dates";
+    }
+  });
 })();

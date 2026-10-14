@@ -66,15 +66,25 @@ MIN_PROMPT_WORDS = 4   # shorter coding-session prompts ("ok", "yes do it") carr
 
 
 def embed(docs, cache):
-    """Embeddings and 2-D layout, cached by the exact documents so a re-run that only changes the page skips the slow part."""
+    """Embeddings and 2-D layout. Embeddings are cached per document, so new documents embed only themselves;
+    the layout is cached by the exact document list, so a re-run that only changes the page skips it too."""
     key = hashlib.sha256("\x1f".join(docs).encode()).hexdigest()
+    ids = np.array([hashlib.sha256(d.encode()).hexdigest()[:24] for d in docs])
+    known = {}
     if cache.exists():
         z = np.load(cache, allow_pickle=False)
         if str(z["key"]) == key:
             return z["emb"], z["xy"]
-    emb = SentenceTransformer("all-MiniLM-L6-v2").encode(docs, batch_size=64, show_progress_bar=False, normalize_embeddings=True)
+        if "ids" in z:
+            known = dict(zip(z["ids"].tolist(), z["emb"]))
+    todo = [i for i, d in enumerate(ids) if d not in known]
+    print(f"embedding {len(todo)} new of {len(docs)} documents", file=sys.stderr, flush=True)
+    if todo:
+        new = SentenceTransformer("all-MiniLM-L6-v2").encode([docs[i] for i in todo], batch_size=64, show_progress_bar=False, normalize_embeddings=True)
+        known.update(zip(ids[todo].tolist(), new))
+    emb = np.stack([known[d] for d in ids])
     xy = umap.UMAP(n_neighbors=30, min_dist=0.15, metric="cosine", random_state=7, low_memory=True).fit_transform(emb)
-    np.savez(cache, key=key, emb=emb, xy=xy)
+    np.savez(cache, key=key, ids=ids, emb=emb, xy=xy)
     return emb, xy
 
 
@@ -116,9 +126,10 @@ def nearest_topic(emb, lab, k=10):
     return shown
 
 
-def page_js(recs, names, paths, kinds, apps, layer_sizes):
+def page_js(recs, names, paths, kinds, apps, layer_sizes, plotted):
     """Data for the side panel, plus the panel, filter-hint and tooltip code from position_topics_page.js."""
-    data = {"names": names, "layerSizes": layer_sizes, "recs": [[r["title"][:160], r["date"], apps[i], kinds[i], r["quote"], r["chat"], paths[i]] for i, r in enumerate(recs)]}
+    data = {"names": names, "layerSizes": layer_sizes, "recs": [[r["title"][:160], r["date"], apps[i], kinds[i], r["quote"], r["chat"], paths[i]] for i, r in enumerate(recs)],
+            "plotted": [int(i) for i in plotted]}   # map point number -> record number, for the time player
     return "const IG = " + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + ";\n" + PAGE.read_text(encoding="utf-8")
 
 
@@ -191,8 +202,12 @@ def main():
                            cat("app", "Which app", app[sel], {k: SOURCE_COLOURS[k] for k in APPS + ["Other"]}),
                            cat("kind", "Kind of statement", kind[sel], KIND_COLOURS)],
         custom_css=PAGE.with_suffix(".css").read_text(encoding="utf-8"),
-        custom_html='<aside id="ig-panel" hidden><button id="ig-close" data-tip="Close this panel">×</button><div id="ig-body"></div></aside><div id="ig-tip" role="tooltip"></div>',
-        custom_js=page_js(recs, names, paths, kind, app, [int(len(set(l.tolist()) - {-1})) for l in reversed(labs)]))
+        custom_html='<aside id="ig-panel" hidden><button id="ig-close" data-tip="Close this panel">×</button><div id="ig-body"></div></aside><div id="ig-tip" role="tooltip"></div>'
+                    '<div id="ig-play"><button id="ig-play-btn" data-tip="Play the map through time: points appear month by month">▶ Play</button>'
+                    '<button id="ig-play-mode" data-tip="Switch between building up (everything so far) and one month at a time">Building up</button>'
+                    '<span id="ig-play-label" data-tip="The month the map is showing">All dates</span>'
+                    '<button id="ig-play-reset" data-tip="Stop playing and show every date again">Show all</button></div>',
+        custom_js=page_js(recs, names, paths, kind, app, [int(len(set(l.tolist()) - {-1})) for l in reversed(labs)], sel))
     plot.save(str(a.out / "index.html"))
     n_lab = [int((l != "Unlabelled").sum()) for l in layers]
     print(json.dumps({"records": len(recs), "plotted": int(keep.sum()), "layers": layer_ids, "events_labelled_per_layer": n_lab, "topics": len(topics)}))
