@@ -14,6 +14,21 @@ llm = ["llm-client @ git+https://github.com/BrianMills2718/llm_client.git@bb882d
 warrant = ["epistemic-warrant @ git+https://github.com/BrianMills2718/epistemic-warrant.git@0f0405b2f8ed75d3f1bdda489ecd5d9e79abed3c"]
 dev = ["pytest>=8,<10", "jsonschema>=4.23,<5", "rank-bm25>=0.2.2,<0.3"]
 
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+    "jsonschema>=4.23,<5",
+    "rank-bm25>=0.2.2,<0.3",
+    "code2check",
+    "import-linter>=2.15",
+]
+
+[tool.uv.sources]
+code2check = { git = "https://github.com/BrianMills2718/code2-template", branch = "main" }
+
+[tool.code2check]
+source = ["src", "tools"]
+
 [project.scripts]
 inquiry-graph = "inquiry_graph.cli:main"
 ig = "inquiry_graph.cli:main"

@@ -9,3 +9,5 @@ dist/
 build/
 .ruff_cache/
 private/
+.import_linter_cache/
+worktrees/

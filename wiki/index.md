@@ -10,10 +10,11 @@ has said, asked and revised across many chats ([README](../README.md)).
 
 ## What it is for and how it works
 
+- [Documentation index](../docs/index.md): reading order for specs, diagram and decisions, then every other record.
 - [Goal and thesis](../docs/architecture/GOAL.md): north star, the bet, what would disprove it, lineage.
-- [Requirements](../docs/requirements.md): REQ-01 to REQ-15, each with success and disproof lines.
+- [Requirements](../docs/requirements.md): REQ-01 to REQ-16 as first written; the OpenSpec specs in the [documentation index](../docs/index.md) now carry them.
 - [Architecture](../docs/model/ARCHITECTURE.md): context, building blocks, runtime with file:line, quality checks.
-- [Checked trace](../docs/model/trace.yaml): each rule's owner file, tests and decision.
+- [Checked trace](../docs/model/trace.yaml): each rule's owner file, tests and decision; superseded by `Implements:` lines and test markers, kept as written.
 - [Decisions](../docs/decisions/index.md): ADR-001 to ADR-006.
 - [Ontology](../docs/ontology.md): the vocabulary of nodes, relations, moves and events.
 

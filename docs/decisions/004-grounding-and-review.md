@@ -6,6 +6,8 @@ description: Decision to require exact source anchors and keep every extracted r
 
 **Status:** accepted for V1.
 
+Source: inferred by agent (design record written during the V1 build; not traced to Brian's words)
+
 Governs: RULE-EXACT-ANCHOR, RULE-ACTIVE-BRANCH, RULE-REVIEW-RESET, RULE-VERBATIM-POSITIONS
 
 **Context.** Well-formed JSON can contain invented citations, wrong source offsets, false endorsements and plausible but unsupported logical relations.

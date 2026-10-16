@@ -6,6 +6,8 @@ description: Decision to model relations and inquiry moves as id-bearing records
 
 **Status:** accepted for V1.
 
+Source: inferred by agent (design record written during the V1 build; not traced to Brian's words)
+
 Governs: RULE-ROLE-SIGNATURE
 
 **Context.** A concept graph loses the difference between “X supports Y” and “we challenged the inference from X to Y, then reformulated the question.” Linked premises, multi-output distinctions and provenance require more than unlabeled binary edges.

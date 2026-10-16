@@ -9,6 +9,8 @@ silently and nothing ungrounded is kept.
 Scope: content nodes, stances, question status and binary relations. Inquiry
 moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off, so the
 default prompt, cache keys and output are unchanged); see `moves_enabled()`.
+
+Implements: extraction/live-output-is-grounded-in-the-source
 """
 import asyncio
 import hashlib

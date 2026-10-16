@@ -45,6 +45,9 @@ def graph_for(path):
     return ingest(conv, reply_field_candidates(conv), method="reply-fields")
 
 
+@pytest.mark.req("sessions/claude-records-keep-typed-text-turns-and-work", existing=True)
+
+
 def test_claude_record_keeps_typed_text_turns_and_work_only(tmp_path):
     conv = parse_session(claude_record(tmp_path))
     assert conv.id == "claude-code:s1"
@@ -56,6 +59,9 @@ def test_claude_record_keeps_typed_text_turns_and_work_only(tmp_path):
     for m, (actor, start) in zip(conv.messages, expected):
         assert m.actor_id == f"participant:{actor}" and m.text.startswith(start)
     assert "1 unreadable record line(s) skipped" in conv.coverage_note
+
+
+@pytest.mark.req("sessions/reply-fields-give-tasks-closures-and-requests", existing=True)
 
 
 def test_reply_fields_give_grounded_tasks_closures_and_requests(tmp_path):
@@ -72,12 +78,18 @@ def test_reply_fields_give_grounded_tasks_closures_and_requests(tmp_path):
     assert next(n for n in g.nodes if n.id == superseded.replacement_id).text == "cluster topics afterwards"
 
 
+@pytest.mark.req("sessions/a-dropped-item-is-unknown-not-open", existing=True)
+
+
 def test_item_missing_from_last_listing_is_unknown_not_open(tmp_path):
     reply2 = REPLY2.replace("Closed: check claude-mem (dropped). ", "")
     p = claude_record(tmp_path)
     p.write_text(p.read_text(encoding="utf-8").replace(json.dumps(REPLY2)[1:-1], json.dumps(reply2)[1:-1]), encoding="utf-8")
     digest = session_digest(graph_for(p))
     assert "check claude-mem" in digest["unknown_status"] and "check claude-mem" not in digest["open"]
+
+
+@pytest.mark.req("sessions/codex-records-are-imported", existing=True)
 
 
 def test_codex_record(tmp_path):
@@ -120,6 +132,7 @@ def test_empty_record_fails_loudly(tmp_path):
     ("codex", {"originator": "codex-tui", "source": "vscode"}, False),
     ("codex", {"originator": "codex_exec", "source": "exec"}, True),
     ("codex", {"originator": "codex-tui", "source": {"subagent": {"thread_spawn": {}}}}, True)])
+@pytest.mark.req("sessions/headless-prompts-are-not-brian-s", existing=True)
 def test_prompts_from_headless_launches_are_not_brians(tmp_path, client, launch, automated):
     if client == "claude":
         rows = [{"type": "user", "sessionId": "s1", "cwd": "/w", "timestamp": "t1",
@@ -140,6 +153,9 @@ def test_prompts_from_headless_launches_are_not_brians(tmp_path, client, launch,
     assert prompt.actor_id == ("participant:automation" if automated else "participant:brian")
     assert [x.id for x in conv.participants][0] == prompt.actor_id
     assert ("headless" in conv.coverage_note) == automated
+
+
+@pytest.mark.req("sessions/position-search-reads-only-brian-s-typed-prompts", existing=True)
 
 
 def test_position_search_reads_only_brians_typed_session_prompts(tmp_path):
