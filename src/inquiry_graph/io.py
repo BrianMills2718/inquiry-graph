@@ -1,4 +1,10 @@
-"""Safe normalization, serialization, exact-identity union and candidate ingestion."""
+"""Safe normalization, serialization, exact-identity union and candidate ingestion.
+
+Implements: import/import-keeps-only-the-visible-active-branch,
+    extraction/extraction-cannot-claim-confirmation,
+    storage/writes-are-atomic-and-exclusive,
+    storage/merge-is-an-exact-union-by-id
+"""
 import hashlib
 import json
 import os

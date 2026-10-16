@@ -16,6 +16,9 @@ def test_seed_valid(graph):
     assert all(x.review_status=='proposed' for x in graph.nodes)
 
 
+@pytest.mark.req("validation/unicode-offsets-anchor-exactly", existing=True)
+
+
 def test_unicode_anchor(graph):
     m=graph.conversations[0].messages[0].model_copy(update={'text':'α😀 z 😀'})
     a=anchor(m,'😀',1)
@@ -34,6 +37,8 @@ def test_unicode_anchor(graph):
     ('resolution','unsupported_resolution'),('replacement','missing_replacement'),
     ('source_order','source_order'),('event_grounding','event_grounding'),
 ])
+@pytest.mark.req("validation/wrong-offsets-quotes-or-sources-fail", existing=True)
+@pytest.mark.req("validation/broken-role-bindings-fail", existing=True)
 def test_negative_invariants(graph,mutation,code):
     if mutation=='offset':graph.nodes[0].anchors[0].end+=1
     elif mutation=='quote':graph.nodes[0].anchors[0].quote='invented'
@@ -71,6 +76,9 @@ def test_dependency_cycle_is_warning(graph):
         bindings=[Binding(role='dependent',ref=n.id),Binding(role='prerequisite',ref=n.id)],anchors=n.anchors))
     r=validate(graph)
     assert r['valid'] and r['warnings'][0]['code']=='dependency_cycle'
+
+
+@pytest.mark.req("validation/a-relation-can-be-challenged", existing=True)
 
 
 def test_relation_can_be_challenged(graph):

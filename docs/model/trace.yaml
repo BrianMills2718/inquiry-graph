@@ -1,3 +1,5 @@
+# SUPERSEDED 2026-10-15 by openspec/specs/ (requirements and scenarios), `Implements:` lines in module
+# docstrings and @pytest.mark.req markers, checked by `code2check trace`. Kept as written, not maintained.
 # Checked trace for Inquiry Graph's system model (prose: ARCHITECTURE.md beside this file).
 # Each rule names one owner file that enforces it, the tests that prove it can fail, and the
 # decision records that say why. Requirements (REQ-xx) are in docs/requirements.md.

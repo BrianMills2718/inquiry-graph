@@ -1,4 +1,7 @@
-"""Generate reviewable artifacts; --check detects drift without overwriting files."""
+"""Generate reviewable artifacts; --check detects drift without overwriting files.
+
+Implements: storage/schemas-come-from-the-model
+"""
 import argparse
 import json
 from pathlib import Path

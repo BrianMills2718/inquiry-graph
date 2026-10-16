@@ -5,6 +5,8 @@ Brian-attributed stance and question events (speaker == actor, quote verbatim in
 records {id, chat, title, date, kind, target, quote}. BM25 retrieves the top records for the question, the model
 answers in structured claims that cite record ids, and code then verifies each cite exists and its quote is verbatim
 in the source message. Output keeps the full evidence table so the answer can be hand-checked.
+
+Implements: positions/position-records-are-verbatim-and-brian-s
 """
 import argparse
 import asyncio
