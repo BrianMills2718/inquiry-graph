@@ -65,3 +65,52 @@ This captures only selected conceptual turns from a live chat on 2026-10-16, not
 **Open methodological issue:** encoding that obscures clues can introduce artificial opacity. Require practical domain meaning and an expert-reasonable solution path before promoting an instance as a benchmark. Do not conflate empirical brittleness with proven fundamental architecture limits.
 
 **User intent anchor:** Brian, 2026-10-16: "the other thing I wanted to talk about is kind of AI failure modes, and those that might be relevant to Terminal Bench".
+
+## Continuation: from general failure modes to Languages benchmark research (2026-10-16)
+
+**Source:** Brian, 2026-10-16: "this meta strategy of looking at other benchnarks for failing tess eesm very good"
+**Source:** Brian, 2026-10-16: "ok so lets find benchamrks that arent saturated related to the language task"
+**Source:** Brian, 2026-10-16: "ok how shouold i move forward. at some point we probably need to swithc to cdoex or claude cdoe"
+
+### Change in research focus
+
+- The proposed first task domain is **Coding/Systems → Languages**, with the central candidate **reverse-engineering and reimplementing interpreter behavior**. The user supplied domain-classification guidance, not a full task specification. The narrower primary expertise is interpreters, runtimes, program analysis and semantic equivalence—not cryptography despite shared programming tools.
+- The discussion explored **goal/prerequisite discovery** (car-wash example) and **representation selection** (force versus energy formulations). A proposed joint task over-complicated objectives; Brian correctly objected when the supposed implicit goal had been explicitly given. Working constraint: output objectives must be unambiguous; difficulty may lie in deriving necessary semantics, prerequisites, or methods, never guessing omitted preferences.
+- Existing repositories were treated as *conceptual donors*, not candidate benchmarks: Observation-to-Action (goal/method fit, projections/loss, inference licences); World Substrate (installed executable mechanics, bounded observation, deterministic consequence); Cybernetic Influence V3 (coordinated dynamics, feedback, and counterfactual conditions). Their coherence/simulation checks are not independent real-world truth oracles.
+- **Benchmark failure mining** became the preferred meta-strategy: inspect unsaturated benchmarks, ideally individual traces, isolate the technical failure mechanism, assess transfer to the Languages category, and only then test original research instances.
+
+### Benchmarks prioritized for further inspection
+
+- **ProgramBench:** black-box program reconstruction and behavioral fidelity. Reported low full-solve rate suggests a semantic-completeness gap; investigate tasks and full traces rather than concluding that every interpreter reconstruction is difficult. https://programbench.com/
+- **PeepholeBench:** optimization repairs can pass local cases while violating semantics on nearby inputs, making generalization and invariants promising failure mechanisms. https://cs.uwaterloo.ca/~cnsun/public/preprint/peepholebench/
+- **LLVM-specific debugging (llvm-bench / llvm-autofix):** domain-specific invariants and root-cause discovery warrant investigation; strong harnesses may reduce difficulty. https://arxiv.org/abs/2603.20075
+- **SRE-Bench:** adjacent reverse-engineering precedent, but evolving model performance means a historic low score alone cannot establish current unsaturation. https://daplab.cs.columbia.edu/projects/sre-bench/
+
+**Working ranking:** (1) semantic interactions/generalization, (2) compiler/runtime invariant preservation, (3) broader black-box reconstruction. This is an analytical prioritization, not an established ranking of verified model failures.
+
+### Submission constraints learned from provided guidance
+
+The user supplied attempter, reviewer, and media onboarding PDFs. These emphasize genuine professional difficulty; Linux-terminal solvability; independent, outcome-based deterministic grading; complete, step-by-step golden solutions; clear and reproducible inputs; acceptable licensing with third-party disclosure; and multiple frontier-agent failures. The attempter instructions explicitly prohibit LLM-written or substantially rewritten submitted task prompts. This document therefore records *research deliberation only*, not task submission material.
+
+**Implications:**
+- A compiler toy exercise or intentionally obscure mini-language could be rejected as too easy, contrived, or underspecified.
+- Source/binary leakage and grading contamination are hazards in black-box cloning evaluations.
+- A correct reference interpreter supports differential testing, but sampled tests cannot logically establish full equivalence over unbounded inputs without an additional argument.
+- Multiple agent trials under comparable environments are required before claiming robustness or difficulty.
+- Golden solution is not a single correct output: it must explain an implementable, reproducible solution path. Verifiers should check only requested final outcomes, not force the chosen method.
+
+### Decision and next work
+
+**Proposed next action:** Move to a research-only Claude Code or Codex investigation, with the initial deliverable an evidence report (specific failed attempts, concrete failure mechanisms, reproducibility, fairness, licensing, and likely implementation scope). Only then consider an isolated differential-testing harness for interpreter semantics, with known reference implementation, clean solver environments, controlled budgets, and retained traces.
+
+Do **not** treat this as approval to produce an Outlier submission prompt with AI. Do not commit the contents of private guideline PDFs or a full transcript into the public repo without a disclosure review.
+
+### Outstanding questions
+
+1. Which public benchmark failure traces are accessible, and what do they actually establish?
+2. Do strong terminal-equipped models still fail after iterative probing, adequate time, and access to ordinary tools?
+3. Can a task demand advanced language-engineering expertise while remaining solvable by a human expert within the prescribed scope?
+4. Can semantic-equivalence grading avoid false rejections while preventing executable leakage and overfitting to fixed tests?
+5. Are exploratory findings strong enough to warrant a separate private research repository and controlled agent runs?
+
+**Coverage note:** Curated summary of visible chat plus user-provided policy documents, not a full source-excerpt capture, independently reviewed graph, or source-anchored ontology update.
