@@ -42,3 +42,26 @@ This is *not* a claim that computational one-wayness alone predicts model failur
 ## Coverage and next capture step
 
 This captures only selected conceptual turns from a live chat on 2026-10-16, not a normalized source-excerpt file or a schema-validated graph. Exact source quotations are limited to the two statements above. Before treating it as a source-grounded fixture, import/review the original chat text, identify precise source anchors, build a graph using the existing extraction and validation workflow, and record representation-fit friction separately. Do not automatically promote proposed claims into repository requirements or ontology changes.
+
+## Research continuation: representation discovery and search failure
+
+**Status:** Hypotheses supported by benchmark-level evidence, not architectural impossibility theorems.
+
+- **Equivalent reformulation sensitivity:** PutnamGAP (Hao, Wan & Zhai, 2025) reports accuracy degradation on mathematically equivalent surface and core-step variants across 18 models. This motivates testing representation dependence while preserving semantics. https://arxiv.org/abs/2508.08833
+- **Inapplicable familiar methods:** MATH-Perturb (Huang et al., ICML 2025) reports deterioration after hard perturbations that invalidate familiar solution steps; authors warn about applying memorized methods without checking applicability. https://proceedings.mlr.press/v267/huang25k.html
+- **Formally generated planning challenges:** ACPBench (Kokel et al., AAAI 2025) generates instances with provably correct solutions from formal planning domains and finds persistent model gaps. This demonstrates scalable instance-generation plus external certification, though it does not itself establish Terminal Bench fitness. https://ojs.aaai.org/index.php/AAAI/article/view/34857
+- **Long-horizon agent limits:** Albayaydh, Zhao & Flechais (2026) synthesize 27 papers and identify planning/constraint failures and long-horizon degradation among several clusters. https://arxiv.org/abs/2607.05775
+
+### Candidate experiment: latent representation recovery
+
+1. Generate a domain-meaningful instance from a compact latent structure with a known, independently verified witness.
+2. Express the same objective in multiple genuinely equivalent encodings, with explicit encoding/decoding checks.
+3. Withhold the latent representation and witness from the solving agent, but retain them for validation.
+4. Compare agent success and search trajectories across encodings at controlled compute/time budgets.
+5. Check every proposed solution against the original semantics, not mere resemblance to the stored witness.
+
+**Falsification criteria:** agents succeed comparably across representations; a trivial general-purpose solver handles every variant; transformations inadvertently change the problem; failures are due to unclear instructions or tool setup.
+
+**Open methodological issue:** encoding that obscures clues can introduce artificial opacity. Require practical domain meaning and an expert-reasonable solution path before promoting an instance as a benchmark. Do not conflate empirical brittleness with proven fundamental architecture limits.
+
+**User intent anchor:** Brian, 2026-10-16: "the other thing I wanted to talk about is kind of AI failure modes, and those that might be relevant to Terminal Bench".
