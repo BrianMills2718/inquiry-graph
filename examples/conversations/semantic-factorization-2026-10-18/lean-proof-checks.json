@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "semantic-factorization-lean-checks-2026-10-18",
+  "date": "2026-10-18",
+  "interface": {
+    "url": "https://academy.lean4.dev/playground",
+    "interaction": "Submitted through the public playground's editor and Run button using a real browser session.",
+    "http_status": 200,
+    "reported_result": "Compiled without errors.",
+    "elapsed": "1.5 s",
+    "lean_version": "Lean 4.30.0",
+    "library": "core library; mathlib not installed",
+    "run_timeout_seconds": 15
+  },
+  "source_file": "lean-proof-checks.lean",
+  "source_has_sorry_or_admit": false,
+  "declarations": [
+    {
+      "name": "nat_add_zero",
+      "statement": "For every n : Nat, n + 0 = n.",
+      "tactic": "simp",
+      "result": "checked",
+      "printed_proof_term": "fun n => of_eq_true (eq_self n)",
+      "interpretation": "Lean accepted a proof term for the arithmetic identity in Nat."
+    },
+    {
+      "name": "identity_age_mapping_preserves_nonneg",
+      "statement": "For Int source and dest, if 0 ≤ source and dest = source, then 0 ≤ dest.",
+      "tactic": "omega",
+      "result": "checked",
+      "printed_proof_term": "fun source dest hSource hMap => Decidable.byContradiction ...",
+      "interpretation": "Lean checked the nonnegative-age invariant for the explicit identity mapping contract."
+    },
+    {
+      "name": "exact_days_to_years",
+      "statement": "For every years : Nat, (365 * years) / 365 = years.",
+      "tactic": "omega",
+      "result": "checked",
+      "printed_proof_term": "fun years => Decidable.byContradiction ...",
+      "interpretation": "Lean checked exact integer arithmetic for day counts of the form 365 * years with Nat division."
+    },
+    {
+      "name": "naive_units_counterexample",
+      "statement": "There exist positive integer years and a day count equal to 365 * years such that the day count does not equal the year count.",
+      "witness": {
+        "years": 1,
+        "days": 365
+      },
+      "tactic": "decide",
+      "result": "checked",
+      "printed_proof_term": "Exists.intro 1 (Exists.intro 365 ...)",
+      "interpretation": "Lean checked a concrete witness demonstrating that copying a day count directly into a years field is unsound."
+    }
+  ],
+  "limits": [
+    "This is a formalization checked by Lean's online compiler/kernel workflow using Lean core, not a MMT-native proof and not a test of DOL, MMT, SysML v2/KerML, Modelica, or FMI.",
+    "The identity-age theorem formalizes a small contract, not a general translation between independently specified formalisms.",
+    "The day/year theorem assumes exact whole-year day counts of 365 * years and Nat integer division. It does not model leap years, calendar conventions, uncertainty, or observational age inference.",
+    "A checked theorem about one fixture does not show a canonical, minimal, complete, or MECE factorization of all representations.",
+    "The public browser playground was used through its ordinary user interface. No backend trial/API gate was bypassed."
+  ]
+}
