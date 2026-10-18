@@ -33,7 +33,7 @@ def test_convert_accepts_open_task_and_preserves_speaker():
         "question_events": [{
             "speaker": "assistant", "question": "comparison", "status": "open",
             "message": 2, "quote": progress.text}],
-        "stances": []
+        "stances": [{"speaker": "user", "target": "comparison", "stance": "endorses",\n                     "message": 1, "quote": request.text}]
     })
     drops = Counter()
     candidates = convert(conv, 0, out, drops)
@@ -51,4 +51,4 @@ def test_convert_accepts_open_task_and_preserves_speaker():
     assert len(agenda) == 1
     assert agenda[0]["status"] == "open"
     assert "five-case comparison" in agenda[0]["text"]
-    assert not drops
+    assert drops["task_is_not_stance"] == 1\n    assert sum(drops.values()) == 1
