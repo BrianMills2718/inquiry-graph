@@ -291,3 +291,18 @@ Therefore **no consistency or satisfiability result was obtained**. This is a li
 ### Revised next step
 
 The most important uncompleted DOL test is now precise: run a custom pair of OMS plus an explicit mapping and **obtain a working checker result** for a stated semantic obligation. The current hosted service's consistency checker is unavailable for this attempt, so the next route is either another supported Hets/Ontohub environment with checkers configured or a local Hets deployment. After that, run an actual dynamic model in Modelica/FMI or SysML v2. Do not infer successful formal verification from a development graph alone.
+
+
+## 16. Automatic-proof route in DOLiator (executed 2026-10-18)
+
+I also opened the public DOLiator **Tools → automatic proofs** interface, selected **E Prover** and the \`OWL22CASL:CASL2TPTP_FOF\` translation, set a 10-second timeout per goal, left “include Theorems” enabled, and submitted via the normal **Prove** button.
+
+The service returned:
+
+\`\`\`
+nothing to prove
+\`\`\`
+
+No goal was generated for this example in that workflow. This is **neither a proof success nor a proof failure** because no proposition was checked. It corroborates the boundary noted above: this built-in sample demonstrates parser/development-graph construction, but it does not provide a checked preservation theorem. The service's consistency action separately returned \`no cons checker found\`.
+
+The exact interaction and temporary output URL are recorded in [dol-tool-checks.json](dol-tool-checks.json). To obtain formal verification evidence, the next test must include a real proof goal/view obligation in a supported DOL case and use a Hets environment with a working checker.
