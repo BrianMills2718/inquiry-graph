@@ -274,7 +274,7 @@
       "id": "semantic-factorization-2026-10-18:terminal:source-slices",
       "title": "Terminal visible assistant response, two source excerpts (2026-10-18 17:12:27 local)",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Two separate verbatim spans from ONE final visible assistant response in the user-provided ChatGPT Exporter Markdown. Local ordinals order excerpts within that reply; they are NOT new conversation turns, original message IDs, or a complete transcript. Export last updated 17:48:04 and created 17:49:13 local. The rest of the graph includes later post-export research records that must not be included in cutoff-scoped reader tests.",
+      "coverage_note": "Two separate verbatim spans from ONE final visible assistant response in the user-provided ChatGPT Exporter Markdown. Local ordinals order excerpts within that reply; they are NOT new conversation turns, original message IDs, or a complete transcript. The conversation was updated at 17:48:04 and the Markdown exported at 17:49:13 local. The rest of the graph includes later post-export research records that must not be included in cutoff-scoped reader tests.",
       "participants": [
         {
           "id": "participant:assistant",
