@@ -275,6 +275,14 @@
           "text": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a19",
+          "actor_id": "participant:assistant",
+          "ordinal": 33,
+          "text": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -1401,6 +1409,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Run a custom DOL example with two OMS and an explicit mapping in a Hets/Ontohub environment that has a working consistency or proof checker, then record a concrete preservation/coherence result; next run a native dynamic model."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-doliator-no-proof-goals",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The Hets DOLiator automatic-proof action, submitted via the normal public UI with E Prover and OWL22CASL:CASL2TPTP_FOF, returned `nothing to prove`; no proof goal was checked."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-doliator-tool-checkers-unavailable",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "For the tested public DOLiator example, the consistency action returned `no cons checker found` and the automatic-proof action returned `nothing to prove`; neither action produced a consistency or proof result."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-working-dol-proof",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Construct a DOL example with a real view/proof obligation and run it in a Hets environment that has an appropriate checker configured; record the proof/consistency output and the exact guarantee."
     }
   ],
   "relations": [
@@ -2825,6 +2878,78 @@
           "ref": "semantic-factorization-2026-10-18:n:goal-working-dol-checker"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:autoproof-result-recorded",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-doliator-no-proof-goals"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-hets-doliator-run"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:no-proof-result-is-not-verification",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-doliator-tool-checkers-unavailable"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-dol-translation-vs-proof"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:working-dol-proof-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:claim-doliator-no-proof-goals"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-working-dol-proof"
+        }
+      ]
     }
   ],
   "moves": [
@@ -3492,6 +3617,35 @@
         "semantic-factorization-2026-10-18:m:23"
       ],
       "inference_family": "deduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:25",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a19",
+          "start": 0,
+          "end": 662,
+          "quote": "I also ran the Hets DOLiator automatic-proof route through its public UI, selecting E Prover and OWL22CASL:CASL2TPTP_FOF, setting a 10-second per-goal timeout, and submitting via Prove with theorem inclusion enabled. The service returned “nothing to prove”. This is neither proof success nor proof failure: no goal was checked. Together with the consistency route's “no cons checker found”, the sample supplies actual parser/translation-graph evidence but no consistency, satisfiability, conservativity, or semantic-preservation result. The durable run record is dol-tool-checks.json. A custom DOL view/proof obligation in a working Hets checker is still needed."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-hets-doliator-run",
+        "semantic-factorization-2026-10-18:n:goal-working-dol-checker"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:claim-doliator-no-proof-goals",
+        "semantic-factorization-2026-10-18:n:claim-doliator-tool-checkers-unavailable",
+        "semantic-factorization-2026-10-18:n:goal-working-dol-proof"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a19",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:24"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -3627,11 +3781,11 @@
     "The reusable prior-art-first research protocol is stored in research-protocol.md; it combines established components but is not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
     "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, Python oracle checks, Z3 solver checks, Lean-checked propositions, local FOL prototype tests, and an actual Hets DOLiator parse/translation smoke test.",
-    "solver-checks.json records Z3 5.3.1.0 results: arithmetic counterexample query, identity mapping and exact integer conversion violation queries were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
-    "lean-proof-checks.lean/json record four propositions checked by the public Lean 4.30.0 core-library playground, with no unfinished proof placeholders in the source declarations.",
+    "solver-checks.json records Z3 5.3.1.0 results: arithmetic counterexample query, identity mapping and exact integer conversion violation queries were UNSAT; wrong-units negative control was SAT (years=1, days=365).",
+    "lean-proof-checks.lean/json record four propositions checked by the public Lean 4.30.0 core-library playground, with no unfinished proof placeholders in source declarations.",
     "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation.",
-    "dol-translation-smoketest.dol and dol-tool-checks.json record a real browser UI run of Hets DOLiator: 3-node, 2-edge OWL-to-Common-Logic development graph generated, but consistency checking returned `no cons checker found` for both combined and OWL-only attempts; no consistency or semantic-preservation result exists.",
-    "No actual custom DOL preservation proof, MMT-native formalization, or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: obtain a working formal checker for a custom DOL mapping and run a dynamic model.",
+    "dol-translation-smoketest.dol and dol-tool-checks.json record a real Hets DOLiator run: 3-node, 2-edge OWL-to-Common-Logic graph via OWL22CommonLogic. Consistency checking returned `no cons checker found`; automatic proof with E Prover/TPTP returned `nothing to prove`, so no logical proof or consistency verdict was obtained.",
+    "No actual custom DOL preservation proof or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: a custom DOL view/proof obligation in a working Hets checker and a native dynamic-model run.",
     "No universal canonical/MECE factorization or novel contribution has been established; compare actual evidence to requirements R01-R18 before writing a residual-gap statement.",
     "The user explicitly authorized autonomous progress and merging when judged fit; prior PRs were merged only after graph validation and successful CI."
   ]
