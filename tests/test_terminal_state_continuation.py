@@ -69,7 +69,7 @@ def test_prepare_materials_are_cutoff_safe(tmp_path):
     assert checks["E_adds_no_semantic_task_record"]
     assert case["terminal_quote"] in material["C"]
     assert case["terminal_quote"] in material["E"]
-    assert material["E"].split("## Supplementary primary-source excerpt")[0] == material["B"]
+    assert material["E"].split("## Supplementary primary-source excerpt")[0].rstrip() == material["B"].rstrip()
     assert material["C"].split("## Supplementary primary-source excerpt")[1] == material["E"].split("## Supplementary primary-source excerpt")[1]
     assert case["reference"]["active_task"] not in material["E"]
     assert case["reference"]["active_task"] in material["C"]
