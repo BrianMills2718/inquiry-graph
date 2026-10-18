@@ -6,7 +6,7 @@
       "id": "semantic-factorization-2026-10-18:conversation",
       "title": "Canonical factorization of semantic representations: ontology, grounding, and executable models",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated, verbatim excerpts from the visible conversation on 2026-10-18. This is an inquiry map, not a native ChatGPT export or a complete transcript. Intervening wording is omitted; each stored message is an exact selected excerpt. All semantic annotations are proposed and require review.",
+      "coverage_note": "Curated, verbatim excerpts from the visible conversation on 2026-10-18, plus a concise assistant research-summary message from the follow-up investigation. This is not a native ChatGPT export or complete transcript. Intervening wording is omitted; semantic annotations remain proposed.",
       "participants": [
         {
           "id": "participant:user",
@@ -177,6 +177,14 @@
           "actor_id": "participant:user",
           "ordinal": 20,
           "text": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a10",
+          "actor_id": "participant:assistant",
+          "ordinal": 21,
+          "text": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding.",
           "original_id": null,
           "timestamp": null
         }
@@ -483,6 +491,96 @@
       "review_status": "proposed",
       "kind": "concept",
       "text": "Category theory may help formalize composition and mappings; database theory may help formalize schemas, instances, constraints, and mappings. Their relevance is a research hypothesis, not a settled answer."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-dol",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Distributed Ontology, Model, and Specification Language (DOL), an OMG standard for formally expressing and mapping heterogeneous ontologies, models, and specifications."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mmt",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "MMT, a foundation-independent meta-framework for formal languages and knowledge, with modular language features and theory morphisms."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-institutions",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Institution theory, which abstracts logical systems as signatures, sentences, models, satisfaction, and translations preserving satisfaction."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mde",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Model-driven engineering (MDE), which relates systems, models, metamodels, modeling languages, transformations, platforms, and generated or executable software."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-top-level-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Top-level ontologies such as GFO and BFO formalize general categories of entities in reality; this differs from a meta-framework for representing and translating heterogeneous formal systems."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-reframed-scope",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The intended problem may be better framed as a compositional meta-framework for heterogeneous representations, with formal mappings and optional operational semantics, rather than a single linear semantic spectrum."
     }
   ],
   "relations": [
@@ -771,6 +869,150 @@
         {
           "role": "effect",
           "ref": "semantic-factorization-2026-10-18:n:goal-capture-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:dol-direct-match",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-dol"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mmt-meta-framework",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-mmt"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:institutions-logical-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-institutions"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mde-execution-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-mde"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:top-level-ontology-distinction",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-top-level-ontology"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:reframing-refines-original",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframes",
+      "bindings": [
+        {
+          "role": "old",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "new",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
     }
@@ -1115,6 +1357,36 @@
         "semantic-factorization-2026-10-18:m:12"
       ],
       "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:14",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-reframed-scope"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a10",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:13"
+      ],
+      "inference_family": "abduction"
     }
   ],
   "stance_events": [],
@@ -1201,8 +1473,13 @@
       "status": "reopened",
       "actor_id": "participant:user",
       "at_message_id": "semantic-factorization-2026-10-18:u10",
-      "answer_ids": [],
-      "resolution_basis": "The request to investigate existing work remains active and is the next task.",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde"
+      ],
+      "resolution_basis": "A targeted prior-art investigation found strong precedents (DOL, MMT, institution theory, MDE), but whether any framework supplies a universal MECE factorization remains unverified.",
       "replacement_id": null
     }
   ],
