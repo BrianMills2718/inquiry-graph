@@ -40,7 +40,7 @@ def test_convert_accepts_open_task_and_preserves_speaker():
     candidates = convert(conv, 0, out, drops)
     graph = Graph(id="task-state-test", conversations=[conv],
                   nodes=candidates.nodes, question_events=candidates.question_events,
-                  stance_events=[])
+                  stance_events=candidates.stance_events)
     # Only the assistant reported active work; no user belief or endorsement is inferred.
     assert not graph.stance_events
     assert len(graph.nodes) == 1
@@ -52,4 +52,5 @@ def test_convert_accepts_open_task_and_preserves_speaker():
     assert len(agenda) == 1
     assert agenda[0]["status"] == "open"
     assert "five-case comparison" in agenda[0]["text"]
-    assert drops["task_is_not_stance"] == 1\n    assert sum(drops.values()) == 1
+    assert drops["task_is_not_stance"] == 1
+    assert sum(drops.values()) == 1
