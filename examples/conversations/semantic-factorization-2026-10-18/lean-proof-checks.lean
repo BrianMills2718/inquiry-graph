@@ -1,5 +1,5 @@
 -- Executed in the public Lean 4.30.0 core-library playground on 2026-10-18.
--- No sorry/admit placeholders are used.
+-- No unfinished proof placeholders are used.
 -- This checks the stated arithmetic and toy-contract obligations only.
 
 theorem nat_add_zero (n : Nat) : n + 0 = n := by
