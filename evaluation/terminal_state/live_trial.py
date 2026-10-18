@@ -100,9 +100,11 @@ def terminal_detection(graph: Graph, final_message: Message) -> dict:
         and e.actor_id == final_message.actor_id
         and e.at_message_id == final_message.id
     ]
+    open_task_ids = {e.question_id for e in open_status}
     matching = [
         n for n in sourced_tasks
-        if any(x in n.text.lower() for x in ("framework", "comparison", "scenario"))
+        if n.id in open_task_ids
+        and any(x in n.text.lower() for x in ("framework", "comparison", "scenario"))
     ]
     return {
         "terminal_source_message_id": final_message.id,
