@@ -7,8 +7,9 @@ removed and counted by reason in the returned report; nothing is dropped
 silently and nothing ungrounded is kept.
 
 Scope: content nodes, stances, question status and binary relations. Inquiry
-moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off, so the
-default prompt, cache keys and output are unchanged); see `moves_enabled()`.
+moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off).
+Prompt versions intentionally change to invalidate old cached replies when terminal task
+capture is enabled; see `moves_enabled()`.
 
 Implements: extraction/live-output-is-grounded-in-the-source
 """
@@ -27,8 +28,8 @@ from .model import (Anchor, Binding, Candidates, Conversation, Graph, Extraction
                     Relation, StanceEvent, SIGNATURES, NodeKind, RelationKind, MoveKind, Move, anchor)
 from .validate import validate
 
-PROMPT_VERSION = "live-2.2.0"
-MOVES_PROMPT_VERSION = "live-2.3.0-moves"   # distinct so cached chunk replies never mix with the no-moves prompt
+PROMPT_VERSION = "live-2.2.1-tasks"
+MOVES_PROMPT_VERSION = "live-2.3.1-moves-tasks"   # distinct so cached chunk replies never mix with the no-moves prompt
 
 
 def moves_enabled() -> bool:
@@ -147,7 +148,7 @@ class LStance(BaseModel):
 
 class LQuestionEvent(BaseModel):
     speaker: Speaker
-    question: str = Field(description="node key of a question node")
+    question: str = Field(description="node key of a question or task node")
     status: Literal["open", "answered", "resolved", "deferred", "superseded", "reopened"]
     message: int
     quote: str
@@ -229,7 +230,9 @@ Rules:
 - A question being answered is not resolved. Use 'resolved' only with answers or a basis.
 - Relation first/second roles follow these signatures: {signatures}
 - A tentative assertion followed by a request for feedback is 'posits', not 'questions'.
-- Greetings, small talk, scheduling and meeting logistics are not inquiry content.
+- Greetings, small talk and routine scheduling logistics are not inquiry content. Substantive
+  action items with identifiable unfinished work are task nodes, not beliefs or stances.
+  Record an open task status event attributed to the speaker reporting the active assignment.
 - The target of a stance must be the thing the quote is about, not a nearby node.
 - Do not invent content that is not in the messages. Prefer fewer, well-grounded items.
 """
@@ -252,8 +255,12 @@ Rules:
 - Relation first/second roles follow these signatures: {signatures}
 - A tentative assertion followed by a request for feedback ("I think X... what do you think?") is
   'posits', not 'questions'. Use 'questions' only when the speaker doubts or asks about the target.
-- Work instructions to the assistant (write/update a document, review the work, run research,
-  proceed, prepare a handoff) are not inquiry content: record no node or stance for them.
+- Separate epistemic positions from operational continuity: substantive instructions or reports of
+  unfinished research, writing, review or validation are task nodes, not claims about {user}'s beliefs.
+  Preserve the specific active task near the conversation end, its deliverable and what remains
+  unverified. Mark explicitly unfinished tasks with an open status event attributed to the speaker.
+  Do not invent completion from progress summaries or later work. Bare acknowledgements and
+  approvals are not substantive tasks or endorsements.
 - Procedural approvals ("proceed", "I approve", "do that") are not positions. Record an
   'endorses' stance only when the speaker endorses a substantive claim, and target that claim.
 - The target of a stance must be the thing the quote is about, not a nearby node.
@@ -369,6 +376,10 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
         if s.target not in nodes:
             drops["stance_target_missing"] += 1
             continue
+        if nodes[s.target].kind in ("task", "work"):
+            # Operational directives and deliverables are never attributed beliefs.
+            drops["task_is_not_stance"] += 1
+            continue
         msg, a = ground(s.message, s.quote, need_speaker=s.speaker)
         if a is None:
             continue
@@ -376,7 +387,7 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
                                            target_id=nodes[s.target].id, stance=s.stance,
                                            at_message_id=msg.id, anchors=[a]))
     for i, q in enumerate(out.question_events):
-        if q.question not in nodes or nodes[q.question].kind != "question":
+        if q.question not in nodes or nodes[q.question].kind not in ("question", "task"):
             drops["question_target_missing"] += 1
             continue
         msg, a = ground(q.message, q.quote, need_speaker=q.speaker)

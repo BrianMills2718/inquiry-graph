@@ -76,8 +76,8 @@ def test_prune_removes_move_whose_node_was_pruned(graph):
 
 def test_default_off(monkeypatch):
     monkeypatch.delenv("INQUIRY_EXTRACT_MOVES", raising=False)
-    assert not le.moves_enabled() and le.prompt_version() == le.PROMPT_VERSION == "live-2.2.0"
+    assert not le.moves_enabled() and le.prompt_version() == le.PROMPT_VERSION == "live-2.2.1-tasks"
     assert "moves" not in LChunk.model_json_schema()["properties"]
     monkeypatch.setenv("INQUIRY_EXTRACT_MOVES", "1")
-    assert le.moves_enabled() and le.prompt_version() == "live-2.3.0-moves"
+    assert le.moves_enabled() and le.prompt_version() == "live-2.3.1-moves-tasks"
     assert "moves" in LChunkM.model_json_schema()["properties"]
