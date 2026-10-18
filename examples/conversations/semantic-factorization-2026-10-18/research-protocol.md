@@ -177,15 +177,31 @@ Keep inferred relationships marked as inferred/proposed until reviewed. A conver
 
 ## Applying this protocol to the current inquiry
 
-The current prior-art file is a **targeted investigation**, not a systematic mapping study. DOL, MMT, institution theory, MDE, ologs, top-level ontologies, and universal logic are initial candidates, not a closed candidate set.
+The initial stages have now been carried out provisionally:
 
-Recommended next research action:
-1. Freeze the goal and requirements above provisionally.
-2. Run a systematic mapping search focused on *conceptual framework analysis*, *cross-disciplinary theory integration*, *meta-frameworks for formal systems*, *model integration*, *systematic mapping study*, and *requirements traceability*.
-3. Then search the representation-specific landscape more broadly, using DOL/MMT/institutions as seed references.
-4. Fill evidence-backed candidate × requirement entries.
-5. Compare the strongest candidates against the five cases.
-6. Only then decide whether any genuine representational factorization gap remains.
+1. **Goal and requirements:** preserved as provisional requirements R01–R18; none are presumed independent or MECE.
+2. **First-pass mapping:** `systematic-mapping.md` records a cross-disciplinary search and primary-source references. This is explicitly a bounded first pass, not a completed database-wide systematic mapping study.
+3. **Scenario-based analysis:** `scenario-evaluation.md` defines five operational test fixtures and evaluates the documented scope of DOL, MMT, institution theory, SysML v2/KerML, Modelica/FMI, ologs, SKOS/OWL/SOSA/SSN/PROV-O, and OAEI.
+4. **Comparison matrix:** `comparison-matrix.md` records the added candidate families and the cross-case synthesis, with unknown/partial/composition boundaries kept distinct from proven absence.
+5. **Inquiry Graph:** new findings and the unresolved hypothesis are captured in `graph.json`; source anchors and graph references were validated.
+
+### Current conclusion
+
+The reviewed sources show strong existing frameworks for distinct obligations, but no single candidate examined so far documents native coverage of formal proof, executable dynamics, empirical observation/grounding, and semantics-preserving translation across all five cases. This is not yet a demonstrated novelty gap. The assessment is based on source-level capability review; the candidate tools have not been run against the fixtures.
+
+The strongest current candidate composition is conditional, not mandatory: DOL for heterogeneous formal OMS and mappings; MMT where formal languages, theories, proofs and cross-foundation modularity matter; institution theory for abstract logic/semantic-preservation reasoning; Modelica/FMI for dynamic execution; SysML v2/KerML for systems-engineering structure/behavior; SKOS or OWL for conceptual classification; SOSA/SSN for observation artifacts; and PROV-O for provenance. OAEI is relevant for benchmarking ontology matching, not as a general semantics-preserving translation framework.
+
+### Next research action
+
+Prioritize implementation evidence before further expanding the feature matrix:
+
+1. Run the arithmetic-theorem fixture in an MMT-backed or suitable proof-assistant workflow; record the logic, formal statement, proof/checker, and result.
+2. Run the oscillator fixture in Modelica/FMI tooling and compare with the analytic oracle; preserve solver/settings and the run artifact.
+3. Encode the Rule 30 case in one executable behavior model and test boundary conditions, synchronous update, and the specified trace.
+4. Create a minimal pair of formal OMS and mapping for DOL; check precisely which coherence/preservation obligations the tool supports.
+5. Record whether tool-specific boundaries confirm or refute the source-based ratings. Only then write a requirement-specific residual-gap statement.
+
+In parallel, continue backward/forward citation chaining for DOL/MMT and for any candidate composition or meta-framework cited by the primary sources. Do not make a “no one has done this” claim from the current search.
 
 ## Methodological starting points
 
