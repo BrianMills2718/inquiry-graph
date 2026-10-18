@@ -219,6 +219,22 @@
           "text": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u13",
+          "actor_id": "participant:user",
+          "ordinal": 26,
+          "text": "proceed and merge prs whenever as you see fit. you have full autonomy",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a13",
+          "actor_id": "participant:assistant",
+          "ordinal": 27,
+          "text": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -835,6 +851,141 @@
       "review_status": "proposed",
       "kind": "concept",
       "text": "A web-search first-pass map can identify close candidates and research clusters, but without reproducible database-wide retrieval, screening, and citation chaining it is not a completed systematic mapping study and cannot support a proof of nonexistence."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 263,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "DOL formally connects heterogeneous ontologies, models, specifications, and mappings without requiring one universal language."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 264,
+          "end": 331,
+          "quote": "MMT is a broader meta-framework for formal languages and knowledge;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "MMT is a broad meta-framework for foundation-independent representation of formal languages and knowledge."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-institution-logical-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 332,
+          "end": 423,
+          "quote": "institution theory formalizes signatures, sentences, models, satisfaction, and translation;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Institution theory formalizes signatures, sentences, models, satisfaction, and translation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 424,
+          "end": 488,
+          "quote": "model-driven engineering addresses model-to-execution pipelines."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Model-driven engineering addresses a model-to-execution pipeline."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "scenario-evaluation.md records five synthetic cases and source-based capability judgments; no candidate tool was run, so implementation conformance remains unknown."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The source-based five-case evaluation found no single inspected candidate with documented native coverage of proof, executable dynamics, empirical grounding, and cross-formalism preservation across all cases; this supports trying a composition but does not prove a novelty gap."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-composition-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A small composition of existing frameworks, connected by explicit mapping, preservation, execution, observation, and provenance contracts, may meet the target better than one universal representational language; tool-level tests remain necessary."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-tool-level-validation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Run the five representative fixtures in suitable existing tools and record actual results, unsupported obligations, and semantic-preservation checks before making a novelty claim."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-authorized-pr-merge",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u13",
+          "start": 0,
+          "end": 69,
+          "quote": "proceed and merge prs whenever as you see fit. you have full autonomy"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "The user authorized autonomous progress and merging pull requests when the assistant judges the changes ready; merging remains contingent on repository validation and CI."
     }
   ],
   "relations": [
@@ -853,11 +1004,11 @@
       "kind": "distinguishes",
       "bindings": [
         {
-          "role": "taxonomy",
+          "role": "left",
           "ref": "semantic-factorization-2026-10-18:n:c-taxonomy"
         },
         {
-          "role": "ontology",
+          "role": "right",
           "ref": "semantic-factorization-2026-10-18:n:c-ontology"
         }
       ]
@@ -877,7 +1028,7 @@
       "kind": "challenges",
       "bindings": [
         {
-          "role": "challenge",
+          "role": "challenger",
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         },
         {
@@ -901,11 +1052,11 @@
       "kind": "motivates",
       "bindings": [
         {
-          "role": "cause",
+          "role": "reason",
           "ref": "semantic-factorization-2026-10-18:n:q-prior-art"
         },
         {
-          "role": "effect",
+          "role": "result",
           "ref": "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
         }
       ]
@@ -925,11 +1076,11 @@
       "kind": "distinguishes",
       "bindings": [
         {
-          "role": "grounding",
+          "role": "left",
           "ref": "semantic-factorization-2026-10-18:n:c-grounding"
         },
         {
-          "role": "interpretation",
+          "role": "right",
           "ref": "semantic-factorization-2026-10-18:n:c-model-theory"
         }
       ]
@@ -953,7 +1104,7 @@
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         },
         {
-          "role": "dependency",
+          "role": "prerequisite",
           "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
         }
       ]
@@ -977,7 +1128,7 @@
           "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
         },
         {
-          "role": "dependency",
+          "role": "prerequisite",
           "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
         }
       ]
@@ -994,14 +1145,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "exemplifies",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "example",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-operational-semantics"
         },
         {
-          "role": "general",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
         }
       ]
@@ -1018,10 +1169,10 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "distinguishes",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "criterion",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-mece-criterion"
         },
         {
@@ -1045,11 +1196,11 @@
       "kind": "supports",
       "bindings": [
         {
-          "role": "support",
+          "role": "premise",
           "ref": "semantic-factorization-2026-10-18:n:c-representation-forms"
         },
         {
-          "role": "supported",
+          "role": "conclusion",
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         }
       ]
@@ -1069,11 +1220,11 @@
       "kind": "related_to",
       "bindings": [
         {
-          "role": "left",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-ologs"
         },
         {
-          "role": "right",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         }
       ]
@@ -1093,11 +1244,11 @@
       "kind": "related_to",
       "bindings": [
         {
-          "role": "left",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-category-database"
         },
         {
-          "role": "right",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         }
       ]
@@ -1117,11 +1268,11 @@
       "kind": "motivates",
       "bindings": [
         {
-          "role": "cause",
+          "role": "reason",
           "ref": "semantic-factorization-2026-10-18:n:goal-find-prior-art"
         },
         {
-          "role": "effect",
+          "role": "result",
           "ref": "semantic-factorization-2026-10-18:n:goal-capture-inquiry"
         }
       ]
@@ -1141,11 +1292,11 @@
       "kind": "supports",
       "bindings": [
         {
-          "role": "support",
-          "ref": "semantic-factorization-2026-10-18:n:c-dol"
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration"
         },
         {
-          "role": "supported",
+          "role": "conclusion",
           "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
@@ -1165,11 +1316,11 @@
       "kind": "supports",
       "bindings": [
         {
-          "role": "support",
-          "ref": "semantic-factorization-2026-10-18:n:c-mmt"
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge"
         },
         {
-          "role": "supported",
+          "role": "conclusion",
           "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
@@ -1189,11 +1340,11 @@
       "kind": "supports",
       "bindings": [
         {
-          "role": "support",
-          "ref": "semantic-factorization-2026-10-18:n:c-institutions"
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-institution-logical-core"
         },
         {
-          "role": "supported",
+          "role": "conclusion",
           "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
@@ -1213,11 +1364,11 @@
       "kind": "supports",
       "bindings": [
         {
-          "role": "support",
-          "ref": "semantic-factorization-2026-10-18:n:c-mde"
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer"
         },
         {
-          "role": "supported",
+          "role": "conclusion",
           "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
         }
       ]
@@ -1258,14 +1409,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "reframes",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "old",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
         },
         {
-          "role": "new",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
@@ -1282,14 +1433,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "supports",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "support",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-systematic-mapping"
         },
         {
-          "role": "supported",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
         }
       ]
@@ -1312,14 +1463,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "central_to",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "central_method",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis"
         },
         {
-          "role": "broader_goal",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-prior-art-first"
         }
       ]
@@ -1336,10 +1487,10 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "qualifies",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "qualification",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-llm-research-role"
         },
         {
@@ -1363,11 +1514,11 @@
       "kind": "motivates",
       "bindings": [
         {
-          "role": "cause",
+          "role": "reason",
           "ref": "semantic-factorization-2026-10-18:n:goal-methodology-first"
         },
         {
-          "role": "effect",
+          "role": "result",
           "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
         }
       ]
@@ -1384,14 +1535,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "supports",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "support",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-integrative-review"
         },
         {
-          "role": "supported",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:c-layered-research-method"
         }
       ]
@@ -1408,14 +1559,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "supports",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "support",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-sysml-kerml"
         },
         {
-          "role": "supported",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
         }
       ]
@@ -1432,14 +1583,14 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "supports",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "support",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-iso42010"
         },
         {
-          "role": "supported",
+          "role": "target",
           "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
         }
       ]
@@ -1456,10 +1607,10 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "qualifies",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "qualification",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation"
         },
         {
@@ -1480,10 +1631,10 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "qualifies",
+      "kind": "related_to",
       "bindings": [
         {
-          "role": "qualification",
+          "role": "source",
           "ref": "semantic-factorization-2026-10-18:n:c-first-pass-map-boundary"
         },
         {
@@ -1507,12 +1658,204 @@
       "kind": "motivates",
       "bindings": [
         {
-          "role": "cause",
+          "role": "reason",
           "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
         },
         {
-          "role": "effect",
+          "role": "result",
           "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-dol-heterogeneous-integration-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 263,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-dol"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-mmt-formal-knowledge-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 264,
+          "end": 331,
+          "quote": "MMT is a broader meta-framework for formal languages and knowledge;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-mmt"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-institution-logical-core-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 332,
+          "end": 423,
+          "quote": "institution theory formalizes signatures, sentences, models, satisfaction, and translation;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-institutions"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-institution-logical-core"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-mde-execution-layer-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 424,
+          "end": 488,
+          "quote": "model-driven engineering addresses model-to-execution pipelines."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-mde"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:five-case-evaluation-supports-composition",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:scenario-evaluation-informs-claim",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:tool-level-test-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-tool-level-validation"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:merge-discretion-captured",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u13",
+          "start": 0,
+          "end": 69,
+          "quote": "proceed and merge prs whenever as you see fit. you have full autonomy"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:goal-authorized-pr-merge"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
         }
       ]
     }
@@ -1900,7 +2243,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "adopt",
+      "kind": "scope",
       "actor_id": "participant:user",
       "input_ids": [
         "semantic-factorization-2026-10-18:n:h-prior-art-first"
@@ -1926,7 +2269,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "synthesize",
+      "kind": "generalize",
       "actor_id": "participant:assistant",
       "input_ids": [
         "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
@@ -1954,7 +2297,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "synthesize",
+      "kind": "generalize",
       "actor_id": "participant:assistant",
       "input_ids": [
         "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
@@ -1970,6 +2313,63 @@
       "after_move_ids": [
         "semantic-factorization-2026-10-18:m:16"
       ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:18",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde",
+        "semantic-factorization-2026-10-18:n:c-sysml-kerml",
+        "semantic-factorization-2026-10-18:n:c-iso42010",
+        "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:17"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:19",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-tool-level-validation"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
+      "after_move_ids": [],
       "inference_family": "abduction"
     }
   ],
@@ -2070,22 +2470,23 @@
       "id": "semantic-factorization-2026-10-18:qe:5",
       "anchors": [
         {
-          "message_id": "semantic-factorization-2026-10-18:u11",
+          "message_id": "semantic-factorization-2026-10-18:a13",
           "start": 0,
-          "end": 104,
-          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
         }
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "question_id": "semantic-factorization-2026-10-18:n:goal-methodology-first",
-      "status": "answered",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "deferred",
       "actor_id": "participant:assistant",
-      "at_message_id": "semantic-factorization-2026-10-18:a11",
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
       "answer_ids": [
-        "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
       ],
-      "resolution_basis": "A proposed protocol was supplemented by a first-pass methodological and technical prior-art map. CFA is the provisional synthesis core; the technical-framework gap remains open pending primary-source tests across representative cases.",
+      "resolution_basis": "The source-based five-case evaluation narrows the promising composition but does not establish a universal factorization or a residual novelty gap; actual tool tests are next.",
       "replacement_id": null
     }
   ],
@@ -2102,10 +2503,11 @@
     }
   ],
   "notes": [
-    "A proposed reusable research protocol is stored in research-protocol.md. It combines systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance; it is explicitly not represented as one established named standard.",
-    "First-pass source-backed mapping is stored in systematic-mapping.md. It separates the method for research synthesis from the technical frameworks being investigated. It is not a completed systematic review and does not prove nonexistence of a canonical factorization.",
-    "Current method hypothesis: conceptual framework analysis is the core concept-synthesis procedure, paired with systematic mapping for discovery, integrative review practices for heterogeneous evidence, traceability/scenario tests for validation, and provenance for auditability.",
-    "Current technical hypothesis: DOL is the closest direct formal integration candidate; MMT and institution theory, MDE/SysML, ISO 42010, ologs, upper ontologies, and ontology alignment contribute to distinct adjacent subproblems.",
-    "Next action: test the provisional layered representation hypothesis against physics + simulation, math + proof, cellular automata, empirical taxonomy, and cross-formalism translation. Score the strongest candidates from primary sources before drawing a residual-gap conclusion."
+    "The reusable prior-art-first research protocol is in research-protocol.md; the method is a proposed combination of established components, not one named standard.",
+    "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
+    "scenario-evaluation.md defines five synthetic fixtures and source-based capability judgments; it does not report DOL/MMT/SysML/Modelica tool execution.",
+    "Current candidate synthesis is composition-first: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL plus SOSA/SSN and PROV-O for taxonomy/observations/provenance; OAEI for ontology-matching evaluation.",
+    "No universal canonical/MECE factorization or novel contribution has been established. Next: run the small fixtures in actual tools, record outputs and mapping/preservation failures, then compare to requirements R01-R18.",
+    "The user explicitly authorized autonomous progress and merging when judged fit. This permits a merge decision but does not waive graph validation or CI."
   ]
 }
