@@ -166,6 +166,89 @@ def optional_reader(material: dict[str, str], out: Path) -> None:
     )
 
 
+
+
+def optional_blind_judge(out: Path) -> None:
+    """Separate model-assisted grading, followed by necessary human review."""
+    import random
+    from pydantic import BaseModel
+    from llm_client import call_llm_structured, get_model
+
+    class PointGrade(BaseModel):
+        point_index: int
+        covered: bool
+        explanation: str
+
+    class AnswerGrade(BaseModel):
+        label: str
+        points: list[PointGrade]
+        unsupported_claims: list[str]
+
+    class BlindGrades(BaseModel):
+        grades: list[AnswerGrade]
+
+    answers = json.loads((out / "reader_answers.json").read_text(encoding="utf-8"))
+    expected = {"A", "B", "C", "D"}
+    if set(answers) != expected:
+        raise ValueError("Cannot grade without exactly A, B, C and D")
+    gold = get_fixture()
+    conditions = sorted(expected)
+    random.Random(20261018).shuffle(conditions)
+    aliases = dict(zip("WXYZ", conditions))
+    answer_blocks = "\n\n".join(
+        f"ANSWER {alias}:\n{answers[condition]['answer']['answer']}"
+        for alias, condition in aliases.items()
+    )
+    points = "\n".join(f"{i + 1}. {p}" for i, p in enumerate(gold["grading"]["points"]))
+    prompt = (
+        "Score four answers to the SAME question against the six factual key points. "
+        "The answer conditions have been randomized. Do not reward relevant but "
+        "different facts, and do not assume that later work was already complete "
+        "at the export cutoff. Each covered point must be unambiguously stated "
+        "in the answer. Assess hallucinated or unsupported completion claims "
+        "separately. Grade exactly points 1-6 for every answer label W,X,Y,Z. "
+        "The key is from a manually checked transcript and was NOT given to "
+        "the answering model.\n\n"
+        f"QUESTION:\n{QUESTION}\n\nREFERENCE:\n"
+        f"Active terminal quotation: {gold['terminal_quote']}\n"
+        f"Validation limitation: {gold['validation_quote']}\n"
+        f"Repository integrity activity: {gold['integrity_quote']}\n"
+        f"Five cases: {', '.join(gold['five_cases'])}\n"
+        f"POINTS:\n{points}\n\n{answer_blocks}"
+    )
+    judged, meta = call_llm_structured(
+        get_model("judging"),
+        [{"role": "user", "content": prompt}],
+        response_model=BlindGrades,
+        task="judging", reasoning_effort="medium",
+        model_policy="enforce_allowlist", max_budget=3.0,
+        trace_id="inquiry-graph/terminal-state/exporter-20261018/blind-judge"
+    )
+    labels = {g.label: g for g in judged.grades}
+    if set(labels) != set("WXYZ"):
+        raise ValueError("Blind grader did not return all four labels")
+    outcome = {}
+    for label, condition in aliases.items():
+        result = labels[label]
+        by_point = {p.point_index: p for p in result.points}
+        if set(by_point) != set(range(1, 7)):
+            raise ValueError(f"Blind grader missing or duplicated points for {label}")
+        outcome[condition] = {
+            "points": [by_point[i].model_dump() for i in range(1, 7)],
+            "score": sum(by_point[i].covered for i in range(1, 7)),
+            "unsupported_claims": result.unsupported_claims
+        }
+    (out / "reader_grades.json").write_text(
+        json.dumps({
+            "scores": outcome,
+            "judge_model": get_model("judging"), "judge_cost": meta.cost,
+            "judge_usage": meta.usage, "blind_alias_map": aliases,
+            "human_review_complete": False,
+            "warning": ("Model-assisted, condition-blinded grading; manual source "
+                        "inspection is still required before publishing an accuracy claim.")
+        }, indent=2, default=str), encoding="utf-8"
+    )
+
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--transcript", type=Path, required=True)
@@ -174,9 +257,13 @@ def main() -> None:
     p.add_argument("--model", help="Authorized extraction model for --extract")
     p.add_argument("--reader", action="store_true",
                    help="Use llm_client for A/B/C/D; requires --extract")
+    p.add_argument("--judge", action="store_true",
+                   help="Run a condition-blinded model-assisted rubric judge; requires --reader")
     args = p.parse_args()
     if args.reader and not args.extract:
         p.error("--reader requires --extract")
+    if args.judge and not args.reader:
+        p.error("--judge requires --reader")
     if args.extract and not args.model:
         p.error("--extract requires an explicit --model")
     source = args.transcript.read_text(encoding="utf-8")
@@ -213,6 +300,9 @@ def main() -> None:
         if args.reader:
             optional_reader(material, args.out)
             result["reader_abcd_run"] = True
+            if args.judge:
+                optional_blind_judge(args.out)
+                result["model_assisted_blind_grading_run"] = True
     (args.out / "trial_summary.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({k: v for k, v in result.items() if k != "baseline_controls"},
