@@ -10,7 +10,7 @@ This curated Inquiry Graph fixture covers the discussion of taxonomy, ontology, 
 - `comparison-matrix.md` — candidate comparison plus the supplementary framework-boundary and scenario summary.
 - `research-protocol.md` — reusable prior-art-first workflow assembled from established methodological components; not one named standard.
 - `systematic-mapping.md` — first-pass, source-backed map of methodological and technical prior art; not a completed database-wide systematic review.
-- `scenario-evaluation.md` — five operational case fixtures and source-based evaluation of framework coverage and composition boundaries; not a tool-level conformance run.
+- `scenario-evaluation.md` — five operational case fixtures, source-based framework evaluation, independent Python oracle checks, and a note on related local FOL/MMT implementation evidence. The candidate tools remain untested directly.
 
 ## Coverage and status
 
@@ -24,6 +24,6 @@ The broader reusable process is: state the goal and success criteria; search acr
 
 The first-pass map distinguishes the *method of research synthesis* from the *technical frameworks being investigated*. The five-case evaluation covers physics plus simulation, mathematics plus proof, cellular automata, empirical taxonomy, and cross-formalism translation. Source checks point toward a compositional approach: DOL/MMT/institution theory for formal integration and logic; Modelica/FMI or SysML v2/KerML for selected executable system models; SKOS/OWL plus SOSA/SSN and PROV-O for taxonomy, observation artifacts, and provenance; and OAEI for ontology-matching evaluation.
 
-This is **not yet evidence of a universal factorization gap**. The scenario work is source-based; the candidate tools have not yet been run against the fixtures. Next, run the small fixtures in actual tooling, record results and unsupported obligations, then compare those findings against requirements R01–R18 before considering a novel contribution.
+This is **not yet evidence of a universal factorization gap**. The synthetic Rule 30 and oscillator oracle checks now pass in standalone Python, and the existing local FOL Operational Metamodel workspace's 21-test importer/evaluator suite passes. These validate fixtures and an adjacent prototype, not the candidate frameworks themselves: DOL/MMT/SysML/Modelica tool-level tests remain outstanding. Next, add one proof-producing/checkable theorem and one explicit translation/preservation test to the existing formal-logic prototype, then run a dynamic model in Modelica/FMI or a conforming systems tool; compare actual evidence against requirements R01–R18 before considering a novel contribution.
 
 The fit review distinguishes this research question from Inquiry Graph's own schema. A single conversation can reveal a candidate representational gap but cannot authorize a shared schema change.
