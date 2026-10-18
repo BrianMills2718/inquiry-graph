@@ -251,6 +251,14 @@
           "text": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a16",
+          "actor_id": "participant:assistant",
+          "ordinal": 30,
+          "text": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -1122,6 +1130,96 @@
       "review_status": "proposed",
       "kind": "claim",
       "text": "The passing toy mapping test does not prove semantic preservation for arbitrary structures, units, cardinalities, or transformations, and it is not a DOL/MMT translation test."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-z3-solver-checks",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "solver-checks.json records Z3 SMT queries/results for n+0=n over nonnegative integers, identity mapping, exact integer day-to-year conversion, and a wrong-units negative control. The PyPI wheel checksum was verified. These are solver-level checks of explicit formulas, not framework conformance tests."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-arithmetic-validity-smt",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Z3 returned UNSAT for the counterexample query n >= 0 and n+0 != n, and exposed an internal proof object; therefore the arithmetic identity holds in the encoded nonnegative-integer theory."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-mapping-contract-smt",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Z3 returned UNSAT for a violation of the explicitly encoded nonnegative integer identity-age mapping and for a violation of exact integer days-to-years conversion under the stated constraints."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-unit-mismatch-counterexample-smt",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Z3 returned SAT for a negative control that copies days directly into a years field, with the concrete model years=1 and days=365."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-smt-proof-boundary",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "SMT proof by refutation establishes validity of an explicitly encoded formula relative to the solver's theories and proof semantics; an internal solver proof object is not the same as an independently kernel-checked proof-assistant artifact or an MMT-native formalization."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-native-formal-framework-test",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Test the arithmetic theorem in a native proof-assistant or MMT formalization, run a real DOL mapping with explicit preservation/coherence checks, and run a dynamic model using Modelica/FMI or a conforming SysML v2 behavior tool."
     }
   ],
   "relations": [
@@ -2186,6 +2284,150 @@
           "ref": "semantic-factorization-2026-10-18:n:claim-toy-mapping-preservation"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:z3-checks-support-scenarios",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-z3-solver-checks"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:smt-arithmetic-claim-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-arithmetic-validity-smt"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-z3-solver-checks"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:smt-mapping-claim-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mapping-contract-smt"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-toy-mapping-execution"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:smt-negative-control-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-unit-mismatch-counterexample-smt"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-toy-mapping-limits"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:internal-proof-not-kernel-check",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-smt-proof-boundary"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-arithmetic-validity-smt"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:native-framework-tests-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:c-z3-solver-checks"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-native-formal-framework-test"
+        }
+      ]
     }
   ],
   "moves": [
@@ -2758,6 +3000,38 @@
         "semantic-factorization-2026-10-18:m:20"
       ],
       "inference_family": "deduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:22",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a16",
+          "start": 0,
+          "end": 686,
+          "quote": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:goal-tool-level-validation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-z3-solver-checks",
+        "semantic-factorization-2026-10-18:n:claim-arithmetic-validity-smt",
+        "semantic-factorization-2026-10-18:n:claim-mapping-contract-smt",
+        "semantic-factorization-2026-10-18:n:claim-unit-mismatch-counterexample-smt",
+        "semantic-factorization-2026-10-18:n:c-smt-proof-boundary",
+        "semantic-factorization-2026-10-18:n:goal-native-formal-framework-test"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a16",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:21"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -2890,12 +3164,13 @@
     }
   ],
   "notes": [
-    "The reusable prior-art-first research protocol is stored in research-protocol.md; it is a proposed combination of established components, not one named standard.",
+    "The reusable prior-art-first research protocol is stored in research-protocol.md; it combines established components but is not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
-    "scenario-evaluation.md defines five synthetic fixtures, source-based candidate capability judgments, standalone Python oracle checks (including a 1,001-record toy mapping with a unit-mismatch negative control), and adjacent implementation evidence from an existing FOL Operational Metamodel workspace.",
-    "The Rule 30 trace and harmonic oscillator oracle checks passed; oscillator RK4 maximum absolute error at target times was about 2.081e-13. The toy identity mapping preserved 1,001 nonnegative integer ages and a days-to-years negative control failed as intended. The separate FOL Operational Metamodel workspace passed 21 tests for MMT OMDoc import and bounded finite-model evaluation.",
-    "These results do not constitute DOL/MMT/SysML/Modelica conformance runs. Next: add a checkable theorem and translation/preservation test to the existing prototype, then run dynamic modeling in an appropriate tool.",
-    "No universal canonical/MECE factorization or novel contribution has been established. Compare actual implementation results to R01-R18 before writing a residual-gap statement.",
-    "The user explicitly authorized autonomous progress and merging when judged fit. PR #212 was merged only after graph contract validation and successful CI."
+    "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, independent Python oracle checks, and Z3 solver checks for arithmetic and toy mapping properties.",
+    "solver-checks.json records Z3 5.3.1.0 query/results. The official PyPI wheel hash matched. The arithmetic counterexample query, identity-mapping violation query, and exact integer conversion violation query were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
+    "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation. This is not general theorem proving or proof that the MMT executable validated these fixtures.",
+    "No DOL/MMT/SysML/Modelica native conformance run has been completed. Next: native proof-assistant/MMT formalization, actual DOL mapping/preservation check, and dynamic-model execution in Modelica/FMI or SysML v2.",
+    "No universal canonical/MECE factorization or novel contribution has been established; compare actual evidence to requirements R01-R18 before writing a residual-gap statement.",
+    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212 and PR #213 were merged after graph validation and successful CI."
   ]
 }
