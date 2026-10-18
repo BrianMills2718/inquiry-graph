@@ -269,6 +269,37 @@
           "timestamp": null
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:source-slices",
+      "title": "Terminal visible assistant response, two source excerpts (2026-10-18 17:12:27 local)",
+      "source_kind": "curated_excerpts",
+      "coverage_note": "Two separate verbatim spans from ONE final visible assistant response in the user-provided ChatGPT Exporter Markdown. Local ordinals order excerpts within that reply; they are NOT new conversation turns, original message IDs, or a complete transcript. Export last updated 17:48:04 and created 17:49:13 local. The rest of the graph includes later post-export research records that must not be included in cutoff-scoped reader tests.",
+      "participants": [
+        {
+          "id": "participant:assistant",
+          "label": "ChatGPT",
+          "role": "assistant"
+        }
+      ],
+      "messages": [
+        {
+          "id": "semantic-factorization-2026-10-18:terminal:integrity-excerpt",
+          "actor_id": "participant:assistant",
+          "ordinal": 1,
+          "text": "Before merging, I found a repository-integrity check worth doing: the graph needs to satisfy the repository’s actual allowed relation types and role signatures, not just have valid anchors and no dangling references. I’m checking the full schema/validator now and will correct any mismatches before treating the PR as merge-ready.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:terminal:comparison-excerpt",
+          "actor_id": "participant:assistant",
+          "ordinal": 2,
+          "text": "I’m now turning these findings into explicit scenario-by-scenario judgments, while keeping documented capabilities separate from assumptions that still need implementation testing.",
+          "original_id": null,
+          "timestamp": null
+        }
+      ]
     }
   ],
   "nodes": [
@@ -1318,6 +1349,36 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Run an actual DOL mapping/coherence test between two supported OMS and execute the oscillator or cellular-automaton model in a suitable Modelica/FMI or SysML v2 tool; record native outputs and compare with explicit preservation requirements."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:active-comparative-evaluation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:terminal:comparison-excerpt",
+          "start": 0,
+          "end": 180,
+          "quote": "I’m now turning these findings into explicit scenario-by-scenario judgments, while keeping documented capabilities separate from assumptions that still need implementation testing."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "task",
+      "text": "Finish the systematic five-case, source-supported comparison of existing semantic representation frameworks, recording each candidate's native capabilities, delegated support, implementation assumptions and unsupported obligations before deciding whether a new representation is necessary."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:pending-repository-validation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:terminal:integrity-excerpt",
+          "start": 0,
+          "end": 330,
+          "quote": "Before merging, I found a repository-integrity check worth doing: the graph needs to satisfy the repository’s actual allowed relation types and role signatures, not just have valid anchors and no dangling references. I’m checking the full schema/validator now and will correct any mismatches before treating the PR as merge-ready."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "task",
+      "text": "Check the graph against allowed relation-role signatures and complete the repository integrity validation before treating the original conversation-capture PR as ready to merge."
     }
   ],
   "relations": [
@@ -2646,6 +2707,30 @@
           "ref": "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:comparison-part-of-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:terminal:comparison-excerpt",
+          "start": 0,
+          "end": 180,
+          "quote": "I’m now turning these findings into explicit scenario-by-scenario judgments, while keeping documented capabilities separate from assumptions that still need implementation testing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "part_of",
+      "bindings": [
+        {
+          "role": "part",
+          "ref": "semantic-factorization-2026-10-18:terminal:active-comparative-evaluation"
+        },
+        {
+          "role": "whole",
+          "ref": "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+        }
+      ]
     }
   ],
   "moves": [
@@ -3399,6 +3484,46 @@
       ],
       "resolution_basis": "The source-based five-case evaluation narrows the promising composition but does not establish a universal factorization or a residual novelty gap; actual tool tests are next.",
       "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:open-1",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:terminal:integrity-excerpt",
+          "start": 0,
+          "end": 330,
+          "quote": "Before merging, I found a repository-integrity check worth doing: the graph needs to satisfy the repository’s actual allowed relation types and role signatures, not just have valid anchors and no dangling references. I’m checking the full schema/validator now and will correct any mismatches before treating the PR as merge-ready."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:terminal:pending-repository-validation",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:terminal:integrity-excerpt",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:terminal:open-2",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:terminal:comparison-excerpt",
+          "start": 0,
+          "end": 180,
+          "quote": "I’m now turning these findings into explicit scenario-by-scenario judgments, while keeping documented capabilities separate from assumptions that still need implementation testing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:terminal:active-comparative-evaluation",
+      "status": "open",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:terminal:comparison-excerpt",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
     }
   ],
   "extractions": [
@@ -3411,6 +3536,16 @@
         "Selected source excerpts were entered manually from visible conversation text.",
         "All semantic interpretations remain proposed; no stance event is inferred from mere continuation or lack of objection."
       ]
+    },
+    {
+      "method": "manual_terminal_source_reconciliation",
+      "provider": null,
+      "model": null,
+      "prompt_version": "source-cutoff-2026-10-18",
+      "notes": [
+        "Anchors copied verbatim from the user-provided ChatGPT Exporter Markdown; original message IDs unavailable.",
+        "Source slice is explicitly incomplete; actual live extractor's performance is not measured by this manual reconciliation."
+      ]
     }
   ],
   "notes": [
@@ -3422,6 +3557,7 @@
     "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation. That is not general theorem proving or proof that the MMT executable validated these fixtures.",
     "No actual DOL mapping or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: run those native tool tests and record the precise guarantees against requirements R01-R18.",
     "No universal canonical/MECE factorization or novel contribution has been established; compare actual evidence to requirements R01-R18 before writing a residual-gap statement.",
-    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212, #213 and #214 were merged after validation and successful CI."
+    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212, #213 and #214 were merged after validation and successful CI.",
+    "Export-cutoff operational state (2026-10-18 17:49:13 local Markdown export): active systematic, source-backed framework comparison and a separate graph-schema integrity check, both explicitly in progress in the assistant's last visible reply. The two exact quotes are anchored as distinct excerpts from one original reply, NOT invented conversation turns. Later Python/Z3/Lean results describe subsequent activity, not terminal state at the export cutoff. These terminal task/status annotations remain proposed."
   ]
 }
