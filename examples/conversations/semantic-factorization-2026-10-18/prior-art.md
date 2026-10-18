@@ -23,7 +23,7 @@ For the executable-model intuition, **model-driven engineering (MDE)** and progr
 
 DOL is an OMG standard for formal interoperability across heterogeneous ontology, model, and specification artifacts. The OMG describes OMS artifacts as ranging from domain knowledge and activities to models of systems and specifications of hardware/software properties and behavior. Complex systems may use multiple formalisms and multiple viewpoints; DOL supplies a formal way to express the artifacts and mappings between them, and supports checks of coherence such as consistency, conservativity, intended consequences, and compliance.
 
-Most importantly, DOL explicitly declines to propose one new OMS language that subsumes all others. Instead, it formally connects existing formalisms.
+Most importantly, DOL explicitly declines to propose one new OMS language that subsumes all others. Instead, it formally connects existing formalisms. The standard's stated scope includes homogeneous and heterogeneous OMS, symbol mappings, networks of OMS and mappings, translations between conforming languages, annotations/documentation, and formal semantics. It specifically excludes redefining the elementary OMS languages, algorithms for discovering mappings, and the concrete conceptualization/application of particular OMS. The specification's worked examples include consistency across multiple UML models, refinements, and ontology translations. [See the normative specification's scope section and use cases](https://www.omg.org/spec/DOL/1.0/PDF).
 
 **Why this is close:** The user imagines different representations—of what exists, relations and laws, initial conditions, proofs/calculations, and runnable systems—as related forms that should be connected by a principled framework. DOL directly addresses the heterogeneous integration part of this intuition, including ontologies, models, specifications, and mappings.
 
@@ -37,7 +37,7 @@ MMT represents declarative languages without committing to one syntax, semantics
 
 **Why this is close:** MMT takes the “meta-framework for many forms of formal representation” goal seriously. Its small, reusable primitives and compositional structure are more relevant to a canonical-factorization question than a fixed domain ontology.
 
-**Limit:** MMT's strongest coverage is formal/declarative knowledge and the infrastructure around it. It does not, merely by being foundation-independent, establish a universal decomposition for empirical reference, physical-model validation, arbitrary dynamical systems, or every form of computation.
+**Limit:** MMT's strongest coverage is formal/declarative knowledge and the infrastructure around it. The paper describes reusable language primitives and theory morphisms, not a theorem that their primitives form a universal MECE basis for all representation. It does not, merely by being foundation-independent, establish a universal decomposition for empirical reference, physical-model validation, arbitrary dynamical systems, or every form of computation.
 
 ## 3. Institution theory — a formal abstraction of logical representation systems
 
