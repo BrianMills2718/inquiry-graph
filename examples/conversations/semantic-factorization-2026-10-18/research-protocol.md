@@ -193,18 +193,18 @@ The strongest current candidate composition is conditional, not mandatory: DOL f
 
 ### Next research action
 
-Some fixture sanity checks and adjacent local implementation tests are now complete; candidate-framework conformance tests are still outstanding.
+Some fixture sanity checks, a solver-level theorem refutation, a mapping-contract check, and adjacent local implementation tests are now complete. Candidate-framework conformance remains open.
 
-1. **Reuse the existing FOL Operational Metamodel workspace project.** Its pinned compiled MMT FOL OMDoc import/evaluator suite passed 21 tests on 2026-10-18. The tests preserve MMT declaration identities, check a small finite-model satisfaction evaluator, reject sort/arity errors, and explicitly distinguish truth in one finite structure from semantic consequence. This is useful adjacent implementation evidence, not a test of the MMT executable or a general proof assistant.
-2. **Add one checkable proof test** to that prototype: formalize a basic arithmetic theorem in a specified logic, identify the actual proof object/checker, and record whether it proves the theorem rather than merely testing bounded examples or evaluating one model.
-3. **Add one formal translation test:** encode the Person/age → Human/ageYears toy mapping in a suitable formalism and check a stated preservation condition; include a negative variant where a unit/cardinality mismatch should fail.
-4. **Run one native dynamic-model test** in a real Modelica/FMI or SysML v2-capable environment; save the model, tool/version, execution settings, output trace, and comparison to the oscillator oracle. The independent RK4 calculation only validates the oracle, not a candidate solver.
-5. **Run a minimal DOL mapping/coherence test** for two formal OMS in a conforming environment when available. Record which preservation/coherence checks actually ran and what they guarantee.
-6. Compare actual results against R01–R18, revise the evidence status, and only then write a requirement-specific residual-gap statement.
+1. **Solver-level proof and mapping contract (done, bounded):** Z3 5.3.1.0 was installed in an isolated Python target after its official PyPI wheel checksum matched. Z3 returned UNSAT for the counterexample to n + 0 = n over nonnegative integers, and emitted an internal proof object. It returned UNSAT for the explicitly encoded identity-mapping invariant and exact integer days-to-years conversion, and SAT with a concrete counterexample for copying days directly into years. Results are in scenario-evaluation.md and solver-checks.json. This is SMT proof by refutation, not an independently kernel-checked proof-assistant artifact or MMT-native formalization.
+2. **Proof assistant / MMT-native formalization (next):** formalize the arithmetic theorem in a suitable proof assistant or actual MMT workflow and capture the proof/checking path. Be explicit about the logic, theorem statement, proof artifact, kernel/checker, and what trust assumptions are made.
+3. **Actual DOL mapping test:** define two tiny OMS in different supported formalisms, add an explicit DOL mapping, and run a conforming DOL/Ontohub environment if available. Record which formal consistency, conservativity, or preservation checks actually execute and what they guarantee. The Z3 toy contract is not a DOL test.
+4. **Native dynamics test:** run the oscillator in Modelica/FMI or a conforming SysML v2-capable tool. Save the model, tool/version, execution settings, output trace, and comparison with the analytic oracle. The independent RK4 calculation validates fixture consistency, not a candidate simulator.
+5. **Compare actual results** against requirements R01–R18, updating evidence labels and documenting failures/unknowns. Only then state any requirement-specific residual gap and examine whether composition already satisfies it.
 
-The standalone Python oracle checks passed: the Rule 30 trace matches the six recorded states; the oscillator RK4 check's maximum absolute error at t = 0, π/2, π was approximately 2.081e-13; bounded arithmetic and toy mapping checks passed. These are fixture sanity checks, not proof of a theorem or evidence that candidate tools implement the fixtures.
+The existing FOL Operational Metamodel workspace passed 21 Python tests on 2026-10-18. Those tests cover import of pinned compiled MMT FOL OMDoc, bounded finite-structure satisfaction, and rejection of sort/arity errors. They do not show the MMT executable checking the fixtures or providing a general proof assistant. Standalone Python checks validated the Rule 30 trace and oscillator oracle; a 1,001-record toy mapping preserved the stated age invariant and a units-mismatch negative control was detected.
 
-In parallel, continue backward/forward citation chaining for DOL/MMT and for any candidate composition or meta-framework cited by primary sources. Do not make a “no one has done this” claim from the bounded search.
+Continue citation chaining for DOL/MMT and possible cross-framework compositions. Do not make a “no one has done this” claim from the bounded search. Do not infer that failure to find an installed tool proves the tool is unavailable in general.
+
 
 ## Methodological starting points
 
