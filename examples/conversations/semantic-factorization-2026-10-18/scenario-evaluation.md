@@ -222,3 +222,34 @@ The scope still matters:
 ### Revised next step
 
 A basic arithmetic theorem and one mapping contract now have solver-level evidence. The most informative unresolved technical tests are to: (1) formalize the theorem in a proof assistant or MMT-native formalization and capture the proof/checking path; (2) exercise a real DOL mapping between two OMS and record actual coherence/preservation checks; and (3) execute the oscillator in Modelica/FMI or a conforming SysML v2 behavior tool. The canonical-factorization question remains open.
+
+
+## 14. Lean proof-assistant check (executed 2026-10-18)
+
+I submitted the corresponding Lean source through the public [Lean playground](https://academy.lean4.dev/playground) editor and pressed **Run**. The UI reported **“Compiled without errors”** in 1.5 seconds and identified the compiler as **Lean 4.30.0**, using its core library (mathlib is not installed). Exact source is saved in [lean-proof-checks.lean](lean-proof-checks.lean); result/environment metadata is saved in [lean-proof-checks.json](lean-proof-checks.json).
+
+The checked declarations:
+
+| Declaration | Statement / obligation | Lean method | Result |
+|---|---|---|---|
+| \`nat_add_zero\` | \`∀ n : Nat, n + 0 = n\` | \`simp\` | Checked; the UI printed a proof term \`fun n => of_eq_true (eq_self n)\`. |
+| \`identity_age_mapping_preserves_nonneg\` | If \`0 ≤ source\` and \`dest = source\`, then \`0 ≤ dest\` over \`Int\` | \`omega\` | Checked; the UI printed a proof term for the invariant. |
+| \`exact_days_to_years\` | \`(365 * years) / 365 = years\` for \`years : Nat\` | \`omega\` | Checked for exact whole-year day counts under natural-number division. |
+| \`naive_units_counterexample\` | There exist positive integer \`years\` and \`days = 365 * years\` with \`days ≠ years\` | \`decide\` with witness \`years = 1, days = 365\` | Checked; the UI printed an existential proof term. |
+
+The source uses no \`sorry\` or \`admit\`.
+
+### What this changes
+
+This is now an actual Lean proof-assistant/kernel workflow for these four **small formal statements**, not only an SMT query or bounded enumeration. The unit mismatch is represented both as a concrete counterexample and as a machine-checked existential proposition.
+
+### Boundaries that remain
+
+- This is not an MMT-native formalization, a DOL mapping, or a test of a general framework's ability to preserve semantics across languages.
+- The identity-mapping theorem assumes the mapping equation \(dest = source\). It does not establish that a real transformation between two independently specified ontologies is correct.
+- The day/year theorem assumes exact counts of the form \(365 \\times years\). It does not cover leap years, calendars, duration semantics, uncertainty, or empirical age inference.
+- These examples validate selected obligations; they do not establish any canonical, complete, minimal, or MECE factorization of all representations.
+
+### Updated next action
+
+The math/proof example now has a Lean-checked result. The most valuable remaining implementation tests are: (1) an actual DOL mapping between two supported OMS with a documented coherence/preservation check, and (2) a native execution of the oscillator or cellular-automaton behavior in Modelica/FMI or a conforming SysML v2 tool. Results should be captured as tool outputs and tested against the corresponding requirements R01–R18.
