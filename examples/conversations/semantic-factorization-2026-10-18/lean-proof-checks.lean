@@ -13,8 +13,8 @@ theorem exact_days_to_years (years : Nat) : (365 * years) / 365 = years := by
   omega
 
 theorem naive_units_counterexample :
-    Exists fun (p : Int × Int) => 1 <= p.1 && p.2 = 365 * p.1 && p.2 != p.1 := by
-  exact ⟨(1, 365), by decide⟩
+    ∃ years days : Int, 1 <= years ∧ days = 365 * years ∧ days ≠ years := by
+  exact ⟨1, 365, by decide, by decide, by decide⟩
 
 #print nat_add_zero
 #print identity_age_mapping_preserves_nonneg
