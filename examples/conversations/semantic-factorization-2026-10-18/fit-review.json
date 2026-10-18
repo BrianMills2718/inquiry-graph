@@ -41,14 +41,14 @@
       "diagnosis": "incomplete",
       "scope": "workflow",
       "severity": "material",
-      "description": "The user explicitly requests a source-grounded capture followed by prior-art research, but this graph records the requested work rather than the research results or their source-level evaluation.",
+      "description": "The conversation initially recorded a request for prior-art research but no source-level evaluation. A first-pass comparison is now recorded in prior-art.md; it is targeted, not systematic, and does not establish that any one framework completely solves the user's broader problem.",
       "evidence_refs": [
         "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
         "semantic-factorization-2026-10-18:n:goal-find-prior-art"
       ],
-      "current_workaround": "Continue the prior-art search after preserving this graph, and link the most relevant primary sources to the inquiry in a subsequent reviewed update.",
-      "proposed_change": "Add a compact, source-grounded prior-art comparison to this fixture after reviewing primary sources; distinguish exact fit, partial overlap, and unresolved gap.",
-      "promotion_gate": "Cite primary sources and explicitly test the user's requirements against each candidate framework; do not infer a universal solution from a superficially similar title or abstract.",
+      "current_workaround": "Use prior-art.md as a grounded first-pass shortlist, explicitly distinguishing exact fit, partial overlap, and unresolved scope.",
+      "proposed_change": "If further work is warranted, inspect primary sources in reading order and test the user's concrete requirements against them; keep the claim that a universal factorization is absent provisional rather than treating the initial search as exhaustive.",
+      "promotion_gate": "Before claiming a gap or solution, compare primary-source definitions against descriptive models, formal theories, model/interpretation mappings, grounding, and executable/proof-producing behavior; state which requirements remain uncovered.",
       "status": "open"
     },
     {
@@ -66,6 +66,6 @@
       "status": "open"
     }
   ],
-  "overall_assessment": "Inquiry Graph can preserve the user's questions and evolving hypotheses, but the target factorization problem is distinct from the graph's own ontology. The main fit risks are mixing levels (syntax, models, grounding, operations) and treating a provisional capability list as canonical before prior-art comparison.",
-  "next_inquiry_question": "Which existing framework most closely unifies formal representations, interpretations/models, mappings between formalisms, and executable or proof-producing operations—and what precisely remains uncovered?"
+  "overall_assessment": "Inquiry Graph can preserve the user's questions and evolving hypotheses, but the target factorization problem is distinct from the graph's own ontology. A first-pass prior-art scan identifies institutions, MMT, ologs, and operational semantics as complementary existing work; no inspected source establishes the entire requested universal factorization.",
+  "next_inquiry_question": "Does MMT or an institution-based framework provide the best compositional core, and which specific requirements (especially empirical grounding and executable behavior across domains) remain outside its scope?"
 }
