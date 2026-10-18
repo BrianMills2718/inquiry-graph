@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "semantic-factorization-2026-10-18",
+  "purpose": "Preserve the inquiry trajectory and test whether Inquiry Graph represents the user's search for a reusable formal framework for semantic representation, including its grounding and executable aspects.",
+  "findings": [
+    {
+      "id": "fit-001",
+      "diagnosis": "representation_gap",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The target inquiry concerns a candidate factorization of semantic representation itself, while Inquiry Graph captures questions, claims, moves, relations, and review states in a conversation. It can record the proposal but does not formalize candidate dimensions, dependencies, independence claims, or coverage proofs as first-class artifacts.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+        "semantic-factorization-2026-10-18:n:c-capabilities",
+        "semantic-factorization-2026-10-18:n:c-mece-criterion"
+      ],
+      "current_workaround": "Represent the proposed factorization and its candidate capabilities as hypothesis/concept nodes and connect them using existing relations; preserve the open question in the question agenda.",
+      "proposed_change": "Do not add schema primitives yet. First search prior art and determine whether a downstream research artifact or projection can express factorization candidates, dependencies, and counterexamples without changing core inquiry semantics.",
+      "promotion_gate": "Only propose shared-schema changes after the same material query failure appears in at least two independent inquiry graphs or one blocking case is approved, and after prior-art/reuse and regression checks.",
+      "status": "open"
+    },
+    {
+      "id": "fit-002",
+      "diagnosis": "wrong_level",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The conversation mixes candidate dimensions of a representation, properties of its interpretation, connections to external referents, and operations such as proof, query, calculation, simulation, and execution. Treating all of these as peer dimensions risks a misfactored framework.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory",
+        "semantic-factorization-2026-10-18:n:c-operational-semantics",
+        "semantic-factorization-2026-10-18:n:c-representation-forms"
+      ],
+      "current_workaround": "Keep separate nodes for formal interpretation, grounding, and operational behavior; state their relationships explicitly rather than flattening them into a single list.",
+      "proposed_change": "Use prior-art research to compare frameworks that distinguish syntax, semantics/models, satisfaction, interpretation, and computation. If needed, create a research matrix outside the core graph schema.",
+      "promotion_gate": "Require at least one concrete cross-domain example showing that the distinction changes a query, inference, validation, or execution outcome.",
+      "status": "open"
+    },
+    {
+      "id": "fit-003",
+      "diagnosis": "incomplete",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "The user explicitly requests a source-grounded capture followed by prior-art research, but this graph records the requested work rather than the research results or their source-level evaluation.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+        "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+      ],
+      "current_workaround": "Continue the prior-art search after preserving this graph, and link the most relevant primary sources to the inquiry in a subsequent reviewed update.",
+      "proposed_change": "Add a compact, source-grounded prior-art comparison to this fixture after reviewing primary sources; distinguish exact fit, partial overlap, and unresolved gap.",
+      "promotion_gate": "Cite primary sources and explicitly test the user's requirements against each candidate framework; do not infer a universal solution from a superficially similar title or abstract.",
+      "status": "open"
+    },
+    {
+      "id": "fit-004",
+      "diagnosis": "capture_gap",
+      "scope": "extraction",
+      "severity": "note",
+      "description": "This is a curated excerpt map rather than a complete transcript export, so it preserves the conceptual trajectory but cannot support exhaustive move counts, complete stance histories, or exact turn-level coverage claims.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:conversation"
+      ],
+      "current_workaround": "The coverage note explicitly declares omitted intervening wording and the absence of a native export.",
+      "proposed_change": "If a native export is later supplied, reconcile excerpt quotes to source message IDs and extend the graph only where the additional fidelity benefits the inquiry.",
+      "promotion_gate": "Do not claim full coverage until source reconciliation and quote/offset validation pass.",
+      "status": "open"
+    }
+  ],
+  "overall_assessment": "Inquiry Graph can preserve the user's questions and evolving hypotheses, but the target factorization problem is distinct from the graph's own ontology. The main fit risks are mixing levels (syntax, models, grounding, operations) and treating a provisional capability list as canonical before prior-art comparison.",
+  "next_inquiry_question": "Which existing framework most closely unifies formal representations, interpretations/models, mappings between formalisms, and executable or proof-producing operations—and what precisely remains uncovered?"
+}
