@@ -1,0 +1,2513 @@
+{
+  "schema_version": "1.0.0",
+  "id": "semantic-factorization-2026-10-18",
+  "conversations": [
+    {
+      "id": "semantic-factorization-2026-10-18:conversation",
+      "title": "Canonical factorization of semantic representations: ontology, grounding, and executable models",
+      "source_kind": "curated_excerpts",
+      "coverage_note": "Curated, verbatim excerpts from the visible conversation on 2026-10-18, plus concise assistant research summaries and the subsequent methodology agreement/next-step exchange. This is not a native ChatGPT export or complete transcript. Intervening wording is omitted; semantic annotations remain proposed.",
+      "participants": [
+        {
+          "id": "participant:user",
+          "label": "User",
+          "role": "user"
+        },
+        {
+          "id": "participant:assistant",
+          "label": "ChatGPT",
+          "role": "assistant"
+        }
+      ],
+      "messages": [
+        {
+          "id": "semantic-factorization-2026-10-18:u1",
+          "actor_id": "participant:user",
+          "ordinal": 1,
+          "text": "what is a taxonomy? and how does it relate to an ontology? concisely and if thre isnt a clear meaning then tell me",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a1",
+          "actor_id": "participant:assistant",
+          "ordinal": 2,
+          "text": "A taxonomy organizes categories; an ontology models concepts and how they relate.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u2",
+          "actor_id": "participant:user",
+          "ordinal": 3,
+          "text": "ok i guess i feel ike semantic spectrum is a little underspecied and maybe its somethng more like a canonical factorization?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a2",
+          "actor_id": "participant:assistant",
+          "ordinal": 4,
+          "text": "The interesting question is whether any of them provides the canonical factorization you're looking for, rather than just arranging representations from less expressive to more expressive.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u3",
+          "actor_id": "participant:user",
+          "ordinal": 5,
+          "text": "there must be someone who has already figured this out",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a3",
+          "actor_id": "participant:assistant",
+          "ordinal": 6,
+          "text": "I'd say there are established pieces, but I haven't found evidence of one universally accepted, canonical factorization of semantic representation.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u4",
+          "actor_id": "participant:user",
+          "ordinal": 7,
+          "text": "can you make all these terms like grounding, logical constratins etc concrete with an example",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a4",
+          "actor_id": "participant:assistant",
+          "ordinal": 8,
+          "text": "A formal model can describe fictional objects, abstract mathematical objects, or a made-up world. It does not, by itself, establish that its interpretation corresponds to reality.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u5",
+          "actor_id": "participant:user",
+          "ordinal": 9,
+          "text": "ok i guess with taxonomy it is kind of a claim that is-a is a special/piviledged relation type. why is that and are there others? is 6 kind of like a model theory thing where it is referring to some actual thing. also i feel like there are other aspects we are missing. maybe they are in logical constratins but like cardinality or properites or types etc?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a5",
+          "actor_id": "participant:assistant",
+          "ordinal": 10,
+          "text": "These are different dimensions, not necessarily successive stages on a single ladder.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u6",
+          "actor_id": "participant:user",
+          "ordinal": 11,
+          "text": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a6",
+          "actor_id": "participant:assistant",
+          "ordinal": 12,
+          "text": "The paper Ologs: A Categorical Framework for Knowledge Representation by David Spivak and Robert Kent is unusually close to the direction you're describing.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a6b",
+          "actor_id": "participant:assistant",
+          "ordinal": 13,
+          "text": "In programming language theory, denotational semantics studies the mathematical meanings of programs, while operational semantics specifies how programs execute.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u7",
+          "actor_id": "participant:user",
+          "ordinal": 14,
+          "text": "i feel like your grounding example wasnt as simple or cocncrete as i am looking fo rbut maybe i am missing osmehting. if you just mean like a prose diescription of hey this is a model of X i guess thats fine.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a7",
+          "actor_id": "participant:assistant",
+          "ordinal": 15,
+          "text": "Grounding is not just adding prose that says \"this models X.\" A declaration of intended meaning is one part of it; establishing or maintaining the actual correspondence may require identifiers, measurements, observations, or other links.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u8",
+          "actor_id": "participant:user",
+          "ordinal": 16,
+          "text": "i geuss i feel liek there are two ways maybe of doing this and maybe a back and forth between them. one is like a pure ground up formal proff ,a nd the other is to take any possible represntation and try to make sure our canonical factorization accoutns for it and that everything is MECE?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a8",
+          "actor_id": "participant:assistant",
+          "ordinal": 17,
+          "text": "I think you have identified two legitimate research methods.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u9",
+          "actor_id": "participant:user",
+          "ordinal": 18,
+          "text": "on the operational semantics or whatever i gues another way i fam thnking about this is that like f you think about physics there is it my mind an ontology of the types of things that exsits, and then that represetnation can be expanded to include the kindo f relations and laws of physics/consrtaints of the universe etc, and then given inital conditions that should be expandable to a represntation that is actually runnable. or anothe rthing like for math or logic i feel like you could do a similar thing except for math or logic it might be things more akin to calculations or therems or proffs etc. but mu intution is that htis is all just differnt types of represtntationsand some representations also reprent, i dont know the word, but like how there would be run/computed/calcualtedsimulated",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a9",
+          "actor_id": "participant:assistant",
+          "ordinal": 19,
+          "text": "The crucial next distinction is whether you're trying to factorize the meaning of a representation, the expressive power of a formal language, or the capabilities of a knowledge system.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u10",
+          "actor_id": "participant:user",
+          "ordinal": 20,
+          "text": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a10",
+          "actor_id": "participant:assistant",
+          "ordinal": 21,
+          "text": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u11",
+          "actor_id": "participant:user",
+          "ordinal": 22,
+          "text": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a11",
+          "actor_id": "participant:assistant",
+          "ordinal": 23,
+          "text": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u12",
+          "actor_id": "participant:user",
+          "ordinal": 24,
+          "text": "i approve",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a12",
+          "actor_id": "participant:assistant",
+          "ordinal": 25,
+          "text": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u13",
+          "actor_id": "participant:user",
+          "ordinal": 26,
+          "text": "proceed and merge prs whenever as you see fit. you have full autonomy",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a13",
+          "actor_id": "participant:assistant",
+          "ordinal": 27,
+          "text": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools.",
+          "original_id": null,
+          "timestamp": null
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-taxonomy",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u1",
+          "start": 0,
+          "end": 114,
+          "quote": "what is a taxonomy? and how does it relate to an ontology? concisely and if thre isnt a clear meaning then tell me"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is a taxonomy, and how does it relate to an ontology?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-taxonomy",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A taxonomy organizes categories, typically through classification relations such as subclass-of."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "An ontology represents concepts and relations among them; usage varies by field."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 124,
+          "quote": "ok i guess i feel ike semantic spectrum is a little underspecied and maybe its somethng more like a canonical factorization?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The semantic spectrum may be underspecified because it orders representations without identifying a principled decomposition into dimensions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 54,
+          "quote": "there must be someone who has already figured this out"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Has someone already established a general, canonical factorization of semantic representation?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology-spectrum",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a3",
+          "start": 0,
+          "end": 147,
+          "quote": "I'd say there are established pieces, but I haven't found evidence of one universally accepted, canonical factorization of semantic representation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "The ontology spectrum: an established way to arrange representations by increasing semantic expressiveness."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-grounding",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u4",
+          "start": 0,
+          "end": 93,
+          "quote": "can you make all these terms like grounding, logical constratins etc concrete with an example"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What exactly is grounding, and how does it differ from formal model-theoretic interpretation?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-grounding",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a7",
+          "start": 0,
+          "end": 237,
+          "quote": "Grounding is not just adding prose that says \"this models X.\" A declaration of intended meaning is one part of it; establishing or maintaining the actual correspondence may require identifiers, measurements, observations, or other links."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Grounding links symbols or model elements to their intended referents; mathematical interpretation alone need not establish real-world correspondence."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-is-a",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u5",
+          "start": 0,
+          "end": 356,
+          "quote": "ok i guess with taxonomy it is kind of a claim that is-a is a special/piviledged relation type. why is that and are there others? is 6 kind of like a model theory thing where it is referring to some actual thing. also i feel like there are other aspects we are missing. maybe they are in logical constratins but like cardinality or properites or types etc?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "The privileged role of is-a may arise from classification, inheritance, and useful mathematical properties of subclass relations; instance-of and subclass-of must be distinguished."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-capabilities",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 85,
+          "quote": "These are different dimensions, not necessarily successive stages on a single ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Candidate representational capabilities include types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance; their independence is not established."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-compositional-executable-model",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 695,
+          "quote": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A common representational framework may cover entities/types, relations, laws or constraints, initial conditions, and executable transitions as composable capabilities."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-operational-semantics",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6b",
+          "start": 0,
+          "end": 161,
+          "quote": "In programming language theory, denotational semantics studies the mathematical meanings of programs, while operational semantics specifies how programs execute."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Operational semantics and transition systems specify how a description governs state changes or execution."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-two-track-method",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 289,
+          "quote": "i geuss i feel liek there are two ways maybe of doing this and maybe a back and forth between them. one is like a pure ground up formal proff ,a nd the other is to take any possible represntation and try to make sure our canonical factorization accoutns for it and that everything is MECE?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Alternate between a first-principles formal derivation and a counterexample-driven audit of existing representations; refine the factorization iteratively."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mece-criterion",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 289,
+          "quote": "i geuss i feel liek there are two ways maybe of doing this and maybe a back and forth between them. one is like a pure ground up formal proff ,a nd the other is to take any possible represntation and try to make sure our canonical factorization accoutns for it and that everything is MECE?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "MECE is meaningful only relative to a defined universe and decomposition target; representations may combine capabilities rather than belong to exclusive bins."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-representation-forms",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 800,
+          "quote": "on the operational semantics or whatever i gues another way i fam thnking about this is that like f you think about physics there is it my mind an ontology of the types of things that exsits, and then that represetnation can be expanded to include the kindo f relations and laws of physics/consrtaints of the universe etc, and then given inital conditions that should be expandable to a represntation that is actually runnable. or anothe rthing like for math or logic i feel like you could do a similar thing except for math or logic it might be things more akin to calculations or therems or proffs etc. but mu intution is that htis is all just differnt types of represtntationsand some representations also reprent, i dont know the word, but like how there would be run/computed/calcualtedsimulated"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Physics, mathematics, logic, and programs may be understood as different representational forms, some of which support computation, proof, simulation, or execution."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u10",
+          "start": 0,
+          "end": 243,
+          "quote": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Capture this conversation as a source-grounded Inquiry Graph and record representation-fit issues without silently changing shared semantics."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-find-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u10",
+          "start": 0,
+          "end": 243,
+          "quote": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Find the closest existing work so the user can reuse it rather than independently inventing a universal factorization."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ologs",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 156,
+          "quote": "The paper Ologs: A Categorical Framework for Knowledge Representation by David Spivak and Robert Kent is unusually close to the direction you're describing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Ologs: a category-theoretic framework for representing conceptual structures and connecting them to databases and instances."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-model-theory",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 179,
+          "quote": "A formal model can describe fictional objects, abstract mathematical objects, or a made-up world. It does not, by itself, establish that its interpretation corresponds to reality."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Model theory formalizes interpretations and satisfaction of statements in mathematical structures; it does not itself guarantee real-world grounding."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-category-database",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 695,
+          "quote": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Category theory may help formalize composition and mappings; database theory may help formalize schemas, instances, constraints, and mappings. Their relevance is a research hypothesis, not a settled answer."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-dol",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Distributed Ontology, Model, and Specification Language (DOL), an OMG standard for formally expressing and mapping heterogeneous ontologies, models, and specifications."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mmt",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "MMT, a foundation-independent meta-framework for formal languages and knowledge, with modular language features and theory morphisms."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-institutions",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Institution theory, which abstracts logical systems as signatures, sentences, models, satisfaction, and translations preserving satisfaction."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mde",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Model-driven engineering (MDE), which relates systems, models, metamodels, modeling languages, transformations, platforms, and generated or executable software."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-top-level-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Top-level ontologies such as GFO and BFO formalize general categories of entities in reality; this differs from a meta-framework for representing and translating heterogeneous formal systems."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-reframed-scope",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The intended problem may be better framed as a compositional meta-framework for heterogeneous representations, with formal mappings and optional operational semantics, rather than a single linear semantic spectrum."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-prior-art-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "For goal-directed problem solving, assume an existing solution or reusable components are likely; prioritize discovery, evaluation, adaptation, and synthesis before original invention."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Conceptual framework analysis is a research methodology for synthesizing concepts, attributes, assumptions, and relationships across literature or disciplines into a coherent framework."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Systematic mapping/evidence synthesis searches and classifies a research landscape to characterize coverage, evidence, and gaps."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-requirements-traceability",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Requirements traceability links each goal-derived requirement to evaluation criteria, evidence, candidate capabilities, and test results to reduce omissions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "A proposed reusable protocol combines systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation, and provenance for prior-art-first problem solving; it is not claimed to be one named standard."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-llm-research-role",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "LLMs can accelerate cross-disciplinary terminology expansion, discovery, comparison, and synthesis, but material claims require source verification and proposed syntheses require validation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-methodology-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Use an established, reusable research methodology to investigate the representation-framework question before adding more ad hoc comparison dimensions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-integrative-review",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Integrative review combines evidence from diverse methodological and theoretical sources through explicit problem formulation, search, evaluation, analysis, and presentation (Whittemore & Knafl, 2005; https://doi.org/10.1111/j.1365-2648.2005.03621.x)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-iso42010",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "ISO/IEC/IEEE 42010:2022 specifies architecture-description structure, viewpoints, and model kinds, and distinguishes an architecture from its description; it does not prescribe all creation methods or tools (https://www.iso.org/standard/74393.html)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-sysml-kerml",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "OMG SysML v2 and KerML are systems-modeling standards; KerML provides the semantic/syntactic foundation for SysML v2 and associated specifications target interoperability (https://www.omg.org/spec/SysML/2.0)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "The Ontology Alignment Evaluation Initiative provides recurring controlled evaluations and benchmark results for ontology-matching systems; this covers alignment as a subproblem, not a universal factorization (https://oaei.ontologymatching.org/)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-layered-research-method",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "A proposed prior-art-first workflow: systematic mapping for discovery/classification; conceptual framework analysis as the core concept-synthesis procedure; integrative-review practices for heterogeneous evidence; requirements traceability and scenario tests for validation; provenance for auditability. This combination is not one established named standard."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The target may be better modeled as distinguishable but potentially overlapping layers—referents/observations; conceptual domain model; language/metamodel; formal semantics; inference/proof/calculation; dynamics/operational execution; and mappings/provenance—rather than a single linear semantic spectrum. This must be falsified against representative cases and is not claimed MECE."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-first-pass-map-boundary",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A web-search first-pass map can identify close candidates and research clusters, but without reproducible database-wide retrieval, screening, and citation chaining it is not a completed systematic mapping study and cannot support a proof of nonexistence."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 263,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "DOL formally connects heterogeneous ontologies, models, specifications, and mappings without requiring one universal language."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 264,
+          "end": 331,
+          "quote": "MMT is a broader meta-framework for formal languages and knowledge;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "MMT is a broad meta-framework for foundation-independent representation of formal languages and knowledge."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-institution-logical-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 332,
+          "end": 423,
+          "quote": "institution theory formalizes signatures, sentences, models, satisfaction, and translation;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Institution theory formalizes signatures, sentences, models, satisfaction, and translation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 424,
+          "end": 488,
+          "quote": "model-driven engineering addresses model-to-execution pipelines."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Model-driven engineering addresses a model-to-execution pipeline."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "scenario-evaluation.md records five synthetic cases and source-based capability judgments; no candidate tool was run, so implementation conformance remains unknown."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The source-based five-case evaluation found no single inspected candidate with documented native coverage of proof, executable dynamics, empirical grounding, and cross-formalism preservation across all cases; this supports trying a composition but does not prove a novelty gap."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-composition-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A small composition of existing frameworks, connected by explicit mapping, preservation, execution, observation, and provenance contracts, may meet the target better than one universal representational language; tool-level tests remain necessary."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-tool-level-validation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Run the five representative fixtures in suitable existing tools and record actual results, unsupported obligations, and semantic-preservation checks before making a novelty claim."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-authorized-pr-merge",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u13",
+          "start": 0,
+          "end": 69,
+          "quote": "proceed and merge prs whenever as you see fit. you have full autonomy"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "The user authorized autonomous progress and merging pull requests when the assistant judges the changes ready; merging remains contingent on repository validation and CI."
+    }
+  ],
+  "relations": [
+    {
+      "id": "semantic-factorization-2026-10-18:r:taxonomy-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-taxonomy"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:spectrum-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 124,
+          "quote": "ok i guess i feel ike semantic spectrum is a little underspecied and maybe its somethng more like a canonical factorization?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenger",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:prior-art-target",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 54,
+          "quote": "there must be someone who has already figured this out"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:q-prior-art"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:grounding-interpretation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 179,
+          "quote": "A formal model can describe fictional objects, abstract mathematical objects, or a made-up world. It does not, by itself, establish that its interpretation corresponds to reality."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-grounding"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:c-model-theory"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:capabilities-expand-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 85,
+          "quote": "These are different dimensions, not necessarily successive stages on a single ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:executable-builds-on-structure",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 695,
+          "quote": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        },
+        {
+          "role": "prerequisite",
+          "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:operational-instantiates",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 156,
+          "quote": "The paper Ologs: A Categorical Framework for Knowledge Representation by David Spivak and Robert Kent is unusually close to the direction you're describing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-operational-semantics"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mece-qualifies",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 289,
+          "quote": "i geuss i feel liek there are two ways maybe of doing this and maybe a back and forth between them. one is like a pure ground up formal proff ,a nd the other is to take any possible represntation and try to make sure our canonical factorization accoutns for it and that everything is MECE?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-mece-criterion"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-two-track-method"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:forms-support-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 800,
+          "quote": "on the operational semantics or whatever i gues another way i fam thnking about this is that like f you think about physics there is it my mind an ontology of the types of things that exsits, and then that represetnation can be expanded to include the kindo f relations and laws of physics/consrtaints of the universe etc, and then given inital conditions that should be expandable to a represntation that is actually runnable. or anothe rthing like for math or logic i feel like you could do a similar thing except for math or logic it might be things more akin to calculations or therems or proffs etc. but mu intution is that htis is all just differnt types of represtntationsand some representations also reprent, i dont know the word, but like how there would be run/computed/calcualtedsimulated"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:c-representation-forms"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:ologs-related-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 156,
+          "quote": "The paper Ologs: A Categorical Framework for Knowledge Representation by David Spivak and Robert Kent is unusually close to the direction you're describing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-ologs"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:category-db-research",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 695,
+          "quote": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-category-database"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:capture-goal",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u10",
+          "start": 0,
+          "end": 243,
+          "quote": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-capture-inquiry"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:dol-direct-match",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mmt-meta-framework",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:institutions-logical-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-institution-logical-core"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mde-execution-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:top-level-ontology-distinction",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-top-level-ontology"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:reframing-refines-original",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-methodology-guides-search",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-systematic-mapping"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-conceptual-analysis-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-prior-art-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-llm-assists-not-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-llm-research-role"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-prior-art-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-methodology-first-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:goal-methodology-first"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:integrative-review-evidence-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-integrative-review"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-layered-research-method"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:technical-candidates-cover-layers",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-sysml-kerml"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:architecture-description-distinction",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-iso42010"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:ontology-alignment-is-subproblem",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:bounded-map-not-proof-of-absence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-first-pass-map-boundary"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:layered-hypothesis-awaits-tests",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-dol-heterogeneous-integration-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 263,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-dol"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-heterogeneous-integration"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-mmt-formal-knowledge-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 264,
+          "end": 331,
+          "quote": "MMT is a broader meta-framework for formal languages and knowledge;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-mmt"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mmt-formal-knowledge"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-institution-logical-core-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 332,
+          "end": 423,
+          "quote": "institution theory formalizes signatures, sentences, models, satisfaction, and translation;"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-institutions"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-institution-logical-core"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:claim-mde-execution-layer-source",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 424,
+          "end": 488,
+          "quote": "model-driven engineering addresses model-to-execution pipelines."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-mde"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-mde-execution-layer"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:five-case-evaluation-supports-composition",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "premise",
+          "ref": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits"
+        },
+        {
+          "role": "conclusion",
+          "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:scenario-evaluation-informs-claim",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-candidate-coverage-splits"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:tool-level-test-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-tool-level-validation"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:merge-discretion-captured",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u13",
+          "start": 0,
+          "end": 69,
+          "quote": "proceed and merge prs whenever as you see fit. you have full autonomy"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:goal-authorized-pr-merge"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        }
+      ]
+    }
+  ],
+  "moves": [
+    {
+      "id": "semantic-factorization-2026-10-18:m:01",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u1",
+          "start": 0,
+          "end": 114,
+          "quote": "what is a taxonomy? and how does it relate to an ontology? concisely and if thre isnt a clear meaning then tell me"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-taxonomy"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u1",
+      "after_move_ids": [],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:02",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-taxonomy"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-ontology"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a1",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:01"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:03",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 124,
+          "quote": "ok i guess i feel ike semantic spectrum is a little underspecied and maybe its somethng more like a canonical factorization?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u2",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:02"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:04",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 54,
+          "quote": "there must be someone who has already figured this out"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-prior-art"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u3",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:03"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:05",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u4",
+          "start": 0,
+          "end": 93,
+          "quote": "can you make all these terms like grounding, logical constratins etc concrete with an example"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-grounding"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u4",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:04"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:06",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 179,
+          "quote": "A formal model can describe fictional objects, abstract mathematical objects, or a made-up world. It does not, by itself, establish that its interpretation corresponds to reality."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-grounding"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a4",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:05"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:07",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u5",
+          "start": 0,
+          "end": 356,
+          "quote": "ok i guess with taxonomy it is kind of a claim that is-a is a special/piviledged relation type. why is that and are there others? is 6 kind of like a model theory thing where it is referring to some actual thing. also i feel like there are other aspects we are missing. maybe they are in logical constratins but like cardinality or properites or types etc?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-grounding"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-is-a",
+        "semantic-factorization-2026-10-18:n:c-capabilities"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u5",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:06"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:08",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 85,
+          "quote": "These are different dimensions, not necessarily successive stages on a single ladder."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-capabilities"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a5",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:07"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:09",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 695,
+          "quote": "i guess i am stil confused abotu the role of groudning. lcan you give me another example? on a rigroous foundation do you think category theory might be relevant? database theory? if thery are not dont jsay they are because i dont really understnad them but i feel like there should be soe formalization of ontology engineering through something like a cnaonical facorization of the possible forms of things in the semantic spectrum and i am sure this is alreayd worked out. another thing im thinking about is kind of like an executibale or oepration ontology. i dont know the lnaguage but i would think like a cellular automata could be simply described as a type of ontology if done correctly."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model",
+        "semantic-factorization-2026-10-18:n:c-category-database"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u6",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:08"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:10",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 156,
+          "quote": "The paper Ologs: A Categorical Framework for Knowledge Representation by David Spivak and Robert Kent is unusually close to the direction you're describing."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-operational-semantics",
+        "semantic-factorization-2026-10-18:n:c-ologs"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a6",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:09"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:11",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u7",
+          "start": 0,
+          "end": 208,
+          "quote": "i feel like your grounding example wasnt as simple or cocncrete as i am looking fo rbut maybe i am missing osmehting. if you just mean like a prose diescription of hey this is a model of X i guess thats fine."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-two-track-method",
+        "semantic-factorization-2026-10-18:n:c-mece-criterion"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u7",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:10"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:12",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 289,
+          "quote": "i geuss i feel liek there are two ways maybe of doing this and maybe a back and forth between them. one is like a pure ground up formal proff ,a nd the other is to take any possible represntation and try to make sure our canonical factorization accoutns for it and that everything is MECE?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-representation-forms"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u8",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:11"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:13",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 800,
+          "quote": "on the operational semantics or whatever i gues another way i fam thnking about this is that like f you think about physics there is it my mind an ontology of the types of things that exsits, and then that represetnation can be expanded to include the kindo f relations and laws of physics/consrtaints of the universe etc, and then given inital conditions that should be expandable to a represntation that is actually runnable. or anothe rthing like for math or logic i feel like you could do a similar thing except for math or logic it might be things more akin to calculations or therems or proffs etc. but mu intution is that htis is all just differnt types of represtntationsand some representations also reprent, i dont know the word, but like how there would be run/computed/calcualtedsimulated"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-prior-art"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+        "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u9",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:12"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:14",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a10",
+          "start": 0,
+          "end": 661,
+          "quote": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reframe",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-reframed-scope"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a10",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:13"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:15",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "scope",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-prior-art-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-methodology-first"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u11",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:14"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:16",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+        "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+        "semantic-factorization-2026-10-18:n:c-requirements-traceability"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a11",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:15"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:17",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+        "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+        "semantic-factorization-2026-10-18:n:c-requirements-traceability",
+        "semantic-factorization-2026-10-18:n:c-integrative-review"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-layered-research-method",
+        "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a12",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:16"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:18",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "connect",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde",
+        "semantic-factorization-2026-10-18:n:c-sysml-kerml",
+        "semantic-factorization-2026-10-18:n:c-iso42010",
+        "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:17"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:19",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-tool-level-validation"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
+      "after_move_ids": [],
+      "inference_family": "abduction"
+    }
+  ],
+  "stance_events": [],
+  "question_events": [
+    {
+      "id": "semantic-factorization-2026-10-18:qe:1",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-taxonomy",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:a1",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-ontology"
+      ],
+      "resolution_basis": "Assistant supplied concise working definitions; user did not explicitly confirm closure.",
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:2",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 54,
+          "quote": "there must be someone who has already figured this out"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "open",
+      "actor_id": "participant:user",
+      "at_message_id": "semantic-factorization-2026-10-18:u3",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:3",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a7",
+          "start": 0,
+          "end": 237,
+          "quote": "Grounding is not just adding prose that says \"this models X.\" A declaration of intended meaning is one part of it; establishing or maintaining the actual correspondence may require identifiers, measurements, observations, or other links."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-grounding",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:a7",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory"
+      ],
+      "resolution_basis": "Assistant distinguished formal interpretation from connection to intended real-world referents; user continued refining the framework.",
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:4",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u10",
+          "start": 0,
+          "end": 243,
+          "quote": "ok check out my inquery graph repo and then fill out the inquery gaph for this conversation and then lets proceed looking for someonie who has alreayd wokrked this out because i dont want to do this myself and someone must have already done it"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "reopened",
+      "actor_id": "participant:user",
+      "at_message_id": "semantic-factorization-2026-10-18:u10",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-dol",
+        "semantic-factorization-2026-10-18:n:c-mmt",
+        "semantic-factorization-2026-10-18:n:c-institutions",
+        "semantic-factorization-2026-10-18:n:c-mde"
+      ],
+      "resolution_basis": "A targeted prior-art investigation found strong precedents (DOL, MMT, institution theory, MDE), but whether any framework supplies a universal MECE factorization remains unverified.",
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:5",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a13",
+          "start": 0,
+          "end": 936,
+          "quote": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "deferred",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:a13",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "resolution_basis": "The source-based five-case evaluation narrows the promising composition but does not establish a universal factorization or a residual novelty gap; actual tool tests are next.",
+      "replacement_id": null
+    }
+  ],
+  "extractions": [
+    {
+      "method": "manual_curated_excerpt_map",
+      "provider": null,
+      "model": null,
+      "prompt_version": "1.0.0",
+      "notes": [
+        "Selected source excerpts were entered manually from visible conversation text.",
+        "All semantic interpretations remain proposed; no stance event is inferred from mere continuation or lack of objection."
+      ]
+    }
+  ],
+  "notes": [
+    "The reusable prior-art-first research protocol is in research-protocol.md; the method is a proposed combination of established components, not one named standard.",
+    "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
+    "scenario-evaluation.md defines five synthetic fixtures and source-based capability judgments; it does not report DOL/MMT/SysML/Modelica tool execution.",
+    "Current candidate synthesis is composition-first: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL plus SOSA/SSN and PROV-O for taxonomy/observations/provenance; OAEI for ontology-matching evaluation.",
+    "No universal canonical/MECE factorization or novel contribution has been established. Next: run the small fixtures in actual tools, record outputs and mapping/preservation failures, then compare to requirements R01-R18.",
+    "The user explicitly authorized autonomous progress and merging when judged fit. This permits a merge decision but does not waive graph validation or CI."
+  ]
+}
