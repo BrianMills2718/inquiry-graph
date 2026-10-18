@@ -1,6 +1,9 @@
 """Regression controls for continuation-state preservation, using no external LLM."""
 import json
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from inquiry_graph.validate import validate
 from inquiry_graph.views import open_questions
