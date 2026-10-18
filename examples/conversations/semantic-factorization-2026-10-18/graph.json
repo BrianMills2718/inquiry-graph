@@ -235,6 +235,14 @@
           "text": "The five-case source-based desk evaluation now covers physics plus simulation, mathematics plus proof, Rule 30 cellular automata, empirical taxonomy with observations, and cross-formalism translation. It distinguishes documented core coverage from partial support, composition requirements, and out-of-scope areas, with explicit synthetic test fixtures and expected outputs. The evidence favors a compositional approach: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL, SOSA/SSN, and PROV-O for taxonomy, observations, and provenance; and OAEI for ontology-matching evaluation. No universal MECE factorization has been established. Tool-level tests remain outstanding, so novelty is not yet demonstrated. Before merging, full schema and relation-signature validation is being applied to the graph; the candidate frameworks have not been executed in their tools.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a14",
+          "actor_id": "participant:assistant",
+          "ordinal": 28,
+          "text": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -986,6 +994,81 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "The user authorized autonomous progress and merging pull requests when the assistant judges the changes ready; merging remains contingent on repository validation and CI."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-fixture-oracle-checks",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Standalone Python checks verified that the Rule 30 trace matches the six recorded states, all-zero is a fixed point, and RK4 oscillator output agrees with analytic values at 0, π/2, π within about 2.081e-13 maximum absolute error. These checks validate the expected fixtures, not any candidate framework."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-fixtures-internally-consistent",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The Rule 30 and harmonic-oscillator test oracles are internally consistent under the stated update and integration conventions; bounded arithmetic and toy-mapping checks also passed. These are sanity tests, not a proof of a universal theorem or semantic preservation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-local-fol-operational-metamodel",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "A separate existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, arity/sort rejection, and the point that truth in one structure does not establish semantic consequence. It is adjacent implementation evidence, not a run of the MMT executable or a general proof assistant."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-local-fol-evidence-boundary",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The existing FOL Operational Metamodel prototype demonstrates useful source import and bounded finite-model evaluation, but the tested suite does not establish general theorem proving, DOL mappings, executable dynamics, or empirical grounding."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-proof-translation-tests",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Extend the existing formal-logic prototype with one checkable theorem and one explicit cross-formalism translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
     }
   ],
   "relations": [
@@ -1858,6 +1941,126 @@
           "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:oracle-checks-support-case-fixtures",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-fixture-oracle-checks"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:local-fol-project-is-adjacent-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-local-fol-operational-metamodel"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-mmt"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:finite-model-evidence-boundary",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-local-fol-evidence-boundary"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-model-theory"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:proof-and-mapping-tests-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:c-local-fol-operational-metamodel"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-proof-translation-tests"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:oracle-tests-do-not-prove-candidate-coverage",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-fixtures-internally-consistent"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
+        }
+      ]
     }
   ],
   "moves": [
@@ -2371,6 +2574,37 @@
       "at_message_id": "semantic-factorization-2026-10-18:a13",
       "after_move_ids": [],
       "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:20",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a14",
+          "start": 0,
+          "end": 1082,
+          "quote": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation",
+        "semantic-factorization-2026-10-18:n:h-composition-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-fixture-oracle-checks",
+        "semantic-factorization-2026-10-18:n:claim-fixtures-internally-consistent",
+        "semantic-factorization-2026-10-18:n:c-local-fol-operational-metamodel",
+        "semantic-factorization-2026-10-18:n:claim-local-fol-evidence-boundary",
+        "semantic-factorization-2026-10-18:n:goal-proof-translation-tests"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a14",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:19"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -2503,11 +2737,12 @@
     }
   ],
   "notes": [
-    "The reusable prior-art-first research protocol is in research-protocol.md; the method is a proposed combination of established components, not one named standard.",
+    "The reusable prior-art-first research protocol is stored in research-protocol.md; it is a proposed combination of established components, not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
-    "scenario-evaluation.md defines five synthetic fixtures and source-based capability judgments; it does not report DOL/MMT/SysML/Modelica tool execution.",
-    "Current candidate synthesis is composition-first: DOL/MMT/institution theory for formal integration; Modelica/FMI or SysML v2/KerML for selected executable models; SKOS/OWL plus SOSA/SSN and PROV-O for taxonomy/observations/provenance; OAEI for ontology-matching evaluation.",
-    "No universal canonical/MECE factorization or novel contribution has been established. Next: run the small fixtures in actual tools, record outputs and mapping/preservation failures, then compare to requirements R01-R18.",
-    "The user explicitly authorized autonomous progress and merging when judged fit. This permits a merge decision but does not waive graph validation or CI."
+    "scenario-evaluation.md defines five synthetic fixtures, source-based candidate capability judgments, standalone Python oracle checks, and adjacent implementation evidence from an existing FOL Operational Metamodel workspace.",
+    "The Rule 30 trace and harmonic oscillator oracle checks passed; the oscillator RK4 maximum absolute error at the three target times was about 2.081e-13. The user's separate FOL Operational Metamodel workspace passed 21 tests for MMT OMDoc import and a bounded finite-model evaluator.",
+    "These results do not constitute a DOL/MMT/SysML/Modelica conformance run. Next: add a checkable theorem and translation/preservation test to the existing prototype, then run dynamic modeling in an appropriate tool.",
+    "No universal canonical/MECE factorization or novel contribution has been established. Compare actual implementation results to R01-R18 before writing a residual-gap statement.",
+    "The user explicitly authorized autonomous progress and merging when judged fit. PR #212 was merged only after graph contract validation and successful CI."
   ]
 }
