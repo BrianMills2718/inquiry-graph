@@ -33,12 +33,15 @@ def get_fixture():
 def cutoff_graph():
     """Cut AFTER a13, pruning every semantic record unsupported by surviving messages."""
     g = Graph.model_validate_json(GRAPH.read_text(encoding="utf-8"))
+    # Baseline B must reproduce the earlier *unreconciled* graph. The canonical
+    # graph now also carries exact terminal excerpts, but those are withheld
+    # from B to preserve a valid control; only C receives that evidence.
+    original = "semantic-factorization-2026-10-18:conversation"
+    g.conversations = [c for c in g.conversations if c.id == original]
+    if len(g.conversations) != 1:
+        raise ValueError("Expected exactly one original curated conversation")
     last = get_fixture()["cutoff_message_ordinal"]
     g.conversations[0].messages = [m for m in g.conversations[0].messages if m.ordinal <= last]
-    # Original graph is one curated conversation. Reject surprise second conversations:
-    # allowing extra material would contaminate the historical baseline.
-    if len(g.conversations) != 1:
-        raise ValueError("Unexpected number of baseline conversations")
     mids = {m.id for m in g.conversations[0].messages}
     relevant = lambda obj: all(a.message_id in mids for a in obj.anchors)
     g.nodes = [x for x in g.nodes if relevant(x)]

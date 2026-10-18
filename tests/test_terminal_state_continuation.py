@@ -68,3 +68,41 @@ def test_prepare_materials_are_cutoff_safe(tmp_path):
     assert not checks["C_leaks_postcutoff_Lean_in_report"]
     assert not checks["reader_comparison_complete"]
     assert (tmp_path / "out" / "structural_checks.json").exists()
+
+
+def test_current_canonical_graph_exposes_source_grounded_terminal_tasks():
+    from inquiry_graph.model import Graph
+    from inquiry_graph.views import open_questions
+    from inquiry_graph.validate import validate
+    from evaluation.terminal_state.experiment import GRAPH
+
+    canonical = Graph.model_validate_json(GRAPH.read_text(encoding="utf-8"))
+    assert validate(canonical)["valid"], validate(canonical)["errors"]
+    slices = [c for c in canonical.conversations if c.id.endswith(":terminal:source-slices")]
+    assert len(slices) == 1
+    excerpts = slices[0].messages
+    assert len(excerpts) == 2
+    case = get_fixture()
+    assert excerpts[0].text == case["integrity_quote"]
+    assert excerpts[1].text == case["terminal_quote"]
+    for m in excerpts:
+        assert m.original_id is None and m.timestamp is None
+        assert m.actor_id == "participant:assistant"
+
+    agenda = open_questions(canonical)
+    tasks = {row["id"]: row for row in agenda if row["id"].startswith("semantic-factorization-2026-10-18:terminal:")}
+    assert len(tasks) == 2
+    for row in tasks.values():
+        assert row["status"] == "open"
+        assert row["review_status"] == "proposed"
+        assert row["actor_id"] == "participant:assistant"
+        assert row["anchors"][0]["quote"] in {case["integrity_quote"], case["terminal_quote"]}
+    texts = [row["text"] for row in tasks.values()]
+    assert any("five-case" in t and "source-supported" in t for t in texts)
+    assert any("relation-role signatures" in t for t in texts)
+
+    # Historical control B still suppresses corrected source excerpts and later
+    # proofs; C alone adds the exact final-response evidence.
+    baseline = cutoff_graph()
+    assert len(baseline.conversations) == 1
+    assert not any(n.id in tasks for n in baseline.nodes)
