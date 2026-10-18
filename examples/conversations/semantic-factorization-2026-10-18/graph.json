@@ -203,6 +203,22 @@
           "text": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u12",
+          "actor_id": "participant:user",
+          "ordinal": 24,
+          "text": "i approve",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a12",
+          "actor_id": "participant:assistant",
+          "ordinal": 25,
+          "text": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -714,6 +730,111 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Use an established, reusable research methodology to investigate the representation-framework question before adding more ad hoc comparison dimensions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-integrative-review",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Integrative review combines evidence from diverse methodological and theoretical sources through explicit problem formulation, search, evaluation, analysis, and presentation (Whittemore & Knafl, 2005; https://doi.org/10.1111/j.1365-2648.2005.03621.x)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-iso42010",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "ISO/IEC/IEEE 42010:2022 specifies architecture-description structure, viewpoints, and model kinds, and distinguishes an architecture from its description; it does not prescribe all creation methods or tools (https://www.iso.org/standard/74393.html)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-sysml-kerml",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "OMG SysML v2 and KerML are systems-modeling standards; KerML provides the semantic/syntactic foundation for SysML v2 and associated specifications target interoperability (https://www.omg.org/spec/SysML/2.0)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "The Ontology Alignment Evaluation Initiative provides recurring controlled evaluations and benchmark results for ontology-matching systems; this covers alignment as a subproblem, not a universal factorization (https://oaei.ontologymatching.org/)."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-layered-research-method",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "A proposed prior-art-first workflow: systematic mapping for discovery/classification; conceptual framework analysis as the core concept-synthesis procedure; integrative-review practices for heterogeneous evidence; requirements traceability and scenario tests for validation; provenance for auditability. This combination is not one established named standard."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The target may be better modeled as distinguishable but potentially overlapping layers—referents/observations; conceptual domain model; language/metamodel; formal semantics; inference/proof/calculation; dynamics/operational execution; and mappings/provenance—rather than a single linear semantic spectrum. This must be falsified against representative cases and is not claimed MECE."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-first-pass-map-boundary",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A web-search first-pass map can identify close candidates and research clusters, but without reproducible database-wide retrieval, screening, and citation chaining it is not a completed systematic mapping study and cannot support a proof of nonexistence."
     }
   ],
   "relations": [
@@ -1250,6 +1371,150 @@
           "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:integrative-review-evidence-layer",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-integrative-review"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:c-layered-research-method"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:technical-candidates-cover-layers",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-sysml-kerml"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:architecture-description-distinction",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-iso42010"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:ontology-alignment-is-subproblem",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "qualifies",
+      "bindings": [
+        {
+          "role": "qualification",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-alignment-evaluation"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:bounded-map-not-proof-of-absence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "qualifies",
+      "bindings": [
+        {
+          "role": "qualification",
+          "ref": "semantic-factorization-2026-10-18:n:c-first-pass-map-boundary"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:layered-hypothesis-awaits-tests",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "cause",
+          "ref": "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+        },
+        {
+          "role": "effect",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
     }
   ],
   "moves": [
@@ -1676,6 +1941,36 @@
         "semantic-factorization-2026-10-18:m:15"
       ],
       "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:17",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a12",
+          "start": 0,
+          "end": 1058,
+          "quote": "First-pass web mapping found a methodological split: Jabareen’s conceptual framework analysis is the closest procedural match for synthesizing linked concepts from multidisciplinary literature; systematic mapping is the discovery/classification layer; Whittemore and Knafl’s integrative review helps combine heterogeneous theoretical and empirical sources. On the technical side, DOL remains the closest direct candidate for heterogeneous ontology/model/specification integration; MMT and institution theory cover general formal-language/logical-system structure; MDE and SysML v2/KerML cover engineering models and execution; ISO/IEC/IEEE 42010 separates architecture from its descriptions/viewpoints; ologs support categorical schemas and mappings; and OAEI supplies an evaluation community for ontology alignment. The sources do not establish a universal MECE factorization. This is a bounded first-pass map, not a completed systematic review. Next: test the layered hypothesis against the five established cases and score candidates from primary sources."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "synthesize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+        "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+        "semantic-factorization-2026-10-18:n:c-requirements-traceability",
+        "semantic-factorization-2026-10-18:n:c-integrative-review"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-layered-research-method",
+        "semantic-factorization-2026-10-18:n:h-layered-representation-architecture"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a12",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:16"
+      ],
+      "inference_family": "abduction"
     }
   ],
   "stance_events": [],
@@ -1790,7 +2085,7 @@
       "answer_ids": [
         "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
       ],
-      "resolution_basis": "A proposed protocol file was created to formalize the next research process; execution of the systematic mapping remains the next research step.",
+      "resolution_basis": "A proposed protocol was supplemented by a first-pass methodological and technical prior-art map. CFA is the provisional synthesis core; the technical-framework gap remains open pending primary-source tests across representative cases.",
       "replacement_id": null
     }
   ],
@@ -1807,13 +2102,10 @@
     }
   ],
   "notes": [
-    "Primary inquiry: determine whether existing work already provides a principled, possibly compositional factorization of semantic representations spanning descriptive, formal, and executable forms.",
-    "Distinguish the object of factorization: syntax/language, mathematical interpretation, represented system, and available operations may not be the same target.",
-    "Candidate prior-art leads mentioned in the conversation include the ontology spectrum, model theory, database theory, category-theoretic ologs, and operational semantics. These are leads, not claims of a complete solution.",
-    "The requested MECE criterion needs a defined universe and decomposition target; capability combinations may be more appropriate than exclusive bins.",
-    "This capture does not authorize changes to Inquiry Graph's shared schema.",
-    "Conversation extension: user endorses the general prior-art-first pattern and asks to keep the graph current and advise on next steps.",
     "A proposed reusable research protocol is stored in research-protocol.md. It combines systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance; it is explicitly not represented as one established named standard.",
-    "Next action: apply the protocol rather than expanding the comparison matrix ad hoc; first formalize the goal and requirements, then systematically map methods for cross-disciplinary conceptual synthesis and compare the closest frameworks against test cases."
+    "First-pass source-backed mapping is stored in systematic-mapping.md. It separates the method for research synthesis from the technical frameworks being investigated. It is not a completed systematic review and does not prove nonexistence of a canonical factorization.",
+    "Current method hypothesis: conceptual framework analysis is the core concept-synthesis procedure, paired with systematic mapping for discovery, integrative review practices for heterogeneous evidence, traceability/scenario tests for validation, and provenance for auditability.",
+    "Current technical hypothesis: DOL is the closest direct formal integration candidate; MMT and institution theory, MDE/SysML, ISO 42010, ologs, upper ontologies, and ontology alignment contribute to distinct adjacent subproblems.",
+    "Next action: test the provisional layered representation hypothesis against physics + simulation, math + proof, cellular automata, empirical taxonomy, and cross-formalism translation. Score the strongest candidates from primary sources before drawing a residual-gap conclusion."
   ]
 }
