@@ -162,3 +162,36 @@ Highest-value next steps:
 4. Reopen the broader prior-art search if a tool test demonstrates a gap; otherwise adopt the smallest composition that satisfies the goal.
 
 A novelty claim should wait until these implementation tests and additional citation chaining are complete.
+
+
+## 10. Independent fixture-oracle checks (executed 2026-10-18)
+
+I ran a small standalone Python check of the **expected behavior of the synthetic fixtures**, separate from all candidate frameworks:
+
+| Check | Actual result | What it establishes | What it does not establish |
+|---|---|---|---|
+| Rule 30, 15-cell periodic ring, synchronous updates, first six states | Computed trace exactly matched all six expected bit strings recorded above; all-zero state was also confirmed as a fixed point | The cellular-automaton rule, boundary convention, and listed trace oracle agree | No DOL, MMT, SysML, or other modeling tool was run |
+| Harmonic oscillator, RK4 step size at most 0.001, targets \(0,\pi/2,\pi\) | Maximum absolute error over position and velocity at target times: approximately \(2.081\times 10^{-13}\) versus the analytic reference | The selected equations, analytic reference values, and numerical sanity check are internally consistent | It does not validate a candidate simulator or any physical measurements |
+| Arithmetic identity \(n+0=n\), for \(n=0,\ldots,1000\) | All bounded checks passed | A simple sanity test catches no fixture error over those inputs | Finite testing is not a proof of the universal theorem; no proof assistant was used |
+| Toy translation of integer age values from Person.age to Human.ageYears, for values 0–1000 | Constructed 1,001 source Person records and corresponding Human records; all integer/nonnegative age and source-identity checks passed. A negative control that maps day counts directly to years was detected. | The toy mapping contract and a unit-mismatch counterexample are executable checks. | This is a bounded, hand-coded check, not a verified framework translation or general preservation proof |
+
+These were executed in Python on the connected workstation. They are **fixture-oracle tests**, not candidate-framework conformance tests.
+
+## 11. Adjacent implementation evidence already available in the workspace
+
+A separate existing workspace project, **FOL Operational Metamodel** (not part of this repository), provides related implementation evidence:
+
+- Its generated/pinned-fol-ir.json snapshot is derived from a pinned compiled MMT first-order-logic OMDoc artifact; its regression test fixes the snapshot's source hash and expected 16 nodes / 58 edges.
+- Running the command python -m unittest discover -s tests -v in that project completed **21 tests successfully** on 2026-10-18.
+- The tested capabilities include preserving MMT theory/constant identities and explicit declaration dependencies while importing compiled OMDoc; a small finite-structure evaluator checks formula satisfaction and rejects predicate arity/sort mistakes.
+- A dedicated test asserts that a premise being true and a conclusion false in one finite structure does **not** establish semantic consequence. The README also explicitly says its fallback source extractor does not replace MMT parsing/type-checking.
+
+This matters because it is a concrete existing composition of formal-source import, structural representation, a bounded semantic evaluator, and an inspectable graph projection. It should be reused as an adjacent prototype rather than rebuilt from scratch. Its scope remains limited: the tests do not show the MMT executable checking the five fixtures, a universal theorem prover, DOL mappings, Modelica execution, or empirical grounding.
+
+## 12. Updated status and next action
+
+- **Validated:** the five fixture oracles are internally consistent under the stated bounded checks; the connected workspace's FOL importer/evaluator regression suite passes.
+- **Still source-assessed only:** candidate capability ratings for DOL, MMT as a framework, SysML v2/KerML, Modelica/FMI, SKOS/SOSA/SSN/PROV-O, and OAEI.
+- **Still outstanding:** native tool runs for a formal theorem/proof, a DOL cross-formalism mapping with an explicit preservation check, and an actual Modelica/FMI or SysML behavior-model execution.
+
+The high-value next move is to extend the existing formal-logic prototype with **one proof-producing/checkable theorem and one explicit translation/preservation test**, then compare that actual capability boundary with MMT/institution theory/DOL. For dynamics, run the oscillator in a dedicated Modelica/FMI environment when one is available. Do not treat a fixture passing in standalone Python as evidence that the candidate frameworks implement it.

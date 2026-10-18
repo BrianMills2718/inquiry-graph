@@ -193,15 +193,18 @@ The strongest current candidate composition is conditional, not mandatory: DOL f
 
 ### Next research action
 
-Prioritize implementation evidence before further expanding the feature matrix:
+Some fixture sanity checks and adjacent local implementation tests are now complete; candidate-framework conformance tests are still outstanding.
 
-1. Run the arithmetic-theorem fixture in an MMT-backed or suitable proof-assistant workflow; record the logic, formal statement, proof/checker, and result.
-2. Run the oscillator fixture in Modelica/FMI tooling and compare with the analytic oracle; preserve solver/settings and the run artifact.
-3. Encode the Rule 30 case in one executable behavior model and test boundary conditions, synchronous update, and the specified trace.
-4. Create a minimal pair of formal OMS and mapping for DOL; check precisely which coherence/preservation obligations the tool supports.
-5. Record whether tool-specific boundaries confirm or refute the source-based ratings. Only then write a requirement-specific residual-gap statement.
+1. **Reuse the existing FOL Operational Metamodel workspace project.** Its pinned compiled MMT FOL OMDoc import/evaluator suite passed 21 tests on 2026-10-18. The tests preserve MMT declaration identities, check a small finite-model satisfaction evaluator, reject sort/arity errors, and explicitly distinguish truth in one finite structure from semantic consequence. This is useful adjacent implementation evidence, not a test of the MMT executable or a general proof assistant.
+2. **Add one checkable proof test** to that prototype: formalize a basic arithmetic theorem in a specified logic, identify the actual proof object/checker, and record whether it proves the theorem rather than merely testing bounded examples or evaluating one model.
+3. **Add one formal translation test:** encode the Person/age → Human/ageYears toy mapping in a suitable formalism and check a stated preservation condition; include a negative variant where a unit/cardinality mismatch should fail.
+4. **Run one native dynamic-model test** in a real Modelica/FMI or SysML v2-capable environment; save the model, tool/version, execution settings, output trace, and comparison to the oscillator oracle. The independent RK4 calculation only validates the oracle, not a candidate solver.
+5. **Run a minimal DOL mapping/coherence test** for two formal OMS in a conforming environment when available. Record which preservation/coherence checks actually ran and what they guarantee.
+6. Compare actual results against R01–R18, revise the evidence status, and only then write a requirement-specific residual-gap statement.
 
-In parallel, continue backward/forward citation chaining for DOL/MMT and for any candidate composition or meta-framework cited by the primary sources. Do not make a “no one has done this” claim from the current search.
+The standalone Python oracle checks passed: the Rule 30 trace matches the six recorded states; the oscillator RK4 check's maximum absolute error at t = 0, π/2, π was approximately 2.081e-13; bounded arithmetic and toy mapping checks passed. These are fixture sanity checks, not proof of a theorem or evidence that candidate tools implement the fixtures.
+
+In parallel, continue backward/forward citation chaining for DOL/MMT and for any candidate composition or meta-framework cited by primary sources. Do not make a “no one has done this” claim from the bounded search.
 
 ## Methodological starting points
 
