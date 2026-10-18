@@ -626,7 +626,7 @@
       ],
       "origin": "inferred",
       "review_status": "proposed",
-      "kind": "qualifies",
+      "kind": "distinguishes",
       "bindings": [
         {
           "role": "criterion",
