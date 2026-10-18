@@ -33,7 +33,8 @@ def test_convert_accepts_open_task_and_preserves_speaker():
         "question_events": [{
             "speaker": "assistant", "question": "comparison", "status": "open",
             "message": 2, "quote": progress.text}],
-        "stances": [{"speaker": "user", "target": "comparison", "stance": "endorses",\n                     "message": 1, "quote": request.text}]
+        "stances": [{"speaker": "user", "target": "comparison", "stance": "endorses",
+                     "message": 1, "quote": request.text}]
     })
     drops = Counter()
     candidates = convert(conv, 0, out, drops)
