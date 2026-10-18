@@ -1,0 +1,13 @@
+library ViewSmokeTest
+
+logic CommonLogic
+
+spec lower =
+  . (forall (x y) (iff (a x y) (b x y)))
+end
+
+spec upper =
+  . (forall (x y) (iff (A x y) (B x y)))
+end
+
+view v : { lower with a |-> A , b |-> B } to upper
