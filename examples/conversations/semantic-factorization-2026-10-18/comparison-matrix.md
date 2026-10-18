@@ -139,3 +139,33 @@ Example for DOL:
 - **Open gap for our research:** This does not, by itself, establish how a model is empirically grounded or executed.
 
 This pattern should be filled in for each candidate. It prevents the table from treating “supports mappings” as if that were itself the motivating problem or the practical benefit.
+
+
+## 7. Candidate extensions identified by primary-source checks
+
+This supplement is intentionally separate from the original matrix rather than silently changing its axes. See **[scenario-evaluation.md](scenario-evaluation.md)** for the detailed source-grounded case evaluations and explicit caveats.
+
+| Candidate | Distinct obligation it helps cover | Evidence-based scope / boundary |
+|---|---|---|
+| **SysML v2 / KerML** | Engineering system structure and behavior; model semantics and model execution in conforming implementations | The OMG SysML v2.0 language specification includes abstract/concrete syntax, semantic foundations, and semantic-conformance expectations including model execution. This is not proof that any particular tool executes every model or that SysML is a general-purpose proof assistant. [OMG specification](https://www.omg.org/spec/SysML/2.0/Language/PDF) |
+| **Modelica** | Continuous, discrete, and heterogeneous multi-domain equations for system models | The Modelica Association's current specification describes differential, algebraic, and discrete equations and tool-based simulation. [Modelica specification](https://specification.modelica.org/) |
+| **Functional Mock-up Interface (FMI)** | Interchange of dynamic models, model exchange, co-simulation, scheduled execution | FMI defines interface types and their call/communication contracts. The overall co-simulation algorithm is not prescribed by FMI itself. [FMI specification](https://fmi-standard.org/docs/main/) |
+| **SKOS** | Taxonomies and other knowledge-organization schemes | Supports identified concepts, labels, broader/narrower relations, notes, concept schemes, and mappings. Its deliberately flexible semantics are not a general formal classification theory. [W3C SKOS](https://www.w3.org/TR/skos-reference/) |
+| **SOSA/SSN** | Observation records, sensors/procedures, features and properties of interest, samples, results, and time | Provides a reusable semantic description of observation-related artifacts. It does not by itself establish the empirical warrant or calibration of an observed claim. [W3C SSN/SOSA](https://www.w3.org/TR/vocab-ssn/) |
+| **PROV-O** | Provenance among entities, activities, agents, use, generation, and derivation | A provenance interchange vocabulary; useful for tracking models, code, runs, data, and decisions. It does not supply domain truth or semantic-preservation proofs. [W3C PROV-O](https://www.w3.org/TR/prov-o/) |
+| **OAEI** | Evaluation and benchmarking of ontology-matching systems | Provides datasets/tasks/reference alignments for defined ontology-matching tracks, including preliminary 2026 results. Evaluating a matcher is narrower than proving a general mapping semantics. [OAEI 2026](https://oaei.ontologymatching.org/2026/) |
+| **ISO/IEC/IEEE 42010:2022** | Architecture descriptions, viewpoints, model kinds, and the distinction between an architecture and its description | Relevant when architecture-description structure matters. It expressly does not specify all processes, models, notations, techniques, or tools used to create/manage an architecture description. [ISO standard](https://www.iso.org/standard/74393.html) |
+
+## 8. Scenario-based findings (provisional)
+
+Judgment labels in the linked evaluation mean: **Core/documented**, **conditional/partial**, **composition required**, **not core**, and **unknown**. These are not aggregate scores.
+
+| Case | Strongest directly relevant candidate(s) | Main composition boundary |
+|---|---|---|
+| Physics theory + simulation + observations | Modelica/FMI for dynamic simulation; SOSA/SSN for observations; PROV-O for provenance | Theory-to-model mapping, solver settings, uncertainty/calibration, and model-to-measurement validation remain explicit obligations. DOL/MMT/institution theory may relate formalized theories but do not run a numerical solver. |
+| Math theory + theorem + checked proof | Suitable logic/proof assistant; MMT for modular multi-foundation formal knowledge; institution theory for logic-independent semantics | Model satisfaction, derivability, proof artifact format, and checker behavior must not be conflated. DOL's checking depends on underlying OMS languages/services. |
+| Cellular automaton | A precise transition-system representation plus a runtime; MMT/institution theory for formal semantics/properties; Modelica/FMI or a suitable behavioral tool for execution | State-space and local rule, boundary condition, initialization, synchronous update, trace, and invariants need an explicit contract. No candidate was tool-tested in this pass. |
+| Empirical taxonomy | SKOS for knowledge organization, OWL/domain ontologies for formal axioms, SOSA/SSN for observations, PROV-O for provenance | A taxonomy is not its own empirical warrant. Keep taxon/concept, specimen/instance, observed properties, classification decision, uncertainty, and revision history distinct. |
+| Cross-formalism translation | DOL, MMT, and institution theory; OAEI for ontology-matching evaluation | A mapping needs a stated preservation goal (equivalence, refinement, consequence, operational correspondence, or loss) and a verification plan; a correspondence alone is not a preservation theorem. |
+
+The original cross-cutting dimensions remain provisional. These tests support a faceted/contract-based hypothesis more strongly than a single linear “semantic spectrum,” but do not yet prove that any particular decomposition is exhaustive, minimal, independent, or MECE.
