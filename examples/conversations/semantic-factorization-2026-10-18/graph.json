@@ -243,6 +243,14 @@
           "text": "The fixture oracles have now been independently checked: a standalone Python RK4 integration of the harmonic oscillator matched analytic positions and velocities at t = 0, π/2, π with maximum absolute error about 2.081e-13; the computed Rule 30 trace matched all six expected rows and the all-zero state was confirmed as a fixed point; bounded checks of n+0=n for n=0..1000 and the toy age-field mapping passed. Separately, the existing FOL Operational Metamodel workspace passed 21 Python unit tests covering import of a pinned compiled MMT FOL OMDoc artifact, finite-structure formula satisfaction, sort/arity rejection, and the distinction between truth in one structure and semantic consequence. These checks validate the fixture oracles and adjacent local code, not the candidate frameworks themselves; DOL/MMT/SysML/Modelica runtimes have not been run against the five fixtures. Next: extend the existing formal-logic prototype with one checkable theorem and one explicit translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a15",
+          "actor_id": "participant:assistant",
+          "ordinal": 29,
+          "text": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -1069,6 +1077,51 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Extend the existing formal-logic prototype with one checkable theorem and one explicit cross-formalism translation/preservation test, then run a dynamic model in a suitable Modelica/FMI or SysML environment."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-toy-mapping-execution",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "A bounded Python test constructed 1,001 Person records with nonnegative integer age, mapped them to Human records with ageYears, verified source identity and age preservation, and detected a deliberate negative control that mapped days to years without conversion. This tests the fixture contract, not a framework implementation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-toy-mapping-preservation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "For the 1,001-row identity mapping, all mapped ages preserved the source integer age and remained nonnegative; a naive days-to-years identity mapping was rejected by a negative control. This is bounded hand-coded evidence only."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-toy-mapping-limits",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The passing toy mapping test does not prove semantic preservation for arbitrary structures, units, cardinalities, or transformations, and it is not a DOL/MMT translation test."
     }
   ],
   "relations": [
@@ -2061,6 +2114,78 @@
           "ref": "semantic-factorization-2026-10-18:n:h-composition-first"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:toy-mapping-test-updates-scenario",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-toy-mapping-execution"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:toy-mapping-preservation-claim",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-toy-mapping-preservation"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-toy-mapping-execution"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:toy-mapping-limit-claim",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-toy-mapping-limits"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-toy-mapping-preservation"
+        }
+      ]
     }
   ],
   "moves": [
@@ -2605,6 +2730,34 @@
         "semantic-factorization-2026-10-18:m:19"
       ],
       "inference_family": "deduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:21",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a15",
+          "start": 0,
+          "end": 508,
+          "quote": "The toy mapping case was strengthened from a superficial sanity check to an actual bounded mapping: I generated 1,001 Person records with nonnegative integer ages, mapped each record to Human.ageYears, and verified every mapped age matched its source and remained a nonnegative integer. A negative control that copied an age-in-days value directly into ageYears was detected as invalid. This remains a bounded hand-coded test, not a proof of general semantic preservation or a test of DOL/MMT/SysML/Modelica."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-five-case-evaluation"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-toy-mapping-execution",
+        "semantic-factorization-2026-10-18:n:claim-toy-mapping-preservation",
+        "semantic-factorization-2026-10-18:n:claim-toy-mapping-limits"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a15",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:20"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -2739,9 +2892,9 @@
   "notes": [
     "The reusable prior-art-first research protocol is stored in research-protocol.md; it is a proposed combination of established components, not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
-    "scenario-evaluation.md defines five synthetic fixtures, source-based candidate capability judgments, standalone Python oracle checks, and adjacent implementation evidence from an existing FOL Operational Metamodel workspace.",
-    "The Rule 30 trace and harmonic oscillator oracle checks passed; the oscillator RK4 maximum absolute error at the three target times was about 2.081e-13. The user's separate FOL Operational Metamodel workspace passed 21 tests for MMT OMDoc import and a bounded finite-model evaluator.",
-    "These results do not constitute a DOL/MMT/SysML/Modelica conformance run. Next: add a checkable theorem and translation/preservation test to the existing prototype, then run dynamic modeling in an appropriate tool.",
+    "scenario-evaluation.md defines five synthetic fixtures, source-based candidate capability judgments, standalone Python oracle checks (including a 1,001-record toy mapping with a unit-mismatch negative control), and adjacent implementation evidence from an existing FOL Operational Metamodel workspace.",
+    "The Rule 30 trace and harmonic oscillator oracle checks passed; oscillator RK4 maximum absolute error at target times was about 2.081e-13. The toy identity mapping preserved 1,001 nonnegative integer ages and a days-to-years negative control failed as intended. The separate FOL Operational Metamodel workspace passed 21 tests for MMT OMDoc import and bounded finite-model evaluation.",
+    "These results do not constitute DOL/MMT/SysML/Modelica conformance runs. Next: add a checkable theorem and translation/preservation test to the existing prototype, then run dynamic modeling in an appropriate tool.",
     "No universal canonical/MECE factorization or novel contribution has been established. Compare actual implementation results to R01-R18 before writing a residual-gap statement.",
     "The user explicitly authorized autonomous progress and merging when judged fit. PR #212 was merged only after graph contract validation and successful CI."
   ]
