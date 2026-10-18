@@ -7,8 +7,9 @@ removed and counted by reason in the returned report; nothing is dropped
 silently and nothing ungrounded is kept.
 
 Scope: content nodes, stances, question status and binary relations. Inquiry
-moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off, so the
-default prompt, cache keys and output are unchanged); see `moves_enabled()`.
+moves are extracted only when INQUIRY_EXTRACT_MOVES=1 (opt-in, default off).
+Prompt versions intentionally change to invalidate old cached replies when terminal task
+capture is enabled; see `moves_enabled()`.
 
 Implements: extraction/live-output-is-grounded-in-the-source
 """
@@ -374,6 +375,10 @@ def convert(conv: Conversation, chunk_index: int, out: LChunk, drops: Counter) -
     for i, s in enumerate(out.stances):
         if s.target not in nodes:
             drops["stance_target_missing"] += 1
+            continue
+        if nodes[s.target].kind in ("task", "work"):
+            # Operational directives and deliverables are never attributed beliefs.
+            drops["task_is_not_stance"] += 1
             continue
         msg, a = ground(s.message, s.quote, need_speaker=s.speaker)
         if a is None:
