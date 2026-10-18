@@ -89,5 +89,74 @@
       "The parsed development graph demonstrates translation structure, not that a particular semantic property is preserved.",
       "A custom DOL specification with a relevant theorem/view obligation, and a Hets deployment with a working checker, are required for a genuine proof check."
     ]
+  },
+  "custom_view_smoketest": {
+    "status": "parsed_development_graph_but_no_proof_result",
+    "source_file": "dol-view-smoketest.dol",
+    "observed_output_url": "http://rest.hets.eu/922497925?json",
+    "library_name": "temp12583315",
+    "graph": {
+      "node_count": 3,
+      "edge_count": 2,
+      "nodes": [
+        {
+          "name": "lower",
+          "logic": "CommonLogic",
+          "axioms": [
+            ". (forall (x y) (iff (a x y) (b x y)))"
+          ]
+        },
+        {
+          "name": "upper",
+          "logic": "CommonLogic",
+          "axioms": [
+            ". (forall (x y) (iff (A x y) (B x y)))"
+          ]
+        },
+        {
+          "name": "v__S",
+          "logic": "CommonLogic",
+          "internal": true,
+          "axioms": []
+        }
+      ],
+      "edges": [
+        {
+          "source": "lower",
+          "target": "v__S",
+          "type": "GlobalDef",
+          "morphism": "id_CommonLogic.ImpredicativeSeq",
+          "symbol_map": [
+            {
+              "from": "a",
+              "to": "A"
+            },
+            {
+              "from": "b",
+              "to": "B"
+            }
+          ]
+        },
+        {
+          "source": "v__S",
+          "target": "upper",
+          "type": "GlobalUnprovenThmInc",
+          "morphism": "id_CommonLogic.ImpredicativeSeq",
+          "view_name": "v"
+        }
+      ]
+    },
+    "automatic_proof_attempt": {
+      "action": "Tools > automatic proofs; selected EProver and CLFol2CFOL:CASL2TPTP_FOF, timeout 20 seconds, clicked Unproven and submitted with Prove.",
+      "observed_output_url": "http://rest.hets.eu/922497925?autoproof=proof&prover=EProver&translation=CLFol2CFOL%3ACASL2TPTP_FOF&timeout=20&includetheorems=on",
+      "result": "nothing to prove",
+      "interpretation": "Despite the development-graph edge type GlobalUnprovenThmInc, the deployed UI/proof workflow did not produce a goal or a proof result for this view. No claim of proof success is made."
+    },
+    "limits": [
+      "The graph demonstrates that a view mapping and an unproven theorem-inclusion edge can be constructed by the public tool.",
+      "No proof/satisfiability/consistency/conservativity/semantic-preservation verdict was obtained; the automatic proof route said nothing to prove and the consistency route said no cons checker found.",
+      "This tiny Common Logic view is a tool-path probe, not the user's Person/Human mapping and not a complete framework evaluation.",
+      "The run ID/URL is temporary; the reproducible DOL source is stored in the repository."
+    ]
   }
 }
