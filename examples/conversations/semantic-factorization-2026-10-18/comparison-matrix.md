@@ -99,3 +99,43 @@ A possible eventual result is **a stack of complementary layers**, not a single 
 - David I. Spivak and Robert E. Kent, [Ologs: A Categorical Framework for Knowledge Representation (2012)](https://doi.org/10.1371/journal.pone.0024274)
 - [Basic Formal Ontology](https://basic-formal-ontology.org/) and [General Formal Ontology](https://www.onto-med.de/ontologies/gfo/)
 - [Logica Universalis: Towards a General Theory of Logic](https://link.springer.com/book/10.1007/978-3-7643-8354-1)
+
+
+## 7. Problem / use-case matrix (separate from capabilities)
+
+This section asks **why someone would use the framework**. A use case names the problem, the user goal, and the useful outcome—not just a feature the framework happens to support. Initial entries are hypotheses to validate against primary sources, case studies, and examples.
+
+| Framework | Problems it is intended to solve | Typical use cases / motivating situations | Useful outcome | When it is a poor fit or needs a companion |
+|---|---|---|---|---|
+| **DOL** | Formal knowledge is split across multiple ontology, modeling, or specification languages; people need to relate those artifacts without forcing them into one language | Combine domain ontologies with system specifications; express that one specification refines or translates another; organize a network of heterogeneous formal theories; state and assess relationships between specifications | An explicit, structured account of how independently expressed formal artifacts relate, including formal conditions that may be checked | When the primary need is to invent a domain ontology, automatically discover correspondences, directly simulate a system, or ground a theory in empirical measurements |
+| **MMT** | Formal knowledge and its foundations are fragmented across different logics, type theories, and formal libraries; formal content is hard to reuse or connect | Represent a formal language and theories expressed in it; connect libraries; formalize translations between theories; build a foundation-independent knowledge infrastructure | Reusable formal content with explicit structure and theory-level relationships, without requiring every subject to share one foundational logic | When the main goal is a domain expert's lightweight taxonomy, an empirical validation workflow, or a runtime simulation rather than formal knowledge management |
+| **Institution theory** | Researchers need a common mathematical way to define and compare different logical systems while preserving their semantic relationships | Define a new logic abstractly; compare logics; prove that a translation preserves satisfaction; formalize specifications in different logical systems | General results that can apply across logical systems instead of being reproved separately for each logic | When users need an out-of-the-box application, user-facing ontology, code-generation pipeline, or full account of physical measurement and simulation |
+| **Model-driven engineering (MDE)** | Software/system complexity makes direct implementation hard to reason about; teams need higher-level models, transformations, and traceability to implementations | Generate code from models; transform models between abstraction levels; validate system designs; execute or simulate models in suitable environments; keep design artifacts aligned with implementations | A path from models to implementations, with repeatable transformations and potentially executable behavior | When the goal is a general theory of meaning, mathematical proof foundations, or ontology of reality independent of a particular engineering domain |
+| **Ologs / categorical knowledge representation** | Domain knowledge is scattered across schemas and vocabularies; teams need a clear conceptual schema and principled mappings between viewpoints | Explain a domain's concepts and functional relationships; align conceptual schemas; connect databases or conceptual models through structure-preserving mappings | A compact, compositional conceptual model that makes categories, relations, and mapping assumptions visible | When the domain requires rich temporal processes, arbitrary logical proof, uncertainty, or executable dynamics beyond the chosen categorical formalism |
+| **BFO / GFO** | Domain ontologies use incompatible or underspecified assumptions about what kinds of entities exist and how categories relate | Design or evaluate domain ontologies; distinguish enduring entities from processes; align domain terms to a shared upper ontology; make ontological commitments explicit | A shared top-level vocabulary and constraints for ontology design and interoperability | When the main problem is representing formal languages themselves, proving theorems, translating arbitrary logics, or executing a model |
+| **Universal logic** | Logic research is fragmented into many systems, making it difficult to state what is general and what depends on a particular logic | Compare logical systems; investigate properties shared across logics; formulate general results without treating one logic as the default | A vocabulary and research program for identifying logic-independent structures and principles | When the target includes non-logical representations, empirical grounding, ontological classification, or runtime execution as first-class problems |
+
+### Use-case prompts for ongoing research
+
+For each framework, answer these questions from its own documentation and published examples:
+
+1. **Who is the user?** (e.g. logician, ontology engineer, software architect, domain scientist, mathematician)
+2. **What pain exists before the framework?** What is difficult, unsafe, expensive, ambiguous, or impossible without it?
+3. **What artifact goes in and what comes out?** Be concrete: theories, mappings, model, generated code, proof, ontology, simulation trace, etc.
+4. **What success criterion does it optimize?** E.g. semantic preservation, reuse, consistency, traceability, executability, conceptual clarity.
+5. **What assumptions does it require?** A fixed logic, formalized input, domain vocabulary, executable semantics, tooling, or human-supplied mappings?
+6. **What does it explicitly not try to solve?** Prefer scope statements and documented limitations over guesses.
+7. **What does it contribute to our broader question?** Does it offer a candidate primitive, a composition rule, a translation mechanism, a grounding relation, or only a useful domain-specific solution?
+
+### Keep problem, mechanism, and capability distinct
+
+Example for DOL:
+
+- **Problem:** Specifications are written in different formal languages and cannot be treated as one homogeneous artifact.
+- **Use case:** A team wants to relate two specifications and state how one refines or translates the other.
+- **Mechanism:** A metalanguage expresses OMS and relationships among them.
+- **Capability:** It can express certain mappings and formal relationships, subject to the underlying languages and supported semantics.
+- **Outcome to evaluate:** Whether the relationship is clear and whether relevant properties can be checked.
+- **Open gap for our research:** This does not, by itself, establish how a model is empirically grounded or executed.
+
+This pattern should be filled in for each candidate. It prevents the table from treating “supports mappings” as if that were itself the motivating problem or the practical benefit.
