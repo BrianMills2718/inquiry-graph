@@ -195,3 +195,30 @@ This matters because it is a concrete existing composition of formal-source impo
 - **Still outstanding:** native tool runs for a formal theorem/proof, a DOL cross-formalism mapping with an explicit preservation check, and an actual Modelica/FMI or SysML behavior-model execution.
 
 The high-value next move is to extend the existing formal-logic prototype with **one proof-producing/checkable theorem and one explicit translation/preservation test**, then compare that actual capability boundary with MMT/institution theory/DOL. For dynamics, run the oscillator in a dedicated Modelica/FMI environment when one is available. Do not treat a fixture passing in standalone Python as evidence that the candidate frameworks implement it.
+
+
+## 13. Z3 solver checks: arithmetic and mapping (executed 2026-10-18)
+
+A native solver check was successfully performed after downloading the official PyPI wheel for z3-solver==5.3.1.0 and verifying its SHA-256 against the published wheel checksum. It was installed with pip's --target option in an isolated temporary directory; the global Python environment was not modified. Exact records are in [solver-checks.json](solver-checks.json).
+
+| Query | Z3 result | Interpretation |
+|---|---|---|
+| Find \(n\in\mathbb{Z}\) with \(n\geq0\) and \(n+0\ne n\) | **UNSAT** | No counterexample exists in the encoded integer theory, so \(n+0=n\) holds for all nonnegative integers under this encoding. Z3 returned an internal proof object (188 characters). |
+| Find a violation given source_age >= 0, dest_age == source_age, and (dest_age < 0 OR dest_age != source_age) | **UNSAT** | No counterexample to the explicitly stated identity-mapping postcondition exists in the encoded integer model. |
+| Find a violation when years >= 0, days == 365 * years, converted_years == days / 365 | **UNSAT** | Division by 365 preserves the original year count for exact day counts under Z3 integer arithmetic. |
+| Find a positive years2 where days2 == 365 * years2 but days2 != years2 | **SAT** | Z3 returned a counterexample: years2 = 1, days2 = 365. Directly copying a day count to a years field is invalid. |
+
+### What this adds
+
+This is stronger than the earlier bounded enumeration: Z3 explored the encoded integer constraints and returned UNSAT for the counterexample queries, rather than merely testing a finite list of values. It also produced a native solver proof object for the arithmetic refutation.
+
+The scope still matters:
+
+- This is a **solver-level SMT proof by refutation**, not a natural-deduction/induction proof authored in Lean, Coq, Isabelle, or MMT, and not a certificate independently checked by a small trusted proof kernel.
+- The mapping postconditions were explicitly encoded in SMT. The result establishes the stated integer properties, not general semantic preservation between arbitrary formalisms.
+- The unit-conversion check assumes exact integer-day counts equal to 365 times the integer-year value. It says nothing about leap years, duration semantics, calendar systems, or empirical age estimates.
+- No DOL, MMT executable, SysML v2/KerML, Modelica, or FMI runtime was exercised by these checks.
+
+### Revised next step
+
+A basic arithmetic theorem and one mapping contract now have solver-level evidence. The most informative unresolved technical tests are to: (1) formalize the theorem in a proof assistant or MMT-native formalization and capture the proof/checking path; (2) exercise a real DOL mapping between two OMS and record actual coherence/preservation checks; and (3) execute the oscillator in Modelica/FMI or a conforming SysML v2 behavior tool. The canonical-factorization question remains open.
