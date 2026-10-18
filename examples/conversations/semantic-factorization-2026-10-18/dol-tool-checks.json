@@ -77,5 +77,17 @@
     "This is the tool's built-in parthood example, not the target Person/age mapping. It demonstrates cross-logic translation machinery, not that a custom user mapping has been verified.",
     "The result URL contains a temporary library/run identifier and may expire. The reproducible source is stored beside this record.",
     "No local Hets CLI execution, actual DOL preservation/conservativity proof, or Modelica/FMI/SysML v2 dynamic-model run has been performed."
-  ]
+  ],
+  "automatic_proof": {
+    "status": "no_goals",
+    "interaction": "Opened Tools > automatic proofs in the public DOLiator UI, selected EProver and OWL22CASL:CASL2TPTP_FOF, set timeout to 10 seconds per goal, left include Theorems enabled, and submitted through the Prove button.",
+    "observed_output_url": "http://rest.hets.eu/254085869?autoproof=proof&prover=EProver&translation=OWL22CASL%3ACASL2TPTP_FOF&timeout=10&includetheorems=on",
+    "result": "nothing to prove",
+    "interpretation": "The sample did not yield an automatic-proof goal in that workflow. This is not a proof success or failure; no proposition was checked.",
+    "limitations": [
+      "The DOLiator consistency checker separately returned no cons checker found for the whole graph and for the OWL-only node with Pellet.",
+      "The parsed development graph demonstrates translation structure, not that a particular semantic property is preserved.",
+      "A custom DOL specification with a relevant theorem/view obligation, and a Hets deployment with a working checker, are required for a genuine proof check."
+    ]
+  }
 }
