@@ -6,7 +6,7 @@ This is a curated Inquiry Graph fixture for the conversation about taxonomy, ont
 
 - `graph.json` — source-anchored curated inquiry map.
 - `fit-review.json` — representation-fit diagnoses and promotion gates.
-- `prior-art.md` — first-pass comparison of institutions, MMT, ologs, operational semantics, and the ontology spectrum.
+- `prior-art.md` — targeted investigation of DOL, MMT, institution theory, model-driven engineering, ologs, top-level ontologies, and universal logic.
 
 ## Coverage and status
 
