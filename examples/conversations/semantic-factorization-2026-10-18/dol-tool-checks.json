@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "semantic-factorization-dol-tool-checks-2026-10-18",
+  "date": "2026-10-18",
+  "tool": {
+    "name": "Hets DOLiator",
+    "url": "http://rest.hets.eu/",
+    "interaction": "Loaded the built-in DOL example in the public UI, submitted it, and opened its JSON output through the Output Format menu. The consistency checker was also invoked through the Tools menu.",
+    "source_kind": "Built-in public DOLiator example, saved as dol-translation-smoketest.dol for reproducibility"
+  },
+  "parse_and_translation": {
+    "result": "success",
+    "observed_output_url": "http://rest.hets.eu/802606142?json",
+    "temporary_library_name": "temp1258337",
+    "mime_type": "text/clif",
+    "development_graph": {
+      "nodes": 3,
+      "edges": 2
+    },
+    "nodes": [
+      {
+        "name": "Parthood_OWL",
+        "logic": "OWL",
+        "internal": false,
+        "axioms": [
+          "AsymmetricObjectProperty( :isProperPartOf )",
+          "SubObjectPropertyOf( :isProperPartOf :isPartOf )"
+        ]
+      },
+      {
+        "name": "Parthood_CL__E1",
+        "logic": "CommonLogic",
+        "internal": true,
+        "axioms": []
+      },
+      {
+        "name": "Parthood_CL",
+        "logic": "CommonLogic",
+        "internal": false,
+        "axioms": [
+          "(forall (x y z) (if (and (isProperPartOf x y) (isProperPartOf y z)) (isProperPartOf x z)))"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "Parthood_OWL",
+        "target": "Parthood_CL__E1",
+        "type": "HetDefInc",
+        "morphism": "OWL22CommonLogic"
+      },
+      {
+        "source": "Parthood_CL__E1",
+        "target": "Parthood_CL",
+        "type": "GlobalDefInc",
+        "morphism": "id_CommonLogic.ImpredicativeSeq"
+      }
+    ],
+    "interpretation": "The public tool parsed an OWL ontology, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and built a Common Logic extension with an additional transitivity axiom."
+  },
+  "consistency_check": {
+    "status": "unavailable",
+    "attempt_1": {
+      "action": "Tools > consistency checker, all graph nodes selected, default prover selection",
+      "result": "*** Error: user error (no cons checker found)"
+    },
+    "attempt_2": {
+      "action": "Tools > consistency checker, select only Parthood_OWL, prover Pellet",
+      "observed_output_url": "http://rest.hets.eu/295837911?autoproof=cons&prover=Pellet&translation=OWL22CASL%3ACASL2SubCFOL%3ACASL2SoftFOLInduction&timeout=1&Parthood_OWL=on",
+      "result": "*** Error: user error (no cons checker found)"
+    },
+    "interpretation": "The deployed server does not expose a working consistency checker for these requests. No consistency or satisfiability result was obtained."
+  },
+  "limits": [
+    "Successful parsing and development-graph construction are real tool output, but are not a theorem proving that OWL22CommonLogic preserves every semantic property.",
+    "The public DOLiator's consistency-check workflow returned no cons checker found, even for the OWL-only test with Pellet. No consistency claim is made.",
+    "This is the tool's built-in parthood example, not the target Person/age mapping. It demonstrates cross-logic translation machinery, not that a custom user mapping has been verified.",
+    "The result URL contains a temporary library/run identifier and may expire. The reproducible source is stored beside this record.",
+    "No local Hets CLI execution, actual DOL preservation/conservativity proof, or Modelica/FMI/SysML v2 dynamic-model run has been performed."
+  ],
+  "automatic_proof": {
+    "status": "no_goals",
+    "interaction": "Opened Tools > automatic proofs in the public DOLiator UI, selected EProver and OWL22CASL:CASL2TPTP_FOF, set timeout to 10 seconds per goal, left include Theorems enabled, and submitted through the Prove button.",
+    "observed_output_url": "http://rest.hets.eu/254085869?autoproof=proof&prover=EProver&translation=OWL22CASL%3ACASL2TPTP_FOF&timeout=10&includetheorems=on",
+    "result": "nothing to prove",
+    "interpretation": "The sample did not yield an automatic-proof goal in that workflow. This is not a proof success or failure; no proposition was checked.",
+    "limitations": [
+      "The DOLiator consistency checker separately returned no cons checker found for the whole graph and for the OWL-only node with Pellet.",
+      "The parsed development graph demonstrates translation structure, not that a particular semantic property is preserved.",
+      "A custom DOL specification with a relevant theorem/view obligation, and a Hets deployment with a working checker, are required for a genuine proof check."
+    ]
+  },
+  "custom_view_smoketest": {
+    "status": "parsed_development_graph_but_no_proof_result",
+    "source_file": "dol-view-smoketest.dol",
+    "observed_output_url": "http://rest.hets.eu/922497925?json",
+    "library_name": "temp12583315",
+    "graph": {
+      "node_count": 3,
+      "edge_count": 2,
+      "nodes": [
+        {
+          "name": "lower",
+          "logic": "CommonLogic",
+          "axioms": [
+            ". (forall (x y) (iff (a x y) (b x y)))"
+          ]
+        },
+        {
+          "name": "upper",
+          "logic": "CommonLogic",
+          "axioms": [
+            ". (forall (x y) (iff (A x y) (B x y)))"
+          ]
+        },
+        {
+          "name": "v__S",
+          "logic": "CommonLogic",
+          "internal": true,
+          "axioms": []
+        }
+      ],
+      "edges": [
+        {
+          "source": "lower",
+          "target": "v__S",
+          "type": "GlobalDef",
+          "morphism": "id_CommonLogic.ImpredicativeSeq",
+          "symbol_map": [
+            {
+              "from": "a",
+              "to": "A"
+            },
+            {
+              "from": "b",
+              "to": "B"
+            }
+          ]
+        },
+        {
+          "source": "v__S",
+          "target": "upper",
+          "type": "GlobalUnprovenThmInc",
+          "morphism": "id_CommonLogic.ImpredicativeSeq",
+          "view_name": "v"
+        }
+      ]
+    },
+    "automatic_proof_attempt": {
+      "action": "Tools > automatic proofs; selected EProver and CLFol2CFOL:CASL2TPTP_FOF, timeout 20 seconds, clicked Unproven and submitted with Prove.",
+      "observed_output_url": "http://rest.hets.eu/922497925?autoproof=proof&prover=EProver&translation=CLFol2CFOL%3ACASL2TPTP_FOF&timeout=20&includetheorems=on",
+      "result": "nothing to prove",
+      "interpretation": "Despite the development-graph edge type GlobalUnprovenThmInc, the deployed UI/proof workflow did not produce a goal or a proof result for this view. No claim of proof success is made."
+    },
+    "limits": [
+      "The graph demonstrates that a view mapping and an unproven theorem-inclusion edge can be constructed by the public tool.",
+      "No proof/satisfiability/consistency/conservativity/semantic-preservation verdict was obtained; the automatic proof route said nothing to prove and the consistency route said no cons checker found.",
+      "This tiny Common Logic view is a tool-path probe, not the user's Person/Human mapping and not a complete framework evaluation.",
+      "The run ID/URL is temporary; the reproducible DOL source is stored in the repository."
+    ]
+  }
+}
