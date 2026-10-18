@@ -1,0 +1,1188 @@
+{
+  "schema_version": "1.0.0",
+  "id": "semantic-factorization-2026-10-18",
+  "conversations": [
+    {
+      "id": "semantic-factorization-2026-10-18:conversation",
+      "title": "Canonical factorization of semantic representations: ontology, grounding, and executable models",
+      "source_kind": "curated_excerpts",
+      "coverage_note": "Curated excerpts from the visible conversation on 2026-10-18. This is an inquiry map, not a native ChatGPT export or a complete transcript. Excerpts preserve selected questions, hypotheses, distinctions, and the requested next action; intervening wording is omitted. All semantic annotations are proposed and require review.",
+      "participants": [
+        {
+          "id": "participant:user",
+          "label": "User",
+          "role": "user"
+        },
+        {
+          "id": "participant:assistant",
+          "label": "ChatGPT",
+          "role": "assistant"
+        }
+      ],
+      "messages": [
+        {
+          "id": "semantic-factorization-2026-10-18:u1",
+          "actor_id": "participant:user",
+          "ordinal": 1,
+          "text": "What is a taxonomy? And how does it relate to an ontology? Concisely, and if there isn't a clear meaning then tell me.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a1",
+          "actor_id": "participant:assistant",
+          "ordinal": 2,
+          "text": "A taxonomy organizes categories; an ontology models concepts and how they relate.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u2",
+          "actor_id": "participant:user",
+          "ordinal": 3,
+          "text": "I guess I feel like semantic spectrum is a little underspecified and maybe it's something more like a canonical factorization?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a2",
+          "actor_id": "participant:assistant",
+          "ordinal": 4,
+          "text": "A spectrum orders representations, whereas a factorization explains their constituent dimensions.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u3",
+          "actor_id": "participant:user",
+          "ordinal": 5,
+          "text": "There must be someone who has already figured this out.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a3",
+          "actor_id": "participant:assistant",
+          "ordinal": 6,
+          "text": "The ontology spectrum is a close match, but I haven't found evidence of one universally accepted, canonical factorization of semantic representation.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u4",
+          "actor_id": "participant:user",
+          "ordinal": 7,
+          "text": "Can you make all these terms like grounding, logical constraints, etc. concrete with an example?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a4",
+          "actor_id": "participant:assistant",
+          "ordinal": 8,
+          "text": "Grounding connects identifiers in the representation to what they are intended to refer to; model-theoretic interpretation alone does not establish a real-world correspondence.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u5",
+          "actor_id": "participant:user",
+          "ordinal": 9,
+          "text": "With taxonomy it is kind of a claim that is-a is a special or privileged relation type. Why is that, and are there others? Is grounding a model-theory thing? Also, are we missing cardinality, properties, or types?",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a5",
+          "actor_id": "participant:assistant",
+          "ordinal": 10,
+          "text": "These are not all merely logical constraints: types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance play different roles.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u6",
+          "actor_id": "participant:user",
+          "ordinal": 11,
+          "text": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a6",
+          "actor_id": "participant:assistant",
+          "ordinal": 12,
+          "text": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u7",
+          "actor_id": "participant:user",
+          "ordinal": 13,
+          "text": "I think there are two approaches: a ground-up formal proof, and checking candidate factorizations against possible representations to make sure the account is MECE. Perhaps they should alternate.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u8",
+          "actor_id": "participant:user",
+          "ordinal": 14,
+          "text": "For physics, I imagine a representation of what exists, expanded to include relations and laws, then initial conditions, then a runnable representation. Mathematics and logic have calculations, theorems, and proofs. These may be different forms of representation, some of which can be run, computed, or simulated.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u9",
+          "actor_id": "participant:user",
+          "ordinal": 15,
+          "text": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it.",
+          "original_id": null,
+          "timestamp": null
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-taxonomy",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u1",
+          "start": 0,
+          "end": 118,
+          "quote": "What is a taxonomy? And how does it relate to an ontology? Concisely, and if there isn't a clear meaning then tell me."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What is a taxonomy, and how does it relate to an ontology?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-taxonomy",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A taxonomy organizes categories, typically through classification relations such as subclass-of."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "An ontology represents concepts and relations among them; usage varies by field."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 126,
+          "quote": "I guess I feel like semantic spectrum is a little underspecified and maybe it's something more like a canonical factorization?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "The semantic spectrum may be underspecified because it orders representations without identifying a principled decomposition into dimensions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 55,
+          "quote": "There must be someone who has already figured this out."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "Has someone already established a general, canonical factorization of semantic representation?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ontology-spectrum",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a3",
+          "start": 0,
+          "end": 149,
+          "quote": "The ontology spectrum is a close match, but I haven't found evidence of one universally accepted, canonical factorization of semantic representation."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "The ontology spectrum: an established way to arrange representations by increasing semantic expressiveness."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:q-grounding",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u4",
+          "start": 0,
+          "end": 96,
+          "quote": "Can you make all these terms like grounding, logical constraints, etc. concrete with an example?"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "question",
+      "text": "What exactly is grounding, and how does it differ from formal model-theoretic interpretation?"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-grounding",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 176,
+          "quote": "Grounding connects identifiers in the representation to what they are intended to refer to; model-theoretic interpretation alone does not establish a real-world correspondence."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Grounding links symbols or model elements to their intended referents; mathematical interpretation alone need not establish real-world correspondence."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-is-a",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u5",
+          "start": 0,
+          "end": 213,
+          "quote": "With taxonomy it is kind of a claim that is-a is a special or privileged relation type. Why is that, and are there others? Is grounding a model-theory thing? Also, are we missing cardinality, properties, or types?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "The privileged role of is-a may arise from classification, inheritance, and useful mathematical properties of subclass relations; instance-of and subclass-of must be distinguished."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-capabilities",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 167,
+          "quote": "These are not all merely logical constraints: types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance play different roles."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Candidate representational capabilities include types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance; their independence is not established."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-compositional-executable-model",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 346,
+          "quote": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "A common representational framework may cover entities/types, relations, laws or constraints, initial conditions, and executable transitions as composable capabilities."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-operational-semantics",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 183,
+          "quote": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Operational semantics and transition systems specify how a description governs state changes or execution."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-two-track-method",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u7",
+          "start": 0,
+          "end": 195,
+          "quote": "I think there are two approaches: a ground-up formal proof, and checking candidate factorizations against possible representations to make sure the account is MECE. Perhaps they should alternate."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Alternate between a first-principles formal derivation and a counterexample-driven audit of existing representations; refine the factorization iteratively."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-mece-criterion",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u7",
+          "start": 0,
+          "end": 195,
+          "quote": "I think there are two approaches: a ground-up formal proof, and checking candidate factorizations against possible representations to make sure the account is MECE. Perhaps they should alternate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "MECE is meaningful only relative to a defined universe and decomposition target; representations may combine capabilities rather than belong to exclusive bins."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-representation-forms",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 313,
+          "quote": "For physics, I imagine a representation of what exists, expanded to include relations and laws, then initial conditions, then a runnable representation. Mathematics and logic have calculations, theorems, and proofs. These may be different forms of representation, some of which can be run, computed, or simulated."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "Physics, mathematics, logic, and programs may be understood as different representational forms, some of which support computation, proof, simulation, or execution."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 176,
+          "quote": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Capture this conversation as a source-grounded Inquiry Graph and record representation-fit issues without silently changing shared semantics."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-find-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 176,
+          "quote": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it."
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Find the closest existing work so the user can reuse it rather than independently inventing a universal factorization."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-ologs",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 183,
+          "quote": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Ologs: a category-theoretic framework for representing conceptual structures and connecting them to databases and instances."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-model-theory",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 176,
+          "quote": "Grounding connects identifiers in the representation to what they are intended to refer to; model-theoretic interpretation alone does not establish a real-world correspondence."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Model theory formalizes interpretations and satisfaction of statements in mathematical structures; it does not itself guarantee real-world grounding."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-category-database",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 346,
+          "quote": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Category theory may help formalize composition and mappings; database theory may help formalize schemas, instances, constraints, and mappings. Their relevance is a research hypothesis, not a settled answer."
+    }
+  ],
+  "relations": [
+    {
+      "id": "semantic-factorization-2026-10-18:r:taxonomy-ontology",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "taxonomy",
+          "ref": "semantic-factorization-2026-10-18:n:c-taxonomy"
+        },
+        {
+          "role": "ontology",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:spectrum-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 126,
+          "quote": "I guess I feel like semantic spectrum is a little underspecified and maybe it's something more like a canonical factorization?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenges",
+      "bindings": [
+        {
+          "role": "challenge",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:prior-art-target",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 55,
+          "quote": "There must be someone who has already figured this out."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "cause",
+          "ref": "semantic-factorization-2026-10-18:n:q-prior-art"
+        },
+        {
+          "role": "effect",
+          "ref": "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:grounding-interpretation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 176,
+          "quote": "Grounding connects identifiers in the representation to what they are intended to refer to; model-theoretic interpretation alone does not establish a real-world correspondence."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguishes",
+      "bindings": [
+        {
+          "role": "grounding",
+          "ref": "semantic-factorization-2026-10-18:n:c-grounding"
+        },
+        {
+          "role": "interpretation",
+          "ref": "semantic-factorization-2026-10-18:n:c-model-theory"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:capabilities-expand-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 167,
+          "quote": "These are not all merely logical constraints: types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance play different roles."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        },
+        {
+          "role": "dependency",
+          "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:executable-builds-on-structure",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 346,
+          "quote": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "depends_on",
+      "bindings": [
+        {
+          "role": "dependent",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        },
+        {
+          "role": "dependency",
+          "ref": "semantic-factorization-2026-10-18:n:c-capabilities"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:operational-instantiates",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 183,
+          "quote": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "exemplifies",
+      "bindings": [
+        {
+          "role": "example",
+          "ref": "semantic-factorization-2026-10-18:n:c-operational-semantics"
+        },
+        {
+          "role": "general",
+          "ref": "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:mece-qualifies",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u7",
+          "start": 0,
+          "end": 195,
+          "quote": "I think there are two approaches: a ground-up formal proof, and checking candidate factorizations against possible representations to make sure the account is MECE. Perhaps they should alternate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "qualifies",
+      "bindings": [
+        {
+          "role": "criterion",
+          "ref": "semantic-factorization-2026-10-18:n:c-mece-criterion"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-two-track-method"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:forms-support-factorization",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 313,
+          "quote": "For physics, I imagine a representation of what exists, expanded to include relations and laws, then initial conditions, then a runnable representation. Mathematics and logic have calculations, theorems, and proofs. These may be different forms of representation, some of which can be run, computed, or simulated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-representation-forms"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:ologs-related-prior-art",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 183,
+          "quote": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-ologs"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:category-db-research",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 346,
+          "quote": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "left",
+          "ref": "semantic-factorization-2026-10-18:n:c-category-database"
+        },
+        {
+          "role": "right",
+          "ref": "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:capture-goal",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 176,
+          "quote": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "cause",
+          "ref": "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+        },
+        {
+          "role": "effect",
+          "ref": "semantic-factorization-2026-10-18:n:goal-capture-inquiry"
+        }
+      ]
+    }
+  ],
+  "moves": [
+    {
+      "id": "semantic-factorization-2026-10-18:m:01",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u1",
+          "start": 0,
+          "end": 118,
+          "quote": "What is a taxonomy? And how does it relate to an ontology? Concisely, and if there isn't a clear meaning then tell me."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-taxonomy"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u1",
+      "after_move_ids": [],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:02",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a1",
+          "start": 0,
+          "end": 81,
+          "quote": "A taxonomy organizes categories; an ontology models concepts and how they relate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-taxonomy"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-ontology"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a1",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:01"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:03",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u2",
+          "start": 0,
+          "end": 126,
+          "quote": "I guess I feel like semantic spectrum is a little underspecified and maybe it's something more like a canonical factorization?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-ontology-spectrum"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u2",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:02"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:04",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 55,
+          "quote": "There must be someone who has already figured this out."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-prior-art"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u3",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:03"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:05",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u4",
+          "start": 0,
+          "end": 96,
+          "quote": "Can you make all these terms like grounding, logical constraints, etc. concrete with an example?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "ask",
+      "actor_id": "participant:user",
+      "input_ids": [],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:q-grounding"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u4",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:04"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:06",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a4",
+          "start": 0,
+          "end": 176,
+          "quote": "Grounding connects identifiers in the representation to what they are intended to refer to; model-theoretic interpretation alone does not establish a real-world correspondence."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-grounding"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a4",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:05"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:07",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u5",
+          "start": 0,
+          "end": 213,
+          "quote": "With taxonomy it is kind of a claim that is-a is a special or privileged relation type. Why is that, and are there others? Is grounding a model-theory thing? Also, are we missing cardinality, properties, or types?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "challenge",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-grounding"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-is-a",
+        "semantic-factorization-2026-10-18:n:c-capabilities"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u5",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:06"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:08",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a5",
+          "start": 0,
+          "end": 167,
+          "quote": "These are not all merely logical constraints: types, attributes, cardinality, identity, constraints, inference, time, uncertainty, and provenance play different roles."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-capabilities"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a5",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:07"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:09",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u6",
+          "start": 0,
+          "end": 346,
+          "quote": "I feel like the dimensions are arbitrary. Could category theory or database theory help formalize ontology engineering as a canonical factorization? I also imagine an executable or operational ontology: physics has entities, relations, laws, initial conditions, and a runnable model; mathematics and logic have calculations, theorems, and proofs."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "hypothesize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model",
+        "semantic-factorization-2026-10-18:n:c-category-database"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u6",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:08"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:10",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a6",
+          "start": 0,
+          "end": 183,
+          "quote": "A cellular automaton can be described with entities, states, structure, and transition rules; operational semantics and transition systems formalize how descriptions govern execution."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "distinguish",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-operational-semantics",
+        "semantic-factorization-2026-10-18:n:c-ologs"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a6",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:09"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:11",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u7",
+          "start": 0,
+          "end": 195,
+          "quote": "I think there are two approaches: a ground-up formal proof, and checking candidate factorizations against possible representations to make sure the account is MECE. Perhaps they should alternate."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:h-two-track-method",
+        "semantic-factorization-2026-10-18:n:c-mece-criterion"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u7",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:10"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:12",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u8",
+          "start": 0,
+          "end": 313,
+          "quote": "For physics, I imagine a representation of what exists, expanded to include relations and laws, then initial conditions, then a runnable representation. Mathematics and logic have calculations, theorems, and proofs. These may be different forms of representation, some of which can be run, computed, or simulated."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "generalize",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-compositional-executable-model"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-representation-forms"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u8",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:11"
+      ],
+      "inference_family": "unspecified"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:13",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 176,
+          "quote": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "propose",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:q-prior-art"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+        "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u9",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:12"
+      ],
+      "inference_family": "unspecified"
+    }
+  ],
+  "stance_events": [],
+  "question_events": [
+    {
+      "id": "semantic-factorization-2026-10-18:qe:1",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u1",
+          "start": 0,
+          "end": 118,
+          "quote": "What is a taxonomy? And how does it relate to an ontology? Concisely, and if there isn't a clear meaning then tell me."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-taxonomy",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:u1",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-taxonomy",
+        "semantic-factorization-2026-10-18:n:c-ontology"
+      ],
+      "resolution_basis": "Assistant supplied concise working definitions; user did not explicitly confirm closure.",
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:2",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u3",
+          "start": 0,
+          "end": 55,
+          "quote": "There must be someone who has already figured this out."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "open",
+      "actor_id": "participant:user",
+      "at_message_id": "semantic-factorization-2026-10-18:u3",
+      "answer_ids": [],
+      "resolution_basis": null,
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:3",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u4",
+          "start": 0,
+          "end": 96,
+          "quote": "Can you make all these terms like grounding, logical constraints, etc. concrete with an example?"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-grounding",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:u4",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory"
+      ],
+      "resolution_basis": "Assistant distinguished formal interpretation from connection to intended real-world referents; user continued refining the framework.",
+      "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:4",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u9",
+          "start": 0,
+          "end": 176,
+          "quote": "Check out my Inquiry Graph repo, fill out the Inquiry Graph for this conversation, and then let's look for someone who has already worked this out. I don't want to reinvent it."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:q-prior-art",
+      "status": "reopened",
+      "actor_id": "participant:user",
+      "at_message_id": "semantic-factorization-2026-10-18:u9",
+      "answer_ids": [],
+      "resolution_basis": "The request to investigate existing work remains active and is the next task.",
+      "replacement_id": null
+    }
+  ],
+  "extractions": [
+    {
+      "method": "manual_curated_excerpt_map",
+      "provider": null,
+      "model": null,
+      "prompt_version": "1.0.0",
+      "notes": [
+        "Selected source excerpts were entered manually from visible conversation text.",
+        "All semantic interpretations remain proposed; no stance event is inferred from mere continuation or lack of objection."
+      ]
+    }
+  ],
+  "notes": [
+    "Primary inquiry: determine whether existing work already provides a principled, possibly compositional factorization of semantic representations spanning descriptive, formal, and executable forms.",
+    "Distinguish the object of factorization: syntax/language, mathematical interpretation, represented system, and available operations may not be the same target.",
+    "Candidate prior-art leads mentioned in the conversation include the ontology spectrum, model theory, database theory, category-theoretic ologs, and operational semantics. These are leads, not claims of a complete solution.",
+    "The requested MECE criterion needs a defined universe and decomposition target; capability combinations may be more appropriate than exclusive bins.",
+    "This capture does not authorize changes to Inquiry Graph's shared schema."
+  ]
+}
