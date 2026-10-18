@@ -9,6 +9,7 @@ This is a curated Inquiry Graph fixture for the conversation about taxonomy, ont
 - `prior-art.md` — targeted investigation of DOL, MMT, institution theory, model-driven engineering, ologs, top-level ontologies, and universal logic.
 - `comparison-matrix.md` — initial framework and use-case comparisons; treat it as provisional until the research protocol is applied.
 - `research-protocol.md` — proposed prior-art-first workflow combining systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation, and provenance.\n- `systematic-mapping.md` — first-pass source-backed map of methodological prior art and technical framework families; explicitly not a completed systematic review.
+- `scenario-evaluation.md` — five operational case fixtures and a source-based evaluation of framework coverage and composition boundaries; not a tool-level conformance run.
 
 ## Coverage and status
 
