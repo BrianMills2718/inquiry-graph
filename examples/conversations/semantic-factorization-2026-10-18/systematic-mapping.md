@@ -120,3 +120,23 @@ For each case, record native support, encoded support, delegated support, unform
 - “Not core” must not be reported as “impossible.”
 - An empty cell means “unknown” unless there is affirmative evidence of an exclusion.
 - Category theory, database theory, ontology engineering, model theory, and operational semantics are not one interchangeable framework; their interfaces and preservation conditions need explicit treatment.
+
+
+## Follow-up after the five-case evaluation (2026-10-18)
+
+The next artifact, [scenario-evaluation.md](scenario-evaluation.md), operationalizes five representative cases and evaluates candidate boundaries from primary sources. It remains a **source-based desk evaluation**, not a tool-level conformance run.
+
+The source checks add an important executable/empirical layer to the landscape:
+
+- **Modelica + FMI** provide a mature, standards-based path for dynamic model representation, execution and model exchange; FMI distinguishes Model Exchange, Co-Simulation and Scheduled Execution, and leaves the overall co-simulation algorithm outside the standard: https://specification.modelica.org/ and https://fmi-standard.org/docs/main/.
+- **SysML v2/KerML** provides a current formal language foundation for system structure and behavior, with semantic conformance that can include execution: https://www.omg.org/spec/SysML/2.0/Language/PDF.
+- **SKOS** is a well-defined representation for taxonomy/knowledge-organization schemes: https://www.w3.org/TR/skos-reference/.
+- **SOSA/SSN** describe observation artifacts and context, while **PROV-O** records provenance among entities, activities and agents: https://www.w3.org/TR/vocab-ssn/ and https://www.w3.org/TR/prov-o/.
+- **OAEI** provides benchmark-based evaluation of ontology-matching systems: https://oaei.ontologymatching.org/2026/.
+- **ISO/IEC/IEEE 42010:2022** formalizes architecture-description structure and viewpoints, but does not prescribe all the methods/tools used to create descriptions: https://www.iso.org/standard/74393.html.
+
+### Revised working hypothesis
+
+The target may be better described as a **meta-framework of typed artifacts, mappings, and preservation/validation contracts** than as a single linear semantic spectrum. Candidate parts already exist for many of the obligations. The next question is whether their interfaces can satisfy the requirements together, and at what cost—not whether a new universal ontology should be invented immediately.
+
+The five cases were made precise enough to expose omissions (harmonic oscillator, a checked elementary arithmetic theorem, Rule 30, an empirical taxonomy with observation/provenance, and a translation between two toy formalisms). Expected mathematical/trace outputs are specified in the evaluation, but no DOL/MMT/SysML/Modelica tool was actually executed. Tool-level testing is the next step.
