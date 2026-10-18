@@ -1,95 +1,125 @@
-# Prior-art scan: canonical factorization of semantic representations
+# Prior-art investigation: a general framework for heterogeneous representations
 
-**Status:** first-pass comparison, 2026-10-18. This is a targeted search, not a systematic literature review.
+**Status:** targeted literature investigation, 2026-10-18. This is broader than the initial scan, but is not a systematic review.
 
-## Question being tested
+## Executive finding
 
-Can one established framework derive a nonredundant, compositional account of representations spanning:
+The user's intuition maps to several established research areas. The closest direct match discovered is the OMG standard **Distributed Ontology, Model, and Specification Language (DOL)**. DOL explicitly treats ontologies, formal models of systems, and formal specifications of system properties/behavior as different kinds of ontology/model/specification (OMS) artifacts, and provides a formal language for mappings between artifacts expressed in different languages. It deliberately does **not** try to create one language that subsumes everything else.
 
-- what exists and how entities are classified or related;
-- properties, types, cardinality, and logical constraints;
-- formal interpretations/models and truth or satisfaction;
-- mappings between different representations or formalisms;
-- laws, initial conditions, and state transitions;
-- calculations, proofs, simulations, and executable behavior;
-- correspondence between a model and its intended real-world referents?
+Two complementary frameworks are especially important:
 
-The conversation's desired outcome is stronger than a single ontology language or an expressivity ladder. It asks whether a common formal substrate and principled factorization can explain these different capabilities without treating them as an arbitrary peer list.
+- **MMT** is a foundation-independent meta-framework for representing formal languages and knowledge, including logics, type theories, set theories, ontologies, declarations, expressions, proofs, and mappings between theories.
+- **Institution theory** abstracts logical systems into signatures, sentences, models, satisfaction, and translations that preserve satisfaction.
 
-## Findings
+For the executable-model intuition, **model-driven engineering (MDE)** and programming-language semantics address models, metamodels, transformations, and executable/non-executable semantics.
 
-### 1. MMT — closest single umbrella for heterogeneous formal knowledge
+**Revised assessment:** It is too strong to say the user's intended idea has not been worked out. A large amount has. The better question is which of these existing frameworks best matches the intended *scope*, and whether the remaining desire is specifically for a canonical, independent factorization of representational capabilities. No inspected source establishes that last claim as a universal theorem.
 
-**Primary source:** Florian Rabe, [MMT: A Foundation-Independent Approach to Formal Knowledge](https://uniformal.github.io/doc/philosophy/articles/mmt.pdf) (2016); [MMT overview](https://uniformal.github.io/doc/).
+## 1. DOL — strongest direct match for heterogeneous ontologies, models, specifications, and mappings
 
-MMT is explicitly a framework for representing formal languages such as logics, type theories, set theories, and ontologies without committing to one representational paradigm, syntax, or semantics. It assembles language features as reusable modules and supports generic knowledge-management and logical algorithms. Modules can be declarative or provide programmatic rules.
+**Primary sources:**
+- Object Management Group, [DOL overview](https://www.omg.org/dol/)
+- [DOL specification, version 1.0](https://www.omg.org/spec/DOL/)
 
-**Why it is close:** It treats languages and their features as formal objects, supports modular composition, and makes formal knowledge computationally manageable. This is a stronger match to the user's broad representation/meta-framework intuition than a simple taxonomy or ontology spectrum.
+DOL is an OMG standard for formal interoperability across heterogeneous ontology, model, and specification artifacts. The OMG describes OMS artifacts as ranging from domain knowledge and activities to models of systems and specifications of hardware/software properties and behavior. Complex systems may use multiple formalisms and multiple viewpoints; DOL supplies a formal way to express the artifacts and mappings between them, and supports checks of coherence such as consistency, conservativity, intended consequences, and compliance.
 
-**What it does not establish:** The sources reviewed do not establish MMT as a universal MECE factorization of every representational form, including empirical grounding of physical models and arbitrary simulation systems. It is a serious candidate to study, not a verified complete answer.
+Most importantly, DOL explicitly declines to propose one new OMS language that subsumes all others. Instead, it formally connects existing formalisms.
 
-### 2. Institutions — clearest abstract factorization of logical systems
+**Why this is close:** The user imagines different representations—of what exists, relations and laws, initial conditions, proofs/calculations, and runnable systems—as related forms that should be connected by a principled framework. DOL directly addresses the heterogeneous integration part of this intuition, including ontologies, models, specifications, and mappings.
 
-**Primary source:** Joseph Goguen and Rod Burstall, [Institutions: Abstract Model Theory for Specification and Programming](https://doi.org/10.1145/147508.147524), *Journal of the ACM* 39(1), 95–146 (1992). See also [Goguen's institution-theory page](https://cseweb.ucsd.edu/~goguen/projs/inst.html).
+**Limit:** DOL is primarily a metalanguage and interoperability framework. Its existence does not show that it derives a universal MECE list of all representational capabilities, nor that every artifact is executable or empirically grounded. It provides a standard way to state and relate heterogeneous formal artifacts, not a proof that every form is reducible to one canonical factorization.
 
-Institution theory abstracts a logical system into four coordinated pieces:
+## 2. MMT — strongest general meta-framework for formal knowledge and languages
 
-- a category of **signatures** (vocabularies);
-- **sentences** associated with each signature;
-- **models** associated with each signature;
-- a **satisfaction relation** saying which models satisfy which sentences.
+**Primary source:** Florian Rabe, [MMT: A Foundation-Independent Approach to Formal Knowledge](https://uniformal.github.io/doc/philosophy/articles/mmt.pdf) (2016); [MMT documentation](https://uniformal.github.io/doc/).
 
-It also formalizes translations between signatures and requires satisfaction to remain invariant under translation. The paper treats specification and programming, database theory, and combinations of different logics; it discusses adding data and hierarchy constraints.
+MMT represents declarative languages without committing to one syntax, semantics, or foundation. Reusable modules define language features; languages are assembled from these modules. The paper describes how MMT uniformly represents logics, type theories, set theories, ontologies, symbols, concepts, relations, individuals, judgments, inference rules, axioms, theorems, formulas, derivations, and proofs. Theory morphisms represent translations, implementations, models, and other relationships between theories. It also combines several established approaches, including institutions, structured theories, and proof/type-theoretic ideas.
 
-**Why it is close:** This is an unusually principled answer to “what are the basic components of a formal representational system?” It distinguishes language, statements, models, and interpretation, and it gives a formal criterion for structure-preserving translation.
+**Why this is close:** MMT takes the “meta-framework for many forms of formal representation” goal seriously. Its small, reusable primitives and compositional structure are more relevant to a canonical-factorization question than a fixed domain ontology.
 
-**What it does not establish:** Institutions are a general framework for logical systems, not a complete ontology of every possible representation or a general account of empirical reference. Executable behavior may be formalized within suitable logics/specification systems, but is not automatically covered as a universal primitive.
+**Limit:** MMT's strongest coverage is formal/declarative knowledge and the infrastructure around it. It does not, merely by being foundation-independent, establish a universal decomposition for empirical reference, physical-model validation, arbitrary dynamical systems, or every form of computation.
 
-### 3. Ologs — closest direct bridge between ontology, databases, and computation
+## 3. Institution theory — a formal abstraction of logical representation systems
 
-**Primary source:** David I. Spivak and Robert E. Kent, [Ologs: A Categorical Framework for Knowledge Representation](https://doi.org/10.1371/journal.pone.0024274), *PLOS ONE* 7(1) (2012). [Open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC3269434/).
+**Primary source:** Joseph A. Goguen and Rod M. Burstall, [Institutions: Abstract Model Theory for Specification and Programming](https://doi.org/10.1145/147508.147524) (1992); [author resource](https://cseweb.ucsd.edu/~goguen/projs/inst.html).
 
-Ologs use types as objects, functional relationships as arrows, and equations/commutative diagrams to express facts. They connect to database schemas and instance data, and the paper demonstrates that primitive recursive functions can be described by ologs. Functors connect and translate between ologs; the paper also connects its approach to information flow and institutions.
+An institution abstracts a logical system into:
+- signatures (the vocabulary or formal context);
+- sentences over each signature;
+- models for each signature;
+- a satisfaction relation telling which models satisfy which sentences.
 
-**Why it is close:** It is a concrete category-theoretic representation system that bridges conceptual models, databases, mappings, and a meaningful fragment of computation. It also makes the intended meaning of types and relations explicit.
+Signature translations induce translations of sentences and models, with a satisfaction condition ensuring that truth is invariant under change of notation. The original work addresses specification and programming, databases, constraints, and combinations of different logical systems.
 
-**What it does not establish:** An olog is a particular knowledge-representation formalism, not a proven canonical factorization for all semantic representations. Its use of functional arrows is also a modeling commitment, not a universal account of all relations or dynamics.
+**Why this is close:** It gives a rigorous candidate for the logical core: syntax/context, statements, models, satisfaction, and semantics-preserving translation. It is a first-principles answer to how different logics can be described uniformly.
 
-### 4. Operational and denotational semantics — bridge between descriptions and execution
+**Limit:** It is an abstraction of logical systems, not a complete ontology of all representation kinds. Operational behavior and empirical grounding require additional formal treatment when they are not already supplied by the chosen institution.
 
-**Primary source:** Daniele Turi and Gordon Plotkin, [Towards a Mathematical Operational Semantics](https://doi.org/10.1109/LICS.1997.614955), LICS 1997. See also the [University of Edinburgh record](https://era.ed.ac.uk/items/acfe983e-b36e-4124-a14f-3f26d4a2cf8f).
+## 4. Model-driven engineering (MDE) — model-to-execution pipeline
 
-This work develops a categorical account of operational rules for programming languages and relates them to a denotational model. It aims to unify descriptions of execution steps with mathematical meanings of programs under suitable conditions.
+**Primary source:** Alberto Rodrigues da Silva, [Model-driven engineering: A survey supported by the unified conceptual model](https://doi.org/10.1016/j.cl.2015.06.001) (2015).
 
-**Why it is close:** It directly addresses the user's intuition that a representation can describe rules that execute and also have a mathematical interpretation. It gives a formal way to study consistency between these views.
+The survey explicitly relates systems, models, metamodels, modeling languages, transformations, software platforms, and products. It treats models as artifacts from which software can be generated or automatically executed. It also distinguishes executable from non-executable semantics and discusses operational and translational semantics for executable models.
 
-**What it does not establish:** Its target is programming-language semantics. It does not, by itself, unify scientific theories, ontologies, databases, proofs, and physical grounding into one general ontology framework.
+**Why this is close:** It formalizes the idea that a model can be extended with rules and then transformed into, or interpreted as, an executable system.
 
-### 5. The ontology/semantic spectrum — relevant, but a different kind of answer
+**Limit:** MDE focuses on software and systems engineering, not a universal theory spanning all scientific, mathematical, logical, and empirical representations.
 
-**Primary source:** Deborah L. McGuinness, [Ontologies Come of Age](https://www.researchgate.net/publication/221024668_Ontologies_Come_of_Age) (2003); see also the [NCI Semantics Primer](https://www.cancer.gov/about-nci/organization/cbiit/news-events/blog/2022/semantics-primer).
+## 5. Ologs — conceptual structures, databases, mappings, and computation
 
-The spectrum organizes knowledge-organization artifacts by semantic strength or expressiveness, from simpler structures toward formal ontologies. It helps explain why vocabularies, taxonomies, and logical ontologies are not equivalent.
+**Primary source:** David I. Spivak and Robert E. Kent, [Ologs: A Categorical Framework for Knowledge Representation](https://doi.org/10.1371/journal.pone.0024274) (2012); [open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC3269434/).
 
-**Why it is close:** It is the explicit precedent for the semantic-spectrum framing.
+Ologs represent types as objects, functional relations as arrows, and equations as constraints on compositions. They connect conceptual models with databases and instances, support mappings between models, and demonstrate the representation of primitive recursive functions.
 
-**What it does not establish:** A spectrum is primarily an ordering by expressiveness. It does not provide the requested general factorization into independent dimensions covering model interpretation, grounding, mappings, and executable behavior.
+**Why this is close:** A concrete bridge between ontology-like structures, database schemas, structure-preserving mappings, and computation.
 
-## Working conclusion
+**Limit:** Ologs are a particular representation formalism, not a proven universal factorization.
 
-No source found in this first-pass search establishes the full requested universal, MECE factorization. However, there is substantial prior art, so it would be premature to treat the problem as unexplored.
+## 6. General Formal Ontology (GFO) and Basic Formal Ontology (BFO) — a different target
 
-**Recommended reading order:**
+**Primary sources:**
+- [GFO project](https://www.onto-med.de/ontologies/gfo/)
+- Loebe, Burek, and Herre, [GFO: The General Formal Ontology](https://doi.org/10.3233/AO-220264) (2022)
+- [BFO overview and literature](https://basic-formal-ontology.org/)
 
-1. **Institutions** for the cleanest abstract decomposition: signatures, sentences, models, satisfaction, and translation.
-2. **MMT** for a modular, foundation-independent framework that represents and computes over formal languages and knowledge.
-3. **Ologs** for a concrete ontology/database bridge with categorical mappings and a computation example.
-4. **Turi–Plotkin operational semantics** for the relation between executable rules and denotational models.
+These are top-level ontologies: they formalize general categories of things in reality, such as objects, processes, time, properties, relations, roles, and functions (with different category systems in GFO and BFO).
 
-A productive next step is not to invent dimensions yet. First test whether an institution-like core (language, statements, models, satisfaction, translation) can be extended or composed with MMT-style modules and operational semantics to account for the user's examples. Treat empirical grounding as a separate correspondence problem unless a candidate framework supplies a more precise unification.
+**Why relevant:** They address the user's question about whether there are general types of things and relations that recur across domain ontologies.
 
-## Scope and confidence
+**Why not the main answer:** A top-level ontology is primarily an account of what kinds of entities exist and how they relate. It is not the same thing as a meta-framework for comparing representational languages, models, proofs, and executable systems. This is a crucial distinction between an ontology *of a domain/reality* and an ontology/metamodel *of representation systems*.
 
-- This is a targeted first-pass search, not an exhaustive survey.
-- The claim is **not** that no universal factorization exists; it is that these inspected sources do not establish one covering the entire target described above.
-- The distinction between a framework's expressiveness and a proof that its dimensions are independent or MECE remains open.
+## 7. Universal logic — general theory of logical systems
+
+**Primary source:** [Logica Universalis: Towards a General Theory of Logic](https://link.springer.com/book/10.1007/978-3-7643-8354-1), edited volume.
+
+Universal logic studies features common to logical systems and formal ways of comparing logics. It is relevant if the core problem is to characterize logics, consequence relations, and translations independently of any one particular logic.
+
+**Limit:** Its scope is logic, not all representational systems, physical grounding, or simulation.
+
+## What the literature suggests about the original formulation
+
+The initial phrase “canonical factorization of all possible forms of semantic representation” may be combining three distinct research problems:
+
+1. **A theory of representational systems:** What are the formal components of a language/system that can represent things? MMT and institution theory are close here.
+2. **A theory of heterogeneous integration:** How can distinct ontologies, models, specifications, and logics be related while preserving the relevant semantics? DOL is a direct match.
+3. **A theory of model execution:** How can a model's structure, constraints, laws, and initial conditions determine a computation or behavior? MDE and operational semantics are close here.
+
+A fourth, separate question is empirical grounding: what links the model's symbols and structures to intended real-world referents or observations? Model theory specifies formal interpretation/satisfaction, but this should not be conflated with empirical validation or reference.
+
+The user's original intuition need not be discarded. It may need to be restated as a search for a **compositional meta-framework for heterogeneous representations, with formal mappings and optional operational semantics**, rather than a single linear semantic spectrum. The canonical/MECE factorization is then a more specific question to test against that existing framework.
+
+## Recommended next steps
+
+1. Read the OMG's DOL overview/specification first, because it explicitly names ontologies, models, specifications, heterogeneous formalisms, and mappings.
+2. Read the MMT overview/paper to understand the meta-framework and its reusable formal primitives.
+3. Use institution theory to understand the abstract logic/model/satisfaction core.
+4. Use MDE and operational semantics to test the executable-system requirement.
+5. Only after this comparison ask what remains absent: e.g. a formal independence result for dimensions, a completeness theorem over a defined universe of formalisms, or a unified treatment of empirical grounding.
+
+## Confidence and limits
+
+- Strong evidence exists for substantial prior art across all these components.
+- DOL is the closest direct match found to the integration of heterogeneous ontologies, models, specifications, and mappings.
+- MMT is the strongest candidate in this set for a general, modular framework for formal languages and knowledge.
+- No inspected source establishes that a single universally canonical, MECE factorization covers every intended form of representation, including empirical grounding and arbitrary executable systems.
+- This is a targeted literature investigation, not proof of nonexistence. The correct conclusion is “the intuition overlaps strongly with established work; the exact universal claim remains unverified,” not “nobody has done it.”
