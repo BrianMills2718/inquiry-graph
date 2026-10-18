@@ -6,7 +6,7 @@
       "id": "semantic-factorization-2026-10-18:conversation",
       "title": "Canonical factorization of semantic representations: ontology, grounding, and executable models",
       "source_kind": "curated_excerpts",
-      "coverage_note": "Curated, verbatim excerpts from the visible conversation on 2026-10-18, plus a concise assistant research-summary message from the follow-up investigation. This is not a native ChatGPT export or complete transcript. Intervening wording is omitted; semantic annotations remain proposed.",
+      "coverage_note": "Curated, verbatim excerpts from the visible conversation on 2026-10-18, plus concise assistant research summaries and the subsequent methodology agreement/next-step exchange. This is not a native ChatGPT export or complete transcript. Intervening wording is omitted; semantic annotations remain proposed.",
       "participants": [
         {
           "id": "participant:user",
@@ -185,6 +185,22 @@
           "actor_id": "participant:assistant",
           "ordinal": 21,
           "text": "The prior-art search found a particularly close match in the OMG's Distributed Ontology, Model, and Specification Language (DOL): it formally connects heterogeneous ontologies, models, specifications, and mappings without trying to replace them with one language. MMT is a broader meta-framework for formal languages and knowledge; institution theory formalizes signatures, sentences, models, satisfaction, and translation; model-driven engineering addresses model-to-execution pipelines. These are strong overlapping precedents, but none of the inspected sources establishes a universal MECE factorization covering every representation and empirical grounding.",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:u11",
+          "actor_id": "participant:user",
+          "ordinal": 22,
+          "text": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next",
+          "original_id": null,
+          "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a11",
+          "actor_id": "participant:assistant",
+          "ordinal": 23,
+          "text": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary.",
           "original_id": null,
           "timestamp": null
         }
@@ -581,6 +597,123 @@
       "review_status": "proposed",
       "kind": "hypothesis",
       "text": "The intended problem may be better framed as a compositional meta-framework for heterogeneous representations, with formal mappings and optional operational semantics, rather than a single linear semantic spectrum."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:h-prior-art-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "hypothesis",
+      "text": "For goal-directed problem solving, assume an existing solution or reusable components are likely; prioritize discovery, evaluation, adaptation, and synthesis before original invention."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Conceptual framework analysis is a research methodology for synthesizing concepts, attributes, assumptions, and relationships across literature or disciplines into a coherent framework."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "Systematic mapping/evidence synthesis searches and classifies a research landscape to characterize coverage, evidence, and gaps."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-requirements-traceability",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "Requirements traceability links each goal-derived requirement to evaluation criteria, evidence, candidate capabilities, and test results to reduce omissions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "method",
+      "text": "A proposed reusable protocol combines systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation, and provenance for prior-art-first problem solving; it is not claimed to be one named standard."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-llm-research-role",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "LLMs can accelerate cross-disciplinary terminology expansion, discovery, comparison, and synthesis, but material claims require source verification and proposed syntheses require validation."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-methodology-first",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "explicit",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Use an established, reusable research methodology to investigate the representation-framework question before adding more ad hoc comparison dimensions."
     }
   ],
   "relations": [
@@ -1015,6 +1148,108 @@
           "ref": "semantic-factorization-2026-10-18:n:h-reframed-scope"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-methodology-guides-search",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "supports",
+      "bindings": [
+        {
+          "role": "support",
+          "ref": "semantic-factorization-2026-10-18:n:c-systematic-mapping"
+        },
+        {
+          "role": "supported",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-conceptual-analysis-core",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        },
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "central_to",
+      "bindings": [
+        {
+          "role": "central_method",
+          "ref": "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis"
+        },
+        {
+          "role": "broader_goal",
+          "ref": "semantic-factorization-2026-10-18:n:h-prior-art-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-llm-assists-not-evidence",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "qualifies",
+      "bindings": [
+        {
+          "role": "qualification",
+          "ref": "semantic-factorization-2026-10-18:n:c-llm-research-role"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:h-prior-art-first"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r-methodology-first-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "cause",
+          "ref": "semantic-factorization-2026-10-18:n:goal-methodology-first"
+        },
+        {
+          "role": "effect",
+          "ref": "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+        }
+      ]
     }
   ],
   "moves": [
@@ -1387,6 +1622,60 @@
         "semantic-factorization-2026-10-18:m:13"
       ],
       "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:15",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "adopt",
+      "actor_id": "participant:user",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:h-prior-art-first"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:goal-methodology-first"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:u11",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:14"
+      ],
+      "inference_family": "abduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:16",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a11",
+          "start": 0,
+          "end": 728,
+          "quote": "The conversation identifies a reusable, prior-art-first problem-solving method: start from a goal; search across disciplines for existing frameworks; compare their assumptions, mechanisms, and evidence; synthesize only where justified; validate against concrete cases; and develop something new only for a demonstrated residual gap. The proposed workflow combines systematic mapping/evidence synthesis, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance. This combination is a proposed working protocol, not a single established standard. LLMs can accelerate cross-disciplinary discovery and translation but source verification and explicit tests remain necessary."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "synthesize",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:c-conceptual-framework-analysis",
+        "semantic-factorization-2026-10-18:n:c-systematic-mapping",
+        "semantic-factorization-2026-10-18:n:c-requirements-traceability"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a11",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:15"
+      ],
+      "inference_family": "abduction"
     }
   ],
   "stance_events": [],
@@ -1481,6 +1770,28 @@
       ],
       "resolution_basis": "A targeted prior-art investigation found strong precedents (DOL, MMT, institution theory, MDE), but whether any framework supplies a universal MECE factorization remains unverified.",
       "replacement_id": null
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:qe:5",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:u11",
+          "start": 0,
+          "end": 104,
+          "quote": "yes i agree make sure the inquery ograph of this covnersation is up to date and then advise on waht next"
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "question_id": "semantic-factorization-2026-10-18:n:goal-methodology-first",
+      "status": "answered",
+      "actor_id": "participant:assistant",
+      "at_message_id": "semantic-factorization-2026-10-18:a11",
+      "answer_ids": [
+        "semantic-factorization-2026-10-18:n:c-prior-art-synthesis-protocol"
+      ],
+      "resolution_basis": "A proposed protocol file was created to formalize the next research process; execution of the systematic mapping remains the next research step.",
+      "replacement_id": null
     }
   ],
   "extractions": [
@@ -1500,6 +1811,9 @@
     "Distinguish the object of factorization: syntax/language, mathematical interpretation, represented system, and available operations may not be the same target.",
     "Candidate prior-art leads mentioned in the conversation include the ontology spectrum, model theory, database theory, category-theoretic ologs, and operational semantics. These are leads, not claims of a complete solution.",
     "The requested MECE criterion needs a defined universe and decomposition target; capability combinations may be more appropriate than exclusive bins.",
-    "This capture does not authorize changes to Inquiry Graph's shared schema."
+    "This capture does not authorize changes to Inquiry Graph's shared schema.",
+    "Conversation extension: user endorses the general prior-art-first pattern and asks to keep the graph current and advise on next steps.",
+    "A proposed reusable research protocol is stored in research-protocol.md. It combines systematic mapping, conceptual framework analysis, requirements traceability, scenario-based evaluation/design science, and provenance; it is explicitly not represented as one established named standard.",
+    "Next action: apply the protocol rather than expanding the comparison matrix ad hoc; first formalize the goal and requirements, then systematically map methods for cross-disciplinary conceptual synthesis and compare the closest frameworks against test cases."
   ]
 }
