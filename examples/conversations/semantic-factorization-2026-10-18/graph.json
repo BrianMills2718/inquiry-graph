@@ -259,6 +259,14 @@
           "text": "Z3 5.3.1.0 was downloaded and installed into a temporary Python target after verifying the official PyPI wheel SHA-256. It returned UNSAT for the counterexample query n >= 0 AND n + 0 != n and emitted an internal proof object. It returned UNSAT for the identity-age mapping postcondition and the exact integer days-to-years conversion query, and SAT with model years=1, days=365 for a negative control that copies days into years. These are solver-level checks of explicit formulas, not MMT/DOL conformance or independently kernel-checked proof-assistant results. The next step is a native proof-assistant/MMT formalization, actual DOL mapping, and Modelica/FMI or SysML execution test.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a17",
+          "actor_id": "participant:assistant",
+          "ordinal": 31,
+          "text": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -1220,6 +1228,96 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Test the arithmetic theorem in a native proof-assistant or MMT formalization, run a real DOL mapping with explicit preservation/coherence checks, and run a dynamic model using Modelica/FMI or a conforming SysML v2 behavior tool."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-lean-proof-checks",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "lean-proof-checks.lean and lean-proof-checks.json record a public Lean 4.30.0 core-library playground run that reported “Compiled without errors” and printed terms for four declarations. The source contains no sorry/admit placeholders."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-lean-arithmetic-checked",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Lean 4.30.0 checked the proposition n + 0 = n for all n : Nat, using simp, and the playground printed a proof term."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-lean-contract-checked",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Lean checked the identity-map invariant for nonnegative integer age and exact Nat arithmetic (365 * years) / 365 = years under their explicit assumptions."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-lean-counterexample-checked",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "Lean checked the existential counterexample years=1, days=365 showing that copying a day count directly into a years field is invalid when days=365*years."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-proof-assistant-scope",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "A Lean-checked proof validates the stated proposition under the Lean core-library/kernel workflow; it does not prove that a general MMT/DOL/SysML/Modelica framework implements the same semantics or that a mapping between formalisms preserves meaning."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Run an actual DOL mapping/coherence test between two supported OMS and execute the oscillator or cellular-automaton model in a suitable Modelica/FMI or SysML v2 tool; record native outputs and compare with explicit preservation requirements."
     }
   ],
   "relations": [
@@ -2428,6 +2526,126 @@
           "ref": "semantic-factorization-2026-10-18:n:goal-native-formal-framework-test"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:lean-check-records-arithmetic",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-lean-proof-checks"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-lean-arithmetic-checked"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:lean-check-records-mapping-invariant",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-lean-proof-checks"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-lean-contract-checked"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:lean-check-records-units-counterexample",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-lean-proof-checks"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-lean-counterexample-checked"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:lean-proof-scope-limit",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-proof-assistant-scope"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-lean-arithmetic-checked"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:lean-proof-to-next-tool-tests",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:c-lean-proof-checks"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests"
+        }
+      ]
     }
   ],
   "moves": [
@@ -3032,6 +3250,38 @@
         "semantic-factorization-2026-10-18:m:21"
       ],
       "inference_family": "deduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:23",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a17",
+          "start": 0,
+          "end": 612,
+          "quote": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:goal-native-formal-framework-test",
+        "semantic-factorization-2026-10-18:n:c-smt-proof-boundary"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-lean-proof-checks",
+        "semantic-factorization-2026-10-18:n:claim-lean-arithmetic-checked",
+        "semantic-factorization-2026-10-18:n:claim-lean-contract-checked",
+        "semantic-factorization-2026-10-18:n:claim-lean-counterexample-checked",
+        "semantic-factorization-2026-10-18:n:c-proof-assistant-scope",
+        "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a17",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:22"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -3166,11 +3416,12 @@
   "notes": [
     "The reusable prior-art-first research protocol is stored in research-protocol.md; it combines established components but is not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
-    "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, independent Python oracle checks, and Z3 solver checks for arithmetic and toy mapping properties.",
-    "solver-checks.json records Z3 5.3.1.0 query/results. The official PyPI wheel hash matched. The arithmetic counterexample query, identity-mapping violation query, and exact integer conversion violation query were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
-    "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation. This is not general theorem proving or proof that the MMT executable validated these fixtures.",
-    "No DOL/MMT/SysML/Modelica native conformance run has been completed. Next: native proof-assistant/MMT formalization, actual DOL mapping/preservation check, and dynamic-model execution in Modelica/FMI or SysML v2.",
+    "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, independent Python oracle checks, Z3 solver checks, and a Lean proof-assistant check.",
+    "solver-checks.json records Z3 5.3.1.0 results: arithmetic counterexample query, identity mapping, and exact integer conversion violation queries were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
+    "lean-proof-checks.lean and lean-proof-checks.json record four declarations accepted by the public Lean 4.30.0 core-library playground with no sorry/admit: Nat n+0=n; identity age mapping preserves nonnegativity; exact Nat 365*years/365 arithmetic; and a wrong-units counterexample.",
+    "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation. That is not general theorem proving or proof that the MMT executable validated these fixtures.",
+    "No actual DOL mapping or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: run those native tool tests and record the precise guarantees against requirements R01-R18.",
     "No universal canonical/MECE factorization or novel contribution has been established; compare actual evidence to requirements R01-R18 before writing a residual-gap statement.",
-    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212 and PR #213 were merged after graph validation and successful CI."
+    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212, #213 and #214 were merged after validation and successful CI."
   ]
 }
