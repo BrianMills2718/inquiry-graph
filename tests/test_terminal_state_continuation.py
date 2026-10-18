@@ -59,11 +59,20 @@ def test_prepare_materials_are_cutoff_safe(tmp_path):
     source = tmp_path / "source.md"
     source.write_text(fake_source, encoding="utf-8")
     material, checks = prepare(source, tmp_path / "out")
-    assert set(material) == {"A", "B", "C"}
+    assert set(material) == {"A", "B", "C", "E"}
     assert checks["source_quote_matches_export"]
     assert checks["B_valid"] and checks["C_valid"]
     assert not checks["B_has_explicit_terminal_task"]
     assert checks["C_has_open_terminal_task"]
+    assert checks["E_has_exact_terminal_quote"]
+    assert checks["C_has_exact_terminal_quote"]
+    assert checks["E_adds_no_semantic_task_record"]
+    assert case["terminal_quote"] in material["C"]
+    assert case["terminal_quote"] in material["E"]
+    assert material["E"].split("## Supplementary primary-source excerpt")[0].rstrip() == material["B"].rstrip()
+    assert material["C"].split("## Supplementary primary-source excerpt")[1] == material["E"].split("## Supplementary primary-source excerpt")[1]
+    assert case["reference"]["active_task"] not in material["E"]
+    assert case["reference"]["active_task"] in material["C"]
     assert not checks["B_leaks_postcutoff_Lean_in_report"]
     assert not checks["C_leaks_postcutoff_Lean_in_report"]
     assert not checks["reader_comparison_complete"]

@@ -12,7 +12,7 @@ Live test (when llm_client is available):
  python -m evaluation.terminal_state.live_trial --transcript /path/chat.md --out private/terminal_trial \
    --extract --model codex/gpt-5.6-luna --reader
 
-Reader A/B/C/D conditions share one prompt and preserve the original cutoff.
+Reader A/B/E/C/D conditions share one prompt and preserve the original cutoff.
 Judging against the separate six-point gold rubric remains a separate review.
 """
 import argparse
@@ -100,9 +100,11 @@ def terminal_detection(graph: Graph, final_message: Message) -> dict:
         and e.actor_id == final_message.actor_id
         and e.at_message_id == final_message.id
     ]
+    open_task_ids = {e.question_id for e in open_status}
     matching = [
         n for n in sourced_tasks
-        if any(x in n.text.lower() for x in ("framework", "comparison", "scenario"))
+        if n.id in open_task_ids
+        and any(x in n.text.lower() for x in ("framework", "comparison", "scenario"))
     ]
     return {
         "terminal_source_message_id": final_message.id,
@@ -142,7 +144,7 @@ def optional_reader(material: dict[str, str], out: Path) -> None:
 
     answers = {}
     model = get_model("synthesis")
-    for cond in ("A", "B", "C", "D"):
+    for cond in ("A", "B", "E", "C", "D"):
         ans, meta = call_llm_structured(
             model,
             [{"role": "user", "content": QUESTION + "\n\nMATERIAL:\n" + material[cond]}],
@@ -188,25 +190,25 @@ def optional_blind_judge(out: Path) -> None:
         grades: list[AnswerGrade]
 
     answers = json.loads((out / "reader_answers.json").read_text(encoding="utf-8"))
-    expected = {"A", "B", "C", "D"}
+    expected = {"A", "B", "C", "D", "E"}
     if set(answers) != expected:
-        raise ValueError("Cannot grade without exactly A, B, C and D")
+        raise ValueError("Cannot grade without exactly A, B, C, D and E")
     gold = get_fixture()
     conditions = sorted(expected)
     random.Random(20261018).shuffle(conditions)
-    aliases = dict(zip("WXYZ", conditions))
+    aliases = dict(zip("VWXYZ", conditions))
     answer_blocks = "\n\n".join(
         f"ANSWER {alias}:\n{answers[condition]['answer']['answer']}"
         for alias, condition in aliases.items()
     )
     points = "\n".join(f"{i + 1}. {p}" for i, p in enumerate(gold["grading"]["points"]))
     prompt = (
-        "Score four answers to the SAME question against the six factual key points. "
+        "Score five answers to the SAME question against the six factual key points. "
         "The answer conditions have been randomized. Do not reward relevant but "
         "different facts, and do not assume that later work was already complete "
         "at the export cutoff. Each covered point must be unambiguously stated "
         "in the answer. Assess hallucinated or unsupported completion claims "
-        "separately. Grade exactly points 1-6 for every answer label W,X,Y,Z. "
+        "separately. Grade exactly points 1-6 for every answer label V,W,X,Y,Z. "
         "The key is from a manually checked transcript and was NOT given to "
         "the answering model.\n\n"
         f"QUESTION:\n{QUESTION}\n\nREFERENCE:\n"
@@ -225,8 +227,8 @@ def optional_blind_judge(out: Path) -> None:
         trace_id="inquiry-graph/terminal-state/exporter-20261018/blind-judge"
     )
     labels = {g.label: g for g in judged.grades}
-    if set(labels) != set("WXYZ"):
-        raise ValueError("Blind grader did not return all four labels")
+    if set(labels) != set("VWXYZ"):
+        raise ValueError("Blind grader did not return all five labels")
     outcome = {}
     for label, condition in aliases.items():
         result = labels[label]
@@ -256,7 +258,7 @@ def main() -> None:
     p.add_argument("--extract", action="store_true")
     p.add_argument("--model", help="Authorized extraction model for --extract")
     p.add_argument("--reader", action="store_true",
-                   help="Use llm_client for A/B/C/D; requires --extract")
+                   help="Use llm_client for A/B/E/C/D; requires --extract")
     p.add_argument("--judge", action="store_true",
                    help="Run a condition-blinded model-assisted rubric judge; requires --reader")
     args = p.parse_args()
@@ -289,7 +291,7 @@ def main() -> None:
         "comparisons_prepared": sorted(material),
         "baseline_controls": prep_checks,
         "live_extractor_run": False,
-        "reader_abcd_run": False,
+        "reader_abe_cd_run": False,
     }
     if args.extract:
         graph = optional_extract(conv, args.out, args.model)
@@ -299,7 +301,7 @@ def main() -> None:
         result["D_terminal_diagnostic"] = terminal_detection(graph, conv.messages[-1])
         if args.reader:
             optional_reader(material, args.out)
-            result["reader_abcd_run"] = True
+            result["reader_abe_cd_run"] = True
             if args.judge:
                 optional_blind_judge(args.out)
                 result["model_assisted_blind_grading_run"] = True

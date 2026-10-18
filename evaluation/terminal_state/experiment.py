@@ -1,7 +1,9 @@
 """Cutoff-controlled resumption comparison. No model runs by default.
 
 A = original visible transcript; B = Inquiry Graph at export cutoff;
-C = B with a source-anchored terminal task encoded using existing schema.
+E = B plus an exact terminal source quote (no new task record);
+C = B with a source-anchored terminal task encoded using existing schema
+    plus the SAME source quote as E, to isolate the structured-task effect.
 
 Usage:
   python evaluation/terminal_state/experiment.py --transcript /path/to/export.md --out /tmp/terminal-eval
@@ -126,7 +128,19 @@ def prepare(transcript, out):
     out.mkdir(parents=True, exist_ok=True)
     b = cutoff_graph()
     c = augment(b)
-    material = {"A": raw, "B": report(b), "C": report(c)}
+    # Equal-evidence ablation: E and C receive the identical verbatim terminal
+    # excerpt. E does not receive a semantic task annotation; C does.
+    source_block = (
+        "\n\n## Supplementary primary-source excerpt (export cutoff)\n\n"
+        "From the assistant's final visible reply; copied verbatim, not a "
+        "completed-work assertion:\n\n> " + case["terminal_quote"] + "\n"
+    )
+    material = {
+        "A": raw,
+        "B": report(b),
+        "E": report(b) + source_block,
+        "C": report(c) + source_block
+    }
     for cond, content in material.items():
         (out / f"{cond}.txt").write_text(content, encoding="utf-8")
     (out / "B_cutoff_graph.json").write_text(
@@ -140,6 +154,9 @@ def prepare(transcript, out):
     checks = {
         "source_quote_matches_export": True,
         "B_has_explicit_terminal_task": any(x["id"] == task_id for x in bagenda),
+        "E_has_exact_terminal_quote": case["terminal_quote"] in material["E"],
+        "C_has_exact_terminal_quote": case["terminal_quote"] in material["C"],
+        "E_adds_no_semantic_task_record": True,
         "C_has_open_terminal_task": any(x["id"] == task_id and x["status"] == "open"
                                          and x["actor_id"] == "participant:assistant"
                                          for x in cagenda),
@@ -159,7 +176,7 @@ def prepare(transcript, out):
 
 
 def independent_reader(material, out):
-    """Optional real A/B/C reader. Gold key is withheld from the answer model."""
+    """Optional real A/B/E/C reader. Gold key is withheld from the answer model."""
     from pydantic import BaseModel
     from llm_client import call_llm_structured, get_model
 
@@ -169,7 +186,7 @@ def independent_reader(material, out):
         cannot_answer: bool
 
     outputs = {}
-    for cond in ("A", "B", "C"):
+    for cond in ("A", "B", "E", "C"):
         prompt = (QUESTION + "\n\nMATERIAL:\n" + material[cond])
         result, meta = call_llm_structured(
             get_model("synthesis"), [{"role": "user", "content": prompt}],

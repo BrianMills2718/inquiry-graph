@@ -79,3 +79,19 @@ def test_diagnostic_recovers_last_response_task_not_user_stance():
     assert checks["terminal_comparative_task_detected"]
     assert checks["terminal_source_open_status_events"] == ["e"]
     assert checks["only_structural_evidence"] is True
+
+
+def test_terminal_activity_requires_explicit_open_status_not_keyword_only():
+    conv, _ = import_visible_export(SYNTHETIC)
+    msg = conv.messages[-1]
+    task = Node(
+        id="t", kind="task",
+        text="Finish the scenario-by-scenario framework comparison.",
+        anchors=[anchor(msg, msg.text)]
+    )
+    without_status = Graph(id="missing-open-status", conversations=[conv], nodes=[task])
+    verdict = terminal_detection(without_status, msg)
+    assert verdict["structurally_valid"]
+    assert verdict["terminal_source_tasks"] == ["t"]
+    assert verdict["terminal_source_open_status_events"] == []
+    assert verdict["terminal_comparative_task_detected"] is False
