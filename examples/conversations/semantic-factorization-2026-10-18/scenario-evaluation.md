@@ -306,3 +306,20 @@ nothing to prove
 No goal was generated for this example in that workflow. This is **neither a proof success nor a proof failure** because no proposition was checked. It corroborates the boundary noted above: this built-in sample demonstrates parser/development-graph construction, but it does not provide a checked preservation theorem. The service's consistency action separately returned \`no cons checker found\`.
 
 The exact interaction and temporary output URL are recorded in [dol-tool-checks.json](dol-tool-checks.json). To obtain formal verification evidence, the next test must include a real proof goal/view obligation in a supported DOL case and use a Hets environment with a working checker.
+
+
+## 17. Custom Common Logic view: explicit mapping edge, unavailable proof result (2026-10-18)
+
+To separate a generic ontology translation from a user-defined mapping, I submitted a second small DOL source through the same public UI; source saved as [dol-view-smoketest.dol](dol-view-smoketest.dol). It contains a \`lower\` and \`upper\` Common Logic specification and a view mapping \`a \mapsto A\`, \`b \mapsto B\`.
+
+The JSON output ([details](dol-tool-checks.json)) contained:
+
+- Nodes: \`lower\`, \`upper\`, and internal \`v__S\`.
+- Edge \`lower \rightarrow v__S\`: \`GlobalDef\`, with symbol map \`a \mapsto A\`, \`b \mapsto B\`.
+- Edge \`v__S \rightarrow upper\`: \`GlobalUnprovenThmInc\`, associated with view \`v\`.
+
+This demonstrates that the UI can parse a custom Common Logic view and represent the mapping plus an *unproven theorem-inclusion edge* in its development graph.
+
+I then opened **Tools → automatic proofs**, selected **E Prover**, selected \`CLFol2CFOL:CASL2TPTP_FOF\`, set a 20-second timeout, clicked **Unproven**, and submitted. The UI again returned \`nothing to prove\`. The graph does contain a \`GlobalUnprovenThmInc\` edge, but the deployed proof workflow did not provide a goal/proof result. The consistency route separately returned \`no cons checker found\`.
+
+**Interpretation:** the generated graph is evidence of mapping representation, not a verified view. No semantic-preservation, satisfaction, consistency, or conservativity result has been obtained. The mismatch between the visible unproven edge and the automatic-proof route's “nothing to prove” response is itself a tool/deployment boundary to investigate. A proof-capable Hets environment, or a separate prover workflow with an explicitly exported proof obligation, is needed before counting this as formal validation.
