@@ -267,6 +267,14 @@
           "text": "A Lean 4.30.0 public-playground run reported “Compiled without errors” in 1.5 seconds for four declarations saved in lean-proof-checks.lean: n + 0 = n over Nat; an identity mapping preserving nonnegative Int age; exact Nat arithmetic (365 * years) / 365 = years; and a checked existential counterexample showing that copying days into years is wrong (years=1, days=365). The UI printed proof terms and the source uses no sorry/admit. This is a proof-assistant check of these small propositions, not an MMT-native formalization, actual DOL mapping, or proof that a cross-framework translation preserves semantics.",
           "original_id": null,
           "timestamp": null
+        },
+        {
+          "id": "semantic-factorization-2026-10-18:a18",
+          "actor_id": "participant:assistant",
+          "ordinal": 32,
+          "text": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run.",
+          "original_id": null,
+          "timestamp": null
         }
       ]
     }
@@ -1318,6 +1326,81 @@
       "review_status": "proposed",
       "kind": "goal",
       "text": "Run an actual DOL mapping/coherence test between two supported OMS and execute the oscillator or cellular-automaton model in a suitable Modelica/FMI or SysML v2 tool; record native outputs and compare with explicit preservation requirements."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-hets-doliator-run",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "reference",
+      "text": "A browser-driven run of the public Hets DOLiator parsed the built-in OWL-to-Common-Logic example and returned a development graph with 3 nodes and 2 edges, including the OWL22CommonLogic HetDefInc edge and a GlobalDefInc Common Logic extension. See dol-tool-checks.json."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-dol-translation-tool-observed",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The Hets DOLiator output is direct evidence that this example parsed and that the requested OWL-to-Common-Logic translation/extension graph was constructed."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:claim-dol-checker-unavailable",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "claim",
+      "text": "The deployed DOLiator consistency-check action returned `no cons checker found` both for the combined graph and for Parthood_OWL alone with Pellet; no consistency or semantic-preservation verdict was obtained."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:c-dol-translation-vs-proof",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "concept",
+      "text": "Construction of an explicit development graph/morphism is not itself a proof that the morphism preserves all relevant semantics, nor a satisfiability/consistency result for the source and target specifications."
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:n:goal-working-dol-checker",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "goal",
+      "text": "Run a custom DOL example with two OMS and an explicit mapping in a Hets/Ontohub environment that has a working consistency or proof checker, then record a concrete preservation/coherence result; next run a native dynamic model."
     }
   ],
   "relations": [
@@ -2646,6 +2729,102 @@
           "ref": "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests"
         }
       ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:hets-run-records-translation",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-hets-doliator-run"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-translation-tool-observed"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:hets-checker-error-qualifies-result",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-checker-unavailable"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:c-hets-doliator-run"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:translation-graph-not-proof",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "related_to",
+      "bindings": [
+        {
+          "role": "source",
+          "ref": "semantic-factorization-2026-10-18:n:c-dol-translation-vs-proof"
+        },
+        {
+          "role": "target",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-translation-tool-observed"
+        }
+      ]
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:r:native-dol-check-next",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "motivates",
+      "bindings": [
+        {
+          "role": "reason",
+          "ref": "semantic-factorization-2026-10-18:n:claim-dol-checker-unavailable"
+        },
+        {
+          "role": "result",
+          "ref": "semantic-factorization-2026-10-18:n:goal-working-dol-checker"
+        }
+      ]
     }
   ],
   "moves": [
@@ -3282,6 +3461,37 @@
         "semantic-factorization-2026-10-18:m:22"
       ],
       "inference_family": "deduction"
+    },
+    {
+      "id": "semantic-factorization-2026-10-18:m:24",
+      "anchors": [
+        {
+          "message_id": "semantic-factorization-2026-10-18:a18",
+          "start": 0,
+          "end": 988,
+          "quote": "The public Hets DOLiator was run through its ordinary browser UI on a DOL parthood example. It parsed the OWL ontology Parthood_OWL, expanded the requested OWL22CommonLogic translation into an internal Common Logic node, and constructed a development graph with 3 nodes and 2 edges; the target Parthood_CL ontology adds a transitivity axiom. The translation edge is labelled HetDefInc with morphism OWL22CommonLogic, followed by a GlobalDefInc edge in Common Logic. This is actual parser/development-graph evidence for heterogeneous translation. The deployed consistency checker returned “no cons checker found” both on all graph nodes and when checking only Parthood_OWL with Pellet, so no consistency, satisfiability, conservativity, or preservation result was obtained. Reproducible source and structured result are stored in dol-translation-smoketest.dol and dol-tool-checks.json. The next test needs a working checker for a custom OMS mapping, followed by a native dynamic-model run."
+        }
+      ],
+      "origin": "inferred",
+      "review_status": "proposed",
+      "kind": "test",
+      "actor_id": "participant:assistant",
+      "input_ids": [
+        "semantic-factorization-2026-10-18:n:goal-dol-and-dynamics-tests",
+        "semantic-factorization-2026-10-18:n:c-lean-proof-checks"
+      ],
+      "output_ids": [
+        "semantic-factorization-2026-10-18:n:c-hets-doliator-run",
+        "semantic-factorization-2026-10-18:n:claim-dol-translation-tool-observed",
+        "semantic-factorization-2026-10-18:n:claim-dol-checker-unavailable",
+        "semantic-factorization-2026-10-18:n:c-dol-translation-vs-proof",
+        "semantic-factorization-2026-10-18:n:goal-working-dol-checker"
+      ],
+      "at_message_id": "semantic-factorization-2026-10-18:a18",
+      "after_move_ids": [
+        "semantic-factorization-2026-10-18:m:23"
+      ],
+      "inference_family": "deduction"
     }
   ],
   "stance_events": [],
@@ -3416,12 +3626,13 @@
   "notes": [
     "The reusable prior-art-first research protocol is stored in research-protocol.md; it combines established components but is not one named standard.",
     "systematic-mapping.md is a bounded first-pass map, not a completed systematic review.",
-    "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, independent Python oracle checks, Z3 solver checks, and a Lean proof-assistant check.",
-    "solver-checks.json records Z3 5.3.1.0 results: arithmetic counterexample query, identity mapping, and exact integer conversion violation queries were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
-    "lean-proof-checks.lean and lean-proof-checks.json record four declarations accepted by the public Lean 4.30.0 core-library playground with no sorry/admit: Nat n+0=n; identity age mapping preserves nonnegativity; exact Nat 365*years/365 arithmetic; and a wrong-units counterexample.",
-    "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation. That is not general theorem proving or proof that the MMT executable validated these fixtures.",
-    "No actual DOL mapping or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: run those native tool tests and record the precise guarantees against requirements R01-R18.",
+    "scenario-evaluation.md defines five synthetic fixtures, source-based framework assessments, Python oracle checks, Z3 solver checks, Lean-checked propositions, local FOL prototype tests, and an actual Hets DOLiator parse/translation smoke test.",
+    "solver-checks.json records Z3 5.3.1.0 results: arithmetic counterexample query, identity mapping and exact integer conversion violation queries were UNSAT; the wrong-units negative control was SAT (years=1, days=365).",
+    "lean-proof-checks.lean/json record four propositions checked by the public Lean 4.30.0 core-library playground, with no unfinished proof placeholders in the source declarations.",
+    "The adjacent FOL Operational Metamodel workspace passed 21 tests for pinned MMT FOL OMDoc import and bounded finite-model evaluation.",
+    "dol-translation-smoketest.dol and dol-tool-checks.json record a real browser UI run of Hets DOLiator: 3-node, 2-edge OWL-to-Common-Logic development graph generated, but consistency checking returned `no cons checker found` for both combined and OWL-only attempts; no consistency or semantic-preservation result exists.",
+    "No actual custom DOL preservation proof, MMT-native formalization, or native SysML v2/Modelica/FMI dynamic-model conformance run has been completed. Next: obtain a working formal checker for a custom DOL mapping and run a dynamic model.",
     "No universal canonical/MECE factorization or novel contribution has been established; compare actual evidence to requirements R01-R18 before writing a residual-gap statement.",
-    "The user explicitly authorized autonomous progress and merging when judged fit; PR #212, #213 and #214 were merged after validation and successful CI."
+    "The user explicitly authorized autonomous progress and merging when judged fit; prior PRs were merged only after graph validation and successful CI."
   ]
 }
