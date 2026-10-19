@@ -26,7 +26,7 @@ from inquiry_graph.model import Conversation, Graph, Message, Participant
 from inquiry_graph.validate import validate
 from inquiry_graph.views import open_questions
 from inquiry_graph.render import report
-from evaluation.terminal_state.experiment import QUESTION, get_fixture, prepare
+from evaluation.terminal_state.experiment import QUESTION, get_fixture, prepare, safe_output_directory
 
 HEAD = re.compile(
     r"(?m)^## (Prompt|Response):[ \t]*\n"
@@ -276,6 +276,7 @@ def main() -> None:
     conv, import_meta = import_visible_export(source)
     if case["terminal_quote"] not in conv.messages[-1].text:
         raise ValueError("Final assistant reply did not retain exact terminal task quote")
+    args.out = safe_output_directory(args.out)
     args.out.mkdir(parents=True, exist_ok=True)
     # Preserve private raw content in private run directory ONLY.
     (args.out / "source_normalized.json").write_text(
