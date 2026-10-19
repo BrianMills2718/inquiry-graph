@@ -28,6 +28,24 @@ QUESTION = ("At the END of this conversation, what exact research activity was u
             "Distinguish the broad goal from the active task. Use only the provided material.")
 
 
+def safe_output_directory(out: Path) -> Path:
+    """Prevent accidental public git commits of raw transcript/reader materials.
+
+    The repository's private/ directory is ignored by git. Output outside this
+    checkout is permitted; callers remain responsible for protecting it.
+    """
+    out = Path(out).resolve()
+    root = ROOT.resolve()
+    if out.is_relative_to(root) and not out.is_relative_to(root / "private"):
+        raise ValueError(
+            "Evaluation output contains raw transcript: use ignored "
+            "private/ within this repository, or an out-of-repository path"
+        )
+    return out
+
+
+
+
 def get_fixture():
     return json.loads(FIXTURE.read_text(encoding="utf-8"))
 
@@ -124,7 +142,7 @@ def prepare(transcript, out):
             raise ValueError(f"Export does not contain exact {key}")
     if "A Lean 4.30.0 public-playground run" in raw:
         raise ValueError("Export unexpectedly contains post-cutoff Lean record")
-    out = Path(out)
+    out = safe_output_directory(out)
     out.mkdir(parents=True, exist_ok=True)
     b = cutoff_graph()
     c = augment(b)
