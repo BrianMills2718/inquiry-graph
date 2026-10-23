@@ -1,0 +1,157 @@
+{
+  "schema_id": "nyc_crz.federated_baseline_profile.v0.1",
+  "status": "research profile; not a new ontology and not a standards-conformant interchange serialization",
+  "baseline_packet": "NYC-CRZ-MVP-v1",
+  "principles": [
+    "native artifacts remain authoritative",
+    "PROV references derivation/version history",
+    "SACM/assurance-style records express claim support/needsSupport/refusal where useful",
+    "policy-appraisal criteria remain explicit and unweighted unless accountable value judgments are supplied",
+    "missing method-owned outputs stay missing"
+  ],
+  "artifacts": {
+    "prediction_source": {
+      "native_ref": "mixed_methods_workbench:prediction-reevaluation-2-objective-2",
+      "kind": "source_claim",
+      "proposition": "Before implementation, the agency's Phase 1 table projected a 13.4% reduction in daily vehicles entering the Manhattan CBD relative to its No Action basis."
+    },
+    "hearing_concern_source": {
+      "native_ref": "mixed_methods_workbench:concern-hearing-2022-08-25-medical-access",
+      "kind": "source_claim",
+      "proposition": "One public-hearing passage raised added travel costs for vulnerable people accessing medical appointments."
+    },
+    "quantitative_result": {
+      "native_ref": "mixed_methods_workbench:nyc-crz-predicted-observed-audit-v1",
+      "kind": "computed_descriptive_result",
+      "proposition": "Within the agency's No Action comparison frame, the frozen January-October arithmetic is approximately 11.39% below its baseline, about 2.01 percentage points below the 13.4% Phase 1 prediction."
+    },
+    "qualitative_describe": {
+      "native_ref": "NYC-QC-1",
+      "kind": "method_owned_result",
+      "status": "missing_unaccepted"
+    }
+  },
+  "provenance_profile": [
+    {
+      "entity": "prediction_source",
+      "prov_role": "Entity",
+      "provenance": "exact source unit + hash + human disposition"
+    },
+    {
+      "entity": "hearing_concern_source",
+      "prov_role": "Entity",
+      "provenance": "exact source unit + hash + human disposition"
+    },
+    {
+      "entity": "quantitative_result",
+      "prov_role": "Entity",
+      "wasGeneratedBy": "NYC-QUANT-1",
+      "used": [
+        "frozen vehicle-entry snapshot",
+        "agency-derived No Action baseline"
+      ],
+      "provenance": "query receipt + deterministic arithmetic + human disposition"
+    }
+  ],
+  "claim_profile": [
+    {
+      "claim_id": "claim-traffic-descriptive",
+      "proposition": "Observed entry-event arithmetic is lower than the agency-derived No Action baseline within the accepted comparison frame.",
+      "declaration": "asserted",
+      "evidence": [
+        "quantitative_result"
+      ],
+      "scope": "descriptive arithmetic only"
+    },
+    {
+      "claim_id": "claim-traffic-causal",
+      "proposition": "The CRZ toll caused an 11.39% reduction in vehicle entries.",
+      "declaration": "needsSupport",
+      "evidence": [
+        "quantitative_result"
+      ],
+      "missing": [
+        "independently defensible counterfactual/causal identification"
+      ]
+    },
+    {
+      "claim_id": "claim-medical-concern-exists",
+      "proposition": "A medical-access cost concern appears in the admitted hearing record.",
+      "declaration": "asserted",
+      "evidence": [
+        "hearing_concern_source"
+      ],
+      "scope": "one admitted hearing passage"
+    },
+    {
+      "claim_id": "claim-medical-burden-prevalent",
+      "proposition": "Medical-access cost burdens are widespread or representative.",
+      "declaration": "needsSupport",
+      "evidence": [
+        "hearing_concern_source"
+      ],
+      "missing": [
+        "broader denominator/qualitative analysis/post-implementation burden evidence"
+      ]
+    },
+    {
+      "claim_id": "claim-policy-choice",
+      "proposition": "The program should be retained unchanged or modified.",
+      "declaration": "needsSupport",
+      "missing": [
+        "completed evidence synthesis",
+        "explicit accountable values/preferences",
+        "decision authority"
+      ]
+    }
+  ],
+  "decision_support_profile": {
+    "method_owner": "mature policy appraisal / Green Book style structure",
+    "aggregate_score": null,
+    "hidden_weights": false,
+    "criteria": [
+      "traffic reduction",
+      "medical-access burden",
+      "distribution/equity",
+      "evidence quality",
+      "revision readiness"
+    ],
+    "authority_boundary": "analysis/advice only; no accountable policy choice"
+  },
+  "dependency_profile": [
+    {
+      "artifact": "quantitative_result",
+      "supports": [
+        "claim-traffic-descriptive"
+      ],
+      "does_not_support": [
+        "claim-traffic-causal"
+      ]
+    },
+    {
+      "artifact": "hearing_concern_source",
+      "supports": [
+        "claim-medical-concern-exists"
+      ],
+      "does_not_support": [
+        "claim-medical-burden-prevalent"
+      ]
+    },
+    {
+      "artifact": "qualitative_describe",
+      "status": "missing",
+      "blocks": [
+        "broader hearing synthesis",
+        "prevalence/variation claims"
+      ]
+    },
+    {
+      "claim": "claim-policy-choice",
+      "depends_on": [
+        "completed relevant evidence",
+        "criteria/value judgments",
+        "decision authority"
+      ]
+    }
+  ]
+}
