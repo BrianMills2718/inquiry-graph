@@ -7,6 +7,8 @@ status: proposed
 
 Planning package: docs/planning/planning-package.json
 
+Answers open questions: Q5, Q6, Q12
+
 Status: proposed on 2026-10-27 by the planning-package agent. It is ordinary agent-owned repair work
 (open questions Q5, Q6 and Q12 are all `owner: agent`); in `~/code2` a change this size needs no
 adopted design plan, the pull request is the record (`~/code2/AGENTS.md`). If the work grows beyond
