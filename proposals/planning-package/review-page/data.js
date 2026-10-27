@@ -3,7 +3,7 @@ window.PAGE_DATA = {
   "schema_version": "1.0",
   "record_type": "planning_package",
   "repository": "BrianMills2718/inquiry-graph",
-  "subject_revision": "4a8fa901247a74e8418cd74f79afee8fb16951e1",
+  "subject_revision": "4a8bba0e96d5aa4115a67507b26acb810e6ac7cf",
   "request": "Company Planning compliance workflow, 2026-10-27 (workflow-computed task, run for Brian; his standing request, 2026-10-25: \"i have asked 100s of times to make ure that my proejcts are always company plannign complaint\"): build the first planning package for inquiry-graph. This lane touched only docs/planning/, the review page and one wiki link, because another session may own the rest of the repository. docs/planning/run_checks.sh reruns the checks into docs/planning/checks.txt.",
   "parts": {
    "checks": {
@@ -1599,6 +1599,6 @@ window.PAGE_DATA = {
   "DOMAIN.md (domain glossary)": "https://github.com/BrianMills2718/inquiry-graph/blob/main/docs/planning/DOMAIN.md",
   "next-plan.md (the next plan)": "https://github.com/BrianMills2718/inquiry-graph/blob/main/docs/planning/next-plan.md"
  },
- "built_from": "4a8fa90",
+ "built_from": "4a8bba0",
  "checks_commit": "4a8fa90"
 };
