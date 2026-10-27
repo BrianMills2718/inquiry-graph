@@ -103,7 +103,7 @@
    "short": "extract-or-run restart loop",
    "question": "extract-or-run.service restarts every few seconds (NRestarts 2537 on 2026-10-27) because it is the older invocation of tools/extract_queue.py over private/extract_full_20261003/or_run with --budget 25 and no --contract. tools/finish_pipeline.sh:15 already reruns the same queue with --contract docs/capture_contracts/extraction-position-memory.json and INQUIRY_EXTRACT_MOVES=1, but it first waits for every extract-* unit to stop (tools/finish_pipeline.sh:12), so the looping unit also holds the finish pipeline back. Is anything in that queue unfinished?",
    "blocks": "how issue #191 closes, and whether the full-archive extraction resumes",
-   "resolves_with": "Prior art settles the remedy: the contract and the contract-bearing invocation exist. Disable the unit; reading the queue's output folder settles whether anything is unfinished, and if so finish_pipeline.sh (or its line 15 alone) runs it. See docs/planning/next-plan.md step 2.",
+   "resolves_with": "Prior art settles the remedy: the contract and the contract-bearing invocation exist. Disable the unit; reading the queue's output folder settles whether anything is unfinished, and if so line 15 of finish_pipeline.sh is run alone (the whole script also renames every topic through the failing Codex route and publishes the map to personal-vps). See docs/planning/next-plan.md step 2.",
    "owner": "agent",
    "status": "open",
    "sources": [
@@ -268,15 +268,18 @@
   {
    "id": "Q14",
    "short": "Live checkout lags main",
-   "question": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv.",
+   "question": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv. Its untracked uv.lock (2,559 lines) differs from the uv.lock that origin/main tracks since 8b063a0 (2,745 lines), so git refuses a fast-forward that would overwrite it.",
    "blocks": "whether the next plan's fixes take effect at all, and whether two green nightly runs after the merge are evidence about the merged code",
-   "resolves_with": "Argument, no test: the checkout is clean apart from an untracked uv.lock, so a fast-forward pull plus uv sync after each merge brings it to main; whether that runs from ship, the nightly unit itself, or by hand is the choice. The next plan adds it as step 0 and a done-when line.",
+   "resolves_with": "Argument, no test: nothing local diverges (rev-list origin/main..HEAD is 0), and the only obstacle to a fast-forward is the untracked uv.lock, which differs from the tracked one. Compare the two files, move the untracked one aside (not delete), then git pull --ff-only and uv sync. The repeated update (from ship's post-merge step or the start of the nightly unit) must raise a keyed concern when the fast-forward is refused rather than fail silently. The other environments the jobs use (~/.venvs/inquiry-maps, tools/nightly_sessions.py:29; ~/.venvs/inquiry-or, tools/finish_pipeline.sh:15) need no sync for these 15 commits: the only pyproject.toml change since 8672a4e adds a dev dependency group and code2check settings, no runtime dependency. The next plan does this as step 0 with a done-when line.",
    "owner": "agent",
    "status": "open",
    "sources": [
+    "/home/brian/code2/agent-skills/skills/brian-positions/SKILL.md:18",
+    "pyproject.toml:17",
+    "tools/finish_pipeline.sh:15",
+    "tools/nightly_sessions.py:29",
     "tools/systemd/inquiry-graph-nightly.service:6",
-    "tools/systemd/inquiry-graph-nightly.service:7",
-    "/home/brian/code2/agent-skills/skills/brian-positions/SKILL.md:18"
+    "tools/systemd/inquiry-graph-nightly.service:7"
    ],
    "touches": [
     "brian-position",

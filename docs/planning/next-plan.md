@@ -46,10 +46,15 @@ documentation repairs (Q1 to Q4, Q8) that any session can do; none blocks this p
 
 ## Steps
 
-0. **Live checkout.** Fast-forward `~/code2/inquiry-graph` to `origin/main` (`git pull --ff-only`;
-   the tree is clean apart from an untracked `uv.lock`) and run `uv sync`. Then make it repeatable:
-   after each merge to main the same two commands run, from `ship`'s post-merge step or at the start
-   of the nightly unit. Do this first and again after each later step merges.
+0. **Live checkout.** `~/code2/inquiry-graph` has nothing of its own (`rev-list origin/main..HEAD`
+   is 0) except an untracked `uv.lock` that differs from the one `origin/main` tracks since 8b063a0,
+   so git refuses a fast-forward. Compare the two files, move the untracked one aside (not delete),
+   then `git pull --ff-only` and `uv sync`. Then make it repeatable: after each merge to main the
+   same two commands run, from `ship`'s post-merge step or at the start of the nightly unit, and a
+   refused fast-forward raises a keyed concern instead of failing quietly. The jobs' other
+   environments (`~/.venvs/inquiry-maps`, `~/.venvs/inquiry-or`) need no sync for these 15 commits:
+   the only `pyproject.toml` change adds a dev dependency group. Do this first and again after each
+   later step merges.
 1. **Topic naming.** Reproduce one failing `name_topics.py` call with the full Codex CLI stderr
    (the concern keeps only its first line). Fix the cause where it originates (llm_client's Codex
    transport, or the naming call's working directory and sandbox options,
@@ -62,8 +67,9 @@ documentation repairs (Q1 to Q4, Q8) that any session can do; none blocks this p
 2. **extract-or-run.** Disable the unit (`systemctl --user disable --now extract-or-run.service`): it
    is the pre-contract invocation of a queue that `tools/finish_pipeline.sh:15` already reruns under
    the existing contract `docs/capture_contracts/extraction-position-memory.json`. Read the queue's
-   output folder; if anything is unfinished, run `finish_pipeline.sh`, which no longer waits. Say
-   which on #191.
+   output folder; if anything is unfinished, run line 15 of `finish_pipeline.sh` alone (the whole
+   script also renames every topic through the failing Codex route and publishes the map to
+   personal-vps). Say which on #191.
 3. **Export watcher.** Replace the browser scrape with a Gmail read through an API or connector that
    does not depend on the robot browser, and alert (keyed concern) when the check itself cannot run.
 

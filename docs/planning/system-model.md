@@ -63,6 +63,7 @@ flowchart LR
   nightly -->|map build, topic names| priv
   nightly -->|name each new topic| codex["Codex CLI<br/>(through llm_client)"]
   queue["extract_queue.py<br/>(extract-or-run.service, looping)"] -.->|refused: no contract| priv
+  finish -.->|waits until every extract-* unit stops| queue
   finish["finish_pipeline.sh"] -->|extraction under the capture contract| openrouter["OpenRouter<br/>(through llm_client)"]
   finish -->|ssh and scp the map| vps["personal-vps<br/>maps.brianmills.dev/positions/"]
   finish --> priv
