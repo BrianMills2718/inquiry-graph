@@ -1,0 +1,207 @@
+{
+ "schema_version": "1.0",
+ "record_type": "planning_package",
+ "repository": "BrianMills2718/inquiry-graph",
+ "subject_revision": "8fe79caccad09601220d5ac713ee76228ace9aa6",
+ "request": "Company Planning compliance workflow, 2026-10-27 (workflow-computed task, run for Brian; his standing request, 2026-10-25: \"i have asked 100s of times to make ure that my proejcts are always company plannign complaint\"): build the first planning package for inquiry-graph. This lane touched only docs/planning/, the review page and one wiki link, because another session may own the rest of the repository. docs/planning/run_checks.sh reruns the checks into docs/planning/checks.txt.",
+ "parts": {
+  "checks": {
+   "status": "present",
+   "path": "docs/planning/checks.txt",
+   "results": [
+    {
+     "name": "wiki rule (Markdown cap, reachability, layout, durable documents)",
+     "command": "python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .",
+     "exit_status": 1,
+     "counts": {
+      "markdown_files": 109,
+      "cap": 100,
+      "orphans": 19,
+      "layout_findings": 0,
+      "layout_undeclared": 1,
+      "durable_findings": 1,
+      "findings": 3
+     },
+     "tracked_by": "Q1"
+    },
+    {
+     "name": "durable documents (arc42)",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/durable_docs_check.py --repo . --arc42",
+     "exit_status": 1,
+     "counts": {
+      "findings": 1,
+      "stale": 1
+     },
+     "tracked_by": "Q2"
+    },
+    {
+     "name": "project navigation",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/validate_project_navigation.py .",
+     "exit_status": 0,
+     "counts": {
+      "findings": 0,
+      "delegated": 2
+     },
+     "note": "report-only; wiki/index.md delegated to the wiki rule, docs/roadmap.md accepted as the native roadmap"
+    },
+    {
+     "name": "plan adoption recheck",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/method_conformance/cli.py lint --repo-root . --recheck",
+     "exit_status": 1,
+     "counts": {
+      "current": 0,
+      "stale": 3,
+      "finished": 0
+     },
+     "tracked_by": "Q3",
+     "note": "all three plans are delivered (R4); they still say status: proposed, so the recheck counts them stale"
+    },
+    {
+     "name": "plan lint, each adopted plan against its own adoption record",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/method_conformance/cli.py lint --repo-root . --plan <plan> (coding-sessions, report-relations-rescore, session-launch-kind)",
+     "exit_status": 0,
+     "counts": {
+      "plans_passed": 3,
+      "plans_failed": 0,
+      "checks_passed": 490,
+      "checks_failed": 0
+     }
+    },
+    {
+     "name": "repository check (make check: trace, sources, import contracts, OpenSpec, pytest, artifact drift, seed validation, architecture, test-first)",
+     "command": "make check",
+     "exit_status": 0,
+     "counts": {
+      "tests_passed": 171,
+      "tests_skipped": 2,
+      "failed": 0,
+      "import_contracts_kept": 19,
+      "import_contracts_broken": 0,
+      "specs_valid": 7,
+      "seed_validation_errors": 0
+     }
+    },
+    {
+     "name": "typed-graph/v1 schema (domain graph and open-questions map)",
+     "command": "python3 with jsonschema.Draft202012Validator over the two graphs against $HOME/code2/representation-router/schemas/typed-graph.schema.json (code in docs/planning/run_checks.sh)",
+     "exit_status": 0,
+     "counts": {
+      "graphs_valid": 2,
+      "graphs_invalid": 0
+     }
+    },
+    {
+     "name": "doc reachability (the repository's own pre-commit docs check)",
+     "command": "python3 $HOME/code2/workspace/scripts/doc_reachability.py",
+     "exit_status": 0,
+     "counts": {
+      "reachable": 103,
+      "unreachable": 0,
+      "tracked_md": 103
+     },
+     "note": "8 documents were unreachable at ef9a5ce; this package linked them from docs/index.md"
+    }
+   ]
+  },
+  "open_questions": {
+   "status": "present",
+   "path": "docs/planning/open-questions.json"
+  },
+  "system_model": {
+   "status": "present",
+   "path": "docs/planning/system-model.md",
+   "executes_typed_rules": false,
+   "basis": "src/inquiry_graph/validate.py:67"
+  },
+  "domain_model": {
+   "status": "present",
+   "path": "docs/planning/domain.graph.json",
+   "glossary": "docs/planning/DOMAIN.md",
+   "implemented": {
+    "conversation": "src/inquiry_graph/model.py:27",
+    "participant": "src/inquiry_graph/model.py:12",
+    "message": "src/inquiry_graph/model.py:18",
+    "anchor": "src/inquiry_graph/model.py:36",
+    "content-node": "src/inquiry_graph/model.py:54",
+    "question": "src/inquiry_graph/model.py:51",
+    "task": "src/inquiry_graph/model.py:50",
+    "work": "src/inquiry_graph/model.py:50",
+    "relation": "src/inquiry_graph/model.py:70",
+    "binding": "src/inquiry_graph/model.py:59",
+    "relation-signature": "src/inquiry_graph/model.py:136",
+    "move": "src/inquiry_graph/model.py:82",
+    "inference-family": "src/inquiry_graph/model.py:89",
+    "stance-event": "src/inquiry_graph/model.py:92",
+    "question-event": "src/inquiry_graph/model.py:99",
+    "open-question-agenda": "src/inquiry_graph/views.py:23",
+    "review-status": "src/inquiry_graph/model.py:43",
+    "extraction": "src/inquiry_graph/model.py:110",
+    "candidates": "src/inquiry_graph/model.py:118",
+    "graph": "src/inquiry_graph/model.py:126",
+    "quarantine": "src/inquiry_graph/io.py:177",
+    "coding-session": "src/inquiry_graph/coding_session.py:104",
+    "launch-kind": "src/inquiry_graph/coding_session.py:34",
+    "reply-fields": "src/inquiry_graph/coding_session.py:183",
+    "closure-word": "src/inquiry_graph/coding_session.py:38",
+    "resume-digest": "src/inquiry_graph/coding_session.py:244",
+    "brian-position": "tools/ask_positions.py:22",
+    "position-link": "src/inquiry_graph/linker.py:40",
+    "topic-map": "tools/position_topics.py:91",
+    "topic-name": "tools/name_topics.py:23",
+    "capture-contract": "tools/capture_contract.py:43",
+    "fit-review": "src/inquiry_graph/fit_review.py:54",
+    "episode-profile": "src/inquiry_graph/episode_view.py:36",
+    "frame-profile": "src/inquiry_graph/frame_view.py:29"
+   }
+  },
+  "diagrams": {
+   "status": "present",
+   "items": [
+    {
+     "path": "docs/model/ARCHITECTURE.md",
+     "question": "Who and what does Inquiry Graph work with (Brian, agents, chat exports, llm_client, onto-canon6), and which blocks inside it write and read the canonical JSON? (context view, section 3, and containers, section 5)"
+    },
+    {
+     "path": "docs/planning/system-model.md",
+     "question": "What does the private positions pipeline behind the brian-positions skill run, and which outside services and checkouts does it depend on (the part the next plan repairs)?"
+    },
+    {
+     "path": "docs/planning/domain.graph.json",
+     "question": "What does a conversation become in Inquiry Graph (source records, content, relations, moves, stance and question events, sessions, positions), which of those does this repository implement, and how do they relate?"
+    },
+    {
+     "path": "docs/planning/open-questions.graph.json",
+     "question": "Which questions are still open, whose call is each, what does each block, and which concepts does it bear on?"
+    }
+   ]
+  },
+  "plan": {
+   "status": "present",
+   "path": "docs/planning/next-plan.md",
+   "relies_on": [
+    "coding-session",
+    "launch-kind",
+    "reply-fields",
+    "resume-digest",
+    "brian-position",
+    "topic-map",
+    "topic-name",
+    "extraction",
+    "capture-contract",
+    "quarantine",
+    "conversation"
+   ]
+  },
+  "review_page": {
+   "status": "present",
+   "path": "proposals/planning-package/review-page/index.html",
+   "url": "https://hive.brianmills.dev/plans/inquiry-graph/main/proposals/planning-package/review-page/index.html"
+  },
+  "cold_review": {
+   "status": "present",
+   "path": "docs/planning/cold-review.md",
+   "verdict": "pass",
+   "reviewed_revision": "8fe79caccad09601220d5ac713ee76228ace9aa6"
+  }
+ }
+}

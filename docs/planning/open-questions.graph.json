@@ -1,0 +1,585 @@
+{
+ "schema": "typed-graph/v1",
+ "kinds": {
+  "AgentQuestion": {
+   "label": "Agent question (checking can settle it)",
+   "color": "#3b6fa8",
+   "explain": "An open question an agent settles by argument, prior art or a run."
+  },
+  "BrianQuestion": {
+   "label": "Brian's call",
+   "color": "#d9822b",
+   "explain": "An open question only Brian can decide; it carries a recommendation and a default."
+  },
+  "Decision": {
+   "label": "Decision it blocks",
+   "color": "#4a525c",
+   "explain": "The decision or next step that waits on the question."
+  },
+  "Concept": {
+   "label": "Domain concept",
+   "color": "#9aa3ad",
+   "explain": "A concept from docs/planning/domain.graph.json that the question bears on."
+  }
+ },
+ "layout": {
+  "direction": "RIGHT",
+  "algorithm": "layered"
+ },
+ "nodes": [
+  {
+   "id": "Q1",
+   "label": "Q1: Wiki rule: 109 docs, 19 unreachable",
+   "kind": "AgentQuestion",
+   "explain": "How should the repository get back under the wiki rule: 109 Markdown files against a cap of 100, and 19 reader documents not reachable from wiki/index.md within two links (for example evaluation/terminal_state/README.md)? Settled by: Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 19 are still read; the check's own output names them."
+  },
+  {
+   "id": "Q1-blocks",
+   "label": "whether the wiki-compliance check (md_file_cap.py) can exit 0, which the package's checks \u2026",
+   "kind": "Decision",
+   "explain": "whether the wiki-compliance check (md_file_cap.py) can exit 0, which the package's checks part needs"
+  },
+  {
+   "id": "conversation",
+   "label": "Conversation",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "One visible transcript (chat export, bridge capture, meeting or coding session) with its participants, ordered messages and a coverage note saying what was left out. Source: src/inquiry_graph/model.py:27."
+  },
+  {
+   "id": "Q2",
+   "label": "Q2: Mark RULE-LIVE-GROUNDING reviewed",
+   "kind": "AgentQuestion",
+   "explain": "RULE-LIVE-GROUNDING still holds on reading after commit 8b063a0 changed its owner file; who sets its reviewed_at in docs/model/trace.yaml so the durable-documents check stops reporting it stale? Settled by: Already settled by reading (2026-10-27): quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items are dropped in convert at :302, and prune_to_valid runs at :439. The remaining action is a one-line edit of reviewed_at in docs/model/trace.yaml; no test is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action."
+  },
+  {
+   "id": "Q2-blocks",
+   "label": "whether the durable-documents check can exit 0 and whether the trace can be trusted for \u2026",
+   "kind": "Decision",
+   "explain": "whether the durable-documents check can exit 0 and whether the trace can be trusted for live extraction"
+  },
+  {
+   "id": "extraction",
+   "label": "Extraction record",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "How a graph's annotations were produced: method, provider, model, prompt version and notes. Source: src/inquiry_graph/model.py:110."
+  },
+  {
+   "id": "anchor",
+   "label": "Anchor",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A quote with its message id and Unicode start and end offsets; it must equal the message text at those offsets. Source: src/inquiry_graph/model.py:36."
+  },
+  {
+   "id": "Q3",
+   "label": "Q3: Set the three delivered plans to done",
+   "kind": "AgentQuestion",
+   "explain": "The three adopted plans (coding-sessions, report-relations-rescore, session-launch-kind) are delivered (R4) but their front matter still says status: proposed; who sets status: done so the plan-adoption recheck stops counting them as stale? Settled by: Already settled by R4 and the rule that a finished plan keeps the method it was adopted under. The remaining action is one front-matter line in each of the three files under docs/plans/; no re-adoption is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action."
+  },
+  {
+   "id": "Q3-blocks",
+   "label": "whether the plan-adoption recheck can exit 0",
+   "kind": "Decision",
+   "explain": "whether the plan-adoption recheck can exit 0"
+  },
+  {
+   "id": "coding-session",
+   "label": "Coding session",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A Claude Code or Codex .jsonl session normalized into a conversation; prompts from headless runs are given to an automation participant. Source: src/inquiry_graph/coding_session.py:104."
+  },
+  {
+   "id": "launch-kind",
+   "label": "Launch kind (typed or automated)",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "Whether a person or a program typed a session's prompts, read from Claude Code entrypoint and Codex originator values. Source: src/inquiry_graph/coding_session.py:31."
+  },
+  {
+   "id": "Q4",
+   "label": "Q4: Correct ARCHITECTURE.md line citations",
+   "kind": "AgentQuestion",
+   "explain": "ARCHITECTURE.md is the system model (.agentic/repo.yaml names it; arc42.md points back to it for the runtime view), but docs/index.md calls it an earlier document replaced by arc42.md, and its runtime view cites lines that moved (ingest io.py:120 is now :126, quarantine io.py:171 is now :177, cli run :70 is now :81). Who corrects the citations and the docs/index.md description? Settled by: Already settled by reading: keep ARCHITECTURE.md as the runtime and record-type model. The remaining action is correcting its line numbers and the docs/index.md sentence; docs/planning/system-model.md carries the current lines until then. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action."
+  },
+  {
+   "id": "Q4-blocks",
+   "label": "whether a new agent can follow the runtime view to the right code, and which file the \u2026",
+   "kind": "Decision",
+   "explain": "whether a new agent can follow the runtime view to the right code, and which file the next system-model change edits"
+  },
+  {
+   "id": "graph",
+   "label": "Inquiry graph",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "The canonical JSON record: conversations, all records, extractions and notes; written exclusively, never silently replaced. Source: src/inquiry_graph/model.py:126."
+  },
+  {
+   "id": "quarantine",
+   "label": "Quarantine",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "The private folder where a failed extraction's raw response and error go, so bad output never replaces a graph. Source: src/inquiry_graph/io.py:177."
+  },
+  {
+   "id": "candidates",
+   "label": "Candidates",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "The proposed nodes, relations, moves and events from one extraction, before they are ingested into a graph. Source: src/inquiry_graph/model.py:118."
+  },
+  {
+   "id": "Q5",
+   "label": "Q5: Nightly positions map red: topic naming",
+   "kind": "AgentQuestion",
+   "explain": "Why do topic-name calls through the Codex CLI fail (149 of 867 topics on 2026-10-26, 555 of 988 on 2026-10-25, 442 of 844 on 2026-10-22), and why does the naming step take hours (18,690 s on 2026-10-26)? Settled by: Running settles the first part, not an evaluation: reproduce one failing call with the full Codex CLI stderr (the concern keeps only its first line). Reading settled why failures repeat: a failed topic is never written to the names file (tools/name_topics.py:79-87), the nightly run deletes the names file before naming (tools/nightly_sessions.py:81) and only names that were written carry over (tools/name_topics.py:51), so every topic that failed once is retried every night until a call succeeds. 867 is the number of topics in the build, not the number of calls; the nightly log does not record how many were carried. See docs/planning/next-plan.md step 1."
+  },
+  {
+   "id": "Q5-blocks",
+   "label": "whether the nightly session import and positions map stay green, which is how the \u2026",
+   "kind": "Decision",
+   "explain": "whether the nightly session import and positions map stay green, which is how the brian-positions skill stays current (the next plan)"
+  },
+  {
+   "id": "topic-map",
+   "label": "Positions topic map",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "Brian's statements from chats and session prompts embedded and clustered into nested topics after the fact (topics are not stored on records). Source: tools/position_topics.py:1."
+  },
+  {
+   "id": "topic-name",
+   "label": "Topic name",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A short model-written name for one topic of the map, carried over between builds when the topic barely changed. Source: tools/name_topics.py:23."
+  },
+  {
+   "id": "Q6",
+   "label": "Q6: extract-or-run restart loop",
+   "kind": "AgentQuestion",
+   "explain": "extract-or-run.service restarts every few seconds (NRestarts 2537 on 2026-10-27) because it is the older invocation of tools/extract_queue.py over private/extract_full_20261003/or_run with --budget 25 and no --contract. tools/finish_pipeline.sh:15 already reruns the same queue with --contract docs/capture_contracts/extraction-position-memory.json and INQUIRY_EXTRACT_MOVES=1, but it first waits for every extract-* unit to stop (tools/finish_pipeline.sh:12), so the looping unit also holds the finish pipeline back. Is anything in that queue unfinished? Settled by: Prior art settles the remedy: the contract and the contract-bearing invocation exist. Disable the unit; reading the queue's output folder settles whether anything is unfinished, and if so line 15 of finish_pipeline.sh is run alone (the whole script also renames every topic through the failing Codex route and publishes the map to personal-vps). See docs/planning/next-plan.md step 2."
+  },
+  {
+   "id": "Q6-blocks",
+   "label": "how issue #191 closes, and whether the full-archive extraction resumes",
+   "kind": "Decision",
+   "explain": "how issue #191 closes, and whether the full-archive extraction resumes"
+  },
+  {
+   "id": "capture-contract",
+   "label": "Capture contract",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "Before an expensive extraction run, a file listing every schema collection as captured or not, with cost and later-need ranges for each one left out; tools/extract_queue.py refuses a run of $2 or more without a passing one (adopted by Brian 2026-10-05). Source: docs/design/capture-contract.md:1."
+  },
+  {
+   "id": "brian-position",
+   "label": "Brian position",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A stance or question event whose actor and anchored speaker are Brian and whose quote is verbatim in that message; the evidence unit agents ask for. Source: tools/ask_positions.py:4."
+  },
+  {
+   "id": "Q8",
+   "label": "Q8: Project status page is stale",
+   "kind": "AgentQuestion",
+   "explain": "When are docs/project-status.md and docs/verification.md brought up to date? The status page reports 67 tests (make check ran 171 passed, 2 skipped on 2026-10-27), says issue #2 should still be closed (it is closed), gives 798 proposed seed annotations where there are 858 (Q7; also docs/verification.md:131), and does not mention the coding-session import, the positions map or the nightly pipeline. Settled by: Argument: rewrite the status page from the live checks in docs/planning/checks.txt and this ledger; no test is needed."
+  },
+  {
+   "id": "Q8-blocks",
+   "label": "whether a new agent can trust the status page instead of rediscovering state",
+   "kind": "Decision",
+   "explain": "whether a new agent can trust the status page instead of rediscovering state"
+  },
+  {
+   "id": "Q9",
+   "label": "Q9: Backfill moves for the 2,176 existing graphs?",
+   "kind": "BrianQuestion",
+   "explain": "Should the 2,176 archive graphs extracted before 2026-10-06 be re-extracted to add moves (how Brian argues)? New runs already capture moves: the adopted capture contract decided to (docs/capture_contracts/extraction-position-memory.json, fields.moves) and tools/finish_pipeline.sh:15 sets INQUIRY_EXTRACT_MOVES=1. The old graphs still have 0 moves. Recommendation: Approve the backfill when the next full re-extraction runs for another reason, so moves ride along at no extra run; do not schedule a separate $8.5 run today, since no consumer reads archive moves yet. Default: New runs keep capturing moves; the 2,176 older graphs stay without them until a full re-extraction happens."
+  },
+  {
+   "id": "Q9-blocks",
+   "label": "any use of reasoning motifs or move sequences across the whole archive \u2026",
+   "kind": "Decision",
+   "explain": "any use of reasoning motifs or move sequences across the whole archive (tools/mine_motifs.py works only on the hand-built fixtures today)"
+  },
+  {
+   "id": "move",
+   "label": "Inquiry move",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "An act by one participant (ask, clarify, challenge, retract, reframe ... 15 kinds) with inputs, outputs, the message it happened at and previous moves. Source: docs/ontology.md:44."
+  },
+  {
+   "id": "strategy-episode",
+   "label": "Strategy episode",
+   "kind": "Concept",
+   "dashed": true,
+   "explain": "A reusable reasoning strategy and its occurrences; not a record type: stored as method and example nodes joined by part_of and exemplifies. Source: docs/ontology.md:54."
+  },
+  {
+   "id": "Q10",
+   "label": "Q10: Reconcile the seed and review 858 records?",
+   "kind": "BrianQuestion",
+   "explain": "Should the curated founding seed be reconciled against the full ChatGPT export and its 858 proposed annotations reviewed by a person (issue #3)? Recommendation: Leave it unscheduled: the seed is a labelled curated fixture, the product value is the archive-wide positions memory, and nothing reads the seed as confirmed. Default: The seed stays all proposed and labelled not source-complete; issue #3 stays open."
+  },
+  {
+   "id": "Q10-blocks",
+   "label": "whether the seed can ever be called source-complete or confirmed, and depends on a fresh \u2026",
+   "kind": "Decision",
+   "explain": "whether the seed can ever be called source-complete or confirmed, and depends on a fresh export reaching the laptop (issue #205)"
+  },
+  {
+   "id": "review-status",
+   "label": "Grounded record and review status",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "Every semantic record carries anchors, an origin (explicit or inferred) and review status proposed, confirmed or rejected; extraction output is always proposed. Source: src/inquiry_graph/model.py:43."
+  },
+  {
+   "id": "Q11",
+   "label": "Q11: Run the five-condition reader benchmark (#225)?",
+   "kind": "BrianQuestion",
+   "explain": "Should the five-condition terminal-state reader benchmark (issue #225: does the corrected extractor improve an independent reader's resumption accuracy on the 2026-10-18 conversation) be run with live models? Recommendation: Do not run it now; the deterministic result already settles the schema question, and a one-conversation reader score would not change the roadmap. Default: Issue #225 stays open and unrun; PR #218's protocol stays unmerged until someone needs it."
+  },
+  {
+   "id": "Q11-blocks",
+   "label": "whether the 2026-10-18 extractor task and status corrections are judged by reader \u2026",
+   "kind": "Decision",
+   "explain": "whether the 2026-10-18 extractor task and status corrections are judged by reader accuracy, and whether any schema change is considered for resumption"
+  },
+  {
+   "id": "question-event",
+   "label": "Question event",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A status change of a question or task (open, answered, resolved, deferred, superseded, reopened, dropped) by one actor, at a message. Source: src/inquiry_graph/model.py:99."
+  },
+  {
+   "id": "task",
+   "label": "Task",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A unit of work an agent lists as open in a coding session; carries the same status events as a question, plus dropped. Source: docs/ontology.md:18."
+  },
+  {
+   "id": "open-question-agenda",
+   "label": "Open-question agenda",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "The view of which questions are still open for which actor, folded from question events; an assistant's answer does not close a user's question. Source: src/inquiry_graph/views.py:23."
+  },
+  {
+   "id": "Q12",
+   "label": "Q12: Export watcher depends on a flaky browser",
+   "kind": "AgentQuestion",
+   "explain": "How should new ChatGPT exports reach the laptop when the watcher scrapes Gmail through a robot browser that is often down (it missed a ready export for 8 days)? Settled by: Prior art: read Gmail through an API or connector instead of the browser, and raise a keyed concern when the check cannot run. See docs/planning/next-plan.md step 3."
+  },
+  {
+   "id": "Q12-blocks",
+   "label": "whether new chats ever reach the positions memory, and issue #3's reconciliation",
+   "kind": "Decision",
+   "explain": "whether new chats ever reach the positions memory, and issue #3's reconciliation"
+  },
+  {
+   "id": "Q13",
+   "label": "Q13: Seven open research PRs",
+   "kind": "BrianQuestion",
+   "explain": "Are open pull requests #211, #216, #217 and #218 (2026-10-16 to 10-18) still wanted, given #219 to #226 merged the terminal-state and semantic-factorization work after them (#216 and #217 now conflict with main)? Three older ones are also open: #120 (Fermi hidden-controller source layer), #66 (Level-1 inquiry continuation) and #63 (usefulness pilot alignment). #8 and #15 are settled by R5. Recommendation: Merge #218 with #225 only if the benchmark is approved (Q11); close #216 and #217 as superseded if their files are already on main, otherwise rebase them; compare #120, #66 and #63 with main the same way and close the ones main already covers; leave #211 for Brian. Default: All seven stay open; nothing is lost."
+  },
+  {
+   "id": "Q13-blocks",
+   "label": "whether the evaluation records in those branches land or are closed as superseded",
+   "kind": "Decision",
+   "explain": "whether the evaluation records in those branches land or are closed as superseded"
+  },
+  {
+   "id": "Q14",
+   "label": "Q14: Live checkout lags main",
+   "kind": "AgentQuestion",
+   "explain": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv. Its untracked uv.lock (2,559 lines) differs from the uv.lock that origin/main tracks since 8b063a0 (2,745 lines), so git refuses a fast-forward that would overwrite it. Settled by: Argument, no test: nothing local diverges (rev-list origin/main..HEAD is 0), and the only obstacle to a fast-forward is the untracked uv.lock, which differs from the tracked one. Compare the two files, move the untracked one aside (not delete), then git pull --ff-only and uv sync. The repeated update (from ship's post-merge step or the start of the nightly unit) must raise a keyed concern when the fast-forward is refused rather than fail silently. The other environments the jobs use (~/.venvs/inquiry-maps, tools/nightly_sessions.py:29; ~/.venvs/inquiry-or, tools/finish_pipeline.sh:15) need no sync for these 15 commits: the only pyproject.toml change since 8672a4e adds a dev dependency group and code2check settings, no runtime dependency. The next plan does this as step 0 with a done-when line."
+  },
+  {
+   "id": "Q14-blocks",
+   "label": "whether the next plan's fixes take effect at all, and whether two green nightly runs \u2026",
+   "kind": "Decision",
+   "explain": "whether the next plan's fixes take effect at all, and whether two green nightly runs after the merge are evidence about the merged code"
+  }
+ ],
+ "edges": [
+  {
+   "id": "Q1-to-decision",
+   "source": "Q1",
+   "target": "Q1-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q1-conversation",
+   "source": "Q1",
+   "target": "conversation",
+   "label": "bears on"
+  },
+  {
+   "id": "Q2-to-decision",
+   "source": "Q2",
+   "target": "Q2-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q2-extraction",
+   "source": "Q2",
+   "target": "extraction",
+   "label": "bears on"
+  },
+  {
+   "id": "Q2-anchor",
+   "source": "Q2",
+   "target": "anchor",
+   "label": "bears on"
+  },
+  {
+   "id": "Q3-to-decision",
+   "source": "Q3",
+   "target": "Q3-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q3-coding-session",
+   "source": "Q3",
+   "target": "coding-session",
+   "label": "bears on"
+  },
+  {
+   "id": "Q3-launch-kind",
+   "source": "Q3",
+   "target": "launch-kind",
+   "label": "bears on"
+  },
+  {
+   "id": "Q4-to-decision",
+   "source": "Q4",
+   "target": "Q4-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q4-graph",
+   "source": "Q4",
+   "target": "graph",
+   "label": "bears on"
+  },
+  {
+   "id": "Q4-quarantine",
+   "source": "Q4",
+   "target": "quarantine",
+   "label": "bears on"
+  },
+  {
+   "id": "Q4-candidates",
+   "source": "Q4",
+   "target": "candidates",
+   "label": "bears on"
+  },
+  {
+   "id": "Q5-to-decision",
+   "source": "Q5",
+   "target": "Q5-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q5-topic-map",
+   "source": "Q5",
+   "target": "topic-map",
+   "label": "bears on"
+  },
+  {
+   "id": "Q5-topic-name",
+   "source": "Q5",
+   "target": "topic-name",
+   "label": "bears on"
+  },
+  {
+   "id": "Q5-coding-session",
+   "source": "Q5",
+   "target": "coding-session",
+   "label": "bears on"
+  },
+  {
+   "id": "Q6-to-decision",
+   "source": "Q6",
+   "target": "Q6-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q6-extraction",
+   "source": "Q6",
+   "target": "extraction",
+   "label": "bears on"
+  },
+  {
+   "id": "Q6-capture-contract",
+   "source": "Q6",
+   "target": "capture-contract",
+   "label": "bears on"
+  },
+  {
+   "id": "Q6-brian-position",
+   "source": "Q6",
+   "target": "brian-position",
+   "label": "bears on"
+  },
+  {
+   "id": "Q8-to-decision",
+   "source": "Q8",
+   "target": "Q8-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q8-graph",
+   "source": "Q8",
+   "target": "graph",
+   "label": "bears on"
+  },
+  {
+   "id": "Q9-to-decision",
+   "source": "Q9",
+   "target": "Q9-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q9-move",
+   "source": "Q9",
+   "target": "move",
+   "label": "bears on"
+  },
+  {
+   "id": "Q9-capture-contract",
+   "source": "Q9",
+   "target": "capture-contract",
+   "label": "bears on"
+  },
+  {
+   "id": "Q9-extraction",
+   "source": "Q9",
+   "target": "extraction",
+   "label": "bears on"
+  },
+  {
+   "id": "Q9-strategy-episode",
+   "source": "Q9",
+   "target": "strategy-episode",
+   "label": "bears on"
+  },
+  {
+   "id": "Q10-to-decision",
+   "source": "Q10",
+   "target": "Q10-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q10-review-status",
+   "source": "Q10",
+   "target": "review-status",
+   "label": "bears on"
+  },
+  {
+   "id": "Q10-conversation",
+   "source": "Q10",
+   "target": "conversation",
+   "label": "bears on"
+  },
+  {
+   "id": "Q11-to-decision",
+   "source": "Q11",
+   "target": "Q11-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q11-question-event",
+   "source": "Q11",
+   "target": "question-event",
+   "label": "bears on"
+  },
+  {
+   "id": "Q11-task",
+   "source": "Q11",
+   "target": "task",
+   "label": "bears on"
+  },
+  {
+   "id": "Q11-open-question-agenda",
+   "source": "Q11",
+   "target": "open-question-agenda",
+   "label": "bears on"
+  },
+  {
+   "id": "Q11-extraction",
+   "source": "Q11",
+   "target": "extraction",
+   "label": "bears on"
+  },
+  {
+   "id": "Q12-to-decision",
+   "source": "Q12",
+   "target": "Q12-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q12-conversation",
+   "source": "Q12",
+   "target": "conversation",
+   "label": "bears on"
+  },
+  {
+   "id": "Q12-brian-position",
+   "source": "Q12",
+   "target": "brian-position",
+   "label": "bears on"
+  },
+  {
+   "id": "Q13-to-decision",
+   "source": "Q13",
+   "target": "Q13-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q13-conversation",
+   "source": "Q13",
+   "target": "conversation",
+   "label": "bears on"
+  },
+  {
+   "id": "Q13-task",
+   "source": "Q13",
+   "target": "task",
+   "label": "bears on"
+  },
+  {
+   "id": "Q14-to-decision",
+   "source": "Q14",
+   "target": "Q14-blocks",
+   "label": "blocks"
+  },
+  {
+   "id": "Q14-brian-position",
+   "source": "Q14",
+   "target": "brian-position",
+   "label": "bears on"
+  },
+  {
+   "id": "Q14-topic-map",
+   "source": "Q14",
+   "target": "topic-map",
+   "label": "bears on"
+  },
+  {
+   "id": "Q14-coding-session",
+   "source": "Q14",
+   "target": "coding-session",
+   "label": "bears on"
+  }
+ ]
+}
