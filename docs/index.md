@@ -59,6 +59,7 @@ Kept as written; the specs and diagram above replace them where they overlap.
 - Reasoning episodes: [first operational test](evaluation/reasoning-episode-view.md),
   [real reconstruction](evaluation/reasoning-episode-real-reconstruction.md)
 - [Cross-conversation positions results](../evaluation/cross_conversation/results.md)
+- [Terminal-state continuation regression](../evaluation/terminal_state/README.md)
 
 ## Goals
 
@@ -84,3 +85,4 @@ Kept as written; the specs and diagram above replace them where they overlap.
 - [Seed example, full map](../examples/seed/full-map.md)
 - [Semantic grounding conversation](../examples/semantic-grounding-2026-10-01/README.md)
 - [Semantic modeling query, 2026-10-06](../examples/conversations/2026-10-05-semantic-modeling/query-2026-10-06.md)
+- [Semantic factorization conversation, 2026-10-18](../examples/conversations/semantic-factorization-2026-10-18/README.md): [research protocol](../examples/conversations/semantic-factorization-2026-10-18/research-protocol.md), [prior art](../examples/conversations/semantic-factorization-2026-10-18/prior-art.md), [systematic mapping](../examples/conversations/semantic-factorization-2026-10-18/systematic-mapping.md), [comparison matrix](../examples/conversations/semantic-factorization-2026-10-18/comparison-matrix.md), [scenario evaluation](../examples/conversations/semantic-factorization-2026-10-18/scenario-evaluation.md), [comparative evidence, round 2](../examples/conversations/semantic-factorization-2026-10-18/comparative-evidence-round2.md)

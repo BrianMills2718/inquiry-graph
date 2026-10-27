@@ -1,0 +1,101 @@
+# Checks for the inquiry-graph planning package
+Run 2026-10-27T04:26Z at commit ef9a5ce, with /usr/bin/python3.
+
+## wiki rule: python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .
+OVER    109  BrianMills2718/inquiry-graph  -- 109 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
+UNREACHABLE    19  BrianMills2718/inquiry-graph  -- 15 reader docs not linked from wiki/index.md, 4 more than 2 links deep (e.g. evaluation/terminal_state/README.md, examples/conversations/semantic-factorization-2026-10-18/README.md, examples/conversations/semantic-factorization-2026-10-18/comparative-evidence-round2.md)
+DURABLE     1  BrianMills2718/inquiry-graph  -- 1 durable-document findings (e.g. STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at)
+REPO  BrianMills2718/inquiry-graph  md=109  cap=over  reach=orphans(19)  layout=undeclared(0)  durable=findings(1)
+md-file-cap: 1 given repos checked, cap 100: ok=0 exception=0 over=1 not-checked=0; wiki reachability ok=0 orphans=1 no-wiki=0; layout ok=0 findings=0 undeclared=1; durable ok=0 findings=1 undeclared=0   exit 1
+exit=1
+
+## durable documents: python3 $CP/durable_docs_check.py --repo . --arc42
+FINDING STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
+durable-docs: mode=repo repo=/home/brian/code2/worktrees/inquiry-graph-planning findings=1 (STALE=1), exit 1
+exit=1
+
+## project navigation: python3 $CP/validate_project_navigation.py .
+DELEGATED wiki/index.md: workspace wiki rule; project-wiki/v1 schema not applied; reachability, cap and layout are checked by python3 ~/code/project-meta/scripts/md_file_cap.py --repo R
+DELEGATED docs/roadmap.md: native roadmap accepted; project-roadmap-front-door/v1 schema not applied
+REPORT ONLY: 0 finding(s); semantic truth and approval were not evaluated
+exit=0
+
+## plan adoption recheck: python3 $CP/method_conformance/cli.py lint --repo-root . --recheck
+Planning receipt recheck (read-only, offline): receipts adopted under an older profile revision
+STALE: docs/plans/coding-sessions.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
+STALE: docs/plans/report-relations-rescore.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
+STALE: docs/plans/session-launch-kind.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
+NOT CHECKED: Compares profile revisions only; a stale receipt must be re-run through `check` to learn whether the plan still passes.
+NOT CHECKED: Finds receipts named *.receipt.json under the repository root, skipping .git, node_modules, worktrees and virtual environments.
+NOT CHECKED: Reports a plan whose front matter status is done, complete(d), superseded or retired as finished and leaves it out of the exit status; it does not check that the status is true.
+0 current, 3 stale or unreadable, 0 finished (not counted); exit 1
+exit=1
+
+## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/coding-sessions.md
+Planning adoption-record lint (read-only, offline)
+PASS: docs/plans/coding-sessions.md (144 checks passed, 0 failed)
+NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
+NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
+NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
+NOT CHECKED: Uses the retained checklist; does not certify current-profile conformance or authenticate its historical sources.
+1 passed, 0 failed; exit 0
+exit=0
+
+## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/report-relations-rescore.md
+Planning adoption-record lint (read-only, offline)
+PASS: docs/plans/report-relations-rescore.md (202 checks passed, 0 failed)
+NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
+NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
+NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
+NOT CHECKED: Uses the retained checklist; does not certify current-profile conformance or authenticate its historical sources.
+1 passed, 0 failed; exit 0
+exit=0
+
+## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/session-launch-kind.md
+Planning adoption-record lint (read-only, offline)
+PASS: docs/plans/session-launch-kind.md (144 checks passed, 0 failed)
+NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
+NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
+NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
+NOT CHECKED: Uses the retained checklist; does not certify current-profile conformance or authenticate its historical sources.
+1 passed, 0 failed; exit 0
+exit=0
+
+## repository check: make check (trace, sources, import contracts, OpenSpec, pytest, artifact drift, seed validation, architecture, test-first)
+Contracts
+inquiry_graph.__main__ imports only what the diagram allows KEPT
+inquiry_graph.bridge imports only what the diagram allows KEPT
+inquiry_graph.claude_export imports only what the diagram allows KEPT
+inquiry_graph.cli imports only what the diagram allows KEPT
+inquiry_graph.coding_session imports only what the diagram allows KEPT
+inquiry_graph.episode_view imports only what the diagram allows KEPT
+inquiry_graph.exporter_json imports only what the diagram allows KEPT
+inquiry_graph.extract imports only what the diagram allows KEPT
+inquiry_graph.fit_review imports only what the diagram allows KEPT
+inquiry_graph.frame_view imports only what the diagram allows KEPT
+inquiry_graph.io imports only what the diagram allows KEPT
+inquiry_graph.kept_markdown imports only what the diagram allows KEPT
+inquiry_graph.linker imports only what the diagram allows KEPT
+inquiry_graph.live_extract imports only what the diagram allows KEPT
+inquiry_graph.model imports only what the diagram allows KEPT
+inquiry_graph.render imports only what the diagram allows KEPT
+inquiry_graph.validate imports only what the diagram allows KEPT
+inquiry_graph.views imports only what the diagram allows KEPT
+inquiry_graph.zoom_transcript imports only what the diagram allows KEPT
+Contracts: 19 kept, 0 broken.
+openspec validate --all --strict --no-interactive
+✓ spec/validation
+Totals: 7 passed, 0 failed (7 items)
+tests/test_validation.py .........................                       [ 98%]
+======================= 171 passed, 2 skipped in 19.47s ========================
+uv run python -m inquiry_graph validate examples/seed/graph.json
+  "valid": true,
+  "errors": [],
+RESULT test-first checked=0 existing=0 passed_before=0 exit=0
+exit=0
+
+## typed-graph/v1 schema over docs/planning/domain.graph.json and docs/planning/open-questions.graph.json (code in docs/planning/run_checks.sh)
+docs/planning/domain.graph.json missing
+docs/planning/open-questions.graph.json missing
+graphs_valid=0 graphs_invalid=2
+exit=1
