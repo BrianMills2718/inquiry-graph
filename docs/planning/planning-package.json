@@ -200,8 +200,8 @@
   "cold_review": {
    "status": "present",
    "path": "docs/planning/cold-review.md",
-   "verdict": "revise",
-   "reviewed_revision": "PLACEHOLDER"
+   "verdict": "pass",
+   "reviewed_revision": "8fe79caccad09601220d5ac713ee76228ace9aa6"
   }
  }
 }
