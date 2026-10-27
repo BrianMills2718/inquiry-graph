@@ -2,13 +2,106 @@
  "schema_version": "1.0",
  "record_type": "planning_package",
  "repository": "BrianMills2718/inquiry-graph",
- "subject_revision": "PLACEHOLDER",
+ "subject_revision": "4a8fa901247a74e8418cd74f79afee8fb16951e1",
  "request": "Company Planning compliance workflow, 2026-10-27 (workflow-computed task, run for Brian; his standing request, 2026-10-25: \"i have asked 100s of times to make ure that my proejcts are always company plannign complaint\"): build the first planning package for inquiry-graph. This lane touched only docs/planning/, the review page and one wiki link, because another session may own the rest of the repository. docs/planning/run_checks.sh reruns the checks into docs/planning/checks.txt.",
  "parts": {
   "checks": {
    "status": "present",
    "path": "docs/planning/checks.txt",
-   "results": []
+   "results": [
+    {
+     "name": "wiki rule (Markdown cap, reachability, layout, durable documents)",
+     "command": "python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .",
+     "exit_status": 1,
+     "counts": {
+      "markdown_files": 109,
+      "cap": 100,
+      "orphans": 19,
+      "layout_findings": 0,
+      "layout_undeclared": 1,
+      "durable_findings": 1,
+      "findings": 3
+     },
+     "tracked_by": "Q1"
+    },
+    {
+     "name": "durable documents (arc42)",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/durable_docs_check.py --repo . --arc42",
+     "exit_status": 1,
+     "counts": {
+      "findings": 1,
+      "stale": 1
+     },
+     "tracked_by": "Q2"
+    },
+    {
+     "name": "project navigation",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/validate_project_navigation.py .",
+     "exit_status": 0,
+     "counts": {
+      "findings": 0,
+      "delegated": 2
+     },
+     "note": "report-only; wiki/index.md delegated to the wiki rule, docs/roadmap.md accepted as the native roadmap"
+    },
+    {
+     "name": "plan adoption recheck",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/method_conformance/cli.py lint --repo-root . --recheck",
+     "exit_status": 1,
+     "counts": {
+      "current": 0,
+      "stale": 3,
+      "finished": 0
+     },
+     "tracked_by": "Q3",
+     "note": "all three plans are delivered (R4); they still say status: proposed, so the recheck counts them stale"
+    },
+    {
+     "name": "plan lint, each adopted plan against its own adoption record",
+     "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/method_conformance/cli.py lint --repo-root . --plan <plan> (coding-sessions, report-relations-rescore, session-launch-kind)",
+     "exit_status": 0,
+     "counts": {
+      "plans_passed": 3,
+      "plans_failed": 0,
+      "checks_passed": 490,
+      "checks_failed": 0
+     }
+    },
+    {
+     "name": "repository check (make check: trace, sources, import contracts, OpenSpec, pytest, artifact drift, seed validation, architecture, test-first)",
+     "command": "make check",
+     "exit_status": 0,
+     "counts": {
+      "tests_passed": 171,
+      "tests_skipped": 2,
+      "failed": 0,
+      "import_contracts_kept": 19,
+      "import_contracts_broken": 0,
+      "specs_valid": 7,
+      "seed_validation_errors": 0
+     }
+    },
+    {
+     "name": "typed-graph/v1 schema (domain graph and open-questions map)",
+     "command": "python3 with jsonschema.Draft202012Validator over the two graphs against $HOME/code2/representation-router/schemas/typed-graph.schema.json (code in docs/planning/run_checks.sh)",
+     "exit_status": 0,
+     "counts": {
+      "graphs_valid": 2,
+      "graphs_invalid": 0
+     }
+    },
+    {
+     "name": "doc reachability (the repository's own pre-commit docs check)",
+     "command": "python3 $HOME/code2/workspace/scripts/doc_reachability.py",
+     "exit_status": 0,
+     "counts": {
+      "reachable": 103,
+      "unreachable": 0,
+      "tracked_md": 103
+     },
+     "note": "8 documents were unreachable at ef9a5ce; this package linked them from docs/index.md"
+    }
+   ]
   },
   "open_questions": {
    "status": "present",

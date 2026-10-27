@@ -1,5 +1,5 @@
 # Checks for the inquiry-graph planning package
-Run 2026-10-27T04:26Z at commit ef9a5ce, with /usr/bin/python3.
+Run 2026-10-27T04:39Z at commit 4a8fa90, with /usr/bin/python3.
 
 ## wiki rule: python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .
 OVER    109  BrianMills2718/inquiry-graph  -- 109 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
@@ -87,7 +87,7 @@ openspec validate --all --strict --no-interactive
 ✓ spec/validation
 Totals: 7 passed, 0 failed (7 items)
 tests/test_validation.py .........................                       [ 98%]
-======================= 171 passed, 2 skipped in 19.47s ========================
+======================= 171 passed, 2 skipped in 19.69s ========================
 uv run python -m inquiry_graph validate examples/seed/graph.json
   "valid": true,
   "errors": [],
@@ -95,7 +95,7 @@ RESULT test-first checked=0 existing=0 passed_before=0 exit=0
 exit=0
 
 ## typed-graph/v1 schema over docs/planning/domain.graph.json and docs/planning/open-questions.graph.json (code in docs/planning/run_checks.sh)
-docs/planning/domain.graph.json missing
-docs/planning/open-questions.graph.json missing
-graphs_valid=0 graphs_invalid=2
-exit=1
+docs/planning/domain.graph.json errors 0
+docs/planning/open-questions.graph.json errors 0
+graphs_valid=2 graphs_invalid=0
+exit=0

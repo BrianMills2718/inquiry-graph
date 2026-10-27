@@ -6,13 +6,19 @@
   {
    "id": "Q1",
    "short": "Wiki rule: 109 docs, 19 unreachable",
-   "question": "How should the repository get back under the wiki rule: 109 Markdown files against a cap of 100 (this package adds 4 more), and 19 reader documents not reachable from wiki/index.md within two links (for example evaluation/terminal_state/README.md)?",
+   "question": "How should the repository get back under the wiki rule: 109 Markdown files against a cap of 100, and 19 reader documents not reachable from wiki/index.md within two links (for example evaluation/terminal_state/README.md)?",
    "blocks": "whether the wiki-compliance check (md_file_cap.py) can exit 0, which the package's checks part needs",
    "resolves_with": "Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 19 are still read; the check's own output names them.",
    "owner": "agent",
    "status": "open",
-   "sources": ["docs/planning/checks.txt", "wiki/index.md:1", "docs/index.md:52"],
-   "touches": ["conversation"]
+   "sources": [
+    "docs/planning/checks.txt",
+    "wiki/index.md:1",
+    "docs/index.md:52"
+   ],
+   "touches": [
+    "conversation"
+   ]
   },
   {
    "id": "Q2",
@@ -22,8 +28,14 @@
    "resolves_with": "Reading settles it: on 2026-10-27 the rule still holds on reading (quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items dropped in convert at :302, prune_to_valid at :439). What remains is setting reviewed_at on the rule in docs/model/trace.yaml, outside this package's lane.",
    "owner": "agent",
    "status": "open",
-   "sources": ["docs/model/trace.yaml:85", "src/inquiry_graph/live_extract.py:439"],
-   "touches": ["extraction", "anchor"]
+   "sources": [
+    "docs/model/trace.yaml:85",
+    "src/inquiry_graph/live_extract.py:439"
+   ],
+   "touches": [
+    "extraction",
+    "anchor"
+   ]
   },
   {
    "id": "Q3",
@@ -33,8 +45,15 @@
    "resolves_with": "Argument: R4 shows all three are delivered, and a finished plan keeps the method it was adopted under, so re-running check against bounded-design@18 is not needed. Setting status: done in each plan's front matter (docs/plans/, outside this lane) clears the check.",
    "owner": "agent",
    "status": "open",
-   "sources": ["docs/plans/coding-sessions.md:6", "docs/plans/report-relations-rescore.md:5", "docs/plans/session-launch-kind.md:6"],
-   "touches": ["coding-session", "launch-kind"]
+   "sources": [
+    "docs/plans/coding-sessions.md:6",
+    "docs/plans/report-relations-rescore.md:5",
+    "docs/plans/session-launch-kind.md:6"
+   ],
+   "touches": [
+    "coding-session",
+    "launch-kind"
+   ]
   },
   {
    "id": "Q4",
@@ -44,8 +63,18 @@
    "resolves_with": "Argument: keep ARCHITECTURE.md as the runtime and record-type model (arc42.md points back to it for the runtime view) and correct its line numbers; the package's docs/planning/system-model.md carries the current lines until then.",
    "owner": "agent",
    "status": "open",
-   "sources": [".agentic/repo.yaml:8", "docs/index.md:38", "docs/model/ARCHITECTURE.md:93", "docs/architecture/arc42.md:39", "src/inquiry_graph/io.py:126"],
-   "touches": ["graph", "quarantine", "candidates"]
+   "sources": [
+    ".agentic/repo.yaml:8",
+    "docs/index.md:38",
+    "docs/model/ARCHITECTURE.md:93",
+    "docs/architecture/arc42.md:39",
+    "src/inquiry_graph/io.py:126"
+   ],
+   "touches": [
+    "graph",
+    "quarantine",
+    "candidates"
+   ]
   },
   {
    "id": "Q5",
@@ -55,8 +84,18 @@
    "resolves_with": "Running settles it, not an evaluation: reproduce one failing call with the full stderr (the concern keeps only its first line), then compare the previous and new topics.json to see what the carry-over matched. See docs/planning/next-plan.md step 1.",
    "owner": "agent",
    "status": "open",
-   "sources": ["tools/nightly_sessions.py:86", "tools/name_topics.py:51", "tools/name_topics.py:99", "https://github.com/BrianMills2718/inquiry-graph/issues/227", "https://github.com/BrianMills2718/inquiry-graph/issues/229"],
-   "touches": ["topic-map", "topic-name", "coding-session"]
+   "sources": [
+    "tools/nightly_sessions.py:86",
+    "tools/name_topics.py:51",
+    "tools/name_topics.py:99",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/227",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/229"
+   ],
+   "touches": [
+    "topic-map",
+    "topic-name",
+    "coding-session"
+   ]
   },
   {
    "id": "Q6",
@@ -66,8 +105,14 @@
    "resolves_with": "Reading settles it: inspect private/extract_full_20261003/or_run for remaining queue items. See docs/planning/next-plan.md step 2.",
    "owner": "agent",
    "status": "open",
-   "sources": ["tools/extract_queue.py:71", "https://github.com/BrianMills2718/inquiry-graph/issues/191"],
-   "touches": ["extraction", "brian-position"]
+   "sources": [
+    "tools/extract_queue.py:71",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/191"
+   ],
+   "touches": [
+    "extraction",
+    "brian-position"
+   ]
   },
   {
    "id": "Q7",
@@ -77,8 +122,14 @@
    "resolves_with": "Counting settles it: examples/seed/graph.json holds 250 nodes, 250 relations, 204 moves, 68 stance events and 86 question events, 858 records, all proposed (counted 2026-10-27), matching README.md:7. The 798 at docs/project-status.md:67 and docs/verification.md:131 predates the 2026-09-30 continuation. Open only until those two lines are corrected (outside this lane).",
    "owner": "agent",
    "status": "open",
-   "sources": ["README.md:7", "docs/project-status.md:67", "docs/verification.md:131"],
-   "touches": ["review-status"]
+   "sources": [
+    "README.md:7",
+    "docs/project-status.md:67",
+    "docs/verification.md:131"
+   ],
+   "touches": [
+    "review-status"
+   ]
   },
   {
    "id": "Q8",
@@ -88,8 +139,14 @@
    "resolves_with": "Argument: rewrite the status page from the live checks in docs/planning/checks.txt and this ledger; no test is needed.",
    "owner": "agent",
    "status": "open",
-   "sources": ["docs/project-status.md:75", "docs/project-status.md:94", "docs/planning/checks.txt"],
-   "touches": ["graph"]
+   "sources": [
+    "docs/project-status.md:75",
+    "docs/project-status.md:94",
+    "docs/planning/checks.txt"
+   ],
+   "touches": [
+    "graph"
+   ]
   },
   {
    "id": "Q9",
@@ -101,8 +158,16 @@
    "recommendation": "Not now: no consumer needs moves today; revisit when a named use (for example 'how does Brian usually challenge a claim') is asked for.",
    "default": "The archive stays without moves; the switch stays off.",
    "status": "open",
-   "sources": ["docs/project-status.md:118", "src/inquiry_graph/live_extract.py:35", "docs/project-status.md:105"],
-   "touches": ["move", "strategy-episode", "inference-family"]
+   "sources": [
+    "docs/project-status.md:118",
+    "src/inquiry_graph/live_extract.py:35",
+    "docs/project-status.md:105"
+   ],
+   "touches": [
+    "move",
+    "strategy-episode",
+    "inference-family"
+   ]
   },
   {
    "id": "Q10",
@@ -114,8 +179,15 @@
    "recommendation": "Leave it unscheduled: the seed is a labelled curated fixture, the product value is the archive-wide positions memory, and nothing reads the seed as confirmed.",
    "default": "The seed stays all proposed and labelled not source-complete; issue #3 stays open.",
    "status": "open",
-   "sources": ["docs/project-status.md:63", "docs/project-status.md:69", "https://github.com/BrianMills2718/inquiry-graph/issues/3"],
-   "touches": ["review-status", "conversation"]
+   "sources": [
+    "docs/project-status.md:63",
+    "docs/project-status.md:69",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/3"
+   ],
+   "touches": [
+    "review-status",
+    "conversation"
+   ]
   },
   {
    "id": "Q11",
@@ -127,8 +199,17 @@
    "recommendation": "Do not run it now; the deterministic result already settles the schema question, and a one-conversation reader score would not change the roadmap.",
    "default": "Issue #225 stays open and unrun; PR #218's protocol stays unmerged until someone needs it.",
    "status": "open",
-   "sources": ["docs/roadmap.md:29", "evaluation/terminal_state/README.md:49", "https://github.com/BrianMills2718/inquiry-graph/issues/225"],
-   "touches": ["question-event", "task", "open-question-agenda", "extraction"]
+   "sources": [
+    "docs/roadmap.md:29",
+    "evaluation/terminal_state/README.md:49",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/225"
+   ],
+   "touches": [
+    "question-event",
+    "task",
+    "open-question-agenda",
+    "extraction"
+   ]
   },
   {
    "id": "Q12",
@@ -138,8 +219,14 @@
    "resolves_with": "Prior art: read Gmail through an API or connector instead of the browser, and raise a keyed concern when the check cannot run. See docs/planning/next-plan.md step 3.",
    "owner": "agent",
    "status": "open",
-   "sources": ["tools/watch_chatgpt_export.sh:2", "https://github.com/BrianMills2718/inquiry-graph/issues/205"],
-   "touches": ["conversation", "brian-position"]
+   "sources": [
+    "tools/watch_chatgpt_export.sh:2",
+    "https://github.com/BrianMills2718/inquiry-graph/issues/205"
+   ],
+   "touches": [
+    "conversation",
+    "brian-position"
+   ]
   },
   {
    "id": "Q13",
@@ -151,8 +238,17 @@
    "recommendation": "Merge #218 with #225 only if the benchmark is approved (Q11); close #216 and #217 as superseded if their files are already on main, otherwise rebase them; leave #211 for Brian.",
    "default": "All four stay open; nothing is lost.",
    "status": "open",
-   "sources": ["https://github.com/BrianMills2718/inquiry-graph/pull/211", "https://github.com/BrianMills2718/inquiry-graph/pull/216", "https://github.com/BrianMills2718/inquiry-graph/pull/217", "https://github.com/BrianMills2718/inquiry-graph/pull/218", "evaluation/terminal_state/README.md:1"],
-   "touches": ["conversation", "task"]
+   "sources": [
+    "https://github.com/BrianMills2718/inquiry-graph/pull/211",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/216",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/217",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/218",
+    "evaluation/terminal_state/README.md:1"
+   ],
+   "touches": [
+    "conversation",
+    "task"
+   ]
   },
   {
    "id": "R1",
@@ -163,8 +259,13 @@
    "owner": "agent",
    "status": "resolved",
    "evidence": "Yes: the shared brian-positions skill in agent-skills runs tools/brian_positions.py (agent-skills skills/brian-positions/SKILL.md:18) and its description tells agents to use it before asking Brian what he thinks. Whether answers from it change decisions is not measured; the consumer exists.",
-   "sources": ["docs/architecture/GOAL.md:76", "/home/brian/code2/agent-skills/skills/brian-positions/SKILL.md:18"],
-   "touches": ["brian-position"]
+   "sources": [
+    "docs/architecture/GOAL.md:76",
+    "/home/brian/code2/agent-skills/skills/brian-positions/SKILL.md:18"
+   ],
+   "touches": [
+    "brian-position"
+   ]
   },
   {
    "id": "R2",
@@ -175,8 +276,14 @@
    "owner": "agent",
    "status": "resolved",
    "evidence": "Archive search then read is the default for that workload (0.67 against 0.63 and 0.61 key-point coverage), independently signed off; the graph is kept for attribution, open questions and history.",
-   "sources": ["docs/project-status.md:48", "docs/project-status.md:50"],
-   "touches": ["brian-position", "position-link"]
+   "sources": [
+    "docs/project-status.md:48",
+    "docs/project-status.md:50"
+   ],
+   "touches": [
+    "brian-position",
+    "position-link"
+   ]
   },
   {
    "id": "R3",
@@ -187,8 +294,16 @@
    "owner": "agent",
    "status": "resolved",
    "evidence": "No. Relations have named roles, but SIGNATURES only constrains which node kinds each role may bind and validate() checks shape (src/inquiry_graph/validate.py:67-82); no relation carries a formula, condition or effect that is evaluated, which is the trigger in bounded-design's typed-relational-metamodels reference. A kernel crosswalk exists as PR #15, kept unmerged on purpose.",
-   "sources": ["src/inquiry_graph/model.py:136", "src/inquiry_graph/validate.py:67", "docs/roadmap.md:63"],
-   "touches": ["relation", "relation-signature", "binding"]
+   "sources": [
+    "src/inquiry_graph/model.py:136",
+    "src/inquiry_graph/validate.py:67",
+    "docs/roadmap.md:63"
+   ],
+   "touches": [
+    "relation",
+    "relation-signature",
+    "binding"
+   ]
   },
   {
    "id": "R4",
@@ -199,8 +314,16 @@
    "owner": "agent",
    "status": "resolved",
    "evidence": "All three are delivered: import-session and sessions are CLI commands (src/inquiry_graph/cli.py:64-68); headless launches are labelled automated (src/inquiry_graph/coding_session.py:31-35); the re-score is recorded (C2 0.62 against old C 0.63, evaluation/usefulness_pilot/results.md:74). Each plan lints PASS against its own adoption record. A finished plan keeps the method it was adopted under, so no re-adoption is needed; only the front-matter status is wrong (Q3).",
-   "sources": ["src/inquiry_graph/cli.py:64", "src/inquiry_graph/coding_session.py:31", "evaluation/usefulness_pilot/results.md:74"],
-   "touches": ["coding-session", "launch-kind", "relation"]
+   "sources": [
+    "src/inquiry_graph/cli.py:64",
+    "src/inquiry_graph/coding_session.py:31",
+    "evaluation/usefulness_pilot/results.md:74"
+   ],
+   "touches": [
+    "coding-session",
+    "launch-kind",
+    "relation"
+   ]
   },
   {
    "id": "R5",
@@ -211,8 +334,13 @@
    "owner": "agent",
    "status": "resolved",
    "evidence": "No: both are intentionally separate historical trajectories, not to be merged casually (docs/roadmap.md:63, docs/project-status.md:79).",
-   "sources": ["docs/roadmap.md:63", "docs/project-status.md:79"],
-   "touches": ["canonical-identity"]
+   "sources": [
+    "docs/roadmap.md:63",
+    "docs/project-status.md:79"
+   ],
+   "touches": [
+    "canonical-identity"
+   ]
   }
  ]
 }
