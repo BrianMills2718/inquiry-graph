@@ -32,6 +32,10 @@ Canonical records are JSON files validated by Pydantic models in `src/inquiry_gr
 | Extraction report (chunks, drops by reason, cost, trace ids) | `src/inquiry_graph/cli.py:120` | `extract --report` | a person or agent reviewing a run |
 | Session graph (`*.conversation.json`, `*.graph.json`) | `src/inquiry_graph/coding_session.py:104`, `:183` | `import-session` (`src/inquiry_graph/cli.py:141`, `:143`) | `sessions` resume digest (`src/inquiry_graph/coding_session.py:244`), nightly reminder |
 | Link proposals (`Position`, `Link`) | `src/inquiry_graph/linker.py:28`, `:40` | `evaluation/cross_conversation_scale/run_linker.py` (link_isolated.py adds isolated-node links; `tools/topic_map.py` reads cached pairs) | topic-map research; not on the answer path (archive search is, `docs/project-status.md:50`) |
+| Fit review (`FitReview` with `FitFinding`) | `src/inquiry_graph/fit_review.py:54`, `:35` | written by hand or by an agent as `fit-review.json` beside a conversation fixture (`README.md:73`) | `tools/check_fit_review.py`, `tests/test_fit_review.py`; evidence about the model, never applied to it |
+| Reasoning-episode profile (`ReasoningEpisodeProfile` with `EpisodeRoleBinding`) | `src/inquiry_graph/episode_view.py:36`, `:29` | written by hand under `evaluation/reasoning_episode_profiles/` | `tests/test_episode_view.py`, `tests/test_real_episode_profiles.py` (checked against the graph it binds) |
+| Frame profile (`FrameProfile` with `FrameBinding`) | `src/inquiry_graph/frame_view.py:29`, `:23` | written by hand under `evaluation/frame_profiles/` | `tests/test_frame_view.py` |
+| Capture contract | `tools/capture_contract.py:43` (check), example `docs/capture_contracts/extraction-position-memory.json` | `tools/capture_contract.py init`, then edited by the agent planning a run | `tools/extract_queue.py:68`-`:71`, which refuses an expensive run without a passing one |
 | Generated JSON Schemas | `schemas/` | `tools/build_artifacts.py` (`--check` fails on drift) | external readers |
 
 ## The private positions pipeline
@@ -47,6 +51,25 @@ Quote-bearing data lives under `private/` (git-ignored) on Brian's laptop. The n
    (`tools/nightly_sessions.py:71`-`:85`). More than 20 failed names fails the step
    (`tools/nightly_sessions.py:86`).
 3. Write `private/coding-sessions/recent.md`, the open-work reminder (`tools/nightly_sessions.py:99`).
+
+What the pipeline talks to (ARCHITECTURE.md's context view shows only the library side, where
+llm_client is the one network dependency; the private pipeline below is not offline):
+
+```mermaid
+flowchart LR
+  sessions["Claude Code and Codex session files"] -->|import-session, last 30 h| nightly["nightly_sessions.py<br/>(inquiry-graph-nightly.service, 02:40)"]
+  gmail["Gmail, read through the robot browser"] -->|export link| watcher["watch_chatgpt_export.sh<br/>(chatgpt-export-watch.service)"]
+  watcher -->|new ChatGPT export| priv[("private/ on the laptop<br/>graphs, records, positions map")]
+  nightly -->|map build, topic names| priv
+  nightly -->|name each new topic| codex["Codex CLI<br/>(through llm_client)"]
+  queue["extract_queue.py<br/>(extract-or-run.service, looping)"] -.->|refused: no contract| priv
+  finish["finish_pipeline.sh"] -->|extraction under the capture contract| openrouter["OpenRouter<br/>(through llm_client)"]
+  finish -->|ssh and scp the map| vps["personal-vps<br/>maps.brianmills.dev/positions/"]
+  finish --> priv
+  nightly -->|failed step, no quotes| gh["GitHub keyed concern issue"]
+  priv -->|brian_positions.py| skill["brian-positions skill<br/>(agents asking what Brian said)"]
+  checkout["~/code/inquiry-graph = main checkout<br/>15 commits behind origin/main"] -.->|code and .venv for every job| nightly
+```
 
 A failed step comments on one keyed GitHub concern without quotes (issues #227, #229). Agents read
 the results through the `brian-positions` skill, which runs `tools/brian_positions.py`

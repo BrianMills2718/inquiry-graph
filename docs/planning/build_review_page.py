@@ -59,6 +59,7 @@ def main() -> None:
     qmap = json.loads(_read("docs/planning/open-questions.graph.json"))
     model = _read("docs/model/ARCHITECTURE.md")
     diagrams = re.findall(r"```mermaid\n(.*?)```", model, flags=re.DOTALL)
+    diagrams += re.findall(r"```mermaid\n(.*?)```", _read(parts["system_model"]["path"]), flags=re.DOTALL)
     section = _section(_read(parts["domain_model"]["glossary"]), "## Where the sources disagree")
     disagreements = [re.sub(r"\s+", " ", item).strip()
                      for item in re.split(r"^- ", section, flags=re.MULTILINE)[1:]]

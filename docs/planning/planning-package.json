@@ -147,7 +147,11 @@
     "brian-position": "tools/ask_positions.py:22",
     "position-link": "src/inquiry_graph/linker.py:40",
     "topic-map": "tools/position_topics.py:91",
-    "topic-name": "tools/name_topics.py:23"
+    "topic-name": "tools/name_topics.py:23",
+    "capture-contract": "tools/capture_contract.py:43",
+    "fit-review": "src/inquiry_graph/fit_review.py:54",
+    "episode-profile": "src/inquiry_graph/episode_view.py:36",
+    "frame-profile": "src/inquiry_graph/frame_view.py:29"
    }
   },
   "diagrams": {
@@ -156,6 +160,10 @@
     {
      "path": "docs/model/ARCHITECTURE.md",
      "question": "Who and what does Inquiry Graph work with (Brian, agents, chat exports, llm_client, onto-canon6), and which blocks inside it write and read the canonical JSON? (context view, section 3, and containers, section 5)"
+    },
+    {
+     "path": "docs/planning/system-model.md",
+     "question": "What does the private positions pipeline behind the brian-positions skill run, and which outside services and checkouts does it depend on (the part the next plan repairs)?"
     },
     {
      "path": "docs/planning/domain.graph.json",
@@ -179,6 +187,7 @@
     "topic-map",
     "topic-name",
     "extraction",
+    "capture-contract",
     "quarantine",
     "conversation"
    ]

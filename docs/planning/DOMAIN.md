@@ -63,6 +63,10 @@ How records were produced, checked, kept apart from bad output and confirmed.
 | Candidates (`candidates`) | The proposed nodes, relations, moves and events from one extraction, before they are ingested into a graph. | `src/inquiry_graph/model.py:118` | `src/inquiry_graph/model.py:118` |
 | Inquiry graph (`graph`) | The canonical JSON record: conversations, all records, extractions and notes; written exclusively, never silently replaced. | `src/inquiry_graph/model.py:126` | `src/inquiry_graph/model.py:126` |
 | Quarantine (`quarantine`) | The private folder where a failed extraction's raw response and error go, so bad output never replaces a graph. | `src/inquiry_graph/io.py:177` | `src/inquiry_graph/io.py:177` |
+| Capture contract (`capture-contract`) | Before an expensive extraction run, a file listing every schema collection as captured or not, with cost and later-need ranges for each one left out; tools/extract_queue.py refuses a run of $2 or more without a passing one (adopted by Brian 2026-10-05). | `docs/design/capture-contract.md:1` | `tools/capture_contract.py:43` |
+| Fit review (`fit-review`) | A sidecar file beside a conversation recording representation, extraction, workflow and factorization friction plus a promotion gate; evidence about the model, not authority to change it. | `README.md:73` | `src/inquiry_graph/fit_review.py:54` |
+| Reasoning-episode profile (`episode-profile`) | A derived projection that assigns existing graph objects to cross-case reasoning roles so one query shape can be compared across inquiries; does not extend the core schema. | `src/inquiry_graph/episode_view.py:1` | `src/inquiry_graph/episode_view.py:36` |
+| Frame profile (`frame-profile`) | A thin derived projection binding graph objects to frame content, inquiry scope and an active query; no core Frame node kind. | `src/inquiry_graph/frame_view.py:1` | `src/inquiry_graph/frame_view.py:29` |
 
 ## Coding sessions
 
@@ -84,7 +88,7 @@ Brian's verbatim positions gathered from many graphs, linked and mapped by topic
 | --- | --- | --- | --- |
 | Brian position (`brian-position`) | A stance or question event whose actor and anchored speaker are Brian and whose quote is verbatim in that message; the evidence unit agents ask for. | `tools/ask_positions.py:4` | `tools/ask_positions.py:22` |
 | Cross-conversation link (`position-link`) | A judged pair of positions or questions Brian expressed in different conversations, proposed by embedding recall then a model judgment. | `src/inquiry_graph/linker.py:40` | `src/inquiry_graph/linker.py:40` |
-| Positions topic map (`topic-map`) | Brian's statements from chats and session prompts embedded and clustered into nested topics after the fact (topics are not stored on records). | `wiki/index.md:29` | `tools/position_topics.py:91` |
+| Positions topic map (`topic-map`) | Brian's statements from chats and session prompts embedded and clustered into nested topics after the fact (topics are not stored on records). | `tools/position_topics.py:1` | `tools/position_topics.py:91` |
 | Topic name (`topic-name`) | A short model-written name for one topic of the map, carried over between builds when the topic barely changed. | `tools/name_topics.py:23` | `tools/name_topics.py:23` |
 
 ## Elsewhere or theory only

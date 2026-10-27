@@ -22,10 +22,10 @@
   },
   {
    "id": "Q2",
-   "short": "Stale rule review: live grounding",
-   "question": "Does RULE-LIVE-GROUNDING still describe live_extract.py after the commit that changed its owner file since the rule was last reviewed (8b063a0)?",
+   "short": "Mark RULE-LIVE-GROUNDING reviewed",
+   "question": "RULE-LIVE-GROUNDING still holds on reading after commit 8b063a0 changed its owner file; who sets its reviewed_at in docs/model/trace.yaml so the durable-documents check stops reporting it stale?",
    "blocks": "whether the durable-documents check can exit 0 and whether the trace can be trusted for live extraction",
-   "resolves_with": "Reading settles it: on 2026-10-27 the rule still holds on reading (quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items dropped in convert at :302, prune_to_valid at :439). What remains is setting reviewed_at on the rule in docs/model/trace.yaml, outside this package's lane.",
+   "resolves_with": "Already settled by reading (2026-10-27): quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items are dropped in convert at :302, and prune_to_valid runs at :439. The remaining action is a one-line edit of reviewed_at in docs/model/trace.yaml; no test is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action.",
    "owner": "agent",
    "status": "open",
    "sources": [
@@ -39,10 +39,10 @@
   },
   {
    "id": "Q3",
-   "short": "Three delivered plans still say proposed",
-   "question": "Should the three adopted plans (coding-sessions, report-relations-rescore, session-launch-kind), all delivered, have their front-matter status set to done so the plan-adoption recheck stops counting them as stale?",
+   "short": "Set the three delivered plans to done",
+   "question": "The three adopted plans (coding-sessions, report-relations-rescore, session-launch-kind) are delivered (R4) but their front matter still says status: proposed; who sets status: done so the plan-adoption recheck stops counting them as stale?",
    "blocks": "whether the plan-adoption recheck can exit 0",
-   "resolves_with": "Argument: R4 shows all three are delivered, and a finished plan keeps the method it was adopted under, so re-running check against bounded-design@18 is not needed. Setting status: done in each plan's front matter (docs/plans/, outside this lane) clears the check.",
+   "resolves_with": "Already settled by R4 and the rule that a finished plan keeps the method it was adopted under. The remaining action is one front-matter line in each of the three files under docs/plans/; no re-adoption is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action.",
    "owner": "agent",
    "status": "open",
    "sources": [
@@ -57,10 +57,10 @@
   },
   {
    "id": "Q4",
-   "short": "Two system models, drifted line citations",
-   "question": "Which document is the system model, and when are its line citations repaired? .agentic/repo.yaml names docs/model/ARCHITECTURE.md, docs/index.md calls it an earlier document replaced by arc42.md, and its runtime view cites lines that moved (ingest io.py:120 is now :126, quarantine io.py:171 is now :177, cli run :70 is now :81).",
+   "short": "Correct ARCHITECTURE.md line citations",
+   "question": "ARCHITECTURE.md is the system model (.agentic/repo.yaml names it; arc42.md points back to it for the runtime view), but docs/index.md calls it an earlier document replaced by arc42.md, and its runtime view cites lines that moved (ingest io.py:120 is now :126, quarantine io.py:171 is now :177, cli run :70 is now :81). Who corrects the citations and the docs/index.md description?",
    "blocks": "whether a new agent can follow the runtime view to the right code, and which file the next system-model change edits",
-   "resolves_with": "Argument: keep ARCHITECTURE.md as the runtime and record-type model (arc42.md points back to it for the runtime view) and correct its line numbers; the package's docs/planning/system-model.md carries the current lines until then.",
+   "resolves_with": "Already settled by reading: keep ARCHITECTURE.md as the runtime and record-type model. The remaining action is correcting its line numbers and the docs/index.md sentence; docs/planning/system-model.md carries the current lines until then. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action.",
    "owner": "agent",
    "status": "open",
    "sources": [
@@ -79,15 +79,16 @@
   {
    "id": "Q5",
    "short": "Nightly positions map red: topic naming",
-   "question": "Why do topic-name calls through the Codex CLI fail (149 of 867 on 2026-10-26, 481 on 2026-10-19), and why did one night need 867 names and 5.2 hours although names carry over between builds?",
+   "question": "Why do topic-name calls through the Codex CLI fail (149 of 867 topics on 2026-10-26, 555 of 988 on 2026-10-25, 442 of 844 on 2026-10-22), and why does the naming step take hours (18,690 s on 2026-10-26)?",
    "blocks": "whether the nightly session import and positions map stay green, which is how the brian-positions skill stays current (the next plan)",
-   "resolves_with": "Running settles it, not an evaluation: reproduce one failing call with the full stderr (the concern keeps only its first line), then compare the previous and new topics.json to see what the carry-over matched. See docs/planning/next-plan.md step 1.",
+   "resolves_with": "Running settles the first part, not an evaluation: reproduce one failing call with the full Codex CLI stderr (the concern keeps only its first line). Reading settled why failures repeat: a failed topic is never written to the names file (tools/name_topics.py:79-87), the nightly run deletes the names file before naming (tools/nightly_sessions.py:81) and only names that were written carry over (tools/name_topics.py:51), so every topic that failed once is retried every night until a call succeeds. 867 is the number of topics in the build, not the number of calls; the nightly log does not record how many were carried. See docs/planning/next-plan.md step 1.",
    "owner": "agent",
    "status": "open",
    "sources": [
+    "tools/nightly_sessions.py:81",
     "tools/nightly_sessions.py:86",
     "tools/name_topics.py:51",
-    "tools/name_topics.py:99",
+    "tools/name_topics.py:79",
     "https://github.com/BrianMills2718/inquiry-graph/issues/227",
     "https://github.com/BrianMills2718/inquiry-graph/issues/229"
    ],
@@ -100,17 +101,21 @@
   {
    "id": "Q6",
    "short": "extract-or-run restart loop",
-   "question": "Is the OpenRouter extraction run behind extract-or-run.service finished (disable the unit) or still wanted (give it a capture contract)? On 2026-10-27 the unit was still in auto-restart, refused at every start for --budget 25 without --contract.",
+   "question": "extract-or-run.service restarts every few seconds (NRestarts 2537 on 2026-10-27) because it is the older invocation of tools/extract_queue.py over private/extract_full_20261003/or_run with --budget 25 and no --contract. tools/finish_pipeline.sh:15 already reruns the same queue with --contract docs/capture_contracts/extraction-position-memory.json and INQUIRY_EXTRACT_MOVES=1, but it first waits for every extract-* unit to stop (tools/finish_pipeline.sh:12), so the looping unit also holds the finish pipeline back. Is anything in that queue unfinished?",
    "blocks": "how issue #191 closes, and whether the full-archive extraction resumes",
-   "resolves_with": "Reading settles it: inspect private/extract_full_20261003/or_run for remaining queue items. See docs/planning/next-plan.md step 2.",
+   "resolves_with": "Prior art settles the remedy: the contract and the contract-bearing invocation exist. Disable the unit; reading the queue's output folder settles whether anything is unfinished, and if so finish_pipeline.sh (or its line 15 alone) runs it. See docs/planning/next-plan.md step 2.",
    "owner": "agent",
    "status": "open",
    "sources": [
     "tools/extract_queue.py:71",
+    "tools/finish_pipeline.sh:12",
+    "tools/finish_pipeline.sh:15",
+    "docs/capture_contracts/extraction-position-memory.json",
     "https://github.com/BrianMills2718/inquiry-graph/issues/191"
    ],
    "touches": [
     "extraction",
+    "capture-contract",
     "brian-position"
    ]
   },
@@ -119,9 +124,9 @@
    "short": "798 or 858 proposed annotations",
    "question": "How many proposed annotations does the founding seed hold?",
    "blocks": "which number issue #3's review covers",
-   "resolves_with": "Counting settles it: examples/seed/graph.json holds 250 nodes, 250 relations, 204 moves, 68 stance events and 86 question events, 858 records, all proposed (counted 2026-10-27), matching README.md:7. The 798 at docs/project-status.md:67 and docs/verification.md:131 predates the 2026-09-30 continuation. Open only until those two lines are corrected (outside this lane).",
+   "resolves_with": "Counting settled it.",
    "owner": "agent",
-   "status": "open",
+   "status": "resolved",
    "sources": [
     "README.md:7",
     "docs/project-status.md:67",
@@ -129,19 +134,22 @@
    ],
    "touches": [
     "review-status"
-   ]
+   ],
+   "evidence": "examples/seed/graph.json holds 250 nodes, 250 relations, 204 moves, 68 stance events and 86 question events: 858 records, all proposed (counted 2026-10-27), matching README.md:7. The 798 at docs/project-status.md:67 and docs/verification.md:131 predates the 2026-09-30 continuation; correcting those two lines is part of Q8."
   },
   {
    "id": "Q8",
    "short": "Project status page is stale",
-   "question": "When is docs/project-status.md brought up to date? It reports 67 tests (make check ran 171 passed, 2 skipped on 2026-10-27), says issue #2 should still be closed (it is closed), and does not mention the coding-session import, the positions map or the nightly pipeline.",
+   "question": "When are docs/project-status.md and docs/verification.md brought up to date? The status page reports 67 tests (make check ran 171 passed, 2 skipped on 2026-10-27), says issue #2 should still be closed (it is closed), gives 798 proposed seed annotations where there are 858 (Q7; also docs/verification.md:131), and does not mention the coding-session import, the positions map or the nightly pipeline.",
    "blocks": "whether a new agent can trust the status page instead of rediscovering state",
    "resolves_with": "Argument: rewrite the status page from the live checks in docs/planning/checks.txt and this ledger; no test is needed.",
    "owner": "agent",
    "status": "open",
    "sources": [
+    "docs/project-status.md:67",
     "docs/project-status.md:75",
     "docs/project-status.md:94",
+    "docs/verification.md:131",
     "docs/planning/checks.txt"
    ],
    "touches": [
@@ -150,23 +158,26 @@
   },
   {
    "id": "Q9",
-   "short": "Extract moves for the archive?",
-   "question": "Should the archive of 2,176 graphs get moves (how Brian argues) through the moves prompt live extraction now has behind a switch? No archive graph has moves today.",
-   "blocks": "any use of reasoning motifs or move sequences across conversations (tools/mine_motifs.py works only on the hand-built fixtures)",
-   "resolves_with": "A priority call, not a test: it costs a full re-extraction. The stop rule says no ontology expansion without a concrete product failure; moves are already in the ontology, so the question is only whether a consumer needs them.",
+   "short": "Backfill moves for the 2,176 existing graphs?",
+   "question": "Should the 2,176 archive graphs extracted before 2026-10-06 be re-extracted to add moves (how Brian argues)? New runs already capture moves: the adopted capture contract decided to (docs/capture_contracts/extraction-position-memory.json, fields.moves) and tools/finish_pipeline.sh:15 sets INQUIRY_EXTRACT_MOVES=1. The old graphs still have 0 moves.",
+   "blocks": "any use of reasoning motifs or move sequences across the whole archive (tools/mine_motifs.py works only on the hand-built fixtures today)",
+   "resolves_with": "Prior art settles the method, not the call: the capture-contract rule (docs/design/capture-contract.md:11) compares capture cost with the chance of later need, and the contract's own note prices the backfill at about $8.5 (a full re-run, C*(1+f)) and says it needs Brian's decision. No test is needed.",
    "owner": "brian",
-   "recommendation": "Not now: no consumer needs moves today; revisit when a named use (for example 'how does Brian usually challenge a claim') is asked for.",
-   "default": "The archive stays without moves; the switch stays off.",
+   "recommendation": "Approve the backfill when the next full re-extraction runs for another reason, so moves ride along at no extra run; do not schedule a separate $8.5 run today, since no consumer reads archive moves yet.",
+   "default": "New runs keep capturing moves; the 2,176 older graphs stay without them until a full re-extraction happens.",
    "status": "open",
    "sources": [
-    "docs/project-status.md:118",
+    "docs/capture_contracts/extraction-position-memory.json",
+    "docs/design/capture-contract.md:11",
+    "tools/finish_pipeline.sh:15",
     "src/inquiry_graph/live_extract.py:35",
-    "docs/project-status.md:105"
+    "docs/project-status.md:118"
    ],
    "touches": [
     "move",
-    "strategy-episode",
-    "inference-family"
+    "capture-contract",
+    "extraction",
+    "strategy-episode"
    ]
   },
   {
@@ -201,7 +212,8 @@
    "status": "open",
    "sources": [
     "docs/roadmap.md:29",
-    "evaluation/terminal_state/README.md:49",
+    "evaluation/terminal_state/README.md:21",
+    "evaluation/terminal_state/README.md:30",
     "https://github.com/BrianMills2718/inquiry-graph/issues/225"
    ],
    "touches": [
@@ -230,24 +242,46 @@
   },
   {
    "id": "Q13",
-   "short": "Four open research PRs from 2026-10-16 to 10-18",
-   "question": "Are open pull requests #211, #216, #217 and #218 still wanted, given #219 to #226 merged the terminal-state and semantic-factorization work after them (#216 and #217 now conflict with main)?",
+   "short": "Seven open research PRs",
+   "question": "Are open pull requests #211, #216, #217 and #218 (2026-10-16 to 10-18) still wanted, given #219 to #226 merged the terminal-state and semantic-factorization work after them (#216 and #217 now conflict with main)? Three older ones are also open: #120 (Fermi hidden-controller source layer), #66 (Level-1 inquiry continuation) and #63 (usefulness pilot alignment). #8 and #15 are settled by R5.",
    "blocks": "whether the evaluation records in those branches land or are closed as superseded",
    "resolves_with": "Reading settles most of it: compare each branch's files with main. Whether to keep the research captures (#211 benchmark-design inquiry, #216 Hets smoke test) is Brian's interest, so the recommendation goes to him.",
    "owner": "brian",
-   "recommendation": "Merge #218 with #225 only if the benchmark is approved (Q11); close #216 and #217 as superseded if their files are already on main, otherwise rebase them; leave #211 for Brian.",
-   "default": "All four stay open; nothing is lost.",
+   "recommendation": "Merge #218 with #225 only if the benchmark is approved (Q11); close #216 and #217 as superseded if their files are already on main, otherwise rebase them; compare #120, #66 and #63 with main the same way and close the ones main already covers; leave #211 for Brian.",
+   "default": "All seven stay open; nothing is lost.",
    "status": "open",
    "sources": [
     "https://github.com/BrianMills2718/inquiry-graph/pull/211",
     "https://github.com/BrianMills2718/inquiry-graph/pull/216",
     "https://github.com/BrianMills2718/inquiry-graph/pull/217",
     "https://github.com/BrianMills2718/inquiry-graph/pull/218",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/120",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/66",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/63",
     "evaluation/terminal_state/README.md:1"
    ],
    "touches": [
     "conversation",
     "task"
+   ]
+  },
+  {
+   "id": "Q14",
+   "short": "Live checkout lags main",
+   "question": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv.",
+   "blocks": "whether the next plan's fixes take effect at all, and whether two green nightly runs after the merge are evidence about the merged code",
+   "resolves_with": "Argument, no test: the checkout is clean apart from an untracked uv.lock, so a fast-forward pull plus uv sync after each merge brings it to main; whether that runs from ship, the nightly unit itself, or by hand is the choice. The next plan adds it as step 0 and a done-when line.",
+   "owner": "agent",
+   "status": "open",
+   "sources": [
+    "tools/systemd/inquiry-graph-nightly.service:6",
+    "tools/systemd/inquiry-graph-nightly.service:7",
+    "/home/brian/code2/agent-skills/skills/brian-positions/SKILL.md:18"
+   ],
+   "touches": [
+    "brian-position",
+    "topic-map",
+    "coding-session"
    ]
   },
   {
