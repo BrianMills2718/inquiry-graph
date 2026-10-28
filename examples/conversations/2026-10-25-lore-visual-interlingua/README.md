@@ -66,3 +66,11 @@ See [Lore Interlingua's visual reasoning instrument](https://github.com/BrianMil
 ## Current frontier
 
 Test **a single coherent Catholic claim about the Trinity and Incarnation** through an interactive animatic: persistent divine personhood and one divine nature, followed by the Son's historical assumption of human nature without becoming a new divine person. Evaluate the experiment as a thinking instrument by noting both which relations survive the manipulation and what representation problems it reveals.
+
+## Concrete video-reference correction (2026-10-28)
+
+The user challenged the assistant's earlier broad suggestions of cinematic and atmospheric films as insufficiently close to the intended visual method. They supplied **[Eugene Khutoryansky's physics animations](https://www.youtube.com/user/EugeneKhutoryansky)** as a source of explanatory structural dynamics and **[a Gnostic Genesis video](https://www.youtube.com/watch?v=imiAXNnzkAc&t=18s)** as a source of simplified, recognizable metaphysical symbolism. The user uploaded the video for visual inspection and described the desired style as *between* those references.
+
+The assistant's updated hypothesis: combine **iconic identification**, **structural/relational composition**, and **dynamic/exploratory behavior in one ongoing symbolic cosmological model**. This is a design synthesis, not a user-authored three-layer formalism or a claim that the reference video's theology was verified. The video bytes are not redistributed or ingested into this public graph.
+
+The corresponding art-direction document is [Lore Interlingua's visual-reference direction](https://github.com/BrianMills2718/lore-interlingua/blob/main/docs/VISUAL_REFERENCE_DIRECTION.md). This graph preserves a curated dialogue trace, not a complete transcript; all new annotations remain proposed.
