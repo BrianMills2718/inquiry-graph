@@ -33,6 +33,7 @@ PY = ROOT / ".venv" / "bin" / "python"                       # llm_client, for n
 MAPS_PY = Path.home() / ".venvs" / "inquiry-maps" / "bin" / "python"   # embeddings, EVoC, datamapplot
 MAP = P / "xconv" / "positions_map"
 NAMES = P / "xconv" / "positions_names.json"
+DIGEST_BATCH = 400   # session graphs per `inquiry-graph sessions` call
 MAP_ATTEMPT = P / "xconv" / "positions_map.last_attempt"   # touched when a rebuild starts; spaces out attempts
 CONCERN = Path.home() / "code" / "project-meta" / "scripts" / "concern_issue.py"
 
@@ -111,7 +112,9 @@ def recent_reminder(days, out=None):
     # the window is each session's own last message, not file time: a bulk re-import touches every file
     cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).isoformat()
     graphs = [g for g in (P / "coding-sessions").rglob("*.graph.json") if typed_by_brian(g)]
-    digests = json.loads(run("digest", [IG, "sessions", *graphs])) if graphs else []
+    # in batches: thousands of session paths in one argv fail with "Argument list too long" (seen 2026-11-05)
+    digests = [d for i in range(0, len(graphs), DIGEST_BATCH)
+               for d in json.loads(run("digest", [IG, "sessions", *graphs[i:i + DIGEST_BATCH]]))]
     digests = sorted((d for d in digests if str(d["conversations"][0]["to"] or "") >= cut),
                      key=lambda d: str(d["conversations"][0]["to"] or ""), reverse=True)
     lines = [f"# Coding sessions active in the last {days} days", "",
