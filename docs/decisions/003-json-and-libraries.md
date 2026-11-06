@@ -6,6 +6,8 @@ description: Decision to build a small local Pydantic and NetworkX toolkit over 
 
 **Status:** accepted for V1.
 
+Source: inferred by agent (the Context paragraph says the user asked for an off-the-shelf structured-output project, but no quote of Brian's words was kept)
+
 Governs: RULE-SCHEMA-REPRODUCIBLE
 
 **Context.** The primary risk is semantic coherence and attribution, not database throughput. The user specifically requested an off-the-shelf structured-output project with little custom infrastructure.

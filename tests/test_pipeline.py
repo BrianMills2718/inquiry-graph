@@ -10,6 +10,9 @@ from inquiry_graph.extract import prepare
 from inquiry_graph.cli import main
 
 
+@pytest.mark.req("storage/merge-is-idempotent-and-order-independent", existing=True)
+
+
 def test_union_idempotent_and_order_independent(graph):
     a=merge([graph]);b=merge([graph,graph])
     assert a==b
@@ -18,9 +21,15 @@ def test_union_idempotent_and_order_independent(graph):
     assert len(a.nodes)==len(graph.nodes)
 
 
+@pytest.mark.req("storage/conflicting-ids-raise", existing=True)
+
+
 def test_union_conflict(graph):
     other=graph.model_copy(deep=True);other.nodes[0].text+=' changed'
     with pytest.raises(ValueError,match='identity conflict'):merge([graph,other])
+
+
+@pytest.mark.req("extraction/model-confirmed-status-is-reset", existing=True)
 
 
 def test_confirmation_cannot_be_claimed_by_llm(graph):
@@ -28,6 +37,9 @@ def test_confirmation_cannot_be_claimed_by_llm(graph):
     data['nodes'][0]['review_status']='confirmed'
     output=ingest(graph.conversations[0],Candidates.model_validate(data))
     assert output.nodes[0].review_status=='proposed'
+
+
+@pytest.mark.req("views/question-status-is-per-actor", existing=True)
 
 
 def test_actor_specific_question_status(graph):
@@ -41,11 +53,17 @@ def test_actor_specific_question_status(graph):
     assert any(r['id']==e.question_id and r['status']=='reopened' for r in open_questions(graph))
 
 
+@pytest.mark.req("views/an-assistant-answer-does-not-close-a-user-s-question", existing=True)
+
+
 def test_answer_does_not_close_user_question(graph):
     q=next(n for n in graph.nodes if n.id.endswith(':q-imagination'))
     rows=[r for r in open_questions(graph) if r['id']==q.id]
     assert {r['actor_id'] for r in rows}=={'participant:brian','participant:assistant'}
     assert {r['status'] for r in rows}=={'open','answered'}
+
+
+@pytest.mark.req("views/rejected-events-are-not-applied", existing=True)
 
 
 def test_rejected_event_not_applied(graph):
@@ -58,6 +76,9 @@ def test_trace_exposes_retraction(graph):
     q=next(n for n in graph.nodes if n.id.endswith(':imagination'))
     assert any(x.get('stance')=='retracts' for x in trace(graph,q.id)['linked'])
     assert any(d['kind']=='move' for _,d in network(graph).nodes(data=True))
+
+
+@pytest.mark.req("storage/existing-files-are-not-replaced-without-force", existing=True)
 
 
 def test_atomic_no_overwrite(tmp_path):
@@ -76,6 +97,9 @@ def export_fixture():
         'b':record('a','alternative','assistant'),'c':record('a','active','assistant')}}
 
 
+@pytest.mark.req("import/only-the-current-branch-is-imported", existing=True)
+
+
 def test_active_branch_import():
     conv=import_export(export_fixture())[0]
     assert [m.text for m in conv.messages]==['first','active']
@@ -92,6 +116,9 @@ def test_bad_export(fault):
     with pytest.raises(ValueError):import_export(f,'missing' if fault=='id_not_found' else None)
 
 
+@pytest.mark.req("import/non-text-parts-are-skipped", existing=True)
+
+
 def test_no_analysis_or_nontext_extraction():
     f=export_fixture();f['mapping']['c']['message']['channel']='analysis'
     f['mapping']['a']['message']['content']['parts'].append({'image':'not-text'})
@@ -106,6 +133,9 @@ def test_import_path_traversal_is_not_filename(tmp_path):
     assert main(['import',str(source),str(tmp_path/'out')])==0
     files=list((tmp_path/'out').glob('*.json'))
     assert len(files)==1 and len(files[0].stem)==24
+
+
+@pytest.mark.req("extraction/quotes-are-located-and-speakers-enforced", existing=True)
 
 
 def test_live_convert_grounds_quotes_and_enforces_speaker(graph):
@@ -126,6 +156,9 @@ def test_live_convert_grounds_quotes_and_enforces_speaker(graph):
     assert drops['quote_not_found']==1 and drops['speaker_not_author']==1
 
 
+@pytest.mark.req("extraction/invalid-items-are-pruned-and-counted", existing=True)
+
+
 def test_live_prune_removes_invalid_and_counts(graph):
     from collections import Counter
     from inquiry_graph.live_extract import prune_to_valid
@@ -138,6 +171,9 @@ def test_live_prune_removes_invalid_and_counts(graph):
     pruned=prune_to_valid(g,drops)
     assert q.id not in {e.id for e in pruned.question_events}
     assert drops['invalid:question_type']==1
+
+
+@pytest.mark.req("extraction/supersession-cycles-are-broken", existing=True)
 
 
 def test_live_prune_breaks_supersession_cycles(graph):
@@ -176,6 +212,9 @@ def test_render_escapes_untrusted_content(graph):
     assert '\\"' in dot(graph)
 
 
+@pytest.mark.req("extraction/a-bad-response-is-quarantined", existing=True)
+
+
 def test_offline_e2e_and_quarantine(graph,tmp_path):
     src=tmp_path/'source.json';write_json(src,graph.conversations[0])
     candidates=Candidates(**{f:getattr(graph,f) for f in COLLECTIONS})
@@ -193,6 +232,9 @@ def test_offline_e2e_and_quarantine(graph,tmp_path):
     assert out.read_bytes()==original and len(list((tmp_path/'bad').glob('*.json')))==1
 
 
+@pytest.mark.req("storage/schemas-round-trip", existing=True)
+
+
 def test_schema_roundtrip(graph):
     from jsonschema import Draft202012Validator
     from inquiry_graph.model import Graph
@@ -207,6 +249,9 @@ def test_source_ids_not_user_instruction(graph):
     assert p['source']['messages'][0]['text'].endswith('attacker.')
 
 
+@pytest.mark.req("views/a-resolution-closes-only-its-scope", existing=True)
+
+
 def test_confirmed_resolution_closes_only_its_scope(graph):
     ordinals={m.id:m.ordinal for c in graph.conversations for m in c.messages}
     events=[e for e in graph.question_events if e.question_id.endswith(':q-warrant')]
@@ -218,9 +263,15 @@ def test_confirmed_resolution_closes_only_its_scope(graph):
     assert open_questions(graph)
 
 
+@pytest.mark.req("import/hidden-messages-are-skipped", existing=True)
+
+
 def test_hidden_export_messages_are_skipped():
     f=export_fixture();f['mapping']['c']['message']['metadata']={'is_visually_hidden_from_conversation':True}
     assert [m.text for m in import_export(f)[0].messages]==['first']
+
+
+@pytest.mark.req("extraction/a-transport-error-is-quarantined", existing=True)
 
 
 def test_transport_error_quarantined(graph,tmp_path,monkeypatch):
@@ -243,6 +294,9 @@ def test_render_deterministic_across_hash_seeds():
         env=dict(os.environ,PYTHONHASHSEED=seed,PYTHONPATH=str(root/'src'),PYTHONIOENCODING='utf-8')
         results.append(subprocess.check_output([sys.executable,'-c',code],cwd=root,env=env))
     assert results[0]==results[1]
+
+
+@pytest.mark.req("extraction/force-cannot-overwrite-a-source", existing=True)
 
 
 def test_source_cannot_be_overwritten_even_with_force(graph,tmp_path):

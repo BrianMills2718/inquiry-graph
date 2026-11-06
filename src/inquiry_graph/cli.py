@@ -1,4 +1,8 @@
-"""Small CLI; no database server or agent framework."""
+"""Small CLI; no database server or agent framework.
+
+Implements: extraction/failed-extractions-are-quarantined,
+    extraction/sources-are-never-overwritten
+"""
 import argparse
 import hashlib
 import json

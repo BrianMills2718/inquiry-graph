@@ -35,3 +35,11 @@ def test_included_but_never_queued_is_not_called_too_short():
     assert c("a", queued=set()) == "included_not_queued"
     assert c("a", queued={"a"}) == "pending"
     assert c("a", queued=set(), short={"a"}) == "skipped_too_short"
+
+
+def test_damaged_log_lines_are_skipped_and_counted(tmp_path, capsys):
+    # a machine crash mid-append leaves a line of NUL bytes; the count must not crash on it
+    p = tmp_path / "dispositions.jsonl"
+    p.write_bytes(b'{"id": "a", "status": "ok"}\n' + b"\x00" * 40 + b"\n" + b"\n" + b'{"id": "b", "status": "failed"}\n')
+    assert [r["id"] for r in rs.jl(p)] == ["a", "b"]
+    assert "2 damaged line(s) skipped" in capsys.readouterr().err

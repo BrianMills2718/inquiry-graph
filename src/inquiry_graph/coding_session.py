@@ -16,6 +16,8 @@ structure parsing, not prose interpretation. What they yield:
 - each tool message        -> a work node, `part_of` the goal current at that point
 Everything is `proposed`; concepts and Brian's reasoning come from the ordinary `extract --llm` path run on the
 same Conversation, and the two graphs combine with `merge`.
+
+Implements: sessions/session-graphs-keep-only-grounded-session-fields
 """
 import hashlib
 import json

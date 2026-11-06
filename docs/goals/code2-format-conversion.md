@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- |
 | 1 | Template plus `code2check` (code2-template) | none | everything else is made from it | done 2026-10-15 |
 | 2 | Greenfield trial (hooks-autoapply) | 1 | shows the loop works on new code | done 2026-10-15 |
-| 3 | Convert one active repository: inquiry-graph (this goal) | 1, 2 | shows the format fits real, existing code | active |
+| 3 | Convert one active repository: inquiry-graph (this goal) | 1, 2 | shows the format fits real, existing code | done (PR #209, 8772d2a, 2026-10-15) |
 | 4 | Other repositories convert when next changed | 3 | decision 0002 in code2-workspace | open |
 
 ## Mission and canonical example

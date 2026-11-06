@@ -1,4 +1,7 @@
-"""Projections over a preserved graph. No global belief truth or guessed chronology."""
+"""Projections over a preserved graph. No global belief truth or guessed chronology.
+
+Implements: views/open-questions-are-scoped-per-actor
+"""
 import networkx as nx
 from .model import COLLECTIONS, SIGNATURES
 

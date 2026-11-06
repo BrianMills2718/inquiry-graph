@@ -1,0 +1,15 @@
+remotes:
+  - git_url: git@github-personal:BrianMills2718/code2-workspace.git
+    ref: main
+    configs:
+      - hooks/base.yml
+pre-commit:
+  jobs:
+    - name: whitespace
+      run: git diff --cached --check
+    - name: code2check-fast
+      run: make fast
+pre-push:
+  jobs:
+    - name: code2check-full
+      run: make check
