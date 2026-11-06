@@ -91,6 +91,10 @@ Checked statically. I did not re-render.
 - **The `[tool.uv.sources]` entry.** It points `code2check` at a git branch. I counted it as "no runtime dependency" because only the dev group uses it. If either job's environment were ever built with dev groups, that would change, but neither is today.
 - **N4's weight.** I kept it a note because the manifest's `cold_review` fields are the ones the validator and the page status read. Still, a reader who opens the cold-review tab would see a false "pending". Fix it in the same commit that fills the verdict.
 
-Reviewed revision: 8fe79caccad09601220d5ac713ee76228ace9aa6
+Reviewed revision: 0069d68c0bef76259fb5d0c427c13981b6adaf77
 
 Verdict: pass
+
+## Round 4 (keep-fresh, 2026-11-06)
+
+Read subject revision 0069d68 after six commits (reconcile_snapshot damaged-line fix and lore-interlingua data). Counts reproduce (172 passed, 114 Markdown files, 11 unreachable); no model or question became false. Verdict: pass. Note fixed: the Q1 example path now names an openspec spec.
