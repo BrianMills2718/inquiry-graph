@@ -1,17 +1,17 @@
 # Checks for the inquiry-graph planning package
-Run 2026-10-27T04:39Z at commit 4a8fa90, with /usr/bin/python3.
+Run 2026-11-06T21:17Z at commit 0069d68, with /usr/bin/python3.
 
 ## wiki rule: python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .
-OVER    109  BrianMills2718/inquiry-graph  -- 109 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
-UNREACHABLE    19  BrianMills2718/inquiry-graph  -- 15 reader docs not linked from wiki/index.md, 4 more than 2 links deep (e.g. evaluation/terminal_state/README.md, examples/conversations/semantic-factorization-2026-10-18/README.md, examples/conversations/semantic-factorization-2026-10-18/comparative-evidence-round2.md)
+OVER    114  BrianMills2718/inquiry-graph  -- 114 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
+UNREACHABLE    11  BrianMills2718/inquiry-graph  -- 7 reader docs not linked from wiki/index.md, 4 more than 2 links deep (e.g. openspec/specs/extraction/spec.md, openspec/specs/import/spec.md, openspec/specs/positions/spec.md)
 DURABLE     1  BrianMills2718/inquiry-graph  -- 1 durable-document findings (e.g. STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at)
-REPO  BrianMills2718/inquiry-graph  md=109  cap=over  reach=orphans(19)  layout=undeclared(0)  durable=findings(1)
+REPO  BrianMills2718/inquiry-graph  md=114  cap=over  reach=orphans(11)  layout=undeclared(0)  durable=findings(1)
 md-file-cap: 1 given repos checked, cap 100: ok=0 exception=0 over=1 not-checked=0; wiki reachability ok=0 orphans=1 no-wiki=0; layout ok=0 findings=0 undeclared=1; durable ok=0 findings=1 undeclared=0   exit 1
 exit=1
 
 ## durable documents: python3 $CP/durable_docs_check.py --repo . --arc42
 FINDING STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
-durable-docs: mode=repo repo=/home/brian/code2/worktrees/inquiry-graph-planning findings=1 (STALE=1), exit 1
+durable-docs: mode=repo repo=/home/brian/code2/inquiry-graph/worktrees/fix-reconcile-nul-lines findings=1 (STALE=1), exit 1
 exit=1
 
 ## project navigation: python3 $CP/validate_project_navigation.py .
@@ -22,9 +22,9 @@ exit=0
 
 ## plan adoption recheck: python3 $CP/method_conformance/cli.py lint --repo-root . --recheck
 Planning receipt recheck (read-only, offline): receipts adopted under an older profile revision
-STALE: docs/plans/coding-sessions.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
-STALE: docs/plans/report-relations-rescore.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
-STALE: docs/plans/session-launch-kind.md adopted under bounded-design@13, current bounded-design@18; re-run `check` on it
+STALE: docs/plans/coding-sessions.md adopted under bounded-design@13, current bounded-design@20; re-run `check` on it
+STALE: docs/plans/report-relations-rescore.md adopted under bounded-design@13, current bounded-design@20; re-run `check` on it
+STALE: docs/plans/session-launch-kind.md adopted under bounded-design@13, current bounded-design@20; re-run `check` on it
 NOT CHECKED: Compares profile revisions only; a stale receipt must be re-run through `check` to learn whether the plan still passes.
 NOT CHECKED: Finds receipts named *.receipt.json under the repository root, skipping .git, node_modules, worktrees and virtual environments.
 NOT CHECKED: Reports a plan whose front matter status is done, complete(d), superseded or retired as finished and leaves it out of the exit status; it does not check that the status is true.
@@ -33,7 +33,7 @@ exit=1
 
 ## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/coding-sessions.md
 Planning adoption-record lint (read-only, offline)
-PASS: docs/plans/coding-sessions.md (144 checks passed, 0 failed)
+PASS: docs/plans/coding-sessions.md (145 checks passed, 0 failed)
 NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
 NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
 NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
@@ -43,7 +43,7 @@ exit=0
 
 ## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/report-relations-rescore.md
 Planning adoption-record lint (read-only, offline)
-PASS: docs/plans/report-relations-rescore.md (202 checks passed, 0 failed)
+PASS: docs/plans/report-relations-rescore.md (203 checks passed, 0 failed)
 NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
 NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
 NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
@@ -53,7 +53,7 @@ exit=0
 
 ## plan lint: python3 $CP/method_conformance/cli.py lint --repo-root . --plan docs/plans/session-launch-kind.md
 Planning adoption-record lint (read-only, offline)
-PASS: docs/plans/session-launch-kind.md (144 checks passed, 0 failed)
+PASS: docs/plans/session-launch-kind.md (145 checks passed, 0 failed)
 NOT CHECKED: Checks only the explicitly supplied plans and their current local adoption records.
 NOT CHECKED: Does not rejudge semantic quality or verify that declared facts describe reality.
 NOT CHECKED: Does not prove adoption preceded implementation, implementation completion, or claim/commit compliance.
@@ -87,7 +87,7 @@ openspec validate --all --strict --no-interactive
 ✓ spec/validation
 Totals: 7 passed, 0 failed (7 items)
 tests/test_validation.py .........................                       [ 98%]
-======================= 171 passed, 2 skipped in 19.69s ========================
+======================== 172 passed, 2 skipped in 9.45s ========================
 uv run python -m inquiry_graph validate examples/seed/graph.json
   "valid": true,
   "errors": [],
