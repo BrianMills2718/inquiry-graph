@@ -5,10 +5,10 @@
  "questions": [
   {
    "id": "Q1",
-   "short": "Wiki rule: 109 docs, 19 unreachable",
-   "question": "How should the repository get back under the wiki rule: 109 Markdown files against a cap of 100, and 19 reader documents not reachable from wiki/index.md within two links (for example evaluation/terminal_state/README.md)?",
+   "short": "Wiki rule: 114 docs, 11 unreachable",
+   "question": "How should the repository get back under the wiki rule: 114 Markdown files against a cap of 100, and 11 reader documents not reachable from wiki/index.md within two links (for example evaluation/terminal_state/README.md)?",
    "blocks": "whether the wiki-compliance check (md_file_cap.py) can exit 0, which the package's checks part needs",
-   "resolves_with": "Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 19 are still read; the check's own output names them.",
+   "resolves_with": "Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 11 are still read; the check's own output names them.",
    "owner": "agent",
    "status": "open",
    "sources": [

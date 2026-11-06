@@ -14,9 +14,9 @@
      "command": "python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .",
      "exit_status": 1,
      "counts": {
-      "markdown_files": 109,
+      "markdown_files": 114,
       "cap": 100,
-      "orphans": 19,
+      "orphans": 11,
       "layout_findings": 0,
       "layout_undeclared": 1,
       "durable_findings": 1,
@@ -72,7 +72,7 @@
      "command": "make check",
      "exit_status": 0,
      "counts": {
-      "tests_passed": 171,
+      "tests_passed": 172,
       "tests_skipped": 2,
       "failed": 0,
       "import_contracts_kept": 19,
@@ -95,9 +95,9 @@
      "command": "python3 $HOME/code2/workspace/scripts/doc_reachability.py",
      "exit_status": 0,
      "counts": {
-      "reachable": 103,
+      "reachable": 104,
       "unreachable": 0,
-      "tracked_md": 103
+      "tracked_md": 104
      },
      "note": "8 documents were unreachable at ef9a5ce; this package linked them from docs/index.md"
     }
