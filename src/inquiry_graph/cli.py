@@ -61,6 +61,7 @@ def parser():
     s.add_argument("input")
     s.add_argument("output_dir")
     s.add_argument("--force", action="store_true")
+    s.add_argument("--source", help="machine label (e.g. mac-mini) put in the conversation id so ids cannot collide across machines")
     s = sub.add_parser("sessions", help="resume digest per graph: goals, open, unknown-status and closed items, work, requests")
     s.add_argument("inputs", nargs="+")
     s = sub.add_parser("merge")
@@ -130,7 +131,7 @@ def run(args):
         write_json(args.output, conv, args.force)
         return {"conversation": conv.id, "messages": len(conv.messages), "skipped": skipped}
     elif args.cmd == "import-session":
-        conv = parse_session(args.input)
+        conv = parse_session(args.input, args.source)
         require_valid(Graph(id="import-check", conversations=[conv]))
         name = hashlib.sha256(conv.id.encode()).hexdigest()[:24]
         out = Path(args.output_dir)

@@ -99,7 +99,7 @@ def _codex_events(lines):
                 yield "tool", line, ts
 
 
-def parse_session(path) -> Conversation:
+def parse_session(path, source: str | None = None) -> Conversation:
     """One session record -> Conversation. The client is detected from the record, not the file name."""
     path = Path(path)
     lines, broken = [], 0
@@ -114,7 +114,7 @@ def parse_session(path) -> Conversation:
     first = next((rec for rec in lines if rec.get("cwd")), {})
     sid = meta.get("id") or first.get("sessionId") or path.stem
     cwd = meta.get("cwd") or first.get("cwd") or "?"
-    cid = f"{'codex' if codex else 'claude-code'}:{sid}"
+    cid = f"{'codex' if codex else 'claude-code'}:{source + ':' if source else ''}{sid}"   # source marks another machine, so ids cannot collide
     if codex:
         launch = meta.get("originator") or "?"
         headless = launch in HEADLESS_CODEX or (isinstance(meta.get("source"), dict) and "subagent" in meta["source"])
