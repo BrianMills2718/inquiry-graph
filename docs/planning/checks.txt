@@ -1,17 +1,20 @@
 # Checks for the inquiry-graph planning package
-Run 2026-11-06T21:17Z at commit 0069d68, with /usr/bin/python3.
+Run 2026-11-06T22:25Z at commit 11a0871, with /usr/bin/python3.
 
 ## wiki rule: python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .
-OVER    114  BrianMills2718/inquiry-graph  -- 114 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
+OVER    115  BrianMills2718/inquiry-graph  -- 115 > cap 100; prune, or add .md-file-cap.yaml with a limit and a reason
 UNREACHABLE    11  BrianMills2718/inquiry-graph  -- 7 reader docs not linked from wiki/index.md, 4 more than 2 links deep (e.g. openspec/specs/extraction/spec.md, openspec/specs/import/spec.md, openspec/specs/positions/spec.md)
 DURABLE     1  BrianMills2718/inquiry-graph  -- 1 durable-document findings (e.g. STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at)
-REPO  BrianMills2718/inquiry-graph  md=114  cap=over  reach=orphans(11)  layout=undeclared(0)  durable=findings(1)
+REPO  BrianMills2718/inquiry-graph  md=115  cap=over  reach=orphans(11)  layout=undeclared(0)  durable=findings(1)
 md-file-cap: 1 given repos checked, cap 100: ok=0 exception=0 over=1 not-checked=0; wiki reachability ok=0 orphans=1 no-wiki=0; layout ok=0 findings=0 undeclared=1; durable ok=0 findings=1 undeclared=0   exit 1
 exit=1
 
 ## durable documents: python3 $CP/durable_docs_check.py --repo . --arc42
 FINDING STALE role=system_model id=RULE-LIVE-GROUNDING file=src/inquiry_graph/live_extract.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
-durable-docs: mode=repo repo=/home/brian/code2/inquiry-graph/worktrees/fix-reconcile-nul-lines findings=1 (STALE=1), exit 1
+FINDING STALE role=system_model id=RULE-QUARANTINE file=src/inquiry_graph/cli.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
+FINDING STALE role=system_model id=RULE-SOURCE-NOT-OVERWRITTEN file=src/inquiry_graph/cli.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
+FINDING STALE role=system_model id=RULE-SESSION-FIELDS file=src/inquiry_graph/coding_session.py: owner changed in 1 commit(s) after the rule was last reviewed (8b063a0f0); re-read the rule and set reviewed_at
+durable-docs: mode=repo repo=/home/brian/code2/inquiry-graph/worktrees/mac-mini-sessions-v2 findings=4 (STALE=4), exit 1
 exit=1
 
 ## project navigation: python3 $CP/validate_project_navigation.py .
@@ -87,7 +90,7 @@ openspec validate --all --strict --no-interactive
 ✓ spec/validation
 Totals: 7 passed, 0 failed (7 items)
 tests/test_validation.py .........................                       [ 98%]
-======================== 172 passed, 2 skipped in 9.45s ========================
+======================= 178 passed, 2 skipped in 24.85s ========================
 uv run python -m inquiry_graph validate examples/seed/graph.json
   "valid": true,
   "errors": [],

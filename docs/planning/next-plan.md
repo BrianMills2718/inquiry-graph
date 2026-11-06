@@ -25,7 +25,7 @@ and the code it runs is behind main:
 1. `inquiry-graph-nightly.service` has failed since 2026-10-26 08:35. Session import worked (1,133
    imported) and both map builds exited 0, but 149 of 867 topics failed to get a name with
    `CODEX_CLI_ERROR` (555 of 988 on 2026-10-25, 442 of 844 on 2026-10-22), and the naming step alone
-   took 18,690 s (5.2 h). More than 20 failed names fails the step (`tools/nightly_sessions.py:86`).
+   took 18,690 s (5.2 h). More than 20 failed names fails the step (`tools/nightly_sessions.py:112`).
    Issues #227 and #229.
 2. `extract-or-run.service` restarts every few seconds (2,537 restarts by 2026-10-27):
    `tools/extract_queue.py` refuses a run with `--budget 25` and no `--contract`
@@ -60,7 +60,7 @@ documentation repairs (Q1 to Q4, Q8) that any session can do; none blocks this p
    transport, or the naming call's working directory and sandbox options,
    `tools/name_topics.py:31`-`:33`). Failures compound: a failed topic is never written to the names
    file (`tools/name_topics.py:79`-`:87`), the nightly run deletes that file before naming
-   (`tools/nightly_sessions.py:81`), and only written names carry over (`tools/name_topics.py:51`),
+   (`tools/nightly_sessions.py:107`), and only written names carry over (`tools/name_topics.py:51`),
    so a topic that failed once is retried every night. Log the carried count in the nightly log so a
    run shows how many calls it made. Record per-call traces through llm_client as today
    (`trace_id="inquiry-graph/name-topics"`).

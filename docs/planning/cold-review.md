@@ -4,13 +4,14 @@ description: Cold review of the inquiry-graph planning package by the planning-c
 
 # Cold review
 
-Three rounds were run by the planning-compliance-reviewer (run through `claude -p` with read-only tools).
+Four rounds were run by the planning-compliance-reviewer (run through `claude -p` with read-only tools).
 
 | Round | Revision read | Verdict | Blocking findings |
 | --- | --- | --- | --- |
 | 1 | 4a8bba0 | revise | 7: Q9 wrong about moves; Q6 and plan step 2 missed `finish_pipeline.sh` and the existing capture contract; no question about the live checkout lagging main; Q7, Q2, Q3, Q4 marked open although answered; FitReview, episode and frame profiles and the capture contract missing from the system model; capture contract missing from the domain graph and `relies_on`; context view hid the pipeline's network dependencies. All fixed in dcae8c7. |
 | 2 | dcae8c7 | revise | 1: Q14 and plan step 0 claimed a plain fast-forward works, but the live checkout's untracked `uv.lock` differs from the tracked one, so git refuses it. Fixed in 8fe79ca with notes N1 to N3 (other environments, line 15 alone, waits-for edge). |
 | 3 | 8fe79ca | pass | none |
+| 4 | 11a0871 | pass | none (keep-fresh rebuild after 34 commits on main and the Mac mini import; Q9 citation, counts, Q2 and the system model updated) |
 
 The report of the last round follows unchanged. Its note N4 (this file said "pending") is fixed by this file; N5, N6 and N7 remain notes.
 
@@ -98,3 +99,7 @@ Verdict: pass
 ## Round 4 (keep-fresh, 2026-11-06)
 
 Read subject revision 0069d68 after six commits (reconcile_snapshot damaged-line fix and lore-interlingua data). Counts reproduce (172 passed, 114 Markdown files, 11 unreachable); no model or question became false. Verdict: pass. Note fixed: the Q1 example path now names an openspec spec.
+
+Reviewed revision: 11a0871d28f82b8b9d8e9a85037a6a29646a90fa
+
+Round 4 verdict: pass. Counts reproduce (178 passed, 2 skipped; 115 Markdown files; 4 STALE durable rules). Notes N5 and N6 remain.

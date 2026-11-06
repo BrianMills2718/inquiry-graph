@@ -2,7 +2,7 @@
  "schema_version": "1.0",
  "record_type": "planning_package",
  "repository": "BrianMills2718/inquiry-graph",
- "subject_revision": "0069d68c0bef76259fb5d0c427c13981b6adaf77",
+ "subject_revision": "11a0871d28f82b8b9d8e9a85037a6a29646a90fa",
  "request": "Company Planning compliance workflow, 2026-10-27 (workflow-computed task, run for Brian; his standing request, 2026-10-25: \"i have asked 100s of times to make ure that my proejcts are always company plannign complaint\"): build the first planning package for inquiry-graph. This lane touched only docs/planning/, the review page and one wiki link, because another session may own the rest of the repository. docs/planning/run_checks.sh reruns the checks into docs/planning/checks.txt.",
  "parts": {
   "checks": {
@@ -14,7 +14,7 @@
      "command": "python3 $HOME/code/project-meta/scripts/md_file_cap.py --repo .",
      "exit_status": 1,
      "counts": {
-      "markdown_files": 114,
+      "markdown_files": 115,
       "cap": 100,
       "orphans": 11,
       "layout_findings": 0,
@@ -29,8 +29,8 @@
      "command": "python3 $HOME/code2/company-planning/plugins/company-planning/scripts/durable_docs_check.py --repo . --arc42",
      "exit_status": 1,
      "counts": {
-      "findings": 1,
-      "stale": 1
+      "findings": 4,
+      "stale": 4
      },
      "tracked_by": "Q2"
     },
@@ -72,7 +72,7 @@
      "command": "make check",
      "exit_status": 0,
      "counts": {
-      "tests_passed": 172,
+      "tests_passed": 178,
       "tests_skipped": 2,
       "failed": 0,
       "import_contracts_kept": 19,
@@ -95,9 +95,9 @@
      "command": "python3 $HOME/code2/workspace/scripts/doc_reachability.py",
      "exit_status": 0,
      "counts": {
-      "reachable": 104,
+      "reachable": 105,
       "unreachable": 0,
-      "tracked_md": 104
+      "tracked_md": 105
      },
      "note": "8 documents were unreachable at ef9a5ce; this package linked them from docs/index.md"
     }
@@ -201,7 +201,7 @@
    "status": "present",
    "path": "docs/planning/cold-review.md",
    "verdict": "pass",
-   "reviewed_revision": "0069d68c0bef76259fb5d0c427c13981b6adaf77"
+   "reviewed_revision": "11a0871d28f82b8b9d8e9a85037a6a29646a90fa"
   }
  }
 }

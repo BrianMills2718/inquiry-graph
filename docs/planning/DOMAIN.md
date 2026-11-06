@@ -105,6 +105,6 @@ Named in the docs but owned by another repository, or not a record type yet.
 
 - The seed's proposed-annotation count is 858 in README.md:7, docs/project-status.md:38 and the seed itself (counted 2026-10-27), but 798 in docs/project-status.md:67 and docs/verification.md:131, which predate the 2026-09-30 continuation (open question Q7).
 - docs/model/ARCHITECTURE.md cites line numbers that moved: ingest at src/inquiry_graph/io.py:120 is now :126, merge :149 is now :155, quarantine :171 is now :177. The package's system model (docs/planning/system-model.md) uses current lines (Q4).
-- docs/project-status.md:94 reports 67 tests passed and :75 says issue #2 is still to be closed; on 2026-10-27 make check ran 171 passed, 2 skipped, and issue #2 is closed (Q8).
+- docs/project-status.md:94 reports 67 tests passed and :75 says issue #2 is still to be closed; on 2026-11-06 make check ran 178 passed, 2 skipped, and issue #2 is closed (Q8).
 - .agentic/repo.yaml names docs/model/ARCHITECTURE.md as the system model, while docs/index.md lists it among 'Earlier documents' replaced by docs/architecture/arc42.md and the specs. Both are still read; arc42.md points back to ARCHITECTURE.md for the runtime view, so neither alone is the model (Q4).
-- docs/project-status.md:118 says the archive holds 0 moves because live extraction skips them; live_extract.py now has a moves prompt behind a switch (src/inquiry_graph/live_extract.py:35), but no archive run used it (Q9).
+- docs/project-status.md:117 says the archive holds 0 moves because live extraction skips them; live_extract.py now has a moves prompt behind a switch (src/inquiry_graph/live_extract.py:35), but no archive run used it (Q9).
