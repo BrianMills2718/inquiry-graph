@@ -61,6 +61,11 @@ Kept as written; the specs and diagram above replace them where they overlap.
 - [Cross-conversation positions results](../evaluation/cross_conversation/results.md)
 - [Terminal-state continuation regression](../evaluation/terminal_state/README.md)
 
+## Inquiries
+
+- [Asymmetric benchmark design (2026-10-16)](inquiries/2026-10-16-asymmetric-benchmark-design.md):
+  provisional conversation summary, not a validated source-anchored graph.
+
 ## Goals
 
 - [Convert to the code2 format](goals/code2-format-conversion.md)
