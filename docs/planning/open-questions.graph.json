@@ -29,9 +29,9 @@
  "nodes": [
   {
    "id": "Q1",
-   "label": "Q1: Wiki rule: 114 docs, 11 unreachable",
+   "label": "Q1: Wiki rule: 115 docs, 11 unreachable",
    "kind": "AgentQuestion",
-   "explain": "How should the repository get back under the wiki rule: 114 Markdown files against a cap of 100, and 11 reader documents not reachable from wiki/index.md within two links (for example openspec/specs/extraction/spec.md)? Settled by: Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 11 are still read; the check's own output names them."
+   "explain": "How should the repository get back under the wiki rule: 115 Markdown files against a cap of 100, and 11 reader documents not reachable from wiki/index.md within two links (for example openspec/specs/extraction/spec.md)? Settled by: Argument, no test: either archive superseded handoffs and evaluation notes into docs/archive/ (the rule counts them too) and link the live ones from wiki/index.md, or add .md-file-cap.yaml with a limit and a reason the evaluation records must stay as files. Pick by reading which of the 11 are still read; the check's own output names them."
   },
   {
    "id": "Q1-blocks",
@@ -48,9 +48,9 @@
   },
   {
    "id": "Q2",
-   "label": "Q2: Mark RULE-LIVE-GROUNDING reviewed",
+   "label": "Q2: Mark four durable rules reviewed",
    "kind": "AgentQuestion",
-   "explain": "RULE-LIVE-GROUNDING still holds on reading after commit 8b063a0 changed its owner file; who sets its reviewed_at in docs/model/trace.yaml so the durable-documents check stops reporting it stale? Settled by: Already settled by reading (2026-10-27): quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items are dropped in convert at :302, and prune_to_valid runs at :439. The remaining action is a one-line edit of reviewed_at in docs/model/trace.yaml; no test is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action."
+   "explain": "RULE-LIVE-GROUNDING still holds on reading after commit 8b063a0 changed its owner file, and on 2026-11-06 the check reports three more STALE rules (RULE-QUARANTINE and RULE-SOURCE-NOT-OVERWRITTEN on src/inquiry_graph/cli.py, RULE-SESSION-FIELDS on src/inquiry_graph/coding_session.py) because the Mac mini import commit (11a0871) added the --source option; who sets their reviewed_at in docs/model/trace.yaml so the durable-documents check stops reporting them stale? Read on 2026-11-06: --source changes only the conversation id (src/inquiry_graph/coding_session.py:119), not quarantine, source overwrite or reply-field parsing, so all three rules still hold. Settled by: Already settled by reading (2026-10-27): quotes are located at src/inquiry_graph/live_extract.py:88, wrong-speaker items are dropped in convert at :302, and prune_to_valid runs at :439. The remaining action is a one-line edit of reviewed_at in docs/model/trace.yaml; no test is needed. This package's lane was limited to docs/planning/ and the documentation links the package needs (another session may own the rest of the repository), so the edit is left as this question's one remaining action."
   },
   {
    "id": "Q2-blocks",
@@ -135,7 +135,7 @@
    "id": "Q5",
    "label": "Q5: Nightly positions map red: topic naming",
    "kind": "AgentQuestion",
-   "explain": "Why do topic-name calls through the Codex CLI fail (149 of 867 topics on 2026-10-26, 555 of 988 on 2026-10-25, 442 of 844 on 2026-10-22), and why does the naming step take hours (18,690 s on 2026-10-26)? Settled by: Running settles the first part, not an evaluation: reproduce one failing call with the full Codex CLI stderr (the concern keeps only its first line). Reading settled why failures repeat: a failed topic is never written to the names file (tools/name_topics.py:79-87), the nightly run deletes the names file before naming (tools/nightly_sessions.py:81) and only names that were written carry over (tools/name_topics.py:51), so every topic that failed once is retried every night until a call succeeds. 867 is the number of topics in the build, not the number of calls; the nightly log does not record how many were carried. See docs/planning/next-plan.md step 1."
+   "explain": "Why do topic-name calls through the Codex CLI fail (149 of 867 topics on 2026-10-26, 555 of 988 on 2026-10-25, 442 of 844 on 2026-10-22), and why does the naming step take hours (18,690 s on 2026-10-26)? Settled by: Running settles the first part, not an evaluation: reproduce one failing call with the full Codex CLI stderr (the concern keeps only its first line). Reading settled why failures repeat: a failed topic is never written to the names file (tools/name_topics.py:79-87), the nightly run deletes the names file before naming (tools/nightly_sessions.py:107) and only names that were written carry over (tools/name_topics.py:51), so every topic that failed once is retried every night until a call succeeds. 867 is the number of topics in the build, not the number of calls; the nightly log does not record how many were carried. See docs/planning/next-plan.md step 1."
   },
   {
    "id": "Q5-blocks",
@@ -187,7 +187,7 @@
    "id": "Q8",
    "label": "Q8: Project status page is stale",
    "kind": "AgentQuestion",
-   "explain": "When are docs/project-status.md and docs/verification.md brought up to date? The status page reports 67 tests (make check ran 171 passed, 2 skipped on 2026-10-27), says issue #2 should still be closed (it is closed), gives 798 proposed seed annotations where there are 858 (Q7; also docs/verification.md:131), and does not mention the coding-session import, the positions map or the nightly pipeline. Settled by: Argument: rewrite the status page from the live checks in docs/planning/checks.txt and this ledger; no test is needed."
+   "explain": "When are docs/project-status.md and docs/verification.md brought up to date? The status page reports 67 tests (make check ran 178 passed, 2 skipped on 2026-11-06), says issue #2 should still be closed (it is closed), gives 798 proposed seed annotations where there are 858 (Q7; also docs/verification.md:131), and does not mention the coding-session import, the positions map or the nightly pipeline. Settled by: Argument: rewrite the status page from the live checks in docs/planning/checks.txt and this ledger; no test is needed."
   },
   {
    "id": "Q8-blocks",
@@ -301,7 +301,7 @@
    "id": "Q14",
    "label": "Q14: Live checkout lags main",
    "kind": "AgentQuestion",
-   "explain": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv. Its untracked uv.lock (2,559 lines) differs from the uv.lock that origin/main tracks since 8b063a0 (2,745 lines), so git refuses a fast-forward that would overwrite it. Settled by: Argument, no test: nothing local diverges (rev-list origin/main..HEAD is 0), and the only obstacle to a fast-forward is the untracked uv.lock, which differs from the tracked one. Compare the two files, move the untracked one aside (not delete), then git pull --ff-only and uv sync. The repeated update (from ship's post-merge step or the start of the nightly unit) must raise a keyed concern when the fast-forward is refused rather than fail silently. The other environments the jobs use (~/.venvs/inquiry-maps, tools/nightly_sessions.py:29; ~/.venvs/inquiry-or, tools/finish_pipeline.sh:15) need no sync for these 15 commits: the only pyproject.toml change since 8672a4e adds a dev dependency group and code2check settings, no runtime dependency. The next plan does this as step 0 with a done-when line."
+   "explain": "How do merged fixes reach the code the jobs actually run? inquiry-graph-nightly.service, chatgpt-export-watch.service, extract-or-run.service and the brian-positions skill all run from ~/code/inquiry-graph, a symlink to the main checkout ~/code2/inquiry-graph, which on 2026-10-27 sat on main at 8672a4e (2026-10-15), 15 commits behind origin/main, with its own .venv. Its untracked uv.lock (2,559 lines) differs from the uv.lock that origin/main tracks since 8b063a0 (2,745 lines), so git refuses a fast-forward that would overwrite it. Settled by: Argument, no test: nothing local diverges (rev-list origin/main..HEAD is 0), and the only obstacle to a fast-forward is the untracked uv.lock, which differs from the tracked one. Compare the two files, move the untracked one aside (not delete), then git pull --ff-only and uv sync. The repeated update (from ship's post-merge step or the start of the nightly unit) must raise a keyed concern when the fast-forward is refused rather than fail silently. The other environments the jobs use (~/.venvs/inquiry-maps, tools/nightly_sessions.py:33; ~/.venvs/inquiry-or, tools/finish_pipeline.sh:15) need no sync for these 15 commits: the only pyproject.toml change since 8672a4e adds a dev dependency group and code2check settings, no runtime dependency. The next plan does this as step 0 with a done-when line."
   },
   {
    "id": "Q14-blocks",

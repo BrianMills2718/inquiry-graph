@@ -24,13 +24,13 @@ Canonical records are JSON files validated by Pydantic models in `src/inquiry_gr
 
 | Record type | Defined at | Written by | Read by |
 | --- | --- | --- | --- |
-| `Conversation` (with `Participant`, `Message`) | `src/inquiry_graph/model.py:27` | `inquiry-graph import`, `import-bridge`, `import-exporter`, `import-session` (`src/inquiry_graph/cli.py:94`, `:126`, `:131`, `:136`) | `prepare`, `extract`, `validate` |
+| `Conversation` (with `Participant`, `Message`) | `src/inquiry_graph/model.py:27` | `inquiry-graph import`, `import-bridge`, `import-exporter`, `import-session` (`src/inquiry_graph/cli.py:95`, `:127`, `:132`, `:137`) | `prepare`, `extract`, `validate` |
 | `Candidates` (proposed nodes, relations, moves, events) | `src/inquiry_graph/model.py:118` | a response file, or live extraction (`src/inquiry_graph/live_extract.py:302`, `convert`) | `ingest` (`src/inquiry_graph/io.py:126`), which resets every record to `proposed` |
-| `Graph` (all records plus `Extraction` provenance) | `src/inquiry_graph/model.py:126` | `extract` and `merge` through `write_json` (`src/inquiry_graph/cli.py:121`, `:150`; exclusive write at `src/inquiry_graph/io.py:23`) | `validate`, `query`, `render`, `sessions`, `tools/ask_positions.py`, `tools/brian_positions.py`, onto-canon6 |
+| `Graph` (all records plus `Extraction` provenance) | `src/inquiry_graph/model.py:126` | `extract` and `merge` through `write_json` (`src/inquiry_graph/cli.py:122`, `:151`; exclusive write at `src/inquiry_graph/io.py:23`) | `validate`, `query`, `render`, `sessions`, `tools/ask_positions.py`, `tools/brian_positions.py`, onto-canon6 |
 | `Node`, `Relation` + `Binding`, `Move`, `StanceEvent`, `QuestionEvent` | `src/inquiry_graph/model.py:54`, `:70`, `:59`, `:82`, `:92`, `:99` | inside a `Graph` only | `validate` (`src/inquiry_graph/validate.py:11`), views (`src/inquiry_graph/views.py:23`) |
-| Quarantine entry (raw response and error) | `src/inquiry_graph/io.py:177` | `extract` on any exception (`src/inquiry_graph/cli.py:123`) | a person; never read back as data |
-| Extraction report (chunks, drops by reason, cost, trace ids) | `src/inquiry_graph/cli.py:120` | `extract --report` | a person or agent reviewing a run |
-| Session graph (`*.conversation.json`, `*.graph.json`) | `src/inquiry_graph/coding_session.py:104`, `:183` | `import-session` (`src/inquiry_graph/cli.py:141`, `:143`) | `sessions` resume digest (`src/inquiry_graph/coding_session.py:244`), nightly reminder |
+| Quarantine entry (raw response and error) | `src/inquiry_graph/io.py:177` | `extract` on any exception (`src/inquiry_graph/cli.py:124`) | a person; never read back as data |
+| Extraction report (chunks, drops by reason, cost, trace ids) | `src/inquiry_graph/cli.py:121` | `extract --report` | a person or agent reviewing a run |
+| Session graph (`*.conversation.json`, `*.graph.json`) | `src/inquiry_graph/coding_session.py:104`, `:183` | `import-session` (`src/inquiry_graph/cli.py:142`, `:144`) | `sessions` resume digest (`src/inquiry_graph/coding_session.py:244`), nightly reminder |
 | Link proposals (`Position`, `Link`) | `src/inquiry_graph/linker.py:28`, `:40` | `evaluation/cross_conversation_scale/run_linker.py` (link_isolated.py adds isolated-node links; `tools/topic_map.py` reads cached pairs) | topic-map research; not on the answer path (archive search is, `docs/project-status.md:50`) |
 | Fit review (`FitReview` with `FitFinding`) | `src/inquiry_graph/fit_review.py:54`, `:35` | written by hand or by an agent as `fit-review.json` beside a conversation fixture (`README.md:73`) | `tools/check_fit_review.py`, `tests/test_fit_review.py`; evidence about the model, never applied to it |
 | Reasoning-episode profile (`ReasoningEpisodeProfile` with `EpisodeRoleBinding`) | `src/inquiry_graph/episode_view.py:36`, `:29` | written by hand under `evaluation/reasoning_episode_profiles/` | `tests/test_episode_view.py`, `tests/test_real_episode_profiles.py` (checked against the graph it binds) |
@@ -43,14 +43,18 @@ Canonical records are JSON files validated by Pydantic models in `src/inquiry_gr
 Quote-bearing data lives under `private/` (git-ignored) on Brian's laptop. The nightly user unit
 `inquiry-graph-nightly.service` runs `tools/nightly_sessions.py` at 02:40:
 
-1. `import-session` for every Claude Code and Codex session changed in the last 30 hours into
-   `private/coding-sessions/rolling/` (`tools/nightly_sessions.py:56`).
+1. `rsync -a` (no `--delete`) of the Mac mini's `~/.claude/projects/` into `private/sessions_mac_mini/projects/`
+   (`sync_mac_mini`, `tools/nightly_sessions.py:66`); an offline Mac mini is logged and skipped. Then
+   `import-session` for every Claude Code and Codex session changed in the last 30 hours into
+   `private/coding-sessions/rolling/` (`tools/nightly_sessions.py:78`); the Mac mini's files are imported
+   with `--source mac-mini`, which puts the label in the conversation id so ids cannot collide across
+   machines (`src/inquiry_graph/coding_session.py:104`, `:119`). Codex sessions are not synced from the Mac mini.
 2. Rebuild the positions map: `tools/position_topics.py` embeds and clusters Brian's statements
    into `private/xconv/positions_map/` (`records.json`, `topics.json`, `index.html`), then
    `tools/name_topics.py` names new topics through the Codex CLI and the map is rebuilt with names
-   (`tools/nightly_sessions.py:71`-`:85`). More than 20 failed names fails the step
-   (`tools/nightly_sessions.py:86`).
-3. Write `private/coding-sessions/recent.md`, the open-work reminder (`tools/nightly_sessions.py:99`).
+   (`tools/nightly_sessions.py:97`-`:111`). More than 20 failed names fails the step
+   (`tools/nightly_sessions.py:112`).
+3. Write `private/coding-sessions/recent.md`, the open-work reminder (`tools/nightly_sessions.py:131`).
 
 What the pipeline talks to (ARCHITECTURE.md's context view shows only the library side, where
 llm_client is the one network dependency; the private pipeline below is not offline):
