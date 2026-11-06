@@ -1,0 +1,1 @@
+../../../openspec/specs/validation/spec.md

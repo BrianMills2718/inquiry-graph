@@ -1,4 +1,8 @@
-"""Closed-world structural checks, not a proof that recorded claims are true."""
+"""Closed-world structural checks, not a proof that recorded claims are true.
+
+Implements: validation/anchors-match-the-source-exactly,
+    validation/relations-obey-their-role-signature
+"""
 from collections import Counter
 import networkx as nx
 from .model import Graph, COLLECTIONS, SIGNATURES

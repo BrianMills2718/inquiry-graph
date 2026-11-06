@@ -1,0 +1,1 @@
+../../../openspec/specs/sessions/spec.md

@@ -1,13 +1,17 @@
 """Nightly: import coding sessions changed since yesterday, rebuild the private positions map, write the open-work reminder.
 
-Usage: nightly_sessions.py [--since-hours 30] [--recent-days 3] [--skip-map]
+Usage: nightly_sessions.py [--since-hours 30] [--recent-days 3] [--skip-map] [--map-every-days 7]
        nightly_sessions.py --reminder-only --recent-days 7 --out FILE   (commit review: no import, no map, no concern)
 Steps, each timed in the log (one file per day under private/logs/):
   1. import-session every Claude Code / Codex session file modified in the window into private/coding-sessions/rolling/
      (a malformed file is counted and skipped, not fatal);
-  2. rebuild the positions map, carry topic names over from the previous build and name only new topics, rebuild with names;
-  3. write private/coding-sessions/recent.md: for sessions active in the last few days, the goal, items still open,
+  2. write private/coding-sessions/recent.md: for sessions active in the last few days, the goal, items still open,
      items whose status went unknown, and requests waiting on Brian. The start and where-are-we routines read it.
+  3. at most once every --map-every-days (default 7): rebuild the positions map, carry topic names over from the
+     previous build and name only new topics, rebuild with names.
+Why this order (2026-11-05 timer review): the map and naming took 1-10 hours a night (one run: 26 GB read,
+53 GB written, 3 h CPU) and were cut off by restarts every night from 10-29 to 11-05, so the reminder, which
+came last, went 8 days stale. The reminder now comes first, and a map attempt is tried once a week, not nightly.
 A failed step opens (or comments on) one keyed concern in BrianMills2718/inquiry-graph and exits non-zero.
 The concern names only the step and exit status; private quotes never leave private/.
 """
@@ -29,6 +33,8 @@ PY = ROOT / ".venv" / "bin" / "python"                       # llm_client, for n
 MAPS_PY = Path.home() / ".venvs" / "inquiry-maps" / "bin" / "python"   # embeddings, EVoC, datamapplot
 MAP = P / "xconv" / "positions_map"
 NAMES = P / "xconv" / "positions_names.json"
+DIGEST_BATCH = 400   # session graphs per `inquiry-graph sessions` call
+MAP_ATTEMPT = P / "xconv" / "positions_map.last_attempt"   # touched when a rebuild starts; spaces out attempts
 CONCERN = Path.home() / "code" / "project-meta" / "scripts" / "concern_issue.py"
 
 
@@ -107,6 +113,12 @@ def rebuild_map():
         raise RuntimeError(f"topic names: {len(failed)} failed, e.g. {failed[0][:240]}")
 
 
+def map_due(every_days, marker=None):
+    """Whether a map rebuild is due: no attempt recorded, or the last one started at least every_days ago."""
+    marker = marker or MAP_ATTEMPT
+    return not marker.exists() or time.time() - marker.stat().st_mtime >= every_days * 86400
+
+
 def typed_by_brian(graph):
     """False for a session with no prompt from Brian: headless runs (codex exec, claude -p) such as the topic-naming
     calls themselves, which import with only participant:automation. A session without its conversation file is kept."""
@@ -120,7 +132,9 @@ def recent_reminder(days, out=None):
     # the window is each session's own last message, not file time: a bulk re-import touches every file
     cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).isoformat()
     graphs = [g for g in (P / "coding-sessions").rglob("*.graph.json") if typed_by_brian(g)]
-    digests = json.loads(run("digest", [IG, "sessions", *graphs])) if graphs else []
+    # in batches: thousands of session paths in one argv fail with "Argument list too long" (seen 2026-11-05)
+    digests = [d for i in range(0, len(graphs), DIGEST_BATCH)
+               for d in json.loads(run("digest", [IG, "sessions", *graphs[i:i + DIGEST_BATCH]]))]
     digests = sorted((d for d in digests if str(d["conversations"][0]["to"] or "") >= cut),
                      key=lambda d: str(d["conversations"][0]["to"] or ""), reverse=True)
     lines = [f"# Coding sessions active in the last {days} days", "",
@@ -149,26 +163,34 @@ def main():
     ap.add_argument("--since-hours", type=float, default=30)
     ap.add_argument("--recent-days", type=float, default=3)
     ap.add_argument("--skip-map", action="store_true", help="import and reminder only")
+    ap.add_argument("--map-every-days", type=float, default=7, help="rebuild the map only if the last attempt is this old")
     ap.add_argument("--reminder-only", action="store_true", help="only write the reminder from already-imported sessions")
     ap.add_argument("--out", type=Path, help="reminder file (default: private/coding-sessions/recent.md)")
     ap.add_argument("--data-root", type=Path, help="checkout holding private/ and .venv (default: this script's checkout)")
     a = ap.parse_args()
     if a.data_root:
-        global P, IG, PY, MAP, NAMES, MAC_DIR
+        global P, IG, PY, MAP, NAMES, MAP_ATTEMPT, MAC_DIR
         P, IG, PY = a.data_root / "private", a.data_root / ".venv/bin/inquiry-graph", a.data_root / ".venv/bin/python"
         MAC_DIR = P / "sessions_mac_mini" / "projects"
         MAP, NAMES = P / "xconv" / "positions_map", P / "xconv" / "positions_names.json"
+        MAP_ATTEMPT = P / "xconv" / "positions_map.last_attempt"
     if a.reminder_only:
         recent_reminder(a.recent_days, a.out)
         return
     step = "import"
     try:
         import_sessions(a.since_hours)
-        if not a.skip_map:
-            step = "map"
-            rebuild_map()
         step = "reminder"
         recent_reminder(a.recent_days, a.out)
+        if a.skip_map:
+            pass
+        elif not map_due(a.map_every_days):
+            log(f"map: skipped; last attempt under {a.map_every_days:g} days ago ({MAP_ATTEMPT.name})")
+        else:
+            step = "map"
+            MAP_ATTEMPT.parent.mkdir(parents=True, exist_ok=True)
+            MAP_ATTEMPT.touch()
+            rebuild_map()
         log("nightly: done")
     except Exception as e:
         log(f"nightly: FAILED at {step}: {e}")

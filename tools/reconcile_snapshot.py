@@ -38,7 +38,19 @@ def classify(cid, *, failed, agent, flt, short, graphs, failed_extract, events, 
 
 
 def jl(p):
-    return [json.loads(x) for x in open(p)] if Path(p).exists() else []
+    """Read a JSONL log. Blank lines and lines a crash left half-written (e.g. NUL bytes) are
+    skipped and counted on stderr, so one damaged line cannot stop the whole coverage count."""
+    if not Path(p).exists():
+        return []
+    rows, damaged = [], 0
+    for x in open(p, errors="replace"):
+        try:
+            rows.append(json.loads(x))
+        except json.JSONDecodeError:
+            damaged += 1
+    if damaged:
+        print(f"{p}: {damaged} damaged line(s) skipped", file=sys.stderr)
+    return rows
 
 
 def main():

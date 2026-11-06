@@ -1,0 +1,119 @@
+// Structure of inquiry_graph. Each component maps to a Python module (metadata python).
+// An arrow means "may import". `code2check arch gen` turns missing arrows into
+// import-linter contracts (.importlinter), so a commit that breaks this diagram fails.
+// Scripts under tools/ are not a package and are not drawn here.
+specification {
+  element component
+}
+model {
+  main = component 'Entry point' {
+    description 'python -m inquiry_graph; hands off to the command line'
+    metadata { python 'inquiry_graph.__main__' }
+  }
+  cli = component 'Command line' {
+    description 'Small CLI; no database server or agent framework'
+    metadata { python 'inquiry_graph.cli' }
+  }
+  model_ = component 'Ontology' {
+    description 'Executable V1 ontology: the Pydantic record types every other module uses'
+    metadata { python 'inquiry_graph.model' }
+  }
+  validate = component 'Validation' {
+    description 'Closed-world structural checks, not a proof that recorded claims are true'
+    metadata { python 'inquiry_graph.validate' }
+  }
+  io = component 'Storage and import' {
+    description 'Normalization, serialization, exact-identity union and candidate ingestion'
+    metadata { python 'inquiry_graph.io' }
+  }
+  extract = component 'Structured extraction' {
+    description 'One structured-output call, or ingestion of a saved response file'
+    metadata { python 'inquiry_graph.extract' }
+  }
+  live = component 'Live extraction' {
+    description 'Extraction through the shared llm_client, chunked by message'
+    metadata { python 'inquiry_graph.live_extract' }
+  }
+  projections = component 'Views' {
+    description 'Projections over a preserved graph; no global belief truth or guessed chronology'
+    metadata { python 'inquiry_graph.views' }
+  }
+  render = component 'Rendering' {
+    description 'Escaped Markdown, Mermaid and DOT views'
+    metadata { python 'inquiry_graph.render' }
+  }
+  sessions = component 'Coding sessions' {
+    description 'Claude Code or Codex session records to Conversations'
+    metadata { python 'inquiry_graph.coding_session' }
+  }
+  bridge = component 'ChatGPT bridge reader' {
+    description 'chatgpt-bridge transcripts to Conversations'
+    metadata { python 'inquiry_graph.bridge' }
+  }
+  claude_export = component 'Claude export reader' {
+    description 'Claude data export (conversations.json) to Conversations'
+    metadata { python 'inquiry_graph.claude_export' }
+  }
+  exporter_json = component 'ChatGPT exporter reader' {
+    description 'ChatGPT Conversation Manager per-thread JSON to Conversations'
+    metadata { python 'inquiry_graph.exporter_json' }
+  }
+  kept = component 'Kept Markdown reader' {
+    description 'Kept vault Markdown files to Conversations'
+    metadata { python 'inquiry_graph.kept_markdown' }
+  }
+  zoom = component 'Meeting transcript reader' {
+    description 'Speaker-labelled meeting transcripts to Conversations'
+    metadata { python 'inquiry_graph.zoom_transcript' }
+  }
+  episodes = component 'Episode view' {
+    description 'Derived reasoning-episode projection'
+    metadata { python 'inquiry_graph.episode_view' }
+  }
+  frames = component 'Frame view' {
+    description 'Derived frame projection'
+    metadata { python 'inquiry_graph.frame_view' }
+  }
+  linker = component 'Position linker' {
+    description "Relation-typed links between one person's positions across conversations"
+    metadata { python 'inquiry_graph.linker' }
+  }
+  fit = component 'Fit review' {
+    description 'Sidecar for reviewing how well the graph represented an inquiry; imports nothing in the package'
+    metadata { python 'inquiry_graph.fit_review' }
+  }
+  main -> cli 'runs'
+  cli -> bridge 'reads bridge transcripts'
+  cli -> sessions 'reads coding sessions'
+  cli -> exporter_json 'reads exporter files'
+  cli -> extract 'extracts'
+  cli -> live 'extracts live'
+  cli -> io 'loads, merges, saves'
+  cli -> validate 'checks graphs'
+  cli -> projections 'builds views'
+  cli -> render 'prints views'
+  cli -> model_ 'uses types'
+  io -> validate 'checks before writing'
+  io -> model_ 'uses types'
+  live -> validate 'quarantines bad records'
+  live -> model_ 'uses types'
+  render -> projections 'renders projections'
+  validate -> model_ 'uses types'
+  projections -> model_ 'uses types'
+  extract -> model_ 'uses types'
+  sessions -> model_ 'uses types'
+  bridge -> model_ 'uses types'
+  claude_export -> model_ 'uses types'
+  exporter_json -> model_ 'uses types'
+  kept -> model_ 'uses types'
+  zoom -> model_ 'uses types'
+  episodes -> model_ 'uses types'
+  frames -> model_ 'uses types'
+  linker -> model_ 'uses types'
+}
+views {
+  view index {
+    title 'inquiry_graph modules'
+    include *
+  }
+}

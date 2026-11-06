@@ -55,3 +55,29 @@ def test_headless_sessions_are_left_out(tmp_path, monkeypatch):
     nightly_sessions.recent_reminder(3, out)
     assert seen == ["mine.graph.json"]
     assert "## mine" in out.read_text() and "## headless" not in out.read_text()
+
+
+def test_map_due_spaces_attempts(tmp_path):
+    """The map rebuild ran 1-10 hours a night and was cut off nightly; it is now tried at most once a week."""
+    marker = tmp_path / "positions_map.last_attempt"
+    assert nightly_sessions.map_due(7, marker)            # never attempted
+    marker.touch()
+    assert not nightly_sessions.map_due(7, marker)        # just attempted
+    old = time.time() - 8 * 86400
+    os.utime(marker, (old, old))
+    assert nightly_sessions.map_due(7, marker)            # a week has passed
+
+
+def test_digest_runs_in_batches(tmp_path, monkeypatch):
+    """Thousands of session paths in one argv failed with E2BIG; the digest call is split into batches."""
+    sessions = tmp_path / "private" / "coding-sessions"
+    sessions.mkdir(parents=True)
+    for i in range(5):
+        (sessions / f"s{i}.graph.json").write_text("{}")
+    calls = []
+    monkeypatch.setattr(nightly_sessions, "P", tmp_path / "private")
+    monkeypatch.setattr(nightly_sessions, "DIGEST_BATCH", 2)
+    monkeypatch.setattr(nightly_sessions, "typed_by_brian", lambda g: True)
+    monkeypatch.setattr(nightly_sessions, "run", lambda step, cmd: calls.append(cmd) or "[]")
+    nightly_sessions.recent_reminder(3, tmp_path / "out.md")
+    assert [len(c) - 2 for c in calls] == [2, 2, 1]

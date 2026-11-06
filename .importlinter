@@ -1,0 +1,452 @@
+# Generated from docs/architecture/*.c4 by `code2check arch gen`. Do not edit by hand.
+
+[importlinter]
+root_packages =
+    inquiry_graph
+
+[importlinter:contract:inquiry_graph.__main__]
+name = inquiry_graph.__main__ imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.__main__
+forbidden_modules =
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.model
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.bridge]
+name = inquiry_graph.bridge imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.bridge
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.claude_export]
+name = inquiry_graph.claude_export imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.claude_export
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.cli]
+name = inquiry_graph.cli imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.cli
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.claude_export
+    inquiry_graph.episode_view
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.coding_session]
+name = inquiry_graph.coding_session imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.coding_session
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.episode_view]
+name = inquiry_graph.episode_view imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.episode_view
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.exporter_json]
+name = inquiry_graph.exporter_json imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.exporter_json
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.extract]
+name = inquiry_graph.extract imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.extract
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.fit_review]
+name = inquiry_graph.fit_review imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.fit_review
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.model
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.frame_view]
+name = inquiry_graph.frame_view imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.frame_view
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.io]
+name = inquiry_graph.io imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.io
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.kept_markdown]
+name = inquiry_graph.kept_markdown imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.kept_markdown
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.linker]
+name = inquiry_graph.linker imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.linker
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.live_extract]
+name = inquiry_graph.live_extract imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.live_extract
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.render
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.model]
+name = inquiry_graph.model imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.model
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.render]
+name = inquiry_graph.render imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.render
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.model
+    inquiry_graph.validate
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.validate]
+name = inquiry_graph.validate imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.validate
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.views
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.views]
+name = inquiry_graph.views imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.views
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.zoom_transcript
+allow_indirect_imports = True
+
+[importlinter:contract:inquiry_graph.zoom_transcript]
+name = inquiry_graph.zoom_transcript imports only what the diagram allows
+type = forbidden
+source_modules = inquiry_graph.zoom_transcript
+forbidden_modules =
+    inquiry_graph.__main__
+    inquiry_graph.bridge
+    inquiry_graph.claude_export
+    inquiry_graph.cli
+    inquiry_graph.coding_session
+    inquiry_graph.episode_view
+    inquiry_graph.exporter_json
+    inquiry_graph.extract
+    inquiry_graph.fit_review
+    inquiry_graph.frame_view
+    inquiry_graph.io
+    inquiry_graph.kept_markdown
+    inquiry_graph.linker
+    inquiry_graph.live_extract
+    inquiry_graph.render
+    inquiry_graph.validate
+    inquiry_graph.views
+allow_indirect_imports = True
