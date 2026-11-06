@@ -59,17 +59,37 @@ def changed_sessions(hours):
     return sorted(p for p in claude + codex if p.stat().st_mtime >= cut)
 
 
+MAC_HOST, MAC_SRC = "b@100.109.41.60", "/Users/b/.claude/projects/"
+MAC_DIR = P / "sessions_mac_mini" / "projects"
+
+
+def sync_mac_mini():
+    """Read-only copy of the Mac mini's Claude Code sessions (rsync -a, no --delete). An offline Mac mini is logged and skipped."""
+    MAC_DIR.mkdir(parents=True, exist_ok=True)
+    try:
+        r = subprocess.run(["rsync", "-a", "-e", "ssh -o BatchMode=yes -o ConnectTimeout=10", f"{MAC_HOST}:{MAC_SRC}", str(MAC_DIR) + "/"],
+                           capture_output=True, text=True, timeout=900)
+    except subprocess.TimeoutExpired:
+        log("mac mini sync skipped: timed out")
+        return
+    log(f"mac mini sync: exit {r.returncode}" + (f" (skipped, offline or failing): {(r.stderr.strip().splitlines() or ['?'])[-1][:200]}" if r.returncode else ""))
+
+
 def import_sessions(hours):
     out = P / "coding-sessions" / "rolling"
     ok = bad = 0
-    for f in changed_sessions(hours):
-        r = subprocess.run([str(IG), "import-session", str(f), str(out), "--force"], cwd=P.parent, capture_output=True, text=True)
+    sync_mac_mini()
+    cut = time.time() - hours * 3600
+    mac = [p for p in MAC_DIR.glob("*/*.jsonl") if p.stat().st_mtime >= cut]
+    jobs = [(f, None) for f in changed_sessions(hours)] + [(f, "mac-mini") for f in sorted(mac)]
+    for f, src in jobs:
+        r = subprocess.run([str(IG), "import-session", str(f), str(out), "--force", *(["--source", src] if src else [])], cwd=P.parent, capture_output=True, text=True)
         if r.returncode:
             bad += 1
             log(f"import skipped {f.name}: {(r.stderr.strip().splitlines() or ['?'])[-1][:200]}")
         else:
             ok += 1
-    log(f"import: {ok} imported, {bad} skipped")
+    log(f"import: {ok} imported, {bad} skipped ({len(mac)} from mac mini)")
     if ok == 0 and bad:
         raise RuntimeError(f"import: every one of {bad} changed sessions failed")
 
@@ -149,8 +169,9 @@ def main():
     ap.add_argument("--data-root", type=Path, help="checkout holding private/ and .venv (default: this script's checkout)")
     a = ap.parse_args()
     if a.data_root:
-        global P, IG, PY, MAP, NAMES, MAP_ATTEMPT
+        global P, IG, PY, MAP, NAMES, MAP_ATTEMPT, MAC_DIR
         P, IG, PY = a.data_root / "private", a.data_root / ".venv/bin/inquiry-graph", a.data_root / ".venv/bin/python"
+        MAC_DIR = P / "sessions_mac_mini" / "projects"
         MAP, NAMES = P / "xconv" / "positions_map", P / "xconv" / "positions_names.json"
         MAP_ATTEMPT = P / "xconv" / "positions_map.last_attempt"
     if a.reminder_only:

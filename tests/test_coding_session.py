@@ -223,3 +223,9 @@ def test_prompt_history_stops_at_the_build_cutoff(tmp_path, monkeypatch):
     assert [r["quote"] for r in bp.history_records([codex / "history.jsonl"])] == ["Prompt number 0 about the positions map"]
     monkeypatch.delenv("INQUIRY_GRAPH_HISTORY_UNTIL")
     assert len(bp.history_records([codex / "history.jsonl"])) == 2
+
+
+def test_source_label_keeps_machines_apart(tmp_path):
+    path = claude_record(tmp_path)
+    assert parse_session(path, "mac-mini").id == "claude-code:mac-mini:s1"
+    assert parse_session(path).id == "claude-code:s1"
