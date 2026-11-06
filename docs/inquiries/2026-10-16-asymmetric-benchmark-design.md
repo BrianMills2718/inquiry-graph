@@ -1,6 +1,6 @@
 # Asymmetric benchmark design — inquiry capture (2026-10-16)
 
-**Status:** Provisional conversation summary, not a complete transcript or validated graph. Semantic assertions below are proposed interpretations, not endorsed findings.
+**Status:** Provisional (merged as provisional, 2026-11-06). Conversation summary, not a complete transcript or validated graph. Semantic assertions below are proposed interpretations, not endorsed findings.
 
 **Source:** Brian, 2026-10-16: "I think what's relevant is, like, the general strategy for approaching this."
 **Source:** Brian, 2026-10-16: "this is kind of like the thing they do in public key cryptography, where it's like one direction is much easier than the other, is maybe a principle here."
@@ -37,7 +37,7 @@ This is *not* a claim that computational one-wayness alone predicts model failur
 
 - [Terminal Bench task directory](https://github.com/harbor-framework/terminal-bench/tree/main/tasks)
 - [Coq Block Bound](https://github.com/harbor-framework/terminal-bench/tree/main/tasks/coq-block-bound)
-- [Inquiry Graph conversation self-improvement loop](../../../docs/design/conversation-self-improvement-loop.md)
+- [Inquiry Graph conversation self-improvement loop](../design/conversation-self-improvement-loop.md)
 
 ## Coverage and next capture step
 
@@ -93,6 +93,7 @@ This captures only selected conceptual turns from a live chat on 2026-10-16, not
 The user supplied attempter, reviewer, and media onboarding PDFs. These emphasize genuine professional difficulty; Linux-terminal solvability; independent, outcome-based deterministic grading; complete, step-by-step golden solutions; clear and reproducible inputs; acceptable licensing with third-party disclosure; and multiple frontier-agent failures. The attempter instructions explicitly prohibit LLM-written or substantially rewritten submitted task prompts. This document therefore records *research deliberation only*, not task submission material.
 
 **Implications:**
+
 - A compiler toy exercise or intentionally obscure mini-language could be rejected as too easy, contrived, or underspecified.
 - Source/binary leakage and grading contamination are hazards in black-box cloning evaluations.
 - A correct reference interpreter supports differential testing, but sampled tests cannot logically establish full equivalence over unbounded inputs without an additional argument.
