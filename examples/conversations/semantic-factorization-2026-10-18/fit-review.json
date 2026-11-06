@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "semantic-factorization-2026-10-18",
+  "purpose": "Preserve the inquiry trajectory and test whether Inquiry Graph represents the user's search for a reusable formal framework for semantic representation, including its grounding and executable aspects.",
+  "findings": [
+    {
+      "id": "fit-001",
+      "diagnosis": "representation_gap",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The target inquiry concerns a candidate factorization of semantic representation itself, while Inquiry Graph captures questions, claims, moves, relations, and review states in a conversation. It can record the proposal but does not formalize candidate dimensions, dependencies, independence claims, or coverage proofs as first-class artifacts.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:h-canonical-factorization",
+        "semantic-factorization-2026-10-18:n:c-capabilities",
+        "semantic-factorization-2026-10-18:n:c-mece-criterion"
+      ],
+      "current_workaround": "Represent the proposed factorization and its candidate capabilities as hypothesis/concept nodes and connect them using existing relations; preserve the open question in the question agenda.",
+      "proposed_change": "Do not add schema primitives yet. First search prior art and determine whether a downstream research artifact or projection can express factorization candidates, dependencies, and counterexamples without changing core inquiry semantics.",
+      "promotion_gate": "Only propose shared-schema changes after the same material query failure appears in at least two independent inquiry graphs or one blocking case is approved, and after prior-art/reuse and regression checks.",
+      "status": "open"
+    },
+    {
+      "id": "fit-002",
+      "diagnosis": "wrong_level",
+      "scope": "ontology",
+      "severity": "material",
+      "description": "The conversation mixes candidate dimensions of a representation, properties of its interpretation, connections to external referents, and operations such as proof, query, calculation, simulation, and execution. Treating all of these as peer dimensions risks a misfactored framework.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:c-grounding",
+        "semantic-factorization-2026-10-18:n:c-model-theory",
+        "semantic-factorization-2026-10-18:n:c-operational-semantics",
+        "semantic-factorization-2026-10-18:n:c-representation-forms"
+      ],
+      "current_workaround": "Keep separate nodes for formal interpretation, grounding, and operational behavior; state their relationships explicitly rather than flattening them into a single list.",
+      "proposed_change": "Use prior-art research to compare frameworks that distinguish syntax, semantics/models, satisfaction, interpretation, and computation. If needed, create a research matrix outside the core graph schema.",
+      "promotion_gate": "Require at least one concrete cross-domain example showing that the distinction changes a query, inference, validation, or execution outcome.",
+      "status": "open"
+    },
+    {
+      "id": "fit-003",
+      "diagnosis": "incomplete",
+      "scope": "workflow",
+      "severity": "material",
+      "description": "A first-pass prior-art comparison is now present. It identifies DOL, MMT, institution theory, and model-driven engineering as strong but complementary precedents; the universal MECE claim remains unverified.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:n:goal-capture-inquiry",
+        "semantic-factorization-2026-10-18:n:goal-find-prior-art"
+      ],
+      "current_workaround": "Use prior-art.md as the current shortlist and compare primary sources against concrete requirements; DOL is the closest direct match for heterogeneous ontologies, models, specifications, and mappings.",
+      "proposed_change": "Do not change Inquiry Graph's core schema based on this inquiry. Refine the research question around a compositional meta-framework, mappings, and optional operational semantics; investigate whether a remaining canonical-factorization requirement is actually stated in prior work.",
+      "promotion_gate": "Review primary sources and test concrete examples (taxonomy, database schema, formal theory/proof, physical model, cellular automaton) against each candidate. Clearly separate coverage of artifacts, mappings, execution, and empirical grounding.",
+      "status": "open"
+    },
+    {
+      "id": "fit-004",
+      "diagnosis": "capture_gap",
+      "scope": "extraction",
+      "severity": "note",
+      "description": "This is a curated excerpt map rather than a complete transcript export, so it preserves the conceptual trajectory but cannot support exhaustive move counts, complete stance histories, or exact turn-level coverage claims.",
+      "evidence_refs": [
+        "semantic-factorization-2026-10-18:conversation"
+      ],
+      "current_workaround": "The coverage note explicitly declares omitted intervening wording and the absence of a native export.",
+      "proposed_change": "If a native export is later supplied, reconcile excerpt quotes to source message IDs and extend the graph only where the additional fidelity benefits the inquiry.",
+      "promotion_gate": "Do not claim full coverage until source reconciliation and quote/offset validation pass.",
+      "status": "open"
+    }
+  ],
+  "overall_assessment": "Inquiry Graph preserves the inquiry and a targeted prior-art scan. DOL is the closest direct match to the integration of heterogeneous ontologies, models, specifications, and mappings; MMT and institution theory offer deeper formal frameworks; MDE addresses execution. The original universal-factorization question should be reframed and tested rather than assumed novel.",
+  "next_inquiry_question": "After reading the DOL specification and MMT paper, does the user's intended scope reduce to heterogeneous formal representation plus mappings and optional operational semantics, or is there a distinct requirement not covered by these frameworks?"
+}

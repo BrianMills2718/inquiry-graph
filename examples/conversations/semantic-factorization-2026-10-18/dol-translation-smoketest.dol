@@ -1,0 +1,19 @@
+%% a simple parthood ontology in OWL
+logic OWL
+ontology Parthood_OWL =
+  ObjectProperty: isPartOf
+  ObjectProperty: isProperPartOf
+  Characteristics: Asymmetric
+  SubPropertyOf: isPartOf
+end
+
+%% OWL cannot express this combination for the same object property in OWL 2 DL,
+%% so the ontology is extended after translation into Common Logic.
+logic CommonLogic
+ontology Parthood_CL =
+  Parthood_OWL
+  with translation OWL22CommonLogic
+then
+  (forall (x y z) (if (and (isProperPartOf x y) (isProperPartOf y z))
+                      (isProperPartOf x z)))
+end

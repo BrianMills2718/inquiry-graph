@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "id": "episode:seed-candidate-generation",
+  "label": "Founding dialogue candidate-generation factorization episode",
+  "bindings": [
+    {
+      "role": "salient_condition",
+      "refs": [
+        "dialogue-2026-09-27:n:q-candidate-generation-factorization"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit question opening the candidate-generation factorization problem."
+    },
+    {
+      "role": "frame",
+      "refs": [
+        "dialogue-2026-09-27:n:candidate-generation-interface"
+      ],
+      "recovery": "reconstructed",
+      "rationale": "The graph contains the interface hypothesis, but calling it the active frame is a higher-order interpretation."
+    },
+    {
+      "role": "candidate",
+      "refs": [
+        "dialogue-2026-09-27:n:typed-generative-regime"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit hypothesis for the generative-system factorization."
+    },
+    {
+      "role": "evaluation",
+      "refs": [
+        "dialogue-2026-09-27:n:framework-mapping-result"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit cross-framework mapping result used to test the candidate factorization."
+    },
+    {
+      "role": "commitment",
+      "refs": [
+        "dialogue-2026-09-27:n:typed-generation-program"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit goal to make typed candidate generation concrete."
+    },
+    {
+      "role": "action_or_test",
+      "refs": [
+        "dialogue-2026-09-27:n:candidate-typing-test"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit method describing the test."
+    },
+    {
+      "role": "update",
+      "refs": [
+        "dialogue-2026-09-27:n:universal-interface-not-operators"
+      ],
+      "recovery": "reconstructed",
+      "rationale": "Explicit conclusion, but classifying it as the episode-level update requires grouping the surrounding inquiry."
+    }
+  ],
+  "note": "Real captured graph. Role assignment is a reviewed projection, not graph truth."
+}

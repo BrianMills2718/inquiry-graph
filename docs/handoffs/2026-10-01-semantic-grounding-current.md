@@ -359,3 +359,40 @@ post-hoc pressure rule.
 
 The next strategic task is therefore to choose a fresh evaluation source or a
 genuinely untouched task family before defining v3.
+
+## Active decision gate — 2026-10-04
+
+After the completed Yareta v2 negative result, do not expand the vocabulary and
+do not repair v2 post hoc.
+
+The active research task is now one deep vertical slice for **support**. The
+decision protocol is frozen in:
+
+`docs/handoffs/2026-10-04-support-vertical-slice-decision-gate.md`
+
+The purpose is explicitly strategic: determine whether the grounding
+architecture deserves substantially more investment.
+
+The required chain is:
+
+```text
+controlled measurements
+  -> contact / relative-position / load-response factors
+  -> support episode evidence
+  -> repeated perturbation / supporter-removal counterfactuals
+  -> support disposition
+  -> lexical support concept
+  -> loss-aware DOLCE/BFO/UFO projections
+```
+
+A controlled rigid-body simulation is the next measurement source because it
+can provide exact perturbations and counterfactual ground truth. Simulation
+success alone is insufficient: at least one non-simulated measurement adapter
+must instantiate the same factor interfaces without redefining them.
+
+The gate contains explicit go and stop/narrow criteria. In particular, the
+universal-interlingua thesis should be weakened if factors must be rewritten
+per sensor environment, if semantic support labels leak into their own
+derivation, or if ontology preservation/loss remains only bespoke prose rather
+than mechanically inspectable structure.
+

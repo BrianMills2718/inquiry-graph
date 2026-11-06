@@ -22,16 +22,17 @@ PRIV = ROOT / "private/xconv"
 OUT = PRIV / "oc6"
 CHATS = ["6ab8563b", "6ab96260", "69c07755", "6a988a7a", "6a171ac3"]
 PROFILE = ("general_purpose_open", "0.1.0")
+PINNED_ONTO_CANON6 = "2a9c48f9f5f7266ca6d19880eb2f3399b26146e4"  # onto-canon6 main, 2026-10-05
 OPPOSED = {("posits", "rejects"), ("endorses", "rejects"), ("posits", "retracts"), ("endorses", "retracts")}
 
 if not os.environ.get("ONTO_CANON6_HOME"):
     sys.exit("ONTO_CANON6_HOME must point at the pinned onto-canon6 tree (config/, profiles/, ontology_packs/)")
 
 from onto_canon6 import AssertionService, GovernanceService  # noqa: E402
-from onto_canon6.extensions.alignment.models import ClaimTextV1  # noqa: E402
-from onto_canon6.extensions.alignment.scoring import EmbeddingCosineScorer, JudgedRestatementScorer  # noqa: E402
-from onto_canon6.extensions.alignment.service import AlignmentService  # noqa: E402
-from onto_canon6.extensions.epistemic.service import EpistemicService  # noqa: E402
+from onto_canon6.assertions.alignment.models import ClaimTextV1  # noqa: E402
+from onto_canon6.assertions.alignment.scoring import EmbeddingCosineScorer, JudgedRestatementScorer  # noqa: E402
+from onto_canon6.assertions.alignment.service import AlignmentService  # noqa: E402
+from onto_canon6.assertions.epistemic.service import EpistemicService  # noqa: E402
 
 
 def load_stances():
@@ -132,7 +133,7 @@ def main():
                  if tuple(sorted((t["a"]["stance"], t["b"]["stance"]))) in {tuple(sorted(o)) for o in OPPOSED}]
 
     export = {
-        "source": "onto-canon6 6864aa16c via inquiry-graph export (auto-accepted, not human-reviewed)",
+        "source": f"onto-canon6 {PINNED_ONTO_CANON6[:9]} via inquiry-graph export (auto-accepted, not human-reviewed)",
         "positions_by_proposition": [
             {"proposition": p, "chats": sorted({x["chat_title"] for x in m}),
              "members": [{k: x[k] for k in ("chat_title", "stance", "text", "quote")} for x in m]}
@@ -144,7 +145,7 @@ def main():
     }
     (OUT / "export.json").write_text(json.dumps(export, indent=1, ensure_ascii=False), encoding="utf-8")
     loss = {
-        "pinned_onto_canon6": "6864aa16c2f38270b0812302c2154391866a4f11",
+        "pinned_onto_canon6": PINNED_ONTO_CANON6,
         "carried": ["speaker (holder role, value 'brian')", "stance (value role)",
                     "proposition identity (entity, alignment cluster id)", "exact evidence span, verified by onto-canon6",
                     "source message text and id", "chat title and stance id (source_metadata)"],

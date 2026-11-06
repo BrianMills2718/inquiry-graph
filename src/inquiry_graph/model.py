@@ -47,7 +47,8 @@ class Grounded(Record):
     review_status: Literal["proposed", "confirmed", "rejected"] = "proposed"
 
 
-NodeKind = Literal["concept", "claim", "question", "hypothesis", "method", "example", "goal", "reference"]
+# task: a unit of work an agent lists as open; work: a delivered product (a pull request, a commit) seen in a tool record.
+NodeKind = Literal["concept", "claim", "question", "hypothesis", "method", "example", "goal", "reference", "task", "work"]
 
 
 class Node(Grounded):
@@ -97,7 +98,8 @@ class StanceEvent(Grounded):
 
 class QuestionEvent(Grounded):
     question_id: str
-    status: Literal["open", "answered", "resolved", "deferred", "superseded", "reopened"]
+    # dropped: abandoned on purpose (tasks and questions alike); closes the item like resolved.
+    status: Literal["open", "answered", "resolved", "deferred", "superseded", "reopened", "dropped"]
     actor_id: str
     at_message_id: str
     answer_ids: list[str] = Field(default_factory=list)

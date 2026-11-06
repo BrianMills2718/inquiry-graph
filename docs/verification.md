@@ -130,7 +130,7 @@ The optional live-LLM adapter remains outside hosted CI because it depends on a 
 - no live paid extraction run;
 - no independent human adjudication of the 798 proposed annotations;
 - no full conversation-export reconciliation;
-- the first single-conversation pilot favored raw transcript over the graph report (0.81 vs 0.65 key-point coverage);
+- the single-conversation usefulness pilot (one conversation, about 10 independent questions written from its transcript, the same model answering and judging, one run each) favored the raw transcript over the graph report (0.81 vs 0.65 key-point coverage); a 2026-10-11 re-score with reasons rendered as text scored 0.62 against 0.63 for the old report under the same Codex-routed judge, so rendering did not change the result, and the remaining misses traced mainly to reasons missing from extraction (`evaluation/usefulness_pilot/results.md`);
 - the later 30-chat campaign is now tested, but only for its measured retrieval workload: archive-search-then-read averaged 0.67 coverage versus 0.63 for positions + typed links and 0.61 for positions only; no route met the complete source-citation/verbatim-quote contract, and broad generalization was not evaluated;
 - no production deployment.
 

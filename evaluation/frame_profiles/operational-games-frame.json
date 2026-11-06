@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frame:operational-games-compositional-world",
+  "label": "Compositional causal-world frame",
+  "content": {
+    "refs": [
+      "dialogue-2026-09-30-operational-games:n:compositional-causal-world-model"
+    ],
+    "recovery": "direct"
+  },
+  "applies_to": {
+    "refs": [
+      "dialogue-2026-09-30-operational-games:n:compositional-executable-world-goal"
+    ],
+    "recovery": "reconstructed"
+  },
+  "active_query": {
+    "refs": [
+      "dialogue-2026-09-30-operational-games:n:q-cgt-surviving-role"
+    ],
+    "recovery": "direct"
+  },
+  "model_hypothesis": {
+    "refs": [
+      "dialogue-2026-09-30-operational-games:n:heterogeneous-component-semantics"
+    ],
+    "recovery": "direct"
+  },
+  "boundary_access": {
+    "refs": [
+      "dialogue-2026-09-30-operational-games:n:access-contract-goals"
+    ],
+    "recovery": "direct"
+  },
+  "note": "Real graph profile; frame coordinates remain sparse and method-relative."
+}

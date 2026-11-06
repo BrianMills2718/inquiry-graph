@@ -19,10 +19,10 @@ The [offline linked-record inspector](examples/seed/inspector.html) works by ope
 Requires Python 3.11 or later. From the repository root:
 
 ```bash
-python -m venv .venv
+uv venv .venv
 . .venv/bin/activate                 # PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -e '.[dev]'
-python -m pytest -q
+uv pip install -e '.[dev]'
+python -m pytest -ra
 inquiry-graph validate examples/seed/graph.json
 inquiry-graph query examples/seed/graph.json open
 inquiry-graph query examples/seed/graph.json trace \
@@ -50,7 +50,38 @@ inquiry-graph import /path/to/conversations.json private/imported --conversation
 
 The importer follows each export's `current_node` parent chain: **only the active branch**, not an accidental mixture of alternative replies. Without `--conversation-id`, all conversations are imported into distinct hash-named JSON files. Only visible user/assistant text is imported; skipped parts are counted. This is an export adapter, not access to all your ChatGPT conversations. Review exports before sharing them.
 
-Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `pip install -e '.[llm]'` (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
+Pass one imported source to `prepare`, then supply a candidate JSON from an LLM to `extract --response-file`. Candidate schema: [schemas/candidates.schema.json](schemas/candidates.schema.json). For live extraction install `uv pip install -e '.[llm]'` in the activated environment (Brian's shared `llm_client`) and run `extract SOURCE OUTPUT --llm --report REPORT.json`; `--model` overrides `llm_client`'s `extraction` route. A chat read through the chatgpt-bridge can be normalized with `import-bridge TRANSCRIPT.md SOURCE.json`; it keeps only visible user/assistant text.
+
+## Coding-agent sessions
+
+```bash
+inquiry-graph import-session ~/.claude/projects/<project>/<session>.jsonl private/coding-sessions
+inquiry-graph sessions private/coding-sessions/*.graph.json      # what is open, unknown, closed, shipped, waiting on Brian
+inquiry-graph extract private/coding-sessions/<id>.conversation.json private/coding-sessions/<id>.concepts.json --llm
+```
+
+`import-session` reads a Claude Code or Codex session record: Brian's typed messages, each turn's assistant text, and pull-request and commit lines from tool records. It reads the end-of-reply fields (Session goal, Active subgoals, Done, Need anything from human) into goal, task, question and work nodes without an LLM. Concepts come from the ordinary `extract --llm` run on the same conversation; `merge` combines the two. Output holds private material, so keep it under `private/`.
+
+Every night at 02:40 `tools/nightly_sessions.py` (systemd user timer, units in `tools/systemd/`; install with `cp tools/systemd/* ~/.config/systemd/user/ && systemctl --user enable --now inquiry-graph-nightly.timer`) imports every session file changed in the last 30 hours into `private/coding-sessions/rolling/`, rebuilds the private positions map (topic names carry over from the last build; only new topics are sent to the model; embeddings are cached per statement, so only new statements are embedded; the map's Play bar steps through the months), and writes `private/coding-sessions/recent.md`, the open items and requests from the last three days that the `start` and `where-are-we` routines read. Its log is `private/logs/nightly-<date>.log`; a failed step opens the `inquiry-graph-nightly-sessions` concern. For a commit review over a longer window, `python3 tools/nightly_sessions.py --reminder-only --recent-days 7 --out <file>` writes the same list for any number of days without importing, rebuilding or touching `recent.md`; the window is each session's last message, not file time.
+
+## Let conversations improve Inquiry Graph
+
+For substantive conversations, capture the inquiry and then review how well the
+representation served its purpose. The proposed workflow is documented in
+[conversation-to-graph self-improvement loop](docs/design/conversation-self-improvement-loop.md).
+
+A conversation may carry a sibling `fit-review.json` that records
+representation, extraction, workflow, and factorization friction plus an
+explicit promotion gate. Validate it with:
+
+```bash
+python tools/check_fit_review.py examples/conversations/2026-10-05-semantic-modeling/fit-review.json
+```
+
+The fit review is **evidence about the model, not authority to mutate it**.
+Core semantic changes should be promoted only after the documented reuse,
+independent-case, approval, and regression gates. See the
+[2026-10-05 semantic-modeling fixture](examples/conversations/2026-10-05-semantic-modeling/README.md).
 
 ## What is guaranteed—and what is not
 

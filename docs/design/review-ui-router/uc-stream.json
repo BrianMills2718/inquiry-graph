@@ -1,0 +1,22 @@
+{
+  "id": "position-review-needs-attention-stream",
+  "concern": "Is this machine-written statement of my position right, judged against my own dated quotes? Confirm, correct or withdraw it in one action, then go to the next most doubtful one.",
+  "stakeholder": "Brian, sole owner of the positions, reviewing on phone or desktop in short sessions",
+  "intent": ["inspect", "decide", "modify", "trace"],
+  "informationStructure": ["list", "document", "timeline"],
+  "tasks": ["inspect", "confirm", "edit", "rank", "trace", "compare"],
+  "entities": ["claim", "label", "quote", "chat", "topic", "review decision"],
+  "relationships": ["claim supported-by quote", "quote from chat on date", "claim belongs-to topic", "decision supersedes claim"],
+  "focus": "one claim at a time with its dated quotes beside it; the machine label is a lead to verify, not a fact",
+  "explanatoryFocus": ["provenance", "uncertainty", "state"],
+  "surfaceContext": { "repeatedCollection": true, "neighboringRepresentations": "homogeneous", "sharedInteractionGrammar": true, "medium": "application" },
+  "scale": { "items": 20000, "density": "low" },
+  "interaction": { "mode": "authoring", "dynamics": "interactive" },
+  "audience": { "expertise": "expert", "frequency": "high", "domainFamiliarity": "expert", "notationFamiliarity": "novice", "visualizationLiteracy": "mixed" },
+  "consequence": { "risk": "medium", "reversibility": "reversible" },
+  "constraints": { "mobile": true, "accessibility": "high", "realtime": false, "provenance": true, "allowAggregation": true },
+  "requiredCapabilities": ["details-on-demand", "editing", "provenance", "undo"],
+  "representationRole": "audit",
+  "semanticAvailability": { "status": "partial", "present": ["claim text", "label", "quotes with date, AI and chat title", "topic summary"], "missing": ["per-claim ranking signals (single-day, label-quote agreement) not yet computed", "write-back endpoint to gbrain"], "note": "authorship check 'unclear' flag exists only for some items" },
+  "successCriteria": ["Brian decides one claim in under 20 seconds on a phone without scrolling past the action row", "an over-read label is visibly flagged and fixed in one action", "every decision can be undone and reaches gbrain through a script"]
+}

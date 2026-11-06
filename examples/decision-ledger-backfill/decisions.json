@@ -1,0 +1,316 @@
+[
+ {
+  "id": "d-moves-skip",
+  "ts": "2026-09-29T10:53:24-04:00",
+  "project": "inquiry-graph",
+  "decision_type": "capture_extra",
+  "options": [
+   "capture",
+   "skip"
+  ],
+  "chosen": "skip",
+  "rule": "capture_rule",
+  "inputs": {
+   "usd": {
+    "point": 8,
+    "low": 4,
+    "high": 15
+   },
+   "f": {
+    "point": 0.25,
+    "low": 0.1,
+    "high": 0.6
+   },
+   "p": {
+    "point": 0.5,
+    "low": 0.3,
+    "high": 0.7
+   },
+   "minutes_wall": {
+    "point": 120,
+    "low": 60,
+    "high": 240
+   },
+   "minutes_attention": {
+    "point": 30,
+    "low": 15,
+    "high": 60
+   },
+   "redo_extra_usd": {
+    "point": 0,
+    "low": 0,
+    "high": 2
+   }
+  },
+  "reversible": true,
+  "resolve_by": "2026-10-31",
+  "reference_class": "schema collection left out of an extraction pass",
+  "made_by": "agent",
+  "evidence_note": "Only recorded trace: a code comment in live_extract.py (commit 9c8d431). C,f,p are hindsight guesses; the 30-chat pilot that would measure f has not run. Estimates reconstructed in hindsight on 2026-10-05 from what was knowable then; no estimate was written down at the time. Outcome is real."
+ },
+ {
+  "id": "d-or-extract",
+  "ts": "2026-10-04T13:34:08-04:00",
+  "project": "inquiry-graph",
+  "decision_type": "money_for_time",
+  "options": [
+   {
+    "name": "continue_codex",
+    "inputs": {
+     "usd": {
+      "point": 0,
+      "low": 0,
+      "high": 0
+     },
+     "minutes_wall": {
+      "point": 1380,
+      "low": 720,
+      "high": 2800
+     },
+     "minutes_attention": {
+      "point": 30,
+      "low": 10,
+      "high": 60
+     }
+    }
+   },
+   {
+    "name": "openrouter_gpt6luna",
+    "inputs": {
+     "usd": {
+      "point": 11,
+      "low": 5.6,
+      "high": 16.4
+     },
+     "minutes_wall": {
+      "point": 180,
+      "low": 90,
+      "high": 360
+     },
+     "minutes_attention": {
+      "point": 15,
+      "low": 5,
+      "high": 30
+     }
+    }
+   }
+  ],
+  "chosen": "openrouter_gpt6luna",
+  "rule": "dominance_then_expected_cost",
+  "inputs": {
+   "usd": {
+    "point": 11,
+    "low": 5.6,
+    "high": 16.4
+   },
+   "minutes_wall": {
+    "point": 180,
+    "low": 90,
+    "high": 360
+   },
+   "minutes_attention": {
+    "point": 15,
+    "low": 5,
+    "high": 30
+   }
+  },
+  "reversible": true,
+  "resolve_by": "2026-10-06",
+  "reference_class": "bulk extraction run, 1,442 chats",
+  "made_by": "agent",
+  "evidence_note": "Codex wall = 1442 chats x ~230 s measured earlier / 4 parallel services. OpenRouter $: 10-chat slice $0.114 and 20-chat check $0.077 scaled to 1,442 (range 5.6-16.4), point 11 as stated in the handoff. OpenRouter wall is a guess. Reversible: Codex services kept disabled, not deleted."
+ },
+ {
+  "id": "d-authorship",
+  "ts": "2026-10-05T12:04:31-04:00",
+  "project": "inquiry-graph",
+  "decision_type": "capture_extra",
+  "options": [
+   "capture",
+   "skip"
+  ],
+  "chosen": "capture",
+  "rule": "capture_rule",
+  "inputs": {
+   "usd": {
+    "point": 8.19,
+    "low": 6,
+    "high": 12
+   },
+   "f": {
+    "point": 0.08,
+    "low": 0.03,
+    "high": 0.25
+   },
+   "p": {
+    "point": 0.6,
+    "low": 0.3,
+    "high": 0.9
+   },
+   "minutes_wall": {
+    "point": 60,
+    "low": 30,
+    "high": 180
+   },
+   "minutes_attention": {
+    "point": 45,
+    "low": 20,
+    "high": 90
+   },
+   "redo_extra_usd": {
+    "point": 1,
+    "low": 0.3,
+    "high": 2
+   }
+  },
+  "reversible": true,
+  "resolve_by": "2026-10-31",
+  "reference_class": "label added to an extraction pass's records",
+  "made_by": "agent",
+  "evidence_note": "Framed as capture_extra: C = extraction spend; f = check cost as fraction of C; redo = rebuild downstream digests/answers. A later check would cost the same as now, so 'in the same pass' is a loose fit. Estimates reconstructed in hindsight on 2026-10-05 from what was knowable then; no estimate was written down at the time. Outcome is real."
+ },
+ {
+  "id": "d-topic-digests",
+  "ts": "2026-10-05T14:46:21-04:00",
+  "project": "inquiry-graph",
+  "decision_type": "pilot_commit",
+  "options": [
+   {
+    "name": "broad_one",
+    "inputs": {
+     "usd": {
+      "point": 0.01,
+      "low": 0.003,
+      "high": 0.05
+     },
+     "minutes_wall": {
+      "point": 3,
+      "low": 2,
+      "high": 10
+     },
+     "minutes_attention": {
+      "point": 10,
+      "low": 5,
+      "high": 20
+     }
+    }
+   },
+   {
+    "name": "narrow_100",
+    "inputs": {
+     "usd": {
+      "point": 1,
+      "low": 0.3,
+      "high": 4
+     },
+     "minutes_wall": {
+      "point": 30,
+      "low": 15,
+      "high": 60
+     },
+     "minutes_attention": {
+      "point": 10,
+      "low": 5,
+      "high": 20
+     }
+    }
+   }
+  ],
+  "chosen": "narrow_100",
+  "rule": "dominance_then_expected_cost",
+  "inputs": {
+   "usd": {
+    "point": 1,
+    "low": 0.3,
+    "high": 4
+   },
+   "minutes_wall": {
+    "point": 30,
+    "low": 15,
+    "high": 60
+   },
+   "minutes_attention": {
+    "point": 10,
+    "low": 5,
+    "high": 20
+   }
+  },
+  "reversible": true,
+  "resolve_by": "2026-10-06",
+  "reference_class": "batch of LLM answer calls",
+  "made_by": "agent",
+  "evidence_note": "Per-call cap in code is $2.00; real per-ask cost was not known. Cost-only rule ignores that the broad answer was weak (benefit differs between options). Estimates reconstructed in hindsight on 2026-10-05 from what was knowable then; no estimate was written down at the time. Outcome is real."
+ },
+ {
+  "id": "d-method-recurrence",
+  "ts": "2026-10-05T18:30:19-04:00",
+  "project": "inquiry-graph",
+  "decision_type": "build_adopt",
+  "options": [
+   {
+    "name": "build_embedding_retrieval",
+    "inputs": {
+     "usd": {
+      "point": 0.1,
+      "low": 0.03,
+      "high": 0.3
+     },
+     "minutes_wall": {
+      "point": 90,
+      "low": 45,
+      "high": 240
+     },
+     "minutes_attention": {
+      "point": 30,
+      "low": 15,
+      "high": 60
+     }
+    }
+   },
+   {
+    "name": "jev_labelling_pilot",
+    "inputs": {
+     "usd": {
+      "point": 0.02,
+      "low": 0.005,
+      "high": 0.1
+     },
+     "minutes_wall": {
+      "point": 15,
+      "low": 5,
+      "high": 45
+     },
+     "minutes_attention": {
+      "point": 30,
+      "low": 15,
+      "high": 60
+     }
+    }
+   }
+  ],
+  "chosen": "build_embedding_retrieval",
+  "rule": "dominance_then_expected_cost",
+  "inputs": {
+   "usd": {
+    "point": 0.1,
+    "low": 0.03,
+    "high": 0.3
+   },
+   "minutes_wall": {
+    "point": 90,
+    "low": 45,
+    "high": 240
+   },
+   "minutes_attention": {
+    "point": 30,
+    "low": 15,
+    "high": 60
+   }
+  },
+  "reversible": true,
+  "resolve_by": "2026-10-12",
+  "reference_class": "small research tool, one-evening build",
+  "made_by": "agent",
+  "evidence_note": "Jev's cost was learned only after the pilot ran (hindsight leak). The two options answer different questions (retrieval-then-judge vs direct labelling), so dominance on cost does not mean equal benefit. Estimates reconstructed in hindsight on 2026-10-05 from what was knowable then; no estimate was written down at the time. Outcome is real."
+ }
+]

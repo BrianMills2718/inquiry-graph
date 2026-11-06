@@ -5,6 +5,8 @@ Brian-attributed stance and question events (speaker == actor, quote verbatim in
 records {id, chat, title, date, kind, target, quote}. BM25 retrieves the top records for the question, the model
 answers in structured claims that cite record ids, and code then verifies each cite exists and its quote is verbatim
 in the source message. Output keeps the full evidence table so the answer can be hand-checked.
+
+Implements: positions/position-records-are-verbatim-and-brian-s
 """
 import argparse
 import asyncio
@@ -17,8 +19,8 @@ from pydantic import BaseModel, Field
 from rank_bm25 import BM25Okapi
 
 
-def records(graph_dirs):
-    out = []
+def records(graph_dirs, skip=frozenset()):
+    out, seen = [], set()   # one chat can have graphs in several folders (different runs/models): count each quoted message once
     for d in graph_dirs:
         for f in sorted(Path(d).glob("*.graph.json")):
             g = json.loads(f.read_text(encoding="utf-8"))
@@ -33,8 +35,13 @@ def records(graph_dirs):
                         m = msgs.get(a["message_id"])
                         if not m or m["actor_id"] != "participant:brian" or a["quote"] not in m["text"]:
                             continue
+                        if (a["message_id"], a["quote"]) in skip:   # pasted or quoted text, not Brian's words
+                            continue
+                        if (a["message_id"], a["quote"]) in seen:
+                            continue
+                        seen.add((a["message_id"], a["quote"]))
                         tgt = nodes.get(e.get("target_id") or e.get("question_id"), {}).get("text", "")
-                        out.append({"id": f"E{len(out):05d}", "chat": conv["id"], "title": conv["title"], "date": (m.get("timestamp") or "")[:10],
+                        out.append({"id": f"E{len(out):05d}", "chat": conv["id"], "title": conv["title"].strip().replace("\n", " ")[:120], "date": (m.get("timestamp") or "")[:10],
                                     "kind": e.get("stance") or ("question:" + e.get("status", "")), "target": tgt, "quote": a["quote"],
                                     "message_id": a["message_id"]})
     return out
@@ -89,9 +96,15 @@ def main():
     ap.add_argument("graph_dirs", nargs="+", type=Path)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--top", type=int, default=60)
-    ap.add_argument("--model", default="codex/gpt-5.6-luna")
+    ap.add_argument("--authorship", type=Path, help="authorship JSON from check_authorship.py (needs --records); pasted_or_quoted events are left out")
+    ap.add_argument("--records", type=Path)
+    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
     a = ap.parse_args()
-    recs = records(a.graph_dirs)
+    skip = frozenset()
+    if a.authorship and a.records:
+        lab = json.loads(a.authorship.read_text())
+        skip = frozenset((r["message_id"], r["quote"]) for r in json.loads(a.records.read_text())["records"] if lab.get(r["id"], {}).get("label") == "pasted_or_quoted")
+    recs = records(a.graph_dirs, skip)
     answer, pick, meta = asyncio.run(ask(a.question, recs, a.top, a.model))
     by = {r["id"]: r for r in pick}
     report = []

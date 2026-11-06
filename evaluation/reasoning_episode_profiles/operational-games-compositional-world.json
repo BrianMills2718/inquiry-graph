@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "id": "episode:operational-games-compositional-world",
+  "label": "Operational-games compositional-world reframing and execution episode",
+  "bindings": [
+    {
+      "role": "salient_condition",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:q-cgt-surviving-role"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit question about the surviving role of compositional game theory."
+    },
+    {
+      "role": "frame",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:compositional-causal-world-model"
+      ],
+      "recovery": "reconstructed",
+      "rationale": "Explicit claim that supplies the broader causal/mechanical frame; frame status is reconstructed."
+    },
+    {
+      "role": "candidate",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:heterogeneous-component-semantics"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit hypothesis about heterogeneous compositional semantics."
+    },
+    {
+      "role": "evaluation",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:cgt-strategic-role-refined"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit refinement limiting CGT to genuinely strategic structure."
+    },
+    {
+      "role": "commitment",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:compositional-executable-world-goal"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit goal for a compositional executable world."
+    },
+    {
+      "role": "action_or_test",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:local-execution"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit method to run the authentic truck/logistics execution."
+    },
+    {
+      "role": "update",
+      "refs": [
+        "dialogue-2026-09-30-operational-games:n:authentic-truck-result"
+      ],
+      "recovery": "direct",
+      "rationale": "Explicit execution result that updates the episode."
+    }
+  ],
+  "note": "Real captured graph. The frame role is the only role requiring a higher-order reconstruction."
+}

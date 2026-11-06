@@ -7,14 +7,14 @@ Stages (each cached as JSON under private/usefulness/, rerun skips done stages):
   judge      blind grading of each answer against the key (condition hidden)
   report     writes evaluation/usefulness_pilot/results.md
 """
-import json, random, re, sys
+import json, os, random, re, sys, time
 from pathlib import Path
 from typing import Literal
 from pydantic import BaseModel, Field
 from llm_client import call_llm_structured, get_model
 
 ROOT = Path(__file__).resolve().parents[2]
-PRIV = ROOT / "private/usefulness"
+PRIV = Path(os.environ.get("USEFULNESS_PRIVATE_DIR", ROOT / "private/usefulness"))  # a worktree points at the main checkout's copy
 OUT = Path(__file__).resolve().parent
 MODEL = get_model("synthesis")
 JUDGE = get_model("judging")
@@ -104,9 +104,11 @@ TRANSCRIPT:
 CONDITIONS = {"A": ("A_transcript.txt", "the full transcript of the conversation"),
               "B": ("B_excerpts.txt", "curated excerpts selected from the conversation"),
               "C": ("C_graph_report.md", "an inquiry-graph report built from the conversation (questions, claims, moves, stances, relations)")}
+# Follow-up 2026-10-11 (followup.py): same graph, report rendered with relations as text sentences.
+FOLLOWUP_CONDITIONS = {"C2": ("C2_graph_report.md", CONDITIONS["C"][1])}
 
-def answer(cond, items):
-    fname, desc = CONDITIONS[cond]
+def answer(cond, items, model=MODEL, opts=None):
+    fname, desc = {**CONDITIONS, **FOLLOWUP_CONDITIONS}[cond]
     qs = "\n".join(f"{i + 1}. {it['question']}" for i, it in enumerate(items))
     prompt = f"""You are given {desc} between BRIAN and an ASSISTANT. Answer each question using only this material.
 Be specific and concise (1-4 sentences). If the material does not contain the answer, say so and set cannot_answer.
@@ -116,20 +118,20 @@ QUESTIONS:
 
 MATERIAL:
 {load(fname)}"""
-    res, meta = call_llm_structured(MODEL, [{"role": "user", "content": prompt}], response_model=AnswerSet,
+    res, meta = call_llm_structured(model, [{"role": "user", "content": prompt}], response_model=AnswerSet,
                                     reasoning_effort="medium", task="synthesis",
-                                    trace_id=f"inquiry-graph/usefulness-pilot/answer-{cond}", **COMMON)
+                                    trace_id=f"inquiry-graph/usefulness-pilot/answer-{cond}", **(opts or COMMON))
     got = {a.question_number: a.model_dump() for a in res.answers}
     if sorted(got) != list(range(1, len(items) + 1)):
         raise ValueError(f"condition {cond}: answers for {sorted(got)}, expected 1..{len(items)}")
     print(f"answers {cond}: cost ${meta.cost:.3f}, tokens {meta.usage.get('total_tokens')}")
     return {"cost": meta.cost, "answers": [got[i + 1] for i in range(len(items))]}
 
-def judge(items, answers):
+def judge(items, answers, model=JUDGE, opts=None, conds_order=tuple(CONDITIONS), tag=""):
     rng = random.Random(38)
     out = []
     for qi, it in enumerate(items):
-        conds = list(CONDITIONS); rng.shuffle(conds)
+        conds = list(conds_order); rng.shuffle(conds)
         labels = dict(zip("XYZ", conds))
         block = "\n\n".join(f"ANSWER {lab}: {answers[c]['answers'][qi]['answer']}" for lab, c in labels.items())
         prompt = f"""Grade three answers against the answer key. Judge only factual agreement with the key.
@@ -140,13 +142,15 @@ KEY POINTS ({len(it['key_points'])}): {json.dumps(it['key_points'], ensure_ascii
 {block}
 
 Return one grade per answer, labels X, Y, Z."""
-        res, meta = call_llm_structured(JUDGE, [{"role": "user", "content": prompt}], response_model=GradeSet,
+        t0 = time.monotonic()
+        res, meta = call_llm_structured(model, [{"role": "user", "content": prompt}], response_model=GradeSet,
                                         reasoning_effort="medium", task="judging",
-                                        trace_id=f"inquiry-graph/usefulness-pilot/judge-q{qi + 1}", **COMMON)
+                                        trace_id=f"inquiry-graph/usefulness-pilot/judge{tag}-q{qi + 1}", **(opts or COMMON))
         grades = {g.label.strip().upper(): g.model_dump() for g in res.grades}
         if set(grades) != set("XYZ"):
             raise ValueError(f"q{qi + 1}: judge returned labels {sorted(grades)}")
         out.append({lab_c: {**grades[lab], "label": lab} for lab, lab_c in labels.items()})
+        print(f"judge{tag} q{qi + 1}: {time.monotonic() - t0:.0f}s", flush=True)
     return out
 
 def main():

@@ -103,6 +103,9 @@ def agent_threads(path):
     return ids
 
 
+PROVIDER = {"chatgpt": "ChatGPT", "claude": "Claude", "gemini": "Gemini"}   # hover tag, from the id prefix
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("conv_dir", type=Path)
@@ -191,7 +194,7 @@ def main():
     ax.axis("off")
     lx = fig.add_axes([0.02, 0.02, 0.36, 0.96], facecolor="black")
     lx.axis("off")
-    lx.text(0.0, 0.97, f"Your ChatGPT chats: {n} chats, {len(comms)} communities", color="white", fontsize=16, weight="bold", va="top")
+    lx.text(0.0, 0.97, f"Your AI chats: {n} chats, {len(comms)} communities", color="white", fontsize=16, weight="bold", va="top")
     lx.text(0.0, 0.935, "Each dot is a chat; lines join similar chats. Agent-opened chats excluded.", color="#bbbbbb", fontsize=11, va="top")
     lx.text(0.0, 0.88, "% of chats", color="white", fontsize=12, va="top")
     lx.text(0.14, 0.88, "What the community is about (top words)", color="white", fontsize=12, va="top")
@@ -207,7 +210,7 @@ def main():
         import datamapplot
         names = np.array([desc.get(comm_of[i], "Unlabelled") if comm_of[i] in desc else "Unlabelled" for i in range(n)], dtype=object)
         names = np.array([w.title().replace(", ", " / ") if w != "Unlabelled" else w for w in names], dtype=object)
-        hover = list(names) if a.public else [f"{c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
+        hover = list(names) if a.public else [f"[{PROVIDER.get(c['id'].split(':')[0], c['id'].split(':')[0])}] {c['title'][:90]} ({c['first']}, {c['n']} messages)" for c in chats]
         dates = np.array([c["first"] for c in chats], dtype="datetime64[D]")
         import umap as umap_mod2
         layer_arrays = []
@@ -243,7 +246,7 @@ def main():
         page_xy = xy if a.layout == "fa2" else cached(cache_dir, "umap2", key, lambda: umap_mod2.UMAP(
             n_components=2, metric="cosine", random_state=7, n_neighbors=15, min_dist=0.05, low_memory=True).fit_transform(emb))
         plot = datamapplot.create_interactive_plot(
-            page_xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's ChatGPT interests" if a.public else "Your ChatGPT chats",
+            page_xy, *(layer_arrays or [names]), hover_text=hover, title="Brian's AI chat interests" if a.public else "Your AI chats (ChatGPT, Claude, Gemini)",
             sub_title=(f"{n} chats about work and ideas. Personal chats are left out." if a.public else
                        f"{n} chats. Agent-opened chats excluded. Hover a dot for the chat; search the box; drag the time bars."),
             darkmode=True, cvd_safer=True, text_collision_size_scale=2, text_min_pixel_size=12, text_max_pixel_size=30,

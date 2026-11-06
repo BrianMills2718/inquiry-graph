@@ -32,10 +32,10 @@ def main(graph_path, out_path):
         if len(ends) >= 2:
             els.append({"data": {"id": r["id"], "source": ends[0], "target": ends[1], "label": r["kind"],
                                  "quote": (r["anchors"][0]["quote"] if r["anchors"] else "")}})
-    (HERE / "data.json").write_text(json.dumps({"title": g["conversations"][0]["title"], "elements": els, "kinds": KIND}), encoding="utf-8")
-    subprocess.run(["npx", "esbuild", "app.js", "--bundle", "--minify", "--format=iife", "--outfile=bundle.js", "--loader:.json=json"], cwd=HERE, check=True)
+    data = json.dumps({"title": g["conversations"][0]["title"], "elements": els, "kinds": KIND}).replace("</", "<\\/")
+    subprocess.run(["npx", "esbuild", "app.js", "--bundle", "--minify", "--format=iife", "--outfile=bundle.js"], cwd=HERE, check=True)
     page = (HERE / "index.src.html").read_text(encoding="utf-8").replace(
-        '<script src="bundle.js"></script>', "<script>" + (HERE / "bundle.js").read_text(encoding="utf-8").replace("</script>", "<\\/script>") + "</script>")
+        '<script src="bundle.js"></script>', "<script>window.__DATA__=" + data + "</script><script>" + (HERE / "bundle.js").read_text(encoding="utf-8").replace("</script>", "<\\/script>") + "</script>")
     Path(out_path).write_text(page, encoding="utf-8")
     print(f"wrote {out_path} ({len(page) // 1024} KB, {len(g['nodes'])} ideas, {len(g['relations'])} relations)")
 

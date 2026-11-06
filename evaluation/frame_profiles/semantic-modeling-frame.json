@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frame:semantic-modeling-adaptive-inquiry",
+  "label": "Adaptive inquiry / proactive frame exploration",
+  "content": {
+    "refs": [
+      "semantics-2026-10-05:n:c-frame-generative"
+    ],
+    "recovery": "direct"
+  },
+  "applies_to": {
+    "refs": [
+      "semantics-2026-10-05:n:g-meta-inquiry"
+    ],
+    "recovery": "reconstructed"
+  },
+  "active_query": {
+    "refs": [
+      "semantics-2026-10-05:n:q-integrated-inquiry"
+    ],
+    "recovery": "direct"
+  },
+  "perspective_actor_id": "participant:brian",
+  "criterion": {
+    "refs": [
+      "semantics-2026-10-05:n:c-reuse-prior"
+    ],
+    "recovery": "direct"
+  },
+  "model_hypothesis": {
+    "refs": [
+      "semantics-2026-10-05:n:c-proactive-exploration"
+    ],
+    "recovery": "reconstructed"
+  },
+  "note": "Current conversation frame profile. Candidate/question consequences remain derived rather than duplicated."
+}

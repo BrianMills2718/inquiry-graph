@@ -1,6 +1,14 @@
+---
+description: Decision that content never implies belief and an answer never resolves a question for its asker
+---
+
 # ADR-002: Content is not belief; answer is not resolution
 
 **Status:** accepted for V1.
+
+Source: inferred by agent (design record written during the V1 build; not traced to Brian's words)
+
+Governs: RULE-STANCE-SEPARATE, RULE-VERBATIM-POSITIONS
 
 **Context.** The conversation contains proposals, corrections, objections and uncertain agreement. A global status field such as “accepted claim” would silently assign beliefs to the wrong participant.
 

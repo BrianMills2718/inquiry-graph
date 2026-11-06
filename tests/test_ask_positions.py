@@ -1,3 +1,4 @@
+import pytest
 import importlib.util
 import json
 from pathlib import Path
@@ -19,13 +20,22 @@ def _graph(tmp_path, ev_actor, quote):
     return [tmp_path]
 
 
+@pytest.mark.req("positions/a-verbatim-brian-event-is-kept", existing=True)
+
+
 def test_keeps_verbatim_brian_event(tmp_path):
     recs = ap.records(_graph(tmp_path, "participant:brian", "reuse beats building"))
     assert len(recs) == 1 and recs[0]["date"] == "2026-01-02" and recs[0]["target"] == "Reuse beats building"
 
 
+@pytest.mark.req("positions/a-non-verbatim-quote-is-dropped", existing=True)
+
+
 def test_drops_non_verbatim_quote(tmp_path):
     assert ap.records(_graph(tmp_path, "participant:brian", "reuse always beats building")) == []
+
+
+@pytest.mark.req("positions/another-actor-s-event-is-dropped", existing=True)
 
 
 def test_drops_event_whose_actor_is_not_brian(tmp_path):

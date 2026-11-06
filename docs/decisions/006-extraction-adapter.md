@@ -1,6 +1,14 @@
+---
+description: Decision to use schema-constrained extraction behind a deterministic offline validation and quarantine boundary
+---
+
 # ADR-006: Structured output with a deterministic offline boundary
 
 **Status:** accepted for V1.
+
+Source: inferred by agent (design record written during the V1 build; not traced to Brian's words)
+
+Governs: RULE-LIVE-GROUNDING, RULE-QUARANTINE, RULE-SOURCE-NOT-OVERWRITTEN, RULE-EXCLUSIVE-WRITE
 
 **Context.** The extraction is primarily a schema-constrained LLM task. LangExtract supplies valuable grounded extraction machinery, but global relation-role consistency, actor stance, revisions and question-state projection still need a project-specific contract.
 

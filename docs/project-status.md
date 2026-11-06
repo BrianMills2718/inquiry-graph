@@ -16,7 +16,7 @@ This repository should now answer: **does a source-grounded inquiry graph provid
 
 The reader is always an AI, never Brian. The graphs exist so an AI can understand everything Brian is interested in and his positions, and can identify gaps, open questions and conflicts across **all** his conversations. Do not design for human reading: no dashboards, UI polish or human-reader tests.
 
-The 2026-09-29 pilot showed that one conversation fits in a model's context, and there the raw transcript beats the graph. The graph's case is therefore across many conversations: Brian's attributed positions (kept separate from assistant proposals), open questions and conflicts, where no model can read everything.
+The 2026-09-29 pilot (one conversation, about 10 independent questions written from its transcript, the same model answering and judging) found that on a conversation that fits in a model's context, the raw transcript beat the graph report: 0.81 against 0.65 key-point coverage. A 2026-10-11 follow-up rendered the report's reasons and replacements as text. It did not close the gap (0.62 against 0.63 for the old report, under the same judge). The misses traced mainly to reasons the graph never extracted, so the next lever is extraction, not rendering (evaluation/usefulness_pilot/results.md). Neither run tests many conversations. The graph's case is therefore across many conversations: Brian's attributed positions (kept separate from assistant proposals), open questions and conflicts, where no model can read everything.
 
 **Division of labour with onto-canon6.** onto-canon6 owns cross-source identity, alignment, governed assertions and tension (conflict) detection. Its proposed general-kernel PRD already requires preserving stance and speaker, lists `StanceEvent`, and uses both inquiry-graph trajectories (including open PRs #8 and #15) as round-trip acceptance cases. inquiry-graph should be the per-conversation producer (conversation to attributed stances, questions, moves and rationale) feeding that kernel, not a second cross-conversation store.
 
@@ -112,3 +112,7 @@ See `docs/verification.md`. The run also repaired two invalid provisional move l
 ## One-line status
 
 **The 30-chat result does not justify the graph as a better answer-retrieval route; archive-search-then-read is the current default for that workload. Continue Inquiry Graph only where it provides a distinct capability—such as structured topic/inquiry mapping, source-grounded provenance, or another task that earns the representation's added complexity.**
+
+## Known data gaps (schema census, 2026-10-05)
+
+`tools/schema_census.py` over all 2,176 graphs: every node kind, relation kind, stance and question status appears. **Moves: 0.** `live_extract.py` skips moves on purpose (written for the position-memory goal: "positions and open questions do not need them"), so only the hand-built 30-chat fixture has moves (204). Anything that needs moves (reasoning motifs, how Brian argues) needs a new extraction pass. Every node is `proposed` and `inferred`: nothing in the archive has been human-confirmed. Run the census after each pipeline run and before starting a new use of the data; list deliberate drops under "Not captured" in the goal doc.

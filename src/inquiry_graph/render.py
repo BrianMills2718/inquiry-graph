@@ -46,7 +46,49 @@ def dot(graph, view="all"):
     return "\n".join(lines + ["}", ""])
 
 
+# Relation kinds whose sentence carries a reason or a decision, as (head role, connective, tail role).
+DECISION_SENTENCES = {
+    "motivates": ("result", "because", "reason"),
+    "supersedes": ("old", "was replaced by", "new"),
+    "reframes": ("original", "was reframed as", "replacement"),
+    "challenges": ("target", "was challenged by", "challenger"),
+}
+DECISION_HEADINGS = {"motivates": "Reasons", "supersedes": "Replaced", "reframes": "Reframed", "challenges": "Challenged"}
+LINK_SENTENCES = {
+    "depends_on": ("dependent", "depends on", "prerequisite"),
+    "supports": ("conclusion", "is supported by", "premise"),
+    "answers": ("question", "is answered by", "answer"),
+    "distinguishes": ("left", "is distinguished from", "right"),
+    "exemplifies": ("general", "is exemplified by", "example"),
+    "candidate_for": ("problem", "has candidate", "candidate"),
+    "part_of": ("part", "is part of", "whole"),
+    "about": ("subject", "is about", "object"),
+    "related_to": ("source", "is related to", "target"),
+}
+
+
+def _clip(text, limit=160):
+    text = " ".join(text.split())
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
+def _relation_sentences(graph, table, label_of, limit=160):
+    lines = []
+    for r in graph.relations:
+        if r.review_status == "rejected" or r.kind not in table:
+            continue
+        head, connective, tail = table[r.kind]
+        roles = {b.role: b.ref for b in r.bindings}
+        if head not in roles or tail not in roles:
+            continue
+        lines.append(f"- {label_of(roles[head], limit)} — *{connective}:* {label_of(roles[tail], limit)}")
+    return lines
+
+
 def report(graph):
+    """Readable linearization: node text is resolved so links read as sentences, not bare IDs."""
+    texts = {n.id: n.text for n in graph.nodes}
+    label_of = lambda ref, limit=160: html.escape(_clip(texts[ref], limit)) if ref in texts else f"`{ref}`"
     lines = ["# Inquiry graph — first-pass report", "", json.dumps(stats(graph), ensure_ascii=False), "",
              "Structural validity does not establish semantic correctness or truth. Annotations retain their review status.", "",
              "## Source coverage"]
@@ -56,12 +98,22 @@ def report(graph):
     for row in open_questions(graph):
         lines += [f"\n### {html.escape(row['text'])}", f"`{row['id']}` · {row['status']} · {row['review_status']}",
                   f"Actor: `{row['actor_id']}` · context: `{row['conversation_id']}`"]
+    lines += ["\n## Decisions and reasons", "",
+              "Reasons, replacements, reframings and challenges, in recorded order. Each line reads: subject — *link:* other side."]
+    for kind in DECISION_SENTENCES:
+        group = _relation_sentences(graph, {kind: DECISION_SENTENCES[kind]}, label_of)
+        if group:
+            lines += [f"\n### {DECISION_HEADINGS[kind]}", ""] + group
+    lines += ["\n## Other links", ""]
+    lines += _relation_sentences(graph, LINK_SENTENCES, label_of, limit=100)
     lines += ["\n## Recorded moves"]
     for m in graph.moves:
         if m.review_status == "rejected":
             continue
+        ins = "; ".join(label_of(i, 80) for i in m.input_ids) or "(none)"
+        outs = "; ".join(label_of(o, 80) for o in m.output_ids) or "(none)"
         lines += [f"\n**{m.kind}** · `{m.id}` · actor `{m.actor_id}` · {m.review_status}",
-                  f"Inputs: {', '.join(m.input_ids) or '(none)'}", f"Outputs: {', '.join(m.output_ids) or '(none)'}",
+                  f"Inputs: {ins}", f"Outputs: {outs}",
                   "", "> " + html.escape(m.anchors[0].quote).replace("\n", "\n> ")]
     return "\n".join(lines) + "\n"
 
