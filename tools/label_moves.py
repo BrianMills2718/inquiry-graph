@@ -121,7 +121,7 @@ def _msg(r):
     return f"{ctx}Brian's message: {r['text']!r}\n"
 
 
-def second_pass(labels_file, out_file, kinds, model="openrouter/openai/gpt-5.6-luna", batch=10, cap=0.3, min_p=0.5):
+def second_pass(labels_file, out_file, kinds, model="openrouter/openai/gpt-6-luna", batch=10, cap=0.3, min_p=0.5):
     """Second pass for 'candidate filter only' labels: an LLM judge reads each high-probability hit with the label's definition
     and answers whether the message itself performs that move (quote must be verbatim). Cost is capped by sum of returned costs."""
     import asyncio

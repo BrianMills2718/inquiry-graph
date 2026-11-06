@@ -96,7 +96,7 @@ def main():
     ap.add_argument("records", type=Path)
     ap.add_argument("topics", type=Path)
     ap.add_argument("out", type=Path)
-    ap.add_argument("--model", default="codex/gpt-5.6-luna", help="Codex subscription by default (no OpenRouter spend, per Brian 2026-10-11)")
+    ap.add_argument("--model", default="codex/gpt-6-luna", help="Codex subscription by default (no OpenRouter spend, per Brian 2026-10-11)")
     ap.add_argument("--concurrency", type=int, default=6)
     ap.add_argument("--reuse", nargs=2, type=Path, metavar=("PREV_TOPICS", "PREV_NAMES"), help="carry names over from a previous build")
     asyncio.run(main_async(ap.parse_args()))

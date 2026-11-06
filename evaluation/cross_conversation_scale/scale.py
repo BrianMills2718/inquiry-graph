@@ -201,7 +201,7 @@ def configure_campaign(args):
     global KEY_TRACE_PREFIX, TRACE_PREFIX
 
     if args.codex_subscription:
-        MODEL = args.model or "codex/gpt-5.6-luna"
+        MODEL = args.model or "codex/gpt-6-luna"
         JUDGE = args.judge_model or "codex/gpt-5.6-sol"
         MODEL_JUSTIFICATION = args.model_justification or (
             "Use Brian's active Codex subscription for this private evaluation because the OpenRouter account "

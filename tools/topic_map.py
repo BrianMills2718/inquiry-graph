@@ -30,7 +30,7 @@ DEFAULT_LINKER = ROOT / "private/xconv/scale_run/linker"
 DEFAULT_CORPUS = ROOT / "private/xconv/scale_run_codex_rerun_20260930/corpus.json"
 DEFAULT_OUTPUT = ROOT / "private/xconv/scale_run/map/index.html"
 TEMPLATE = ROOT / "tools/topic_map_template.html"
-MODEL = "codex/gpt-5.6-luna"
+MODEL = "codex/gpt-6-luna"
 EXPECTED_CHAT_COUNT = 30
 
 

@@ -60,8 +60,8 @@ Inquiry Graph.
 
 ## Historical branch stack
 
-PRs #8 and #15 remain separate historical trajectories. Do not merge them
-casually.
+PRs #8 and #15 are separate historical trajectories, closed unmerged on 2026-11-06
+with their branches kept. Do not merge them casually.
 
 ## Stop rule
 

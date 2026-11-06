@@ -33,7 +33,7 @@ It is **not** the canonical truth store and should not duplicate the formal
 epistemic theory in `epistemic-warrant`.
 
 Cross-source identity/alignment/governed assertions belong downstream in the
-OntoCanon direction. Keep PRs #8/#15 separate unless that historical trajectory
+OntoCanon direction. Keep PRs #8/#15 (closed, branches kept) separate unless that historical trajectory
 is explicitly resumed.
 
 ## Current product result
