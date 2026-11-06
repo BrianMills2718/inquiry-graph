@@ -84,6 +84,7 @@ Kept as written; the specs and diagram above replace them where they overlap.
 - [User interfaces](../ui/README.md) and the [topic map disposition](ui/topic-map/README.md)
 - [Seed example, full map](../examples/seed/full-map.md)
 - [Semantic grounding conversation](../examples/semantic-grounding-2026-10-01/README.md)
+- [Fermi paradox and the hidden-controller hypothesis, 2026-10-03](../examples/fermi-hidden-controller-2026-10-03/README.md): curated source layer, speculative discussion
 - [Semantic modeling query, 2026-10-06](../examples/conversations/2026-10-05-semantic-modeling/query-2026-10-06.md)
 - [Semantic factorization conversation, 2026-10-18](../examples/conversations/semantic-factorization-2026-10-18/README.md): [research protocol](../examples/conversations/semantic-factorization-2026-10-18/research-protocol.md), [prior art](../examples/conversations/semantic-factorization-2026-10-18/prior-art.md), [systematic mapping](../examples/conversations/semantic-factorization-2026-10-18/systematic-mapping.md), [comparison matrix](../examples/conversations/semantic-factorization-2026-10-18/comparison-matrix.md), [scenario evaluation](../examples/conversations/semantic-factorization-2026-10-18/scenario-evaluation.md), [comparative evidence, round 2](../examples/conversations/semantic-factorization-2026-10-18/comparative-evidence-round2.md)
 - [From Gurdjieff's cosmology to a lore interlingua, 2026-10-25 to 27](../examples/conversations/2026-10-25-lore-visual-interlingua/README.md)
