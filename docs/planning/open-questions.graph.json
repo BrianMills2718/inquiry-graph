@@ -287,9 +287,9 @@
   },
   {
    "id": "Q13",
-   "label": "Q13: Seven open research PRs",
+   "label": "Q13: Open research PR #211",
    "kind": "BrianQuestion",
-   "explain": "Are open pull requests #211, #216, #217 and #218 (2026-10-16 to 10-18) still wanted, given #219 to #226 merged the terminal-state and semantic-factorization work after them (#216 and #217 now conflict with main)? Three older ones are also open: #120 (Fermi hidden-controller source layer), #66 (Level-1 inquiry continuation) and #63 (usefulness pilot alignment). #8 and #15 are settled by R5. Recommendation: Merge #218 with #225 only if the benchmark is approved (Q11); close #216 and #217 as superseded if their files are already on main, otherwise rebase them; compare #120, #66 and #63 with main the same way and close the ones main already covers; leave #211 for Brian. Default: All seven stay open; nothing is lost."
+   "explain": "Is pull request #211 (a provisional 2026-10-16 asymmetric benchmark-design inquiry summary, still a draft) still wanted on main? The other research PRs were settled in the 2026-11-06 PR sweep: #216 and #120 merged (#216 after a by-id graph.json conflict resolution), #63 merged (matches the AI-reader stance), #217 closed as superseded by #221, #66 closed as superseded by its own note, #218 left with Q11. Recommendation: Merge #211 as a provisional record linked from docs/index.md if the benchmark-design thread is still of interest; otherwise close it with the branch kept. Default: #211 stays open as a draft; nothing is lost."
   },
   {
    "id": "Q13-blocks",

@@ -84,4 +84,4 @@ only checked for shape by `validate()` (`src/inquiry_graph/validate.py:67`-`:82`
 a formula, condition or effect that is evaluated. The open-question agenda folds question events
 into a per-actor status (`src/inquiry_graph/views.py:23`), which is a view over recorded events, not
 a rule. So no metamodel mapping onto the shared kernel is required; a crosswalk to the hypergraph
-kernel and onto-canon6 exists as unmerged PR #15, kept apart on purpose (`docs/roadmap.md:63`).
+kernel and onto-canon6 exists as PR #15, closed unmerged with its branch kept on purpose (`docs/roadmap.md:63`).
