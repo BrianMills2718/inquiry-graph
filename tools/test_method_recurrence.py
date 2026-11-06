@@ -140,7 +140,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("stage", choices=["corpus", "embed", "retrieve", "judge"])
     ap.add_argument("--out", type=Path, default=ROOT / "private/motifs_recur")
-    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
+    ap.add_argument("--model", default="openrouter/openai/gpt-6-luna")
     a = ap.parse_args(); a.out.mkdir(parents=True, exist_ok=True)
     {"corpus": lambda: corpus(a.out), "embed": lambda: embed(a.out), "retrieve": lambda: retrieve(a.out),
      "judge": lambda: judge(a.out, a.model)}[a.stage]()

@@ -166,7 +166,7 @@ async def name_one(cl, byid, model, budget, rels_per=14):
     return out, pick
 
 
-def name(out, model="openrouter/openai/gpt-5.6-luna", budget=0.80, limit=40):
+def name(out, model="openrouter/openai/gpt-6-luna", budget=0.80, limit=40):
     out = Path(out)
     rels = json.loads((out / "relations_topics.json").read_text())
     byid = {r["id"]: r for r in rels}

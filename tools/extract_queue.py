@@ -61,7 +61,7 @@ def main():
     ap.add_argument("queue", type=Path)
     ap.add_argument("workdir", type=Path)
     ap.add_argument("--workers", type=int, default=2)
-    ap.add_argument("--model", default="codex/gpt-5.6-luna")
+    ap.add_argument("--model", default="codex/gpt-6-luna")
     ap.add_argument("--budget", type=float, default=None, help="stop starting new chats once this many USD of new calls were spent in this run")
     ap.add_argument("--contract", type=Path, default=None, help="capture contract (tools/capture_contract.py); required when --budget is unset or >= 2 USD")
     a = ap.parse_args()
