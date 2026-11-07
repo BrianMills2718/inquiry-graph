@@ -57,6 +57,7 @@ PR #221 subsequently added exact terminal-response excerpt slices to the canonic
 A local source-only parse of the user-provided Markdown found **17 visible user prompts and 17 visible assistant responses** (34 alternating sections), ending at the displayed 2026-10-18 17:12:27 assistant response. The exact terminal comparison, source-based-validation, and repository-integrity quotations are present in that reply. These are transcript parsing facts, **not live extraction or independent reader results**.
 
 The optional `live_trial.py` creates a private normalized representation of all 34 visible messages, prepares A/B/E/C at the correct cutoff, and—when explicitly launched with a locally authorized model—produces:
+
 - **D**, a newly extracted graph using the corrected `live_extract` policy on the actual exported transcript;
 - a structural diagnostic of whether D has a source-grounded open terminal comparison task;
 - optional separate model-reader answers to A/B/E/C/D, without giving the reader the gold rubric, with model/cost metadata.
@@ -83,3 +84,10 @@ The optional `--judge` performs five-condition-blinded, six-point **model-assist
 The earlier C-versus-B contrast could not isolate the reason for a gain: C contained both the missing verbatim source text and an explicit open task. This is now split into E (source quote only) and C (the exact same quote **plus** task/status/move encoding). E and C retain a matched primary-source quote, rather than accidentally rewarding C for access to extra wording. Comparisons of E versus C test the incremental value of the graph's structured operational state; comparisons of B versus E test the value of restoring lost source evidence. Conditions are still unequal in total size, and answers require independent randomized/blind grading. This is an **experimental design improvement**, not a measured performance result.
 
 The original graph's report can already imply aspects of the task through its summary text; therefore absence of an explicit open task is not the same as inability to infer it. Grade the full answer, not keyword matches.
+
+## Evaluation protocol (merged 2026-11-06, not run)
+
+[semantic_factorization_20261018.md](semantic_factorization_20261018.md) is the protocol for the
+five-condition reader benchmark (issue #225). Brian chose on 2026-11-06 to merge it without running
+it with live models (open question Q11 in `docs/planning/open-questions.json`); #225 stays open for
+when a run is needed.
