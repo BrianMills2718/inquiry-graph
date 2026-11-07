@@ -208,20 +208,22 @@
    "resolves_with": "Prior art and argument first: the roadmap forbids another benchmark without explicit approval, and the harness's own README says a schema change is considered only if existing elements cannot encode the terminal state, which the deterministic part already showed they can. A run would change one decision, whether to keep investing in resumption from graphs versus reading the raw tail; it is a single conversation, so it cannot generalize.",
    "owner": "brian",
    "recommendation": "Do not run it now; the deterministic result already settles the schema question, and a one-conversation reader score would not change the roadmap.",
-   "default": "Issue #225 stays open and unrun; PR #218's protocol stays unmerged until someone needs it.",
-   "status": "open",
+   "default": "Issue #225 stays open and unrun; PR #218's protocol stays unmerged until someone needs it. (Superseded: Brian chose to merge the protocol, see evidence.)",
+   "status": "resolved",
    "sources": [
     "docs/roadmap.md:29",
     "openspec/specs/extraction/spec.md:21",
     "openspec/specs/extraction/spec.md:30",
-    "https://github.com/BrianMills2718/inquiry-graph/issues/225"
+    "https://github.com/BrianMills2718/inquiry-graph/issues/225",
+    "https://github.com/BrianMills2718/inquiry-graph/pull/218"
    ],
    "touches": [
     "question-event",
     "task",
     "open-question-agenda",
     "extraction"
-   ]
+   ],
+   "evidence": "Brian, 2026-11-06, \"i approve\", answering \"Test case #218: merge-218 (merge with no paid runs) or run-218\": merge-218. PR #218's evaluation protocol (evaluation/terminal_state/semantic_factorization_20261018.md) was merged to main on 2026-11-06; the five-condition benchmark was not run with live models. Issue #225 stays open for when a run is needed."
   },
   {
    "id": "Q12",
@@ -243,7 +245,7 @@
   {
    "id": "Q13",
    "short": "Open research PR #211",
-   "question": "Is pull request #211 (a provisional 2026-10-16 asymmetric benchmark-design inquiry summary, still a draft) still wanted on main? The other research PRs were settled in the 2026-11-06 PR sweep: #216 and #120 merged (#216 after a by-id graph.json conflict resolution), #63 merged (matches the AI-reader stance), #217 closed as superseded by #221, #66 closed as superseded by its own note, #218 left with Q11.",
+   "question": "Is pull request #211 (a provisional 2026-10-16 asymmetric benchmark-design inquiry summary, still a draft) still wanted on main? The other research PRs were settled in the 2026-11-06 PR sweep: #216 and #120 merged (#216 after a by-id graph.json conflict resolution), #63 merged (matches the AI-reader stance), #217 closed as superseded by #221, #66 closed as superseded by its own note, #218 left with Q11 (since merged under Q11, 2026-11-06).",
    "blocks": "whether the evaluation records in those branches land or are closed as superseded",
    "resolves_with": "Reading settles most of it: compare each branch's files with main. Whether to keep the research captures (#211 benchmark-design inquiry, #216 Hets smoke test) is Brian's interest, so the recommendation goes to him.",
    "owner": "brian",

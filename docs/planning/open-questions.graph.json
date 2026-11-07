@@ -241,39 +241,6 @@
    "explain": "Every semantic record carries anchors, an origin (explicit or inferred) and review status proposed, confirmed or rejected; extraction output is always proposed. Source: src/inquiry_graph/model.py:43."
   },
   {
-   "id": "Q11",
-   "label": "Q11: Run the five-condition reader benchmark (#225)?",
-   "kind": "BrianQuestion",
-   "explain": "Should the five-condition terminal-state reader benchmark (issue #225: does the corrected extractor improve an independent reader's resumption accuracy on the 2026-10-18 conversation) be run with live models? Recommendation: Do not run it now; the deterministic result already settles the schema question, and a one-conversation reader score would not change the roadmap. Default: Issue #225 stays open and unrun; PR #218's protocol stays unmerged until someone needs it."
-  },
-  {
-   "id": "Q11-blocks",
-   "label": "whether the 2026-10-18 extractor task and status corrections are judged by reader \u2026",
-   "kind": "Decision",
-   "explain": "whether the 2026-10-18 extractor task and status corrections are judged by reader accuracy, and whether any schema change is considered for resumption"
-  },
-  {
-   "id": "question-event",
-   "label": "Question event",
-   "kind": "Concept",
-   "dashed": false,
-   "explain": "A status change of a question or task (open, answered, resolved, deferred, superseded, reopened, dropped) by one actor, at a message. Source: src/inquiry_graph/model.py:99."
-  },
-  {
-   "id": "task",
-   "label": "Task",
-   "kind": "Concept",
-   "dashed": false,
-   "explain": "A unit of work an agent lists as open in a coding session; carries the same status events as a question, plus dropped. Source: docs/ontology.md:18."
-  },
-  {
-   "id": "open-question-agenda",
-   "label": "Open-question agenda",
-   "kind": "Concept",
-   "dashed": false,
-   "explain": "The view of which questions are still open for which actor, folded from question events; an assistant's answer does not close a user's question. Source: src/inquiry_graph/views.py:23."
-  },
-  {
    "id": "Q12",
    "label": "Q12: Export watcher depends on a flaky browser",
    "kind": "AgentQuestion",
@@ -289,13 +256,20 @@
    "id": "Q13",
    "label": "Q13: Open research PR #211",
    "kind": "BrianQuestion",
-   "explain": "Is pull request #211 (a provisional 2026-10-16 asymmetric benchmark-design inquiry summary, still a draft) still wanted on main? The other research PRs were settled in the 2026-11-06 PR sweep: #216 and #120 merged (#216 after a by-id graph.json conflict resolution), #63 merged (matches the AI-reader stance), #217 closed as superseded by #221, #66 closed as superseded by its own note, #218 left with Q11. Recommendation: Merge #211 as a provisional record linked from docs/index.md if the benchmark-design thread is still of interest; otherwise close it with the branch kept. Default: #211 stays open as a draft; nothing is lost."
+   "explain": "Is pull request #211 (a provisional 2026-10-16 asymmetric benchmark-design inquiry summary, still a draft) still wanted on main? The other research PRs were settled in the 2026-11-06 PR sweep: #216 and #120 merged (#216 after a by-id graph.json conflict resolution), #63 merged (matches the AI-reader stance), #217 closed as superseded by #221, #66 closed as superseded by its own note, #218 left with Q11 (since merged under Q11, 2026-11-06). Recommendation: Merge #211 as a provisional record linked from docs/index.md if the benchmark-design thread is still of interest; otherwise close it with the branch kept. Default: #211 stays open as a draft; nothing is lost."
   },
   {
    "id": "Q13-blocks",
    "label": "whether the evaluation records in those branches land or are closed as superseded",
    "kind": "Decision",
    "explain": "whether the evaluation records in those branches land or are closed as superseded"
+  },
+  {
+   "id": "task",
+   "label": "Task",
+   "kind": "Concept",
+   "dashed": false,
+   "explain": "A unit of work an agent lists as open in a coding session; carries the same status events as a question, plus dropped. Source: docs/ontology.md:18."
   },
   {
    "id": "Q14",
@@ -489,36 +463,6 @@
    "id": "Q10-conversation",
    "source": "Q10",
    "target": "conversation",
-   "label": "bears on"
-  },
-  {
-   "id": "Q11-to-decision",
-   "source": "Q11",
-   "target": "Q11-blocks",
-   "label": "blocks"
-  },
-  {
-   "id": "Q11-question-event",
-   "source": "Q11",
-   "target": "question-event",
-   "label": "bears on"
-  },
-  {
-   "id": "Q11-task",
-   "source": "Q11",
-   "target": "task",
-   "label": "bears on"
-  },
-  {
-   "id": "Q11-open-question-agenda",
-   "source": "Q11",
-   "target": "open-question-agenda",
-   "label": "bears on"
-  },
-  {
-   "id": "Q11-extraction",
-   "source": "Q11",
-   "target": "extraction",
    "label": "bears on"
   },
   {

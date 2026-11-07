@@ -41,7 +41,8 @@ and the code it runs is behind main:
    `.venv` (`tools/systemd/inquiry-graph-nightly.service:6`-`:7`). Fixes merged to main do not reach
    the jobs until that checkout moves (Q14).
 
-The other open questions are either Brian's priority calls (Q9, Q10, Q11, Q13) or small
+The other open questions are either Brian's priority calls (Q9, Q10, Q13; Q11 was resolved on
+2026-11-06: protocol merged, benchmark not run) or small
 documentation repairs (Q1 to Q4, Q8) that any session can do; none blocks this plan.
 
 ## Steps
@@ -95,4 +96,5 @@ not what they are.
 ## Not in scope
 
 No schema change, no new evaluation, and no change to what the map shows. The five-condition reader
-benchmark (#225) is Brian's call (Q11); the moves backfill is Brian's call (Q9).
+benchmark (#225) was not run: Brian merged its protocol (PR #218) without live runs on
+2026-11-06 (Q11); the moves backfill is Brian's call (Q9).
