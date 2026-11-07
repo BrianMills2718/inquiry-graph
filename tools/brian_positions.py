@@ -6,7 +6,7 @@ Usage: ~/.venvs/inquiry-maps/bin/python brian_positions.py "<topic or question>"
 prompts from headless launches (claude -p, codex exec, subagents) are labelled automated at import and never count as his words.
 Retrieval is hybrid: BM25 keyword rank fused (reciprocal rank) with MiniLM embedding similarity, so synonyms and paraphrases match. Embeddings cached in private/positions_emb.npy.
 Private data: reads ~/code/inquiry-graph/private (gitignored). Quote-bearing output stays in the session; do not publish it."""
-import argparse, datetime as dt, json, os, re, sys
+import argparse, datetime as dt, hashlib, json, os, re, sys
 import numpy as np
 from pathlib import Path
 from rank_bm25 import BM25Okapi
@@ -71,16 +71,27 @@ def session_records(dirs, history=()):
                             "kind": "session prompt", "chat": c["id"], "message_id": m["id"]})
     return out + history_records(history, seen)
 def doc(r): return (r["target"] or r["quote"])[:300]
+def _sess_key(r): return r["message_id"] + "#" + hashlib.sha1(doc(r).encode()).hexdigest()[:12]
+def session_embeddings(m, sessions, rebuild):
+    """Session-prompt embeddings, encoding only prompts not already cached. The prompt histories grow with every prompt
+    Brian types, so a cache that must match the whole id list missed on nearly every call and re-encoded ~40k prompts
+    (5-10 minutes on CPU; inquiry-graph #249). Rows are keyed by message id plus a hash of the encoded text."""
+    keys = [_sess_key(r) for r in sessions]; old = {}
+    if SESS_EMB.exists() and SESS_IDS.exists() and not rebuild:
+        old_keys, old_emb = json.loads(SESS_IDS.read_text()), np.load(SESS_EMB)
+        if len(old_keys) == len(old_emb): old = {k: i for i, k in enumerate(old_keys)}
+    new = [i for i, k in enumerate(keys) if k not in old]
+    if new: print(f"note: encoding {len(new)} new session prompts ({len(keys) - len(new)} cached)", file=sys.stderr)
+    dim = (getattr(m, "get_embedding_dimension", None) or m.get_sentence_embedding_dimension)(); out = np.zeros((len(keys), dim), dtype="float16")
+    if old: hit = [i for i, k in enumerate(keys) if k in old]; out[hit] = old_emb[[old[keys[i]] for i in hit]]
+    if new: out[new] = m.encode([doc(sessions[i]) for i in new], batch_size=128, normalize_embeddings=True, show_progress_bar=False).astype("float16")
+    if new or len(old) != len(keys): np.save(SESS_EMB, out); SESS_IDS.write_text(json.dumps(keys))
+    return out
 def embeddings(recs, rebuild, sessions=()):
     from sentence_transformers import SentenceTransformer
     m = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
     if sessions:   # own cache, keyed by message ids, so adding sessions never re-encodes the chat records
-        _, e = embeddings(recs, rebuild); ids = [r["message_id"] for r in sessions]
-        if SESS_EMB.exists() and SESS_IDS.exists() and not rebuild and json.loads(SESS_IDS.read_text()) == ids: s = np.load(SESS_EMB)
-        else:
-            s = m.encode([doc(r) for r in sessions], batch_size=128, normalize_embeddings=True, show_progress_bar=False).astype("float16")
-            np.save(SESS_EMB, s); SESS_IDS.write_text(json.dumps(ids))
-        return m, np.concatenate([e, s])
+        _, e = embeddings(recs, rebuild); return m, np.concatenate([e, session_embeddings(m, sessions, rebuild)])
     if EMB.exists() and not rebuild:
         e = np.load(EMB)
         if len(e) == len(recs): return m, e
