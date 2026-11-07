@@ -18,7 +18,7 @@ The reader is always an AI, never Brian. The graphs exist so an AI can understan
 
 The 2026-09-29 pilot (one conversation, about 10 independent questions written from its transcript, the same model answering and judging) found that on a conversation that fits in a model's context, the raw transcript beat the graph report: 0.81 against 0.65 key-point coverage. A 2026-10-11 follow-up rendered the report's reasons and replacements as text. It did not close the gap (0.62 against 0.63 for the old report, under the same judge). The misses traced mainly to reasons the graph never extracted, so the next lever is extraction, not rendering (evaluation/usefulness_pilot/results.md). Neither run tests many conversations. The graph's case is therefore across many conversations: Brian's attributed positions (kept separate from assistant proposals), open questions and conflicts, where no model can read everything.
 
-**Division of labour with onto-canon6.** onto-canon6 owns cross-source identity, alignment, governed assertions and tension (conflict) detection. Its proposed general-kernel PRD already requires preserving stance and speaker, lists `StanceEvent`, and uses both inquiry-graph trajectories (including open PRs #8 and #15) as round-trip acceptance cases. inquiry-graph should be the per-conversation producer (conversation to attributed stances, questions, moves and rationale) feeding that kernel, not a second cross-conversation store.
+**Division of labour with onto-canon6.** onto-canon6 owns cross-source identity, alignment, governed assertions and tension (conflict) detection. Its proposed general-kernel PRD already requires preserving stance and speaker, lists `StanceEvent`, and uses both inquiry-graph trajectories (including the closed, kept PRs #8 and #15) as round-trip acceptance cases. inquiry-graph should be the per-conversation producer (conversation to attributed stances, questions, moves and rationale) feeding that kernel, not a second cross-conversation store.
 
 Do not expand the ontology by default.
 
@@ -74,11 +74,10 @@ Track: issue #2.
 
 PR #67 restored ordinary hosted CI execution: Python 3.11 and 3.13 both reached runners and passed installation, fixture rebuild, tests, graph validation, artifact drift checks, and dependency checks after the workflow stopped installing the private optional `llm_client` adapter in the ordinary test job. Live-LLM integration remains a separate optional path and is not exercised by hosted CI. Issue #2 should therefore be closed once its stale body is reconciled with this evidence.
 
-## Separate open PR stack
+## Historical PR stack (closed, branches kept)
 
-PR #8 and stacked PR #15 are intentionally separate historical trajectories.
-
-Do not merge them automatically.
+PR #8 and stacked PR #15 are separate historical trajectories, closed unmerged on 2026-11-06. Their branches
+(`formal-inquiry-substrate`, `inquiry-hypergraph-crosswalk`) are kept; reopen a PR only if that trajectory is resumed.
 
 ## Theory split
 

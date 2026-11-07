@@ -141,7 +141,7 @@ def main():
     ap.add_argument("question")
     ap.add_argument("graphs", nargs="+", type=Path)
     ap.add_argument("--out", type=Path, required=True)
-    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
+    ap.add_argument("--model", default="openrouter/openai/gpt-6-luna")
     a = ap.parse_args()
     recs = records(a.graphs)
     answer, meta = asyncio.run(ask(a.question, recs, a.model))

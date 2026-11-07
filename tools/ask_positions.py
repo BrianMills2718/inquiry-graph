@@ -98,7 +98,7 @@ def main():
     ap.add_argument("--top", type=int, default=60)
     ap.add_argument("--authorship", type=Path, help="authorship JSON from check_authorship.py (needs --records); pasted_or_quoted events are left out")
     ap.add_argument("--records", type=Path)
-    ap.add_argument("--model", default="openrouter/openai/gpt-5.6-luna")
+    ap.add_argument("--model", default="openrouter/openai/gpt-6-luna")
     a = ap.parse_args()
     skip = frozenset()
     if a.authorship and a.records:

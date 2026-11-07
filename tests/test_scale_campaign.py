@@ -47,7 +47,7 @@ def test_codex_campaign_uses_isolated_directory_and_read_only_metadata_route(mon
 
     assert scale.RUN == private / "scale_run_codex"
     assert linker_dir == private / "scale_run" / "linker"
-    assert scale.MODEL == "codex/gpt-5.6-luna"
+    assert scale.MODEL == "codex/gpt-6-luna"
     assert scale.JUDGE == "codex/gpt-5.6-sol"
     assert scale.CALL_OPTIONS["codex_transport"] == "cli"
     assert scale.CALL_OPTIONS["sandbox_mode"] == "read-only"
@@ -63,7 +63,7 @@ def test_codex_campaign_refuses_manifest_settings_mismatch(monkeypatch, tmp_path
     scale.configure_campaign(_args())
 
     with pytest.raises(ValueError, match="campaign settings differ"):
-        scale.configure_campaign(_args(judge_model="codex/gpt-5.6-luna"))
+        scale.configure_campaign(_args(judge_model="codex/gpt-6-luna"))
 
 
 def test_codex_campaign_refuses_to_adopt_nonempty_directory_without_manifest(monkeypatch, tmp_path):
