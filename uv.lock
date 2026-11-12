@@ -9,8 +9,8 @@ resolution-markers = [
 
 [[package]]
 name = "agentic-engineering-system"
-version = "0.1.dev1250+g31b31c562"
-source = { git = "https://github.com/BrianMills2718/agentic-engineering-system-canonical.git?branch=main#31b31c56228859bbd16dbd303b5b5d2da1291af0" }
+version = "0.1.dev1254+ga70eb0233"
+source = { git = "https://github.com/BrianMills2718/agentic-engineering-system-canonical.git?branch=main#a70eb0233376fc06f99a2124a43f1e36a8dc2871" }
 dependencies = [
     { name = "cogapp" },
     { name = "import-linter" },
