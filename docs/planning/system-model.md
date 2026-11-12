@@ -11,7 +11,7 @@ documents; it joins them and adds what neither has, a record-type inventory with
   walk-through and quality checks (the `system_model.prose` of `.agentic/repo.yaml`).
 - [docs/architecture/arc42.md](../architecture/arc42.md) and
   [docs/architecture/model.c4](../architecture/model.c4): the arc42 front and the module diagram that
-  `code2check arch gen` turns into `.importlinter` (19 import contracts, all kept on 2026-10-27).
+  `lockstep check arch gen` turns into `.importlinter` (19 import contracts, all kept on 2026-10-27).
 
 The line numbers in ARCHITECTURE.md's runtime view have moved since it was written (open question
 Q4); the lines below are current at the package's subject revision.

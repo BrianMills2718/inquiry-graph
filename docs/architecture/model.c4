@@ -1,5 +1,5 @@
 // Structure of inquiry_graph. Each component maps to a Python module (metadata python).
-// An arrow means "may import". `code2check arch gen` turns missing arrows into
+// An arrow means "may import". `lockstep check arch gen` turns missing arrows into
 // import-linter contracts (.importlinter), so a commit that breaks this diagram fails.
 // Scripts under tools/ are not a package and are not drawn here.
 specification {

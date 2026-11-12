@@ -26,11 +26,11 @@ answers about Brian's positions. Detail: [architecture prose](../model/ARCHITECT
 ## 4. Solution strategy
 
 Behavior is planned as [OpenSpec specs](../index.md); each requirement names its owning module by an
-`Implements:` line and each scenario its test by `@pytest.mark.req`. `code2check trace` checks both.
+`Implements:` line and each scenario its test by `@pytest.mark.req`. `lockstep check trace` checks both.
 
 ## 5. Building block view
 
-The modules and which may import which: [model.c4](model.c4). `code2check arch gen` turns it into
+The modules and which may import which: [model.c4](model.c4). `lockstep check arch gen` turns it into
 `.importlinter`, which `lint-imports` enforces. Scripts under `tools/` are not a package and are not
 drawn.
 

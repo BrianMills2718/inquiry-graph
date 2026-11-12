@@ -1,4 +1,4 @@
-# Generated from docs/architecture/*.c4 by `code2check arch gen`. Do not edit by hand.
+# Generated from docs/architecture/*.c4 by `lockstep check arch gen`. Do not edit by hand.
 
 [importlinter]
 root_packages =

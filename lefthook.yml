@@ -9,9 +9,9 @@ pre-commit:
   jobs:
     - name: whitespace
       run: git diff --cached --check
-    - name: code2check-fast
+    - name: lockstep-fast
       run: make fast
 pre-push:
   jobs:
-    - name: code2check-full
+    - name: lockstep-full
       run: make check
