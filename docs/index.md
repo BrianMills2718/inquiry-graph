@@ -23,7 +23,7 @@ and plans.
    and tasks.
 2. Write a failing test for each scenario, marked `@pytest.mark.req("<capability>/<scenario>")`, and
    commit it.
-3. Change structure in `docs/architecture/model.c4`, then `uv run code2check arch gen`.
+3. Change structure in `docs/architecture/model.c4`, then `uv run lockstep check arch gen`.
 4. Implement; say `Implements: <capability>/<requirement>` in the owning module's docstring.
 5. Archive the change (`openspec archive <name> --yes`), run `make check`, commit.
 

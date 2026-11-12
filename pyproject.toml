@@ -19,14 +19,14 @@ dev = [
     "pytest>=8,<10",
     "jsonschema>=4.23,<5",
     "rank-bm25>=0.2.2,<0.3",
-    "code2check",
+    "agentic-engineering-system",
     "import-linter>=2.15",
 ]
 
 [tool.uv.sources]
-code2check = { git = "https://github.com/BrianMills2718/code2-template", branch = "main" }
+agentic-engineering-system = { git = "https://github.com/BrianMills2718/agentic-engineering-system-canonical.git", branch = "main" }
 
-[tool.code2check]
+[tool.lockstep]
 source = ["src", "tools"]
 
 [project.scripts]

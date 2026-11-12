@@ -6,8 +6,8 @@ docs-specs:
 	@for d in openspec/specs/*/; do [ -d "$$d" ] || continue; c=$$(basename $$d); mkdir -p docs/specs/$$c; ln -sfn ../../../openspec/specs/$$c/spec.md docs/specs/$$c/spec.md; done
 # Commit-hook checks: each finishes in seconds.
 fast:
-	uv run code2check trace
-	uv run code2check sources
+	uv run lockstep check trace
+	uv run lockstep check sources
 	uv run lint-imports
 	openspec validate --all --strict --no-interactive
 # Everything, run before merging. pydoclint, interrogate and zensical are not run: the existing code
@@ -16,5 +16,5 @@ check: docs-specs fast
 	uv run python -m pytest -ra
 	uv run python tools/build_artifacts.py --check
 	uv run python -m inquiry_graph validate examples/seed/graph.json
-	uv run code2check arch check
-	uv run code2check test-first --base origin/main
+	uv run lockstep check arch check
+	uv run lockstep check test-first --base origin/main
